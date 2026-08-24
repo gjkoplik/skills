@@ -38,6 +38,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install PyYAML
+        # Not stdlib. The runner does not have it, and a local box usually does,
+        # which is exactly how this job shipped broken the first time.
+        run: pip install --quiet pyyaml
       - name: Every SKILL.md must have parseable frontmatter
         run: |
           python - <<'PY'
