@@ -1,0 +1,183 @@
+name: validate
+
+# There is no build and no publish step. A plugin marketplace reads this repo
+# live from a git ref, so whatever is on the pinned ref is what users get.
+# That makes CI a gate on correctness rather than a deploy pipeline.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  plugin:
+    name: plugin manifest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Validate the plugin manifest
+        run: |
+          set +e
+          out=$(claude plugin validate . --strict 2>&1); code=$?
+          echo "$out"
+          [ $code -eq 0 ] && exit 0
+          # One finding is known and accepted. CLAUDE.md at the repo root is
+          # contributor instructions; it is inert for a consumer who installs the
+          # plugin, and the repo root is also the plugin root, so there is nowhere
+          # else to put it. Everything else --strict reports is a real failure.
+          unexpected=$(echo "$out" | grep -E '^[[:space:]]+\xe2\x9d\xaf ' \
+                       | grep -v 'CLAUDE.md at the plugin root')
+          if [ -n "$unexpected" ]; then
+            echo "::error::unexpected validation findings beyond the known CLAUDE.md warning"
+            exit 1
+          fi
+          claude plugin validate . || exit 1
+          echo "::notice::only the known CLAUDE.md-at-plugin-root warning; passing"
+
+  release-tag:
+    name: version has a pushed tag
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: plugin.json version must have a tag that exists
+        run: |
+          python - <<'PY'
+          import json, subprocess, sys
+
+          version = json.load(open(".claude-plugin/plugin.json")).get("version")
+          problems = []
+
+          if not version:
+              problems.append("plugin.json has no version; users would not be told to update")
+          else:
+              tag = f"v{version}"
+              tags = subprocess.run(["git", "tag", "--list", tag],
+                                    capture_output=True, text=True).stdout.split()
+              if tag not in tags:
+                  problems.append(
+                      f"version {version} has no tag {tag}. The marketplace in gjkoplik/skills "
+                      f"pins this repo by tag, so a missing tag fails at install time for "
+                      f"everyone and you would not notice locally. "
+                      f"Create it with: git tag {tag} && git push origin {tag}")
+
+          for p in problems:
+              print(f"::error::{p}")
+          print(f"{len(problems)} release-tag problem(s)")
+          sys.exit(1 if problems else 0)
+          PY
+
+  frontmatter:
+    name: skill frontmatter parses
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Every SKILL.md must have parseable frontmatter
+        run: |
+          python - <<'PY'
+          import pathlib, re, sys, yaml
+
+          # claude plugin validate only scans skills/<name>/SKILL.md. This repo's
+          # skill sits at the root and its maintenance skills sit under .claude/,
+          # so none of them are covered. Unparseable frontmatter is not a warning:
+          # the skill loads with every field silently dropped.
+          bad = []
+          for f in sorted(pathlib.Path(".").rglob("SKILL.md")):
+              if ".git" in f.parts:
+                  continue
+              m = re.match(r"^---\n(.*?)\n---\n", f.read_text(encoding="utf-8"), re.S)
+              if not m:
+                  bad.append(f"{f}: no YAML frontmatter block")
+                  continue
+              try:
+                  meta = yaml.safe_load(m.group(1))
+              except yaml.YAMLError as e:
+                  first = str(e).splitlines()[0]
+                  bad.append(f"{f}: frontmatter does not parse ({first}). "
+                             f"A description containing ': ' must be quoted.")
+                  continue
+              for key in ("name", "description"):
+                  if not (isinstance(meta, dict) and meta.get(key)):
+                      bad.append(f"{f}: frontmatter has no {key}")
+
+          for b in bad:
+              print(f"::error::{b}")
+          print(f"{len(bad)} frontmatter problem(s)")
+          sys.exit(1 if bad else 0)
+          PY
+
+  links:
+    name: relative links resolve
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check every relative markdown link
+        run: |
+          python - <<'PY'
+          import pathlib, re, sys
+          bad = []
+          for f in pathlib.Path(".").rglob("*.md"):
+              if ".git" in f.parts:
+                  continue
+              text = f.read_text(encoding="utf-8")
+              for link in re.findall(r"\]\((?!https?:|mailto:|#)([^)]+)\)", text):
+                  target = (f.parent / link.split("#")[0]).resolve()
+                  if not target.exists():
+                      bad.append(f"{f}: {link}")
+          for b in bad:
+              print(f"broken: {b}")
+          print(f"{len(bad)} broken link(s)")
+          sys.exit(1 if bad else 0)
+          PY
+
+  prose:
+    name: house style
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: No em-dashes, American spelling
+        run: |
+          python - <<'PY'
+          import pathlib, re, sys
+
+          # The house rule governs OUR prose, not quoted sources. A quotation keeps
+          # whatever the source wrote, including em-dashes and British spelling.
+          def strip_quoted(line):
+              if line.lstrip().startswith(">"):      # blockquote
+                  return ""
+              line = re.sub(r'"[^"]*"', "", line)    # inline quotation
+              line = re.sub(r"`[^`]*`", "", line)    # code and term-mentions
+              return line
+
+          BRITISH = re.compile(r"\b(colour|behaviour|neighbour|favour)[a-z]*", re.I)
+          bad = []
+          for f in sorted(pathlib.Path(".").rglob("*.md")):
+              if ".git" in f.parts:
+                  continue
+              for n, raw in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+                  line = strip_quoted(raw)
+                  if "—" in line:
+                      bad.append(f"{f}:{n}: em-dash outside a quote")
+                  m = BRITISH.search(line)
+                  if m and "spelling" not in raw.lower():
+                      bad.append(f"{f}:{n}: British spelling '{m.group(0)}' outside a quote")
+          for b in bad:
+              print(f"::error::{b}")
+          print(f"{len(bad)} house-style violation(s)")
+          sys.exit(1 if bad else 0)
+          PY
