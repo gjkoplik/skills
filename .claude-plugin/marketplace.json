@@ -27,7 +27,7 @@
         "source": "git-subdir",
         "url": "https://github.com/gjkoplik/skills.git",
         "path": "plugins/what-if",
-        "ref": "what-if--v0.0.1"
+        "ref": "what-if--v0.0.2"
       },
       "homepage": "https://github.com/gjkoplik/skills/tree/main/plugins/what-if"
     }

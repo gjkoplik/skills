@@ -3,6 +3,14 @@
 Semantic versioning, most recent release first. A release is a `what-if--v<version>` tag; see
 [RELEASING.md](../../RELEASING.md). While the version is `0.0.x` the shape is still moving.
 
+## 0.0.2
+
+Packaging only. No change to the skill.
+
+The `what-if--v0.0.1` tag was cut before this changelog file existed, so the file was on `main` but not in what
+anyone installed. This release exists to make the tag and the tree agree, and to exercise the release ritual in
+`RELEASING.md` end to end before it matters.
+
 ## 0.0.1
 
 First cut. Not yet released.
