@@ -54,5 +54,6 @@ How figures encode data and how readers read them. Where a rule has a mechanical
 
 - Do not commit or change git state. The maintainer reviews and commits.
 - When several agents work at once, each owns its own files. Do not edit another agent's pages; report the problem instead.
-- Before publishing, run `claude plugin validate . --strict`. CI additionally checks relative links, house style, and that `plugin.json`'s version matches the tag `marketplace.json` pins to.
+- Before publishing, run `claude plugin validate . --strict`. CI additionally checks relative links, house style, and that `plugin.json`'s version has a tag that was pushed.
+- The marketplace lives in `gjkoplik/skills` and pins this repo by tag. Nothing here is the storefront; do not add a `marketplace.json`.
 - Releases are tags. See `RELEASING.md`.

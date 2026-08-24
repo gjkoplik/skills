@@ -7,9 +7,12 @@ There is a lot of visualization advice in the world and almost all of it is writ
 ## Install
 
 ```
-/plugin marketplace add gjkoplik/agent-viz
-/plugin install agent-viz
+/plugin marketplace add gjkoplik/skills
+/plugin install agent-viz@skills
 ```
+
+The marketplace lives in [gjkoplik/skills](https://github.com/gjkoplik/skills) and lists this repo by tag. This repo
+is the plugin, not the storefront.
 
 The skill loads by description when you are about to produce or review a figure, and can be invoked directly as `/agent-viz`.
 

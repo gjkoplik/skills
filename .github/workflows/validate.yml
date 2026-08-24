@@ -20,49 +20,99 @@ jobs:
           node-version: '22'
       - name: Install Claude Code
         run: npm install -g @anthropic-ai/claude-code
-      - name: Validate plugin and marketplace manifests
-        run: claude plugin validate . --strict
+      - name: Validate the plugin manifest
+        run: |
+          set +e
+          out=$(claude plugin validate . --strict 2>&1); code=$?
+          echo "$out"
+          [ $code -eq 0 ] && exit 0
+          # One finding is known and accepted. CLAUDE.md at the repo root is
+          # contributor instructions; it is inert for a consumer who installs the
+          # plugin, and the repo root is also the plugin root, so there is nowhere
+          # else to put it. Everything else --strict reports is a real failure.
+          unexpected=$(echo "$out" | grep -E '^[[:space:]]+\xe2\x9d\xaf ' \
+                       | grep -v 'CLAUDE.md at the plugin root')
+          if [ -n "$unexpected" ]; then
+            echo "::error::unexpected validation findings beyond the known CLAUDE.md warning"
+            exit 1
+          fi
+          claude plugin validate . || exit 1
+          echo "::notice::only the known CLAUDE.md-at-plugin-root warning; passing"
 
-  release-pin:
-    name: version and tag agree
+  release-tag:
+    name: version has a pushed tag
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: plugin.json version must match the marketplace ref
+      - name: plugin.json version must have a tag that exists
         run: |
           python - <<'PY'
           import json, subprocess, sys
 
-          plugin = json.load(open(".claude-plugin/plugin.json"))
-          market = json.load(open(".claude-plugin/marketplace.json"))
-          version = plugin.get("version")
-          ref = market["plugins"][0]["source"].get("ref")
-
+          version = json.load(open(".claude-plugin/plugin.json")).get("version")
           problems = []
+
           if not version:
               problems.append("plugin.json has no version; users would not be told to update")
-          if not ref:
-              problems.append("marketplace.json pins no ref, so it tracks the default branch")
-          elif version and ref != f"v{version}":
-              problems.append(f"mismatch: plugin.json version {version!r} against marketplace ref {ref!r}")
-
-          if ref:
-              tags = subprocess.run(["git", "tag", "--list", ref],
+          else:
+              tag = f"v{version}"
+              tags = subprocess.run(["git", "tag", "--list", tag],
                                     capture_output=True, text=True).stdout.split()
-              if ref not in tags:
+              if tag not in tags:
                   problems.append(
-                      f"tag {ref} does not exist yet, so an install from this marketplace would fail. "
-                      f"Create it with: git tag {ref} && git push origin {ref}")
+                      f"version {version} has no tag {tag}. The marketplace in gjkoplik/skills "
+                      f"pins this repo by tag, so a missing tag fails at install time for "
+                      f"everyone and you would not notice locally. "
+                      f"Create it with: git tag {tag} && git push origin {tag}")
 
           for p in problems:
               print(f"::error::{p}")
-          print(f"{len(problems)} release-pin problem(s)")
+          print(f"{len(problems)} release-tag problem(s)")
           sys.exit(1 if problems else 0)
+          PY
+
+  frontmatter:
+    name: skill frontmatter parses
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Every SKILL.md must have parseable frontmatter
+        run: |
+          python - <<'PY'
+          import pathlib, re, sys, yaml
+
+          # claude plugin validate only scans skills/<name>/SKILL.md. This repo's
+          # skill sits at the root and its maintenance skills sit under .claude/,
+          # so none of them are covered. Unparseable frontmatter is not a warning:
+          # the skill loads with every field silently dropped.
+          bad = []
+          for f in sorted(pathlib.Path(".").rglob("SKILL.md")):
+              if ".git" in f.parts:
+                  continue
+              m = re.match(r"^---\n(.*?)\n---\n", f.read_text(encoding="utf-8"), re.S)
+              if not m:
+                  bad.append(f"{f}: no YAML frontmatter block")
+                  continue
+              try:
+                  meta = yaml.safe_load(m.group(1))
+              except yaml.YAMLError as e:
+                  first = str(e).splitlines()[0]
+                  bad.append(f"{f}: frontmatter does not parse ({first}). "
+                             f"A description containing ': ' must be quoted.")
+                  continue
+              for key in ("name", "description"):
+                  if not (isinstance(meta, dict) and meta.get(key)):
+                      bad.append(f"{f}: frontmatter has no {key}")
+
+          for b in bad:
+              print(f"::error::{b}")
+          print(f"{len(bad)} frontmatter problem(s)")
+          sys.exit(1 if bad else 0)
           PY
 
   links:
@@ -114,7 +164,7 @@ jobs:
               line = re.sub(r"`[^`]*`", "", line)    # code and term-mentions
               return line
 
-          BRITISH = re.compile(r"(colour|behaviour|neighbour|favour)[a-z]*", re.I)
+          BRITISH = re.compile(r"\b(colour|behaviour|neighbour|favour)[a-z]*", re.I)
           bad = []
           for f in sorted(pathlib.Path(".").rglob("*.md")):
               if ".git" in f.parts:

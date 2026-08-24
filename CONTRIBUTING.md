@@ -42,16 +42,18 @@ How figures encode data and how readers read them. Where a rule has a mechanical
 claude plugin validate . --strict
 ```
 
-CI additionally checks that relative links resolve, that house style holds, and that `plugin.json`'s version matches the tag `marketplace.json` pins to.
+CI additionally checks that relative links resolve, that house style holds, and that `plugin.json`'s version has a tag that was actually pushed.
 
 ## Cutting a release
 
-Bump `version` in `.claude-plugin/plugin.json`, set the matching `ref` in `.claude-plugin/marketplace.json` to `v<version>`, commit both together, then:
+Bump `version` in `.claude-plugin/plugin.json`, commit, then:
 
 ```
 git tag v0.0.2 && git push origin main --follow-tags
 ```
 
-The `release-pin` CI job fails if the version and the ref disagree, or if the tag does not exist. That last check matters: **a marketplace pinned to a tag nobody pushed fails at install time for everyone, and you will not see it locally.**
+Then move the pin in the marketplace repo, which is a separate step in a separate repo.
+
+The `release-tag` CI job fails if the tag named by the version does not exist. That check matters: **a marketplace pinned to a tag nobody pushed fails at install time for everyone, and you will not see it locally.**
 
 Full detail in [RELEASING.md](RELEASING.md).
