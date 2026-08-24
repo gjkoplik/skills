@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "skills",
+  "name": "gjkoplik",
   "description": "Gary Koplik's Claude Code plugins. Each plugin under plugins/ versions itself with semver and carries its own changelog; the repo cuts calendar-versioned releases that record which plugin versions moved.",
   "owner": {
     "name": "Gary Koplik",

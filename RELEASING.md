@@ -40,7 +40,7 @@ sees it until a ref moves.
 `claude plugin tag` validates that `plugin.json` and the marketplace entry agree before writing anything, and refuses
 to tag a dirty tree, so step 3 landing as one commit is what makes step 4 work.
 
-Users never see the tag. They type `/plugin install <name>@skills` and see `Version: 0.0.1`.
+Users never see the tag. They type `/plugin install <name>@gjkoplik` and see `Version: 0.0.1`.
 
 The `pins` CI job fails if a ref does not exist, if a ref and a version disagree, or if any plugin has drifted back to
 a relative path. It also prints a notice for each plugin whose files have changed on `main` since its pin, so unshipped
@@ -61,18 +61,23 @@ Verified against this repo, not assumed.
 
 ```
 /plugin marketplace add gjkoplik/skills
-/plugin install agent-viz@skills
-/plugin install what-if@skills
+/plugin install agent-viz@gjkoplik
+/plugin install what-if@gjkoplik
 ```
 
 They then see the plugin's semver and nothing else:
 
 ```
-❯ what-if@skills
+❯ what-if@gjkoplik
   Version: 0.0.2
 ```
 
 **Users never see a tag.** `what-if--v0.0.2` appears only in your git history and in `marketplace.json`.
+
+The `@gjkoplik` suffix names the marketplace, not the repo, and it is only needed to disambiguate: `/plugin install
+what-if` works when nothing else offers that name. The marketplace is named for the handle rather than something like
+`skills` because **a user can only have one marketplace per name**, and a generic name is the one most likely to
+collide with someone else's.
 
 ### The two halves, because they behave differently
 
@@ -93,8 +98,8 @@ So the two things you can push have opposite effects:
 Auto-update handles this, but by hand it is two steps, and the first is the one people forget:
 
 ```
-/plugin marketplace update skills
-/plugin update what-if@skills
+/plugin marketplace update gjkoplik
+/plugin update what-if@gjkoplik
 ```
 
 Observed: `Plugin "what-if" updated from 0.0.1 to 0.0.2 for scope user. Restart to apply changes.` A new install on the

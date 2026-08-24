@@ -20,6 +20,8 @@ See [RELEASING.md](RELEASING.md).
 ### Added
 
 - `what-if`, a cheap sunk-cost circuit breaker for half-formed ideas. New in this repo.
+- The marketplace is named `gjkoplik` rather than `skills`. A user can hold only one marketplace per name, and
+  `skills` is the name most likely to collide with someone else's. Installs read `agent-viz@gjkoplik`.
 
 ### Changed
 

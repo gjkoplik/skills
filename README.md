@@ -14,8 +14,8 @@ Gary Koplik's Claude Code plugins, and the marketplace that lists them.
 | **what-if** | A cheap look at a half-formed idea before committing to a conversation about it. | [`plugins/what-if`](plugins/what-if) |
 
 ```
-/plugin install agent-viz@skills
-/plugin install what-if@skills
+/plugin install agent-viz@gjkoplik
+/plugin install what-if@gjkoplik
 ```
 
 ## Why one repo

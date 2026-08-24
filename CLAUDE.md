@@ -9,7 +9,9 @@ A marketplace plus the plugins it lists, in one tree. Each plugin under `plugins
 
 ## Layout
 
-- `.claude-plugin/marketplace.json` is the only marketplace. One per name per user, so this file is the namespace.
+- `.claude-plugin/marketplace.json` is the only marketplace, and it is named `gjkoplik`, not `skills`. A user can
+  hold one marketplace per name, so the namespace is the handle; a generic name is the one most likely to collide
+  with someone else's. The repo keeps the name `skills` because `gjkoplik/skills` is already namespaced by owner.
 - `plugins/<name>/` is a whole plugin. It is copied to a cache at install time and **cannot read files outside its
   own directory**. No `../shared`. If two plugins need the same asset, each gets a copy.
 - `.claude/` is this repo's own tooling, not shipped to anyone: the wiki-maintenance skill and the scheduled sweep.

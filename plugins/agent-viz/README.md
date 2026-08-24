@@ -8,7 +8,7 @@ There is a lot of visualization advice in the world and almost all of it is writ
 
 ```
 /plugin marketplace add gjkoplik/skills
-/plugin install agent-viz@skills
+/plugin install agent-viz@gjkoplik
 ```
 
 This is one plugin inside the [gjkoplik/skills](https://github.com/gjkoplik/skills) monorepo. Paths below are relative
