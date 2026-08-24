@@ -1,0 +1,19 @@
+{
+  "name": "what-if",
+  "description": "A cheap sunk-cost circuit breaker for half-formed ideas. Ask what it would mean to add some capability, library, pattern or technique, and get back a short report calibrated to what you already know: what it is, the surface it would land on in this repo, what is hard to undo, and the case for and against at equal length. Never implements and never produces a plan. A \"not worth it\" is a successful run.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Gary Koplik",
+    "url": "https://github.com/gjkoplik"
+  },
+  "homepage": "https://github.com/gjkoplik/skills/tree/main/plugins/what-if",
+  "repository": "https://github.com/gjkoplik/skills",
+  "license": "MIT",
+  "keywords": [
+    "triage",
+    "decision",
+    "research",
+    "sunk-cost",
+    "spike"
+  ]
+}

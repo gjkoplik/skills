@@ -1,0 +1,29 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "skills",
+  "description": "Gary Koplik's Claude Code plugins. Subject repos keep their own trees and are listed here by tag; skills with no subject live in this repo under plugins/.",
+  "owner": {
+    "name": "Gary Koplik",
+    "url": "https://github.com/gjkoplik"
+  },
+  "plugins": [
+    {
+      "name": "agent-viz",
+      "description": "A researched quality bar for any figure a person will look at, written for coding agents.",
+      "category": "development",
+      "source": {
+        "source": "github",
+        "repo": "gjkoplik/agent-viz",
+        "ref": "v0.0.1"
+      },
+      "homepage": "https://github.com/gjkoplik/agent-viz"
+    },
+    {
+      "name": "what-if",
+      "description": "A cheap look at a half-formed idea before committing to a conversation about it. Short, calibrated to what you already know, and willing to come back with \"not worth it\".",
+      "category": "productivity",
+      "source": "./plugins/what-if",
+      "homepage": "https://github.com/gjkoplik/skills/tree/main/plugins/what-if"
+    }
+  ]
+}

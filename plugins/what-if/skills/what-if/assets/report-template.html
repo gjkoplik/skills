@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{SUBJECT}} — what-if</title>
+
+<!--
+  what-if report template.
+
+  Fill the {{PLACEHOLDERS}}, delete the parts you do not use, and delete every
+  comment like this one before writing the file. Nothing here is decoration:
+
+  * BUDGETS ARE MEASURED, NOT REQUESTED. The script at the bottom counts the
+    top level (everything a reader sees before opening anything) and the
+    disclosures, and prints both in the FOOTER, because that is instrumentation
+    for you and not information for the reader. It flags two opposite failures.
+    OVER means the top level is past 400: cut it. THIN means the disclosures
+    together spent under half their budget, which is the report that reads as
+    brief and is actually conclusions with the reasons left out. Fix THIN by
+    explaining, not by padding the top level.
+
+  * CALIBRATION IS THE LAYOUT. Put open on the <details> holding something
+    genuinely new to this reader; leave the rest closed. The strip counts how
+    many opened. If most of them did, say so at the top of the report: the
+    reader is further from this subject than the question assumed.
+
+  * TWO MARKS ONLY, and they are exceptions rather than labels. Default voice
+    is your read and carries no mark. Use <span class="tag ran">ran</span> for
+    something observed in the probe, <span class="tag sourced">sourced</span>
+    for a cited version-stamped claim. Unexecuted code gets
+    <span class="tag unrun">unrun</span>. Marking everything is noise.
+
+  * NO SCORES. A gauge or a heatmap built from your own adjectives launders a
+    guess into a graphic. If you cannot name the measurement, it is prose.
+
+  A markdown twin of this same content is written alongside it. HTML does not
+  diff and does not render on a repo host; markdown does neither of the things
+  this file is for.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600&display=swap">
+
+<style>
+  :root {
+    --paper:#e9edf1; --surface:#ffffff; --sunk:#dfe5ec; --ink:#101720;
+    --muted:#5a6675; --faint:#8994a3; --rule:#c3ceda;
+    --blueprint:#2b5d8c; --pencil:#a83c2b; --verified:#2c6a4d;
+    --shadow:rgba(16,23,32,.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#0e151d; --surface:#16202b; --sunk:#121b24; --ink:#e6ecf3;
+      --muted:#98a5b5; --faint:#6b7a8c; --rule:#2a3846;
+      --blueprint:#7fb2de; --pencil:#e2836c; --verified:#6fbe93;
+      --shadow:rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#0e151d; --surface:#16202b; --sunk:#121b24; --ink:#e6ecf3;
+    --muted:#98a5b5; --faint:#6b7a8c; --rule:#2a3846;
+    --blueprint:#7fb2de; --pencil:#e2836c; --verified:#6fbe93;
+    --shadow:rgba(0,0,0,.4);
+  }
+
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"IBM Plex Serif", Georgia, serif; font-size:16.5px; line-height:1.62;
+    -webkit-text-size-adjust:100%;
+  }
+  .sheet { max-width:44rem; margin:0 auto; padding:0 1.3rem 6rem; }
+  h1,h2,h3,.kicker,.lbl,summary,button,.docket,.tag { font-family:"IBM Plex Sans Condensed","Arial Narrow",sans-serif; }
+
+  header.mast { padding:3.5rem 0 0; }
+  .kicker { font-size:.68rem; letter-spacing:.2em; text-transform:uppercase; color:var(--blueprint); font-weight:600; margin:0 0 .9rem; }
+  h1 { font-size:clamp(2.4rem,9vw,3.6rem); line-height:1; font-weight:700; letter-spacing:-.02em; margin:0 0 .8rem; text-wrap:balance; }
+  .dek { font-size:1.08rem; color:var(--muted); margin:0 0 1.8rem; text-wrap:pretty; }
+
+  /* ---- calibration strip: who this was written for, and whether it stayed in budget ---- */
+  .docket {
+    border-top:2px solid var(--ink); border-bottom:1px solid var(--rule);
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(8.5rem,1fr));
+    gap:1rem 1.6rem; padding:.9rem 0 1rem; margin:0 0 1.4rem;
+    font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.74rem;
+  }
+  .docket dt { color:var(--faint); font-size:.6rem; letter-spacing:.11em; text-transform:uppercase; }
+  .docket dd { margin:.25rem 0 0; }
+  .over { color:var(--pencil); font-weight:600; }
+
+  h2 { font-size:1.35rem; font-weight:700; letter-spacing:-.005em; line-height:1.2; margin:0 0 .9rem; text-wrap:balance; }
+  .num { font-family:"IBM Plex Mono",ui-monospace,monospace; color:var(--faint); font-size:.78rem; font-weight:400; margin-right:.55rem; }
+  section { padding:2.6rem 0 0; border-top:1px solid var(--rule); margin-top:2.6rem; }
+  h3 { font-size:.98rem; font-weight:600; margin:1.5rem 0 .35rem; }
+  p { margin:0 0 .9rem; }
+  ul,ol { margin:0 0 .9rem; padding-left:1.1rem; }
+  li { margin:0 0 .4rem; }
+  a { color:var(--blueprint); text-underline-offset:.18em; }
+  a:focus-visible, summary:focus-visible, button:focus-visible { outline:2px solid var(--blueprint); outline-offset:3px; border-radius:2px; }
+  code { font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.85em; background:var(--sunk); padding:.1em .35em; border-radius:2px; border:1px solid var(--rule); }
+  pre { background:var(--sunk); border:1px solid var(--rule); border-radius:2px; padding:.8rem .9rem; overflow-x:auto; margin:0 0 1rem; }
+  pre code { background:none; border:0; padding:0; font-size:.8rem; line-height:1.5; }
+
+  /* ---- the mechanism: everything past the first screen sits behind a disclosure ---- */
+  details { border-left:2px solid var(--rule); padding:0 0 0 .9rem; margin:0 0 .75rem; }
+  details[open] { border-left-color:var(--blueprint); }
+  summary { cursor:pointer; font-size:.86rem; font-weight:600; color:var(--blueprint); list-style:none; padding:.15rem 0; line-height:1.45; }
+  summary::-webkit-details-marker { display:none; }
+  summary::before { content:"+"; display:inline-block; width:1rem; font-family:"IBM Plex Mono",monospace; color:var(--faint); font-weight:400; }
+  details[open] > summary::before { content:"\2013"; }
+  summary:hover { color:var(--ink); }
+  details > *:not(summary) { font-size:.92rem; color:var(--muted); }
+  details > *:not(summary) strong { color:var(--ink); }
+  details > p:first-of-type { margin-top:.5rem; }
+  details > p:last-child, details > ul:last-child { margin-bottom:.7rem; }
+  .flag { font-family:"IBM Plex Mono",monospace; font-size:.58rem; letter-spacing:.08em; color:var(--pencil); margin-left:.5rem; font-weight:500; }
+
+  .controls { display:flex; gap:.5rem; align-items:center; margin:0 0 1.4rem; }
+  button {
+    font-size:.7rem; letter-spacing:.09em; text-transform:uppercase; font-weight:600;
+    background:transparent; color:var(--muted); border:1px solid var(--rule);
+    padding:.35rem .7rem; border-radius:2px; cursor:pointer;
+  }
+  button:hover { color:var(--ink); border-color:var(--ink); }
+
+  /* ---- the call, which is the only thing some readers will read ---- */
+  .answer { border:2px solid var(--ink); background:var(--surface); padding:1.2rem 1.3rem; margin:0 0 1.6rem; }
+  .answer .lbl { display:block; font-size:.62rem; letter-spacing:.15em; text-transform:uppercase; color:var(--blueprint); font-weight:700; margin-bottom:.5rem; }
+  .answer p:last-child { margin-bottom:0; }
+  .verdict { font-size:1.15rem; font-weight:600; line-height:1.35; }
+
+  .pull { border-left:3px solid var(--pencil); background:var(--surface); padding:.95rem 1.1rem; margin:1.3rem 0; box-shadow:0 1px 2px var(--shadow); }
+  .pull p:last-child { margin-bottom:0; }
+  .pull .lbl { display:block; font-family:"IBM Plex Sans Condensed",sans-serif; font-size:.62rem; letter-spacing:.15em; text-transform:uppercase; color:var(--pencil); font-weight:700; margin-bottom:.4rem; }
+
+  /* ---- the two marks that outrank your judgment, plus one warning ---- */
+  .tag {
+    display:inline-block; font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.58rem; letter-spacing:.1em; text-transform:uppercase;
+    padding:.1rem .4rem; border-radius:2px; margin-right:.45rem; vertical-align:.14em; font-weight:500;
+    border:1px solid var(--blueprint); color:var(--blueprint);
+  }
+  .tag.ran { background:var(--verified); border-color:var(--verified); color:var(--paper); }
+  .tag.sourced { border-color:var(--blueprint); color:var(--blueprint); }
+  .tag.unrun { border-color:var(--pencil); color:var(--pencil); }
+
+  .scroller { overflow-x:auto; margin:0 0 1rem; }
+  table { border-collapse:collapse; width:100%; min-width:26rem; font-family:"IBM Plex Sans Condensed",sans-serif; font-size:.86rem; line-height:1.4; }
+  th,td { text-align:left; padding:.45rem .7rem .45rem 0; border-bottom:1px solid var(--rule); vertical-align:top; }
+  thead th { font-family:"IBM Plex Mono",monospace; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); border-bottom:1px solid var(--ink); font-weight:500; }
+  tbody tr:last-child td { border-bottom:0; }
+
+  .twocol { display:grid; gap:1.4rem; }
+  @media (min-width:40rem) { .twocol { grid-template-columns:1fr 1fr; gap:1.8rem; } }
+  .twocol h3 { margin-top:0; }
+  .twocol p, .twocol li { font-size:.92rem; }
+
+  footer.end { margin-top:3rem; padding-top:1.2rem; border-top:2px solid var(--ink); font-family:"IBM Plex Mono",monospace; font-size:.72rem; color:var(--muted); line-height:1.6; }
+
+  @media print {
+    .controls { display:none; }
+    details > *:not(summary) { display:revert !important; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<header class="mast">
+  <p class="kicker">what-if</p>
+  <h1>{{SUBJECT}}</h1>
+  <p class="dek">{{ONE LINE: what was actually asked, in the reader's words}}</p>
+
+  <!-- Reader-facing only. Word counts and open-counts are instrumentation for
+       whoever writes this, not information for whoever reads it; they live in the
+       footer. If most disclosures opened by default, that is a finding about the
+       reader's distance from the subject and it goes in prose up top, not here. -->
+  <dl class="docket">
+    <div><dt>Subject</dt><dd>{{NAME at VERSION}}</dd></div>
+    <div><dt>Repo state</dt><dd>{{TAG OR SHA THE SURFACE WAS READ AT}}</dd></div>
+    <div><dt>Anchored to</dt><dd>{{NEAREST THING THEY KNOW}}</dd></div>
+    <div><dt>Looked</dt><dd>{{YYYY-MM-DD}}</dd></div>
+  </dl>
+</header>
+
+<!-- Controls are injected by the script below. Left out of the markup on purpose:
+     some viewers strip JS, and a dead button is worse than no button. The
+     disclosures themselves are native <details> and work with no script at all. -->
+<div class="controls" id="controls" hidden></div>
+
+<!-- THE CALL COMES FIRST. Not the reasoning, not the background. One of:
+     worth doing / not worth doing / not yet / worth doing smaller.
+     A "not yet" without a trigger is a no that gets re-researched from scratch
+     in six months, so name the trigger. -->
+<div class="answer">
+  <span class="lbl">The call</span>
+  <p class="verdict">{{WORTH DOING SMALLER, and the fraction that carries the value}}</p>
+  <p>{{One sentence of why. Name the fact that is carrying the weight, not an adjective.}}</p>
+  <p><strong>Cheapest thing that would settle it:</strong> {{often "spend an hour with it", and when it is, say so and let this be short}}</p>
+</div>
+
+<!-- Optional, and only when it is true: if most disclosures below opened by
+     default, that is itself a finding and it belongs here.
+<div class="pull">
+  <span class="lbl">Before the rest</span>
+  <p>{{Six of the eight explainers below opened by default, which means this is
+  further from what you work in than the question assumed. Budget accordingly.}}</p>
+</div>
+-->
+
+<section>
+  <h2><span class="num">01</span>What it is</h2>
+
+  <!-- In terms of the anchor from the strip: "it is X but Y". Version-stamped.
+       Search once for the case against, not only for how to use it. -->
+  <p>{{Two or three sentences, anchored to what they already know.}}</p>
+
+  <details>
+    <summary>{{The concept they would have to learn first}}</summary>
+    <p>{{Under 150 words. Open this one only if it is genuinely new to them.}}</p>
+  </details>
+
+  <details>
+    <summary>{{Where the public story and the record disagree}}</summary>
+    <p><span class="tag sourced">sourced</span>{{A cited, version-stamped claim. This mark is for
+    claims a reader could check; your own read carries no mark.}}</p>
+  </details>
+</section>
+
+<section>
+  <h2><span class="num">02</span>What you could do</h2>
+
+  <!-- Usually the most useful section, because "should we adopt X" is normally
+       three projects wearing one name. Smallest first. Cost is the specific work,
+       never a duration. Say which levels are cumulative and which are independent;
+       that is often the finding. -->
+  <p>{{One sentence on whether these stack or are genuinely separate projects.}}</p>
+
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Level</th><th>What it buys</th><th>What it costs</th><th>What it forecloses</th></tr></thead>
+    <tbody>
+      <tr><td><strong>0. {{name}}</strong></td><td>{{in terms of the thing they wanted}}</td><td>{{the specific work}}</td><td>{{nothing / what}}</td></tr>
+      <tr><td><strong>1. {{name}}</strong></td><td>{{&hellip;}}</td><td>{{&hellip;}}</td><td>{{&hellip;}}</td></tr>
+      <tr><td><strong>2. {{name}}</strong></td><td>{{&hellip;}}</td><td>{{&hellip;}}</td><td>{{&hellip;}}</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <details>
+    <summary>{{The level whose cost is not what it looks like}}</summary>
+    <p>{{Under 150 words, and use them. This is where the mechanism goes: why that
+    cost is what it is, and what a reader who has not read the code cannot infer.}}</p>
+  </details>
+</section>
+
+<section>
+  <h2><span class="num">03</span>Trade-offs</h2>
+
+  <!-- EQUAL LENGTH. One context writes both, so symmetry is the substitute for
+       independence: a weak side cannot be padded and a strong one cannot be
+       truncated. Both name a concrete fact. "Faster" without a number is not an
+       argument, and neither is "more surface to maintain" without saying what surface. -->
+  <div class="twocol">
+    <div>
+      <h3>For</h3>
+      <p>{{Concrete fact.}}</p>
+      <p>{{Concrete fact.}}</p>
+    </div>
+    <div>
+      <h3>Against</h3>
+      <p>{{Concrete fact.}}</p>
+      <p>{{Concrete fact.}}</p>
+    </div>
+  </div>
+
+  <div class="pull">
+    <span class="lbl">What the two actually disagree about</span>
+    <p>{{Usually one empirical question. Saying what would settle it is worth more
+    than either case.}}</p>
+  </div>
+
+  <details>
+    <summary>Where my thumb was on the scale</summary>
+    <p>{{Effort already spent pulls toward yes. Imagining the thing already failed pulls
+    toward no. Say which way this run leaned and what you did about it.}}</p>
+  </details>
+</section>
+
+<section>
+  <h2><span class="num">04</span>What it would touch here</h2>
+
+  <!-- The section no blog post can give them, so it is where the run earns
+       itself. Real paths, real symbols, counted rather than described. -->
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Surface</th><th>What lands on it</th><th>Hard to undo</th></tr></thead>
+    <tbody>
+      <tr><td><code>{{path/to/file.py}}</code></td><td>{{what changes, counted}}</td><td>{{yes, and why / no}}</td></tr>
+      <tr><td><code>{{path/to/other.py}}</code></td><td>{{&hellip;}}</td><td>{{&hellip;}}</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>{{The API and default changes in one or two sentences, plus anything needing a deprecation.}}</p>
+
+  <details>
+    <summary>What the probe showed</summary>
+    <p><span class="tag ran">ran</span>{{Observed in a throwaway probe under /tmp/what-if/&lt;slug&gt;/, now
+    deleted. Report what it showed including when it showed the idea does not work.}}</p>
+    <pre><code>{{only if it clarifies something prose cannot}}</code></pre>
+  </details>
+
+  <details>
+    <summary>What this repo already decided</summary>
+    <p>{{Unfamiliar to the reader does not mean new to the repo. Git log, decision records,
+    a dependency deliberately dropped. If something already ruled this out, say so out loud
+    rather than quietly proposing what was declined.}}</p>
+  </details>
+</section>
+
+<footer class="end">
+  what-if, {{YYYY-MM-DD}}. Not a plan and not an implementation.<br>
+  Read against {{REPO STATE}}. Probe under /tmp/what-if/{{slug}}/, deleted after.<br>
+  Written to {{path}}, not staged. Keep it or delete it; that choice is part of the triage.<br>
+  {{top level NNN/550 &middot; disclosures NNN across N &middot; N open by default}}
+</footer>
+
+</div>
+
+<script>
+  // Expand and collapse everything.
+  (function () {
+    var host = document.getElementById("controls");
+    if (!host) return;
+    [["open", "Expand all"], ["close", "Collapse all"]].forEach(function (spec) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.textContent = spec[1];
+      b.addEventListener("click", function () {
+        document.querySelectorAll("details").forEach(function (d) { d.open = spec[0] === "open"; });
+      });
+      host.appendChild(b);
+    });
+    host.hidden = false;
+  })();
+
+  // Measure the budgets rather than asking for them. "Top level" is everything
+  // visible before the reader opens anything, summaries included, since a
+  // summary is read whether or not it is opened.
+  // Authoring aid. Run it while drafting to see the numbers, then paste them into
+  // the footer as static text so they survive a viewer that strips scripts.
+  // Only the top level has a cap. Disclosure length is a relevance judgment; see
+  // "How much to say" in SKILL.md. There is no THIN flag because no number can
+  // tell an under-explained report from a well-explained short one.
+  (function () {
+    function words(node) {
+      var t = (node.textContent || "").replace(/\s+/g, " ").trim();
+      return t ? t.split(" ").length : 0;
+    }
+    var TOP = 550;
+    var sheet = document.querySelector(".sheet").cloneNode(true);
+    sheet.querySelectorAll(".docket, .controls, footer.end").forEach(function (n) { n.remove(); });
+    sheet.querySelectorAll("details").forEach(function (d) {
+      Array.prototype.slice.call(d.children).forEach(function (c) {
+        if (c.tagName !== "SUMMARY") c.remove();
+      });
+    });
+    var top = words(sheet), all = document.querySelectorAll("details"), opened = 0, disc = 0;
+    all.forEach(function (d) {
+      if (d.open) opened++;
+      var body = d.cloneNode(true);
+      var s = body.querySelector("summary");
+      if (s) s.remove();
+      var n = words(body);
+      disc += n;
+      if (n < 40 && s) console.warn("thin block, probably belongs inline: " + s.textContent.trim());
+    });
+    console.info("what-if budget | top level " + top + "/" + TOP +
+                 (top > TOP ? "  OVER, cut it" : "  ok") +
+                 " | disclosures " + disc + " across " + all.length +
+                 " | " + opened + " open by default");
+  })();
+</script>
+</body>
+</html>
