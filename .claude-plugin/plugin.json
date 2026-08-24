@@ -1,0 +1,19 @@
+{
+  "name": "agent-viz",
+  "description": "A researched quality bar for any figure a person will look at, written for coding agents. Splits an honesty-and-accessibility floor that always binds from narrative polish that scales with the figure's job, and ships runnable checks alongside the principles.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Gary Koplik",
+    "url": "https://github.com/gjkoplik"
+  },
+  "homepage": "https://github.com/gjkoplik/agent-viz",
+  "repository": "https://github.com/gjkoplik/agent-viz",
+  "license": "MIT",
+  "keywords": [
+    "visualization",
+    "charts",
+    "matplotlib",
+    "accessibility",
+    "data-viz"
+  ]
+}

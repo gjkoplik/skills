@@ -1,0 +1,133 @@
+name: validate
+
+# There is no build and no publish step. A plugin marketplace reads this repo
+# live from a git ref, so whatever is on the pinned ref is what users get.
+# That makes CI a gate on correctness rather than a deploy pipeline.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  plugin:
+    name: plugin manifest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Validate plugin and marketplace manifests
+        run: claude plugin validate . --strict
+
+  release-pin:
+    name: version and tag agree
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: plugin.json version must match the marketplace ref
+        run: |
+          python - <<'PY'
+          import json, subprocess, sys
+
+          plugin = json.load(open(".claude-plugin/plugin.json"))
+          market = json.load(open(".claude-plugin/marketplace.json"))
+          version = plugin.get("version")
+          ref = market["plugins"][0]["source"].get("ref")
+
+          problems = []
+          if not version:
+              problems.append("plugin.json has no version; users would not be told to update")
+          if not ref:
+              problems.append("marketplace.json pins no ref, so it tracks the default branch")
+          elif version and ref != f"v{version}":
+              problems.append(f"mismatch: plugin.json version {version!r} against marketplace ref {ref!r}")
+
+          if ref:
+              tags = subprocess.run(["git", "tag", "--list", ref],
+                                    capture_output=True, text=True).stdout.split()
+              if ref not in tags:
+                  problems.append(
+                      f"tag {ref} does not exist yet, so an install from this marketplace would fail. "
+                      f"Create it with: git tag {ref} && git push origin {ref}")
+
+          for p in problems:
+              print(f"::error::{p}")
+          print(f"{len(problems)} release-pin problem(s)")
+          sys.exit(1 if problems else 0)
+          PY
+
+  links:
+    name: relative links resolve
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check every relative markdown link
+        run: |
+          python - <<'PY'
+          import pathlib, re, sys
+          bad = []
+          for f in pathlib.Path(".").rglob("*.md"):
+              if ".git" in f.parts:
+                  continue
+              text = f.read_text(encoding="utf-8")
+              for link in re.findall(r"\]\((?!https?:|mailto:|#)([^)]+)\)", text):
+                  target = (f.parent / link.split("#")[0]).resolve()
+                  if not target.exists():
+                      bad.append(f"{f}: {link}")
+          for b in bad:
+              print(f"broken: {b}")
+          print(f"{len(bad)} broken link(s)")
+          sys.exit(1 if bad else 0)
+          PY
+
+  prose:
+    name: house style
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: No em-dashes, American spelling
+        run: |
+          python - <<'PY'
+          import pathlib, re, sys
+
+          # The house rule governs OUR prose, not quoted sources. A quotation keeps
+          # whatever the source wrote, including em-dashes and British spelling.
+          def strip_quoted(line):
+              if line.lstrip().startswith(">"):      # blockquote
+                  return ""
+              line = re.sub(r'"[^"]*"', "", line)    # inline quotation
+              line = re.sub(r"`[^`]*`", "", line)    # code and term-mentions
+              return line
+
+          BRITISH = re.compile(r"(colour|behaviour|neighbour|favour)[a-z]*", re.I)
+          bad = []
+          for f in sorted(pathlib.Path(".").rglob("*.md")):
+              if ".git" in f.parts:
+                  continue
+              for n, raw in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+                  line = strip_quoted(raw)
+                  if "—" in line:
+                      bad.append(f"{f}:{n}: em-dash outside a quote")
+                  m = BRITISH.search(line)
+                  if m and "spelling" not in raw.lower():
+                      bad.append(f"{f}:{n}: British spelling '{m.group(0)}' outside a quote")
+          for b in bad:
+              print(f"::error::{b}")
+          print(f"{len(bad)} house-style violation(s)")
+          sys.exit(1 if bad else 0)
+          PY

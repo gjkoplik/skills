@@ -1,0 +1,19 @@
+{
+  "name": "agent-viz",
+  "description": "Visualization quality tooling for coding agents: a researched figure quality bar plus the research behind it.",
+  "owner": {
+    "name": "Gary Koplik",
+    "url": "https://github.com/gjkoplik"
+  },
+  "plugins": [
+    {
+      "name": "agent-viz",
+      "description": "A researched quality bar for any figure a person will look at, written for coding agents.",
+      "source": {
+        "source": "github",
+        "repo": "gjkoplik/agent-viz",
+        "ref": "v0.0.1"
+      }
+    }
+  ]
+}
