@@ -2,7 +2,7 @@
 
 Version-controlled source of truth for the desktop **scheduled tasks** (routines) run against this repo. The Claude desktop app keeps its own runtime copy of each task in its internal store (`~/.claude/scheduled-tasks/<id>/SKILL.md` plus an internal record of the schedule and notify flag). These files are the canonical copies, so the routines are versioned, reviewable, and travel with the repo.
 
-Same convention as the hiveplotlib harness, minus the submodule: agent-viz has no harness dependency, so `.claude/` is tracked directly here rather than synced in and gitignored.
+Same convention as the hiveplotlib harness, minus the submodule: this repo has no harness dependency, so `.claude/` is tracked directly here rather than synced in and gitignored. These tasks are repo tooling and are never shipped inside a plugin.
 
 Task bodies are written to be machine-agnostic: they derive the repo from the current working directory (`git rev-parse`) and everything else from `~/.claude` plus a glob. Porting to another machine should need no edits.
 
@@ -47,4 +47,4 @@ Ask Claude in any session to "push the agent-viz-sweep task live" and it will re
 
 ## Tasks
 
-- **`agent-viz-sweep`** — weekly research sweep. Finds **one** paper, **one** chart type, and **one** person or style guide worth a page, plus a light staleness check against changed norms and standards. Deliberately capped at one of each. Saturday 4:07am local (`7 4 * * 6`), an hour after the hiveplotlib routines so the three do not compete, and inside the same pre-token-reset window.
+- **`agent-viz-sweep`**: weekly research sweep over `plugins/agent-viz/wiki/`. Finds **one** paper, **one** chart type, and **one** person or style guide worth a page, plus a light staleness check against changed norms and standards. Deliberately capped at one of each. Saturday 4:07am local (`7 4 * * 6`), an hour after the hiveplotlib routines so the three do not compete, and inside the same pre-token-reset window.

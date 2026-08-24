@@ -7,7 +7,7 @@ description: Conventions for maintaining the agent-viz research wiki under wiki/
 
 The wiki under `wiki/` is the research behind the figure quality bar. Its value is not that it collects claims; it is that **every claim carries the kind of warrant it actually has.** Roughly a third of the received wisdom this project checked did not survive contact with its primary source. Adding a page that launders a convention into a finding does more damage than leaving the topic uncovered.
 
-Read [wiki/README.md](../../../wiki/README.md) for the current state before editing. It is the index and it carries the live page counts.
+Read [wiki/README.md](../../../plugins/agent-viz/wiki/README.md) for the current state before editing. It is the index and it carries the live page counts.
 
 ## The page schema
 
@@ -36,7 +36,7 @@ Every page opens with four things, then the substance, then links:
 
 **Watch for *therefore*.** The characteristic failure is running a secure definitional statement into an empirical conclusion in one sentence. "A hive plot puts node position on a real data scale" is definitional and secure. "Therefore readers read it more accurately" has no study behind it.
 
-Full treatment in [wiki/concepts/evidence-class.md](../../../wiki/concepts/evidence-class.md).
+Full treatment in [wiki/concepts/evidence-class.md](../../../plugins/agent-viz/wiki/concepts/evidence-class.md).
 
 ## Chart types: written for someone making a choice
 
@@ -54,7 +54,7 @@ A data relationship is a **view** of a chart, not a property of it: a stacked ba
 
 - Every type page declares its own `**Relationships.**` line in the header, so an index is checkable against the pages rather than maintained by hand.
 - Every type page carries the six-slot structural decomposition (data, transform, geometry, scale, coordinates, guides). Those slots are definitional and carry no evidence label.
-- **The inheritance rule: evidence attaches to channels, not to chart types.** No controlled study has tested a chart type as an artifact in the world. A type page inherits accuracy claims from [wiki/concepts/channels.md](../../../wiki/concepts/channels.md) with a link; it does not restate them as native findings. Where a study *has* decomposed a specific type, that is a genuine type-level finding and belongs on the page.
+- **The inheritance rule: evidence attaches to channels, not to chart types.** No controlled study has tested a chart type as an artifact in the world. A type page inherits accuracy claims from [wiki/concepts/channels.md](../../../plugins/agent-viz/wiki/concepts/channels.md) with a link; it does not restate them as native findings. Where a study *has* decomposed a specific type, that is a genuine type-level finding and belongs on the page.
 
 ## Source-extraction rules, each written in blood
 

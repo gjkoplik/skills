@@ -8,8 +8,8 @@ Weekly research sweep for the **agent-viz** wiki. Fresh session: assume no memor
 
 ## Setup
 
-1. `cd` to the agent-viz repo and confirm with `git rev-parse --show-toplevel`. If the working directory is not agent-viz, locate it (it is a sibling of the other repos under `~/repos`) and work there.
-2. **Load the `agent-viz-wiki` skill** at `.claude/skills/agent-viz-wiki/SKILL.md`. It carries the page schema, the evidence-class discipline, the flat-chart-types structure, the extraction rules, and the house prose style. Everything below assumes it.
+1. `cd` to the **`plugins/agent-viz` directory of the `skills` monorepo** and work from there, so every `wiki/...` path below resolves as written. Find the repo root with `git rev-parse --show-toplevel`; if the working directory is not the `skills` repo, locate it (it is under `~/repos`) and `cd` into `plugins/agent-viz`. agent-viz used to be its own repo and no longer is.
+2. **Load the `agent-viz-wiki` skill** at `../../.claude/skills/agent-viz-wiki/SKILL.md` (repo root, not the plugin). It carries the page schema, the evidence-class discipline, the flat-chart-types structure, the extraction rules, and the house prose style. Everything below assumes it.
 3. Read `wiki/README.md` for the current state: the source and study tables, the page counts, and the stated gaps. Read `wiki/refutations.md`, which is the highest-value page and the best guide to what this project considers a good find.
 4. `git status` first. If the working tree already has uncommitted wiki edits from a previous run the maintainer has not reviewed yet, **do not pile on**. Note it in the digest, do the staleness check only, and stop.
 

@@ -11,8 +11,8 @@ There is a lot of visualization advice in the world and almost all of it is writ
 /plugin install agent-viz@skills
 ```
 
-The marketplace lives in [gjkoplik/skills](https://github.com/gjkoplik/skills) and lists this repo by tag. This repo
-is the plugin, not the storefront.
+This is one plugin inside the [gjkoplik/skills](https://github.com/gjkoplik/skills) monorepo. Paths below are relative
+to `plugins/agent-viz/`.
 
 The skill loads by description when you are about to produce or review a figure, and can be invoked directly as `/agent-viz`.
 

@@ -1,42 +1,62 @@
 # Releasing
 
-There is no build and no publish step. A marketplace reads a git ref directly, so **a release is a tag**.
+There is no build and no publish step. A marketplace reads this repo live from a git ref, so a release is a tag.
 
-Two kinds of plugin live here and they release differently.
+**Two levels, answering different questions.**
 
-## A plugin in this repo (`plugins/<name>/`)
+| | Versioned by | Recorded in | Answers |
+| --- | --- | --- | --- |
+| A plugin | semver | `plugins/<name>/CHANGELOG.md` | what changed in this skill, and is it breaking |
+| This repo | calendar | `CHANGELOG.md` | what shipped, and when |
 
-Tags are per plugin, `{name}--v{version}`, because one repo ships several plugins on their own clocks.
+The plugin version is the one that matters to a user. The repo version is bookkeeping.
 
-1. Bump `version` in `plugins/<name>/.claude-plugin/plugin.json`.
-2. Commit.
-3. Tag and push:
+## Releasing a plugin
+
+1. Land the change on `main`. CI has to be green.
+2. Add the entry to `plugins/<name>/CHANGELOG.md`.
+3. Bump `version` in `plugins/<name>/.claude-plugin/plugin.json` and commit.
+4. Tag and push:
 
    ```
    claude plugin tag ./plugins/<name> --push
    ```
 
-`claude plugin tag` validates that `plugin.json` and the enclosing marketplace entry agree before it writes anything,
-and refuses to tag a dirty tree.
+That writes `<name>--v<version>`. `claude plugin tag` validates that `plugin.json` and the marketplace entry agree
+before it writes anything, and refuses to tag a dirty tree.
 
-## A plugin in its own repo
+**The version bump is the gate, not the tag.** Verified: a content change pushed to `main` without a version bump does
+not reach an installed user, who is told they are already at the latest version. Bumping delivers it. So a push that
+forgets step 3 reaches nobody, which is the safe direction to fail, but it also means the changelog and the version
+have to move together or a real change silently does not ship.
 
-The tag is cut in that repo. Here you only move the pin:
+Users never see the tag. They type `/plugin install <name>@skills` and see `Version: 0.0.1`.
 
-1. Confirm the tag exists and was pushed: `git ls-remote --tags https://github.com/<owner>/<repo> v<version>`.
-2. Set `ref` on that plugin's entry in `.claude-plugin/marketplace.json`.
-3. Commit.
+## Cutting a repo release
 
-## Why every entry is pinned
+Calendar versioned, `vYYYY.MM.DD`. It carries no meaning of its own: it records which plugin versions were current.
 
-An entry can point at a default branch, and plenty do. It means every push reaches every user with auto-update on,
-within about ten minutes, with no review and no way for anyone to stay on a known-good version. Fine for a scratch
-plugin, wrong for a public one.
+1. Add a dated section to the root `CHANGELOG.md` listing each plugin at its version, and what moved since the last one.
+2. Commit, then `git tag v2026.08.24 && git push origin v2026.08.24`.
 
-The failure worth guarding against is a **pin to a tag nobody pushed**. It validates locally and fails at install time
-for everyone. CI checks each pinned ref against the remote for exactly this reason.
+Nothing pins to these tags and no manifest holds a repo version. They exist so a point in time has a name.
 
-## Versions
+## What users get
 
-Semantic versioning, per plugin. Below `0.1.0` means the shape is still moving and anything can change without
-ceremony.
+```
+/plugin marketplace add gjkoplik/skills
+/plugin install agent-viz@skills
+/plugin install what-if@skills
+```
+
+Adding the marketplace without a ref tracks the default branch, so a version bump reaches users on auto-update within
+about ten minutes. Anyone who wants to be explicit can pin the marketplace itself:
+
+```
+/plugin marketplace add gjkoplik/skills#v2026.08.24
+```
+
+## Versioning a plugin
+
+Semantic versioning, with the wrinkle that these ship prose rather than code. Below `0.1.0` means the shape is still
+moving and anything can change without ceremony.

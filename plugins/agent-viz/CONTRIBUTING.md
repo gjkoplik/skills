@@ -56,4 +56,4 @@ Then move the pin in the marketplace repo, which is a separate step in a separat
 
 The `release-tag` CI job fails if the tag named by the version does not exist. That check matters: **a marketplace pinned to a tag nobody pushed fails at install time for everyone, and you will not see it locally.**
 
-Full detail in [RELEASING.md](RELEASING.md).
+Full detail in [RELEASING.md](../../RELEASING.md).

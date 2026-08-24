@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "skills",
-  "description": "Gary Koplik's Claude Code plugins. Subject repos keep their own trees and are listed here by tag; skills with no subject live in this repo under plugins/.",
+  "description": "Gary Koplik's Claude Code plugins. Each plugin under plugins/ versions itself with semver and carries its own changelog; the repo cuts calendar-versioned releases that record which plugin versions moved.",
   "owner": {
     "name": "Gary Koplik",
     "url": "https://github.com/gjkoplik"
@@ -11,12 +11,8 @@
       "name": "agent-viz",
       "description": "A researched quality bar for any figure a person will look at, written for coding agents.",
       "category": "development",
-      "source": {
-        "source": "github",
-        "repo": "gjkoplik/agent-viz",
-        "ref": "v0.0.1"
-      },
-      "homepage": "https://github.com/gjkoplik/agent-viz"
+      "source": "./plugins/agent-viz",
+      "homepage": "https://github.com/gjkoplik/skills/tree/main/plugins/agent-viz"
     },
     {
       "name": "what-if",

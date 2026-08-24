@@ -30,8 +30,49 @@ jobs:
             echo "::endgroup::"
           done
 
-  pins:
-    name: pins resolve
+  frontmatter:
+    name: skill frontmatter parses
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Every SKILL.md must have parseable frontmatter
+        run: |
+          python - <<'PY'
+          import pathlib, re, sys, yaml
+
+          # claude plugin validate only scans skills/<name>/SKILL.md. A root-level
+          # skill (plugins/agent-viz/SKILL.md) and this repo's own .claude/ skills
+          # are invisible to it. Unparseable frontmatter is not a warning: the skill
+          # loads with every field silently dropped.
+          bad = []
+          for f in sorted(pathlib.Path(".").rglob("SKILL.md")):
+              if ".git" in f.parts:
+                  continue
+              m = re.match(r"^---\n(.*?)\n---\n", f.read_text(encoding="utf-8"), re.S)
+              if not m:
+                  bad.append(f"{f}: no YAML frontmatter block")
+                  continue
+              try:
+                  meta = yaml.safe_load(m.group(1))
+              except yaml.YAMLError as e:
+                  bad.append(f"{f}: frontmatter does not parse ({str(e).splitlines()[0]}). "
+                             f"A description containing ': ' must be quoted.")
+                  continue
+              for key in ("name", "description"):
+                  if not (isinstance(meta, dict) and meta.get(key)):
+                      bad.append(f"{f}: frontmatter has no {key}")
+
+          for b in bad:
+              print(f"::error::{b}")
+          print(f"{len(bad)} frontmatter problem(s)")
+          sys.exit(1 if bad else 0)
+          PY
+
+  tags:
+    name: versions have tags
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -40,61 +81,41 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Every pinned ref must exist where it is pinned
+      - name: Every plugin version must have a pushed tag
         run: |
           python - <<'PY'
           import json, pathlib, subprocess, sys
 
+          # Every plugin now lives in this repo, so there are no cross-repo pins to
+          # verify. What is left is the release marker: a version with no tag means
+          # the release was never actually cut, and nothing records what shipped.
           market = json.load(open(".claude-plugin/marketplace.json"))
           problems = []
 
-          def remote_has_tag(url, ref):
-              out = subprocess.run(["git", "ls-remote", "--tags", url, ref],
-                                   capture_output=True, text=True).stdout
-              return bool(out.strip())
-
           for entry in market["plugins"]:
               name, src = entry["name"], entry["source"]
-
-              # A plugin that lives in this repo: its version must have a pushed tag.
-              if isinstance(src, str):
-                  manifest = pathlib.Path(src) / ".claude-plugin" / "plugin.json"
-                  if not manifest.exists():
-                      problems.append(f"{name}: {manifest} does not exist")
-                      continue
-                  version = json.load(open(manifest)).get("version")
-                  if not version:
-                      problems.append(f"{name}: plugin.json has no version, so users are never told to update")
-                      continue
-                  tag = f"{name}--v{version}"
-                  tags = subprocess.run(["git", "tag", "--list", tag],
-                                        capture_output=True, text=True).stdout.split()
-                  if tag not in tags:
-                      problems.append(
-                          f"{name}: version {version} has no tag {tag}. "
-                          f"Create it with: claude plugin tag ./{src.lstrip('./')} --push")
+              if not isinstance(src, str):
+                  problems.append(f"{name}: external source {src!r}; this repo expects plugins under plugins/")
                   continue
-
-              # A plugin sourced from another repo: the ref must exist on that remote,
-              # because a pin to a tag nobody pushed validates here and fails at
-              # install time for everyone.
-              ref = src.get("ref")
-              if not ref:
-                  problems.append(f"{name}: pins no ref, so it tracks a default branch")
+              manifest = pathlib.Path(src) / ".claude-plugin" / "plugin.json"
+              if not manifest.exists():
+                  problems.append(f"{name}: {manifest} does not exist")
                   continue
-              if src.get("source") == "github":
-                  url = f"https://github.com/{src['repo']}"
-              elif src.get("source") in ("git-subdir", "url"):
-                  url = src["url"]
-              else:
-                  problems.append(f"{name}: unrecognized source type {src.get('source')!r}")
+              version = json.load(open(manifest)).get("version")
+              if not version:
+                  problems.append(f"{name}: plugin.json has no version, so users are never told to update")
                   continue
-              if not remote_has_tag(url, ref):
-                  problems.append(f"{name}: {url} has no tag {ref}, so installing it would fail")
+              tag = f"{name}--v{version}"
+              tags = subprocess.run(["git", "tag", "--list", tag],
+                                    capture_output=True, text=True).stdout.split()
+              if tag not in tags:
+                  problems.append(
+                      f"{name}: version {version} has no tag {tag}. "
+                      f"Cut it with: claude plugin tag ./{src.lstrip('./')} --push")
 
           for p in problems:
               print(f"::error::{p}")
-          print(f"{len(problems)} pin problem(s)")
+          print(f"{len(problems)} tag problem(s)")
           sys.exit(1 if problems else 0)
           PY
 
@@ -136,12 +157,13 @@ jobs:
           python - <<'PY'
           import pathlib, re, sys
 
-          # The house rule governs OUR prose, not quoted sources.
+          # The house rule governs OUR prose, not quoted sources. A quotation keeps
+          # whatever the source wrote, including em-dashes and British spelling.
           def strip_quoted(line):
-              if line.lstrip().startswith(">"):
+              if line.lstrip().startswith(">"):      # blockquote
                   return ""
-              line = re.sub(r'"[^"]*"', "", line)
-              line = re.sub(r"`[^`]*`", "", line)
+              line = re.sub(r'"[^"]*"', "", line)    # inline quotation
+              line = re.sub(r"`[^`]*`", "", line)    # code and term-mentions
               return line
 
           BRITISH = re.compile(r"\b(colour|behaviour|neighbour|favour)[a-z]*", re.I)

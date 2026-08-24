@@ -3,7 +3,7 @@
 A summary of what changed in the quality bar and the research behind it.
 
 Semantic versioning, most recent release first. A release is a git tag; there is no build or publish step, so see
-[RELEASING.md](RELEASING.md). While the version is `0.0.x`, the shape is still moving and anything can change without
+[RELEASING.md](../../RELEASING.md). While the version is `0.0.x`, the shape is still moving and anything can change without
 ceremony.
 
 ## 0.0.1
