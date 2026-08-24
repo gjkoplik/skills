@@ -57,19 +57,49 @@ Nothing pins to these tags and no manifest holds a repo version. They exist so a
 
 ## What users get
 
+Verified against this repo, not assumed.
+
 ```
 /plugin marketplace add gjkoplik/skills
 /plugin install agent-viz@skills
 /plugin install what-if@skills
 ```
 
-Adding the marketplace without a ref tracks the default branch, so users pick up **marketplace** changes as they land,
-which is why the plugin entries themselves are pinned. What a user gets is whatever tag each entry names at that moment.
-Anyone who wants the whole listing frozen can pin the marketplace too:
+They then see the plugin's semver and nothing else:
 
 ```
-/plugin marketplace add gjkoplik/skills#v2026.08.24
+❯ what-if@skills
+  Version: 0.0.2
 ```
+
+**Users never see a tag.** `what-if--v0.0.2` appears only in your git history and in `marketplace.json`.
+
+### The two halves, because they behave differently
+
+| | Tracks | Decides |
+| --- | --- | --- |
+| `marketplace.json` on `main` | the default branch, live | **which tag** each plugin sits at |
+| the tag it names | frozen | **what content** ships |
+
+So the two things you can push have opposite effects:
+
+- **Pushing plugin code to `main` reaches nobody.** Confirmed: `plugins/what-if/CHANGELOG.md` sat on `main` for several
+  commits while every install lacked it, because the pin still named an older tag.
+- **Pushing a changed pin to `main` is the act of releasing.** That is the whole release, and it is why the version bump
+  and the pin move belong in one commit.
+
+### What an existing user does
+
+Auto-update handles this, but by hand it is two steps, and the first is the one people forget:
+
+```
+/plugin marketplace update skills
+/plugin update what-if@skills
+```
+
+Observed: `Plugin "what-if" updated from 0.0.1 to 0.0.2 for scope user. Restart to apply changes.` A new install on the
+same commit lands on `0.0.2` directly. Old versions stay in the cache side by side (`cache/skills/what-if/0.0.1` and
+`.../0.0.2`), so a rollback is a version pin away rather than a re-download.
 
 ## Versioning a plugin
 

@@ -32,9 +32,11 @@ both directions.
 
 ## Versions
 
-Two levels. Plugins use semantic versioning and carry their own changelogs; the repo cuts calendar-versioned releases
-that record which plugin versions were current. The plugin version is what a user sees and what gates their updates.
-See [RELEASING.md](RELEASING.md) and [CHANGELOG.md](CHANGELOG.md).
+Two levels. Plugins use semantic versioning and carry their own changelogs, and that is the number you see when you
+install one. The repo cuts calendar-versioned releases that only record which plugin versions were current.
+
+Every plugin is pinned to its own tag, so what you install is a frozen release rather than whatever happened to be on
+`main` when you ran the command. See [RELEASING.md](RELEASING.md) and [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 

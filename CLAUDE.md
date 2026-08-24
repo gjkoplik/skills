@@ -27,7 +27,9 @@ Two levels, and they answer different questions.
 - **This repo: calendar versioning**, tracked in the root `CHANGELOG.md`. A repo release records which plugin
   versions moved and does not carry meaning of its own.
 
-See `RELEASING.md`. Do not invent a version for the repo in any manifest; the repo's version is its tag.
+`marketplace.json` on `main` decides **which tag** each plugin sits at; the tag decides **what content** ships.
+Pushing plugin code to `main` therefore reaches nobody, and pushing a changed pin is the release. See `RELEASING.md`.
+Do not invent a version for the repo in any manifest; the repo's version is its tag.
 
 ## Working conventions
 

@@ -15,7 +15,7 @@ See [RELEASING.md](RELEASING.md).
 | Plugin | Version |
 | --- | --- |
 | agent-viz | 0.0.1 |
-| what-if | 0.0.1 |
+| what-if | 0.0.2 |
 
 ### Added
 
@@ -31,6 +31,9 @@ See [RELEASING.md](RELEASING.md).
   source resolves against the default branch, so a fresh install would have pulled unreleased work off `main`; the
   `version` field gates updates for existing installs but does nothing for a first install.
 - House style is no longer checked in CI. Punctuation checks on every push cost more attention than they returned.
+- The repo is public, and the install path is documented from observed behavior rather than assumed. `RELEASING.md`
+  now records the part that is easy to get backwards: `marketplace.json` on `main` decides which tag a plugin sits at,
+  the tag decides what ships, so pushing plugin code reaches nobody and pushing a changed pin is the release.
 - Repo tooling that is not shipped to anyone (the wiki-maintenance skill, the weekly sweep) moved to `.claude/` at the
   repo root. A `CLAUDE.md` inside a plugin directory is copied into every install and does nothing there, so
   agent-viz's working instructions moved into the root `CLAUDE.md` as a section.
