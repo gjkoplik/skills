@@ -30,7 +30,7 @@ Each of these produced confidently wrong output here:
 
 ## House style
 
-No em-dashes outside a quotation. American spelling outside quotes. Direct, slightly informal, no filler. Do not pad. CI enforces the first two, ignoring quotations, blockquotes and backticks.
+No em-dashes outside a quotation. American spelling outside quotes. Direct, slightly informal, no filler. Do not pad. Not machine-checked; read your own prose.
 
 ## Scope
 
@@ -42,7 +42,7 @@ How figures encode data and how readers read them. Where a rule has a mechanical
 claude plugin validate . --strict
 ```
 
-CI additionally checks that relative links resolve, that house style holds, and that `plugin.json`'s version has a tag that was actually pushed.
+CI additionally checks that relative links resolve, that every `SKILL.md` has parseable frontmatter, and that each plugin is pinned to a tag that exists.
 
 ## Cutting a release
 

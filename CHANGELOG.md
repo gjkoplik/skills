@@ -27,7 +27,10 @@ See [RELEASING.md](RELEASING.md).
   stars, forks or inbound references, so nothing depended on the old location. The split had been costing a two-step
   release across two repos, a cross-repo pin that CI had to reach the network to verify, two CI configs and two
   release procedures, for a separation with no audience to serve.
-- The marketplace lists both plugins from `plugins/`, so there are no cross-repo pins left to break.
+- The marketplace pins each plugin to its own `<name>--v<version>` tag with a `git-subdir` source. A relative-path
+  source resolves against the default branch, so a fresh install would have pulled unreleased work off `main`; the
+  `version` field gates updates for existing installs but does nothing for a first install.
+- House style is no longer checked in CI. Punctuation checks on every push cost more attention than they returned.
 - Repo tooling that is not shipped to anyone (the wiki-maintenance skill, the weekly sweep) moved to `.claude/` at the
   repo root. A `CLAUDE.md` inside a plugin directory is copied into every install and does nothing there, so
   agent-viz's working instructions moved into the root `CLAUDE.md` as a section.

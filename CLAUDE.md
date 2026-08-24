@@ -20,8 +20,10 @@ A marketplace plus the plugins it lists, in one tree. Each plugin under `plugins
 
 Two levels, and they answer different questions.
 
-- **Per plugin: semantic versioning**, tracked in `plugins/<name>/CHANGELOG.md`. This is what a user sees and what
-  gates updates. A push that does not bump `version` in `plugin.json` does not reach anyone, verified.
+- **Per plugin: semantic versioning**, tracked in `plugins/<name>/CHANGELOG.md`. This is what a user sees.
+  **Every plugin is pinned to its own `<name>--v<version>` tag in `marketplace.json`.** Never use a relative-path
+  source: it resolves against the default branch, so a fresh install would pull unreleased work off `main`. The
+  version field gates updates for existing installs; only the pin protects a first install.
 - **This repo: calendar versioning**, tracked in the root `CHANGELOG.md`. A repo release records which plugin
   versions moved and does not carry meaning of its own.
 
@@ -47,7 +49,7 @@ See `RELEASING.md`. Do not invent a version for the repo in any manifest; the re
 - Direct, slightly informal. No "delve", "moreover", "furthermore", "it is worth noting that". No throat-clearing.
 - Do not pad. A page that says less and is true beats a long one.
 
-CI enforces the first two, ignoring quotations, blockquotes and backticks.
+Not enforced in CI. It was, and checking punctuation on every push cost more attention than it returned.
 
 ---
 

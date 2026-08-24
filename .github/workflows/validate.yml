@@ -75,8 +75,8 @@ jobs:
           sys.exit(1 if bad else 0)
           PY
 
-  tags:
-    name: versions have tags
+  pins:
+    name: pins resolve
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -85,41 +85,72 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Every plugin version must have a pushed tag
+      - name: Every plugin must be pinned to a tag that exists
         run: |
           python - <<'PY'
           import json, pathlib, subprocess, sys
 
-          # Every plugin now lives in this repo, so there are no cross-repo pins to
-          # verify. What is left is the release marker: a version with no tag means
-          # the release was never actually cut, and nothing records what shipped.
+          # Plugins are pinned to their own tags rather than sourced by relative
+          # path. A relative path resolves against whatever the marketplace repo's
+          # default branch is at, so a fresh install would pull unreleased work off
+          # main. The version bump only gates updates for people already installed.
           market = json.load(open(".claude-plugin/marketplace.json"))
-          problems = []
+          problems, notices = [], []
 
           for entry in market["plugins"]:
               name, src = entry["name"], entry["source"]
-              if not isinstance(src, str):
-                  problems.append(f"{name}: external source {src!r}; this repo expects plugins under plugins/")
+
+              if isinstance(src, str):
+                  problems.append(
+                      f"{name}: sourced by relative path {src!r}, which tracks the default branch. "
+                      f"Pin it to a tag with a git-subdir source.")
                   continue
-              manifest = pathlib.Path(src) / ".claude-plugin" / "plugin.json"
+              if src.get("source") != "git-subdir":
+                  problems.append(f"{name}: source type {src.get('source')!r}; this repo pins with git-subdir")
+                  continue
+
+              path, ref = src.get("path"), src.get("ref")
+              if not ref:
+                  problems.append(f"{name}: pins no ref, so it tracks a default branch")
+                  continue
+
+              manifest = pathlib.Path(path or "") / ".claude-plugin" / "plugin.json"
               if not manifest.exists():
-                  problems.append(f"{name}: {manifest} does not exist")
+                  problems.append(f"{name}: path {path!r} has no plugin manifest")
                   continue
               version = json.load(open(manifest)).get("version")
               if not version:
                   problems.append(f"{name}: plugin.json has no version, so users are never told to update")
                   continue
-              tag = f"{name}--v{version}"
-              tags = subprocess.run(["git", "tag", "--list", tag],
-                                    capture_output=True, text=True).stdout.split()
-              if tag not in tags:
-                  problems.append(
-                      f"{name}: version {version} has no tag {tag}. "
-                      f"Cut it with: claude plugin tag ./{src.lstrip('./')} --push")
 
+              expected = f"{name}--v{version}"
+              if ref != expected:
+                  problems.append(
+                      f"{name}: pinned to {ref!r} but plugin.json says {version}. "
+                      f"Bump one or the other so they agree ({expected}).")
+                  continue
+
+              tags = subprocess.run(["git", "tag", "--list", ref],
+                                    capture_output=True, text=True).stdout.split()
+              if ref not in tags:
+                  problems.append(
+                      f"{name}: tag {ref} does not exist, so installing it would fail for everyone. "
+                      f"Cut it with: claude plugin tag ./{path} --push")
+                  continue
+
+              # Not a failure. Main being ahead of a pin is the normal state; this
+              # just makes it visible which plugins are sitting on unshipped work.
+              diff = subprocess.run(["git", "diff", "--quiet", ref, "HEAD", "--", path])
+              if diff.returncode != 0:
+                  files = subprocess.run(["git", "diff", "--name-only", ref, "HEAD", "--", path],
+                                         capture_output=True, text=True).stdout.split()
+                  notices.append(f"{name}: {len(files)} file(s) changed on main since {ref}, not shipped to users")
+
+          for n in notices:
+              print(f"::notice::{n}")
           for p in problems:
               print(f"::error::{p}")
-          print(f"{len(problems)} tag problem(s)")
+          print(f"{len(problems)} pin problem(s), {len(notices)} plugin(s) with unshipped work on main")
           sys.exit(1 if problems else 0)
           PY
 
@@ -145,45 +176,5 @@ jobs:
           for b in bad:
               print(f"::error::broken: {b}")
           print(f"{len(bad)} broken link(s)")
-          sys.exit(1 if bad else 0)
-          PY
-
-  prose:
-    name: house style
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: No em-dashes, American spelling
-        run: |
-          python - <<'PY'
-          import pathlib, re, sys
-
-          # The house rule governs OUR prose, not quoted sources. A quotation keeps
-          # whatever the source wrote, including em-dashes and British spelling.
-          def strip_quoted(line):
-              if line.lstrip().startswith(">"):      # blockquote
-                  return ""
-              line = re.sub(r'"[^"]*"', "", line)    # inline quotation
-              line = re.sub(r"`[^`]*`", "", line)    # code and term-mentions
-              return line
-
-          BRITISH = re.compile(r"\b(colour|behaviour|neighbour|favour)[a-z]*", re.I)
-          bad = []
-          for f in sorted(pathlib.Path(".").rglob("*.md")):
-              if ".git" in f.parts:
-                  continue
-              for n, raw in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
-                  line = strip_quoted(raw)
-                  if "—" in line:
-                      bad.append(f"{f}:{n}: em-dash outside a quote")
-                  m = BRITISH.search(line)
-                  if m and "spelling" not in raw.lower():
-                      bad.append(f"{f}:{n}: British spelling '{m.group(0)}' outside a quote")
-          for b in bad:
-              print(f"::error::{b}")
-          print(f"{len(bad)} house-style violation(s)")
           sys.exit(1 if bad else 0)
           PY

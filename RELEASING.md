@@ -11,26 +11,40 @@ There is no build and no publish step. A marketplace reads this repo live from a
 
 The plugin version is the one that matters to a user. The repo version is bookkeeping.
 
+## Every plugin is pinned to its own tag
+
+Each entry in `marketplace.json` is a `git-subdir` source pointing at this repo, one plugin subdirectory, at a tag:
+
+```json
+{ "source": "git-subdir", "url": "https://github.com/gjkoplik/skills.git",
+  "path": "plugins/what-if", "ref": "what-if--v0.0.1" }
+```
+
+**Not a relative path.** A relative-path source resolves against whatever the marketplace repo's default branch is at,
+so a fresh install pulls unreleased work straight off `main`. The `version` field gates *updates* for someone already
+installed, but it does not protect a first install. Pinning does. `main` can be as far ahead as you like and nobody
+sees it until a ref moves.
+
 ## Releasing a plugin
 
 1. Land the change on `main`. CI has to be green.
 2. Add the entry to `plugins/<name>/CHANGELOG.md`.
-3. Bump `version` in `plugins/<name>/.claude-plugin/plugin.json` and commit.
+3. In one commit: bump `version` in `plugins/<name>/.claude-plugin/plugin.json`, **and** set that plugin's `ref` in
+   `.claude-plugin/marketplace.json` to the matching `<name>--v<version>`.
 4. Tag and push:
 
    ```
    claude plugin tag ./plugins/<name> --push
    ```
 
-That writes `<name>--v<version>`. `claude plugin tag` validates that `plugin.json` and the marketplace entry agree
-before it writes anything, and refuses to tag a dirty tree.
-
-**The version bump is the gate, not the tag.** Verified: a content change pushed to `main` without a version bump does
-not reach an installed user, who is told they are already at the latest version. Bumping delivers it. So a push that
-forgets step 3 reaches nobody, which is the safe direction to fail, but it also means the changelog and the version
-have to move together or a real change silently does not ship.
+`claude plugin tag` validates that `plugin.json` and the marketplace entry agree before writing anything, and refuses
+to tag a dirty tree, so step 3 landing as one commit is what makes step 4 work.
 
 Users never see the tag. They type `/plugin install <name>@skills` and see `Version: 0.0.1`.
+
+The `pins` CI job fails if a ref does not exist, if a ref and a version disagree, or if any plugin has drifted back to
+a relative path. It also prints a notice for each plugin whose files have changed on `main` since its pin, so unshipped
+work is visible rather than assumed.
 
 ## Cutting a repo release
 
@@ -49,8 +63,9 @@ Nothing pins to these tags and no manifest holds a repo version. They exist so a
 /plugin install what-if@skills
 ```
 
-Adding the marketplace without a ref tracks the default branch, so a version bump reaches users on auto-update within
-about ten minutes. Anyone who wants to be explicit can pin the marketplace itself:
+Adding the marketplace without a ref tracks the default branch, so users pick up **marketplace** changes as they land,
+which is why the plugin entries themselves are pinned. What a user gets is whatever tag each entry names at that moment.
+Anyone who wants the whole listing frozen can pin the marketplace too:
 
 ```
 /plugin marketplace add gjkoplik/skills#v2026.08.24

@@ -11,14 +11,24 @@
       "name": "agent-viz",
       "description": "A researched quality bar for any figure a person will look at, written for coding agents.",
       "category": "development",
-      "source": "./plugins/agent-viz",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gjkoplik/skills.git",
+        "path": "plugins/agent-viz",
+        "ref": "agent-viz--v0.0.1"
+      },
       "homepage": "https://github.com/gjkoplik/skills/tree/main/plugins/agent-viz"
     },
     {
       "name": "what-if",
       "description": "A cheap look at a half-formed idea before committing to a conversation about it. Short, calibrated to what you already know, and willing to come back with \"not worth it\".",
       "category": "productivity",
-      "source": "./plugins/what-if",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gjkoplik/skills.git",
+        "path": "plugins/what-if",
+        "ref": "what-if--v0.0.1"
+      },
       "homepage": "https://github.com/gjkoplik/skills/tree/main/plugins/what-if"
     }
   ]
