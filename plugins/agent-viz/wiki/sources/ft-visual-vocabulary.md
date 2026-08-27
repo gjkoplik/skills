@@ -2,7 +2,7 @@
 type: source
 status: primary-read
 status_partial: true
-retrieved: 2026-08-25
+retrieved: 2026-08-27
 ---
 
 # FT Visual Vocabulary
@@ -12,7 +12,7 @@ A poster and companion repository from the Financial Times Visual Journalism Tea
 **How this was read.** `primary-read`, with one scope note, and read twice.
 
 - **2026-08-23.** The `visual-vocabulary` README in the `Financial-Times/chart-doctor` repository was fetched and converted locally. That pass recorded all nine category definitions and a sample of the per-chart glosses.
-- **2026-08-25.** The raw markdown was fetched again with `curl -sL` from `raw.githubusercontent.com` on the repository's default branch, saved locally, and its identity confirmed from the opening lines before anything was quoted. The full listing below was extracted from that saved file by walking its `###` category headings and `####` type headings and taking the first prose line under each, so every gloss here is machine-lifted from the source text rather than retyped. 67 type headings were found and 67 glosses recovered, with none missing.
+- **2026-08-27.** The raw markdown was fetched again with `curl -sL` from `raw.githubusercontent.com` on the repository's default branch, saved locally, and its identity confirmed from the opening lines before anything was quoted. The full listing below was extracted from that saved file by walking its `###` category headings and `####` type headings and taking the first prose line under each, so every gloss here is machine-lifted from the source text rather than retyped. 67 type headings were found and 67 glosses recovered, with none missing.
 
 Quotes are verbatim, including the source's own typos, which are frequent enough to be worth expecting: "value pf multiple variables", "the arrngement of the variables", "count/magnitde", "earthquakes by contintent", "in a table,they work best". **One repair was made and only one.** The nine category definitions in the raw markdown have words run together where the poster's line breaks were pasted in ("can bebroken down", "issolely", "chartinstead", "locations orgeographical"). Those spaces are restored in the definitions below. No gloss needed the repair.
 

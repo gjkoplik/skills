@@ -3,7 +3,7 @@ type: source
 status: secondary-only
 status_partial: true
 author: tamara-munzner
-retrieved: 2026-08-25
+retrieved: 2026-08-27
 ---
 
 # Munzner, *Visualization Analysis and Design*
@@ -20,7 +20,7 @@ Every quote below is **from the slides, not the book**. They are the author's ow
 
 This is an upgrade on the previous state, which had chapter names from two third-party decks and no rule text at all.
 
-**Second pass, 2026-08-25**, aimed at one question: can the *idioms* (Munzner's word for chart types) be recovered chapter by chapter, the way [schwabish.md](schwabish.md) recovered them from a contents page? **Partly.** The publisher's table of contents is section-level and stops above the idioms, so it names "Connection: Link Marks" and "Matrix Views" but no chart. The **2021 slide deck** (`VAD-2021.pdf`, 541 slides, 53 MB, from the companion site, extracted locally with `pypdf` and identity-checked against its title slide) does name them, one per slide, in the book's chapter order. The listing below is from that deck. **It vouches for what the author teaches under each chapter heading. It does not vouch for a word of the book's prose.**
+**Second pass, 2026-08-27**, aimed at one question: can the *idioms* (Munzner's word for chart types) be recovered chapter by chapter, the way [schwabish.md](schwabish.md) recovered them from a contents page? **Partly.** The publisher's table of contents is section-level and stops above the idioms, so it names "Connection: Link Marks" and "Matrix Views" but no chart. The **2021 slide deck** (`VAD-2021.pdf`, 541 slides, 53 MB, from the companion site, extracted locally with `pypdf` and identity-checked against its title slide) does name them, one per slide, in the book's chapter order. The listing below is from that deck. **It vouches for what the author teaches under each chapter heading. It does not vouch for a word of the book's prose.**
 
 Two provenance details from that extraction. The deck's spatial-data section is captioned "Spatial Data (Ch 9)" although the book's chapter 9 is Arrange Networks and Trees and its spatial chapter is 8; the surrounding content is the spatial chapter, so this is a slide typo. And two slides embed page images from a **draft galley** of the book, watermarked "Permission needed" and numbered against a chapter scheme the published book does not use. They are the only book prose reached in this project and they are not quoted here, because a draft with different chapter numbers is not the book.
 
@@ -103,7 +103,7 @@ This is the chapter a figure bar borrows from. The section-level TOC names **eig
 
 (plus "Why and When to Follow Rules of Thumb?" and "The Big Picture" as the framing sections)
 
-[roll-call.md](../roll-call.md) maps **seven** of the eight and omits **No Unjustified 2D**, which is about not forcing network data into a spatial layout when a text list would read better. It is the rule most directly relevant to graph visualization, so the omission matters more than its size suggests. *Corrected 2026-08-25: this page and roll-call previously both said the chapter has nine rules, while the list extracted here has eight and roll-call maps seven. If anyone re-reads the TOC and finds a ninth, that is a correction to record rather than a number to restore.*
+[roll-call.md](../roll-call.md) maps **seven** of the eight and omits **No Unjustified 2D**, which is about not forcing network data into a spatial layout when a text list would read better. It is the rule most directly relevant to graph visualization, so the omission matters more than its size suggests. *Corrected 2026-08-27: this page and roll-call previously both said the chapter has nine rules, while the list extracted here has eight and roll-call maps seven. If anyone re-reads the TOC and finds a ninth, that is a correction to record rather than a number to restore.*
 
 ## What the slides actually say
 

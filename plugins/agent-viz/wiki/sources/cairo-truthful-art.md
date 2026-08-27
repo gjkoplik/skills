@@ -3,7 +3,7 @@ type: source
 status: secondary-only
 status_partial: true
 author: alberto-cairo
-retrieved: 2026-08-25
+retrieved: 2026-08-27
 ---
 
 # Cairo, *The Truthful Art*
@@ -14,7 +14,7 @@ Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for Communication* (New
 
 **Chapter 2, "The Five Qualities of Great Visualizations", is not in the sample and was not read.** The five names and their page numbers are confirmed from the book's own contents page. Cairo's argument about them is not.
 
-**Second pass, 2026-08-25**, aimed at the two chapters this wiki has open holes against: chapter 10 on choropleth classification and chapter 11 on uncertainty. The sample PDF was re-downloaded and re-extracted, and its contents pages and complete index were mined for both. **Neither chapter was reached.** What the two sections below carry is the book's own account of where the material sits and what it is called, at section and index-entry level. Nothing about what Cairo argues is vouched.
+**Second pass, 2026-08-27**, aimed at the two chapters this wiki has open holes against: chapter 10 on choropleth classification and chapter 11 on uncertainty. The sample PDF was re-downloaded and re-extracted, and its contents pages and complete index were mined for both. **Neither chapter was reached.** What the two sections below carry is the book's own account of where the material sits and what it is called, at section and index-entry level. Nothing about what Cairo argues is vouched.
 
 **A route that was found and deliberately not used.** A complete PDF of chapter 10 is served from an official EU course-materials path (`data.europa.eu/sites/default/files/course/`). It was downloaded, and every one of its 35 pages carries a Pearson `ptg` watermark and a Safari personal-library footer reading "From the Library of Alberto Cairo". That is a DRM-stripped ebook, not a licensed excerpt, whatever the host. It was deleted unread and nothing on this page comes from it. An institutional host is not a permission, and the watermark is the thing to check.
 

@@ -42,7 +42,7 @@ wiki has actually published always get their own line, and are recorded rather t
 
 ---
 
-## Unreleased
+## v2026.08.27
 
 The first cut of the wiki, so everything in it is new and there is nothing yet to have changed under anyone.
 **Added / Changed / Corrected start at the second release**, when a reader has a previous version to compare against.

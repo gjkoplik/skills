@@ -30,7 +30,7 @@ Two limits on that first kind, both of which cost rows their vouching:
 
 **A recorded name is not a definition.** Most of the vouched names below come from [Schwabish's](../sources/schwabish.md) chapter contents, verified from the book's own contents pages, whose **prose is unread in this corpus**. That vouches that a published catalog carries the name and where it files it. It says nothing about what the book means by it.
 
-**The [FT source page](../sources/ft-visual-vocabulary.md) now carries its complete listing**, 67 entries under 59 distinct names, extracted from the raw README on 2026-08-25. Any FT name and gloss can be cited from there. Rows below that were written against the earlier partial reading have been corrected where the full listing contradicted them, and those corrections are noted inline.
+**The [FT source page](../sources/ft-visual-vocabulary.md) now carries its complete listing**, 67 entries under 59 distinct names, extracted from the raw README on 2026-08-27. Any FT name and gloss can be cited from there. Rows below that were written against the earlier partial reading have been corrected where the full listing contradicted them, and those corrections are noted inline.
 
 ## The names
 
@@ -156,7 +156,7 @@ A table cannot hold these. None is resolved here, because none can be resolved f
 
 **Who files what.** [Schwabish](../sources/schwabish.md) catalogs **Marimekko and Mosaic** as a single entry under Comparing Categories, verified from the book's own contents pages. That is the only vouched statement anywhere in this wiki that the two names cover one form, and it vouches a catalog entry rather than an argument, since the prose is unread.
 
-**Largely settled, 2026-08-25, by a primary definition.** [Wilke](../sources/wilke-fundamentals.md) defines the term in running text and files it with the treemap under proportions: "unlike in a stacked bar plot, in a mosaic plot both the heights and the widths of individual shaded areas vary." That is the marimekko drawing. He then attaches the condition that the statistical usage turns on: "This is a critical condition for a mosaic plot: Every categorical variable shown must cover all the observations in the dataset." So the two referents are **one drawing under a constraint**, not two charts, and the constraint is what a contingency table supplies.
+**Largely settled, 2026-08-27, by a primary definition.** [Wilke](../sources/wilke-fundamentals.md) defines the term in running text and files it with the treemap under proportions: "unlike in a stacked bar plot, in a mosaic plot both the heights and the widths of individual shaded areas vary." That is the marimekko drawing. He then attaches the condition that the statistical usage turns on: "This is a critical condition for a mosaic plot: Every categorical variable shown must cover all the observations in the dataset." So the two referents are **one drawing under a constraint**, not two charts, and the constraint is what a contingency table supplies.
 
 **What is still open.** Whether every user of "mosaic plot" means it with that condition attached. Few's unread "Are Mosaic Plots Worthwhile" ([stephen-few.md](../people/stephen-few.md)) is still the document that would show how contested the term is in practice. Naming the constraint out loud remains cheaper than arguing about the word.
 
@@ -166,7 +166,7 @@ A table cannot hold these. None is resolved here, because none can be resolved f
 
 **Who files what.** [Schwabish](../sources/schwabish.md) files **Heatmap** under Comparing Categories and **Correlation Matrix** under Relationship, so the same construction sits in two chapters under two names. The [FT](../sources/ft-visual-vocabulary.md) splits the name itself, **XY heatmap** under Correlation and **heat map** under Spatial. Both filings are recorded here from the sources' own listings. That is one name carrying three filings across two schemes, plus a fourth for the same drawing under another name.
 
-**What this wiki cannot settle.** Which referent the bare word takes, which [heatmap.md](heatmap.md) states flatly and does not resolve. **Since corrected in part:** the FT README was re-read in full on 2026-08-25 and it carries *three* heatmap entries, not two, the third being **Calendar heatmap** under Change over Time. All three glosses are now quotable from the source page. Nothing in the corpus bears on the density-heatmap sense, which remains the unresolved half. The filing disagreement itself is not a defect to be fixed; [README.md](README.md) already treats these taxonomies as retrieval aids rather than facts about charts.
+**What this wiki cannot settle.** Which referent the bare word takes, which [heatmap.md](heatmap.md) states flatly and does not resolve. **Since corrected in part:** the FT README was re-read in full on 2026-08-27 and it carries *three* heatmap entries, not two, the third being **Calendar heatmap** under Change over Time. All three glosses are now quotable from the source page. Nothing in the corpus bears on the density-heatmap sense, which remains the unresolved half. The filing disagreement itself is not a defect to be fixed; [README.md](README.md) already treats these taxonomies as retrieval aids rather than facts about charts.
 
 ### "Range plot"
 

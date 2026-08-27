@@ -81,6 +81,8 @@ The one place minimalism does not win: **minimal code buys API comprehension, ne
 | Who connects to whom? | [network and topology](wiki/chart-types/network-topology.md) |
 | Text, quotes or coded qualitative material | [qualitative](wiki/chart-types/qualitative.md) |
 
+**Arriving with a name rather than a question?** [aliases](wiki/chart-types/aliases.md) resolves 105 chart names to pages, and marks each mapping as recorded in a source, a page's own stipulation, or merely in circulation. Use it when someone asks for a form by name, and **say which kind of mapping you got**: a third of these names are in circulation with nothing in the research defining them, so "that is usually called a dumbbell plot here, and no source I have defines either name" is the honest answer, not a hedge.
+
 If the page is not there, say so and reason from [channels](wiki/concepts/channels.md). Do not invent a route.
 
 **4. Open the index before any type page.** Type pages are written to be fair to their subject, so reading one first confirms whatever was proposed. The index is the only page that asks whether the group is the right frame at all. Budget: one index, at most two type pages.

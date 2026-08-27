@@ -2,14 +2,14 @@
 type: source
 status: primary-read
 author: claus-wilke
-retrieved: 2026-08-25
+retrieved: 2026-08-27
 ---
 
 # Wilke, *Fundamentals of Data Visualization*
 
 Claus O. Wilke, *Fundamentals of Data Visualization* (O'Reilly, 2019), 30 chapters in three parts. The complete text is free at [clauswilke.com/dataviz](https://clauswilke.com/dataviz/). It is the broadest single source in the canon: it covers chart-type choice, figure-design principles, and the production end (file formats, software, reproducibility) that nothing else in the set touches.
 
-**How this was read.** Two passes, both at primary. The design-principles chapters were pulled 2026-08-23. **Chapters 5 through 16, the catalog of forms, were pulled in full on 2026-08-25**: each chapter page fetched with `curl` and a browser user-agent, stripped to text locally, and read end to end. Every quote below was re-extracted from that HTML, not taken from a fetch summary. One caveat that belongs here: the free web version is described on its own welcome page as "the complete author manuscript before final copy-editing and other quality control," licensed CC BY-NC-ND 4.0. Wording in the printed O'Reilly edition may differ slightly, and at least one sentence quoted below carries an uncorrected typo.
+**How this was read.** Two passes, both at primary. The design-principles chapters were pulled 2026-08-23. **Chapters 5 through 16, the catalog of forms, were pulled in full on 2026-08-27**: each chapter page fetched with `curl` and a browser user-agent, stripped to text locally, and read end to end. Every quote below was re-extracted from that HTML, not taken from a fetch summary. One caveat that belongs here: the free web version is described on its own welcome page as "the complete author manuscript before final copy-editing and other quality control," licensed CC BY-NC-ND 4.0. Wording in the printed O'Reilly edition may differ slightly, and at least one sentence quoted below carries an uncorrected typo.
 
 **What it is good for.** Come back here with: *which chart form does this data relationship want*, and *what is wrong with the figure I already have*. Chapters 5 through 16 are a directory of visualizations organized by relationship (amounts, distributions, proportions, x-y, geospatial, uncertainty). Chapters 17 through 26 are the design-principles half, and they are the part a figure bar actually reuses. Part III is the only place in the canon that treats image formats, plotting-software choice, reproducibility and separation of content from design as first-class quality topics.
 
@@ -31,7 +31,7 @@ The full chapter-to-topic mapping is in [roll-call.md](../roll-call.md), which r
 
 Chapters 5 through 16 file forms by data relationship, and chapter 5 is the catalog's own index: "It is meant both to serve as a table of contents, in case you are looking for a particular visualization whose name you may not know, and as a source of inspiration".
 
-**This is the one catalog in the corpus that is readable in full.** [schwabish.md](schwabish.md) vouches memberships from contents pages with the prose unread, so it can say where a type sits and nothing more. Here both halves are available: the filing below, and the argument in the quotes further down. Read on 2026-08-25 from the local extraction described above.
+**This is the one catalog in the corpus that is readable in full.** [schwabish.md](schwabish.md) vouches memberships from contents pages with the prose unread, so it can say where a type sits and nothing more. Here both halves are available: the filing below, and the argument in the quotes further down. Read on 2026-08-27 from the local extraction described above.
 
 | Chapter | Forms named, in the book's order |
 |---|---|
