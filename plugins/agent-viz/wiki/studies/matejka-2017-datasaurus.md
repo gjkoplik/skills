@@ -1,16 +1,16 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Matejka & Fitzmaurice 2017: Same Stats, Different Graphs
 
 Justin Matejka, George Fitzmaurice. *Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing.* CHI 2017. DOI [10.1145/3025453.3025912](https://doi.org/10.1145/3025453.3025912).
 
-## What it is
-
 A simulated-annealing method for taking one dataset and perturbing it into many visually different datasets that hold the same summary statistics to two decimal places. The famous output is the Datasaurus Dozen: twelve scatterplots including a dinosaur, a star and a set of parallel lines, all sharing x/y means, x/y standard deviations and Pearson's r.
 
-## Status
-
-**`primary-read`.** PDF retrieved from Autodesk Research (`damassets.autodesk.net/.../same-stats-different-graphs.pdf`) and re-extracted with `pdftotext -layout`.
-
-Retrieval date: **2026-08-23**.
+**How this was read.** PDF retrieved from Autodesk Research (`damassets.autodesk.net/.../same-stats-different-graphs.pdf`) and re-extracted with `pdftotext -layout`.
 
 ## What it is good for
 
@@ -18,7 +18,7 @@ Exactly one thing: an unforgettable picture for the claim that summary statistic
 
 ## What it does not settle
 
-**Anything about readers.** This has to lead, because the Datasaurus circulates as if it were evidence.
+**Anything about readers.** The Datasaurus circulates as if it were evidence.
 
 ## It is a construction, not an experiment
 
@@ -64,7 +64,7 @@ Perturbation moves individual points; a simulated-annealing temperature schedule
 3. **The Datasaurus Dozen.**
 4. **Simpson's paradox, generated on purpose.** A dataset with overall Pearson's r of +0.81, coerced toward sloping lines so each subgroup is individually negatively correlated.
 5. **Cloned data for anonymization.** A Kolmogorov-Smirnov constraint inside `ISERROROK` (both x and y K-S statistic below 0.05) keeps the output similar in shape while every point moves.
-6. **1D boxplots.** Six distributions with identical first quartile, median, third quartile and 1.5-IQR whisker positions, producing an identical boxplot. This is the underrated example. Box plots are usually the recommended *fix* for the bar-chart problem, and here they are the thing being defeated.
+6. **1D boxplots.** Six distributions with identical first quartile, median, third quartile and 1.5-IQR whisker positions, producing an identical boxplot. Box plots are usually the recommended *fix* for the bar-chart problem, and here they are the thing being defeated.
 
 ## Limits the authors state themselves
 

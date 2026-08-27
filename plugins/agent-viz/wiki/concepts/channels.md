@@ -1,3 +1,7 @@
+---
+type: concept
+---
+
 # Channels, and why the evidence lives here
 
 **What it is.** The perceptual channels a mark can carry a value on (position, length, angle, area, and the rest), the accuracy ordering over them, and the argument that this is the *only* level at which the graphical-perception literature actually says anything.
@@ -92,7 +96,7 @@ A channel that reads values poorly can still be the right channel for a task tha
 
 ## What "color is the worst channel" actually means
 
-The two papers handle hue differently, and the difference is the whole point.
+The two papers handle hue differently.
 
 **1984 excludes it**, p. 532:
 

@@ -1,16 +1,12 @@
+---
+type: chart-type
+relationships: [network-topology]
+aliases: [Adjacency matrix]
+---
+
 # Adjacency matrices
 
-**What it is.** Nodes on both axes, a filled cell where an edge exists. The representation that cannot produce a hairball, and cannot show a path.
-
-**Status.** Directly tested by both category studies.
-
-**What it is good for.** Dense networks, group and cluster tasks, and any situation where a stable, reproducible picture matters more than tracing connections.
-
-**What it does not settle.** Path tasks, which it loses consistently.
-
-**Relationships.** [Network and topology](network-topology.md). An unlinked relationship means that index is not written yet.
-
----
+Nodes on both axes, a filled cell where an edge exists. The representation that cannot produce a hairball, and cannot show a path.
 
 ## When to reach for it, and when not
 
@@ -43,7 +39,7 @@
 
 Position along two discrete non-aligned scales for identity, plus a fill channel for the cell.
 
-The fill is at rank 6 if it encodes weight by lightness, and it is at no rank at all if it encodes mere presence, since presence is not a magnitude. This is a case where the ranking's exclusion of unordered channels matters: **a binary matrix asks no magnitude question of the reader**, so the channel evidence is silent on it.
+The fill sits near the bottom of the ordering if it encodes weight by lightness, and it is nowhere on it at all if it encodes mere presence, since presence is not a magnitude. This is a case where the ranking's exclusion of unordered channels matters: **a binary matrix asks no magnitude question of the reader**, so the channel evidence is silent on it.
 
 ## What it is measurably good at
 

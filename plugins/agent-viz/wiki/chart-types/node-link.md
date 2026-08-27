@@ -1,16 +1,12 @@
+---
+type: chart-type
+relationships: [network-topology]
+aliases: [Network diagram, Node-link diagram]
+---
+
 # Node-link diagrams
 
-**What it is.** Nodes as points, edges as lines between them, positions assigned by a layout algorithm. The default network visualization, and the one whose failure mode has its own name.
-
-**Status.** Two `primary-read` studies test it directly, and they disagree about when it wins.
-
-**What it is good for.** Path and topology tasks on sparse networks, especially with interaction.
-
-**What it does not settle.** Anything at scale. The evidence stops at a few hundred nodes.
-
-**Relationships.** [Network and topology](network-topology.md). An unlinked relationship means that index is not written yet.
-
----
+Nodes as points, edges as lines between them, positions assigned by a layout algorithm. The default network visualization, and the one whose failure mode has its own name.
 
 ## When to reach for it, and when not
 
@@ -43,7 +39,7 @@
 
 **Position, carrying nothing directly readable.** Proximity in the layout is a soft consequence of connectivity, not an encoding of it. Two adjacent nodes may be adjacent because they are connected, or because the optimizer had nowhere else to put them.
 
-Edges are read as connection, which is a topological reading rather than a magnitude reading. The Cleveland-McGill ranking does not bear on it. Node size and color, when used, are ordinary channels at ranks 4 and 6 respectively.
+Edges are read as connection, which is a topological reading rather than a magnitude reading. The Cleveland-McGill ranking does not bear on it. Node size and color, when used, are ordinary channels and the ranking does bear on those: size is area, and color for a magnitude is shading or saturation, which sit below position and length ([channels.md](../concepts/channels.md)). Where color carries identity rather than magnitude, the ranking does not score it and hue is well suited to the job.
 
 Consequence: **the same data produces a different picture on every run** unless the seed is fixed, and two networks cannot be compared by looking at two layouts. This is not a criticism of any implementation, it is a property of the form.
 

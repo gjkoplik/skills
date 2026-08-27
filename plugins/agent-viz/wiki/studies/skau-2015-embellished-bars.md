@@ -1,18 +1,18 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Skau, Harrison & Kosara 2015: An Evaluation of the Impact of Visual Embellishments in Bar Charts
 
 Drew Skau, Lane Harrison, Robert Kosara. *Computer Graphics Forum* 34(3), EuroVis 2015. DOI [10.1111/cgf.12662](https://doi.org/10.1111/cgf.12662).
 
-## What it is
-
 A crowdsourced experiment testing six common infographic embellishments of the bar itself (rounded tops, triangles, end caps, overlapping triangles, quadratically scaled area, extension below zero) against a plain baseline, on absolute-value and relative-comparison tasks. Almost everything that changes the shape of the bar raises error.
 
-## Status
-
-**`primary-read`.** PDF retrieved from [kosara.net/papers/2015/Skau-EuroVis-2015.pdf](https://kosara.net/papers/2015/Skau-EuroVis-2015.pdf) and re-extracted with `pdftotext -layout`.
+**How this was read.** PDF retrieved from [kosara.net/papers/2015/Skau-EuroVis-2015.pdf](https://kosara.net/papers/2015/Skau-EuroVis-2015.pdf) and re-extracted with `pdftotext -layout`.
 
 Extraction caveat: the text layer loses apostrophes and mangles Table 1's hypothesis-versus-result grid across columns. The numbers below come from Tables 2 and 3 and the running text, which extract cleanly. Table 1's layout was not trusted and its hypothesis-versus-result pairings are not reproduced here.
-
-Retrieval date: **2026-08-23**.
 
 ## What it is good for
 
@@ -26,16 +26,16 @@ Bar charts only, two tasks only, Mechanical Turk, no memorability measurement at
 
 > "none of the embellishments tested in this experiment performed better at communication of the data than the baseline standardized chart."
 
-The results split hard by task, which is the interesting part.
+The results split hard by task.
 
-**Absolute judgments** (estimate the value of one bar, y-axis present). Only the quadratically scaled bars were significantly worse at the corrected threshold. Rounded tops and triangles came in below it.
+**Absolute judgments** (estimate the value of one bar, y-axis present). Only the quadratically scaled bars were significantly worse at the corrected threshold. Rounded tops and triangles came in just above it, so they count as non-significant, by a hair.
 
 | Embellishment | Mean MLAE | SD | p vs. baseline |
 |---|---|---|---|
 | baseline | 1.41 | 1.85 | n/a |
 | capped | 1.41 | 1.68 | 0.50 |
 | extended below zero | 1.45 | 1.68 | not significant |
-| overlapping triangles | 1.64 | 1.76 | not significant |
+| overlapping triangles | 1.64 | 1.76 | 0.012 |
 | rounded | 1.67 | 1.77 | 0.009 |
 | triangle | 1.70 | 1.68 | 0.012 |
 | quadratic | 1.70 | 1.78 | significant |

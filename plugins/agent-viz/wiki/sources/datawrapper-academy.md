@@ -1,8 +1,15 @@
+---
+type: source
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Datawrapper Academy
 
-**What it is.** The help documentation for Datawrapper, a browser-based charting tool used widely in newsrooms. Unlike the other style guides here, Datawrapper's advice is backed by a product that can refuse to do the wrong thing, and in at least one case it does.
+The help documentation for Datawrapper, a browser-based charting tool used widely in newsrooms. Unlike the other style guides here, Datawrapper's advice is backed by a product that can refuse to do the wrong thing, and in at least one case it does.
 
-**Status.** `primary-read`. Seven articles were fetched and converted locally, retrieved 2026-08-23:
+**How this was read.** Seven articles were fetched and converted locally, retrieved 2026-08-23:
 
 | Article | ID |
 |---|---|
@@ -74,9 +81,9 @@ Article 326 is unusual: a help article explaining why a feature does not exist.
 >
 > "We have a responsibility towards your readers -- we don't want them to be misled. That's why Datawrapper doesn't allow you to begin your y-axis at something greater than zero."
 
-Two things worth noting carefully.
+Two things to note carefully.
 
-**The citation is sound, and it is worth checking which part of the paper it uses.** Datawrapper cites Pandey et al., CHI 2015, and quotes "participants who saw the deceptive visualization perceived the underlying message in its exaggerated form" and that these techniques "do lead to major misinterpretation from the reader's side and that the effects are also rather large." [refutations.md](../refutations.md) documents that this same paper contradicts itself in its Discussion section about the inverted-axis condition, misreporting a 2.5% control error rate as 18.4%. Datawrapper does not touch the broken passage. Its citation is on the sound part of the paper, and the effect-size claim it quotes recomputes correctly from Table 2.
+**The citation is sound, and it matters which part of the paper it uses.** Datawrapper cites Pandey et al., CHI 2015, and quotes "participants who saw the deceptive visualization perceived the underlying message in its exaggerated form" and that these techniques "do lead to major misinterpretation from the reader's side and that the effects are also rather large." [refutations.md](../refutations.md) documents that this same paper contradicts itself in its Discussion section about the inverted-axis condition, misreporting a 2.5% control error rate as 18.4%. Datawrapper does not touch the broken passage. Its citation is on the sound part of the paper, and the effect-size claim it quotes recomputes correctly from Table 2.
 
 **The remedies are better than the rule.** The article lists three alternatives to truncation rather than just refusing:
 
@@ -98,7 +105,7 @@ and, on the data:
 
 This matters for the wiki's bookkeeping. [inventory.md](../inventory.md) topic 13 cites Datawrapper among the practitioner sources behind a flat dual-axis ban, and [refutations.md](../refutations.md) already finds no experiment supporting one. Datawrapper, which is willing to hard-block a feature it thinks is deceptive, **built this one on purpose.** Set that against the fact that it refuses to let you truncate a bar axis and the contrast is informative: the same organization treats truncation as a bright line and dual axes as a design tool with a caveat.
 
-The caveat is worth quoting because it inverts the usual worry. The danger of a twin axis is spurious apparent correlation; Datawrapper's advice is that *unrelated units* make it safer, not more dangerous, because nobody mistakes millimeters of rain for degrees Celsius.
+That caveat inverts the usual worry. The danger of a twin axis is spurious apparent correlation; Datawrapper's advice is that *unrelated units* make it safer, not more dangerous, because nobody mistakes millimeters of rain for degrees Celsius.
 
 ## Number formats and locale
 

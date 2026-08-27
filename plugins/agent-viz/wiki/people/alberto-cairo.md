@@ -1,8 +1,15 @@
+---
+type: person
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Alberto Cairo
 
 **What they are known for.** Four books that between them taught a generation of journalists and researchers to argue about graphics: *The Functional Art* (2012), *The Truthful Art* (2016), *How Charts Lie* (2019), and *The Art of Insight* (2023). He is a professor at the University of Miami, a former newsroom graphics director in Spain and Brazil, and co-editor with Tamara Munzner of CRC Press's visualization book series.
 
-**Status: `primary-read`, partial.** Retrieved 2026-08-23, all locally extracted, nothing from a fetch summary:
+**How this was read.** Coverage is partial. Retrieved 2026-08-23, all locally extracted, nothing from a fetch summary:
 
 - **The Functional Art**, Pearson's 46-page sample PDF (`ptgmedia.pearsoncmg.com/images/9780321834737/samplepages/0321834739.pdf`), `curl` plus `pdftotext -layout`. Contains the full contents page, the complete introduction, **chapter 1 in full**, the About-the-DVD section, and the index.
 - **The Truthful Art**, Peachpit's 46-page sample. Contents, preface, **chapter 4 in full**, index. This is the same file the existing [sources/cairo-truthful-art.md](../sources/cairo-truthful-art.md) page was built from.
@@ -12,7 +19,7 @@
 
 **What they are good for.** Come back here with: *am I over-reading this data, and would I be comfortable if someone checked*. He is the only author in this section who spends real pages on conjecture, study quality, sample variation, standard error, and significance versus effect size. Bring him the question of whether your figure is **honest**, not whether it is clean.
 
-**What they do not settle.** Chartcraft detail. He gives less usable instruction on color, type, and layout than any of the other four, and he would probably say so himself. And, bluntly for the purposes of this section: **he is the hardest of the five to imitate**, for reasons set out below.
+**What they do not settle.** Chartcraft detail. He gives less usable instruction on color, type, and layout than any of the other four, and he would probably say so himself. And, bluntly: **he is the hardest of the five to imitate**, for reasons set out below.
 
 ---
 

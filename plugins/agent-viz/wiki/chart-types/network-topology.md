@@ -1,20 +1,16 @@
+---
+type: index
+---
+
 # Network and topology
 
-**What it is.** Charts whose subject is a set of items and the connections among them.
-
-**Status.** Two `primary-read` studies bear on the node-link-versus-matrix choice and they disagree in a way that is reconstructable, which makes the disagreement usable rather than paralyzing. Two further `primary-read` sources describe hive plots and **neither contains a user study**.
-
-**What it is good for.** Deciding whether the network is actually your subject, which is the decision most often skipped, and then choosing a representation on grounds other than habit.
-
-**What it does not settle.** Anything at scale. The evidence tops out at a few hundred nodes, and the questions people most want answered are about far larger graphs.
-
----
+Charts whose subject is a set of items and the connections among them.
 
 ## First: is the network the subject, or just how the data arrived?
 
 **A great deal of data is relational without the reader's question being relational.** Users and their purchases, papers and their citations, services and their calls: all networks, and most questions asked of them are not network questions.
 
-The test: **can the question be answered from a per-node table?** "Which service gets called most" is a column sort. "Which authors publish most" is a count. Both are magnitude or ranking questions that happen to sit on relational data, and a sorted bar chart answers them at rank 1 while a network diagram answers them badly or not at all.
+The test: **can the question be answered from a per-node table?** "Which service gets called most" is a column sort. "Which authors publish most" is a count. Both are magnitude or ranking questions that happen to sit on relational data, and a sorted bar chart answers them on position along a common scale while a network diagram answers them badly or not at all.
 
 Draw the network when the question is about **connection itself**: who connects to whom, whether a path exists, whether the graph separates into communities, whether two networks differ structurally. If you cannot state the question in those terms, you probably want a different group.
 
@@ -84,8 +80,10 @@ Hard, and early. Worth knowing before you cite anything here:
 - [node-link.md](node-link.md)
 - [adjacency-matrix.md](adjacency-matrix.md)
 - [hive-plot.md](hive-plot.md)
+- [chord-diagram.md](chord-diagram.md), a circular drawing of a weighted graph, indexed primarily under [flow.md](flow.md)
+- [sankey-diagram.md](sankey-diagram.md), a layered drawing of a weighted directed graph, indexed primarily under [flow.md](flow.md)
 
-No page yet, for want of any study: arc diagram, chord diagram, biofabric, edge bundling, bipartite layouts. A Sankey diagram belongs to both this index and Flow.
+No page yet, and no study either: arc diagram, biofabric, edge bundling, bipartite layouts. The chord diagram and the Sankey now have pages and still have no study; both are here because the data is a weighted graph, and under Flow because the message is a volume moving between states.
 
 ## A note on filing
 

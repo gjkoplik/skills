@@ -1,8 +1,14 @@
+---
+type: person
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Claus Wilke
 
 **What they are known for.** *Fundamentals of Data Visualization* (O'Reilly, 2019), the broadest single chartcraft reference in this wiki's canon and free in full at [clauswilke.com/dataviz](https://clauswilke.com/dataviz/). He is also the author of several R packages that shape how a lot of scientific figures actually look, including `cowplot`, `ggridges`, and `ggtext`.
 
-**Status: `primary-read`.** Retrieved 2026-08-23. Eleven chapter pages of the free book were pulled with `curl` and stripped to text locally; the quotes below are re-extracted from that HTML. Four rendered figure PNGs were downloaded and their pixel colors measured locally with PIL. His own homepage supplied the affiliation line. Nothing here comes from a fetch summary.
+**How this was read.** Retrieved 2026-08-23. Eleven chapter pages of the free book were pulled with `curl` and stripped to text locally; the quotes below are re-extracted from that HTML. Four rendered figure PNGs were downloaded and their pixel colors measured locally with PIL. His own homepage supplied the affiliation line. Nothing here comes from a fetch summary.
 
 **What they are good for.** Come back here with: *what should my defaults be, and can I defend each one*. Wilke is the person in this set who documents his own house style rather than leaving you to infer it, and he documents the reasoning too. He is also the only one who treats reproducibility and the figure-generation pipeline as a quality question rather than a workflow preference.
 

@@ -1,8 +1,15 @@
+---
+type: person
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Tamara Munzner
 
 **What they are known for.** Munzner wrote *Visualization Analysis and Design*, the framework textbook that decomposes any design into *what* data you have, *why* the user is looking, and *how* it is encoded, and that supplies the marks-and-channels vocabulary and the rules of thumb most courses teach from. Separately she wrote the nested four-level model of visualization design and validation, which is the field's standard answer to "what kind of evaluation does this contribution need."
 
-**Status: `primary-read` for the nested-model paper and its 2013 revision, `secondary-only` for the book.** Both papers were downloaded from UBC and extracted locally with `pdftotext`; quotes below are from them. The book's status, and the reasoning behind it, are set out at [sources/munzner-vad.md](../sources/munzner-vad.md) and are not restated here. Retrieval date: **2026-08-23**.
+**How this was read.** `primary-read` for the nested-model paper and its 2013 revision, `secondary-only` for the book. Both papers were downloaded from UBC and extracted locally with `pdftotext`; quotes below are from them. The book's status, and the reasoning behind it, are set out at [sources/munzner-vad.md](../sources/munzner-vad.md) and are not restated here. Retrieval date: **2026-08-23**.
 
 **What they are good for.** Come back here with *what is this figure for, and is the most important attribute on the most accurate channel*. She is the canon's best organizer: task abstraction, data abstraction, marks and channels, networks and trees, interaction and reduction as design decisions rather than features. Also come here when you need to know which kind of evidence a design claim even requires.
 
@@ -40,7 +47,7 @@ Also from the 2009 paper's limitations:
 
 > "We also deliberately leave out some kinds of user studies from our discussion, such as the psychophysical style of characterizing human perceptual and cognitive capabilities, because their intent is not to validate a particular design or application."
 
-That is the cleanest available statement of the division of labor in this wiki. Munzner's frame validates *designs*. [Ware's](colin-ware.md) and [Cleveland's](william-cleveland.md) validate *capabilities*. A figure bar that cites Munzner for a perceptual claim has crossed a line she drew herself.
+That is the division of labor in this wiki. Munzner's frame validates *designs*. [Ware's](colin-ware.md) and [Cleveland's](william-cleveland.md) validate *capabilities*. A figure bar that cites Munzner for a perceptual claim has crossed a line she drew herself.
 
 ### She revised the model herself, which is the tell
 

@@ -1,8 +1,15 @@
+---
+type: person
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Florence Nightingale
 
 **What they are known for.** The polar-area diagram of Crimean War mortality, showing that far more British soldiers died of preventable disease than of wounds, and that the death rate collapsed after the Sanitary Commission arrived. It is the canonical example of a chart built to force one specific decision.
 
-**Status: `primary-read` for the book and both plates, `secondary-only` for the archival history.** Retrieved 2026-08-23.
+**How this was read.** `primary-read` for the book and both plates, `secondary-only` for the archival history. Retrieved 2026-08-23.
 
 - ***Notes on Matters Affecting the Health, Efficiency, and Hospital Administration of the British Army* (1858)**, her privately printed report, was pulled as full text from the Internet Archive (`b20387118`, 2.2 MB of OCR) and read locally. Public domain.
 - **Both diagrams were downloaded at full resolution and examined**, not described from memory: the wedges plate (`dr_diagram-of-the-causes-of-mortality-in-the-army-in-the-east-10563002`, 1536x880) and its rejected predecessor, the "bat's wing" (`dr_diagrams-representing-the-relative-mortality-from-zymotic-diseases-blue-10564004`, 1477x1536). Every visual claim below comes from looking at those files.
@@ -26,7 +33,7 @@ From the wedges plate itself.
 
 **Palette.** A desaturated slate blue doing all the work, a pale pink-red, and a gray-black, on cream paper, with thin black outlines and no fills heavier than a wash. The dominant quantity gets the coolest, largest, most placid color. Nothing is red-for-alarm; red is the *small* category.
 
-**No axes, no gridlines, no radial scale, no numbers anywhere on the wedges.** This is worth sitting with. The finished, famous chart is entirely scale-free.
+**No axes, no gridlines, no radial scale, no numbers anywhere on the wedges.** The finished, famous chart is entirely scale-free.
 
 **A long prose caption that admits the ambiguities by name.** In engraved italic at the lower left, running six lines, including: *"In October 1854, & April 1855, the black area coincides with the red; in January & February 1856, the blue coincides with the black."* She lists the months where the overlay is unreadable rather than hoping nobody checks.
 
@@ -40,7 +47,7 @@ From the wedges plate itself.
 
 ### She did not invent the polar-area diagram, and the honest word is "may"
 
-Playfair's pie predates her by half a century. Most of the graphic forms in her Crimean documents come from **William Farr**, her adviser at the General Register Office, whose Registrar-General reports had already used what Small calls "100% area" and stacked-bar constructions, and had used a honeycomb device for camp density. What Small will say about the two roses is careful, and worth copying:
+Playfair's pie predates her by half a century. Most of the graphic forms in her Crimean documents come from **William Farr**, her adviser at the General Register Office, whose Registrar-General reports had already used what Small calls "100% area" and stacked-bar constructions, and had used a honeycomb device for camp density. What Small will say about the two roses is careful:
 
 > "This 'bat's wing' and its successor are so different from any diagrams that Farr did before that they may be Nightingale's own invention."
 
@@ -48,7 +55,7 @@ Playfair's pie predates her by half a century. Most of the graphic forms in her 
 
 ### "Coxcomb" is a misnomer, and the misnomer is traceable to one book
 
-This is the cleanest folklore correction on the page, and it is documented rather than asserted.
+It is documented rather than asserted.
 
 Nightingale used the word **for a booklet, never for a diagram**. It referred to the 2,000 copies she had privately printed of *Mortality of the British Army*, the showy reprint of a Royal Commission appendix that people would actually read. Her letter of Christmas Day 1857 to Sidney Herbert, which Small quotes from BL Add. MSS 43394 f210, itemizes the print run: *"I send you one of the 'coxcombs' There are 300 of these / 1700 of the vulgar sort / 2000."*
 
@@ -61,7 +68,7 @@ Calling the polar-area chart a coxcomb is not wrong in the sense that usage has 
 
 ### The first version was wrong, and I checked
 
-The bat's wing plate is a genuinely different construction and it is worth looking at, because it is a designer's error preserved in print.
+The bat's wing plate is a genuinely different construction, and a designer's error preserved in print.
 
 - It has **circular gridlines and a numeric radial scale** (100, 200, 300 and up), which the wedges plate does not.
 - **The radius is proportional to the death rate**, so the shaded area grows as the square. Small's finding, which the plate corroborates: the text and the shape both imply the *area* is the quantity, and it is not.
@@ -89,7 +96,7 @@ The chart does not establish this. The tables do. The chart is the part people l
 
 ### What the form costs, in this wiki's own terms
 
-A polar-area diagram puts the reader on **area**, rank 4 in [Cleveland & McGill](../studies/cleveland-mcgill-1984.md), and the equal angles make each wedge look like a share of a whole when it is not. It is the pie chart's problem without the pie chart's excuse. See [pie-and-donut.md](../chart-types/pie-and-donut.md), and note the twist: since [Skau & Kosara](../studies/skau-kosara-2016.md) found angle the *worst* of a pie's three cues, holding angle constant and varying radius is not obviously the wrong trade.
+A polar-area diagram puts the reader on **area**, which [Cleveland & McGill](../studies/cleveland-mcgill-1984.md) place below position, length and angle, and the equal angles make each wedge look like a share of a whole when it is not. It is the pie chart's problem without the pie chart's excuse. See [pie-and-donut.md](../chart-types/pie-and-donut.md), and note the twist: since [Skau & Kosara](../studies/skau-kosara-2016.md) found angle the *worst* of a pie's three cues, holding angle constant and varying radius is not obviously the wrong trade.
 
 The overlay is the sharper problem. Where black exceeds blue in a month, the visible blue is not the blue quantity. She names those months in the caption. Most modern polar-area charts do not.
 

@@ -1,8 +1,15 @@
+---
+type: person
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Cole Nussbaumer Knaflic
 
 **What they are known for.** *storytelling with data* (Wiley, 2015), the book most business analysts have actually read, and the training company of the same name that grew out of it. Her contribution is a **sequence**, not a catalog: understand the context, choose the visual, remove clutter, direct attention, think like a designer, tell a story.
 
-**Status: `primary-read`, partial.** Retrieved 2026-08-23. Three things were opened locally and nothing came from a fetch summary:
+**How this was read.** Coverage is partial. Retrieved 2026-08-23. Three things were opened locally and nothing came from a fetch summary:
 
 - Wiley's own 6-page chapter-1 excerpt PDF (`catalogimages.wiley.com/images/db/pdf/9781119002253.excerpt.pdf`), text-extracted with `pdftotext`. All book quotes below are from that.
 - Two `storytellingwithdata.com` blog posts pulled with `curl` and stripped to text locally. One carries her own byline ("can design be taught?", 18 June 2026) and is the source of every 2026 quote here. The other ("apply color thoughtfully in your graphs", 11 August 2026) is bylined **Amy Esselman**, not Knaflic, and is labeled as such wherever it is used.
@@ -22,7 +29,7 @@ Chapters 2 through 10 of the book were not read here. See [sources/knaflic-swd.m
 
 **Palette habits.** The rule, in her own 2026 words: "if you're trying to direct attention in a graph or a slide, a different logic applies. **A mostly neutral palette with one intentional color used sparingly is far more effective than many competing colors.**"
 
-That sentence is worth flagging, because this wiki has carried an open question about it. [refutations.md](../refutations.md) records that the gray-plus-one-accent rule everyone attributes to Knaflic has no controlled study behind it, and [sources/knaflic-swd.md](../sources/knaflic-swd.md) warns that the book's chapter-4 color passage was never read, so no quotation marks should be put around any statement of the rule. **The attribution is now confirmed from a bylined primary.** The evidence status is unchanged: it is still authority-asserted, and she asserts it as a designer, not as a finding.
+This wiki has carried an open question about that sentence. [refutations.md](../refutations.md) records that the gray-plus-one-accent rule everyone attributes to Knaflic has no controlled study behind it, and [sources/knaflic-swd.md](../sources/knaflic-swd.md) warns that the book's chapter-4 color passage was never read, so no quotation marks should be put around any statement of the rule. **The attribution is now confirmed from a bylined primary.** The evidence status is unchanged: it is still authority-asserted, and she asserts it as a designer, not as a finding.
 
 Measured, from two figures in the "apply color thoughtfully" post (Esselman, SWD team):
 

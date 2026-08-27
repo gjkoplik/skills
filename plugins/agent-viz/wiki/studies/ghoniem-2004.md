@@ -1,8 +1,14 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Ghoniem, Fekete & Castagliola (2004/2005), *Node-Link vs Matrix*
 
-**What it is.** Mohammad Ghoniem, Jean-Daniel Fekete and Philippe Castagliola, "A Comparison of the Readability of Graphs Using Node-Link and Matrix-Based Representations," InfoVis 2004, extended as "On the Readability of Graphs Using Node-Link and Matrix-Based Representations: A Controlled Experiment and Statistical Analysis," *Information Visualization* 4(2), 2005. The study that produced the "matrices win above twenty nodes" result.
+Mohammad Ghoniem, Jean-Daniel Fekete and Philippe Castagliola, "A Comparison of the Readability of Graphs Using Node-Link and Matrix-Based Representations," InfoVis 2004, extended as "On the Readability of Graphs Using Node-Link and Matrix-Based Representations: A Controlled Experiment and Statistical Analysis," *Information Visualization* 4(2), 2005. The study that produced the "matrices win above twenty nodes" result.
 
-**Status.** `primary-read`. PDF of the extended version from the INRIA server, text re-extracted locally.
+**How this was read.** PDF of the extended version from the INRIA server, text re-extracted locally.
 
 **What it is good for.** The size-and-density crossover between node-link diagrams and adjacency matrices, and the one task that goes the other way.
 

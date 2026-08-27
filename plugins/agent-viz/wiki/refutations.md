@@ -60,7 +60,7 @@ The same paper states the gap plainly:
 
 > "Several experts discuss problems with the Dual-Scale chart... and recommend careful design or to avoid using it altogether. Yet, empirical evidence on the effectiveness of the Dual-Scale compared to other charts is missing."
 
-There is also a published defence of the form in the literature ("Dual Y Axes Charts Defended"), which further undercuts a flat ban.
+There is also a published defense of the form in the literature ("Dual Y Axes Charts Defended"), which further undercuts a flat ban.
 
 **The person most often cited for the ban never stated it flatly.** Few's 2008 article on dual-scaled axes ends: "I certainly cannot conclude, once and for all, that graphs with dual-scaled axes are never useful... I invite you to propose viable exceptions." The absolute version is downstream of him, not from him.
 
@@ -88,7 +88,7 @@ Bateman et al. (*Useful Junk?*, CHI 2010) tested Holmes-style charts, which wrap
 
 **On the data-ink ratio specifically, an earlier version of this entry was one-sided.** Gillan & Richman's Experiment 1 *supports* Tufte: the abstract reports that "the higher the data-ink ratio, the faster the response time and the greater the accuracy." The element-conditional finding, that removing the y-axis line and the x axis generally *increased* response time while tick marks did the opposite, comes from the later experiments. The honest reading is that **the aggregate direction is Tufte's and the element-level decomposition is not**, so "maximize" fails as a mechanical instruction while surviving as a direction of travel. Gillan also found pictorial backgrounds hurt both speed and accuracy, which is 1994 evidence against embellishment that the pro-embellishment side of this debate tends to drop.
 
-**Bateman's headline recall result does not replicate cleanly.** A four-way replication (Syeda et al. 2023, open access) found **no significant differences on any of the four long-term questions** in the asynchronous study, while synchronous replications matched. What is robust across all five studies is *preference*; what replicates best is description accuracy holding up. Worth knowing about the original: its directional tests were one-tailed at α = .05 with no multiple-comparison correction. Also usually dropped from summaries in the other direction: Bateman found a significant advantage for embellished charts on the value-message description score (p = .003).
+**Bateman's headline recall result does not replicate cleanly.** A four-way replication (Syeda et al. 2023, open access) found **no significant differences on any of the four long-term questions** in the asynchronous study, while synchronous replications matched. What is robust across all five studies is *preference*; what replicates best is description accuracy holding up. The original's directional tests were one-tailed at α = .05 with no multiple-comparison correction. Also usually dropped from summaries in the other direction: Bateman found a significant advantage for embellished charts on the value-message description score (p = .003).
 
 The critique of Bateman that was previously unreachable is **Li & Moacdieh 2014, *Is "chart junk" useful?*** It attacks the two limits Bateman named themselves, unlimited viewing time and small data sets. Its body is paywalled and it does not state the direction of its chart-type effects, so do not attribute one.
 
@@ -121,7 +121,7 @@ It does not hold, for four reasons in descending severity:
 
 **What survives, and it is better:** VisEval's own within-paper ablation, 0.507 with neither deterministic sub-check to 0.843 with both. One paper, one metric, one target, one manipulated variable. It supports *deterministic sub-checks feeding a vision model beat the vision model alone*.
 
-Also worth noting: GPT-5's 0.428 is not the best baseline correlation in that table. GPT-4o reaches 0.482 and Qwen2.5-VL-72B 0.440; the abstract pairs the best-MAE model's MAE with that same model's correlation.
+GPT-5's 0.428 is not the best baseline correlation in that table. GPT-4o reaches 0.482 and Qwen2.5-VL-72B 0.440; the abstract pairs the best-MAE model's MAE with that same model's correlation.
 
 ## A source that should not be cited at all
 

@@ -1,18 +1,14 @@
+---
+type: chart-type
+relationships: [network-topology]
+aliases: [Hive plot]
+---
+
 # Hive plots
 
-**Relationships.** [Network and topology](network-topology.md). An unlinked relationship means that index is not written yet.
-
-**What it is.** Nodes assigned to a small number of radial axes by a rule, positioned along their axis by a structural quantity, with edges drawn as curves between axes. A network layout with a node coordinate system.
-
-**Status.** Two `primary-read` sources, [Krzywinski et al. (2012)](../studies/krzywinski-2012-hive-plots.md) and [Nöllenburg & Wallinger (2023)](../studies/nollenburg-2023-computing-hive-plots.md). **Neither contains a user study, and no controlled evaluation of hive plots exists in this wiki's source set.** That is the page's central fact, and it is why the strong claims here are structural rather than perceptual.
+Nodes assigned to a small number of radial axes by a rule, positioned along their axis by a structural quantity, with edges drawn as curves between axes. A network layout with a node coordinate system.
 
 **Disclosure.** This wiki's author maintains a hive plot library. That is why this page is held to the same standard as the others rather than a looser one. [evidence-class.md](../concepts/evidence-class.md) says labeling a rule you rely on is the part that costs something.
-
-**What it is good for.** The structural argument for the form, which is strong and does not need an experiment, kept clearly apart from the perceptual claims, which do and lack one.
-
-**What it does not settle.** Whether anybody reads them more accurately. Nobody has measured it.
-
----
 
 ## When to reach for it, and when not
 
@@ -49,14 +45,14 @@ In a force-directed [node-link diagram](node-link.md), position is the output of
 
 A hive plot spends it on a value. Node position becomes **position along non-aligned scales**, rank 2 in the [Cleveland-McGill ordering](../concepts/channels.md#the-working-ranking), one step below a bar chart's baseline and above length, angle and area. Axis membership is an unordered categorical channel, which that ranking excludes by design rather than ranking last.
 
-**Label this carefully, because the overclaim is easy and tempting.** That position becomes a real encoding is *definitional*: it follows from the decomposition above. That an encoding at rank 2 is read more accurately than one at ranks 3 to 4 is *evidence-backed*. The conclusion people want from stringing those together, that hive plots are therefore read more accurately, is **not supported**, for two independent reasons:
+**Label this carefully, because the overclaim is easy and tempting.** That position becomes a real encoding is *definitional*: it follows from the decomposition above. That an encoding at rank 2 is read more accurately than length, angle or area is *evidence-backed*. The conclusion people want from stringing those together, that hive plots are therefore read more accurately, is **not supported**, for two independent reasons:
 
 1. The ranking measures accuracy of reading a value off a mark. Network tasks are search, path, neighborhood, grouping and comparison, and the ranking's authors restrict it to value extraction explicitly. See [the scope limit](../concepts/channels.md#what-the-ranking-is-not-about).
 2. Nobody has run the experiment.
 
 ## What the axes are built from
 
-The single most misunderstood thing about the form, and the correction that matters most in practice: **a hive plot does not need pre-existing node metadata.** Both the partition and the position are normally derived from the graph's own topology.
+The single most misunderstood thing about the form: **a hive plot does not need pre-existing node metadata.** Both the partition and the position are normally derived from the graph's own topology.
 
 From Krzywinski et al., the rules are Boolean tests on structural quantities: "is the node a sink?" or "is the node's 'clustering coefficient' smaller than 0.5?". Positions come from "the absolute or rank-ordered value of a node parameter, such as connectivity." Both worked examples in the paper are purely structural:
 
@@ -69,7 +65,7 @@ Node metadata works too, and is natural when the network carries a meaningful ty
 
 ## What it is measurably good at
 
-**Nothing has been measured.** Stated plainly rather than filled with plausible advantages.
+**Nothing has been measured.**
 
 What can be said without measurement, because it follows from the construction:
 
@@ -78,6 +74,12 @@ What can be said without measurement, because it follows from the construction:
 **Comparability.** Two networks under the same partition and sort produce directly comparable pictures, node for node. This is the form's real claim and it is definitional, not empirical.
 
 **Density does not destroy it the way it destroys a node-link diagram.** Nodes cannot drift into a hairball because their positions are fixed by the rule. Edge overplotting still happens and is a separate problem.
+
+## What it is measurably bad at
+
+**Nothing has been measured.** No user study exists on this form, so there is no measured weakness to report any more
+than there is a measured strength. What the form costs is real and follows from its construction rather than from an
+experiment; it is the next section.
 
 ## What it costs
 
@@ -93,7 +95,7 @@ What can be said without measurement, because it follows from the construction:
 
 ## What is contested
 
-Nothing, and that is the point. **Contested requires a record that disagrees with itself.** Here there is no record. This is `absence of evidence`, which [evidence-class.md](../concepts/evidence-class.md) keeps deliberately distinct from contested and from refuted.
+Nothing. **Contested requires a record that disagrees with itself.** Here there is no record. This is `absence of evidence`, which [evidence-class.md](../concepts/evidence-class.md) keeps deliberately distinct from contested and from refuted.
 
 The honest position, both halves stated together: the structural argument is sound and does not depend on an experiment; the perceptual claims are unmeasured. The second half should not be quietly dropped when the first is quoted.
 
@@ -105,7 +107,7 @@ The mitigation that follows from the form rather than from taste: because the la
 
 ## Justifying the choice
 
-This is the page where the honest justification is noticeably weaker than the enthusiastic one, and saying so is the point.
+The honest justification here is weaker than the enthusiastic one.
 
 **Defensible, definitional and secure:**
 
@@ -124,8 +126,6 @@ This is the page where the honest justification is noticeably weaker than the en
 - ~~"The three clean groups on the axes show the network's structure."~~ The groups are your partition. That is an input, not a finding.
 
 ## What would move this page
-
-Named so the gap is actionable rather than decorative:
 
 - A controlled comparison against node-link and matrix on the standard network task taxonomies at matched interaction levels. The [Okoe et al.](../studies/okoe-2018.md) protocol would transfer nearly unchanged.
 - A test of comparability as a *reader* claim rather than an algorithmic one: can people detect differences between two networks better from two hive plots than from two force-directed layouts. This is the form's headline claim and the one most worth measuring.

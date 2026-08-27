@@ -1,16 +1,17 @@
+---
+type: study
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Bateman et al. 2010: Useful Junk?
 
 Scott Bateman, Regan L. Mandryk, Carl Gutwin, Aaron Genest, David McDine, Christopher Brooks. *Useful Junk? The Effects of Visual Embellishment on Comprehension and Memorability of Charts.* CHI 2010, pp. 2573-2582. DOI [10.1145/1753326.1753716](https://doi.org/10.1145/1753326.1753716).
 
-## What it is
-
 Twenty participants described fourteen charts, half Nigel Holmes cartoon-embellished and half stripped plain, then were asked to recall them either immediately or two to three weeks later. Description accuracy was no worse for the embellished charts; long-term recall was significantly better. It is the single most-cited counterweight to the chartjunk orthodoxy.
 
-## Status
-
-**`primary-read`.** PDF retrieved from the MIT 6.859 readings mirror, [vis.csail.mit.edu/classes/6.859/readings/pdfs/Bateman-UsefulJunk.pdf](https://vis.csail.mit.edu/classes/6.859/readings/pdfs/Bateman-UsefulJunk.pdf), and re-extracted with `pdftotext -layout`. The `hci.usask.ca` copy referenced in older citations now 404s.
-
-Retrieval date: **2026-08-23**.
+**How this was read.** PDF retrieved from the MIT 6.859 readings mirror, [vis.csail.mit.edu/classes/6.859/readings/pdfs/Bateman-UsefulJunk.pdf](https://vis.csail.mit.edu/classes/6.859/readings/pdfs/Bateman-UsefulJunk.pdf), and re-extracted with `pdftotext -layout`. The `hci.usask.ca` copy referenced in older citations now 404s.
 
 ## Two reachability improvements over what refutations.md records
 
@@ -96,7 +97,7 @@ What held and what did not:
 - **Long-term recall**, the original's headline result. Study 1 (asynchronous) **found no significant differences on any of the four questions**, though embellished charts scored higher on average throughout. Study 4 (synchronous) "aligned almost completely" with the original. Study 2 found the value-message effect only.
 - **Preference.** The most robust result across all five studies. The original and three replications agreed that embellished charts were significantly faster and easier to remember, more attractive, and more enjoyable.
 
-The authors' framing is careful, and worth quoting because it cuts against a lazy reading in either direction:
+The authors' framing is careful, and it cuts against a lazy reading in either direction:
 
 > "It must be noted that failing to reproduce the original findings does not indicate that the replications were not successful. Rather it is an indication of more investigation as to whether the difference in findings is due to the differences in the experimental procedures."
 

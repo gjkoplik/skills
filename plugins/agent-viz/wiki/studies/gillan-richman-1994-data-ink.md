@@ -1,20 +1,19 @@
+---
+type: study
+status: secondary-only
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Gillan & Richman 1994: Minimalism and the Syntax of Graphs
 
 Douglas J. Gillan, Edward H. Richman. *Human Factors* 36(4):619-644, December 1994. DOI [10.1177/001872089403600405](https://doi.org/10.1177/001872089403600405).
 
-## What it is
-
 Four experiments testing Tufte's rule that graphs should maximize the data-ink ratio. The result this wiki uses it for: the effect of removing ink is **element-conditional**. Some non-data ink helps, some hurts, and which is which depends on the graph type, the task, and what other elements are present.
 
-## Status
-
-**`secondary-only`, with one upgrade.**
-
-The full text was **not reached**. The article is closed at SAGE (403), OpenAlex reports `oa_status: closed` with no repository fulltext, and it is not indexed in PubMed. No experiment-by-experiment detail, no sample sizes, no per-condition statistics.
+**How this was read.** The full text was **not reached**. The article is closed at SAGE (403), OpenAlex reports `oa_status: closed` with no repository fulltext, and it is not indexed in PubMed. No experiment-by-experiment detail, no sample sizes, no per-condition statistics.
 
 **The upgrade:** the abstract is now available **verbatim from the publisher's own Crossref deposit** (`api.crossref.org/works`, JATS `<jats:abstract>` under the DOI above), rather than from a search-engine summary. [refutations.md](../refutations.md) records this material as reached through secondary summaries only. The abstract text below is no longer in that category. Everything beyond the abstract still is.
-
-Retrieval date: **2026-08-23**.
 
 ## What it is good for
 

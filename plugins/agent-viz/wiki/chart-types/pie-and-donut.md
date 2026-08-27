@@ -1,16 +1,12 @@
+---
+type: chart-type
+relationships: [part-to-whole]
+aliases: [Donut chart, Pie chart]
+---
+
 # Pie and donut charts
 
-**What it is.** A circle divided into wedges, each wedge's share of the total encoded by its arc length, its area, and the angle at the center. The donut is the same chart with the center removed, which removes the angle.
-
-**Status.** The best-evidenced type page in this wiki. Two `primary-read` studies bear on it directly, and one of them decomposes the chart into its channels, which almost no other type has had done.
-
-**What it is good for.** Showing that a set of parts makes a whole, at a glance, for a small number of parts. Knowing exactly which of the standard criticisms survive.
-
-**What it does not settle.** Whether the pie is a good idea in any given case. It settles the mechanism, which turns out to be different from the received one.
-
-**Relationships.** [Part-to-whole](part-to-whole.md). An unlinked relationship means that index is not written yet.
-
----
+A circle divided into wedges, each wedge's share of the total encoded by its arc length, its area, and the angle at the center. The donut is the same chart with the center removed, which removes the angle.
 
 ## When to reach for it, and when not
 
@@ -22,7 +18,7 @@ Use the **donut** whenever you want the center for a total, a label, or an icon.
 
 | The question | Use instead |
 |---|---|
-| Which of these is biggest? | Sorted bar chart. Rank 1 instead of rank 3 |
+| Which of these is biggest? | Sorted bar chart. Position instead of arc length |
 | How big is this one part? | Bar chart |
 | How does composition differ between two groups? | Grouped or small-multiple bars. Two pies cannot be compared |
 | How did composition change over time? | [Stacked bar](stacked-bar.md), or a line chart of shares |
@@ -39,7 +35,7 @@ Use the **donut** whenever you want the center for a total, a label, or an icon.
 | Coordinates | Polar |
 | Guides | Labels or a legend. No axis exists |
 
-The triple encoding is the interesting part: **one number is carried on three channels at once**, which is why the chart cannot be reasoned about the way single-channel charts can.
+The triple encoding puts **one number on three channels at once**, which is why the chart cannot be reasoned about the way single-channel charts can.
 
 ## Channels
 
@@ -51,7 +47,7 @@ Received wisdom, from Cleveland & McGill onward, says angle. **Measured, it is n
 
 Eells (1926) had pointed the same way ninety years earlier by simply asking: 51% of participants reported reading arc length, 25% area, 23% angle, 1% chord length.
 
-**So the channels are arc length and area, with angle a minor and unreliable contributor.** This is a type-level finding, not an inherited one, and it is the reason this page can be more definite than its siblings.
+**So the channels are arc length and area, with angle a minor and unreliable contributor.** That is measured on this chart directly, rather than inherited from a ranking of channels in the abstract ([channels.md](../concepts/channels.md)), which is why it can be stated flatly.
 
 Note what Cleveland & McGill actually wrote, since they are usually cited as the source of the angle claim:
 
@@ -78,7 +74,7 @@ This is the one criticism that is fully evidence-backed. It is also narrower tha
 **The mechanism.** Every element of the standard argument is in trouble:
 
 - "Pies are read by angle" is **refuted** by direct decomposition.
-- "Length beats angle" is **unsupported**: it is a theoretical prediction that [Heer & Bostock](../studies/heer-bostock-2010.md) tested head to head and did not find, and that Cleveland & McGill never tested because their two experiments are not comparable. Their rank 3 puts length, direction and angle *at the same rank* with the note that "there is not enough information to separate the ties."
+- "Length beats angle" is **unsupported**, and the two Cleveland & McGill papers have to be kept apart to see it. The 1984 *JASA* table puts length, direction and angle at the *same* rank, with the note that "there is not enough information to separate the ties," and its two experiments are not comparable to each other, so it contains no test of the pair. The 1985 *Science* table does separate them, length above angle, but calls the whole ordering "a tentative working hypothesis" whose aspects "are partly conjectural in that we have no controlled experimentation to support them" (see [william-cleveland.md](../people/william-cleveland.md) for both tables). [Heer & Bostock](../studies/heer-bostock-2010.md) then ran the head-to-head under a common task format: "the results do not support this."
 
 So bars beat pies, measured. The reason universally given for it is not established. State the finding, drop the mechanism.
 
@@ -107,10 +103,3 @@ So bars beat pies, measured. The reason universally given for it is not establis
 - ~~"Donuts are worse than pies because the missing center destroys the angle."~~ It does, and it does not matter.
 
 The conclusion that bars beat pies for value extraction survives. The mechanism everyone gives for it does not. State the finding, drop the explanation.
-
-## See also
-
-- [../studies/skau-kosara-2016.md](../studies/skau-kosara-2016.md) — the decomposition
-- [../studies/cleveland-mcgill-1984.md](../studies/cleveland-mcgill-1984.md) — the pie-versus-bar result, and the conjecture that hardened
-- [stacked-bar.md](stacked-bar.md) — the same job in Cartesian coordinates
-- [../concepts/channels.md](../concepts/channels.md)

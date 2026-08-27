@@ -1,8 +1,14 @@
+---
+type: source
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # seaborn documentation
 
-**What it is.** The tutorial documentation for seaborn, the statistical plotting layer over matplotlib. Two chapters matter here: *Choosing color palettes* and *Statistical estimation and error bars*.
+The tutorial documentation for seaborn, the statistical plotting layer over matplotlib. Two chapters matter here: *Choosing color palettes* and *Statistical estimation and error bars*.
 
-**Status.** `primary-read`. Both pages fetched and converted locally from the seaborn v0.13.2 docs, retrieved 2026-08-23. Quotes are verbatim.
+**How this was read.** Both pages fetched and converted locally from the seaborn v0.13.2 docs, retrieved 2026-08-23. Quotes are verbatim.
 
 **What it is good for.** The **error bars** chapter is the most useful thing in this wiki on uncertainty display, because it separates two things that get conflated everywhere else: an interval showing *spread of the data* and an interval showing *uncertainty about an estimate*. It is also the only library documentation reviewed here that tells you to consider not using the plot it just taught you.
 
@@ -33,7 +39,7 @@ Inventory topic 51. This one is mechanizable at low cost: assert the drawn inter
 
 ## The "are error bars enough?" section
 
-The chapter closes by arguing against itself, which is why it is worth quoting rather than summarizing:
+The chapter closes by arguing against itself:
 
 > "You should always ask yourself whether it's best to use a plot that displays only a summary statistic and error bar. In many cases, it isn't."
 

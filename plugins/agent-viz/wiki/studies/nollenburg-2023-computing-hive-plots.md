@@ -1,8 +1,14 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Nöllenburg & Wallinger (2023), *Computing Hive Plots*
 
-**What it is.** Martin Nöllenburg and Markus Wallinger, "Computing Hive Plots: A Combinatorial Framework," Graph Drawing and Network Visualization (GD 2023), Springer LNCS. The first formalization of hive plot construction as an optimization problem.
+Martin Nöllenburg and Markus Wallinger, "Computing Hive Plots: A Combinatorial Framework," Graph Drawing and Network Visualization (GD 2023), Springer LNCS. The first formalization of hive plot construction as an optimization problem.
 
-**Status.** `primary-read`. arXiv:2309.02273, extracted locally.
+**How this was read.** arXiv:2309.02273, extracted locally.
 
 **What it is good for.** Establishing that the hive plot's three design choices are each an instance of a computationally hard problem, which is why they are made by a human rather than solved.
 

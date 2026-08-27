@@ -1,16 +1,16 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Song & Szafir 2019: Where's My Data? Evaluating Visualizations with Missing Data
 
 Hayeong Song, Danielle Albers Szafir. IEEE TVCG 25(1):914-924, January 2019. DOI [10.1109/TVCG.2018.2864914](https://doi.org/10.1109/TVCG.2018.2864914).
 
-## What it is
-
 Two crowdsourced studies, 303 participants total, measuring how 14 ways of drawing missing or imputed values in time series affect three things: response accuracy, perceived data quality, and confidence in the conclusion. It is the closest thing to a controlled experiment behind the rule that missing data should be shown as missing.
 
-## Status
-
-**`primary-read`.** PDF retrieved from the NSF Public Access Repository, [par.nsf.gov/servlets/purl/10111567](https://par.nsf.gov/servlets/purl/10111567), and re-extracted with `pdftotext -layout`. The lab's own project page at `cmci.colorado.edu/visualab/MissingData/` no longer serves the PDF at the obvious path.
-
-Retrieval date: **2026-08-23**.
+**How this was read.** PDF retrieved from the NSF Public Access Repository, [par.nsf.gov/servlets/purl/10111567](https://par.nsf.gov/servlets/purl/10111567), and re-extracted with `pdftotext -layout`. The lab's own project page at `cmci.colorado.edu/visualab/MissingData/` no longer serves the PDF at the obvious path.
 
 ## What it is good for
 

@@ -1,14 +1,20 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Cleveland & McGill (1984), *Graphical Perception*
 
-**What it is.** William S. Cleveland and Robert McGill, "Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods," *Journal of the American Statistical Association* 79(387), September 1984, pp. 531-554. The paper that produced the ranking of visual encodings most of visualization practice still runs on.
+William S. Cleveland and Robert McGill, "Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods," *Journal of the American Statistical Association* 79(387), September 1984, pp. 531-554. The paper that produced the ranking of visual encodings most of visualization practice still runs on.
 
-**Status.** `primary-read`. The reachable copies are JSTOR scans with no text layer, so local text extraction returns only the JSTOR cover sheet. Quotes below were transcribed from rendered page images of the article itself. Not OCR, not a fetch summary. Page numbers are the journal's.
+**How this was read.** The reachable copies are JSTOR scans with no text layer, so local text extraction returns only the JSTOR cover sheet. Quotes below were transcribed from rendered page images of the article itself. Not OCR, not a fetch summary. Page numbers are the journal's.
 
 **What it is good for.** The actual ordering, and the limits the authors put on it in their own words. Come here before citing "the Cleveland-McGill ranking," because the version in circulation is not the version in the paper.
 
 **What it does not settle.** Most of what it is cited for beyond rank 1. The ordering contains ties the authors could not break, only two of its comparisons were tested, and the two experiments are not comparable to each other by the authors' own statement.
 
-**Read this first: there are two Cleveland & McGill rankings.** The one reproduced everywhere, seven ranks and fully ordered with color hue last, is from their 1985 *Science* paper, not from this one. Work that cites *this* paper for that list has the wrong reference. Both tables and the 1985 paper's own hedges are in [../people/william-cleveland.md](../people/william-cleveland.md). Everything below is about the 1984 paper specifically.
+**There are two Cleveland & McGill rankings.** The one reproduced everywhere, seven ranks and fully ordered with color hue last, is from their 1985 *Science* paper, not from this one. Work that cites *this* paper for that list has the wrong reference. Both tables and the 1985 paper's own hedges are in [../people/william-cleveland.md](../people/william-cleveland.md). Everything below is about the 1984 paper specifically.
 
 ---
 

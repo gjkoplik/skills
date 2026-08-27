@@ -55,6 +55,52 @@ So:
 
 The one place minimalism does not win: **minimal code buys API comprehension, never a misleading axis.** A truncated baseline or an undisclosed error bar is worse in a two-cell demo than in a paper, because the reader is there to learn the idiom and will copy it.
 
+## Choose the form, before you defend it
+
+**Skip this when the role above is instructional.** The chart *is* the subject, and telling someone demoing `plt.pie()` to use bars misses the point. Diagnostic figures usually skip it too.
+
+**Scope follows the ask.** Making or choosing a chart: run this. Asked for feedback on a figure: run it, and put the form finding first, because if the form changes, half the findings on the old chart evaporate. Asked something narrow ("why is my colorbar clipped"): answer that and do not volunteer this.
+
+**1. Should this be a chart at all?** One number is a number, set large with a line of context under it. Exact values want a [table](wiki/chart-types/tables.md), and a table is often a *companion* to the chart rather than a replacement for it: Chartability marks a missing data table a critical accessibility failure. A chart drawn to deliver a single number, with the other categories as packaging, is the most common miss there is.
+
+**2. Name the reader's question.** People hand you the shape of their data and a chart they already have in mind. They never hand you a question. "Four categories summing to 100%, I was thinking a pie" is shape plus a proposal, and whether the pie is right turns on whether the reader needs *which is biggest* (a sorted bar) or *does this add up* (a pie is defensible). **State the question you inferred in one line, so it can be corrected.** Ask only when the ambiguity changes the destination: two readings landing on the same index need no question.
+
+**3. Route to exactly one index.**
+
+| What the reader needs to answer | Index |
+|---|---|
+| How big is this one? | [magnitude](wiki/chart-types/magnitude.md) |
+| Which is biggest, in what order? | [ranking](wiki/chart-types/ranking.md) |
+| What is it made of, and does it add up? | [part-to-whole](wiki/chart-types/part-to-whole.md) |
+| How is it spread? Is there enough data to say? | [distribution](wiki/chart-types/distribution.md) |
+| Do these two move together? | [correlation](wiki/chart-types/correlation.md) |
+| How did it change over time? | [change-over-time](wiki/chart-types/change-over-time.md) |
+| How far from a baseline or target? | [deviation](wiki/chart-types/deviation.md) |
+| Where is it? | [spatial](wiki/chart-types/spatial.md) |
+| How does it move through a system? | [flow](wiki/chart-types/flow.md) |
+| Who connects to whom? | [network and topology](wiki/chart-types/network-topology.md) |
+| Text, quotes or coded qualitative material | [qualitative](wiki/chart-types/qualitative.md) |
+
+If the page is not there, say so and reason from [channels](wiki/concepts/channels.md). Do not invent a route.
+
+**4. Open the index before any type page.** Type pages are written to be fair to their subject, so reading one first confirms whatever was proposed. The index is the only page that asks whether the group is the right frame at all. Budget: one index, at most two type pages.
+
+Three checks, and they fail differently:
+
+1. Is the **group** right? The common error is the wrong group, not the wrong chart within one.
+2. Is the **form within the group** right?
+3. Is the **justification** right, even when the chart is? "Bars, because pies encode angle and angle is a weak channel" is the right chart with a refuted reason. See [refutations](wiki/refutations.md).
+
+**How hard to push, by finding.** You know the evidence; they know their audience. This wiki measures reading accuracy, not organizational reality, and "these readers want a bar chart" is a real constraint it cannot see. When the two conflict, the audience wins.
+
+- **Floor violations stay firm.** A misleading axis is wrong for every audience.
+- **Form suggestions are offered once**, briefly, with the trade named, then let go. Ask whether they want to pursue it or keep what they have.
+- **Justification corrections are a footnote**, not a redirect. Cheap to say, and it stops a refuted claim being repeated to someone else.
+
+Once they say keep it, it is settled. Do not reopen it later in the conversation.
+
+**What to say back**, in order: the question you inferred; the recommendation and what it costs; the sentence that defends the choice; and the correction, flagged separately, only when there is one. You are not an oracle naming the one true chart.
+
 ## Floor: quantitative honesty
 
 - **Zero baseline when area encodes the value.** Bars, area fills, filled regions and bubbles start at zero on a linear scale. Line and dot plots, which encode by position, do not have to. On a log scale bars start at 1.
@@ -120,16 +166,6 @@ Scales with role. Skip deliberately on an instructional or diagnostic figure.
 - **Tame density with structure, not just transparency.** A 1000-point blob at low alpha is still a blob. Filter, bin, or facet before relying on alpha.
 - **Maximize data-ink, within reason.** Drop 3D, shadows, gradients, heavy frames. But the effect is element-conditional, not monotone: removing axis lines measurably *hurts* reading speed, and the chartjunk literature is contested in both directions. Strip decoration, keep orientation.
 
-## Production and reproducibility
-
-Under-served by bars written for newsrooms, and unusually mechanizable.
-
-- **Vector for line art, raster only when the mark count demands it. Never JPEG a chart.**
-- **Set size and DPI for the destination**, then look at the figure at that size.
-- **A figure is reproducible when the data and every transformation are specified, and repeatable when it regenerates byte-identically.** Seed anything stochastic, jitter included.
-- **No manual post-hoc editing inside a reproducible pipeline.** If a figure needed hand-fixing, fix the code.
-- **House style belongs in a theme, not per-call kwargs.** A style file is a default a figure cannot forget; a rule in a document is a default a figure can.
-
 ## Before shipping
 
 Run these. Most are one line, and [checks](wiki/checks/matplotlib.md) has the runnable form of every one.
@@ -141,6 +177,16 @@ Run these. Most are one line, and [checks](wiki/checks/matplotlib.md) has the ru
 - Check tick and annotation labels for collisions **at the size the figure will be viewed**, especially annotations placed relative to data values, which move when the data does.
 - Read the figure back cold: do the title, labels and annotations alone answer "what am I looking at, and what am I supposed to take away?"
 - Confirm grayscale survival.
+
+## Production and reproducibility
+
+Under-served by bars written for newsrooms, and unusually mechanizable.
+
+- **Vector for line art, raster only when the mark count demands it. Never JPEG a chart.**
+- **Set size and DPI for the destination**, then look at the figure at that size.
+- **A figure is reproducible when the data and every transformation are specified, and repeatable when it regenerates byte-identically.** Seed anything stochastic, jitter included.
+- **No manual post-hoc editing inside a reproducible pipeline.** If a figure needed hand-fixing, fix the code.
+- **House style belongs in a theme, not per-call kwargs.** A style file is a default a figure cannot forget; a rule in a document is a default a figure can.
 
 ## On confidence
 

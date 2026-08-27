@@ -1,16 +1,16 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Weissgerber, Milic, Winham & Garovic 2015: Beyond Bar and Line Graphs
 
 Tracey L. Weissgerber, Natasa M. Milic, Stacey J. Winham, Vesna D. Garovic. *Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm.* PLoS Biology 13(4):e1002128, April 2015. DOI [10.1371/journal.pbio.1002128](https://doi.org/10.1371/journal.pbio.1002128).
 
-## What it is
-
 A Perspective built on a systematic review of **703 research articles** in the top quartile of physiology journals. It measures which figure types scientists actually use for continuous data, finds bar graphs of the mean nearly everywhere and distribution plots nearly nowhere, and argues that at the sample sizes involved the summary statistic is not defensible.
 
-## Status
-
-**`primary-read`.** PDF retrieved from the PLoS printable-article endpoint and re-extracted with `pdftotext -layout`. Open access under CC-BY. Extraction caveat: `±` renders as a replacement character in the text layer, so quotes below avoid passages that depend on it.
-
-Retrieval date: **2026-08-23**.
+**How this was read.** PDF retrieved from the PLoS printable-article endpoint and re-extracted with `pdftotext -layout`. Open access under CC-BY. Extraction caveat: `±` renders as a replacement character in the text layer, so quotes below avoid passages that depend on it.
 
 ## What it is good for
 

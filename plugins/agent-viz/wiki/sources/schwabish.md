@@ -1,16 +1,23 @@
+---
+type: source
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Jonathan Schwabish
 
-**What it is.** An economist at the Urban Institute who has spent a decade turning research-communication practice into teachable form: four books, the Graphic Continuum, PolicyViz, and the One Chart at a Time video series. A synthesizer and teacher rather than an experimentalist.
+An economist at the Urban Institute who has spent a decade turning research-communication practice into teachable form: four books, the Graphic Continuum, PolicyViz, and the One Chart at a Time video series. A synthesizer and teacher rather than an experimentalist.
 
 **What it is good for.** Chart-type breadth and practical when-to-use judgment, and unusually clear writing aimed at people who make charts as part of some other job.
 
-**Status.** Split, and the split is the point.
+**How this was read.** Split, and the split is the point.
 
 - `primary-read` for **"An Economist's Guide to Visualizing Data"** (*Journal of Economic Perspectives* 28(1), Winter 2014, 209-234). The complimentary full-text PDF was downloaded from aeaweb.org with `curl` and a browser user-agent and referer, then extracted locally with `pdftotext`, retrieved 2026-08-23. Quotes from it are verbatim.
 - `primary-read` for the **PolicyViz pages** quoted below (the Graphic Continuum announcement, the One Chart at a Time announcement, the "Inside *Better Data Visualizations*" post, the About page, and the June 2025 post on legends in titles), and for the **Columbia University Press product page** including its contents listing. All fetched and converted locally, retrieved 2026-08-23.
 - **`secondary-only` for all four books.** None was opened. Everything below about a book's contents comes from the publisher's own page, from the author's own summary of it, or from a blurb, and is labeled inline every time. **No free excerpt of *Better Data Visualizations* was found**, so the publisher-excerpt route that worked for [knaflic-swd.md](knaflic-swd.md) does not exist here. One retrieval note for anyone who tries: in a February 2021 comment on his own announcement post Schwabish said the publisher had decided against an electronic version, but the CUP product page now sells a PDF e-book (ISBN 9780231550154) through the Columbia UP app. The comment is stale; a paid electronic copy exists.
 
-**What it does not settle.** Nothing here is evidence-backed on its own authority. Schwabish is a practitioner-synthesizer: the JEP article's claims are sourced to Few, Healey and Enns, Cleveland, Tufte, Skau and others, and the books are catalogs of judgment. The 2014 article is also genuinely dated in its tool sections (Adobe Kuler, Flash, TileMill). And the taxonomy question below has a hard limit: **category names are verified, memberships are not.** Nobody here has read a chapter, so no claim is made about which chart type sits in which category in the book.
+**What it does not settle.** Nothing here is evidence-backed on its own authority. Schwabish is a practitioner-synthesizer: the JEP article's claims are sourced to Few, Healey and Enns, Cleveland, Tufte, Skau and others, and the books are catalogs of judgment. The 2014 article is also genuinely dated in its tool sections (Adobe Kuler, Flash, TileMill). **Memberships are now verified** from the book's own contents pages, read in the Google Books preview on 2026-08-25; see [Chapter memberships](#chapter-memberships-verified-from-the-contents-pages). What remains unread is the prose of every chapter, so nothing here claims what the book *argues* about any type, only where each type sits.
 
 ---
 
@@ -60,6 +67,59 @@ Part II: Chart Types
 11. Tables
 ```
 
+### Chapter memberships, verified from the contents pages
+
+Read from the book's own contents pages (pp. viii-x) in the Google Books preview, 2026-08-25. The preview warns that
+"some pages are omitted", but the contents pages themselves were fully legible. Part Two runs pp. 65-346, which is
+**282 of 464 pages, about 61% of the book**. That is the concrete reason this is the best candidate in the corpus for
+type-page content.
+
+| Chapter | Types, in the book's order |
+|---|---|
+| **4. Comparing Categories** (65) | Bar, Paired Bar, Stacked Bar, Diverging Bar, Dot Plot, Marimekko and Mosaic, Unit/Isotype/Waffle, Heatmap, Gauge and Bullet, Bubble Comparison and Nested Bubbles, **Sankey Diagram**, **Waterfall** |
+| **5. Time** (133) | Line, Circular Line, Slope, Sparklines, Bump, Cycle, Area, Stacked Area, Streamgraph, Horizon, Gantt, Flow Charts and Timelines, Connected Scatterplot |
+| **6. Distribution** (179) | Histogram, Pyramid, **Visualizing Statistical Uncertainty with Charts** (187), Box-and-Whisker, Candlestick, Violin, Ridgeline, **Visualizing Uncertainty by Showing the Data** (204), Stem-and-Leaf |
+| **7. Geospatial** (217) | Choropleth, Cartogram, Proportional Symbol and Dot Density, Flow Map |
+| **8. Relationship** (249) | Scatterplot, Parallel Coordinates, **Radar**, **Chord Diagram**, **Arc Chart**, Correlation Matrix, **Network Diagrams**, **Tree Diagrams** |
+| **9. Part-to-Whole** (289) | Pie, Treemap, Sunburst, **Nightingale**, Voronoi |
+| **10. Qualitative** (311) | Icons, Word Clouds and Specific Words, Word Trees, Specific Words, Quotes, Coloring Phrases, Matrices and Lists |
+| **11. Tables** (327) | The Ten Guidelines of Better Tables, plus two worked redesigns |
+
+### Where he and the FT disagree about membership, and why it matters
+
+Names mapped cleanly. Memberships do not, and the disagreements are not noise.
+
+**Networks are not flow, on a second independent taxonomy.** Schwabish files Network Diagrams, Chord, Arc and Tree
+under **Relationship**. The FT files Chord and Network under **Flow**. This wiki had already split
+[network-topology](../chart-types/network-topology.md) out of Flow on the argument that a network is a dataset rather
+than a message. That argument now has a practitioner taxonomy agreeing with it from a different direction, which
+upgrades it from our reasoning to our reasoning plus a corroborating scheme. It remains `authority-asserted`.
+
+**Sankey and Waterfall are comparison charts to him**, not flow or part-to-whole charts. The FT puts Sankey under Flow
+and Waterfall under both Part-to-whole and Flow. Three placements for two charts across two schemes is the clearest
+available evidence that these taxonomies are retrieval aids rather than facts about charts.
+
+**Radar is a relationship chart to him**, a magnitude chart to the FT. Worth knowing before a type page asserts either.
+
+**Arc is a relationship chart to him**, a part-to-whole chart to the FT.
+
+**Heatmap sits under Comparing Categories** for him. The FT splits it, XY heatmap under Correlation and Heat map under
+Spatial.
+
+Read together with the earlier conclusion that his scheme is too coarse to serve as our index, the membership data
+supports the same call: **use him for what belongs on a type page, not for where the type is filed.**
+
+### Types he covers that the FT list does not
+
+Candidates for future pages, and the reason this book is the better source for coverage: Marimekko and Mosaic, Gauge and
+Bullet, Nested Bubbles, Circular Line, Sparklines, Bump, Cycle, Streamgraph, Horizon, Gantt, Pyramid, Candlestick,
+Ridgeline, Stem-and-Leaf, Correlation Matrix, Tree Diagrams, Sunburst, Nightingale, and the whole Qualitative and Tables
+chapters, which have no FT equivalent at all.
+
+**The Distribution chapter carries two dedicated uncertainty sections**, at pp. 187 and 204. That is the part of his
+catalog that touches this wiki's statistical-honesty studies most directly, and it is the one place his catalog and our
+evidence base overlap on something measured rather than asserted.
+
 ### Mapped against the FT nine
 
 Names only. This maps what the categories are called, not what is in them.
@@ -93,7 +153,7 @@ Four observations that are worth more than the table.
 
 The video series was built as a companion to the book: "One of my goals in that book is to help expand readers' graphic literacy. Instead of relying on the tried-and-true bar, line, and pie charts, what about trying a slope chart, dot plot, or tile grid map?" More than fifty videos, free on YouTube, one chart type each.
 
-The interesting part is the brief he gave every contributor:
+The brief he gave every contributor:
 
 > "Can you please describe the graph?"
 >
@@ -135,7 +195,7 @@ So the 2014 article is a legitimate, free, vouched proxy for three of the book's
 
 The strength usually described as "presenting to non-expert audiences" belongs to *Better Presentations* and *Elevate the Debate*, not to *Better Data Visualizations*, whose subtitle names its audience as the **makers** ("Scholars, Researchers, and Wonks"). *Elevate the Debate* is co-authored with Urban's communications department and is about a multiplatform communication strategy, which is one step further from a figure quality bar than a book about slides. Neither is a priority to reach.
 
-The one sentence worth having is in the JEP article, and it is a better statement of [../inventory.md](../inventory.md) topic 3 than the topic currently carries:
+One sentence in the JEP article states [../inventory.md](../inventory.md) topic 3 better than the topic itself currently does:
 
 > "One thing researchers should keep in mind is that graphs in research reports or articles, and even those shown in verbal presentations, are not meant for the author, but for the reader or the seminar audience. The line chart that a researcher uses in the data exploration phase -- with default gridlines, tick marks, and colors -- may not be the one that will best communicate the researcher's ideas to others."
 
@@ -147,7 +207,11 @@ That is the exploratory/explanatory distinction stated as an obligation on a *re
 
 > "When it comes to bar and column charts, a first rule is to start the chart at zero. Otherwise, the differences between the columns are overemphasized."
 
-Scoped to bars and columns, with the perceptual reason attached rather than an axis-wide rule. That is a fourth independent source for the stronger form of topic 9, alongside Observable Plot, the FT and Urban, and against Vega-Lite's by-axis default.
+Scoped to bars and columns, with the perceptual reason attached rather than an axis-wide rule. That puts him with Observable Plot and the FT on the stronger form of topic 9, and against Vega-Lite's by-axis default.
+
+**Corrected: this is a third source, not a fourth.** An earlier version of this line counted Schwabish and the Urban Institute style guide as separate voices. They are not independent. Schwabish is a Senior Fellow at Urban and is the sole named contact on the guide, which asks readers to "Contact Jon Schwabish" at an `@urban.org` address (verified on the live page, 2026-08-25). See [urban-institute.md](urban-institute.md).
+
+The general rule this cost: **independence is a claim that needs support, and the absence of a byline is not support for it.** A source with no named author should be checked for authorship before it is counted alongside a person.
 
 **Pie charts: the angle mechanism [refutations.md](../refutations.md) refuted appears here, and the attribution has to be exact.**
 

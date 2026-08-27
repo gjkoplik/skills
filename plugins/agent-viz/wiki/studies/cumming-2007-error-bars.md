@@ -1,16 +1,16 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Cumming, Fidler & Vaux 2007: Error bars in experimental biology
 
 Geoff Cumming, Fiona Fidler, David L. Vaux. *The Journal of Cell Biology* 177(1):7-11, April 2007. DOI [10.1083/jcb.200611141](https://doi.org/10.1083/jcb.200611141).
 
-## What it is
-
 A five-page tutorial that lays out what the four common error bars mean and gives **eight numbered rules** for using them. It is the closest thing the statistical-reporting literature has to a checkable style guide for figures.
 
-## Status
-
-**`primary-read`.** Full text retrieved from the Europe PMC REST API (`/PMC2064100/fullTextXML`), which serves the publisher-deposited JATS. The article is CC-BY-NC-SA after its first six months. Note that the PMC PDF endpoint returns a "Preparing to download" HTML interstitial rather than the PDF, so the XML route is the one that works.
-
-Retrieval date: **2026-08-23**.
+**How this was read.** Full text retrieved from the Europe PMC REST API (`/PMC2064100/fullTextXML`), which serves the publisher-deposited JATS. The article is CC-BY-NC-SA after its first six months. Note that the PMC PDF endpoint returns a "Preparing to download" HTML interstitial rather than the PDF, so the XML route is the one that works.
 
 ## What it is good for
 

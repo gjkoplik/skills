@@ -1,14 +1,16 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Correll, Bertini & Franconeri 2020: Truncating the Y-Axis: Threat or Menace?
 
 Michael Correll (Tableau Research), Enrico Bertini (NYU), Steven Franconeri (Northwestern). CHI 2020. arXiv [1907.02035v2](https://arxiv.org/abs/1907.02035), 8 January 2020.
 
-## What it is
-
 Three crowdsourced experiments on whether y-axis truncation inflates perceived effect size, whether the chart type changes that, and whether design interventions that announce the truncation (a broken-axis glyph, a gradient fade at the bar tops) reduce it. Answers: yes, no, and no measurable reduction.
 
-## Status
-
-**`primary-read`.** Extracted locally with `pdftotext` from the arXiv v2 PDF. Retrieval date: **2026-08-23**.
+**How this was read.** Extracted locally with `pdftotext` from the arXiv v2 PDF. Retrieval date: **2026-08-23**.
 
 ## What it is good for
 

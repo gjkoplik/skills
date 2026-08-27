@@ -1,8 +1,14 @@
+---
+type: source
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # BBC Visual and Data Journalism cookbook (and `bbplot`)
 
-**What it is.** A recipe book for producing BBC News house-style graphics in R with ggplot2, published by the BBC data team, plus the `bbplot` package it documents. Two functions carry the whole style: `bbc_style()` and `finalise_plot()`.
+A recipe book for producing BBC News house-style graphics in R with ggplot2, published by the BBC data team, plus the `bbplot` package it documents. Two functions carry the whole style: `bbc_style()` and `finalise_plot()`.
 
-**Status.** `primary-read`. The cookbook at `bbc.github.io/rcookbook/` and the `bbc/bbplot` repository README were fetched and converted locally, retrieved 2026-08-23. Quotes are verbatim.
+**How this was read.** The cookbook at `bbc.github.io/rcookbook/` and the `bbc/bbplot` repository README were fetched and converted locally, retrieved 2026-08-23. Quotes are verbatim.
 
 **What it is good for.** The clearest worked example in this wiki of **house style as code rather than prose**, and the source of a specific, readable set of numbers for typography and gridline discipline. It is also useful as a corpus: nearly every recipe repeats the same handful of moves, so what the BBC actually does is recoverable from the code even where the text says nothing.
 

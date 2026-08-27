@@ -1,8 +1,14 @@
+---
+type: person
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Robert Kosara
 
 **What they are known for.** Kosara is the person who went and checked whether pie charts are read by angle, found they are not, and then spent several more papers narrowing down what they *are* read by. He writes the eagereyes blog and has spent a decade arguing, in print and to the field's own venues, that visualization rests on a large stock of untested assumptions it mistakes for knowledge.
 
-**Status: `primary-read`.** Eight of his papers were downloaded from `media.eagereyes.org` and extracted locally with `pdftotext`, plus the wiki's existing primary readings of Skau & Kosara (2016) and Skau, Harrison & Kosara (2015). Retrieval date: **2026-08-23**. Affiliations below are as printed on each paper (UNC Charlotte, then Tableau Research); no claim is made about where he works now.
+**How this was read.** Eight of his papers were downloaded from `media.eagereyes.org` and extracted locally with `pdftotext`, plus the wiki's existing primary readings of Skau & Kosara (2016) and Skau, Harrison & Kosara (2015). Retrieval date: **2026-08-23**. Affiliations below are as printed on each paper (UNC Charlotte, then Tableau Research); no claim is made about where he works now.
 
 **What they are good for.** Come here with *is there actually a study behind this rule*. He is the canon's most productive source of **decompositions**, meaning experiments that take a chart type apart into the cues it carries instead of comparing two whole charts. That is the step [concepts/channels.md](../concepts/channels.md) identifies as the weak link in every chart-type claim, and Kosara has run it more times than anyone else.
 
@@ -44,7 +50,7 @@ and the distribution result, which is a null he reports plainly: he expected lon
 
 > "A seminal paper does not lose its importance if limitations are found, or if parts of it are found to not or no longer be true. The value of the paper is not in providing facts, but in establishing a way of thinking, showing a new direction, introducing a methodology."
 
-Its concrete complaint is worth carrying: everyone copied Cleveland & McGill's log-error measure, himself included, and he argues it is "arguably the wrong choice in many cases," in particular for pie charts where the error is a difference in percentages rather than a proportional error.
+Its concrete complaint: everyone copied Cleveland & McGill's log-error measure, himself included, and he argues it is "arguably the wrong choice in many cases," in particular for pie charts where the error is a difference in percentages rather than a proportional error.
 
 **Replication, 2018, with Steve Haroz.** *Skipping the Replication Crisis in Visualization* is a second position paper, and it is the one that turns the 2016 complaint into a program: survey how rare replications are, name six threats to study validity, and propose publication models that let a replication clear a novelty bar. It opens by stating the field's exposure rather than its innocence: replications are rare, and "it is not unreasonable to believe that they would show a similar rate of unreproducible results as in the psychological and social sciences." It also names the few real replication chains the field has, including [Heer & Bostock](../studies/heer-bostock-2010.md) on Cleveland & McGill.
 
@@ -64,7 +70,7 @@ This is not a gotcha. It is the strongest available demonstration of why this wi
 
 **On pie charts.** His 2019 related-work section says Cleveland & McGill "equate their pie chart stimulus with angle perception without questioning it." They did question it, in the text, in the word *conjecture*, and [cleveland-mcgill-1984.md](../studies/cleveland-mcgill-1984.md) quotes the sentence.
 
-Both are one-line summaries in sections that are not the paper's contribution, and both compress in the direction that makes the story cleaner. That is exactly the failure mode he is warning about, which is why it is worth recording rather than ignoring.
+Both are one-line summaries in sections that are not the paper's contribution, and both compress in the direction that makes the story cleaner. That is exactly the failure mode he is warning about.
 
 ---
 

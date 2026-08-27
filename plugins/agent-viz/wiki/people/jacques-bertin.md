@@ -1,8 +1,14 @@
+---
+type: person
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Jacques Bertin
 
 **What they are known for.** *Sémiologie graphique* (1967), the book that first treated graphics as a formal sign system rather than a craft, and the source of the visual variables. Almost every modern vocabulary for encoding data, marks and channels, expressiveness, levels of measurement, is a re-lexicalization of his.
 
-**Status: `primary-read`, with a large caveat about which edition.** Retrieved 2026-08-23. The full 415-page French text was downloaded and extracted locally:
+**How this was read.** There is a large caveat about which edition. Retrieved 2026-08-23. The full 415-page French text was downloaded and extracted locally:
 
 Three things a later reader needs to know before leaning on this page:
 

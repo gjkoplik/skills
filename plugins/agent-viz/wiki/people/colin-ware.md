@@ -1,8 +1,15 @@
+---
+type: person
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Colin Ware
 
 **What they are known for.** Ware wrote *Information Visualization: Perception for Design*, the standard reference on the perceptual basis of everything this wiki argues about, and he holds advanced degrees in both computer science and the psychology of perception. His own experimental work runs from color sequences for maps in 1988 through colormap resolving power in 2019, plus a line of studies on what makes a node-link diagram readable.
 
-**Status: `primary-read` for his own experiments, `secondary-only` for the book.** Splitting the label is not hedging. Four of his papers were downloaded and extracted locally with `pdftotext` and are quoted or characterized from those extractions. The book was not opened, and the chapter list below comes from the publisher's own product page. Every work carries its own label in [the table](#works-and-where-they-sit-in-this-wiki). Retrieval date: **2026-08-23**.
+**How this was read.** `primary-read` for his own experiments, `secondary-only` for the book. Splitting the label is not hedging. Four of his papers were downloaded and extracted locally with `pdftotext` and are quoted or characterized from those extractions. The book was not opened, and the chapter list below comes from the publisher's own product page. Every work carries its own label in [the table](#works-and-where-they-sit-in-this-wiki). Retrieval date: **2026-08-23**.
 
 **What they are good for.** Come back here with *why does this work*, not *what should I do*. Ware is the canon's mechanism source: the level at which a rule stops being a convention and becomes a claim about the visual system. He is also the only figure in this set whose center of gravity is vision science rather than statistics or design practice, and the only one who has run experiments on **node-link diagrams specifically**.
 
@@ -20,7 +27,7 @@
 
 The paper the 2023 rainbow essay points at as its real evidence. It splits map reading into two tasks that want opposite things: **metric** information (read a quantity off a key) and **form** information (see the shape of the surface). Its theory predicts a spectrum scale wins the first and loses the second, and a gray scale the reverse, because form perception runs through the luminance channel. Ten color-normal subjects, five color sequences, and the author's own verdict on his hypothesis is mixed: the results "only partially confirm the form hypothesis."
 
-The three rules of thumb it ends on are worth quoting because the third one is the modern colormap, written in 1988:
+It ends on three rules of thumb, and the third is the modern colormap, written in 1988:
 
 > "To create a color sequence that has good properties for revealing both shape and metric quantities, use a sequence that increases monotonically in luminance, while cycling through a range of hues. The hues provide accurate readings from a key, while the luminance conveys the form of the surface."
 
@@ -95,8 +102,6 @@ He would ask what visual query the figure exists to support, and then whether th
 The 4th edition's chapters, verbatim from the publisher: 1. Foundations for an Applied Science of Data Visualization. 2. The Environment, Optics, Resolution, and the Display. 3. Lightness, Brightness, Contrast, and Constancy. 4. Color. 5. Visual Salience and Finding Information. 6. Static and Moving Patterns. 7. Space Perception. 8. Visual Objects and Data Objects. 9. Images, Narrative, and Gestures for Explanation. 10. Interacting with Visualizations. 11. Visual Thinking Processes. 12. Designing for Perception. Then a list of the book's named **Visual Thinking Algorithms** (Visual Queries, Pathfinding on a Map or Diagram, Reasoning with a Hybrid of a Visual Display and Mental Imagery, Design Sketching, Brushing, Small Pattern Comparisons in a Large Information Space, Degree-of-Relevance Highlighting, Generalized Fisheye Views, Multidimensional Dynamic Queries with Scatter Plot, Visual Monitoring Strategies), then appendices A (Changing Primaries), B (CIE Color Measurement System) and C (**Guidelines**). The publisher's page flags chapter 12 as new and does not say which chapters the algorithms sit in.
 
 ## What the repo lost by missing the book
-
-Stated plainly, because it is why this page exists.
 
 **It is the second uncounted source, and it has one fewer excuse than the first.** The README names Tufte as "the structural gap," on the grounds that he has no row in the roll-call, so the roll-call's coverage guarantee cannot see him. Ware is in exactly that position, and Tufte at least enters the inventory by quotation through Wilke. Ware does not enter it at all. Grep the wiki for his name and you get one study page, for an essay containing no experiment.
 

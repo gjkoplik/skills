@@ -1,16 +1,18 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Ware, Stone & Szafir 2023: Rainbow Colormaps Are Not All Bad
 
 Colin Ware (University of New Hampshire), Maureen Stone (Tableau Research), Danielle Albers Szafir (UNC Chapel Hill). *IEEE Computer Graphics and Applications* 43(3), 88-93, May/June 2023. DOI [10.1109/MCG.2023.3246111](https://doi.org/10.1109/MCG.2023.3246111). Open access, CC-BY.
-
-## What it is
 
 **Not a study.** This is a six-page **Visualization Viewpoints department article**, an argued position piece, written as a direct reply to Borland & Taylor's 2007 *Rainbow Color Map (Still) Considered Harmful* in the same department. It contains **no new experiment, no participants, no data, and no statistics**. Every empirical claim in it is a citation to someone else's work.
 
 It lives in `studies/` because that is where people will look for it, and because the single most common misuse of this paper is citing it as if it were an experiment that vindicated rainbows.
 
-## Status
-
-**`primary-read`.** Extracted locally with `pdftotext` from the IEEE open-access PDF (CC-BY, confirmed on the article's first page). Retrieval date: **2026-08-23**.
+**How this was read.** Extracted locally with `pdftotext` from the IEEE open-access PDF (CC-BY, confirmed on the article's first page). Retrieval date: **2026-08-23**.
 
 ## What it is good for
 
@@ -43,7 +45,7 @@ The conclusion:
 
 > "While poorly designed rainbow colormaps can correspond to poor data visualizations, we believe well-designed rainbows, like well-designed multi-hued colormaps, can be valuable tools for visualization."
 
-And the line most worth carrying forward, about how the field spends its experiments:
+And on how the field spends its experiments:
 
 > "We would like to see these well-designed rainbows used more often in evaluative studies, especially for tasks where luminance and uniformity are known to be important. It is unclear what value we gain by continuing to rediscover that classic rainbows do poorly."
 
@@ -95,7 +97,7 @@ And the closing admission:
 ## What this result does not license
 
 - **Not "a study found rainbows are fine."** No study. No participants. No numbers of its own. If you cite it as empirical support, you are citing an opinion column.
-- **Not a defence of jet or the classic HSV rainbow.** The paper says those "inevitably perform poorly on any test of perceived metric distance." Its defence is of *purpose-built* rainbows: Turbo, Paraview's Uniform, the thermal-imaging rainbow, the Tableau density rainbow in Figure 7.
+- **Not a defense of jet or the classic HSV rainbow.** The paper says those "inevitably perform poorly on any test of perceived metric distance." Its defense is of *purpose-built* rainbows: Turbo, Paraview's Uniform, the thermal-imaging rainbow, the Tableau density rainbow in Figure 7.
 - **Not "rainbows are accessible."** The paper says the opposite twice, and offers a narrow exception: a colormap that carries its information in luminance is accessible "as long as the information provided by color segmentation is not essential."
 - **Not a licence to use a rainbow for continuous quantitative data by default.** The defensible use cases they name are specific: reading a value off a key, surfacing iso-value contours and extrema, and tasks about global structure or distribution comparison. Their own accuracy-for-details argument runs through luminance, not hue.
 - **Not evidence that hue banding aids reasoning.** That section is "preliminary studies suggest," "we speculate," and "further research is needed," in the authors' own words.

@@ -1,8 +1,14 @@
+---
+type: source
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # W3C WAI, *Complex Images*
 
-**What it is.** One page of the W3C Web Accessibility Initiative's Images Tutorial, covering charts, diagrams, and maps. It defines the **two-part text alternative**: a short description to identify the image, and a long description that carries the information.
+One page of the W3C Web Accessibility Initiative's Images Tutorial, covering charts, diagrams, and maps. It defines the **two-part text alternative**: a short description to identify the image, and a long description that carries the information.
 
-**Status.** `primary-read`. The page at `w3.org/WAI/tutorials/images/complex/` was fetched and converted locally, retrieved 2026-08-23. Quotes are verbatim.
+**How this was read.** The page at `w3.org/WAI/tutorials/images/complex/` was fetched and converted locally, retrieved 2026-08-23. Quotes are verbatim.
 
 **What it is good for.** The authoritative definition of what alt text for a chart is supposed to *contain*, and the three HTML patterns for attaching a long description. It is the standard that Datawrapper's alt-text guidance and the Urban Institute's alt-text rules are implementations of.
 

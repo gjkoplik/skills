@@ -2,7 +2,7 @@
 
 The audit trail for [inventory.md](inventory.md). For each source, its own published outline is enumerated and every entry is mapped either to an inventory topic or to a stated exclusion.
 
-The point is that an omission becomes a **visibly unmapped chapter** rather than an absence nobody can see. "Graded on breadth" with no artifact is a hope with a label on it; this is the artifact.
+An omission becomes a **visibly unmapped chapter** rather than an absence nobody can see. "Graded on breadth" with no artifact is a hope with a label on it; this is the artifact.
 
 **What this proves and does not prove.** It proves the mapping was performed. It does **not** prove the one-line rule attached to each topic is well worded. A chapter mapped to a badly-named topic looks identical to one mapped well.
 
@@ -235,7 +235,7 @@ All headings retrieved from bbc.github.io/rcookbook/.
 |---|---|
 | Choosing colors: same color for same variables | 30 |
 | ... explain color encoding | 42 |
-| ... grey as context | 29 |
+| ... gray as context | 29 |
 | ... contrast requirements | 33 |
 | ... color positioning / high contrast for small marks | 33, 29 |
 | ... intuitive colors | 31 |
@@ -278,7 +278,7 @@ All headings retrieved from bbc.github.io/rcookbook/.
 The per-source pages were written by agents that opened the sources. They found four things wrong with this roll-call, which is the roll-call working as intended.
 
 - **Tufte has no row here at all**, and his name appears nowhere in `inventory.md` or `refutations.md` except secondhand through Wilke ch. 23. He is the canon's most-cited author on this subject and he entered the 92 topics only by quotation. **The roll-call's guarantee does not cover a source that was never enumerated**: an omission shows up as an unmapped chapter only if the chapters were listed. See [sources/tufte.md](sources/tufte.md), which now lists nine chapters for whoever has a copy.
-- **Munzner ch. 6 has nine rules of thumb, not the eight mapped above.** The missing one is **No Unjustified 2D**, which is the one most relevant to network layouts. Also, "Get It Right in Black and White" is Maureen Stone's phrase, cited by Munzner to her 2010 post rather than coined by her.
+- **Munzner ch. 6 has eight rules of thumb, and the row above maps seven.** The missing one is **No Unjustified 2D**, which is the one most relevant to network layouts. *Corrected 2026-08-25: this line previously said nine and eight; the section list extracted on [sources/munzner-vad.md](sources/munzner-vad.md) has eight rules plus two framing sections.* Also, "Get It Right in Black and White" is Maureen Stone's phrase, cited by Munzner to her 2010 post rather than coined by her.
 - **The Few mappings are partly extrapolation.** Topics 6 and 3 check out. The mappings to 16, 33, 42, 45 and 46 do not: Few's *Completeness* is about **comparison context** ("comparisons to targets, measures of the norm, and historical values"), not legends, notes and sample size, and **no inventory topic covers it**. His *Truthfulness* is accuracy **and validity**, and **validity has no topic at all**. Two real gaps, found only because his primary turned out to be readable after all.
 - **Two quotes could not be located in the available material.** Topic 7's Munzner quote ("express all of, and only...") appears nowhere in her 689-slide deck, and topic 91's Cairo quote ("paramount among these five") appears nowhere in the 46-page sample, where the word "paramount" does not occur. Both are flagged on their source pages rather than removed, since neither the book nor the full text was reached.
 
@@ -289,6 +289,6 @@ The per-source pages were written by agents that opened the sources. They found 
 Named so the next pass knows where to look rather than re-deriving the same list:
 
 - **Cairo, *How Charts Lie***. Would sharpen truncation, inverted axes and map distortion (10, 11, 21).
-- **Chartability** (Elavsky, Bennett & Moritz, EuroVis 2022). 50 accessibility heuristics under POUR+CAF, CC-BY-SA, with a 14-test shortlist. Discovered *after* the accessibility topics were derived. **Importing beats deriving here**: the inventory's four accessibility topics are roughly three of its fifty.
+- **Chartability** (Elavsky, Bennett & Moritz, EuroVis 2022). 50 accessibility heuristics under POUR+CAF, CC-BY-SA, with a 14-test shortlist. Discovered *after* the accessibility topics were derived. **Importing beats deriving here**: the inventory's four accessibility topics map onto eight of its fifty heuristics, one only partially.
 - **The statistical-reporting canon.** Cumming/Fidler/Vaux, Weissgerber, Belia, Song & Szafir. Not in the original source set at all, which is exactly why topics 46, 55 and 56 came out weakly sourced. See [refutations.md](refutations.md).
 - **Draco** (Moritz et al., TVCG 2019). Formalizes encoding-choice knowledge as constraints with weights learned from experiment. Covers mark and channel selection only; does not touch titles, annotation or narrative.

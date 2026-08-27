@@ -1,8 +1,15 @@
+---
+type: study
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Krzywinski et al. (2012), *Hive Plots*
 
-**What it is.** Martin Krzywinski, Inanc Birol, Steven J. M. Jones and Marco A. Marra, "Hive plots: rational approach to visualizing networks," *Briefings in Bioinformatics* 13(5), 2012, pp. 627-644. The paper that introduced hive plots, as an argued alternative to force-directed and spectral layouts.
+Martin Krzywinski, Inanc Birol, Steven J. M. Jones and Marco A. Marra, "Hive plots: rational approach to visualizing networks," *Briefings in Bioinformatics* 13(5), 2012, pp. 627-644. The paper that introduced hive plots, as an argued alternative to force-directed and spectral layouts.
 
-**Status.** `primary-read`. 18-page PDF, text extracted locally with `pdfminer.six`. **Reachability note worth recording:** the paper is paywalled at Oxford Academic with no open-access or PubMed Central deposit, and an earlier pass on this wiki recorded it as `not-reached` on that basis. It was reachable the whole time from a local copy. *Check for a local copy before recording a source as unreachable.*
+**How this was read.** 18-page PDF, text extracted locally with `pdfminer.six`. **Reachability note worth recording:** the paper is paywalled at Oxford Academic with no open-access or PubMed Central deposit, and an earlier pass on this wiki recorded it as `not-reached` on that basis. It was reachable the whole time from a local copy. *Check for a local copy before recording a source as unreachable.*
 
 **What it is good for.** The method: how axes and node positions are actually assigned, and the geometric constraint on axis count. Also for seeing clearly what kind of paper it is.
 

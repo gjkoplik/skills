@@ -1,22 +1,18 @@
+---
+type: chart-type
+relationships: [part-to-whole, change-over-time, magnitude]
+aliases: [100% stacked bar, Stacked bar chart, Stacked column]
+---
+
 # Stacked bar charts
 
-**What it is.** A bar divided into segments, each segment's length encoding a part's share of the bar's total. The only part-to-whole form that keeps a rank-1 reading, and it keeps it for exactly one segment.
-
-**Status.** Directly tested. Cleveland & McGill's position-length experiment used divided bar charts as its stimuli, so this type is measured rather than inherited.
-
-**What it is good for.** Understanding why the bottom segment is trustworthy and the rest are not.
-
-**What it does not settle.** The grouped-versus-stacked choice, which depends on the reader's question rather than on perception.
-
-**Relationships.** [Part-to-whole](part-to-whole.md), Change over Time, Magnitude. An unlinked relationship means that index is not written yet.
-
----
+A bar divided into segments, each segment's length encoding a part's share of the bar's total. The only part-to-whole form that keeps a position-along-a-common-scale reading, and it keeps it for exactly one segment.
 
 ## When to reach for it, and when not
 
-**Reach for it when** the total matters as well as the composition, or when composition repeats across categories or across time. It is the only part-to-whole form that keeps a rank-1 reading, and it keeps it for the total and the bottom segment.
+**Reach for it when** the total matters as well as the composition, or when composition repeats across categories or across time. It is the only part-to-whole form that keeps a position-along-a-common-scale reading, and it keeps it for the total and the bottom segment.
 
-**Order the segments deliberately.** Whichever series the reader most needs to compare goes on the baseline. That single decision moves it from rank 3 to rank 1 and costs nothing.
+**Order the segments deliberately.** Whichever series the reader most needs to compare goes on the baseline. That single decision moves it from length onto position along a common scale and costs nothing.
 
 **Do not reach for it when:**
 
@@ -27,7 +23,7 @@
 | There are many parts per bar | [Treemap](treemap.md), or aggregate the tail into "other" |
 | Precise values per segment | Any chart with an axis per value. This is the form's measured weakness |
 
-**Normalizing to 100%** removes the total, which is the rank-1 reading you came for. Sometimes right, always a real loss, and worth making knowingly.
+**Normalizing to 100%** removes the total, which is the position reading you came for. Sometimes right, always a real loss, and worth making knowingly.
 
 ## Structural decomposition
 
@@ -40,15 +36,15 @@
 | Coordinates | Cartesian |
 | Guides | One quantitative axis, category axis, legend |
 
-A **grouped** bar chart differs in the transform slot alone: no cumulative sum, and the position slot changes with it. That one-slot difference is the whole of the grouped-versus-stacked question, which is why the decomposition is worth keeping.
+A **grouped** bar chart differs in the transform slot alone: no cumulative sum, and the position slot changes with it. That one-slot difference is the whole of the grouped-versus-stacked question.
 
-A **coxcomb** is this chart with the coordinates slot set to polar. A **100% stacked bar** is this chart with a normalization added to the transform.
+A **100% stacked bar** is this chart with a normalization added to the transform. Setting the coordinates slot to polar gives a stacked polar-area chart, not a coxcomb: the coxcomb is the polar form of a plain [bar chart](bar-chart.md#structural-decomposition), with equal angles and the quantity in the radius.
 
 ## Channels
 
 Segment length, on a scale with **no common baseline except for the first segment**.
 
-The first segment starts at the axis, so it is read as position along a common scale: rank 1. Every subsequent segment floats, so it is read as length: rank 3. Cleveland & McGill spell this out for the divided bar chart:
+The first segment starts at the axis, so it is read as position along a common scale. Every subsequent segment floats, so it is read as length, which is a less accurately read channel ([channels.md](../concepts/channels.md)). Cleveland & McGill spell this out for the divided bar chart:
 
 > "For each of the three, the totals of A and B can be compared by perceiving position along the scale. ... All other values must be compared by the elementary task of perceiving different bar lengths"
 
@@ -56,9 +52,9 @@ The first segment starts at the axis, so it is read as position along a common s
 
 ## What it is measurably good at
 
-**Totals.** The overall bar height is position along a common scale. Rank 1, evidence-backed.
+**Totals.** The overall bar height is position along a common scale, the most accurately read channel measured. Evidence-backed.
 
-**The bottom segment.** Same reading, same rank.
+**The bottom segment.** Same reading, same channel.
 
 ## What it is measurably bad at
 
@@ -80,16 +76,16 @@ What is *unmeasured* is the comparison people actually care about: whether a sta
 
 **Tracking a middle series across categories.** The reader's eye wants to compare the orange segment across five bars. Each of those segments floats at a different offset, so the comparison is a set of length judgments with no shared baseline, which is the worst case this form supports. `authority-asserted`, and it follows directly from the measured channel split rather than resting on taste.
 
-**The remedy is ordering.** Put the series you want compared on the baseline. It costs nothing and moves that series from rank 3 to rank 1. This follows from the evidence rather than being separately tested.
+**The remedy is ordering.** Put the series you want compared on the baseline. It costs nothing and moves that series from length onto position along a common scale. This follows from the evidence rather than being separately tested.
 
-**100% stacking hides the totals.** Normalizing removes the one rank-1 reading the form had for magnitude and keeps only composition. That is sometimes exactly right, and it is a real loss to make knowingly.
+**100% stacking hides the totals.** Normalizing removes the one position reading the form had for magnitude and keeps only composition. That is sometimes exactly right, and it is a real loss to make knowingly.
 
 ## Justifying the choice
 
 **Defensible, evidence-backed:**
 
 - "I put the series in question on the baseline. Floating segments are read as length, which carries 40% to 250% more error than position, measured on exactly this chart form."
-- "The total is a rank-1 reading here, which is why this is a stacked bar rather than a pie: the reader needs the total and its composition."
+- "The total is read as position along a common scale here, which is why this is a stacked bar rather than a pie: the reader needs the total and its composition."
 - "I did not normalize to 100%, because that removes the only accurately-read quantity on the chart."
 
 **Defensible, with the label said out loud:**

@@ -1,14 +1,16 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Talbot, Gerth & Hanrahan 2012: An Empirical Model of Slope Ratio Comparisons
 
 Justin Talbot, John Gerth, Pat Hanrahan (all Stanford). IEEE TVCG (Proceedings of InfoVis) 2012. PDF: [vis.stanford.edu/files/2012-SlopeComparison-InfoVis.pdf](http://vis.stanford.edu/files/2012-SlopeComparison-InfoVis.pdf).
 
-## What it is
-
 A re-examination of Cleveland, McGill & McGill's "banking to 45 degrees" guideline. The authors widen the sampled space of slope comparisons well past Cleveland's, drop his instruction to compare heights, build a two-strategy model of how people actually estimate slope ratios, and validate it in two experiments.
 
-## Status
-
-**`primary-read`.** Extracted locally with `pdftotext` from the Stanford Vis Group copy. Retrieval date: **2026-08-23**.
+**How this was read.** Extracted locally with `pdftotext` from the Stanford Vis Group copy. Retrieval date: **2026-08-23**.
 
 ## What it is good for
 
@@ -97,7 +99,7 @@ They also leave their own model's failures on the record: it does not explain th
 
 ## Naming note
 
-Two different Talbot/Gerth/Hanrahan papers get confused. **Arc Length-Based Aspect Ratio Selection** is TVCG 2011 (it is reference 15 in this paper). **An Empirical Model of Slope Ratio Comparisons** is the 2012 InfoVis paper this page covers. [inventory.md](../inventory.md) topic 14 cites "Talbot, Gehrke & Heer, InfoVis 2011," which is neither author list.
+Two different Talbot/Gerth/Hanrahan papers get confused. **Arc Length-Based Aspect Ratio Selection** is TVCG 2011 (it is reference 15 in this paper). **An Empirical Model of Slope Ratio Comparisons** is the 2012 InfoVis paper this page covers. [inventory.md](../inventory.md) topic 14 once cited "Talbot, Gehrke & Heer, InfoVis 2011," which is neither author list; that was corrected on 2026-08-23 and the topic now names both papers and flags the conflation.
 
 ## Links
 

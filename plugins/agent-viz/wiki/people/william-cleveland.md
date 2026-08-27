@@ -1,8 +1,15 @@
+---
+type: person
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # William S. Cleveland
 
 **What they are known for.** With Robert McGill at Bell Labs, Cleveland turned "which chart is better" from an argument into an experiment, producing the ranking of visual encodings that most of visualization practice still runs on. He is also the source of loess, the dot chart, banking to 45 degrees, and (with Becker and Shyu) trellis display, the ancestor of every faceted small-multiple grid in modern plotting libraries.
 
-**Status: `primary-read` for Cleveland & McGill (1985) and Cleveland (2001), unread for the books.** The 1985 *Science* paper was pulled as a JSTOR scan; its text layer is three-column and interleaves badly, so the quotes and the table below were **transcribed from rendered page images at 200 dpi**, not from a `-layout` dump and not from a summary. [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md) is already `primary-read` in this wiki by the same method. The book contents below come from library-catalog contents scans, extracted locally. Retrieval date: **2026-08-23**.
+**How this was read.** `primary-read` for Cleveland & McGill (1985) and Cleveland (2001), unread for the books. The 1985 *Science* paper was pulled as a JSTOR scan; its text layer is three-column and interleaves badly, so the quotes and the table below were **transcribed from rendered page images at 200 dpi**, not from a `-layout` dump and not from a summary. [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md) is already `primary-read` in this wiki by the same method. The book contents below come from library-catalog contents scans, extracted locally. Retrieval date: **2026-08-23**.
 
 **What they are good for.** Come here before citing "the Cleveland-McGill ranking," because there are **two of them**, they disagree, and the one everybody reproduces is not the one this wiki has a page for.
 
@@ -36,7 +43,7 @@ The *Science* paper from August 1985 prints a different table. Verbatim from Tab
 
 ### What the 1985 paper says about its own ranking
 
-The important part, because it is what the citation chain drops. From p. 829, under *Ordering the Elementary Graphical-Perception Tasks*:
+This is the part the citation chain drops. From p. 829, under *Ordering the Elementary Graphical-Perception Tasks*:
 
 > "The ordering should be thought of as a tentative working hypothesis, based on current information, that can be expected to evolve. With the information now available we have been unable to distinguish the relative accuracy of some tasks, such as judging slope and judging angle. Aspects of the ordering are partly conjectural in that we have no controlled experimentation to support them."
 

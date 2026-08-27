@@ -1,16 +1,16 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Pandey et al. 2015: How Deceptive are Deceptive Visualizations?
 
 Anshul Vikram Pandey, Katharina Rall, Margaret L. Satterthwaite, Oded Nov, Enrico Bertini. *How Deceptive are Deceptive Visualizations?: An Empirical Analysis of Common Distortion Techniques.* CHI 2015, pp. 1469-1478. DOI [10.1145/2702123.2702608](https://doi.org/10.1145/2702123.2702608).
 
-## What it is
-
 The first controlled experiment measuring how much four common chart distortions actually move a reader's interpretation. Four distortions: truncated axis (bar chart), area-as-quantity (bubble chart), aspect ratio (line chart), and inverted axis (line-area chart). Crowdsourced on Mechanical Turk.
 
-## Status
-
-**`primary-read`.** Extracted locally with `pdftotext` from the authors' own preprint, hosted at [enrico.bertini.io/s/deceptive-chi2015.pdf](http://enrico.bertini.io/s/deceptive-chi2015.pdf), which is also NYU School of Law Public Law & Legal Theory Working Paper 15-03 and carries the line "Preprint of the full paper published at ACM CHI 2015." The ACM camera-ready was paywalled. Every number below is from that preprint. If a figure ever needs to be quoted in a context where a one-digit difference matters, re-check against the ACM version.
-
-Retrieval date: **2026-08-23**.
+**How this was read.** Extracted locally with `pdftotext` from the authors' own preprint, hosted at [enrico.bertini.io/s/deceptive-chi2015.pdf](http://enrico.bertini.io/s/deceptive-chi2015.pdf), which is also NYU School of Law Public Law & Legal Theory Working Paper 15-03 and carries the line "Preprint of the full paper published at ACM CHI 2015." The ACM camera-ready was paywalled. Every number below is from that preprint. If a figure ever needs to be quoted in a context where a one-digit difference matters, re-check against the ACM version.
 
 ## What it is good for
 

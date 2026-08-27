@@ -1,14 +1,16 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Isenberg, Bezerianos, Dragicevic & Fekete 2011: A Study on Dual-Scale Data Charts
 
 Petra Isenberg, Anastasia Bezerianos, Pierre Dragicevic, Jean-Daniel Fekete. IEEE TVCG (Proceedings of InfoVis) 2011, vol. 17 no. 12. DOI [10.1109/TVCG.2011.160](https://doi.org/10.1109/TVCG.2011.160).
 
-## What it is
-
 A design-space analysis plus a controlled experiment comparing four ways of packing **two magnifications of the same series** into one chart: cut-out, broken, lens, and superimposed, benchmarked against a regular single-scale chart. Tasks are Cleveland's elementary graphical perception tasks: position, length, slope.
 
-## Status
-
-**`primary-read`.** Extracted locally with `pdftotext` from the author copy at [petra.isenberg.cc](https://petra.isenberg.cc/publications/papers/Isenberg_2011_ASO.pdf). PDF metadata identifies it as the author camera-ready ("Submission for InfoVis 2011", created September 2011, carrying the IEEE accepted-1-August-2011 block), so it has no published page numbering and could in principle differ from the IEEE typeset version in copyediting. Retrieval date: **2026-08-23**.
+**How this was read.** Extracted locally with `pdftotext` from the author copy at [petra.isenberg.cc](https://petra.isenberg.cc/publications/papers/Isenberg_2011_ASO.pdf). PDF metadata identifies it as the author camera-ready ("Submission for InfoVis 2011", created September 2011, carrying the IEEE accepted-1-August-2011 block), so it has no published page numbering and could in principle differ from the IEEE typeset version in copyediting. Retrieval date: **2026-08-23**.
 
 The HAL and LRI mirrors are currently behind bot-check walls. Do not substitute a fetch summary for this paper: see the extraction warning below.
 
@@ -20,7 +22,7 @@ The HAL and LRI mirrors are currently behind bot-check walls. Do not substitute 
 
 ## What it does not settle
 
-**Dual-*variable* twin axes.** That is the whole point of this page. See the category error section.
+**Dual-*variable* twin axes.** See the category error section.
 
 ---
 
@@ -96,7 +98,7 @@ They also flag that their slope task collapsed into a length comparison by desig
 - **Not a claim about slope perception under scale change.** Limitation (6) plus the authors' own note that the slope task reduced to a length judgment.
 - **Not a transferable "cut-out wins" rule.** Limitation (1) says the regular chart's strong showing is an artifact of always keeping the modulus visible in the focus, and limitation (2) says a real-world cut-out chart usually uses two y-scales, unlike the tested one.
 
-For the flat-dual-axis-ban question specifically, the honest formulation is the one in [refutations.md](../refutations.md): a caution with its reason. The apparent correlation between two series on twin axes is a free parameter of the scaling choice, so prefer two stacked panels sharing an x-axis, and if the twin axis stays, say what each scale was pinned to. There is also a published defence of the form in the literature ("Dual Y Axes Charts Defended"), which further undercuts a flat ban.
+For the flat-dual-axis-ban question specifically, the honest formulation is the one in [refutations.md](../refutations.md): a caution with its reason. The apparent correlation between two series on twin axes is a free parameter of the scaling choice, so prefer two stacked panels sharing an x-axis, and if the twin axis stays, say what each scale was pinned to. There is also a published defense of the form in the literature ("Dual Y Axes Charts Defended"), which further undercuts a flat ban.
 
 ## Extraction warning
 

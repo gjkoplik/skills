@@ -1,8 +1,15 @@
+---
+type: source
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Observable Plot scale documentation
 
-**What it is.** The *Scales* chapter of Observable Plot, a JavaScript charting library built on D3 by Mike Bostock and collaborators. Plot is the closest thing in the JavaScript world to a modern grammar-of-graphics default set.
+The *Scales* chapter of Observable Plot, a JavaScript charting library built on D3 by Mike Bostock and collaborators. Plot is the closest thing in the JavaScript world to a modern grammar-of-graphics default set.
 
-**Status.** `primary-read`. The scales page (`observablehq.com/plot/features/scales`) was fetched and converted locally, retrieved 2026-08-23. Quotes are verbatim from that page.
+**How this was read.** The scales page (`observablehq.com/plot/features/scales`) was fetched and converted locally, retrieved 2026-08-23. Quotes are verbatim from that page.
 
 **What it is good for.** Reading a **considered disagreement** with two rules this wiki otherwise treats as settled: the rainbow ban, and the zero baseline. Plot is not sloppy about either. It states its reasoning, and in the turbo case it says out loud that the choice has a cost.
 
@@ -22,7 +29,7 @@ Three things to take from it.
 
 **The reasoning is orthogonal to the usual objection.** The standard anti-rainbow case is about perceptual ordering: a rainbow ramp is not monotone in lightness, so equal data steps do not look equal, it bands at the kinks, and it collapses in grayscale. matplotlib makes exactly that case and names turbo among the maps that "would make it impossible for a viewer to interpret the information in a plot once it is printed in grayscale" (see [matplotlib.md](matplotlib.md)). Plot does not dispute any of it. It optimizes a different quantity: **whether a low-value mark is visible at all** against white. On a scatterplot of small dots, a sequential blues ramp puts your smallest values one step from invisible.
 
-**"For better or for worse" is the authors conceding the trade.** That clause is doing real work. It is not a claim that turbo is perceptually superior; it is a claim that visibility is the binding constraint for Plot's typical output, which is small marks on a white page in a notebook.
+**"For better or for worse" is the authors conceding the trade.** It is not a claim that turbo is perceptually superior; it is a claim that visibility is the binding constraint for Plot's typical output, which is small marks on a white page in a notebook.
 
 **Plot's default marks are small.** The radius default (below) is three pixels at the first quartile. A three-pixel dot in light blue on white is a defect. Read that way, the turbo default is downstream of the mark-size default, not an independent color opinion.
 

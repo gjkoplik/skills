@@ -1,16 +1,16 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Correll & Gleicher 2014: Error Bars Considered Harmful
 
 Michael Correll, Michael Gleicher. *Error Bars Considered Harmful: Exploring Alternate Encodings for Mean and Error.* IEEE TVCG 20(12):2142-2151, December 2014. DOI [10.1109/TVCG.2014.2346298](https://doi.org/10.1109/TVCG.2014.2346298).
 
-## What it is
-
 Three crowdsourced experiments comparing the standard bar-chart-with-error-bars against three symmetric alternatives (modified box plot, gradient plot, violin plot) on inferential tasks. The finding that matters: the bar glyph creates a **containment metaphor** that biases judgment, and the bias survives even when you move the numbers out of the chart and into text.
 
-## Status
-
-**`primary-read`.** Authors' preprint PDF retrieved from [graphics.cs.wisc.edu/Papers/2014/CG14/Preprint.pdf](https://graphics.cs.wisc.edu/Papers/2014/CG14/Preprint.pdf) and re-extracted locally with `pdftotext -layout`. The file carries the line "Authors' preprint version. To appear in IEEE Transactions on Visualization and Computer Graphics, Dec. 2014." Page numbering differs from the journal version.
-
-Retrieval date: **2026-08-23**.
+**How this was read.** Authors' preprint PDF retrieved from [graphics.cs.wisc.edu/Papers/2014/CG14/Preprint.pdf](https://graphics.cs.wisc.edu/Papers/2014/CG14/Preprint.pdf) and re-extracted locally with `pdftotext -layout`. The file carries the line "Authors' preprint version. To appear in IEEE Transactions on Visualization and Computer Graphics, Dec. 2014." Page numbering differs from the journal version.
 
 ## What it is good for
 

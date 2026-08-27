@@ -1,8 +1,15 @@
+---
+type: source
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Knaflic, *Storytelling with Data*
 
-**What it is.** Cole Nussbaumer Knaflic, *storytelling with data: a data visualization guide for business professionals* (Wiley, 2015; 10th Anniversary Edition, December 2025). Ten chapters that argue a sequence rather than catalog a space: understand the context, choose the visual, remove clutter, direct attention, design, and tell a story.
+Cole Nussbaumer Knaflic, *storytelling with data: a data visualization guide for business professionals* (Wiley, 2015; 10th Anniversary Edition, December 2025). Ten chapters that argue a sequence rather than catalog a space: understand the context, choose the visual, remove clutter, direct attention, design, and tell a story.
 
-**Status: `primary-read`, partial.** Retrieved 2026-08-23 from Wiley's own excerpt PDFs, downloaded with `curl` and text-extracted locally with `pypdf`:
+**How this was read.** `primary-read`, partial. Retrieved 2026-08-23 from Wiley's own excerpt PDFs, downloaded with `curl` and text-extracted locally with `pypdf`:
 
 - **chapter 1 in full** (16 pages)
 - the **contents page** of both editions
@@ -64,7 +71,7 @@ This is the part that was previously unvouched. Page ranges are the index's own.
 
 **Ch. 7, lessons in storytelling.** The magic of story (cinema, plays, written word), constructing the story (plot, rising action, climax, falling action, resolution, tension), narrative structure and flow, repetition ("Bing, Bang, Bongo"), and clarity tactics: horizontal logic, vertical logic, reverse storyboarding.
 
-Two entries worth noting for cross-referencing: the index puts **Tufte at ix, 72, 231**, and *The Visual Display of Quantitative Information* at 72, which is inside the clutter chapter's cognitive-load section. That is the whole of Knaflic's engagement with data-ink.
+Two entries matter for cross-referencing: the index puts **Tufte at ix, 72, 231**, and *The Visual Display of Quantitative Information* at 72, which is inside the clutter chapter's cognitive-load section. That is the whole of Knaflic's engagement with data-ink.
 
 ## Quotes verified verbatim (chapter 1 only)
 

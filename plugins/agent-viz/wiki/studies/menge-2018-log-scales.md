@@ -1,14 +1,17 @@
+---
+type: study
+status: secondary-only
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Menge et al. 2018: Logarithmic scales in ecological data presentation may cause misinterpretation
 
 Duncan N. L. Menge, Anna C. MacPherson, Thomas A. Bytnerowicz, Andrew W. Quebbeman, Naomi B. Schwartz, Benton N. Taylor, Amelia A. Wolf. *Nature Ecology & Evolution* 2 (2018), 1393-1402. DOI [10.1038/s41559-018-0610-7](https://doi.org/10.1038/s41559-018-0610-7).
 
-## What it is
-
 A literature audit of how often ecology papers use log axes, plus a randomized survey of Ecological Society of America members asking them to read graphs that were shown either on linear-linear or on log-log axes. The comprehension gap is large.
 
-## Status
-
-**`secondary-only`, with an important qualification about exactly what was reached.**
+**How this was read.** Coverage here is not uniform.
 
 What was read directly: the **publisher's own abstract** on nature.com, which carries every headline number quoted below verbatim, and **all four supplementary PDFs**, which are free to download from the article page and are labeled "In the format provided by the authors and unedited." Those supplements contain Supplementary Tables 1 through 6, the supplementary figure legends, and the complete survey instrument and flow.
 
@@ -17,8 +20,6 @@ What was **not** read: the main text. *Nature Ecology & Evolution* is not open a
 So the numbers are confirmed against the publisher record rather than a third-party summary, but the Methods, Results and Discussion prose is unread, and **the paper's own stated limitations could not be quoted**. That is why the status stays `secondary-only`.
 
 This is a **strengthening** of the caveat in [refutations.md](../refutations.md), which recorded the Menge percentages as reached "in secondary form only." They now check out against the authors' own abstract.
-
-Retrieval date: **2026-08-23**.
 
 ## What it is good for
 

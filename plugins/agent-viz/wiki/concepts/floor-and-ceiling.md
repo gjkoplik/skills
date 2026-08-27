@@ -1,3 +1,7 @@
+---
+type: concept
+---
+
 # The floor and the ceiling
 
 **What it is.** A way of scoping a figure quality bar so that it can be large without being wrong. Some rules bind on every figure. Others scale with what the figure is for. Conflating them makes a good bar produce bad review.

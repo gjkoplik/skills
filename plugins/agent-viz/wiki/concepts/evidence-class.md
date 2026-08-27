@@ -1,3 +1,7 @@
+---
+type: concept
+---
+
 # Evidence class
 
 **What it is.** Labeling every rule in a quality bar as either **evidence-backed** (a study, an experiment, a published standard) or **authority-asserted** (a design book or style guide asserting it). Both are usable. Conflating them is the characteristic failure of visualization advice.

@@ -1,8 +1,14 @@
+---
+type: source
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Vega-Lite scale documentation
 
-**What it is.** The scale reference for Vega-Lite, a declarative grammar of interactive graphics. It is a parameter table, and it is also the most explicit statement anywhere of a design position shipped as a default.
+The scale reference for Vega-Lite, a declarative grammar of interactive graphics. It is a parameter table, and it is also the most explicit statement anywhere of a design position shipped as a default.
 
-**Status.** `primary-read`. The scale docs page was fetched and converted locally, retrieved 2026-08-23. Quotes below are verbatim from that page.
+**How this was read.** The scale docs page was fetched and converted locally, retrieved 2026-08-23. Quotes below are verbatim from that page.
 
 **What it is good for.** Reading what a chart grammar decides *for* you when you don't say. Vega-Lite is unusually honest about this, because a declarative grammar has to write its defaults down or nobody can predict what a spec renders.
 
@@ -74,7 +80,7 @@ Default color schemes are similarly typed:
 
 Vega-Lite is the counterexample to the claim that quantitative-honesty rules are inherently judgment calls. Zero baselines, scale-type-to-data-type matching, no-shapes-for-numbers, inverted axes as opt-in, and a null policy are all here as enforced or defaulted behavior. In matplotlib every one of them is the caller's problem.
 
-That is worth saying carefully, though. Defaults are not evidence. Vega-Lite's `zero: true` is a **design position held by its authors**, and the inventory correctly classes the proportional-ink topic as authority-asserted with tooling corroboration rather than as evidence-backed. The experimental record on truncation is messier than the default implies; see the axis-break entry in [refutations.md](../refutations.md), where the authors of the best truncation study explicitly refuse the maximalist reading: "we resist the interpretation... that all charts with quantitative axes should include 0."
+Defaults are not evidence, though. Vega-Lite's `zero: true` is a **design position held by its authors**, and the inventory correctly classes the proportional-ink topic as authority-asserted with tooling corroboration rather than as evidence-backed. The experimental record on truncation is messier than the default implies; see the axis-break entry in [refutations.md](../refutations.md), where the authors of the best truncation study explicitly refuse the maximalist reading: "we resist the interpretation... that all charts with quantitative axes should include 0."
 
 So: Vega-Lite ships the stricter rule, and the paper most often cited for the rule declines to endorse it that strongly. Both facts belong in any bar that repeats the rule.
 

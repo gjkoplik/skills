@@ -1,8 +1,15 @@
+---
+type: person
+status: secondary-only
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Edward Tufte
 
 **What they are known for.** *The Visual Display of Quantitative Information* (1983) and three successors, self-published through his own press, which gave the field its working vocabulary: data-ink, chartjunk, the lie factor, small multiples, sparklines. He is the most-cited author on this subject and the one whose central rule has held up worst.
 
-**Status: `secondary-only`, with one upgrade and one reachability correction.** Retrieved 2026-08-23.
+**How this was read.** There is one upgrade and one reachability correction. Retrieved 2026-08-23.
 
 **The upgrade.** Tufte posted an excerpt of the sparklines chapter of *Beautiful Evidence* on his own site, and it is reachable and readable: <https://www.edwardtufte.com/notebook/sparkline-theory-and-practice-edward-tufte/>. The page was fetched with `curl` and stripped to text locally. The sparkline material below is **read from Tufte**, which makes it the only thing in this wiki that is.
 
@@ -42,7 +49,7 @@ The load-bearing decision is that **the margin is not empty space, it is a secon
 - the normal range shown as a **gray band** behind the line, so "above the band" and "below the band" are the reading,
 - stacked into a table so hundreds of series compare in parallel.
 
-For a financial table he uses red for the oldest and newest values in the series and blue for the yearly low and high. His stated design target on the same page is compact: **"General idea = max[data], min[design]."** And his defense of the resolution trade is the phrase most worth stealing from him: the idea is to be approximately right rather than exactly wrong.
+For a financial table he uses red for the oldest and newest values in the series and blue for the yearly low and high. His stated design target on the same page is compact: **"General idea = max[data], min[design]."** And his defense of the resolution trade is that the idea is to be approximately right rather than exactly wrong.
 
 **The tell.** Cream paper, a very small serif face, a live margin column, a chart with no frame and no legend and one accent color, and text and graphic interleaved so tightly that the graphic is inside the sentence.
 
@@ -63,7 +70,7 @@ The sentence **"Maximize the data-ink ratio, within reason"** is **Tufte's**, qu
 
 ### One of his own redesigns has been measured, and it lost
 
-This is new to this wiki and it is the most concrete thing on the page.
+This is new to this wiki.
 
 Tufte's **midgap** box plot deletes the box to raise the data-ink ratio, keeping only the whiskers and a dot for the median. No information is removed and the plot gets substantially more compact, so on his own criterion it is a strict improvement. Wickham & Stryjewski, *40 years of boxplots*, report that it was tested:
 

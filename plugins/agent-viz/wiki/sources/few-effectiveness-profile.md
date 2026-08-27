@@ -1,8 +1,14 @@
+---
+type: source
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Few, *Data Visualization Effectiveness Profile*
 
-**What it is.** Stephen Few, "Data Visualization Effectiveness Profile", *Visual Business Intelligence Newsletter*, January/February/March 2017. **An eleven-page article, not a book.** It proposes seven criteria in two groups and a small-multiple strip chart for scoring a visualization against them, then applies it to four worked examples.
+Stephen Few, "Data Visualization Effectiveness Profile", *Visual Business Intelligence Newsletter*, January/February/March 2017. **An eleven-page article, not a book.** It proposes seven criteria in two groups and a small-multiple strip chart for scoring a visualization against them, then applies it to four worked examples.
 
-**Status: `primary-read`.** Retrieved 2026-08-23. **The PDF that "would not render" renders.** It downloads clean from perceptualedge.com, is not encrypted, and extracts to text in one call:
+**How this was read.** Retrieved 2026-08-23. **The PDF that "would not render" renders.** It downloads clean from perceptualedge.com, is not encrypted, and extracts to text in one call:
 
 11 pages, 1,729,801 bytes, `%PDF-1.6`, `is_encrypted == False`. The earlier "unreadable/password-protected binary" report was a retrieval failure, not a property of the file.
 
@@ -67,7 +73,7 @@ That is a floor on truthfulness and a ceiling that scales with the artifact's jo
 
 ## Few's own disclaimers, which a citer should carry
 
-He gives away more than most authority sources do, and all three of these are load-bearing:
+He gives away more than most authority sources do:
 
 > I have a slight preference for omitting a quantitative scale to avoid suggesting a level of quantitative precision that does not exist in these subjective measures.
 

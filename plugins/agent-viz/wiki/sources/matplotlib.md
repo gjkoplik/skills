@@ -1,8 +1,14 @@
+---
+type: source
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # matplotlib documentation
 
-**What it is.** The official documentation for matplotlib, the default plotting library for Python. The pages that matter here are *Choosing Colormaps in Matplotlib*, plus the narrative guides for colorbar placement, axis scales, axis ticks, legends, and style sheets / rcParams.
+The official documentation for matplotlib, the default plotting library for Python. The pages that matter here are *Choosing Colormaps in Matplotlib*, plus the narrative guides for colorbar placement, axis scales, axis ticks, legends, and style sheets / rcParams.
 
-**Status.** `primary-read`. Six pages were fetched and converted to text locally (matplotlib 3.11.1 docs, retrieved 2026-08-23): `colors/colormaps`, `axes/colorbar_placement`, `axes/axes_scales`, `axes/axes_ticks`, `axes/legend_guide`, and `customizing`. Every quote below is verbatim from those files.
+**How this was read.** Six pages were fetched and converted to text locally (matplotlib 3.11.1 docs, retrieved 2026-08-23): `colors/colormaps`, `axes/colorbar_placement`, `axes/axes_scales`, `axes/axes_ticks`, `axes/legend_guide`, and `customizing`. Every quote below is verbatim from those files.
 
 **What it is good for.** The single best free source on **why one colormap is worse than another**, stated in perceptual terms rather than taste. Also the reference for what matplotlib does *by default* when you don't say, which is what an agent driving the API is actually up against.
 
@@ -14,7 +20,7 @@
 
 Three claims from that page do most of the work in [inventory.md](../inventory.md) topics 23 to 27.
 
-**Lightness beats hue for quantitative data.** This is the load-bearing sentence:
+**Lightness beats hue for quantitative data:**
 
 > "Researchers have found that the human brain perceives changes in the lightness parameter as changes in the data much better than, for example, changes in hue. Therefore, colormaps which have monotonically increasing lightness through the colormap will be better interpreted by the viewer."
 
@@ -46,7 +52,7 @@ matplotlib files `turbo` under **Miscellaneous**, notes it "was created to displ
 
 Observable Plot ships turbo as its **default** continuous color scheme. That is not a small disagreement between two doc pages; it is two projects reading the same evidence and shipping opposite defaults. See [observable-plot.md](observable-plot.md) for Plot's stated reasoning, and [refutations.md](../refutations.md), which treats the rainbow ban as contested at the edges partly because of it.
 
-Worth noting that matplotlib's objection to turbo is narrower than the usual rainbow objection. It is not "turbo bands" or "turbo reverses"; the specific charge is that its lightness goes dark-light-dark, so grayscale collapses it. Plot's counter-argument is about visibility against white, which is a different axis entirely. Both can be right.
+matplotlib's objection to turbo is narrower than the usual rainbow objection. It is not "turbo bands" or "turbo reverses"; the specific charge is that its lightness goes dark-light-dark, so grayscale collapses it. Plot's counter-argument is about visibility against white, which is a different axis entirely. Both can be right.
 
 ## Defaults matplotlib ships, and what they encode
 
@@ -60,7 +66,7 @@ The customizing page lists the bundled style sheets. As of 3.11:
 
 Two of those entries are quiet accessibility positions. `tableau-colorblind10` and the three `petroff*` cycles exist so that "use a colorblind-safe cycle" is a one-line change rather than a research project. The qualitative colormap list now also includes `okabe_ito`, the standard colorblind-safe eight-color set. matplotlib does not editorialize about any of this in prose; it just makes the accessible option reachable by name.
 
-The Diverging section adds `berlin`, `managua`, and `vanimo`, described as "dark-mode diverging colormaps, with minimum lightness at the center, and maximum at the extremes," taken from Crameri's scientific colour maps v8.0.1. That is a shipped answer to "what background does this figure assume", which most guides never address.
+The Diverging section adds `berlin`, `managua`, and `vanimo`, described as "dark-mode diverging colormaps, with minimum lightness at the center, and maximum at the extremes," taken from Crameri's "Scientific colour maps" v8.0.1. That is a shipped answer to "what background does this figure assume", which most guides never address.
 
 There is also a small **Discouraged** table, retiring `gist_gray`, `gist_yarg`, and `binary` in favor of `gray` / `gray_r`. Cheap to mechanize as a denylist.
 

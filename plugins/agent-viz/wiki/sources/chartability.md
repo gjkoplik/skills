@@ -1,8 +1,15 @@
+---
+type: source
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Chartability
 
-**What it is.** A set of 50 accessibility heuristics for data visualizations, organized under seven principles: the four standard web-accessibility principles (Perceivable, Operable, Understandable, Robust) plus three that extend Robust (Compromising, Assistive, Flexible), giving **POUR+CAF**. Created by Frank Elavsky, published with an academic paper, licensed CC-BY-SA, and explicitly built to be adopted.
+A set of 50 accessibility heuristics for data visualizations, organized under seven principles: the four standard web-accessibility principles (Perceivable, Operable, Understandable, Robust) plus three that extend Robust (Compromising, Assistive, Flexible), giving **POUR+CAF**. Created by Frank Elavsky, published with an academic paper, licensed CC-BY-SA, and explicitly built to be adopted.
 
-**Status.** `primary-read` for the heuristics; `not-reached` for the paper. The home page (`chartability.fizz.studio`) and the complete POUR+CAF workbook (`chartability.github.io/POUR-CAF/`) were fetched and converted to text locally, retrieved 2026-08-23; all 50 heuristic titles, the 14 critical flags, and the descriptions quoted below come from that text. **The EuroVis 2022 paper itself was not opened.** The citation as printed on the home page is: "Elavsky, F. and Bennett, C. and Moritz, D. How accessible is my visualization? Evaluating visualization accessibility with Chartability. EuroVis 2022."
+**How this was read.** `primary-read` for the heuristics; `not-reached` for the paper. The home page (`chartability.fizz.studio`) and the complete POUR+CAF workbook (`chartability.github.io/POUR-CAF/`) were fetched and converted to text locally, retrieved 2026-08-23; all 50 heuristic titles, the 14 critical flags, and the descriptions quoted below come from that text. **The EuroVis 2022 paper itself was not opened.** The citation as printed on the home page is: "Elavsky, F. and Bennett, C. and Moritz, D. How accessible is my visualization? Evaluating visualization accessibility with Chartability. EuroVis 2022."
 
 **What it is good for.** Being the accessibility inventory this project does not have. It is peer-reviewed, community-tested with disabled reviewers, openly licensed, structured for auditing rather than for reading, and it comes with a shortlist that makes it usable in half an hour. This is the source where **importing beats deriving**, and the recommendation from [roll-call.md](../roll-call.md) and the wiki README stands: adopt it rather than re-deriving a fifth of it.
 
@@ -213,7 +220,7 @@ along with an invitation to contribute through the GitHub repository and its dis
 Concretely, and in order:
 
 1. **Decide the scope split.** Chartability covers static figures, interactive charts, and full data interfaces. A figure bar for a plotting library binds on maybe 20 of the 50. Publish the split, since it does not exist upstream and it is the main thing that makes the framework usable here.
-2. **Adopt the 14-critical shortlist as the accessibility floor,** annotated with which 7 apply to a static figure. This is a floor-level obligation, not a ceiling-level one: it should bind on a throwaway diagnostic plot as much as on a docs figure.
+2. **Adopt the 14-critical shortlist as the accessibility floor,** annotated with which **8** apply to a static figure, the list given above. This is a floor-level obligation, not a ceiling-level one: it should bind on a throwaway diagnostic plot as much as on a docs figure.
 3. **Retire the four derived accessibility topics** (71 to 74) in favor of the mapping above, and move contrast (33) and CVD (26) so they read as accessibility rather than as color. Keep the inventory numbering stable and record the substitution, so the derivation history stays legible.
 4. **Implement the mechanizable subset.** Contrast, minimum text size, adjacent-element separation, CVD simulation, and reading level are all cheap. Contrast already exists in the checks file. Text size is one `Text.get_fontsize()` sweep. Reading level needs a syllable counter and nothing else.
 5. **Carry the negative framing through.** Report failures against a scale and require that each one be argued rather than silently accepted. Do not convert the heuristics into a pass list.

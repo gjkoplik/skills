@@ -1,8 +1,14 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Skau & Kosara (2016), *Arcs, Angles, or Areas*
 
-**What it is.** Drew Skau and Robert Kosara, "Arcs, Angles, or Areas: Individual Data Encodings in Pie and Donut Charts," *Computer Graphics Forum* 35(3) (EuroVis 2016). Two studies that isolate the three encodings a pie slice carries and measure each one separately.
+Drew Skau and Robert Kosara, "Arcs, Angles, or Areas: Individual Data Encodings in Pie and Donut Charts," *Computer Graphics Forum* 35(3) (EuroVis 2016). Two studies that isolate the three encodings a pie slice carries and measure each one separately.
 
-**Status.** `primary-read`. PDF from kosara.net, text re-extracted locally.
+**How this was read.** PDF from kosara.net, text re-extracted locally.
 
 **What it is good for.** The only direct test of *which channel a pie chart actually puts the reader on*. This is the step that [Cleveland & McGill](cleveland-mcgill-1984.md) explicitly left as conjecture, and it is the step every "pies are bad because angles are bad" argument depends on.
 

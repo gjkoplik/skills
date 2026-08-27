@@ -1,8 +1,17 @@
+---
+type: source
+status: primary-read
+retrieved: 2026-08-23
+author: jonathan-schwabish
+---
+
 # Urban Institute Data Visualization Style Guide
 
-**What it is.** The Urban Institute's public data visualization style guide, covering typography, color, chart parts, chart-type selection, an explicit list of prohibitions, an accessibility section, and guidance on visualizing data about people. It is paired with two shipped tools: an Excel macro add-in and `urbnthemes`, an R package.
+The Urban Institute's public data visualization style guide, covering typography, color, chart parts, chart-type selection, an explicit list of prohibitions, an accessibility section, and guidance on visualizing data about people. It is paired with two shipped tools: an Excel macro add-in and `urbnthemes`, an R package.
 
-**Status.** `primary-read`. The full guide at `urbaninstitute.github.io/graphics-styleguide/` and the `UrbanInstitute/urbnthemes` README were fetched and converted locally, retrieved 2026-08-23. Quotes are verbatim.
+**How this was read.** The full guide at `urbaninstitute.github.io/graphics-styleguide/` and the `UrbanInstitute/urbnthemes` README were fetched and converted locally, retrieved 2026-08-23. Quotes are verbatim.
+
+**Authorship: this guide is not independent of [Jonathan Schwabish](../people/jonathan-schwabish.md).** The guide carries no byline, but its Additional Resources section names him as its sole point of contact ("Contact Jon Schwabish", `jschwabish@urban.org`, live page text verified 2026-08-25), and he is a Senior Fellow at Urban. **Do not count this guide and Schwabish as two sources for the same claim.** One such double-count has already been corrected, in [schwabish.md](schwabish.md).
 
 **What it is good for.** The **broadest** single source in this corpus. It is the only one that covers chart parts, color, prohibitions, accessibility, tables, maps, and the ethics of ordering people-groups in one document, from an organization that publishes research rather than journalism. It is also the source with the most quotable one-liners, which is why it appears against more inventory topics than anything except Wilke.
 
@@ -110,7 +119,7 @@ That last sentence is the one that makes this actionable for figures rather than
 
 Plus the decorative-image rule: empty alt, and specifically "You should not put empty spaces, empty quotes (except in HTML `alt=""`), or any other nonsense information in these fields."
 
-**Redundant encoding is offered as an accessibility override,** which is worth flagging because it is a guide admitting its own aesthetic preference has a cost:
+**Redundant encoding is offered as an accessibility override.** That is a guide admitting its own aesthetic preference has a cost:
 
 > "This style guide promotes clean design and graphs that are free of extraneous colors, but when communicating data to readers with accessibility needs, additional encodings may be important."
 

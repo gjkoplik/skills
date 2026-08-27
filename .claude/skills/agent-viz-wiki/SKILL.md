@@ -11,14 +11,38 @@ Read [wiki/README.md](../../../plugins/agent-viz/wiki/README.md) for the current
 
 ## The page schema
 
-Every page opens with four things, then the substance, then links:
+**Facts live in frontmatter. Argument lives in the body.** Never both.
 
-- **What it is.** One or two sentences.
-- **Status.** `primary-read`, `secondary-only`, or `not-reached`.
-- **What it is good for.** The specific question to come back with.
-- **What it does not settle.** The limits, stated rather than implied.
+```yaml
+---
+type: source | study | person | concept | chart-type | index
+status: primary-read | secondary-only | not-reached   # research pages only
+status_partial: true            # coverage is not uniform across the page's material
+retrieved: YYYY-MM-DD
+author: <people-page slug>      # where a source has a known author
+relationships: [part-to-whole]  # chart-type pages only
+aliases: [Pie chart, Donut chart]  # chart-type pages only; must agree with chart-types/aliases.md
+---
+```
 
-**Status is load-bearing, not decoration.** `primary-read` means someone opened the actual source and the quotes come from a local extraction. `secondary-only` means abstracts or summaries, and its quotes are unvouched. Do not upgrade a status because a summary was detailed or confident.
+Run **`validate.py`** in this skill's directory before finishing, **from the repo root**. It checks frontmatter, the README's asserted counts, page-versus-index agreement, the eight required chart-type sections, alias agreement in both directions, links and anchors, and that nothing links outside the plugin directory (which would break on install). It also reports gaps, which are open items rather than failures.
+
+**Run it as `python3 .claude/skills/agent-viz-wiki/validate.py` from `/home/garyk/repos/skills` and nowhere else.** From another directory the relative path does not resolve, and piped through `grep` it prints nothing at all, which reads exactly like a clean run. That has now happened three times.
+
+**`aliases:` is a name index in two places that must agree.** Every chart-type page lists the names it answers to, and [wiki/chart-types/aliases.md](../../../plugins/agent-viz/wiki/chart-types/aliases.md) maps each name to its page with the provenance of the mapping. `validate.py` checks both directions. A row whose target cell begins "No page" is a **pointer to a different form**, not an alias, and is excluded from the check; that is how a name like "sina plot" can be discussed on a page without being claimed as one of its names. One name per row: a Name cell holding two comma-separated names cannot round-trip.
+
+**Body, by page type:**
+
+- **Source, study, person:** keep *what it is good for* (the question to come back with), *what it does not settle*, and a **"How this was read"** paragraph. Drop the rest; the title carries "what it is" and frontmatter carries the status label.
+
+  **"How this was read" is not the old status line with a new name, and it must not be deleted as a duplicate.** Frontmatter carries the *label*; this paragraph carries the *provenance*, which is the wiki's entire trust story: which artifact was opened, how it was extracted, what was rendered to images because it had no text layer, what was left unopened, and which parts of a split status apply to which material. Losing it would make every `primary-read` unauditable.
+
+- **Never state a bare rank number on a page a reader uses to choose a chart.** Name the channel. "Position instead of area" is what a chooser needs; "rank 1 instead of rank 4" adds nothing and silently depends on which of the two Cleveland & McGill tables you meant, which disagree from area downward.
+- **Chart-type and index:** no header block at all. One line of definition under the title, then straight to the decision.
+
+**Status is load-bearing, not decoration.** `primary-read` means someone opened the actual source and quotes come from a local extraction. `secondary-only` means abstracts or summaries, and its quotes are unvouched. Do not upgrade a status because a summary was detailed or confident. Where a page covers several artifacts reached unequally, set `status` to the **principal** subject and `status_partial: true`, and say in the body which parts are which.
+
+**Authorship is not optional bookkeeping.** Independence is this wiki's most-used argument ("three unrelated organizations", "a fourth independent source"), and it once counted the Urban Institute style guide and Jonathan Schwabish as two voices when he is behind both. **Independence is a claim that needs support; the absence of a byline is not support for it.** Record `author` whenever it is known, and before adding a source to a corroboration count, check who wrote it.
 
 **Pages under `wiki/people/` use a variant of the same schema**, with "What they are known for", "What they are good for", and "What they do not settle". A person page is not a biography and not a summary of their views. Its job is what coming to this person actually buys you, and where their authority stops. `wiki/sources/` covers a specific work or style guide; `wiki/people/` covers the person across their work. A prolific author can have both.
 
@@ -72,6 +96,19 @@ These exist because a specific failure produced confidently wrong output that ne
 - **No em-dashes in your own sentences.** Use commas, parentheses, semicolons, or shorter sentences. The one exception is a verbatim quote, which stays verbatim. The ` — ` separator in see-also list glosses is established convention here and is fine.
 - American spelling. Direct, slightly informal, no throat-clearing.
 - No AI filler: "delve", "moreover", "furthermore", "it's worth noting that", "in essence".
+- **Do not admire a quote. Spend it.** The characteristic tic is talking *about* a quote instead of using it:
+  counting its words ("the FT gloss is ten words"), or declaring that every part of it matters ("both halves are
+  load-bearing"). Give the rule, the quote and the reason, and let the reader judge the phrasing. If a second clause
+  is easy to miss, say what that clause *means*, which is the useful version of the same observation.
+
+  **This is not a ban on assessing a source.** A source or person page's *what it is good for* and *what it does not
+  settle* sections exist to do exactly that, and "the per-chart glosses are unusually sharp" is the job being done.
+  The tic is praising the wording of a quote you are in the middle of citing, on a page whose job is a chart decision.
+- **Keep "load-bearing" for its literal sense**, an element the thing breaks without: a shared scale, a channel no
+  other channel duplicates. It is a real term here and it appears in [wiki/inventory.md](../../../plugins/agent-viz/wiki/inventory.md) topic 69. Used to mean
+  "this bit matters too", it is filler wearing a hard hat.
+- **No meta-commentary on the writing.** Not how the page is organized, not which sentence is the important one, not
+  what the section is about to do. The reader wants the chart decision, not a tour of the prose.
 - **Length discipline.** A page with little to say should be short. Padding a thin topic with plausible practitioner advice dressed as findings is the specific failure this wiki exists to avoid.
 - State gaps plainly. A wiki that hides its holes is worse than a short one.
 

@@ -1,12 +1,26 @@
+---
+type: source
+status: secondary-only
+status_partial: true
+author: alberto-cairo
+retrieved: 2026-08-25
+---
+
 # Cairo, *The Truthful Art*
 
-**What it is.** Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for Communication* (New Riders, 2016). Twelve chapters in four parts. Roughly half the book is statistics for communicators (distributions, variance, correlation, regression, standard error, confidence intervals, significance) written for people who make charts rather than for people who run models.
+Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for Communication* (New Riders, 2016). Twelve chapters in four parts. Roughly half the book is statistics for communicators (distributions, variance, correlation, regression, standard error, confidence intervals, significance) written for people who make charts rather than for people who run models.
 
-**Status: `secondary-only` for the argument, `primary-read` for the structure.** Retrieved 2026-08-23: Peachpit's **46-page sample PDF of the book itself** (`peachpit.com/content/images/9780321934079/samplepages/9780321934079.pdf`), downloaded with `curl` and text-extracted locally with `pypdf`. It contains the front matter (including the full section-level contents), the preface, **chapter 4 in full**, and the complete index.
+**How this was read.** `secondary-only` for the argument, `primary-read` for the structure. Retrieved 2026-08-23: Peachpit's **46-page sample PDF of the book itself** (`peachpit.com/content/images/9780321934079/samplepages/9780321934079.pdf`), downloaded with `curl` and text-extracted locally with `pypdf`. It contains the front matter (including the full section-level contents), the preface, **chapter 4 in full**, and the complete index.
 
 **Chapter 2, "The Five Qualities of Great Visualizations", is not in the sample and was not read.** The five names and their page numbers are confirmed from the book's own contents page. Cairo's argument about them is not.
 
-*How Charts Lie* (2019): **`not-reached`**, and this project never reached it. Nothing in the wiki rests on it. It was looked for only as a named gap in [roll-call.md](../roll-call.md); no retrieval was attempted in this pass.
+**Second pass, 2026-08-25**, aimed at the two chapters this wiki has open holes against: chapter 10 on choropleth classification and chapter 11 on uncertainty. The sample PDF was re-downloaded and re-extracted, and its contents pages and complete index were mined for both. **Neither chapter was reached.** What the two sections below carry is the book's own account of where the material sits and what it is called, at section and index-entry level. Nothing about what Cairo argues is vouched.
+
+**A route that was found and deliberately not used.** A complete PDF of chapter 10 is served from an official EU course-materials path (`data.europa.eu/sites/default/files/course/`). It was downloaded, and every one of its 35 pages carries a Pearson `ptg` watermark and a Safari personal-library footer reading "From the Library of Alberto Cairo". That is a DRM-stripped ebook, not a licensed excerpt, whatever the host. It was deleted unread and nothing on this page comes from it. An institutional host is not a permission, and the watermark is the thing to check.
+
+**A legitimate route that turned out to be thin.** Cairo's own blog carries a 2014 post, "The challenges of classification in choropleth maps", reached through a Wayback snapshot because the original URL now 404s. It is four sentences on a New York Times map, and its whole substance is that "Building classes for choropleth maps is always tricky business. By grouping values together as intervals, you always put yourself at the risk of hiding important nuances in the data. There are reliable guidelines you can follow, but the process always requires a good dose of common sense." He adds that on that particular map "I'm not sure that using equal intervals is the best choice here". That is Cairo in his own voice, two years before the book, and it does not amount to a treatment.
+
+*How Charts Lie* (2019): **`not-reached`**, and this project still has not reached it. Nothing in the wiki rests on it. It was looked for only as a named gap in [roll-call.md](../roll-call.md); no retrieval has been attempted in either pass.
 
 **What it is good for.** Come back here with: *am I over-reading this data*. Cairo is the only source in the canon that spends real pages on conjecture and hypothesis, study quality, sample variation, standard error, confidence intervals, disclosing uncertainty, and significance versus effect size versus power. He is also the source for how time-series charts mislead, for index construction, and for choropleth classification.
 

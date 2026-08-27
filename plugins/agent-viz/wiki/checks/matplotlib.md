@@ -2,7 +2,7 @@
 
 Every snippet here was executed against a real matplotlib figure before being written down. Nothing needs a library beyond `numpy` and `matplotlib`.
 
-Two things make this file worth more than a list of principles. First, **most of the honesty rules are mechanizable**, and cheaply: the whole battery below runs in well under a second. Second, several of them catch defects that are **invisible in source review**, because the bug is in the rendered artifact rather than in the code that produced it.
+**Most of the honesty rules are mechanizable**, and cheaply: the whole battery below runs in well under a second. Several of them catch defects that are **invisible in source review**, because the bug is in the rendered artifact rather than in the code that produced it.
 
 Use `matplotlib.use("Agg")` and assert against the live `Axes` object. There is no static-grep version of most of these: the violation is typically a `set_ylim` call at a distance from the `ax.bar` call.
 
@@ -158,7 +158,7 @@ shared = len({im.get_clim() for im in images}) == 1
 diverging_centred = abs(norm.vmin + norm.vmax) < tol   # when cmap name is in a known diverging set
 ```
 
-**Trap worth knowing:** the colorbar label check must test both `cbar.ax.get_ylabel()` and the axes title. `fig.colorbar(..., label=...)` populates the former, but `cbar.ax.set_title(...)` does not, and a naive `get_ylabel()` check reports a false violation on a perfectly well-labelled figure.
+**Trap worth knowing:** the colorbar label check must test both `cbar.ax.get_ylabel()` and the axes title. `fig.colorbar(..., label=...)` populates the former, but `cbar.ax.set_title(...)` does not, and a naive `get_ylabel()` check reports a false violation on a perfectly well-labeled figure.
 
 ## Interval bounds inside the variable's domain
 
@@ -191,7 +191,7 @@ def clipped_points(ax):
     return n
 ```
 
-Measured at **0.011 ms per call**. **The naive version is wrong**: without the transform filter it reports false positives from `axhline` and `axvline`, whose `get_xydata()` returns x in *axes* coordinates. A first pass reported four clipped points on a clean real figure for exactly this reason.
+Measured at **0.011 ms per call**. **The naive version is wrong**: without the transform filter it reports false positives from `axhline` and `axvline`, whose `get_xydata()` returns x in *axes* coordinates. A first pass reported four clipped points on a clean real figure for this reason.
 
 ## Binning and smoothing left implicit
 

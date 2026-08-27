@@ -34,7 +34,7 @@ Write a study page, update the `wiki/README.md` study table and counts, and add 
 
 ### 2. One chart type
 
-Add one type page under `wiki/chart-types/`, flat, with its `**Relationships.**` header line and the six-slot structural decomposition.
+Add one type page under `wiki/chart-types/`, flat, with `relationships:` in its frontmatter and the six-slot structural decomposition. Chart-type pages carry **no header block**: one line of definition under the title, then straight to the decision.
 
 Prefer, in order: a type named as absent in an existing index; a type that would let an unwritten relationship index get started; a form encountered in the wild that the wiki cannot currently say anything about.
 
@@ -53,7 +53,7 @@ Two destinations, and they are not interchangeable:
 
 A prolific author can warrant both. Prefer whichever covers a gap the wiki names in its own Coverage section, and prefer people already cited across several pages without having one.
 
-Same reachability discipline. If you only reached a summary, the page is `secondary-only` and says so.
+Same reachability discipline. If you only reached a summary, the page is `secondary-only` and says so. **Record `author` in the frontmatter**, and before adding the source to any corroboration count, check who wrote it: the wiki has already counted one person's work as two independent voices.
 
 **Do not link to a person page that does not exist yet.** This wiki uses plain markdown relative links, so a forward link is a broken link. Name the person in prose instead.
 
@@ -63,7 +63,7 @@ Light pass, not a full audit:
 
 - Have any **standards** the wiki cites moved? WCAG contrast criteria and any published accessibility standard are the live ones.
 - Do any wiki claims now read as stale against changed norms or tooling defaults? Library defaults shift, and several pages cite specific ones.
-- Any broken internal links or anchors. Check every markdown link under `wiki/` resolves, including anchors, and that every type page appears in at least one index. Note that links may point above `wiki/` (for example to `CONTRIBUTING.md`), so resolve anchors in those files too rather than assuming a link outside `wiki/` is broken.
+- **Run `../../.claude/skills/agent-viz-wiki/validate.py`.** It checks frontmatter, the README's asserted counts, page-versus-index agreement, links and anchors, and plugin-boundary escapes. Fix every failure. Its **gaps** are open items: report them, and close one if it is cheap.
 - Any page whose `Status` is now wrong, most often a `not-reached` or `secondary-only` source that has since become reachable.
 - **Contradictions between pages.** Two pages disagreeing is a finding, not a nuisance: it is usually one of them citing the wrong source. Reconcile both, and put the reconciliation in `refutations.md` if a widely repeated claim was involved.
 

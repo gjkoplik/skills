@@ -1,14 +1,16 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Romano, Sotis, Dominioni & Guidi 2020: The scale of COVID-19 graphs affects understanding, attitudes, and policy preferences
 
 Alessandro Romano, Chiara Sotis, Goran Dominioni, Sebastián Guidi. *Health Economics* 29(11), 1482-1494, 2020. DOI [10.1002/hec.4143](https://doi.org/10.1002/hec.4143). Open access, CC-BY.
 
-## What it is
-
 A randomized survey experiment on about 2,000 US residents, run in April 2020. Half saw cumulative COVID-19 deaths on a linear axis, half saw the identical data on a log axis, taken from the worldometers.info charts people were actually reading at the time. The paper then measures comprehension, forecast accuracy, worry, and policy preferences.
 
-## Status
-
-**`primary-read`.** Extracted locally with `pdftotext` from the published open-access version deposited at LSE Research Online. Retrieval date: **2026-08-23**.
+**How this was read.** Extracted locally with `pdftotext` from the published open-access version deposited at LSE Research Online. Retrieval date: **2026-08-23**.
 
 Format note: this is a **Health Economics Letter**, the journal's short form, not a full research article. That shapes what is and is not in it.
 
@@ -30,7 +32,7 @@ From the abstract:
 
 > "we find that when we show the number of COVID-19 related deaths on a logarithmic scale, people have a less accurate understanding of how the pandemic has developed, make less accurate predictions on its evolution, and have different policy preferences than when they are exposed to a linear scale."
 
-And the recommendation, quoted exactly, because the hedge at the end is load-bearing:
+And the recommendation, whose closing hedge keeps it from being a ban:
 
 > "mass media and policymakers communicating to the general public should always describe the evolution of the pandemic using a graph on a linear scale, at least as a default option."
 

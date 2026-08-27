@@ -1,8 +1,14 @@
+---
+type: person
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # William Playfair
 
 **What they are known for.** *The Commercial and Political Atlas* (1786) and *The Statistical Breviary* (1801), which between them introduced the statistical time-series line chart, the bar chart, and the pie chart. He built all three to win arguments about trade and taxation, not to analyze anything.
 
-**Status: `primary-read`.** Retrieved 2026-08-23. Two editions were pulled from the Internet Archive and read as full text, and three plates were downloaded at full resolution and examined pixel by pixel rather than described from memory:
+**How this was read.** Retrieved 2026-08-23. Two editions were pulled from the Internet Archive and read as full text, and three plates were downloaded at full resolution and examined pixel by pixel rather than described from memory:
 
 The 1801 text is the third edition of the *Atlas*, which carries the long introduction where he states his claim to priority. The 1787 text is the second edition, which carries the plate commentaries including the one on the bar chart. **The OCR renders the eighteenth-century long s as `f`**, so `first` extracts as `firft`. Quotes below are silently de-long-s'd and otherwise verbatim; nothing else is repaired. Everything is public domain.
 
@@ -16,7 +22,7 @@ Plates viewed directly: Plate 1 of the 1786 *Atlas* (imports and exports of Engl
 
 ## "In the style of Playfair" means, concretely
 
-This section is unusually cheap to write because the plates survive and I looked at them.
+The plates survive, and I looked at them.
 
 **Support and palette.** Hand-colored copperplate engraving on cream laid paper. On Plate 1: exports drawn in a strong crimson, imports in an ochre yellow, and the region between them flooded with a pale blue wash. On the *Breviary* plate: pale green, pink and yellow washes inside black outlines, with an ochre band framing the whole plate. Nothing is saturated the way a modern default palette is, because the color is a wash over a black line, not the mark itself.
 
@@ -30,7 +36,7 @@ This section is unusually cheap to write because the plates survive and I looked
 
 **Texture where color is unavailable.** The bar chart pairs a solid black bar against a hatched, "ribbed" one. That is [Bertin's `grain`](jacques-bertin.md) doing categorical work a century and a half early, chosen because the plate had to survive uncolored printing.
 
-**Sorting, and the direction may surprise you.** The bar chart is sorted by magnitude with the **smallest at the top** and the longest bar at the bottom, under a right-hand column headed `Names of Places.` in italic.
+**Sorting.** The bar chart is sorted by magnitude with the **smallest at the top** and the longest bar at the bottom, under a right-hand column headed `Names of Places.` in italic.
 
 **Typography and furniture.** Titles above the frame in engraved roman capitals mixed with italic, plus an explanatory subtitle line. Plate number top right (`Pl. 25`). Engraver's credit bottom left (`J. Ainslie Sculp.`, `Gravé par Adam`). Publication line bottom right (`Published as the Act directs, 20th Augst 1785`). A cross-reference to the book centered at the foot (`to Face Page 3d`). If you want a plate to read as his, that furniture is doing as much work as the chart.
 
@@ -52,7 +58,7 @@ and:
 
 ### He invented the bar chart reluctantly and recorded that he thought it inferior
 
-This is the best-documented and least-repeated thing on this page. The Scotland plate, the first known bar chart, has a commentary in the 1786 volume that opens by apologizing for it:
+Well documented and almost never repeated. The Scotland plate, the first known bar chart, has a commentary in the 1786 volume that opens by apologizing for it:
 
 > "This Chart is different from the others in principle, as it does not comprehend any portion of time, and it is much inferior in utility [to] charts that do; for though it gives the extent of the different branches of trade, it does not compare the same branch of commerce with itself at different periods; nor does it imprint upon the mind that distinct idea, in doing which, the chief advantage of Charts consists; for as it wants the dimension that is formed by duration, there is no shape given to the quantities."
 
@@ -74,7 +80,7 @@ The *Breviary* plate's population-versus-revenue construction is an argument tha
 
 > "As the eye is the best judge of proportion, being able to estimate it with more quickness and accuracy than any other of our organs, it follows, that wherever relative quantities are in question ... this mode of representing it is peculiarly applicable"
 
-Two centuries later, [Cleveland & McGill](../studies/cleveland-mcgill-1984.md) measured which parts of "the eye" he meant. Position along a common scale, which is what his line charts and bar charts use, is rank 1. **Area, which is what his circles use, is rank 4**, and [Heer & Bostock](../studies/heer-bostock-2010.md) later found rectangular area the worst case of all. His most rhetorical plate spends his weakest channel on his biggest claim.
+Two centuries later, [Cleveland & McGill](../studies/cleveland-mcgill-1984.md) measured which parts of "the eye" he meant. His line charts and bar charts put the reader on position along a common scale, the most accurately read channel in both of their tables. **His circles put the reader on area**, which sits well below it, and [Heer & Bostock](../studies/heer-bostock-2010.md) later found rectangular area the worst case of all. His most rhetorical plate spends his weakest channel on his biggest claim.
 
 ### The bit of the record that reads oddly modern
 

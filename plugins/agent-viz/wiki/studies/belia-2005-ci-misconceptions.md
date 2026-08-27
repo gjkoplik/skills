@@ -1,18 +1,18 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Belia, Fidler, Williams & Cumming 2005: Researchers misunderstand confidence intervals and standard error bars
 
 Sarah Belia, Fiona Fidler, Jennifer Williams, Geoff Cumming. *Psychological Methods* 10(4):389-396, December 2005. DOI [10.1037/1082-989X.10.4.389](https://doi.org/10.1037/1082-989X.10.4.389).
 
-## What it is
-
 Published authors in psychology, behavioral neuroscience and medicine were asked to drag one mean up or down until two means with error bars looked "just statistically significantly different." 473 of them did it. Most got it badly wrong.
 
-## Status
+**How this was read.** PDF retrieved from `edmeasurement.net/5245/Belia-2005-CIs-SEs.pdf` and re-extracted locally with `pdftotext -layout`.
 
-**`primary-read`.** PDF retrieved from `edmeasurement.net/5245/Belia-2005-CIs-SEs.pdf` and re-extracted locally with `pdftotext -layout`.
-
-One extraction caveat worth stating: the text layer drops several math glyphs, so `p < .05` comes out as `p  .05` and `M ± tC × SE` comes out as `M  tC  SE`. Quotes below were chosen to avoid passages where a dropped glyph would change the meaning. If a figure ever needs quoting where a comparison operator matters, re-check against the APA version.
-
-Retrieval date: **2026-08-23**.
+One extraction caveat: the text layer drops several math glyphs, so `p < .05` comes out as `p  .05` and `M ± tC × SE` comes out as `M  tC  SE`. Quotes below were chosen to avoid passages where a dropped glyph would change the meaning. If a figure ever needs quoting where a comparison operator matters, re-check against the APA version.
 
 ## What it is good for
 
@@ -40,7 +40,7 @@ That accuracy window is deliberately generous. It is not "correct," it is "the p
 
 **Fourth, repeated measures were ignored.** A third of participants saw a display explicitly labeled Pre Test and Post Test for a single group of n = 36, where the drawn bars simply cannot answer the question. Only 11% gave any sign of noticing. By discipline: 6% in psychology, 17% in behavioral neuroscience, 11% in medicine.
 
-The direction of error flips between tasks, which is a nice detail. CI respondents were **too strict**, setting means too far apart, mean response corresponding to p ≈ .009. SE respondents were **too lax**, mean response corresponding to p ≈ .109. Both errors follow from failing to notice which graphic they were looking at.
+The direction of error flips between tasks. CI respondents were **too strict**, setting means too far apart, mean response corresponding to p ≈ .009. SE respondents were **too lax**, mean response corresponding to p ≈ .109. Both errors follow from failing to notice which graphic they were looking at.
 
 ## Method
 

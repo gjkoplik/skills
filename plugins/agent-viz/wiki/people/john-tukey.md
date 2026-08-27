@@ -1,8 +1,15 @@
+---
+type: person
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # John Tukey
 
 **What they are known for.** Naming and arguing for *exploratory data analysis*, the idea that you look at data and ask what it suggests before you ask what it establishes, and building the hand-drawable displays that make that possible: the box-and-whisker plot and the stem-and-leaf.
 
-**Status: `primary-read` on the 1962 manifesto, `not reached` on the 1977 book.** Retrieved 2026-08-23.
+**How this was read.** `primary-read` on the 1962 manifesto, `not reached` on the 1977 book. Retrieved 2026-08-23.
 
 - **"The Future of Data Analysis"** (*Annals of Mathematical Statistics* 33(1):1-67, March 1962) was downloaded and extracted locally with `pypdf`, 68 pages. Every Tukey quote below is from that extraction. **Provenance caveat:** Project Euclid, which hosts it open access, returns a robots interstitial to `curl` and to the WebFetch tool alike. The copy read is a JSTOR scan (stable URL `2237638`) mirrored on a university course page at `mat.ufrgs.br`. It is the article, page numbering intact, but it is not the publisher's file.
 - ***Exploratory Data Analysis*** (Addison-Wesley, 1977) is **not reached**. Not on the Internet Archive under any identifier tried, in copyright, no open deposit. Nothing on this page quotes it.
@@ -36,7 +43,7 @@
 
 ### The EDA argument is stated in 1962, fifteen years before the book
 
-The 1977 book gets the credit. The position is fully formed in the 1962 paper, section 45, and the sentence is worth having:
+The 1977 book gets the credit. The position is fully formed in the 1962 paper, section 45:
 
 > "we must plan to learn to ask first of the data what it suggests, leaving for later consideration the question of what it establishes."
 
@@ -54,7 +61,7 @@ Verified verbatim. One detail everyone drops: **Tukey sets it in quotation marks
 
 ### He did not invent the box plot's shape
 
-Wickham & Stryjewski are blunt about this, and it is the correction most worth carrying:
+Wickham & Stryjewski are blunt about this:
 
 > "The basic graphic form of the boxplot, the range-bar, was established in the early 1950's Spear (1952, pg. 164). Tukey's contribution was to think deeply about appropriate summary statistics that worked for a wide range of data and to connect those to the visual components of the range bar."
 
@@ -72,7 +79,7 @@ Wickham & Stryjewski report that Tufte proposed a box-less **midgap** variant to
 
 > "perceptual studies (Stock and Behrens, 1991) have found Tufte's variation to be substantially less accurate than the original."
 
-**Stock & Behrens itself was not reached**, so that is a reported result. It is the cleanest case available of a data-ink minimization being measured against the thing it minimized, and losing. It belongs on the [Tufte page](edward-tufte.md) as much as this one.
+**Stock & Behrens itself was not reached**, so that is a reported result. A data-ink minimization was measured against the thing it minimized, and it lost. It belongs on the [Tufte page](edward-tufte.md) as much as this one.
 
 ### What the box plot cannot do, and he knew
 

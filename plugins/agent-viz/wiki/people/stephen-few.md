@@ -1,8 +1,15 @@
+---
+type: person
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Stephen Few
 
 **What they are known for.** Few wrote *Show Me the Numbers* and *Information Dashboard Design*, taught a generation of business analysts that a dashboard is a display problem rather than a decoration problem, and designed the bullet graph as a replacement for the gauges he spent years attacking. He is also the field's most sustained public critic, running two decades of the *Visual Business Intelligence* newsletter and blog against infographics, dashboards, vendors, "big data," data storytelling, and academic visualization research itself.
 
-**Status: `primary-read`.** Five of his articles were downloaded from perceptualedge.com and extracted locally: the effectiveness profile, *The Chartjunk Debate*, *Dual-Scaled Axes*, *Information Visualization Research as Pseudo-Science*, and the *Bullet Graph Design Specification*. His books were not read. Retrieval date: **2026-08-23**.
+**How this was read.** Five of his articles were downloaded from perceptualedge.com and extracted locally: the effectiveness profile, *The Chartjunk Debate*, *Dual-Scaled Axes*, *Information Visualization Research as Pseudo-Science*, and the *Bullet Graph Design Specification*. His books were not read. Retrieval date: **2026-08-23**.
 
 **What they are good for.** Two things nobody else in this set does. First, the **informative versus emotive** split: is this figure understandable, and separately, will anyone look at it. Second, **an argued critique of a specific published paper**, which is a genre the rest of the canon does not write. If you want to know what a hostile expert reader would say about a study before you cite it, Few has often already said it in print.
 
@@ -58,7 +65,7 @@ He would ask, first, whether the number in the figure means anything without a c
 | "Dual-Scaled Axes in Graphs: Are They Ever the Best Solution?" (2008) | `primary-read`. [perceptualedge.com](https://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf), extracted locally. | No page. Bears directly on [refutations.md](../refutations.md), "A flat ban on dual axes," and softens it. |
 | "The Chartjunk Debate: A Close Examination of Recent Findings" (Apr-Jun 2011) | `primary-read`. [perceptualedge.com](https://www.perceptualedge.com/articles/visual_business_intelligence/the_chartjunk_debate.pdf), extracted locally. | No page. Pairs with [bateman-2010-useful-junk.md](../studies/bateman-2010-useful-junk.md) and [gillan-richman-1994-data-ink.md](../studies/gillan-richman-1994-data-ink.md). |
 | "Information Visualization Research as Pseudo-Science" (Oct-Dec 2015) | `primary-read`. [perceptualedge.com](https://www.perceptualedge.com/articles/visual_business_intelligence/infovis_research_as_pseudo-science.pdf), extracted locally. | No page. |
-| "Bullet Graph Design Specification" (rev. 2013) | `primary-read`. [perceptualedge.com](https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf), extracted locally. | No page, and [chart-types/](../chart-types/README.md) has no bullet-graph entry. |
+| "Bullet Graph Design Specification" (rev. 2013) | `primary-read`. [perceptualedge.com](https://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf), extracted locally. | Read into [chart-types/gauge-and-bullet.md](../chart-types/gauge-and-bullet.md), which cites the five components and notes the spec reports no test. |
 | *Show Me the Numbers*, 2nd ed. (2012) | `not-reached`. | No page. The table-and-graph design reference the business-analytics world runs on. |
 | *Information Dashboard Design*, 2nd ed. (2013) | `not-reached`. | No page. Nothing in [inventory.md](../inventory.md) covers multi-figure dashboard layout, which is a real gap for anyone building a page of charts rather than a chart. |
 | *Now You See It* (2009), *Signal* (2015), *Big Data, Big Dupe* (2018) | `not-reached`. | No page. |

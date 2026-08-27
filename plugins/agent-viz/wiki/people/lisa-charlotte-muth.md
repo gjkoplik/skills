@@ -1,8 +1,14 @@
+---
+type: person
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Lisa Charlotte Muth
 
 **What they are known for.** The Datawrapper blog, where since 2017 she has written the best working practitioner's treatment of color in charts: not "use a colorblind-safe palette" but a numbered account of hue distance, saturation balance, lightness ordering, and how to de-emphasize without accidentally creating a new category. She also writes about text in charts, and argues in public for simple chart types.
 
-**Status: `primary-read`.** Retrieved 2026-08-23. Five posts under her byline on `datawrapper.de/blog` were pulled with `curl` and stripped to text locally with BeautifulSoup. Every quote below is verbatim from those local files:
+**How this was read.** Retrieved 2026-08-23. Five posts under her byline on `datawrapper.de/blog` were pulled with `curl` and stripped to text locally with BeautifulSoup. Every quote below is verbatim from those local files:
 
 | Post | Date |
 |---|---|
@@ -51,11 +57,11 @@ She sources that to a documented mistake by Sarah Leo at The Economist, quoting 
 - **Outline text that overlaps anything.** "If your text sits on other elements, even just a subtle gridline, consider using a **text outline.**"
 - **Round the numbers.** "Don't add unnecessary precision when showing numbers," and prefer `20k` / `20m` / `20b` to a multiplier note in the description.
 
-Her stated body-text default is worth copying verbatim because it is unusually specific: "sans-serif, regular, sentence case, neither overly narrow nor wide, >12px, (almost) black text."
+Her stated body-text default is unusually specific: "sans-serif, regular, sentence case, neither overly narrow nor wide, >12px, (almost) black text."
 
 **Chart-type preferences and aversions.** She is the section's defender of the plain chart, and she has published the argument under that name. Her scope: "bar, column, line, area, pie, and donut charts, and others like them." **Note that pie and donut are inside her fence**, which puts her at odds with [Knaflic](cole-nussbaumer-knaflic.md), whose book has a named visuals-to-avoid section containing both.
 
-What she is skeptical of is not any particular type but the ornate one-off: glyphs, novel forms, chart types with extra encodings layered on, combinations. Her stated reaction is worth quoting because it is a taste position honestly labeled as one: "When I look at a nonstandard chart, I might marvel at the beauty and ingenuity of its design. But often, I become skeptical. I often assume that its content can't be *extremely* interesting, otherwise, it would be shown more simply." Her positive claim is that "there's a reason why journalists show us the data we're most interested in as simple charts."
+What she is skeptical of is not any particular type but the ornate one-off: glyphs, novel forms, chart types with extra encodings layered on, combinations. Her stated reaction is a taste position honestly labeled as one: "When I look at a nonstandard chart, I might marvel at the beauty and ingenuity of its design. But often, I become skeptical. I often assume that its content can't be *extremely* interesting, otherwise, it would be shown more simply." Her positive claim is that "there's a reason why journalists show us the data we're most interested in as simple charts."
 
 **Density and restraint.** Not minimal. Restrained in **color**, generous in **text**. That combination is the thing that separates her from everyone else here: she will spend a paragraph getting a category down to a desaturated gray-blue and then put four annotations on the plot area. Her framing of the tradeoff is explicit: "**By sacrificing some legibility for your gray categories, you can gain great clarity for the highlighted few.**"
 

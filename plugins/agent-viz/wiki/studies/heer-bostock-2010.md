@@ -1,8 +1,14 @@
+---
+type: study
+status: primary-read
+retrieved: 2026-08-23
+---
+
 # Heer & Bostock (2010), *Crowdsourcing Graphical Perception*
 
-**What it is.** Jeffrey Heer and Michael Bostock, "Crowdsourcing Graphical Perception: Using Mechanical Turk to Assess Visualization Design," CHI 2010, pp. 203-212. A replication of [Cleveland & McGill (1984)](cleveland-mcgill-1984.md) on Mechanical Turk, plus new experiments on rectangular area, luminance contrast, chart size and gridline spacing.
+Jeffrey Heer and Michael Bostock, "Crowdsourcing Graphical Perception: Using Mechanical Turk to Assess Visualization Design," CHI 2010, pp. 203-212. A replication of [Cleveland & McGill (1984)](cleveland-mcgill-1984.md) on Mechanical Turk, plus new experiments on rectangular area, luminance contrast, chart size and gridline spacing.
 
-**Status.** `primary-read`. PDF from the Stanford Vis Group, text re-extracted locally. Quotes below are from that extraction, not from a fetch summary.
+**How this was read.** PDF from the Stanford Vis Group, text re-extracted locally. Quotes below are from that extraction, not from a fetch summary.
 
 **What it is good for.** Two things. It is the reason the channel ranking can be called replicated at all. And it is the only place the length-versus-angle comparison has actually been run under a common task format, which is the comparison Cleveland & McGill could not make.
 

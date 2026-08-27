@@ -1,8 +1,15 @@
+---
+type: source
+status: secondary-only
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Tufte, *The Visual Display of Quantitative Information*
 
-**What it is.** Edward R. Tufte, *The Visual Display of Quantitative Information* (Graphics Press; 1st ed. 1983, 2nd ed. 2001, 197 pp). The origin document for "chartjunk", the "data-ink ratio", the "lie factor", and small multiples. It is the most-cited book in visualization and the least-read one in this project.
+Edward R. Tufte, *The Visual Display of Quantitative Information* (Graphics Press; 1st ed. 1983, 2nd ed. 2001, 197 pp). The origin document for "chartjunk", the "data-ink ratio", the "lie factor", and small multiples. It is the most-cited book in visualization and the least-read one in this project.
 
-**Status: `secondary-only`, and thinly.** The book is not free and was not read. Retrieved 2026-08-23:
+**How this was read.** `secondary-only`, and thinly. The book is not free and was not read. Retrieved 2026-08-23:
 
 - **Chapter list**: a library catalog contents note, obtained from the Internet Archive metadata API for the cataloged 1983 edition (`archive.org/metadata/visualdisplayofq00tuft`). A cataloger's transcription of the book's own contents page, so reliable for structure and useless for wording.
 - **Publisher description**: reachable, and this page's status is upgradeable as a result. It was previously recorded here as unreachable, wrongly. Someone should redo this section from the source.
@@ -39,7 +46,7 @@ From the library catalog contents note:
 
 plus an epilogue, "Designs for the display of information".
 
-Chapters 4, 5 and 6, three of the nine, are the data-ink argument. That proportion is worth knowing: the contested idea is not a corner of the book, it is the spine of Part II.
+Chapters 4, 5 and 6, three of the nine, are the data-ink argument: the contested idea is not a corner of the book, it is the spine of Part II.
 
 ## The data-ink ratio, as Wilke quotes it
 
@@ -92,4 +99,4 @@ Nine chapters are listed above. Someone with a copy could map them in an afterno
 - [roll-call.md](../roll-call.md), the audit Tufte is absent from
 - [wilke-fundamentals.md](wilke-fundamentals.md), the primary-read source of every Tufte quote on this page
 - [knaflic-swd.md](knaflic-swd.md), where the data-ink argument shows up in practitioner form, as a decluttering checklist
-- [concepts/evidence-class.md](../concepts/evidence-class.md), evidence-backed versus authority-asserted, the distinction this page exists to protect
+- [concepts/evidence-class.md](../concepts/evidence-class.md), evidence-backed versus authority-asserted, the distinction at stake on this page

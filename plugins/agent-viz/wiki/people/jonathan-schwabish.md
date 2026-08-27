@@ -1,8 +1,19 @@
+---
+type: person
+status: primary-read
+status_partial: true
+retrieved: 2026-08-23
+---
+
 # Jonathan Schwabish
 
 **What they are known for.** An economist who turned chart redesign into a teachable procedure for researchers, first in a 2014 *Journal of Economic Perspectives* article that walks eight real published graphs through a before-and-after, then in four books including *Better Data Visualizations* (2021) and *Data Visualization in Excel* (2023). He is also the author of the **Graphic Continuum**, a chart-type poster, and a Senior Fellow at the Urban Institute.
 
-**Status: `primary-read`, for the 2014 article.** Retrieved 2026-08-23. The full 26-page JEP article was downloaded with `curl` from `pubs.aeaweb.org` and text-extracted locally with `pdftotext -layout`; every quote below comes from that file. Six pages of it were separately rendered to PNG at 100dpi and their pixel colors measured with PIL, which is where the palette numbers come from. His biography line comes from his own `policyviz.com/about` page, fetched and stripped locally.
+**The Urban Institute style guide, which this wiki treats as its broadest single source, is not independent of him.** That is the claim the evidence supports, and it is deliberately weaker than authorship: the guide carries no byline, but names him as its sole point of contact ("Contact Jon Schwabish", `jschwabish@urban.org`, verified on the live page 2026-08-25). **Consequence for citation: [urban-institute.md](../sources/urban-institute.md) and his own work are one voice, not two.** Corroboration counts that list both are wrong by one; one such error has been corrected in [schwabish.md](../sources/schwabish.md). **Non-independence is enough for that consequence and is all that is established**; see the Works section below, which declines to claim he wrote it.
+
+His reach through this corpus is wider than any other single person as a result: the Urban guide, the Graphic Continuum (which the [FT Visual Vocabulary](../sources/ft-visual-vocabulary.md) credits as its inspiration), the JEP article, and four books.
+
+**How this was read.** `primary-read` for the 2014 article. Retrieved 2026-08-23. The full 26-page JEP article was downloaded with `curl` from `pubs.aeaweb.org` and text-extracted locally with `pdftotext -layout`; every quote below comes from that file. Six pages of it were separately rendered to PNG at 100dpi and their pixel colors measured with PIL, which is where the palette numbers come from. His biography line comes from his own `policyviz.com/about` page, fetched and stripped locally.
 
 **His four books were not opened.** Anything below that touches them is marked `secondary-only` inline.
 
@@ -42,7 +53,7 @@ Annotation density is moderate. He labels the points he discusses and lets the r
 
 Reaches for: **small multiples** (his first redesign move on a four-series line chart, and his fix for spaghetti), **horizontal bars** whenever category labels are long, **slope charts**, **paired columns**, **stacked bars for two-period part-to-whole**, and the occasional less-common form he expects readers to grow into. That last is a real position: "scatterplots, not so long ago a novelty in mainstream publishing, now appear regularly. Just as our text literacy can expand with experience and exposure, so can our graphic literacy."
 
-Refuses: **3D**, flatly, and the demonstration is the good kind. On a 3D column labeled 6 percent: "No point of the column touches the gridline for that value... most readers will perceive the actual value of the column as less than 6 percent." **Non-zero bar baselines**: "a first rule is to start the chart at zero." **Mixed encodings for like data**, which is the diagnosis he leads with on the OECD chart: "the same kinds of data are plotted using different types of encoding so that it is difficult to compare location (diamonds) with length (bars)."
+Refuses: **3D**, flatly, and he demonstrates the problem rather than asserting it. On a 3D column labeled 6 percent: "No point of the column touches the gridline for that value... most readers will perceive the actual value of the column as less than 6 percent." **Non-zero bar baselines**: "a first rule is to start the chart at zero." **Mixed encodings for like data**, which is the diagnosis he leads with on the OECD chart: "the same kinds of data are plotted using different types of encoding so that it is difficult to compare location (diamonds) with length (bars)."
 
 On **pie charts** he is more careful than his reputation. He walks the standard objections, then makes an argument most pie critics skip: labeling every slice "results in what amounts to two sets of information: the labels and the values for the slices... This defeats the very purpose of the chart." And he grants the form its real job, that a pie exists "to individually compare each part to the whole," which is what his mini-pie small-multiple figure demonstrates.
 
