@@ -11,7 +11,7 @@ retrieved: 2026-08-23
 
 **How this was read.** Five of his articles were downloaded from perceptualedge.com and extracted locally: the effectiveness profile, *The Chartjunk Debate*, *Dual-Scaled Axes*, *Information Visualization Research as Pseudo-Science*, and the *Bullet Graph Design Specification*. His books were not read. Retrieval date: **2026-08-23**.
 
-**What they are good for.** Two things nobody else in this set does. First, the **informative versus emotive** split: is this figure understandable, and separately, will anyone look at it. Second, **an argued critique of a specific published paper**, which is a genre the rest of the canon does not write. If you want to know what a hostile expert reader would say about a study before you cite it, Few has often already said it in print.
+**What they are good for.** Two things nobody else in this set does. First, the **informative versus emotive** split: is this figure understandable, and separately, will anyone look at it. Second, **an argued critique of a specific published paper**, which is a genre the rest of the canon does not write. Few has often already put in print what a hostile expert reader would say about a study.
 
 **What they do not settle.** Anything empirical. There is no experiment anywhere in his corpus. He is one man with strong opinions, a lot of worked examples, and an explicit refusal to pretend otherwise: "I'm not suggesting that these criteria provide scientific rigor." That refusal is the reason he is usable as an authority source and unusable as an evidentiary anchor.
 
@@ -37,7 +37,7 @@ A five-component linear replacement for dashboard gauges, published as a specifi
 
 ### Where his name is used as authority for more than he showed
 
-**The flat dual-axis ban, and this one is a correction worth carrying.** [refutations.md](../refutations.md) traces every strong statement of the ban to design authority, naming Few first. That is right about the lineage and it overstates his position. His 2008 article ends:
+**The flat dual-axis ban.** This one is a correction. [refutations.md](../refutations.md) traces every strong statement of the ban to design authority, naming Few first. That is right about the lineage and it overstates his position. His 2008 article ends:
 
 > "I certainly cannot conclude, once and for all, that graphs with dual-scaled axes are never useful; only that I cannot think of a situation that warrants them in light of other, better solutions. I invite you to propose viable exceptions, which I will welcome with open arms."
 
@@ -49,11 +49,11 @@ The one thing he does state flatly is narrower: "a graph with a dual-scaled axis
 
 ---
 
-## What they would object to in your figure
+## What they would object to in a figure
 
-*Reconstruction from his stated priorities. He has not seen your figure, and if he had, this would be shorter and ruder.*
+*Reconstruction from his stated priorities, not a response to any actual figure; had he seen one, this would be shorter and ruder.*
 
-He would ask, first, whether the number in the figure means anything without a comparison, because his *Completeness* criterion is about comparison context and almost every chart he critiques fails it: a value with no target, no norm, and no history. Then he would ask whether the measure is **valid**, meaning whether it measures what the title claims it measures, which is the question nobody else in this set asks. Then he would strip the figure: every gradient, every shadow, every 3D effect, every gauge, every unit chart, and the pie chart, on the grounds that they cost perceptibility and buy nothing. He would tell you the title asserts something the data cannot support. He would be unimpressed by "but it's engaging," and then, unusually, he would concede that engagement is a real criterion with a real acceptable range, just a much wider one than truthfulness gets. And if you cited a study at him, he would go read it and come back with a list.
+He would ask, first, whether the number in the figure means anything without a comparison, because his *Completeness* criterion is about comparison context and almost every chart he critiques fails it: a value with no target, no norm, and no history. Then he would ask whether the measure is **valid**, meaning whether it measures what the title claims it measures, which is the question nobody else in this set asks. Then he would strip the figure: every gradient, every shadow, every 3D effect, every gauge, every unit chart, and the pie chart, on the grounds that they cost perceptibility and buy nothing. He would say the title asserts something the data cannot support. He would be unimpressed by "but it's engaging," and then, unusually, he would concede that engagement is a real criterion with a real acceptable range, just a much wider one than truthfulness gets. And presented with a cited study, he would go read it and come back with a list.
 
 ---
 

@@ -10,20 +10,20 @@ A bar divided into segments, each segment's length encoding a part's share of th
 
 ## When to reach for it, and when not
 
-**Reach for it when** the total matters as well as the composition, or when composition repeats across categories or across time. It is the only part-to-whole form that keeps a position-along-a-common-scale reading, and it keeps it for the total and the bottom segment.
+The form is defined for the case where the total matters as well as the composition, or where composition repeats across categories or across time. It is the only part-to-whole form that keeps a position-along-a-common-scale reading, and it keeps it for the total and the bottom segment.
 
-**Order the segments deliberately.** Whichever series the reader most needs to compare goes on the baseline. That single decision moves it from length onto position along a common scale and costs nothing.
+**Segment order is an encoding decision.** The series placed on the baseline is read as position along a common scale rather than as length, and no other part of the chart changes with that choice.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | How does one middle series move across categories? | Small multiples, or a line chart of that series. Middle segments float with no shared baseline |
 | Only composition matters, and there is one whole | [Pie or donut](pie-and-donut.md). Simpler, and nothing is lost |
 | There are many parts per bar | [Treemap](treemap.md), or aggregate the tail into "other" |
 | Precise values per segment | Any chart with an axis per value. This is the form's measured weakness |
 
-**Normalizing to 100%** removes the total, which is the position reading you came for. Sometimes right, always a real loss, and worth making knowingly.
+**Normalizing to 100%** removes the total, which is the position reading the form is chosen for. The composition survives the normalization; the total does not.
 
 ## Structural decomposition
 
@@ -76,9 +76,9 @@ What is *unmeasured* is the comparison people actually care about: whether a sta
 
 **Tracking a middle series across categories.** The reader's eye wants to compare the orange segment across five bars. Each of those segments floats at a different offset, so the comparison is a set of length judgments with no shared baseline, which is the worst case this form supports. `authority-asserted`, and it follows directly from the measured channel split rather than resting on taste.
 
-**The remedy is ordering.** Put the series you want compared on the baseline. It costs nothing and moves that series from length onto position along a common scale. This follows from the evidence rather than being separately tested.
+**The remedy is ordering.** The series on the baseline is read as position along a common scale rather than as length, and nothing else on the chart changes with it. This follows from the evidence rather than being separately tested.
 
-**100% stacking hides the totals.** Normalizing removes the one position reading the form had for magnitude and keeps only composition. That is sometimes exactly right, and it is a real loss to make knowingly.
+**100% stacking hides the totals.** Normalizing removes the one position reading the form had for magnitude and keeps only composition. The loss is definitional.
 
 ## Justifying the choice
 

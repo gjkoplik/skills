@@ -9,7 +9,7 @@ retrieved: 2026-08-23
 
 Martin Krzywinski, Inanc Birol, Steven J. M. Jones and Marco A. Marra, "Hive plots: rational approach to visualizing networks," *Briefings in Bioinformatics* 13(5), 2012, pp. 627-644. The paper that introduced hive plots, as an argued alternative to force-directed and spectral layouts.
 
-**How this was read.** 18-page PDF, text extracted locally with `pdfminer.six`. **Reachability note worth recording:** the paper is paywalled at Oxford Academic with no open-access or PubMed Central deposit, and an earlier pass on this wiki recorded it as `not-reached` on that basis. It was reachable the whole time from a local copy. *Check for a local copy before recording a source as unreachable.*
+**How this was read.** 18-page PDF, text extracted locally with `pdfminer.six`. **Reachability note.** The paper is paywalled at Oxford Academic with no open-access or PubMed Central deposit, and an earlier pass on this wiki recorded it as `not-reached` on that basis. It was reachable the whole time from a local copy.
 
 **What it is good for.** The method: how axes and node positions are actually assigned, and the geometric constraint on axis count. Also for seeing clearly what kind of paper it is.
 
@@ -41,7 +41,7 @@ Three steps, from p. 632:
 
 > "Node coordinates are typically derived from the absolute or rank-ordered value of a node parameter, such as connectivity."
 
-**This is the fact most likely to be missed by someone who has only read the abstract: both the partition and the position are derived from the graph's own topology.** A hive plot does not require pre-existing node metadata. The two worked examples are entirely structural:
+**Both the partition and the position are derived from the graph's own topology**, which the abstract does not say. A hive plot does not require pre-existing node metadata. The two worked examples are entirely structural:
 
 - **Directed network.** Nodes assigned by edge directionality, using the terminology of an earlier regulatory-hierarchy paper: sources (out edges only) are "regulators", sinks (in edges only) are "workhorses", and the rest are "managers". Coordinates from total connectivity.
 - **Undirected network.** Nodes assigned by clustering coefficient, `cc = 0` to axis 1, `0 < cc < 1` to axis 2, `cc = 1` to axis 3. Coordinates from connectivity again.
@@ -50,7 +50,7 @@ Node metadata works too, and the paper says the directed layout is natural for n
 
 ## Table 1, the menu of assignment variables
 
-Reproduced because it is the answer to "what would I even partition by":
+The variables the paper offers for axis assignment and node position:
 
 **Node parameters.** Degree (connectivity), flow (out edges minus in edges, so positive flow is a source), betweenness, closeness, eccentricity, PageRank, clustering coefficient, topological overlap, cut vertex (1 if removing the node disconnects the graph).
 

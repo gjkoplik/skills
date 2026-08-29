@@ -10,11 +10,11 @@ One quantitative axis shared by every row, one dot per item, with the items of a
 
 ## When to reach for it, and when not
 
-**Reach for it when** there are more items than you would draw bars for, they fall into a few groups, and the reader's job is to see where each item sits in the shared ordering and how the groups sit against each other. The form's real property is compactness: it costs one row per *group*, not one row per item, which is the constraint a bar chart cannot escape. Datawrapper documents that bar charts and dot plots are sized by their row count and cannot be shrunk at all ([datawrapper-academy.md](../sources/datawrapper-academy.md)); a dot strip plot changes what a row is.
+**The form applies where** there are more items than a bar chart could carry, they fall into a few groups, and the reader's job is to see where each item sits in the shared ordering and how the groups sit against each other. The form's property is compactness: it costs one row per *group*, not one row per item, which is the constraint a bar chart cannot escape. Datawrapper documents that bar charts and dot plots are sized by their row count and cannot be shrunk at all ([datawrapper-academy.md](../sources/datawrapper-academy.md)); a dot strip plot changes what a row is.
 
-**Do not reach for it when:**
+**Questions the form does not answer:**
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | What is each item's value? | A table, or a labeled dot plot with one item per row |
 | How big is each one, and by how much do they differ? | [Magnitude](magnitude.md). A [bar chart](bar-chart.md), where the value is the point |
@@ -36,13 +36,13 @@ One quantitative axis shared by every row, one dot per item, with the items of a
 
 **It is a [lollipop chart](lollipop-chart.md) with the stem removed and more than one dot per row.** Lollipop's page makes the same point from its side: taking the stem away leaves a dot plot, because the stem was a guide rather than an encoding. The shared axis is load-bearing in the same way it is on a [slope chart](slope-chart.md): per-strip scales would make the strips uncomparable and nothing on the chart would say so.
 
-**It is also the same drawing as the strip plot that [distribution.md](distribution.md) recommends at small n.** Geometry, scale and coordinates are identical. What differs is the question you brought and therefore what the guides have to do: a ranking reading needs the items identified, and a distribution reading needs the count legible. The chart cannot tell the reader which one you meant, and the title has to.
+**It is also the same drawing as the strip plot that [distribution.md](distribution.md) recommends at small n.** Geometry, scale and coordinates are identical. What differs is the question brought to it, and therefore what the guides have to do: a ranking reading needs the items identified, and a distribution reading needs the count legible. The chart does not distinguish the two; the title is what carries it.
 
 ## Channels
 
 **Position along a common scale**, inherited from [channels.md](../concepts/channels.md) with the standard caveat that the mapping from mark to channel is conjecture in the source literature.
 
-Two things about that inheritance, both worth stating because this is a ranking form. The accuracy claim behind position is about extracting a value, and this form was chosen on the grounds that the value is not the message, so the inheritance buys less here than it does on a [bar chart](bar-chart.md); see [the scope limit](../concepts/channels.md#what-the-ranking-is-not-about). And where a subset of the dots is picked out by color, that is **hue used for identity**, which is the job the accuracy ordering does not score and which [channels.md](../concepts/channels.md) says hue is actually good at. A highlighted dot strip plot is not using a bottom-ranked channel badly.
+Two things about that inheritance, both bearing on this being a ranking form. The accuracy claim behind position is about extracting a value, and this form was chosen on the grounds that the value is not the message, so the inheritance buys less here than it does on a [bar chart](bar-chart.md); see [the scope limit](../concepts/channels.md#what-the-ranking-is-not-about). And where a subset of the dots is picked out by color, that is **hue used for identity**, which is the job the accuracy ordering does not score and which [channels.md](../concepts/channels.md) says hue is actually good at. A highlighted dot strip plot is not using a bottom-ranked channel badly.
 
 ## What it is measurably good at
 
@@ -62,9 +62,9 @@ The one nearby contest is inherited and it barely binds: whether an unfilled mar
 
 ## The failure mode it invites
 
-**Overplotting that hides how many items there are.** The compactness that is the reason to use the form is also what produces the pile-up, and a strip where four dots have merged into one reads as a set of the wrong size. The remedies are Wilke's, all `authority-asserted`: transparency, jitter, or binning ([wilke-fundamentals.md](../sources/wilke-fundamentals.md), and [inventory.md](../inventory.md) topics 58 and 59). Jitter has its own limit, stated by the same author: "if we jitter too much, we end up placing points in locations that are not representative of the underlying dataset." Jitter along the categorical axis, not the value axis, and record the seed.
+**Overplotting that hides how many items there are.** The compactness that is the reason to use the form is also what produces the pile-up, and a strip where four dots have merged into one reads as a set of the wrong size. The remedies are Wilke's, all `authority-asserted`: transparency, jitter, or binning ([wilke-fundamentals.md](../sources/wilke-fundamentals.md), and [inventory.md](../inventory.md) topics 58 and 59). Jitter has its own limit, stated by the same author: "if we jitter too much, we end up placing points in locations that are not representative of the underlying dataset." Jitter runs along the categorical axis rather than the value axis, and the seed is recorded.
 
-**Letting the reader take it for a distribution when it is a ranking.** The drawing is identical to the strip plot in [distribution.md](distribution.md), so a reader with no caption will read density and shape off a chart you built to show placings, and the density is an artifact of how many items you happened to include. `absence of evidence` rather than a prohibition: nobody has checked what readers actually take from an unlabeled strip. The cheap fix is a title that names the question.
+**Letting the reader take it for a distribution when it is a ranking.** The drawing is identical to the strip plot in [distribution.md](distribution.md), so a reader with no caption reads density and shape off a chart built to show placings, and the density is an artifact of how many items were included. `absence of evidence` rather than a prohibition: nobody has checked what readers actually take from an unlabeled strip. The cheap fix recorded here is a title that names the question.
 
 ## Justifying the choice
 
@@ -87,6 +87,6 @@ The one nearby contest is inherited and it barely binds: whether an unfilled mar
 ## See also
 
 - [lollipop-chart.md](lollipop-chart.md) — the same dot with a stem, one item per row
-- [ranking.md](ranking.md) — the group, and the two free parameters it hands you
+- [ranking.md](ranking.md) — the group, and the two free parameters it carries
 - [distribution.md](distribution.md) — the same drawing read as a shape rather than as an order
 - [../concepts/channels.md](../concepts/channels.md) — including why the accuracy ordering says little about reading an order

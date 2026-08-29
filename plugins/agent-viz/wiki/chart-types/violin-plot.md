@@ -10,17 +10,17 @@ A kernel density estimate of one variable, mirrored about the group's axis posit
 
 ## When to reach for it, and when not
 
-**Reach for it when** several groups have to be compared on one axis, there are enough observations per group for a density estimate to be about the data rather than about the bandwidth, and the shape within a group is part of the question: a second mode, a heavy tail, a pile-up at a bound.
+The form is defined for the case where several groups have to be compared on one axis, there are enough observations per group for a density estimate to be about the data rather than about the bandwidth, and the shape within a group is part of the question: a second mode, a heavy tail, a pile-up at a bound.
 
-**Reach for it also when the subject is a mean and its error**, which is the one use anybody has tested. [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) proposed the violin as one of two example encodings satisfying a property they state directly: "We can mitigate these problems by choosing encodings that are visually symmetric and visually continuous."
+The other case in the record is a mean and its error, which is the one use anybody has tested. [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) proposed the violin as one of two example encodings satisfying a property they state directly: "We can mitigate these problems by choosing encodings that are visually symmetric and visually continuous."
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
-| n is small per group | Plot the observations. A density over six points is a picture of the bandwidth |
+| n is small per group | The observations themselves. A density over six points is a picture of the bandwidth |
 | What is the median, exactly? | [Box plot](boxplot.md), or a table. The density's peak is not the median |
-| Is this group significantly different? | The width is the spread of the sample, not an interval about an estimate, unless you drew one and said so |
+| Is this group significantly different? | The width is the spread of the sample, not an interval about an estimate, unless an interval was drawn and labeled as one |
 | One group, and the shape is the point | [Histogram](histogram.md). The mirroring buys nothing when there is nothing to compare against |
 | How many observations are in each group? | The violin does not say, and area normalization can actively hide it |
 | Many groups, compactly, with no knob to defend | [Box plot](boxplot.md) |
@@ -48,7 +48,7 @@ Value on position along a common scale; density on width, which is an area readi
 
 **No study in this source set has decomposed a violin into its cues.** [Skau & Kosara (2016)](../studies/skau-kosara-2016.md) did exactly that for the pie and found the received channel account wrong, which is a reason to hold the mapping above loosely rather than a reason to doubt it specifically.
 
-The mirroring is worth naming as an open question rather than a defect: it doubles the ink for one density and it is the thing that makes the shape symmetric, which is the property Correll & Gleicher's result actually turns on. Whether readers use both halves is untested.
+The mirroring is an open question rather than a defect: it doubles the ink for one density and it is the thing that makes the shape symmetric, which is the property Correll & Gleicher's result actually turns on. Whether readers use both halves is untested.
 
 ## What it is measurably good at
 
@@ -59,7 +59,7 @@ The mirroring is worth naming as an open question rather than a defect: it doubl
 - Confidence was higher with the two encodings carrying distribution detail (violin M = 5.06, gradient M = 5.12) than with bars and box plots (both M = 4.86).
 - Unfamiliarity cost this audience nothing. Mechanical Turk workers, not statisticians, did better with the unusual mark than with the standard one.
 
-**Scope, stated because the result is easy to over-quote.** That experiment drew violins as encodings of a mean and its error, not as displays of a raw sample. The tasks were low-stakes prediction with no real consequences, and the authors say so: "One area not well-covered by our experimental tasks was decision-making." They also decline to say the alternatives are practically important: "the practical effect of these differences is difficult to determine."
+**Scope.** That experiment drew violins as encodings of a mean and its error, not as displays of a raw sample. The tasks were low-stakes prediction with no real consequences, and the authors say so: "One area not well-covered by our experimental tasks was decision-making." They also decline to say the alternatives are practically important: "the practical effect of these differences is difficult to determine."
 
 ## What it is measurably bad at
 
@@ -69,7 +69,7 @@ Two things follow from the construction rather than from an experiment: at small
 
 ## What is contested
 
-**Which symmetric encoding to use.** The authors who established that a symmetric continuous encoding beats a bar with error bars refuse to rank their own two candidates: "Our data do not support the use of one over the other for decisions tasks, however paper authors, reviewers, and colleagues have stated differing preferences between the two on aesthetic and theoretical grounds." Choosing the violin over the gradient plot is preference, and it should be stated as preference.
+**Which symmetric encoding to use.** The authors who established that a symmetric continuous encoding beats a bar with error bars refuse to rank their own two candidates: "Our data do not support the use of one over the other for decisions tasks, however paper authors, reviewers, and colleagues have stated differing preferences between the two on aesthetic and theoretical grounds." Choosing the violin over the gradient plot is preference rather than evidence.
 
 Everything else here is `absence of evidence` rather than contested, which [evidence-class.md](../concepts/evidence-class.md) keeps deliberately distinct from refuted. Nobody has measured whether readers detect bimodality more reliably from a violin than from a histogram, whether the mirrored half helps, or how bandwidth choice moves a reader's conclusion. The general treatment of bandwidth as an undetermined analysis choice comes from [wilke-fundamentals.md](../sources/wilke-fundamentals.md) chapter 14 and [inventory.md](../inventory.md) topic 52, both `authority-asserted`.
 
@@ -77,7 +77,7 @@ Everything else here is `absence of evidence` rather than contested, which [evid
 
 **A confident shape over almost no data.** The estimate always produces a smooth curve, and the curve looks equally authoritative at n = 6 and n = 600. This is the [box plot](boxplot.md)'s missing-n problem with a smoothing parameter added on top, and the sample sizes [Weissgerber et al.](../studies/weissgerber-2015-beyond-bar-line.md) measured in published science, median minimum group size 4, are squarely in the range where it bites.
 
-**Tuning the bandwidth until the modes appear.** The knob is invisible in the output and the reader cannot check it. The mitigation is the one [inventory.md](../inventory.md) topic 52 states: choose it explicitly and confirm the claim survives a wider and a narrower choice. `authority-asserted`.
+**Tuning the bandwidth until the modes appear.** The knob is invisible in the output and the reader cannot check it. The mitigation [inventory.md](../inventory.md) topic 52 states: the bandwidth is chosen explicitly, and the claim is checked against a wider and a narrower choice. `authority-asserted`.
 
 **Comparing widths across groups that were normalized separately.** Equal-area normalization is a common default and it makes width incomparable in count between groups. Definitional, and easy to miss because the drawing gives no sign of which normalization ran.
 

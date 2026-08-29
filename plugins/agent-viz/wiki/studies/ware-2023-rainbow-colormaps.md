@@ -10,7 +10,7 @@ Colin Ware (University of New Hampshire), Maureen Stone (Tableau Research), Dani
 
 **Not a study.** This is a six-page **Visualization Viewpoints department article**, an argued position piece, written as a direct reply to Borland & Taylor's 2007 *Rainbow Color Map (Still) Considered Harmful* in the same department. It contains **no new experiment, no participants, no data, and no statistics**. Every empirical claim in it is a citation to someone else's work.
 
-It lives in `studies/` because that is where people will look for it, and because the single most common misuse of this paper is citing it as if it were an experiment that vindicated rainbows.
+It lives in `studies/` because that is where people will look for it. The common misuse is citing it as if it were an experiment that vindicated rainbows.
 
 **How this was read.** Extracted locally with `pdftotext` from the IEEE open-access PDF (CC-BY, confirmed on the article's first page). Retrieval date: **2026-08-23**.
 
@@ -64,7 +64,7 @@ The evidence marshaled is other people's:
 | Well-designed multihue maps beat single-hue sequential and diverging | Liu & Heer 2018, CHI |
 | Rainbow use declining in vis research but not in domain science | Gołębiowska & Çöltekin 2022, ISPRS J. |
 
-**If you need to cite evidence, cite those. Do not cite this article as the evidence.**
+**The evidence is in those sources, not in this article.**
 
 ## Limits the authors state themselves
 
@@ -78,7 +78,7 @@ On the design trick of adding luminance waves to boost resolving power:
 
 > "However, the tradeoffs of this design choice are not yet well understood."
 
-On the cognitive-grouping argument, which is the weakest link in the piece and is flagged as such by its own verbs:
+On the cognitive-grouping argument, which the piece's own verbs flag as unsettled:
 
 > "Preliminary studies suggest that the nameability of color regions may support such reasoning processes. We speculate that this grouping may simplify the data to allow people to more effectively complete tasks involving large subsets of the data... Further research is needed to fully understand how the visual system simultaneously processes hue and luminance variation in colormaps to support a range of tasks."
 
@@ -96,10 +96,10 @@ And the closing admission:
 
 ## What this result does not license
 
-- **Not "a study found rainbows are fine."** No study. No participants. No numbers of its own. If you cite it as empirical support, you are citing an opinion column.
+- **Not "a study found rainbows are fine."** No study. No participants. No numbers of its own. Cited as empirical support, it is an opinion column.
 - **Not a defense of jet or the classic HSV rainbow.** The paper says those "inevitably perform poorly on any test of perceived metric distance." Its defense is of *purpose-built* rainbows: Turbo, Paraview's Uniform, the thermal-imaging rainbow, the Tableau density rainbow in Figure 7.
 - **Not "rainbows are accessible."** The paper says the opposite twice, and offers a narrow exception: a colormap that carries its information in luminance is accessible "as long as the information provided by color segmentation is not essential."
-- **Not a licence to use a rainbow for continuous quantitative data by default.** The defensible use cases they name are specific: reading a value off a key, surfacing iso-value contours and extrema, and tasks about global structure or distribution comparison. Their own accuracy-for-details argument runs through luminance, not hue.
+- **Not a license to use a rainbow for continuous quantitative data by default.** The defensible use cases they name are specific: reading a value off a key, surfacing iso-value contours and extrema, and tasks about global structure or distribution comparison. Their own accuracy-for-details argument runs through luminance, not hue.
 - **Not evidence that hue banding aids reasoning.** That section is "preliminary studies suggest," "we speculate," and "further research is needed," in the authors' own words.
 - **Not a refutation of Borland & Taylor 2007.** It is a rebuttal to the dogma that grew around it, and it concedes the original critiques are valid for the original rainbow.
 

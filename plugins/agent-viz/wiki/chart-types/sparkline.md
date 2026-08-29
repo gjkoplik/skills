@@ -14,17 +14,17 @@ Also called a **word-sized graphic**, an **inline chart** or a **micro chart**. 
 
 ## When to reach for it, and when not
 
-**Reach for it when** the reading is "rising, falling, spiky, flat, above the band, below the band", and either the graphic belongs inside a sentence or many series have to be scanned in parallel in a table. Tufte's demonstration is a clinical glucose series inside running text, and a financial table stacking hundreds of series so they compare down the column.
+The form is defined for the case where the reading is "rising, falling, spiky, flat, above the band, below the band", and either the graphic belongs inside a sentence or many series have to be scanned in parallel in a table. Tufte's demonstration is a clinical glucose series inside running text, and a financial table stacking hundreds of series so they compare down the column.
 
-**Removing the axes is the design, not an economy.** That has one consequence and it decides every use of the form: **every reading is relative and no value can be extracted from the mark.** Definitional. Tufte's own construction answers it by printing the most recent value as a number beside the line, which is worth copying rather than working around.
+**Removing the axes is the design, not an economy.** That has one consequence and it decides every use of the form: **every reading is relative and no value can be extracted from the mark.** Definitional. Tufte's own construction answers it by printing the most recent value as a number beside the line.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
-| What is the value? | Print the number. That is what Tufte does, next to the line |
+| What is the value? | The printed number. That is what Tufte does, next to the line |
 | How much did it change? | Any chart with an axis, or two numbers and a subtraction |
-| Is this series higher than that one? | A [line chart](line-chart.md) on shared, drawn axes. Two sparklines share nothing unless you made them share it, and nothing on them says whether you did |
+| Is this series higher than that one? | A [line chart](line-chart.md) on shared, drawn axes. Two sparklines share nothing unless the scale was deliberately shared, and nothing on them records whether it was |
 | There are three or four points | A number, a sentence, or a table. There is no shape yet |
 | Someone has to defend a conclusion drawn from it | A full chart. There is no axis to check the conclusion against |
 | One share or one figure is the whole message | A single large number. The argument is on [part-to-whole.md](part-to-whole.md) and it applies to any group |
@@ -56,9 +56,9 @@ Also called a **word-sized graphic**, an **inline chart** or a **micro chart**. 
 
 ## What it is measurably bad at
 
-Nothing measured on this form. Two things are worth carrying.
+Nothing measured on this form. Two inherited results bear on it.
 
-**Removing axis furniture has been measured once, and the result is element-conditional rather than a green light.** [Gillan & Richman (1994)](../studies/gillan-richman-1994-data-ink.md) found that removing the y-axis line and the x axis generally *increased* response time, meaning removal hurt, while removing tick marks helped, and that each element's effect depended on graph type, task, and which other elements were present. Three caveats: that study page is `secondary-only`, the stimuli were ordinary graphs rather than word-sized ones, and a sparkline removes the guides deliberately in exchange for fitting in a sentence, which is a trade Gillan & Richman never tested. **It does not settle this form, and it is the only place the corpus touches the design decision the form is built on.**
+**Removing axis furniture has been measured once, and the result is element-conditional.** [Gillan & Richman (1994)](../studies/gillan-richman-1994-data-ink.md) found that removing the y-axis line and the x axis generally *increased* response time, meaning removal hurt, while removing tick marks helped, and that each element's effect depended on graph type, task, and which other elements were present. Three caveats: that study page is `secondary-only`, the stimuli were ordinary graphs rather than word-sized ones, and a sparkline removes the guides deliberately in exchange for fitting in a sentence, which is a trade Gillan & Richman never tested. **It does not settle this form, and it is the only place the corpus touches the design decision the form is built on.**
 
 **The aspect ratio is set by the typography rather than by the analyst.** [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) moved reader judgments by 129.5% on a line chart by changing the aspect ratio and nothing else, with the true values printed on the chart. On a sparkline the height is whatever the line of text allows. That is inherited exposure, stated at group level in [change-over-time.md](change-over-time.md), and the observation here is only that the parameter is decided by the page layout.
 
@@ -66,11 +66,11 @@ Nothing measured on this form. Two things are worth carrying.
 
 **Nothing about this form. There is no record here to disagree with itself.**
 
-One adjacent fact is worth knowing before citing the form's origin. A sparkline is the data-ink argument taken to its limit, and that argument is the most contested thing in this corpus ([refutations.md](../refutations.md)). The one Tufte minimization anybody has measured, his midgap box plot, came out worse than the original it minimized ([edward-tufte.md](../people/edward-tufte.md)). Neither of those is about sparklines and neither is evidence against them. They are the reason not to justify this form by invoking data-ink.
+One adjacent fact bears on the form's origin. A sparkline is the data-ink argument taken to its limit, and that argument is the most contested thing in this corpus ([refutations.md](../refutations.md)). The one Tufte minimization anybody has measured, his midgap box plot, came out worse than the original it minimized ([edward-tufte.md](../people/edward-tufte.md)). Neither of those is about sparklines and neither is evidence against them. What they bear on is the data-ink argument the form is commonly justified by, not the form itself.
 
 ## The failure mode it invites
 
-**Reading a value off it.** There is no axis, so there is no value, and the graphic gives the reader no sign that the reading they just made is unsupported. Printing the number is the fix and it costs nothing.
+**Reading a value off it.** There is no axis, so there is no value, and the graphic gives the reader no sign that the reading they just made is unsupported. Tufte's own construction prints the value beside the line.
 
 **Comparing two sparklines that do not share a scale.** Stacked in a column they look built for comparison. Independently scaled, a flat series and a violent one can produce the same picture. The drawing does not record which it is.
 
@@ -96,14 +96,14 @@ Nothing. No study here touches this form.
 
 - ~~"Sparklines let readers see the value at a glance."~~ There is no axis. There is no value. There is a shape.
 - ~~"Stripping the axes makes it cleaner, so it reads better."~~ The one measurement in this corpus on removing axis elements found the effect element-conditional, and found that removing the axis lines *hurt*.
-- ~~"A sparkline is just a small line chart."~~ It is a line chart with the guides removed, and the guides were the part that made values readable. That is the trade, and it is worth making; it is not the same chart.
+- ~~"A sparkline is just a small line chart."~~ It is a line chart with the guides removed, and the guides were the part that made values readable. That is the trade the form makes; it is not the same chart.
 - ~~"Tufte showed that sparklines work."~~ He proposed them, demonstrated them, and ran no experiments. Nobody in this corpus has tested them since.
 
 ## See also
 
 - [line-chart.md](line-chart.md) — the same chart with its guides, and where the evidence in this group lives
 - [slope-chart.md](slope-chart.md) — the other form here built by emptying the guides slot, and what it puts back
-- [change-over-time.md](change-over-time.md) — the group, and the free parameters it hands you
+- [change-over-time.md](change-over-time.md) — the group, and the free parameters it leaves open
 - [../people/edward-tufte.md](../people/edward-tufte.md) — the sparklines excerpt, the only Tufte material in this wiki read from Tufte
 - [../sources/tufte.md](../sources/tufte.md) — the 1983 book, which is not where sparklines come from
 - [tables.md](tables.md) — where a column of sparklines actually lives

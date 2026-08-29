@@ -10,20 +10,20 @@ A dot at the value with a thin stem running back to the baseline. A [bar chart](
 
 ## When to reach for it, and when not
 
-**Reach for it when** there are enough categories that filled bars turn the plot into a block of ink, and the reader's job is to find and compare a few values inside a long sorted list. The FT's one-line gloss is the clearest statement of what you buy ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)):
+The form is defined for the case where there are enough categories that filled bars turn the plot into a block of ink, and the reader's job is to find and compare a few values inside a long sorted list. The FT's one-line gloss ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)):
 
 > "Lollipop charts draw more attention to the data value than standard bar/column -- **does not HAVE to start at zero (but preferable)**"
 
 `authority-asserted`, both halves. Nothing in this corpus tests either one.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | How many times bigger is this than that? | [Bar chart](bar-chart.md). Ratio comparison is one task where the filled bar has measured support |
 | There are six categories | [Bar chart](bar-chart.md). The ink saving is the reason to be here, and at six bars there is none |
 | Does this add up, and to what? | [Part-to-whole](part-to-whole.md). Neither form asserts a total, and this one asserts it less |
-| Two values per category, and the gap is the point | [Dumbbell plot](dumbbell-plot.md). The stem should span the gap, not the baseline |
+| Two values per category, and the gap is the point | [Dumbbell plot](dumbbell-plot.md). There the stem spans the gap rather than the baseline |
 | What does the distribution look like? | A histogram or a univariate scatterplot. The stem implies a magnitude from zero |
 
 ## Structural decomposition
@@ -43,7 +43,7 @@ A dot at the value with a thin stem running back to the baseline. A [bar chart](
 
 **Position along a common scale**, same as the bar chart, read at the dot rather than at the bar's end. Inherited from [channels.md](../concepts/channels.md) with the usual caveat that the mapping from mark to channel is conjecture in the source literature.
 
-Two structural notes that follow from the geometry and assert nothing empirical. The **stem is a guide, not an encoding**: it exists so the eye can get from the category axis to the dot, which is why removing it gives you a dot plot rather than a broken lollipop. And **there is no filled area**, which is the basis of the FT's and Datawrapper's release of the zero baseline for this form.
+Two structural notes that follow from the geometry and assert nothing empirical. The **stem is a guide, not an encoding**: it exists so the eye can get from the category axis to the dot, which is why removing it gives a dot plot rather than a broken lollipop. And **there is no filled area**, which is the basis of the FT's and Datawrapper's release of the zero baseline for this form.
 
 ## What it is measurably good at
 
@@ -57,7 +57,7 @@ What can be said without measurement is the structural point above: the value si
 
 **Ratio comparison, from a study of dot plots rather than lollipops.** [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md), in passing: "comparing ratios can be done quickly and more accurately with bar charts as compared to dot plots." A lollipop is not a dot plot, since it keeps a stem to the baseline, so this is suggestive about the direction and is not a test of this form.
 
-**The terminator mechanism cuts against the dot.** [Skau, Harrison & Kosara (2015)](../studies/skau-2015-embellished-bars.md) found that a bar with a strong horizontal cap matched the plain baseline while every embellishment that rounded or pointed the top raised error, and proposed that readers "rely on strong lines at the ends of bars to mentally extend the bar end to the value axis." A lollipop replaces the terminator with a circle. **They did not test a lollipop**, and the mechanism is their hypothesis rather than their result, so this is an extrapolation from a conjecture. It is worth knowing about and it is not evidence.
+**The terminator mechanism cuts against the dot.** [Skau, Harrison & Kosara (2015)](../studies/skau-2015-embellished-bars.md) found that a bar with a strong horizontal cap matched the plain baseline while every embellishment that rounded or pointed the top raised error, and proposed that readers "rely on strong lines at the ends of bars to mentally extend the bar end to the value axis." A lollipop replaces the terminator with a circle. **They did not test a lollipop**, and the mechanism is their hypothesis rather than their result, so this is an extrapolation from a conjecture rather than evidence.
 
 The most cited reason to prefer a lollipop is ink, and the one mechanism in the literature that would predict a cost has never been pointed at it.
 
@@ -67,7 +67,7 @@ The most cited reason to prefer a lollipop is ink, and the one mechanism in the 
 
 The FT releases it for this form, and the capitals in its own text sit on the negation: the lollipop "does not HAVE to start at zero (but preferable)", against a plain "Must always start at 0 on the axis" for the filled column ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). Both statements sit in its Magnitude category, and no gloss outside that category mentions a baseline at all, so the FT scopes the rule by mark *within* the size-comparison task rather than across every quantitative axis. Datawrapper gives the reasoning explicitly: "Readers don't expect dot plots (or, for two values, range plots) to start at zero because there's no filled bar or column that would indicate that" ([datawrapper-academy.md](../sources/datawrapper-academy.md)). Urban releases marks that "do not use length or height as the primary encoding" ([urban-institute.md](../sources/urban-institute.md)). [Vega-Lite](../sources/vega-lite.md) goes the other way and forces zero on every quantitative positional scale regardless of mark.
 
-What is measured is one step away: [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) found truncating a **bar** axis moved size judgments 91%. Whether a stem behaves like a bar for that purpose is exactly the untested question. The by-mark scoping is a good default and it is `authority-asserted`; do not cite the truncation result as though it had been run on this form.
+What is measured is one step away: [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) found truncating a **bar** axis moved size judgments 91%. Whether a stem behaves like a bar for that purpose is exactly the untested question. The by-mark scoping is `authority-asserted`, and the truncation result was not run on this form.
 
 ## The failure mode it invites
 

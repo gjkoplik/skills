@@ -27,7 +27,7 @@ There are no participants in this paper. There is no task, no measurement of com
 So the Datasaurus can support:
 
 - *These summary statistics are compatible with radically different data.* True by construction, which is the strongest form of true available.
-- *Therefore plot your data before trusting a five-number summary.* A sound inference from the construction.
+- *Therefore data should be plotted before a five-number summary is trusted.* A sound inference from the construction.
 
 It cannot support:
 
@@ -35,9 +35,9 @@ It cannot support:
 - *Scatterplots produce better conclusions than summary tables.* Not measured.
 - *This is how often the problem occurs in real data.* Not measured, and by construction the datasets are adversarial rather than sampled.
 
-[inventory.md](../inventory.md) topic 50 already gets this right, marking the seaborn claim as evidence-backed and the Datasaurus separately as "a construction, not an experiment." Keep that split. When the claim you need is empirical, cite [Weissgerber et al. 2015](weissgerber-2015-beyond-bar-line.md), whose Fig 1 makes the same point with realistic data, real p-values from three different tests, and a 703-article prevalence estimate behind it. Use the Datasaurus for the slide.
+[inventory.md](../inventory.md) topic 50 already gets this right, marking the seaborn claim as evidence-backed and the Datasaurus separately as "a construction, not an experiment." The empirical counterpart is [Weissgerber et al. 2015](weissgerber-2015-beyond-bar-line.md), whose Fig 1 makes the same point with realistic data, real p-values from three different tests, and a 703-article prevalence estimate behind it.
 
-## Attribution, which is usually gotten wrong
+## Attribution
 
 The Datasaurus is **Alberto Cairo's**, not Matejka and Fitzmaurice's. The paper cites it as reference 4, a 2016 post on thefunctionalart.com titled "Download the Datasaurus: Never trust summary statistics alone; always visualize your data." What this paper contributes is using the datasaurus as the *seed* and generating eleven more datasets matching its statistics (x̄ = 54.26, ȳ = 47.83, sd_x = 16.76, sd_y = 26.93, Pearson's r = -0.06). The dinosaur is Cairo's; the Dozen is Matejka and Fitzmaurice's.
 
@@ -82,11 +82,11 @@ And the conclusion, which claims only what it should:
 
 > "We presented a technique for creating visually dissimilar datasets which are equal over a range of statistical properties. The outputs from our method can be used to demonstrate the importance of visualizing your data, and may serve as a starting point for new data anonymization techniques."
 
-"Can be used to demonstrate" is doing honest work in that sentence. The paper does not overclaim; the citation practice around it does.
+The paper does not overclaim; the citation practice around it does.
 
 ## Links
 
 - Code and datasets: [autodeskresearch.com/publications/samestats](https://www.autodeskresearch.com/publications/samestats)
-- [weissgerber-2015-beyond-bar-line.md](weissgerber-2015-beyond-bar-line.md), which you should cite instead when you need the same point with evidence attached
-- [evidence-class](../concepts/evidence-class.md). The Datasaurus is the cleanest example in this wiki of a vivid artifact that gets treated as an empirical result.
+- [weissgerber-2015-beyond-bar-line.md](weissgerber-2015-beyond-bar-line.md) — the same point with evidence attached
+- [evidence-class](../concepts/evidence-class.md). The Datasaurus is an example of a vivid artifact that gets treated as an empirical result.
 - [inventory.md](../inventory.md), topic 50

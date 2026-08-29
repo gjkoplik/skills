@@ -12,13 +12,13 @@ One bar per category running from a shared reference line, its length encoding t
 
 ## When to reach for it, and when not
 
-**Reach for it when** every item has a meaningful signed distance from one reference the reader already accepts, and which side of the line an item lands on is part of the message. The reference is typically zero, and the FT names the two others explicitly: "Typically the reference point is zero but it can also be a target or a long-term average" ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)).
+**The form applies where** every item has a meaningful signed distance from one reference the reader already accepts, and which side of the line an item lands on is part of the message. The reference is typically zero, and the FT names the two others explicitly: "Typically the reference point is zero but it can also be a target or a long-term average" ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)).
 
-Reach for the **diverging stacked** variant when each row is a set of ordered response categories and the split between two opposed halves is what the reader is comparing across rows.
+The **diverging stacked** variant applies where each row is a set of ordered response categories and the split between two opposed halves is what the reader is comparing across rows.
 
-**Do not reach for it when:**
+**Questions the form does not answer:**
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | How big is each of these? | [Bar chart](bar-chart.md) from zero. A deviation chart has thrown the level away |
 | Which is biggest, and in what order? | A sorted bar chart. Ranking |
@@ -55,13 +55,13 @@ The diverging stacked form differs in two slots:
 
 **That is a [stacked bar](stacked-bar.md) with two accumulation directions instead of one**, and it inherits the cost named there: only the segments touching the center start at a shared line, and every segment outside them floats at a different offset per row. [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md) measured that substitution directly on divided bars, "the average errors for length judgments are 40%-250% larger than those for position judgments." The measurement is on the divided bar; the step to this variant is structural, since splitting the accumulation into two directions changes how many segments sit on the shared line and not what happens to the ones that do not.
 
-**Where the neutral category goes is a decision the form forces on you.** A midpoint response has no side. Splitting it across the center, pushing it entirely to one side, breaking it out into a separate column, and dropping it are four different charts of one dataset. No source in this corpus rules between them. Whichever you pick, the chart should say which.
+**Where the neutral category goes is a decision the form forces.** A midpoint response has no side. Splitting it across the center, pushing it entirely to one side, breaking it out into a separate column, and dropping it are four different charts of one dataset. No source in this corpus rules between them, and the chart itself does not show which was done.
 
 ## Channels
 
 **Length from a shared reference line**, which for items on the same side of it is a reading of position along a common scale, inherited from [channels.md](../concepts/channels.md) with the usual caveat that the mapping from chart to channel is conjecture rather than measurement.
 
-**Comparing across the line is a different judgment and an untested one.** Two bars pointing in opposite directions from a common origin are not two bars from a common baseline, and no study in this corpus measures that comparison. `absence of evidence`. It is also the comparison this chart is usually drawn to invite, which is worth knowing before claiming the chart is accurate.
+**Comparing across the line is a different judgment and an untested one.** Two bars pointing in opposite directions from a common origin are not two bars from a common baseline, and no study in this corpus measures that comparison. `absence of evidence`. It is also the comparison this chart is usually drawn to invite.
 
 **The sign rides on direction**, doubled in hue almost always. Neither of those is a magnitude channel; the accuracy ordering scores nothing of the kind ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)). Hue used to mark which side an item is on is hue doing identity work, which is what it is good at.
 
@@ -73,7 +73,7 @@ What it can inherit is one link deep: the bar ends read as position along a comm
 
 ## What it is measurably bad at
 
-Nothing measured on this form. Two inherited exposures are real and worth naming separately, because they are usually collapsed into each other:
+Nothing measured on this form. Two inherited exposures, named separately because they are usually collapsed into each other:
 
 **Floating segments, in the stacked variant.** Inherited from [stacked-bar.md](stacked-bar.md) and measured on the divided bar: 40% to 250% more error than position. It applies to every segment not touching the center.
 
@@ -107,7 +107,7 @@ The nearest thing to a disagreement is filing rather than evidence: the FT calls
 
 - "The reference is the 2015-2019 average, and the subtitle says so." That the reader could not otherwise recover the choice follows from the structure; that saying it helps is convention with nothing measured behind it.
 - "Above and below differ in color as well as in direction." Redundant coding, [inventory](../inventory.md) topic 69, `authority-asserted`.
-- "The neutral responses are drawn as their own centered block rather than split." A defensible choice among four, none of them tested, and the point is to state which one you made.
+- "The neutral responses are drawn as their own centered block rather than split." A defensible choice among four, none of them tested.
 
 **Commonly repeated, and the evidence does not support it:**
 

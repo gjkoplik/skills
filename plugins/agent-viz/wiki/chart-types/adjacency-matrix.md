@@ -10,17 +10,17 @@ Nodes on both axes, a filled cell where an edge exists. The representation that 
 
 ## When to reach for it, and when not
 
-**Reach for it when** the graph is dense, or the display is static, or the question is about groups and clusters. It is the representation that cannot produce a hairball: density adds ink to distinct cells rather than overlapping marks.
+**The form applies where** the graph is dense, or the display is static, or the question is about groups and clusters. It is the representation that cannot produce a hairball: density adds ink to distinct cells rather than overlapping marks.
 
-**Choose the ordering deliberately, because it is the whole design.** A structural ordering (community, clustering, seriation) makes block structure visible. Alphabetical or insertion order is effectively random with respect to structure and produces a matrix that looks like static.
+The ordering is the design. A structural ordering (community, clustering, seriation) makes block structure visible. Alphabetical or insertion order is effectively random with respect to structure and produces a matrix that looks like static.
 
-**Do not reach for it when:**
+**Questions the form does not answer:**
 
-| The situation | Use instead |
+| The situation | Alternative |
 |---|---|
 | The question is about paths | [Node-link](node-link.md). Matrices lost path finding in every condition tested |
 | The graph is very sparse | [Node-link](node-link.md). The matrix is quadratic in node count regardless of edge count, so a sparse graph wastes the canvas |
-| You cannot choose a meaningful ordering | Reconsider. Without one, the form's main advantage is gone |
+| No meaningful ordering is available | Without one, the form's main advantage is gone |
 
 ## Structural decomposition
 
@@ -39,7 +39,7 @@ Nodes on both axes, a filled cell where an edge exists. The representation that 
 
 Position along two discrete non-aligned scales for identity, plus a fill channel for the cell.
 
-The fill sits near the bottom of the ordering if it encodes weight by lightness, and it is nowhere on it at all if it encodes mere presence, since presence is not a magnitude. This is a case where the ranking's exclusion of unordered channels matters: **a binary matrix asks no magnitude question of the reader**, so the channel evidence is silent on it.
+The fill sits near the bottom of the ordering if it encodes weight by lightness, and it is nowhere on it at all if it encodes mere presence, since presence is not a magnitude. The ranking excludes unordered channels: **a binary matrix asks no magnitude question of the reader**, so the channel evidence is silent on it.
 
 ## What it is measurably good at
 
@@ -83,7 +83,7 @@ The [crossover](network-topology.md#choosing-between-node-link-and-matrix). "Mat
 **Not defensible:**
 
 - ~~"Matrices beat node-link above twenty nodes."~~ True for static displays of random graphs at density 0.2 and above. Quoted as a general rule it is a scope-limited result stated as a universal one, and a larger sparse interactive study found the opposite.
-- ~~"These two rows are adjacent, so those nodes are similar."~~ Adjacency in the matrix is a property of the ordering you chose.
+- ~~"These two rows are adjacent, so those nodes are similar."~~ Adjacency in the matrix is a property of the chosen ordering.
 
 ## See also
 

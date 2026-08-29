@@ -52,11 +52,11 @@ And the conclusion the authors themselves draw, which is more measured than the 
 
 **Layout generality is unestablished.** "We may also question the extensibility of the results obtained in this evaluation to other node-link layout programs than the one we chose." The node-link condition is one layout algorithm (`neato`), not node-link diagrams in general.
 
-## The limit that matters most, and it is not stated in the paper
+## Two limits not stated in the paper
 
 **Density.** The tested range is 0.2 to 0.6. Real-world networks are overwhelmingly sparser than that by one to two orders of magnitude. A 256-node network with 1,090 edges, of the kind used in the later replication, has density around 0.03, which is below anything tested here.
 
-**Static displays.** No interaction. Both representations are substantially different artifacts once you can hover, filter and highlight, and the authors' own conclusion calls for exactly that on path tasks.
+**Static displays.** No interaction. Both representations are substantially different artifacts once hovering, filtering and highlighting are available, and the authors' own conclusion calls for exactly that on path tasks.
 
 These two facts are why the later work reaches a different answer without either study being wrong. See [okoe-2018.md](okoe-2018.md).
 

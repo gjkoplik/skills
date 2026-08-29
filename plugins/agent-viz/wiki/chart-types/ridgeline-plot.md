@@ -8,7 +8,7 @@ aliases: [Joyplot, Ridgeline plot]
 
 One kernel density estimate per group, each drawn as a filled curve on its own baseline, with the baselines stacked along a second axis at a spacing smaller than the curves are tall, so the fills overlap while every group shares one value axis.
 
-**Also called a joyplot**, which is the older, informal name and is usually traced to the Joy Division album cover. **"Ridgeline plot" is now vouched**: [Wilke](../sources/wilke-fundamentals.md) files the form under distributions and gives it a second reading in one sentence, "Ridgeline plots tend to work particularly well if want to show trends in distributions over time," which corroborates both of this page's memberships from a single source read at primary. **"Joyplot" is still unvouched by anything here.** The form also appears as a filing: Schwabish's *Better Data Visualizations* lists **Ridgeline** in its Distribution chapter, p. 179ff, in the same chapter as its two dedicated uncertainty sections ([schwabish.md](../sources/schwabish.md)). That membership is verified from the book's contents pages; nobody here has opened what he argues about the form, and this page cites the filing only. So read the definition above as this page's stipulation, and check it against any source later opened that defines the term.
+**Also called a joyplot**, which is the older, informal name and is usually traced to the Joy Division album cover. **"Ridgeline plot" is now vouched**: [Wilke](../sources/wilke-fundamentals.md) files the form under distributions and gives it a second reading in one sentence, "Ridgeline plots tend to work particularly well if want to show trends in distributions over time," which corroborates both of this page's memberships from a single source read at primary. **"Joyplot" is still unvouched by anything here.** The form also appears as a filing: Schwabish's *Better Data Visualizations* lists **Ridgeline** in its Distribution chapter, p. 179ff, in the same chapter as its two dedicated uncertainty sections ([schwabish.md](../sources/schwabish.md)). That membership is verified from the book's contents pages; nobody here has opened what he argues about the form, and this page cites the filing only. The definition above is this page's stipulation, unchecked against any source that defines the term.
 
 Where the stacking variable is time, which is its most common use, it is also a change-over-time chart, and it is the one form in that group whose vertical extent is a distribution rather than a value. It is indexed under [distribution](distribution.md) first because that is what each curve is.
 
@@ -16,18 +16,18 @@ It is a close relative of the [violin](violin-plot.md), which is the same estima
 
 ## When to reach for it, and when not
 
-**Reach for it when** there are many groups, the reader already knows the order over them (months, years, cohorts, an ordinal scale), each group has enough observations for a density estimate to be about the data rather than about the bandwidth, and the question is how the shape moves along that order. **The overlap is the reason to pick it.** It fits more groups into a figure than a grid of separate density plots of the same height, and the way it does that is by hiding part of every curve.
+The form is defined for the case where there are many groups, the reader already knows the order over them (months, years, cohorts, an ordinal scale), each group has enough observations for a density estimate to be about the data rather than about the bandwidth, and the question is how the shape moves along that order. **The overlap is what distinguishes it.** It fits more groups into a figure than a grid of separate density plots of the same height, and the way it does that is by hiding part of every curve.
 
 When the ordering variable is time, this is a change-over-time chart as much as a distribution one. The page is filed here only.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | What shape does this one variable have? | [Histogram](histogram.md). The stack buys nothing with one group |
-| Where is each group's median, and how wide is the middle? | [Box plot](boxplot.md). A ridgeline draws no quantile unless you add one on top |
+| Where is each group's median, and how wide is the middle? | [Box plot](boxplot.md). A ridgeline draws no quantile unless one is added on top |
 | How tall is each group's peak, exactly? | Nothing here. Peaks sit on per-group baselines and each is partly covered by the next curve |
-| I have five observations per group | Plot the five. A density over five points is a picture of the bandwidth. [Beeswarm](beeswarm-plot.md), or a strip plot |
+| There are five observations per group | The five observations, plotted. A density over five points is a picture of the bandwidth. [Beeswarm](beeswarm-plot.md), or a strip plot |
 | How many observations are in each group? | The ridgeline does not say, and per-group normalization actively hides it |
 | Are these groups different beyond chance? | The curve is the spread of the sample, not an interval about an estimate. See [distribution.md](distribution.md) on descriptive versus inferential |
 | The groups have to be compared precisely rather than surveyed | Small multiples of the same densities on one shared scale, with the overlap removed. No page here, and no study |
@@ -46,7 +46,7 @@ When the ordering variable is time, this is a change-over-time chart as much as 
 
 Four consequences follow from those slots. All are definitional and none is empirical.
 
-- **The overlap is specified, not incidental.** Baseline spacing and curve height are set independently, so the fraction of each curve that is covered is a parameter you chose. It does not appear anywhere in the output.
+- **The overlap is specified, not incidental.** Baseline spacing and curve height are set independently, so the fraction of each curve that is covered is a chosen parameter. It does not appear anywhere in the output.
 - **Occlusion is directional.** A curve hides the tail of the one behind it and not the reverse, so what is visible depends on draw order as well as on the data.
 - **Peak heights sit on nonaligned baselines.** Every group's density is measured from a different origin, which is a different reading from the value axis they all share.
 - **Everything the [violin](violin-plot.md) inherits from a kernel estimate applies here too**: the estimate places mass where no observation lies, bandwidth decides modality, and the normalization decides what height means. Equal-area-per-group makes a group of eight as tall as a group of eight hundred.
@@ -55,7 +55,7 @@ Four consequences follow from those slots. All are definitional and none is empi
 
 ## Channels
 
-**Value on position along a common scale**, shared by every group, which is the one strong channel on the chart. **Density on height above the group's own baseline**, which is position along a nonaligned scale once you compare one group's peak against another's. Both accuracy claims are inherited from [channels.md](../concepts/channels.md), which carries those two as separate ranks, and neither is restated here as a native finding. The mapping from this mark to those channels is conjecture in the source literature, as it is for every chart type.
+**Value on position along a common scale**, shared by every group, which is the one strong channel on the chart. **Density on height above the group's own baseline**, which is position along a nonaligned scale once one group's peak is compared against another's. Both accuracy claims are inherited from [channels.md](../concepts/channels.md), which carries those two as separate ranks, and neither is restated here as a native finding. The mapping from this mark to those channels is conjecture in the source literature, as it is for every chart type.
 
 **No study in this source set has decomposed a ridgeline into its cues**, the way [Skau & Kosara (2016)](../studies/skau-kosara-2016.md) did for the pie.
 
@@ -77,9 +77,9 @@ The one thing on the record is preference, not accuracy: [Claus Wilke](../people
 
 **Nothing measured.** Four exposures follow from the construction, and none needs an experiment to be true:
 
-- **Peak heights are not comparable across groups** unless you scaled by count and said so, and the drawing gives no sign of which normalization ran.
+- **Peak heights are not comparable across groups** unless the scaling was by count and stated, and the drawing gives no sign of which normalization ran.
 - **Part of every curve is hidden**, including tails, which is where a distribution's interesting behavior often is.
-- **Two knobs, both invisible in the output.** Bandwidth decides modality; overlap decides how much of the answer you can see. The [violin](violin-plot.md) has one of those, the [histogram](histogram.md) has one, and this form has both.
+- **Two knobs, both invisible in the output.** Bandwidth decides modality; overlap decides how much of the answer is visible. The [violin](violin-plot.md) has one of those, the [histogram](histogram.md) has one, and this form has both.
 - **Density can spill past a bound.** A quantity that cannot go below zero can be drawn with visible mass there. Same mechanism as on the violin page, and the transfer is by construction rather than by measurement.
 
 ## What is contested
@@ -88,11 +88,11 @@ Nothing. There is no record here to disagree with itself, and there is barely a 
 
 ## The failure mode it invites
 
-**Ordering the groups by a statistic and then reading a trend off the ordering.** Sort groups by their own medians and the ridge marches smoothly in one direction, for any data at all. That is true by construction. Whether a reader takes it for a finding is untested, and the fix is cheap: order by something exogenous, calendar month or cohort, and say what the order is.
+**Ordering the groups by a statistic and then reading a trend off the ordering.** Sort groups by their own medians and the ridge marches smoothly in one direction, for any data at all. That is true by construction. Whether a reader takes it for a finding is untested. The exogenous alternative is an order like calendar month or cohort, stated.
 
-**Tuning the overlap until it looks right.** The parameter is a styling control in every implementation and an analysis control in effect, since it decides how much of each distribution the reader can see. The mitigation is the one [inventory.md](../inventory.md) topic 52 states for bin width and bandwidth: choose it explicitly and confirm the claim survives a different choice. `authority-asserted`, and it applies here twice over.
+**Tuning the overlap until it looks right.** The parameter is a styling control in every implementation and an analysis control in effect, since it decides how much of each distribution the reader can see. The mitigation [inventory.md](../inventory.md) topic 52 states for bin width and bandwidth is an explicit choice, confirmed against a different one. `authority-asserted`, and it applies here twice over.
 
-**Twenty groups arriving as texture.** Every group added shortens the height available to it, and past some point the ridge stops carrying shape and becomes a pattern. Where that point sits has not been measured. [inventory.md](../inventory.md) topic 60 is the general version, from Wilke: past the point where marks stop being readable, change idiom instead of pushing the current one further. `authority-asserted`.
+**Twenty groups arriving as texture.** Every group added shortens the height available to it, and past some point the ridge stops carrying shape and becomes a pattern. Where that point sits has not been measured. [inventory.md](../inventory.md) topic 60 is the general version, from Wilke: past the point where marks stop being readable, the idiom changes rather than being pushed further. `authority-asserted`.
 
 **A confident set of shapes over almost no data.** The estimate produces a smooth curve at n = 5 and at n = 5,000, and the median smallest group size Weissgerber et al. measured across 703 published articles was 4. Nothing on a ridgeline carries n.
 
@@ -121,6 +121,6 @@ Nothing on this page qualifies. No study here touches the form. The one inherita
 
 - [violin-plot.md](violin-plot.md) — the same kernel estimate, mirrored and given a slot of its own, and where the one experiment touching this family lives
 - [histogram.md](histogram.md) — the same question for a single group, with a bin width instead of a bandwidth
-- [beeswarm-plot.md](beeswarm-plot.md) — the other end of the same trade: every observation drawn, no estimate, no knob you declared
+- [beeswarm-plot.md](beeswarm-plot.md) — the other end of the same trade: every observation drawn, no estimate, no declared knob
 - [distribution.md](distribution.md) — the group, and the sample-size gate that decides most of this
 - [../concepts/channels.md](../concepts/channels.md) — position along a common scale and position along nonaligned scales, and this chart uses one of each

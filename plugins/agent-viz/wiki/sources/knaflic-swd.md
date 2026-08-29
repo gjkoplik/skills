@@ -3,6 +3,7 @@ type: source
 status: primary-read
 status_partial: true
 retrieved: 2026-08-23
+author: cole-nussbaumer-knaflic
 ---
 
 # Knaflic, *Storytelling with Data*
@@ -19,9 +20,9 @@ Chapters 2 through 10 were not read. The section-level structure below comes fro
 
 **This retires the roll-call's self-declared weakest link.** The previous state was a chapter list from search aggregation, with the note that "any gloss on chapter 5's contents is from background familiarity, not a retrieved quote, and is unvouched." The chapter list is now confirmed against the publisher's own contents page, and chapter 5's four sections are confirmed from the index.
 
-**What it is good for.** Come back here with: *what am I actually asking this audience to do, and what should I delete*. Knaflic is the best source in the canon on the pre-figure questions (who, what, how), on decluttering as a **named procedure** rather than a taste, and on narrative structure. She is the source a practitioner is most likely to be quoting when they say a bar is missing something basic.
+**What it is good for.** The question it answers: *what am I actually asking this audience to do, and what should I delete*. Knaflic is the best source in the canon on the pre-figure questions (who, what, how), on decluttering as a **named procedure** rather than a taste, and on narrative structure. She is the source a practitioner is most likely to be quoting when they say a bar is missing something basic.
 
-**What it does not settle.** No evidence base of its own: this is design authority, and the inventory labels it that way. The frame is business communication (slides, dashboards, stakeholders), so there is nothing on statistical honesty (uncertainty, intervals, distribution versus summary), nothing on log or nonlinear scales, nothing on maps, and nothing on reproducibility or export. And see [refutations.md](../refutations.md): the "gray plus one accent" rule usually attributed here has **no controlled study** behind it.
+**What it does not settle.** No evidence base of its own: this is design authority, and the inventory labels it that way. The frame is business communication (slides, dashboards, stakeholders), so there is nothing on statistical honesty (uncertainty, intervals, distribution versus summary), nothing on log or nonlinear scales, nothing on maps, and nothing on reproducibility or export. And per [refutations.md](../refutations.md), the "gray plus one accent" rule usually attributed here has **no controlled study** behind it.
 
 ---
 
@@ -35,7 +36,7 @@ Chapters 2 through 10 were not read. The section-level structure below comes fro
 
 **The ten chapters and their page numbers are identical across both editions.** The anniversary edition adds a "reflecting on the past 10 years" front piece and three appendices: A, the narrative arc (257); B, your role in storytelling with data (277); C, more model visuals (293).
 
-One trap: Wiley serves the **anniversary-edition** excerpt files from the **first edition's** product page. The "Chapter 01 (PDF)" linked off the 2015 listing carries a 2025 typesetting date and references *storytelling with you* (2022) in its text. The contents PDF on that page is the genuine first-edition one (bibliography 257, index 261). If you cite page numbers, say which edition.
+One trap: Wiley serves the **anniversary-edition** excerpt files from the **first edition's** product page. The "Chapter 01 (PDF)" linked off the 2015 listing carries a 2025 typesetting date and references *storytelling with you* (2022) in its text. The contents PDF on that page is the genuine first-edition one (bibliography 257, index 261). A page-number citation therefore has to name the edition.
 
 ## Structure
 
@@ -85,7 +86,7 @@ On audience:
 
 > Avoid general audiences, such as "internal and external stakeholders" or "anyone who might be interested"
 
-Her reason, in the same sentence: trying to communicate to too many people with disparate needs at once leaves you unable to communicate to any one of them as effectively as you could have.
+Her reason, in the same sentence: communicating to too many people with disparate needs at once leaves the communicator unable to reach any one of them as effectively.
 
 On having a point at all:
 
@@ -97,12 +98,12 @@ On the temptation to show only supporting data, which is a stronger statement th
 
 ## Where its advice is contested
 
-- **Gray plus one accent.** The rule everyone attributes here is authority-asserted and a search for a controlled experiment testing one-accent against two-saturated-color emphasis returned nothing. See [refutations.md](../refutations.md). The index confirms a "using color sparingly, 118 to 120" section exists, which is consistent with the attribution, but **that passage was not read**, so do not put a quotation mark around any statement of the rule.
+- **Gray plus one accent.** The rule everyone attributes here is authority-asserted and a search for a controlled experiment testing one-accent against two-saturated-color emphasis returned nothing. See [refutations.md](../refutations.md). The index confirms a "using color sparingly, 118 to 120" section exists, which is consistent with the attribution, but **that passage was not read**, so no statement of the rule here carries quotation marks.
 - **Decluttering.** Chapter 3's remove-the-border, remove-the-gridlines, remove-the-data-markers list is the practical form of data-ink maximization, and the empirical record on that is contested in both directions. See [tufte.md](tufte.md) and [refutations.md](../refutations.md). Gillan & Richman found removals to be **element-conditional**, with some removals hurting reading speed.
 
 ## Inventory topics it grounds
 
-Per [roll-call.md](../roll-call.md), do not recompute: 1, 3, 4, 5, 6, 29, 37, 41, 47, 65, 66, 67, 71, 79, 85, 86, 87, 89.
+Per [roll-call.md](../roll-call.md), not recomputed here: 1, 3, 4, 5, 6, 29, 37, 41, 47, 65, 66, 67, 71, 79, 85, 86, 87, 89.
 
 One addition the roll-call could not have made: the anniversary edition's **Appendix A, the narrative arc** (257 to 275) is new material bearing on topics 85 through 87. The roll-call predates that edition.
 

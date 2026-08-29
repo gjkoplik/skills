@@ -10,11 +10,11 @@ One point per observation, positioned by two quantitative variables on two axes.
 
 ## When to reach for it, and when not
 
-**Reach for it when** each row of your data is a unit carrying both values, the question is about the shape of the joint distribution (trend, spread, outliers, clusters, gaps), and there are enough points that a shape is a meaningful thing to look at. A scatterplot of six points shows the reader six points; any claim about association from those six is a statistical claim the chart does not make.
+The form is defined for the case where each row is a unit carrying both values, the question is about the shape of the joint distribution (trend, spread, outliers, clusters, gaps), and there are enough points that a shape is a meaningful thing to look at. A scatterplot of six points shows the reader six points; any claim about association from those six is a statistical claim the chart does not make.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | How big is this one thing, or which is biggest? | Bar or dot plot. Position along a common scale, sorted, instead of a hunt through a cloud |
 | How did this variable move over time? | Line chart. Time on an axis rather than implied |
@@ -22,7 +22,7 @@ One point per observation, positioned by two quantitative variables on two axes.
 | Two series in different units, both over time | Two stacked panels sharing an x-axis, or a [connected scatterplot](connected-scatterplot.md) |
 | The points overplot into a solid mass | A binned density plot, hexbin or 2D histogram. Once marks overlap, the ink stops being one-per-observation |
 | A third variable also matters | Color or faceting first. [Bubble chart](bubble-chart.md) only if the third variable is quantitative and rough precision will do |
-| Does x cause y? | Nothing does. The chart shows co-movement, and the causal claim is yours to make and defend separately |
+| Does x cause y? | Nothing does. The chart shows co-movement; the causal claim sits outside it |
 
 ## Structural decomposition
 
@@ -43,7 +43,7 @@ The empty transform slot is what distinguishes it from most of this wiki. A bar 
 
 That inheritance covers less than it looks like. What position accuracy buys is *reading one point's values off the axes*, and that is almost never why the chart was drawn. The trend, the tightness, the outliers and the clusters are shape judgments, and [Cleveland & McGill](../studies/cleveland-mcgill-1984.md) restrict their ordering to accuracy of value extraction explicitly, p. 531: "We do not argue that this accuracy of quantitative extraction is the only aspect of a graph for which one might want to develop a theory." See the [scope limit](../concepts/channels.md#what-the-ranking-is-not-about).
 
-**The elementary task nearest to reading a scatterplot is direction**, meaning the slope between a pair of points, and the paper does discuss it directly. Direction sits at the **same rank as length and angle**, with the authors' note that "at the moment there is not enough information to separate the ties." Two consequences worth keeping: direction is not one of the accurately read channels, and its standing relative to length and angle has never been established. Anyone ordering those three is reading a later table, and [that one calls itself](../people/william-cleveland.md) "a tentative working hypothesis."
+**The elementary task nearest to reading a scatterplot is direction**, meaning the slope between a pair of points, and the paper does discuss it directly. Direction sits at the **same rank as length and angle**, with the authors' note that "at the moment there is not enough information to separate the ties." Two consequences follow: direction is not one of the accurately read channels, and its standing relative to length and angle has never been established. Any ordering of those three comes from a later table, and [that one calls itself](../people/william-cleveland.md) "a tentative working hypothesis."
 
 ## What it is measurably good at
 
@@ -66,7 +66,7 @@ That inheritance covers less than it looks like. What position accuracy buys is 
 
 **Reading a trend line as the finding and the points as texture.** The fitted line arrives from the same function call as the plot and looks like a conclusion. `authority-asserted`.
 
-The sharpest illustration is the Datasaurus, which belongs here with its status attached: [Matejka & Fitzmaurice (2017)](../studies/matejka-2017-datasaurus.md) is a **construction, not an experiment**. No participants, no task, no measurement of comprehension. It establishes that one set of summary statistics is compatible with radically different pictures, which is true by construction, and it does not establish anything about what readers do. Full treatment on the [correlation index](correlation.md#the-failure-mode-this-group-invites).
+The Datasaurus belongs here with its status attached: [Matejka & Fitzmaurice (2017)](../studies/matejka-2017-datasaurus.md) is a **construction, not an experiment**. No participants, no task, no measurement of comprehension. It establishes that one set of summary statistics is compatible with radically different pictures, which is true by construction, and it does not establish anything about what readers do. Full treatment on the [correlation index](correlation.md#the-failure-mode-this-group-invites).
 
 **Letting the software pick the aspect ratio for a slope-comparison figure.** The default is a choice about which differences the reader can see, made by whoever wrote the plotting library.
 
@@ -93,4 +93,4 @@ The sharpest illustration is the Datasaurus, which belongs here with its status 
 
 - [correlation.md](correlation.md) — the group argument, including the aspect-ratio and zero-baseline positions in full
 - [bubble-chart.md](bubble-chart.md) — the same chart with a third variable on area, and what that costs
-- [../concepts/channels.md](../concepts/channels.md) — the evidence this page inherits, and the scope limit that matters most here
+- [../concepts/channels.md](../concepts/channels.md) — the evidence this page inherits, and the scope limit that comes with it

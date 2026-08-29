@@ -10,16 +10,16 @@ A scatterplot with a third quantitative variable encoded on the area of each poi
 
 ## When to reach for it, and when not
 
-**Reach for it when** you already want a [scatterplot](scatterplot.md), a third quantity genuinely belongs on the same marks, and rough is good enough for it. The third variable should be the one whose exact values matter least, because it is going onto the least accurately read of the channels anyone has measured. Population behind a per-capita scatter is the archetype: it tells the reader which points to take seriously without ever needing to be read as a number.
+**The form applies where** a [scatterplot](scatterplot.md) is already the right frame, a third quantity genuinely belongs on the same marks, and rough is good enough for it. The third variable is the one whose exact values matter least, because it goes onto the least accurately read of the channels anyone has measured. Population behind a per-capita scatter is the archetype: it tells the reader which points to take seriously without ever needing to be read as a number.
 
-**Do not reach for it when:**
+**Questions the form does not answer:**
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
-| How big is the third variable, exactly? | Put it on position. A bar chart, or a second panel with it on an axis |
+| How big is the third variable, exactly? | Position. A bar chart, or a second panel with it on an axis |
 | The third variable is categorical | Color or shape. Size encodes an unordered category badly and implies an ordering that is not there |
 | Which of these two bubbles is bigger? | A sorted bar or dot plot. Area is measured as worse than angle, and both as much worse than position |
-| The points already overplot | Bubbles make overplotting worse by construction, since each mark grows. A binned density plot, or drop the third variable |
+| The points already overplot | Bubbles make overplotting worse by construction, since each mark grows. A binned density plot, or the third variable dropped |
 | Nothing quantitative is riding on size | A plain [scatterplot](scatterplot.md). Size that encodes nothing is decoration that reads as an encoding |
 
 ## Structural decomposition
@@ -51,7 +51,7 @@ What survives without measurement, because it follows from the construction: thr
 
 **Value extraction on the size variable.** Area is the least accurate of the channels tested in [Heer & Bostock](../studies/heer-bostock-2010.md), below angle and well below position. Inherited, and the strongest reason to treat the size variable as context rather than as content.
 
-**Moving a reader's judgment when the area encoding exaggerates.** [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) included a bubble-chart condition, labeled area-as-quantity, in a between-subjects Mechanical Turk experiment. Mean response on a five-point "how much bigger" scale went from 1.71 in the control to 2.71 in the distorted condition, a 58.5% increase, Mann-Whitney U = 1121, Z = 3.08, p = 0.0007, r = 0.34. Check the scope before citing it:
+**Moving a reader's judgment when the area encoding exaggerates.** [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) included a bubble-chart condition, labeled area-as-quantity, in a between-subjects Mechanical Turk experiment. Mean response on a five-point "how much bigger" scale went from 1.71 in the control to 2.71 in the distorted condition, a 58.5% increase, Mann-Whitney U = 1121, Z = 3.08, p = 0.0007, r = 0.34. The scope of that result:
 
 - **The true values were printed on every chart.** The effect is not a failure to read numbers, which also means this is evidence *against* labeling as the remedy rather than for it.
 - **It cannot be used to rank distortions.** Bubble/area produced the smallest of the three exaggeration effects, but chart type and distortion are confounded one-to-one and the paper never varies the distortion within a chart type. "Bubbles distort less than truncated bars" is not in this result.
@@ -61,7 +61,7 @@ What survives without measurement, because it follows from the construction: thr
 
 **Nothing in this source set.** No study here disagrees with another about bubble charts, which is `absence of evidence` and not agreement.
 
-The open question worth naming, since it decides the design: whether readers judge these marks by area or partly by diameter. [Heer & Bostock](../studies/heer-bostock-2010.md) offer a side-length proxy as a hypothesis for their rectangle result and say plainly that "additional experimentation is needed to form an accurate perceptual model." Nobody has run the equivalent decomposition on bubbles. Scaling by area is the defensible default because it is the one that makes the encoding proportional, not because a study has shown readers use it.
+The open question, and it decides the design: whether readers judge these marks by area or partly by diameter. [Heer & Bostock](../studies/heer-bostock-2010.md) offer a side-length proxy as a hypothesis for their rectangle result and say plainly that "additional experimentation is needed to form an accurate perceptual model." Nobody has run the equivalent decomposition on bubbles. Scaling by area is the defensible default because it is the one that makes the encoding proportional, not because a study has shown readers use it.
 
 ## The failure mode it invites
 

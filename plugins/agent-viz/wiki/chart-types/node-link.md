@@ -10,17 +10,17 @@ Nodes as points, edges as lines between them, positions assigned by a layout alg
 
 ## When to reach for it, and when not
 
-**Reach for it when** the graph is sparse, the reader can interact with it, and the question is about paths, connectivity or local topology. That combination is where it measured best.
+The form is defined for the case where the graph is sparse, the reader can interact with it, and the question is about paths, connectivity or local topology. That combination is where it measured best.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The situation | Use instead |
+| The situation | Alternative |
 |---|---|
 | Dense graph, or a static image | [Adjacency matrix](adjacency-matrix.md). Node-link degrades with density, measured across seven tasks |
 | The question is about groups or clusters | [Adjacency matrix](adjacency-matrix.md) with a structural ordering |
 | Two networks need comparing | [Hive plot](hive-plot.md) or another fixed layout. Force-directed layouts are not comparable, by construction |
 | The question is answerable from a per-node table | A bar chart or a table. "Which node has the highest degree" is a sort, not a drawing |
-| You want it to look like something | Nothing. This is how hairballs get made |
+| The goal is for it to look like something | Nothing. This is how hairballs get made |
 
 ## Structural decomposition
 
@@ -49,7 +49,7 @@ Consequence: **the same data produces a different picture on every run** unless 
 
 Qualified by the authors: the advantage holds for short paths, since the task "is difficult to carry out visually when the distance between the endpoints is greater than two or three arcs."
 
-**Topology, connectivity and memorability on sparse real networks with interaction.** [Okoe et al.](../studies/okoe-2018.md): "NL is better than AM for questions about network topology, connectivity, and memorability tasks." Read the underlying counts, which are 5 wins and 3 losses out of 10 topology tasks. A real effect, a modest one.
+**Topology, connectivity and memorability on sparse real networks with interaction.** [Okoe et al.](../studies/okoe-2018.md): "NL is better than AM for questions about network topology, connectivity, and memorability tasks." The underlying counts are 5 wins and 3 losses out of 10 topology tasks. A real effect, a modest one.
 
 ## What it is measurably bad at
 
@@ -82,7 +82,7 @@ Qualified by the authors: the advantage holds for short paths, since the task "i
 
 **Not defensible:**
 
-- ~~"These three visible clusters are communities in the network."~~ Position is not an encoding here. A force-directed layout of random data produces apparent clusters, so structure read off proximity is not a finding. Run a community detection and encode the result if you want to claim it.
+- ~~"These three visible clusters are communities in the network."~~ Position is not an encoding here. A force-directed layout of random data produces apparent clusters, so structure read off proximity is not a finding. A community detection, encoded, is what would support the claim.
 - ~~"Node-link is fine here, it is only 80 nodes."~~ Node count is not the variable. Density is.
 
 ## See also

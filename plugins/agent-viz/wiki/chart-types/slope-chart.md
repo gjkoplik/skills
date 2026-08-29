@@ -10,11 +10,11 @@ Two parallel value axes, one per period, with each category drawn as a single se
 
 ## When to reach for it, and when not
 
-**Reach for it when** there are exactly two time points or two conditions, more categories than a reader would follow across a full line chart, and the question is which rose, which fell, and which changed places. It is a change-over-time chart and a ranking chart at once, which is the reason it exists.
+The form is defined for exactly two time points or two conditions, more categories than a reader would follow across a full line chart, and a question about which rose, which fell, and which changed places. It is a change-over-time chart and a ranking chart at once, which is the reason it exists.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | What happened in between? | [Line chart](line-chart.md). Two points assert nothing about the path |
 | How did the order move across six periods? | [Bump chart](bump-chart.md). Still no study, but there is a page |
@@ -47,7 +47,7 @@ The nearest stimulus in the corpus is [Talbot et al. (2012)](../studies/talbot-2
 
 ## What it is measurably bad at
 
-Nothing measured. The inherited exposure is real and worth naming: the vertical scale is a free parameter that changes every slope on the chart at once, exactly as on a [line chart](line-chart.md#what-it-is-measurably-bad-at), where that manipulation was measured and moved reader judgments substantially.
+Nothing measured. The inherited exposure is real: the vertical scale is a free parameter that changes every slope on the chart at once, exactly as on a [line chart](line-chart.md#what-it-is-measurably-bad-at), where that manipulation was measured and moved reader judgments substantially.
 
 ## What is contested
 
@@ -55,7 +55,7 @@ Nothing. There is no record here to disagree with itself.
 
 ## The failure mode it invites
 
-**Two cherry-picked endpoints.** The form makes the choice of periods invisible, and with two points there is no shape to contradict the story. Whether the message survives a third point is a question only you can ask. `authority-asserted`, and it follows from the structure rather than from taste.
+**Two cherry-picked endpoints.** The form makes the choice of periods invisible, and with two points there is no shape to contradict the story. Whether the message survives a third point is not recoverable from the figure. `authority-asserted`, and it follows from the structure rather than from taste.
 
 **Too many categories.** Segments converge and labels collide in the middle, and the crossings that were the point become a tangle. Practitioner convention with no measured threshold, from the same people who recommend the form: Schwabish and Knaflic both reach for slope charts routinely ([jonathan-schwabish.md](../people/jonathan-schwabish.md), [cole-nussbaumer-knaflic.md](../people/cole-nussbaumer-knaflic.md)) and neither has an experiment behind the advice.
 
@@ -74,11 +74,11 @@ Nothing else in this bucket is native to the form.
 
 **Commonly repeated, and the evidence does not support it:**
 
-- ~~"A slope chart shows the change accurately."~~ Nobody has measured what readers take from one. Say instead that it shows the direction of change and the reordering, which is what it is built to show.
-- ~~"A steeper segment means a bigger change."~~ Only relative to the scale you chose, and only if both columns share it. Steepness is a property of the drawing as much as of the data, which is the standing hazard of this whole group.
+- ~~"A slope chart shows the change accurately."~~ Nobody has measured what readers take from one. What it is built to show is the direction of change and the reordering.
+- ~~"A steeper segment means a bigger change."~~ Only relative to the scale that was chosen, and only if both columns share it. Steepness is a property of the drawing as much as of the data, which is the standing hazard of this whole group.
 
 ## See also
 
 - [line-chart.md](line-chart.md) — the same chart with more than two x positions, and where the evidence is
-- [change-over-time.md](change-over-time.md) — the group, and the free parameters it hands you
+- [change-over-time.md](change-over-time.md) — the group, and the free parameters it leaves open
 - [../concepts/channels.md](../concepts/channels.md) — including why slope sits among the tasks the ordering could not separate

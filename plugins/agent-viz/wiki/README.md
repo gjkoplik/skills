@@ -4,46 +4,19 @@ One page per thing. A source gets a page, a study gets a page, an idea that took
 
 A later reader can pick up any single thread without rerunning the research, and can see **what each source is actually good for** rather than a flat citation list.
 
-## Page schema
+## What is in here
 
-**Facts live in frontmatter. Argument lives in the body.** They are not allowed to be the same thing, because for a long time they were, and it cost accuracy.
+Pages carry their facts in frontmatter and their argument in the body. The schema, the status labels and the page templates are authoring rules and live in the `agent-viz-wiki` skill, not here; `validate.py` enforces them.
 
-```yaml
----
-type: source | study | person | concept | chart-type | index
-status: primary-read | secondary-only | not-reached   # research pages only
-status_partial: true            # present when coverage is not uniform
-retrieved: YYYY-MM-DD
-author: <people-page slug>      # where a source has a known author
-relationships: [part-to-whole]  # chart-type pages only
----
-```
+What a reader needs from this page is the index below and the honest account of the holes at the bottom.
 
-**Why this replaced a prose header.** The status label used to live in a sentence, and the sentence had at least four shapes (`**Status.**`, `**Status:**`, a `## Status` heading, and split labels like "`primary-read` for the papers, `secondary-only` for the book"). Three separate attempts to count the corpus produced three different answers, all wrong, because they were regexes over English. The count below is now a parse.
-
-`author` exists because **independence is the wiki's most-used argument** ("three unrelated organizations", "a fourth independent source") and nothing recorded who wrote what. That gap produced a real error: the Urban Institute style guide and Jonathan Schwabish were counted as two voices when he is behind both. See [sources/urban-institute.md](sources/urban-institute.md).
-
-**Status is not decoration.**
-
-- `primary-read`: someone opened the actual source and quotes come from a local extraction.
-- `secondary-only`: reached through abstracts or summaries. Treat quotes as unvouched.
-- `not-reached`: could not get to it. The page says where it looked.
-- `status_partial: true`: the page covers several artifacts and did not reach them all equally. The `status` field then records the **principal** subject, and the body says which parts are which. This is honest rather than sloppy: a page can legitimately be primary-read on the papers and secondary-only on the books. The count is in the state line below rather than repeated here, because the two disagreed within a day of being written.
-
-**Body, by page type.**
-
-- **Source, study, person:** *what it is good for*, *what it does not settle*, and a **"How this was read"** paragraph. That last one is not the status label restated and must never be trimmed as a duplicate: frontmatter carries the *label*, the paragraph carries the *provenance*. Which artifact was opened, how it was extracted, what was rendered to page images for want of a text layer, what was left unopened, and for a split status which label covers which material. Delete it and every `primary-read` in the corpus becomes unauditable, which would remove the one thing separating this wiki from a confident summary.
-- **Concept:** keeps the full four-field block, including **What it is**, because a concept's slug does not convey it (`floor-and-ceiling` needs a sentence in a way `wilke-fundamentals` does not). Its `status` describes how the idea was arrived at, usually synthesis by this project, so it stays prose in the body and takes no frontmatter label. **These pages are correct as they stand; do not "fix" them to match the research pages.**
-- **Chart-type and index:** no header block at all. One line of definition under the title, then straight to the decision, because that reader has already arrived with data in front of them and does not need to be sold on the page.
-- **Directory READMEs** take no frontmatter. A navigation stub takes no header block either. A README that is really the design document for its tier may keep *what it is good for* and *what it does not settle*, but never a `Status` field: coverage belongs in a coverage table, where it can be checked, not in prose that drifts.
+**Status is not decoration.** `primary-read` means someone opened the actual source and the quotes come from a local extraction. `secondary-only` means abstracts or summaries, and its quotes are unvouched. `not-reached` means the page says where it looked. `status_partial` means the page covers several artifacts and did not reach them all equally, with `status` recording the principal subject.
 
 Several claims here changed when someone finally opened the primary. One cited paper turned out to contain arithmetically impossible numbers, and a web summarizer once returned, inside quotation marks, the reverse of a paper's stated conclusion. A `secondary-only` page has not earned the same trust as a `primary-read` one.
 
-**Current state: 49 `primary-read`, 6 `secondary-only`, 0 `not-reached`, of which 23 are `status_partial`.** Counted across `sources/` (17), `studies/` (23) and `people/` (15) by parsing frontmatter. `concepts/` and `chart-types/` are synthesis and structure, and are not counted.
+**Current state: 51 `primary-read`, 6 `secondary-only`, 0 `not-reached`, of which 23 are `status_partial`.** Parsed from frontmatter across `sources/`, `studies/` and `people/` by `validate.py`, which fails if this line drifts. `concepts/` and `chart-types/` are synthesis and structure, and are not counted.
 
-Two earlier versions of this line said 27 and then 50. Both were derived by pattern-matching prose and both were wrong, which is the whole argument for the schema above.
-
-One reachability lesson, recorded because it cost a wrong label: Krzywinski et al. (2012) is paywalled with no open-access deposit and was written up as `not-reached` on that basis. A local copy existed the whole time. **Check for a local copy before recording a source as unreachable.**
+This is the only count in the wiki, and it exists because a machine enforces it.
 
 ## Start here
 
@@ -99,6 +72,7 @@ One reachability lesson, recorded because it cost a wrong label: Krzywinski et a
 | [okoe-2018.md](studies/okoe-2018.md) | `primary-read` | The interactive real-network replication that comes out the other way. |
 | [krzywinski-2012-hive-plots.md](studies/krzywinski-2012-hive-plots.md) | `primary-read` | Hive plots. Rules are structural, so no node metadata is needed. **No user study.** |
 | [nollenburg-2023-computing-hive-plots.md](studies/nollenburg-2023-computing-hive-plots.md) | `primary-read` | Hive plot construction is three known-hard problems. Also no user study. |
+| [gutwin-2023-chord-vs-sankey.md](studies/gutwin-2023-chord-vs-sankey.md) | `primary-read` | Sankey beat chord on time, errors, effort and preference. **The performance effects are tiny and mostly wear off by the fourth look.** |
 
 ## Concepts
 
@@ -114,9 +88,8 @@ One page per chart type in [chart-types/](chart-types/README.md), stored **flat*
 
 | | |
 |---|---|
-| Indexes written (12) | All nine FT relationships: [part-to-whole](chart-types/part-to-whole.md), [magnitude](chart-types/magnitude.md), [distribution](chart-types/distribution.md), [correlation](chart-types/correlation.md), [change-over-time](chart-types/change-over-time.md), [deviation](chart-types/deviation.md), [ranking](chart-types/ranking.md), [spatial](chart-types/spatial.md) and [flow](chart-types/flow.md). Plus three of ours: [network-topology](chart-types/network-topology.md), [tables](chart-types/tables.md) and [qualitative](chart-types/qualitative.md) |
-| Type pages written | 40 |
-| Name resolution | [aliases.md](chart-types/aliases.md), which resolves 103 chart names to the page that covers them, or says plainly that nothing here does. Every mapping is marked as source-recorded, page-stipulated, or in circulation only |
+| Indexes written | All nine FT relationships: [part-to-whole](chart-types/part-to-whole.md), [magnitude](chart-types/magnitude.md), [distribution](chart-types/distribution.md), [correlation](chart-types/correlation.md), [change-over-time](chart-types/change-over-time.md), [deviation](chart-types/deviation.md), [ranking](chart-types/ranking.md), [spatial](chart-types/spatial.md) and [flow](chart-types/flow.md). Plus three of ours: [network-topology](chart-types/network-topology.md), [tables](chart-types/tables.md) and [qualitative](chart-types/qualitative.md) |
+| Name resolution | [aliases.md](chart-types/aliases.md) maps a chart name to the page covering it, or states that nothing here does. Every mapping is marked as source-recorded, page-stipulated, or in circulation only |
 | Indexing nothing yet | [tables](chart-types/tables.md) and [qualitative](chart-types/qualitative.md). Both come from Schwabish's catalog, which has a chapter where the FT has no slot, and [sources/schwabish.md](sources/schwabish.md) argues they are real holes. Both are `secondary-only` on the book's prose |
 
 ## Checks
@@ -137,10 +110,10 @@ Stated plainly, because a wiki that hides its holes is worse than a short one.
 
 **Accessibility should be imported, not derived.** The four accessibility topics here map onto eight of Chartability's fifty heuristics, one of them only partially; the mapping is in [sources/chartability.md](sources/chartability.md). Its page carries the license analysis and a six-step adoption plan.
 
-**Chart-type coverage is broad and thin, which is the correct shape.** Forty type pages and twelve indexes exist, and every FT relationship now has an index. **31 of the 40 state that no study in this corpus tests the form**. Named types still without a page include the horizon graph, arc diagram, flow map, Gantt, cycle plot, stem-and-leaf, candlestick, ECDF, Venn and Euler diagrams, and the isotype and pictogram, which [chart-types/waffle-chart.md](chart-types/waffle-chart.md) deliberately treats as neighbors rather than as the same form.
+Chart-type coverage is broad and thin. Every FT relationship has an index, and **most type pages state that no study in this corpus tests the form**; the per-page position is in the coverage table at [chart-types/README.md](chart-types/README.md). Named types still without a page include the horizon graph, arc diagram, Gantt, cycle plot, stem-and-leaf, candlestick, ECDF, Venn and Euler diagrams, and the isotype and pictogram, which [chart-types/waffle-chart.md](chart-types/waffle-chart.md) deliberately treats as neighbors rather than as the same form.
 
-**Chart names are not stable, and the tier cannot yet resolve them.** Several wave-three pages had to record that the name they are filed under is unvouched by any source in this corpus, and three genuine collisions are flagged and unresolved: "mosaic plot" (a business chart and a contingency-table display), "heat map" (a categorical grid, a geographic density surface, and loosely a choropleth), and "range plot" (two measurements, or an interval around an estimate). A name-resolution index is the next piece of work.
+**Chart names are not stable, and the tier cannot yet resolve them.** Several type pages record that the name they are filed under is unvouched by any source in this corpus, and three genuine collisions are flagged and unresolved: "mosaic plot" (a business chart and a contingency-table display), "heat map" (a categorical grid, a geographic density surface, and loosely a choropleth), and "range plot" (two measurements, or an interval around an estimate). A name-resolution index is the next piece of work.
 
-**The chart-type tier is mostly `authority-asserted` by necessity.** The graphical-perception literature tests proportional judgment almost exclusively, so groups whose job is something else inherit very little. Only [pie-and-donut.md](chart-types/pie-and-donut.md) rests on a study that decomposed the type itself. Deviation, ranking, spatial and flow have no experiment behind any of their forms at all, and their pages say so rather than filling the gap.
+**The chart-type tier is mostly `authority-asserted` by necessity.** The graphical-perception literature tests proportional judgment almost exclusively, so groups whose job is something else inherit very little. Only [pie-and-donut.md](chart-types/pie-and-donut.md) rests on a study that decomposed the type itself. **Deviation, ranking and spatial still have no experiment behind any of their forms**, and their pages say so rather than filling the gap. Flow left that list on 2026-08-29 with [gutwin-2023-chord-vs-sankey.md](studies/gutwin-2023-chord-vs-sankey.md), which compares two of its forms against each other without touching the volume-reading claim they all rest on.
 
 **Everything is matplotlib-tested.** No claim is made about how the checks translate.

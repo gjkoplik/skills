@@ -8,17 +8,17 @@ retrieved: 2026-08-23
 
 Michael Correll, Michael Gleicher. *Error Bars Considered Harmful: Exploring Alternate Encodings for Mean and Error.* IEEE TVCG 20(12):2142-2151, December 2014. DOI [10.1109/TVCG.2014.2346298](https://doi.org/10.1109/TVCG.2014.2346298).
 
-Three crowdsourced experiments comparing the standard bar-chart-with-error-bars against three symmetric alternatives (modified box plot, gradient plot, violin plot) on inferential tasks. The finding that matters: the bar glyph creates a **containment metaphor** that biases judgment, and the bias survives even when you move the numbers out of the chart and into text.
+Three crowdsourced experiments comparing the standard bar-chart-with-error-bars against three symmetric alternatives (modified box plot, gradient plot, violin plot) on inferential tasks. The bar glyph creates a **containment metaphor** that biases judgment, and the bias survives even when the numbers are moved out of the chart and into text.
 
 **How this was read.** Authors' preprint PDF retrieved from [graphics.cs.wisc.edu/Papers/2014/CG14/Preprint.pdf](https://graphics.cs.wisc.edu/Papers/2014/CG14/Preprint.pdf) and re-extracted locally with `pdftotext -layout`. The file carries the line "Authors' preprint version. To appear in IEEE Transactions on Visualization and Computer Graphics, Dec. 2014." Page numbering differs from the journal version.
 
 ## What it is good for
 
-The evidence behind "the encoding of uncertainty is a design decision with measurable consequences, not a formatting detail." Cite it for within-the-bar bias specifically, and for the result that alternate encodings cost a general audience nothing despite being unfamiliar. It is also the paper that establishes bar-plus-error-bar as the modal encoding in the visualization community's own publications, which makes the finding awkward in a useful way.
+The evidence behind "the encoding of uncertainty is a design decision with measurable consequences, not a formatting detail." It covers within-the-bar bias specifically, and the result that alternate encodings cost a general audience nothing despite being unfamiliar. It is also the paper that establishes bar-plus-error-bar as the modal encoding in the visualization community's own publications, which makes the finding awkward in a useful way.
 
 ## What it does not settle
 
-It does not tell you *which* alternative to use, and says so. It does not test decision-making with real stakes. And the title overstates the paper's own conclusion, which is comparative rather than absolute.
+It does not settle *which* alternative to use, and says so. It does not test decision-making with real stakes. And the title overstates the paper's own conclusion, which is comparative rather than absolute.
 
 ## The finding
 
@@ -97,7 +97,7 @@ Four further limits they state:
 
 [Belia et al. 2005](belia-2005-ci-misconceptions.md), which this paper cites, shows that expert readers misread error bars. This paper shows that part of the problem is the glyph rather than the reader, and that a general audience does better with an unfamiliar encoding than with the familiar broken one. The two papers point in different remedial directions: Belia's authors ask for better training and clearer conventions, these authors ask for a different mark.
 
-The within-the-bar result is also worth putting next to [Skau et al. 2015](skau-2015-embellished-bars.md), which finds that the bar's *strong horizontal top* is load-bearing for absolute value estimation. Both papers are about the bar glyph carrying more perceptual meaning than its designers intend, in opposite directions.
+The within-the-bar result sits alongside [Skau et al. 2015](skau-2015-embellished-bars.md), which finds that the bar's *strong horizontal top* is load-bearing for absolute value estimation. Both papers are about the bar glyph carrying more perceptual meaning than its designers intend, in opposite directions.
 
 ## Links
 
@@ -106,3 +106,4 @@ The within-the-bar result is also worth putting next to [Skau et al. 2015](skau-
 - [cumming-2007-error-bars.md](cumming-2007-error-bars.md)
 - [skau-2015-embellished-bars.md](skau-2015-embellished-bars.md)
 - [inventory.md](../inventory.md), topic 49, which already quotes this paper's abstract
+- [../people/michael-correll.md](../people/michael-correll.md) — the first author, and the other rules his name gets attached to

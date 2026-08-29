@@ -14,7 +14,7 @@ The 1801 text is the third edition of the *Atlas*, which carries the long introd
 
 Plates viewed directly: Plate 1 of the 1786 *Atlas* (imports and exports of England), the Scotland bar chart from the same volume, and the *Statistical Breviary* comparison plate in its French edition, all from Wikimedia Commons scans.
 
-**What they are good for.** Come back here when you want a figure that **argues**, and want to see what that looked like before anyone had decided it was bad taste. Playfair is also the cleanest case in this wiki of an inventor who documented his own reasoning, his own doubts, and one of his own failures, in the same book as the charts.
+**What they are good for.** A figure that **argues**, and what that looked like before anyone had decided it was bad taste. Playfair is also the cleanest case in this wiki of an inventor who documented his own reasoning, his own doubts, and one of his own failures, in the same book as the charts.
 
 **What they do not settle.** Whether any of it works. His central claim, that the eye judges proportion better than any other organ, is an assertion he never tested, and the parts of it that were eventually tested came out mixed. See below.
 
@@ -30,7 +30,7 @@ The plates survive, and I looked at them.
 
 **Axis placement, which is not modern.** The value scale runs down the **right** edge, labeled `Millions` with a `£` at the foot. Time runs along the bottom, outside the frame. The *Breviary* plate puts the value scale on **both** edges. On the bar chart the scale is along the **top** and the categories are on the **right**.
 
-**Labeling on the mark, never a legend.** Plate 1 letters `Line Representing Exports` along the red curve itself and `Line Representing Imports into England` along the yellow one, both following the slope of the line. The blue band between them is not called a band; it is stamped `BALLANCE IN FAVOUR OF ENGLAND` in spaced capitals arcing through the fill. The chart names the quantity it wants you to take away, inside the quantity.
+**Labeling on the mark, never a legend.** Plate 1 letters `Line Representing Exports` along the red curve itself and `Line Representing Imports into England` along the yellow one, both following the slope of the line. The blue band between them is not called a band; it is stamped `BALLANCE IN FAVOUR OF ENGLAND` in spaced capitals arcing through the fill. The chart names the quantity it wants the reader to take away, inside the quantity.
 
 **A one-line footer that explains the encoding in words.** Plate 1: *"The Divisions at the Bottom, express YEARS, & those on the Right hand, MILLIONS of POUNDS."* The bar chart: *"The Upright divisions are Ten Thousand Pounds each. The Black Lines are Exports the Ribbed Lines Imports."* Every plate teaches its own reading in a sentence.
 
@@ -38,7 +38,7 @@ The plates survive, and I looked at them.
 
 **Sorting.** The bar chart is sorted by magnitude with the **smallest at the top** and the longest bar at the bottom, under a right-hand column headed `Names of Places.` in italic.
 
-**Typography and furniture.** Titles above the frame in engraved roman capitals mixed with italic, plus an explanatory subtitle line. Plate number top right (`Pl. 25`). Engraver's credit bottom left (`J. Ainslie Sculp.`, `Gravé par Adam`). Publication line bottom right (`Published as the Act directs, 20th Augst 1785`). A cross-reference to the book centered at the foot (`to Face Page 3d`). If you want a plate to read as his, that furniture is doing as much work as the chart.
+**Typography and furniture.** Titles above the frame in engraved roman capitals mixed with italic, plus an explanatory subtitle line. Plate number top right (`Pl. 25`). Engraver's credit bottom left (`J. Ainslie Sculp.`, `Gravé par Adam`). Publication line bottom right (`Published as the Act directs, 20th Augst 1785`). A cross-reference to the book centered at the foot (`to Face Page 3d`). In a plate that reads as his, that furniture is doing as much work as the chart.
 
 **Zero baselines, always**, and on the *Breviary* plate a genuinely strange compound construction: each nation is a circle whose **area** is its territory, with a vertical line to the left for population, a vertical line to the right for revenue, and a dashed line joining the two tops. The slope of that dashed line **is** the argument. Where it rises left to right, the nation is taxed above its population.
 
@@ -74,7 +74,7 @@ Playfair's own stated goal is attention, not accuracy:
 
 > "The human mind has been so acted upon for a number of years past, and the same subjects have been so frequently brought forward, that it is necessary to produce novelty, but above all to aim at facility, in communicating information; for the desire of obtaining it has diminished in proportion as disgust and satiety have increased."
 
-The *Breviary* plate's population-versus-revenue construction is an argument that the British are overtaxed relative to other nations. That reading is standard in the Nightingale literature too, where [Hugh Small](https://www.york.ac.uk/depts/maths/histstat/small.htm) uses Playfair as the prescriptive-but-not-causal counterexample: his graphics compare, and then leave you asking what would follow from changing anything.
+The *Breviary* plate's population-versus-revenue construction is an argument that the British are overtaxed relative to other nations. That reading is standard in the Nightingale literature too, where [Hugh Small](https://www.york.ac.uk/depts/maths/histstat/small.htm) uses Playfair as the prescriptive-but-not-causal counterexample: his graphics compare, and then leave the reader asking what would follow from changing anything.
 
 ### The famous sentence is an assertion, and the literature has since carved it up
 

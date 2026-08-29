@@ -18,7 +18,7 @@ Two things. First, a **prevalence number** rather than an opinion: how often doe
 
 ## What it does not settle
 
-It is a review plus an argument, not a reader experiment. Nobody was tested. It establishes that the practice is widespread and gives a principled case against it; it does not measure what readers actually conclude from either figure type. For that, use [Correll & Gleicher](correll-gleicher-2014-error-bars-harmful.md). Its scope is also narrow by design: physiology, one quarter of 2014.
+It is a review plus an argument, not a reader experiment. Nobody was tested. It establishes that the practice is widespread and gives a principled case against it; it does not measure what readers actually conclude from either figure type. That is [Correll & Gleicher](correll-gleicher-2014-error-bars-harmful.md)'s territory. Its scope is also narrow by design: physiology, one quarter of 2014.
 
 ## The finding
 
@@ -34,7 +34,7 @@ It is a review plus an argument, not a reader experiment. Nobody was tested. It 
 
 Of the papers using bar graphs, 77.6% showed mean with SE against 15.3% showing mean with SD.
 
-**Sample sizes, which is the part that makes the prevalence damning.** The minimum sample size for any group shown in a figure had a median of 4, interquartile range 3 to 6. The maximum sample size for any group had a median of 10, interquartile range 6 to 15. In 75% of papers reviewed, the minimum group size in a figure was between two and six.
+**Sample sizes.** The minimum sample size for any group shown in a figure had a median of 4, interquartile range 3 to 6. The maximum sample size for any group had a median of 10, interquartile range 6 to 15. In 75% of papers reviewed, the minimum group size in a figure was between two and six.
 
 **Statistical practice:** 78.1% of studies ran only parametric analyses, 13.6% ran both parametric and nonparametric, 3.8% ran only nonparametric. More than half of the authors who ran nonparametric analyses still presented means.
 
@@ -44,7 +44,7 @@ The argument the numbers support:
 
 > "many different data distributions can lead to the same bar or line graph. The full data may suggest different conclusions from the summary statistics."
 
-Their three named problems are worth keeping distinct, because only the first is the familiar one:
+Their three named problems, of which only the first is the familiar one:
 
 1. **Many distributions map to the same graph.** Their Fig 1 shows four datasets whose means and SEs are all within 0.5 units of the same bar graph: one symmetric, one driven by a single outlier, one possibly bimodal, one with n = 3.
 2. **Bar graphs of paired data lie about the design.** They "erroneously suggest that the groups being compared are independent and provide no information about whether changes are consistent across individuals." Their Fig 2 shows three paired datasets with means and SEs differing by less than 0.3 units and completely different patterns of individual change, including one where every subject moves the same way and one that splits into responders and nonresponders.
@@ -52,13 +52,13 @@ Their three named problems are worth keeping distinct, because only the first is
 
 ## SE versus SD as a visual choice
 
-The most reusable paragraph in the paper:
+From the paper:
 
 > "Showing the SE rather than the SD magnifies the apparent visual differences between groups. This effect is exacerbated when the groups being compared have different sample sizes, which is common in physiology and in other disciplines."
 
 Since SE = SD / √n, two groups with equal SE and unequal n have unequal SD, and SE additionally "obscures any effect of unequal sample size." The choice of bar type does rhetorical work whether or not the author intends it.
 
-And the framing that gives the paper its bite:
+And the paper's framing of the reader's position:
 
 > "bar and line graphs are 'visual tables' that transform the reader from an active participant into a passive consumer of statistical information. Without the opportunity for independent appraisal, the reader must rely on the authors' statistical analyses and interpretation of the data."
 
@@ -95,6 +95,6 @@ They also flag, against their own recommendation's chances, that ARRIVE guidelin
 ## Links
 
 - [cumming-2007-error-bars.md](cumming-2007-error-bars.md), whose rule 4 arrives at the same place from expert guidance rather than a review
-- [matejka-2017-datasaurus.md](matejka-2017-datasaurus.md), the constructed illustration of "many distributions, one summary." This paper's Fig 1 does the same thing with realistic data and real p-values, which makes it the better citation when you need evidence rather than a demo.
+- [matejka-2017-datasaurus.md](matejka-2017-datasaurus.md), the constructed illustration of "many distributions, one summary." This paper's Fig 1 does the same thing with realistic data and real p-values, so it is the version with evidence attached rather than a demonstration.
 - [correll-gleicher-2014-error-bars-harmful.md](correll-gleicher-2014-error-bars-harmful.md)
 - [inventory.md](../inventory.md), topics 49 and 50 (show the distribution, not only the summary)

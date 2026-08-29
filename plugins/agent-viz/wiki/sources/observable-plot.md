@@ -19,21 +19,21 @@ The *Scales* chapter of Observable Plot, a JavaScript charting library built on 
 
 ## Turbo as the default continuous scheme
 
-This is the sentence that makes the page worth a wiki entry:
+From the chapter:
 
 > "The default color scheme, turbo, was chosen primarily to ensure high-contrast visibility. Color schemes such as blues make low-value marks difficult to see against a white background, for better or for worse."
 
 Restated earlier in the chapter without hedging: "The default quantitative color scale type is linear, and the default scheme is turbo."
 
-Three things to take from it.
+Three things in it.
 
-**The reasoning is orthogonal to the usual objection.** The standard anti-rainbow case is about perceptual ordering: a rainbow ramp is not monotone in lightness, so equal data steps do not look equal, it bands at the kinks, and it collapses in grayscale. matplotlib makes exactly that case and names turbo among the maps that "would make it impossible for a viewer to interpret the information in a plot once it is printed in grayscale" (see [matplotlib.md](matplotlib.md)). Plot does not dispute any of it. It optimizes a different quantity: **whether a low-value mark is visible at all** against white. On a scatterplot of small dots, a sequential blues ramp puts your smallest values one step from invisible.
+**The reasoning is orthogonal to the usual objection.** The standard anti-rainbow case is about perceptual ordering: a rainbow ramp is not monotone in lightness, so equal data steps do not look equal, it bands at the kinks, and it collapses in grayscale. matplotlib makes exactly that case and names turbo among the maps that "would make it impossible for a viewer to interpret the information in a plot once it is printed in grayscale" (see [matplotlib.md](matplotlib.md)). Plot does not dispute any of it. It optimizes a different quantity: **whether a low-value mark is visible at all** against white. On a scatterplot of small dots, a sequential blues ramp puts the smallest values one step from invisible.
 
 **"For better or for worse" is the authors conceding the trade.** It is not a claim that turbo is perceptually superior; it is a claim that visibility is the binding constraint for Plot's typical output, which is small marks on a white page in a notebook.
 
 **Plot's default marks are small.** The radius default (below) is three pixels at the first quartile. A three-pixel dot in light blue on white is a defect. Read that way, the turbo default is downstream of the mark-size default, not an independent color opinion.
 
-This is why [refutations.md](../refutations.md) treats the rainbow ban as **contested at the edges**. The right phrasing for a quality bar is not "never rainbow" but something closer to: rainbow schemes fail on perceptual ordering and on grayscale, and if you pick one anyway, say what you bought with it. Small-mark visibility is a real reason. Habit is not.
+This is why [refutations.md](../refutations.md) treats the rainbow ban as **contested at the edges**. What the record supports is scoped rather than flat: rainbow schemes fail on perceptual ordering and on grayscale, and small-mark visibility is a stated reason for choosing one anyway. Habit is not a stated reason.
 
 ## Zero is opt-in, which is the opposite of Vega-Lite
 
@@ -60,13 +60,13 @@ Square-root scaling for radius, so area is proportional to value. This is invent
 ## Other defaults with reasoning attached
 
 - **Clamping comes with a warning**, which Vega-Lite's does not: "Clamping is useful for focusing on a subset of the data while ensuring that extreme values remain visible, but use caution: **clamped values may need an annotation to avoid misinterpretation.**" That is inventory topic 56 stated properly by a library, in one line, and it is the better citation for that topic than anything currently in the roll-call.
-- **Diverging scales pivot at zero and default to `RdBu`.** "Diverging color scales are intended to show positive and negative values, or more generally values above or below some pivot value... The pivot defaults to zero, but you can change it with the pivot option, which should ideally be a value near the middle of the domain." Note that Plot makes the midpoint explicit and typed, which is inventory topic 32. Note also that red-blue is the semantic default here and in seaborn's `vlag`/`icefire`, on the cold/hot association.
+- **Diverging scales pivot at zero and default to `RdBu`.** "Diverging color scales are intended to show positive and negative values, or more generally values above or below some pivot value... The pivot defaults to zero, but you can change it with the pivot option, which should ideally be a value near the middle of the domain." Plot makes the midpoint explicit and typed, which is inventory topic 32. Red-blue is the semantic default here and in seaborn's `vlag`/`icefire`, on the cold/hot association.
 - **Categorical default is `observable10`,** a house palette, distinct from `ordinal`. The type distinction matters: "The categorical scale type is also supported; it is equivalent to ordinal except as a color scale, where it provides a different default color scheme." Ordered categories get an ordered scheme; unordered ones get distinct hues. Inventory topic 23, enforced by the type name.
 - **Rounding is on for band and point scales, off for quantitative,** with a stated failure mode: "Use caution with high-cardinality ordinal domains... as rounding can lead to 'wasted' space or even zero-width bands."
 - **Log scales cannot cross zero,** same as Vega-Lite, and the base "only affects the axis ticks and not the scale's behavior".
-- **Type inference reads one value.** "Plot assumes that your data is consistently typed, so inference is based solely on the first non-null, non-undefined value." A numeric column with a string in row one silently becomes ordinal. Worth knowing before debugging a mysterious band scale.
+- **Type inference reads one value.** "Plot assumes that your data is consistently typed, so inference is based solely on the first non-null, non-undefined value." A numeric column with a string in row one silently becomes ordinal, which surfaces later as an unexplained band scale.
 
-## An aside worth keeping
+## One aside
 
 > "If you wish to encode a quantitative value without hue, consider using opacity rather than color (e.g., use Plot.dot's strokeOpacity instead of stroke)."
 

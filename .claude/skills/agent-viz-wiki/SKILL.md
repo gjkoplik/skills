@@ -70,6 +70,44 @@ Full treatment in [wiki/concepts/evidence-class.md](../../../plugins/agent-viz/w
 - **No process narration.** Which page was written first, what is a "shape-setter", what remains uncovered, how the research went: none of it helps anyone choose a chart. Coverage and status live in `wiki/chart-types/README.md` and in `wiki/README.md`. Keep them off pages that exist to support a decision.
 - **Give the reader the sentences.** Pages carry a "justifying the choice" section: what is defensible and evidence-backed, what is defensible with the label said out loud, and what is commonly repeated and unsupported. The refutations are the project's most valuable output and they are wasted if they only appear in `refutations.md`.
 
+## Page templates
+
+**Source, study and person pages** carry the four-field header block: what it is good for, what it does not settle, and the "How this was read" provenance paragraph, under the frontmatter.
+
+**Concept pages** keep that block *and* add **What it is**, because a concept's slug does not convey it (`floor-and-ceiling` needs a sentence in a way `wilke-fundamentals` does not). Their `status` describes how the idea was arrived at, usually synthesis by this project, so it stays prose in the body and takes no frontmatter label. **The existing concept pages are correct as they stand; do not "fix" them to match the research pages.**
+
+**Directory READMEs take no frontmatter**, and a navigation stub takes no header block. A README that is really the design document for its tier may keep *what it is good for* and *what it does not settle*, but never a `Status` field: coverage belongs in a coverage table where it can be checked, not in prose that drifts.
+
+**Chart-type and index pages carry no header block at all.** That block answers "should I open this page?", and this reader has already arrived with data in front of them. One line of definition under the title, then straight to the decision.
+
+**Index pages** (one per relationship) carry: is this group the right frame, and how to tell; what the group costs, in channel terms; how to choose a form within it; how to justify the choice; the failure mode the group invites; the types it indexes.
+
+**Type pages** carry these eight `##` sections, in this order, spelled exactly as `validate.py` checks for them:
+
+1. **When to reach for it, and when not.** The conditions under which the form is the right answer, and the nearest alternative when it is not. A table of "the reader's actual question → the alternative" is the usual shape.
+2. **Structural decomposition.** The six slots below.
+3. **Channels.** Which perceptual channel the mark puts the reader on, primary and secondary, linking to `concepts/channels.md`. Flagged as conjecture unless a study decomposed this specific type.
+4. **What it is measurably good at.** Only claims traceable to a study. Cited, with the effect.
+5. **What it is measurably bad at.** Same bar.
+6. **What is contested.** Where the record disagrees with itself, both sides named.
+7. **The failure mode it invites.** What goes wrong in practice. Usually `authority-asserted`, and labeled as such.
+8. **Justifying the choice.** The defensible sentences, and the commonly repeated ones the evidence does not support.
+
+The six slots, borrowed from Wilkinson's *Grammar of Graphics* by way of ggplot2's layered restatement:
+
+| Slot | The question |
+|---|---|
+| Data | What is one row |
+| Transform | What statistic is computed before drawing, if any |
+| Geometry | What mark is drawn |
+| Scale | How values map to the mark's properties |
+| Coordinates | What space the mark is placed in |
+| Guides | What axes, legends and reference marks are required to read it |
+
+**These slots carry no evidence label.** They are definitional: they describe what the chart *is* and assert nothing empirical. Labeling them would dilute the labels on rows that are actually claims.
+
+The decomposition earns its place by collapsing near-duplicates. A coxcomb is a bar chart with polar coordinates. An area chart is a line chart with a fill. Stacked and grouped bars differ in one transform slot. Without it, the tier becomes sixty pages holding ten pages of content.
+
 ## Chart types: flat storage, index pages
 
 Type pages live **flat** in `wiki/chart-types/`. Grouping happens in index pages that point at them.
@@ -78,7 +116,9 @@ A data relationship is a **view** of a chart, not a property of it: a stacked ba
 
 - Every type page declares its own `**Relationships.**` line in the header, so an index is checkable against the pages rather than maintained by hand.
 - Every type page carries the six-slot structural decomposition (data, transform, geometry, scale, coordinates, guides). Those slots are definitional and carry no evidence label.
-- **The inheritance rule: evidence attaches to channels, not to chart types.** No controlled study has tested a chart type as an artifact in the world. A type page inherits accuracy claims from [wiki/concepts/channels.md](../../../plugins/agent-viz/wiki/concepts/channels.md) with a link; it does not restate them as native findings. Where a study *has* decomposed a specific type, that is a genuine type-level finding and belongs on the page.
+- **The inheritance rule: evidence attaches to channels, not to chart types.** No controlled study has tested a chart type as an artifact in the world; they test stripped judgment tasks on stimuli that resemble one. Every accuracy claim on a type page is therefore a two-step inference whose first step (this chart puts the reader on that channel) is conjecture in the source literature, flagged as such by Cleveland and McGill every time they make it. A type page may **inherit** an accuracy claim from [wiki/concepts/channels.md](../../../plugins/agent-viz/wiki/concepts/channels.md) with a link. It may not **restate** it as a native finding, and it may not present the mapping as settled when the source calls it a conjecture. Where a study *has* decomposed a specific type, that is a genuine type-level finding and belongs on the page; `pie-and-donut.md` is the model case and currently the only one.
+- **The reader is someone standing in front of a dataset who has to pick a form and defend the pick.** Usually an agent, sometimes a person. Every section on every page earns its place by helping with that, or it comes out.
+- **Taxonomy is an index, not a home, and that has consequences for editing.** Nobody's taxonomy gets amended: the FT's nine stay as published and this wiki's own indexes sit alongside them rather than inside. Paths stay stable, so reclassifying a type is an edit to an index rather than a file move that breaks inbound links. And a bespoke form that fits no relationship still gets a page; it just appears in fewer indexes, which is information rather than a filing problem.
 
 ## Source-extraction rules, each written in blood
 
@@ -90,6 +130,54 @@ These exist because a specific failure produced confidently wrong output that ne
 - **A scanned PDF with no text layer is still readable.** Render the pages to images and read them. That is a stronger primary read than OCR. Decrypt or re-render if a reader refuses the file.
 - **PDF text layers misattribute table values.** Interleaved metric blocks and vertically centered cells both slide labels onto the wrong rows. Cross-check any table against the prose, or use an HTML rendering.
 - **Text layers silently drop characters**, including comparison operators and `±`, which is the difference between a bound and its negation.
+
+## The wiki records facts. It does not give advice.
+
+**This is the rule that gets violated most, and it is the reason for most rewrites.** The wiki is a vault of findings and the links between them, built so an agent can navigate it fast. That agent forms opinions, weighs trade-offs and makes recommendations to its user. **The wiki does none of those things.** It says what was measured, by whom, with what limits, and it stops.
+
+The worked example: a wiki page never says "don't use pie charts." It says what the studies found, which is that pies are not as bad as the received wisdom claims. The advice is downstream and belongs to the consumer.
+
+Three mechanical tests, applied to every sentence:
+
+- **No second person and no imperatives.** "Label the volumes", "read the size of that", "cite it to 2.1 or later", "reach for it when", "say that the gap is small or you are overstating it" are all advice. The factual forms are "the volumes are unlabeled on this chart", "the effect size is 0.001", "the criterion entered in WCAG 2.1".
+- **No exhortation or scolding.** "worth carrying forward", "that is the number to design against", "read strictly it says X, read loosely it gets cited as Y", "anyone quoting this is off by 7x". State the finding and the discrepancy; the reader draws the conclusion.
+- **Delete the bolded lead-in. If no fact is lost, it was advertising.** A lead-in is the claim itself, or a label that names *which* thing follows. The superlative frame is banned outright: "the sharpest statement of this is X", "the limit that matters most", "the interesting direction". Say the thing.
+
+  **A label has to name the thing, not its category.** "**Density.**" and "**The zero baseline.**" identify what the paragraph is about. "**The trap.**", "**Caveat.**", "**The facts.**" and "**Note.**" announce that a thing of some kind is coming, which the next clause was going to say anyway. The one exception is a **repeated field**: where every comparable page carries the same label in the same position, it is functioning as a column name and earns its place. `roll-call.md`'s per-source "**Caveat.**" and the "**The tell.**" line on every person page are fields. A single "**The trap:**" in running prose is an announcement, and it goes.
+
+**Worked examples, all of them real and all written after the rule above existed.** The abstract test does not stop this on its own, so match against these shapes:
+
+| Written | Why it fails | Fixed |
+|---|---|---|
+| "**The sharpest statement of this limit is a position paper, and it names the missing evidence.** Bertini, Correll & Franconeri argue against the assumption that…" | Ranks the source, promises what follows, then the next sentence delivers all of it. Every fact in the lead-in is restated immediately. | Delete the lead-in. Open on "Bertini, Correll & Franconeri argue…" |
+| "Status: measured, and **much smaller than the sentence sounds**." | A remark about how a sentence reads, in a field whose job is the evidence's status. | "Status: supported, at effect sizes of 0.02 and 0.001 against the paper's own 0.01 threshold for small." |
+| "This is **the newest claim on the page and the only one here** that is genuinely supported by its primary." | The wiki narrating its own page composition. A reader wants the claim, not its position in the file. | "The primary supports the claim." |
+| "…[Okoe et al. (2018)](x.md), **a few entries above**." | Page-layout narration. The link already does this, and it survives reordering. | Delete the clause. |
+| "**Both halves are load-bearing.**" / "the FT gloss is ten words" | Admiring a quote instead of spending it, and "load-bearing" worn as a hard hat. Keep that term for its literal sense: an element the thing breaks without, like a shared scale or a channel nothing else duplicates. | Say what the second clause *means*. |
+| "**The entry exists because** the abstract invites an overstatement…" | Explaining why the entry is here rather than saying the thing. | "What the abstract does not carry is the size of it." |
+
+**Sections whose names sound like advice still hold facts.** "When to reach for it, and when not" is the conditions under which the form is defined to work and the evidence for them. "Justifying the choice" is what the evidence supports, what it does not, and what is commonly claimed without support. Both are statements about the record, phrased in the third person.
+
+## The wiki changelog
+
+**Release cadence does not apply here.** The wiki changelog is calendar dated by the work that produced the entry, so a sweep writes its own `## vYYYY.MM.DD` heading on the day it runs. Nothing installs against a wiki date and no version pins to it; the plugin's own changelog is where releases live. Do not wait for a release, and do not park work under `## Unreleased`.
+
+Open the entry with one line naming what produced it, for example "The results of a dream run: the weekly research sweep, plus a corpus-wide pass converting the wiki from advice-voice to record-voice."
+
+**Entries are one line each, and they are short.** The changelog answers *what does the wiki now know* at a glance. It is not a place to restate the finding: the page holds that, and the entry links to it. A reader who wants the numbers clicks through.
+
+- Good: "Flow group has its first experiment: [gutwin-2023-chord-vs-sankey.md](...). Sankey beat chord on time, errors and preference; effects are small and wear off with familiarity."
+- Bad: the same thing across four sentences with the effect sizes, the sample, the retrieval story and a cross-reference to another study's pattern.
+
+Group under **Added**, **Changed** and **Corrected**. If a section has nothing in it, omit the heading.
+
+## No self-referential counts
+
+**A page never counts the wiki.** "40 type pages, 12 indexes", "43 of the 103 names it resolves", "31 of the 40 report no study", "resolves 107 chart names". These are maintenance burden with no reader value: they rot on every edit, and nobody navigating the corpus needs a total. Describe coverage in words ("most type pages report no study in this corpus") or not at all.
+
+**Never narrate the bookkeeping either.** "An earlier version of this line said 31 of 40 while the table held 27" is the wiki talking about its own edit history at a reader who came for a fact. Corrections to *claims* are recorded, in `refutations.md` and the changelog. Corrections to counts are not corrections, they are cleanup, and they leave no trace.
+
+The one exception is the `Current state:` line in `wiki/README.md`, which exists because `validate.py` parses and enforces it. A count with a machine behind it cannot rot silently. No other count gets that protection, so no other count is written down.
 
 ## House prose style
 

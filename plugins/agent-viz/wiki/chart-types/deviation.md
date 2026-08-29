@@ -4,7 +4,7 @@ type: index
 
 # Deviation
 
-Signed distance from a reference point: how far each item sits above or below the thing you are measuring it against, and on which side of it.
+Signed distance from a reference point: how far each item sits above or below the thing it is measured against, and on which side of it.
 
 ## Is deviation the right frame, and how to tell
 
@@ -12,19 +12,19 @@ The FT's definition of this family does more than name it ([ft-visual-vocabulary
 
 > "Emphasise variations (+/-) from a fixed reference point. Typically the reference point is zero but it can also be a target or a long-term average. Can also be used to show sentiment (positive/neutral/negative)."
 
-**The reference point is a free parameter of the chart, and nothing on the chart shows the reader that you picked it.** That is the argument for treating this as a group.
+**The reference point is a free parameter of the chart, and nothing on the chart shows the reader that it was picked.** That is the argument for treating this as a group.
 
 **Not everyone agrees this is a category.** Schwabish's scheme has no Deviation in it at all. *Better Data Visualizations* files Diverging Bar in chapter 4, Comparing Categories, and [schwabish.md](../sources/schwabish.md) puts it flatly: "Deviation and Flow have no home in his scheme." The memberships there are verified from the book's contents pages; what the book argues about any type is unread. Two practitioner taxonomies descended from the same 2014 poster disagree about whether a diverging bar is a deviation chart or a comparison chart. `authority-asserted` on both sides, and it is a useful reminder that the group is a retrieval aid rather than a fact about the chart.
 
 Three tests.
 
-**Is there a reference the reader already accepts?** Zero, a budget, a published target, a long-run average, the national rate, last year. If the caption has to argue for the reference, the reference is carrying the claim and the chart is illustrating it. Sometimes that is exactly the job. It should be a decision rather than a library default.
+**Is there a reference the reader already accepts?** Zero, a budget, a published target, a long-run average, the national rate, last year. If the caption has to argue for the reference, the reference is carrying the claim and the chart is illustrating it. Sometimes that is exactly the job. It is a decision rather than a library default.
 
-**Does the reader need the difference, or the level?** Plotting a deviation throws the base away. Two items both at +4 might be 104 and 4004, and the chart cannot tell them apart. If the level matters too, you need a magnitude chart with a reference line drawn on it, or both charts.
+**Does the reader need the difference, or the level?** Plotting a deviation throws the base away. Two items both at +4 might be 104 and 4004, and the chart cannot tell them apart. Where the level matters too, the form is a magnitude chart with a reference line drawn on it, or both charts.
 
-**Does the sign mean something?** This group spends its whole design on which side of a line an item falls. If above and below are not different in kind, or if everything lands on one side anyway, you have a [bar chart](bar-chart.md) with an extra line on it, which is fine and is not this group.
+**Does the sign mean something?** This group spends its whole design on which side of a line an item falls. If above and below are not different in kind, or if everything lands on one side anyway, the drawing is a [bar chart](bar-chart.md) with an extra line on it, which is a working chart and is not this group.
 
-| The reader's actual question | Go to |
+| The reader's actual question | Group |
 |---|---|
 | How big is each of these? | [Magnitude](magnitude.md). A [bar chart](bar-chart.md) |
 | Which is biggest, and in what order? | Ranking. A sorted bar chart |
@@ -32,7 +32,7 @@ Three tests.
 | Does this add up, and to what? | [Part-to-whole](part-to-whole.md) |
 | How spread out are the values? | [Distribution](distribution.md) |
 | Do these two variables move together? | [Correlation](correlation.md) |
-| Which items are above the line, which below, and by how much? | **Stay here** |
+| Which items are above the line, which below, and by how much? | **This group** |
 
 ## The reference point is a rhetorical choice the reader cannot see
 
@@ -46,7 +46,7 @@ The nearest measured thing is **axis truncation**, and it is a different manipul
 
 A deviation chart is not that. Truncation leaves the quantity alone and moves the origin under it, so the ink stops being proportional to the plotted number. A deviation chart **redefines the quantity** to be the difference, and the ink is then proportional to that difference, which is why Urban names exactly this move as a legitimate remedy for a truncation temptation: "consider adjusting the data to show percent change, difference, or some other similar adjustment" ([urban-institute.md](../sources/urban-institute.md)). The subtraction is disclosed by the axis label; the choice of what was subtracted is not.
 
-So the honest pair of sentences is: the deviation transform is the *fix* for truncation, not an instance of it, and the freedom it hands you sits one level up, in choosing the reference. What that freedom does to readers is untested.
+So: the deviation transform is the *fix* for truncation, not an instance of it, and the freedom it introduces sits one level up, in the choice of reference. What that freedom does to readers is untested.
 
 ## What else this group costs
 
@@ -60,19 +60,19 @@ So the honest pair of sentences is: the deviation transform is the *fix* for tru
 
 ## Choosing a form
 
-| Form | What carries the value | Reach for it when |
+| Form | What carries the value | Where it applies |
 |---|---|---|
 | [Diverging bar chart](diverging-bar-chart.md) | Bar length from a shared reference line, side carrying the sign | One signed number per category, and above/below is the point |
 | [Spine chart](spine-chart.md) | Two component lengths growing outward from a shared center | Each row splits one total into two contrasting parts |
 | Diverging stacked bar | Segment lengths accumulating outward from a center | Ordered response categories per row, Likert data being the usual case. Covered on [diverging-bar-chart.md](diverging-bar-chart.md), because it is that chart with a cumulative sum added |
-| Surplus / deficit filled line *(no page here)* | Filled area between a series and a reference line, shaded by side | The deviation runs over time and you want the periods of surplus and shortfall as shapes |
+| Surplus / deficit filled line *(no page here)* | Filled area between a series and a reference line, shaded by side | The deviation runs over time and the periods of surplus and shortfall are read as shapes |
 
 A bullet chart puts one value against a target and a qualitative range, and a population pyramid is a [spine chart](spine-chart.md) whose rows are age bands. Neither has a page, because no study in this corpus tests either.
 
 Two constraints that follow from the structure rather than from taste:
 
-- **Label the reference line with its value and with what it is.** "0" is not a label; "2019 average, 4.1%" is. This is the same rule [inventory](../inventory.md) topic 32 states for the midpoint of a diverging color scale, which "must be set to a meaningful value and labeled" (`authority-asserted`, from Urban). The color-scale version got written down; the geometric version is the identical problem and mostly did not.
-- **Sort by the deviation, not by the raw value.** Sorting on the base leaves a picture whose ordering answers a question the chart is not about.
+- **The reference line carries its value and its identity.** "0" is not a label; "2019 average, 4.1%" is. This is the same rule [inventory](../inventory.md) topic 32 states for the midpoint of a diverging color scale, which "must be set to a meaningful value and labeled" (`authority-asserted`, from Urban). The color-scale version got written down; the geometric version is the identical problem and mostly did not.
+- **Sorting by the deviation rather than by the raw value.** Sorting on the base leaves a picture whose ordering answers a question the chart is not about.
 
 ## Justifying the choice
 
@@ -97,7 +97,7 @@ Nothing else in this bucket is native to the group. No study here tests any char
 
 **Picking the reference that produces the picture.** Every candidate reference is arguable, all of them are honest one at a time, and the chart shows none of the alternatives. This is the group where a figure can be arithmetically perfect, correctly labeled, and still be an argument won before the reader arrived.
 
-A usable check, borrowed from the same move in [change-over-time.md](change-over-time.md): say the conclusion out loud, then redraw against zero and against the long-run average. If the sentence stops being true, the sentence was about the reference you chose.
+A check on that, the same one [change-over-time.md](change-over-time.md) records: the conclusion stated out loud, then the chart redrawn against zero and against the long-run average. A sentence that stops being true was a sentence about the reference.
 
 **Reading a deviation as a level.** The base is not on the chart. A reader who takes "+9" for "a lot" has no way to know whether the base was 12 or 12,000, and the form gives no cue that the question exists.
 

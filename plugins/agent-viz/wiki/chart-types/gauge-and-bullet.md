@@ -10,32 +10,32 @@ Two forms for the same job, one value against a band of context, drawn in two di
 
 The gauge is also called a **dial**, a **speedometer chart** or a **radial gauge**. The bullet is called a **bullet graph** (its designer's term) or a **bullet chart**.
 
-[Schwabish](../sources/schwabish.md) files them together, as a single "Gauge and Bullet" entry under **Comparing Categories**, and that filing is verified from the book's own contents pages. What he argues about either one is not vouched here, because the book's prose is unopened. **This page keeps them apart, because they are not the same argument.** One spends a whole figure on a single number in the least convenient geometry available; the other is a bar with context added, designed as the replacement.
+[Schwabish](../sources/schwabish.md) files them together, as a single "Gauge and Bullet" entry under **Comparing Categories**, and that filing is verified from the book's own contents pages. What he argues about either one is not vouched here, because the book's prose is unopened. They are not the same argument. One spends a whole figure on a single number in the least convenient geometry available; the other is a bar with context added, designed as the replacement.
 
 ## When to reach for it, and when not
 
-**Reach for a bullet graph when** one measure has to be shown against a target and a small number of qualitative ranges, in a small footprint, usually stacked with several others down a page. That is the case it was designed for and the case it still serves.
+The bullet graph is defined for the case where one measure is shown against a target and a small number of qualitative ranges, in a small footprint, usually stacked with several others down a page. That is the case it was designed for and the case it still serves.
 
-**Before reaching for a gauge, take the escape hatch.** A gauge delivers one value, and [part-to-whole.md](part-to-whole.md) opens with the route out of exactly that situation, quoting the Urban Institute style guide ([urban-institute.md](../sources/urban-institute.md)):
+A gauge delivers one value, and [part-to-whole.md](part-to-whole.md) opens with the route out of exactly that situation, quoting the Urban Institute style guide ([urban-institute.md](../sources/urban-institute.md)):
 
 > "You may also find that simply including a single, large number (commonly known as 'big aggregate numbers') may be sufficient."
 
-A single large number, set large, with one line of context under it, frequently beats a chart drawn to deliver one value. That is the honest recommendation for most gauges and it is `authority-asserted`; no experiment in this corpus compares a big number against a gauge, or against anything else. [magnitude.md](magnitude.md) states the same escape hatch for the group.
+A single large number, set large, with one line of context under it, is the style guide's alternative to a chart drawn to deliver one value. That recommendation is `authority-asserted`; no experiment in this corpus compares a big number against a gauge, or against anything else. [magnitude.md](magnitude.md) states the same escape hatch for the group.
 
-**Do not reach for either when:**
+Questions neither form answers:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | How do these several items compare? | [Bar chart](bar-chart.md). One value per gauge means one gauge per value |
 | How did it get here? | Change over time. A [line chart](line-chart.md) shows the path a dial cannot |
-| There is one number and no reference to hold it against | Write the number. There is no chart to make |
+| There is one number and no reference to hold it against | A printed number. There is no chart to make |
 | Which items are over target, and by how much? | [Deviation](deviation.md). A [diverging bar](diverging-bar-chart.md) off the target puts the gap on position |
 | Does this add up, and to what? | [Part-to-whole](part-to-whole.md). Neither form asserts a total |
 | What is the spread behind this number? | [Distribution](distribution.md). Both forms show a summary and nothing behind it |
 
 ## Structural decomposition
 
-The slots diverge, so they are laid out side by side. Definitional, and nothing here asserts anything empirical.
+The slots diverge. Definitional, and nothing here asserts anything empirical.
 
 | Slot | Gauge | Bullet graph |
 |---|---|---|
@@ -58,7 +58,7 @@ The bullet graph's five components come from its design specification, which is 
 
 **Both forms use color for categories rather than for magnitude.** The gauge's zones and the bullet's bands say which qualitative range a value falls in, which is identity work, and that is what hue and ordered lightness steps are actually good at. Neither table in [channels.md](../concepts/channels.md) scores that use, and it is not the low-accuracy case.
 
-So: **position and length on one side, angle on the other, which is definitional and is the reason to prefer the bullet.** Whether readers actually do better on a bullet graph than on a gauge is **unmeasured in this corpus**. Both halves of that are true and neither implies the other.
+Position and length on one side, angle on the other, which is definitional. Whether readers actually do better on a bullet graph than on a gauge is **unmeasured in this corpus**. Both halves of that are true and neither implies the other.
 
 ## What it is measurably good at
 
@@ -66,21 +66,21 @@ So: **position and length on one side, angle on the other, which is definitional
 
 ## What it is measurably bad at
 
-**Also nothing measured.** Two exposures are worth naming with their status attached.
+**Also nothing measured.** Two exposures, with their status attached.
 
 **Value extraction on the gauge is not on the best channel available**, which is inherited from [channels.md](../concepts/channels.md) and not a finding about gauges. Position along a common scale is read more accurately than angle in proportional-judgment tasks, measured and replicated; that the gauge puts a reader on angle is the conjectural step, and nobody has run the comparison on these two forms.
 
-**A gauge spends an entire figure on one number.** That is arithmetic about layout rather than a claim about perception: whatever the reader does with it, one dial holds one value, so a page of eight measures is eight dials. The bullet graph's small footprint is the entire design case for it, and it is argued rather than tested. The specification's own sentence, quoted from [people/stephen-few.md](../people/stephen-few.md), which read the spec at primary: "Its linear design not only gives it a small footprint, but also supports more efficient reading than radial meters". **The specification cites no test**, which is the correct thing to say about most good designs.
+**A gauge spends an entire figure on one number.** That is arithmetic about layout rather than a claim about perception: whatever the reader does with it, one dial holds one value, so a page of eight measures is eight dials. The bullet graph's small footprint is the entire design case for it, and it is argued rather than tested. The specification's own sentence, quoted from [people/stephen-few.md](../people/stephen-few.md), which read the spec at primary: "Its linear design not only gives it a small footprint, but also supports more efficient reading than radial meters". **The specification cites no test.**
 
 ## What is contested
 
-**Nothing, and that is not a compliment.** Contested requires a record that disagrees with itself ([evidence-class.md](../concepts/evidence-class.md)), and here there is no record. [Stephen Few](../people/stephen-few.md) spent years attacking dashboard gauges and then designed the replacement, and nobody in this corpus argues back, so what exists is one designer's position rather than a disagreement. The familiar criticisms of the gauge, that the needle is imprecise, that the zones are arbitrary, that the footprint is indefensible, are plausible and none of them is supported by an experiment in this source set. `absence of evidence`, which is not the same as refuted and not the same as endorsed.
+**Nothing.** Contested requires a record that disagrees with itself ([evidence-class.md](../concepts/evidence-class.md)), and here there is no record. [Stephen Few](../people/stephen-few.md) spent years attacking dashboard gauges and then designed the replacement, and nobody in this corpus argues back, so what exists is one designer's position rather than a disagreement. The familiar criticisms of the gauge, that the needle is imprecise, that the zones are arbitrary, that the footprint is indefensible, are plausible and none of them is supported by an experiment in this source set. `absence of evidence`, which is not the same as refuted and not the same as endorsed.
 
 ## The failure mode it invites
 
-**Drawing a chart to deliver one number.** The gauge's defining property is that it is a whole figure for a single value, so it invites the failure the [magnitude](magnitude.md) index opens with. The check is one sentence: if the caption you would write is "utilization is at 71%", write that instead. `authority-asserted`.
+**Drawing a chart to deliver one number.** The gauge's defining property is that it is a whole figure for a single value, so it invites the failure the [magnitude](magnitude.md) index opens with. Where the caption reads "utilization is at 71%", the figure and the sentence carry the same content. `authority-asserted`.
 
-**Zone breaks nobody chose.** The colored bands assert that some values are good and some are bad, and a default set of thresholds asserts it on your behalf. Same obligation the diverging midpoint carries in [inventory.md](../inventory.md) topic 32: a threshold in the drawing is a claim, so it gets set deliberately and gets a label. Stated in this wiki's own voice as a practitioner default, not as a measured result.
+**Zone breaks nobody chose.** The colored bands assert that some values are good and some are bad, and a default set of thresholds asserts it unprompted. Same obligation the diverging midpoint carries in [inventory.md](../inventory.md) topic 32: a threshold in the drawing is a claim, set deliberately and labeled. Stated in this wiki's own voice as a practitioner default, not as a measured result.
 
 **Dropping the scale.** A dial with colored zones and no tick labels, or a bullet bar with no quantitative axis, is a picture with no quantities in it. The bullet specification lists one linear quantitative scale among its five components for that reason.
 

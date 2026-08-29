@@ -13,22 +13,22 @@ retrieved: 2026-08-23
 Three things a later reader needs to know before leaning on this page:
 
 - **It is the French 3rd edition (EHESS, 1999), which is a reprint of the 1973 2nd edition** with an added preface and a chapter on *la graphique*. Bertin says so in that preface: the book was written in 1965, published 1967, revised 1971, and it is the 1973 text being reissued.
-- **The standard English translation (Berg, 1983; ESRI Press, 2010) was not consulted.** Every English term below is my rendering of Bertin's French. Where the English literature has settled on a word (*value* for `valeur`, *grain* or *texture* for `grain`), I say which French word it came from so you can check.
+- **The standard English translation (Berg, 1983; ESRI Press, 2010) was not consulted.** Every English term below is my rendering of Bertin's French. Where the English literature has settled on a word (*value* for `valeur`, *grain* or *texture* for `grain`), the French word it came from is named, so the rendering is checkable.
 - **The scan is an in-copyright book on Monoskop**, and the OCR is poor. Accents and word breaks are frequently destroyed. Quotes below are only those fragments that extracted cleanly; everywhere the OCR was mangled I paraphrase and say so rather than repairing text and presenting the repair as a quote.
 
-**What they are good for.** Come back here with: *what am I actually allowed to encode this on, and what will the reader be able to do with it*. Bertin's levels of organization answer a question the accuracy literature does not: not "how precisely can this be read" but "can this variable be selected, ordered, or measured at all". He is also the only source in this wiki that treats networks as a first-class graphic problem with its own construction rules.
+**What they are good for.** The question he answers: *what am I actually allowed to encode this on, and what will the reader be able to do with it*. Bertin's levels of organization answer a question the accuracy literature does not: not "how precisely can this be read" but "can this variable be selected, ordered, or measured at all". He is also the only source in this wiki that treats networks as a first-class graphic problem with its own construction rules.
 
-**What they do not settle.** Anything empirically. There are no experiments in this book. What Bertin calls a *Test* is a demonstration addressed to you, the reader, over a facing-page figure: isolate one category, then see whether you could. Introspection with a control figure is not a controlled study, and his orderings are [authority-asserted](../concepts/evidence-class.md) throughout.
+**What they do not settle.** Anything empirically. There are no experiments in this book. What Bertin calls a *Test* is a demonstration addressed to the reader over a facing-page figure: isolate one category, then judge whether it was possible. Introspection with a control figure is not a controlled study, and his orderings are [authority-asserted](../concepts/evidence-class.md) throughout.
 
 ---
 
 ## "In the style of Bertin" means, concretely
 
-**Monochrome by default, and texture where you would reach for color.** The plates are print-shop artifacts from a cartography lab. Black ink, white paper, and differentiation carried by `grain` (dot density and coarseness) and `valeur` (lightness) rather than by hue. This is not nostalgia. It follows from his own ordering: `grain` and `valeur` are ordered variables and `couleur` is not, so a Bertin figure spends hue on categories and lightness or texture on anything with a sequence.
+**Monochrome by default, and texture where color would otherwise go.** The plates are print-shop artifacts from a cartography lab. Black ink, white paper, and differentiation carried by `grain` (dot density and coarseness) and `valeur` (lightness) rather than by hue. This is not nostalgia. It follows from his own ordering: `grain` and `valeur` are ordered variables and `couleur` is not, so a Bertin figure spends hue on categories and lightness or texture on anything with a sequence.
 
 **Tiny marks, many of them, in a grid.** The characteristic Bertin page is a matrix of small multiples: dozens of miniature maps or dot-fields laid out in rows and columns so the whole set is one image. He is not making one big figure with a lot in it; he is making many small figures that add up to a readable field.
 
-**The reorderable matrix.** His most distinctive object is the *matrice ordonnable*: rows and columns as physical strips, permuted by hand until structure appears. If you want a figure that reads as his, the sorting is the analysis. An unsorted matrix is an unfinished one.
+**The reorderable matrix.** His most distinctive object is the *matrice ordonnable*: rows and columns as physical strips, permuted by hand until structure appears. In a figure that reads as his, the sorting is the analysis. An unsorted matrix is an unfinished one.
 
 **The legend states the invariant and the components.** His information analysis starts by separating what is constant across the whole graphic (the *invariant*) from what varies (the *composantes*). A Bertin-style title says what the invariant is, and the legend enumerates the components with their length and level of organization. This is more structured than a modern caption and it is the part most imitations drop.
 
@@ -69,7 +69,7 @@ Two findings inside that table that citations drop:
 
 **Only size is quantitative.** "Il apparaît immédiatement que seule la variation de taille est quantitative" (spacing normalized from the OCR). Value is not: white cannot serve as a unit for measuring gray. Grain is not either, though he allows that a ratio between two coarse grains can be judged.
 
-**Associativity breaks the pattern.** He flags it himself: no retinal variable has all the properties the way the plane does, and the inclusive nesting of properties is disturbed because associativity is **absent** from size and value. Both are *dissociative*: they dominate whatever else you combine them with. Vary size and the hue in the small marks stops being readable. That is a composition rule, and it is the part of Bertin that survives contact with practice most directly.
+**Associativity breaks the pattern.** He flags it himself: no retinal variable has all the properties the way the plane does, and the inclusive nesting of properties is disturbed because associativity is **absent** from size and value. Both are *dissociative*: they dominate whatever else is combined with them. Varying size makes the hue in the small marks unreadable. That is a composition rule, and it is the part of Bertin that survives contact with practice most directly.
 
 He also puts numbers on size that are testable and rarely quoted: roughly 20 distinguishable steps between two points whose areas stand in a 1:10 ratio, but only 4 or 5 steps that are reliably **selective**.
 
@@ -95,7 +95,7 @@ A third of the book is networks and maps. The subtitle is *les diagrammes, les r
 
 - ***Sémiologie graphique*** (1967; 2nd ed. 1973; 3rd ed. EHESS 1999). **No source page in this wiki.** This is the page that would have to be written to close the gap; everything above is a person-level summary and does not substitute for a chapter-by-chapter enumeration in [roll-call.md](../roll-call.md).
 - ***La graphique et le traitement graphique de l'information*** (Flammarion, 1977), the shorter restatement he says shows that nothing essential changed. **Not reached, not covered.**
-- ***Semiology of Graphics*** (Berg trans., Wisconsin 1983; ESRI Press 2010), the English text everyone actually cites. **Not consulted.** Anyone quoting Bertin in English should be quoting Berg, and this page cannot vouch for Berg's wording.
+- ***Semiology of Graphics*** (Berg trans., Wisconsin 1983; ESRI Press 2010), the English text everyone actually cites. **Not consulted.** Anyone quoting Bertin in English is quoting Berg, and this page cannot vouch for Berg's wording.
 
 **The scale of the gap, stated precisely.** Before this page, Bertin appeared in this wiki twice: once inside a [Cleveland & McGill](../studies/cleveland-mcgill-1984.md) quotation excluding hue from their ranking, and once in [skau-kosara-2016.md](../studies/skau-kosara-2016.md) as one of the authors who treated angle as the pie chart's mechanism. He has no row in [roll-call.md](../roll-call.md) and no entry in [inventory.md](../inventory.md). That is the same structural failure the [Tufte page](../sources/tufte.md) records, and for the same reason: the roll-call's audit only catches omissions in sources somebody enumerated.
 

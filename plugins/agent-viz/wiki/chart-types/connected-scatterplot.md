@@ -10,11 +10,11 @@ Two variables measured on the same units over time, drawn as points in the x-y p
 
 ## When to reach for it, and when not
 
-**Reach for it when** two quantities move over time on the same units, the joint trajectory is the message, and the alternative on the table is a dual-axis line chart. The [Urban Institute guide](../sources/urban-institute.md) states the substitution as an editorial fact rather than a rule, which is the honest form: connected scatterplots are "a clearer substitute for dual-axis line charts, which Urban does not publish." `authority-asserted`. Note what it is a substitute *for*: the case against dual axes is itself `absence of evidence`, so this is one unmeasured preference standing in for another ([refutations.md](../refutations.md#a-flat-ban-on-dual-axes)).
+**The form applies where** two quantities move over time on the same units, the joint trajectory is the message, and the alternative on the table is a dual-axis line chart. The [Urban Institute guide](../sources/urban-institute.md) states the substitution as an editorial fact rather than a rule: connected scatterplots are "a clearer substitute for dual-axis line charts, which Urban does not publish." `authority-asserted`. What it substitutes *for* carries its own limit: the case against dual axes is itself `absence of evidence`, so this is one unmeasured preference standing in for another ([refutations.md](../refutations.md#a-flat-ban-on-dual-axes)).
 
-**Do not reach for it when:**
+**Questions the form does not answer:**
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | When did this happen, or how fast? | A line chart per variable. Time is not on an axis here, it is only in the order of the path |
 | How did one variable move? | A line chart. Reading one variable alone means projecting the path onto an axis |
@@ -45,7 +45,7 @@ Both axes are position along a common scale, inherited from [channels.md](../con
 
 **Nothing has been measured in this wiki.**
 
-One directly relevant study exists and is in this corpus's reading list without a page: Haroz, Kosara & Franconeri (2016), "The Connected Scatterplot for Presenting Paired Time Series," recorded as `primary-read` on [Robert Kosara's page](../people/robert-kosara.md) with no findings written up here. Until it is, this page has nothing to inherit and should not pretend otherwise. That is a gap with a name and a PDF behind it.
+One directly relevant study exists and is in this corpus's reading list without a page: Haroz, Kosara & Franconeri (2016), "The Connected Scatterplot for Presenting Paired Time Series," recorded as `primary-read` on [Robert Kosara's page](../people/robert-kosara.md) with no findings written up here. Until it is, this page has nothing to inherit. That is a gap with a name and a PDF behind it.
 
 ## What it is measurably bad at
 
@@ -65,7 +65,7 @@ Nothing measured, for the same reason and from the same missing page.
 
 **Defensible, evidence-backed:**
 
-- Nothing. No study here bears on this form, and the honest version of this bucket is empty.
+- Nothing. No study here bears on this form.
 
 **Defensible, with the label said out loud:**
 

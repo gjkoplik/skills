@@ -99,9 +99,9 @@ They hedge the mechanism ("We cannot know the mechanism"), and they hedge the re
 
 - **Not "never use log scales."** The recommendation is scoped to mass media and policymakers communicating COVID-19 case and death curves to the general public, and even there it says "as a default option."
 - **Not a general finding about log axes in analysis, science, or technical charts.** The stimulus is one specific chart type, cumulative deaths, at a specific moment when the log curve happened to look flat. The authors' own conjecture ties the effect to that shape.
-- **Not a settled effect.** One contemporaneous study on Canadian respondents found no impact, and the paper says so itself. Cite Romano and Sevi together or cite neither.
-- **Do not quote the odds ratios as effect magnitudes without flagging them.** An odds ratio of **123.9** on the hypothetical-infection comprehension item is not a normal social-science effect size. It most likely reflects a near-floor correct rate in the log condition rather than a stable estimate. The coefficient (4.8 on the log-odds scale) is the safer number, and the raw percentages live only in Figure 2, which is a bar chart and cannot be read out of the PDF text.
-- **Do not cite it for "log scales caused worse COVID policy."** The policy coefficients point in mixed directions, several are not significant, and the paper offers a conjecture rather than a mechanism.
+- **Not a settled effect.** One contemporaneous study on Canadian respondents found no impact, and the paper says so itself.
+- **Not odds ratios as plain effect magnitudes.** An odds ratio of **123.9** on the hypothetical-infection comprehension item is not a normal social-science effect size. It most likely reflects a near-floor correct rate in the log condition rather than a stable estimate. The coefficient (4.8 on the log-odds scale) is the safer number, and the raw percentages live only in Figure 2, which is a bar chart and cannot be read out of the PDF text.
+- **Not "log scales caused worse COVID policy."** The policy coefficients point in mixed directions, several are not significant, and the paper offers a conjecture rather than a mechanism.
 - **Not evidence about people who chose to look at a log chart.** Assignment was random. Self-selected log-chart readers are a different population.
 
 ## Links

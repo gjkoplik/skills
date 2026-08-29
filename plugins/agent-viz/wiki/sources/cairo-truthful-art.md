@@ -16,13 +16,13 @@ Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for Communication* (New
 
 **Second pass, 2026-08-27**, aimed at the two chapters this wiki has open holes against: chapter 10 on choropleth classification and chapter 11 on uncertainty. The sample PDF was re-downloaded and re-extracted, and its contents pages and complete index were mined for both. **Neither chapter was reached.** What the two sections below carry is the book's own account of where the material sits and what it is called, at section and index-entry level. Nothing about what Cairo argues is vouched.
 
-**A route that was found and deliberately not used.** A complete PDF of chapter 10 is served from an official EU course-materials path (`data.europa.eu/sites/default/files/course/`). It was downloaded, and every one of its 35 pages carries a Pearson `ptg` watermark and a Safari personal-library footer reading "From the Library of Alberto Cairo". That is a DRM-stripped ebook, not a licensed excerpt, whatever the host. It was deleted unread and nothing on this page comes from it. An institutional host is not a permission, and the watermark is the thing to check.
+**A route that was found and deliberately not used.** A complete PDF of chapter 10 is served from an official EU course-materials path (`data.europa.eu/sites/default/files/course/`). It was downloaded, and every one of its 35 pages carries a Pearson `ptg` watermark and a Safari personal-library footer reading "From the Library of Alberto Cairo". That is a DRM-stripped ebook, not a licensed excerpt, whatever the host. It was deleted unread and nothing on this page comes from it. An institutional host is not a permission, and the watermark is what identified the file.
 
 **A legitimate route that turned out to be thin.** Cairo's own blog carries a 2014 post, "The challenges of classification in choropleth maps", reached through a Wayback snapshot because the original URL now 404s. It is four sentences on a New York Times map, and its whole substance is that "Building classes for choropleth maps is always tricky business. By grouping values together as intervals, you always put yourself at the risk of hiding important nuances in the data. There are reliable guidelines you can follow, but the process always requires a good dose of common sense." He adds that on that particular map "I'm not sure that using equal intervals is the best choice here". That is Cairo in his own voice, two years before the book, and it does not amount to a treatment.
 
 *How Charts Lie* (2019): **`not-reached`**, and this project still has not reached it. Nothing in the wiki rests on it. It was looked for only as a named gap in [roll-call.md](../roll-call.md); no retrieval has been attempted in either pass.
 
-**What it is good for.** Come back here with: *am I over-reading this data*. Cairo is the only source in the canon that spends real pages on conjecture and hypothesis, study quality, sample variation, standard error, confidence intervals, disclosing uncertainty, and significance versus effect size versus power. He is also the source for how time-series charts mislead, for index construction, and for choropleth classification.
+**What it is good for.** The question it answers: *am I over-reading this data*. Cairo is the only source in the canon that spends real pages on conjecture and hypothesis, study quality, sample variation, standard error, confidence intervals, disclosing uncertainty, and significance versus effect size versus power. He is also the source for how time-series charts mislead, for index construction, and for choropleth classification.
 
 **What it does not settle.** The five qualities themselves, at the primary level (see below). Chartcraft detail is thinner than Wilke or the newsroom style guides: no production, no accessibility, no software, and color gets a fraction of the space Wilke gives it.
 
@@ -37,7 +37,7 @@ Four parts, twelve chapters, from the book's own contents page.
 - **Part III, Functional.** 5. Basic Principles of Visualization (121). 6. Exploring Data with Simple Charts (151). 7. Visualizing Distributions (167). 8. Revealing Change (199). 9. Seeing Relationships (233). 10. Mapping Data (263). 11. Uncertainty and Significance (299).
 - **Part IV, Practice.** 12. On Creativity and Innovation (329), plus an epilogue.
 
-Note that the printed chapter 11 is titled **"Uncertainty and Significance"**, where the publisher's web listing calls it "Confidence and Significance". The contents page inside the book is the better source.
+The printed chapter 11 is titled **"Uncertainty and Significance"**, where the publisher's web listing calls it "Confidence and Significance". The contents page inside the book is the better source.
 
 ## The five qualities, confirmed at the name level
 
@@ -83,7 +83,7 @@ Cairo is not contested inside this wiki, mostly because so little of him was rea
 
 ## Inventory topics it grounds
 
-Per [roll-call.md](../roll-call.md), do not recompute: 6, 9, 10, 11, 37, 41, 50, 55, 89, 91, 92.
+Per [roll-call.md](../roll-call.md), not recomputed here: 6, 9, 10, 11, 37, 41, 50, 55, 89, 91, 92.
 
 All of those were mapped through the five qualities, which is a thin basis for a 400-page book. Chapters 3, 4, 7, 8, 9, 10 and 11 have far more in them than the mapping shows, particularly on uncertainty and on how time-series charts mislead. A second pass over the actual chapters would likely add topics rather than move them.
 

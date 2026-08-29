@@ -48,7 +48,7 @@ The cookbook prints the function body, so the house style is readable as data ra
 | `panel.background` | blank |
 | `strip.text` | size 22, left-aligned (`hjust = 0`) |
 
-Read as claims:
+As claims:
 
 **Text is far larger than any default.** 28 / 22 / 18 in a graphic exported at 640x450. This is inventory topic 16, and the BBC's answer is a hard number rather than Wilke's "chances are they are too small". It is not transferable as-is (it is calibrated to a 640px web graphic) but the ratio is: title roughly 1.5x the body text, and body text much larger than any library default.
 
@@ -62,12 +62,12 @@ Both positions are coherent, and they are coherent for different **audiences**. 
 
 > "finalise_plot(), the second function of the bbplot package, will left-align the title, subtitle and add the footer with a source and an image in the bottom right corner of your plot. It will also save it to your specified location."
 
-Signature: `finalise_plot(plot_name, source, save_filepath, width_pixels = 640, height_pixels = 450, logo_image_path)`. The `source` argument is required and the docs tell you to type the word yourself: `source = "Source: ONS"`.
+Signature: `finalise_plot(plot_name, source, save_filepath, width_pixels = 640, height_pixels = 450, logo_image_path)`. The `source` argument is required, and the word "Source:" is typed into the value rather than supplied by the function: `source = "Source: ONS"`.
 
 Three things are structural here:
 
-1. **The source line cannot be forgotten,** because you cannot export without passing it. Inventory topic 44, enforced by an API signature rather than by a checklist.
-2. **Export size is a named default,** 640x450, and the cookbook insists you look at the exported file rather than the IDE preview: "the position of the text and other elements do not render accurately in the RStudio Plots panel because this depends on the size and aspect ratio you want your plot to appear, so saving it out and opening up the files give you an accurate representation." Inventory topic 64.
+1. **The source line cannot be forgotten,** because export is impossible without passing it. Inventory topic 44, enforced by an API signature rather than by a checklist.
+2. **Export size is a named default,** 640x450, and the cookbook insists on the exported file rather than the IDE preview: "the position of the text and other elements do not render accurately in the RStudio Plots panel because this depends on the size and aspect ratio you want your plot to appear, so saving it out and opening up the files give you an accurate representation." Inventory topic 64.
 3. **Styling and finishing are split.** `bbc_style()` is theme; `finalise_plot()` is production. Inventory topic 92 (function first, form next) as package architecture.
 
 There is even a margin table for taller exports, which is the kind of detail that only exists because somebody shipped a broken chart:
@@ -91,9 +91,9 @@ Three patterns repeat across nearly every example and are more informative than 
 fill = ifelse(bar_df$country == "Mauritius", "#1380A1", "#dddddd")
 ```
 
-One saturated blue for the subject, light gray for the other twelve. This is inventory topic 29 in its most literal form. Note that the same topic has **no controlled study behind it** ([refutations.md](../refutations.md)); the BBC shipping it as a recipe is more authority, not evidence.
+One saturated blue for the subject, light gray for the other twelve. This is inventory topic 29 in its most literal form. The same topic has **no controlled study behind it** ([refutations.md](../refutations.md)); the BBC shipping it as a recipe is more authority, not evidence.
 
-**Sorting is treated as a bug fix.** "By default, R will display your data in alphabetical order, but arranging it by size instead is simple: just wrap `reorder()` around the x or y variable." Inventory topic 57, and this is the framing that makes it a *programmatic* failure mode rather than a design one: nobody chooses alphabetical order, it is what you get for not choosing.
+**Sorting is treated as a bug fix.** "By default, R will display your data in alphabetical order, but arranging it by size instead is simple: just wrap `reorder()` around the x or y variable." Inventory topic 57, and this is the framing that makes it a *programmatic* failure mode rather than a design one: nobody chooses alphabetical order, it is what arrives in the absence of a choice.
 
 ## Small multiples
 
@@ -103,11 +103,11 @@ Inventory topic 62. Two useful properties: the safe behavior is the default, and
 
 The legend section covers removing, repositioning, reversing order, rearranging into rows, and spacing. Reversing legend order to match stack order (inventory topic 40) is a named recipe, which again suggests it is a mistake somebody kept making.
 
-## Limits worth stating plainly
+## Limits
 
 - **Dated.** 2019, ggplot2 of that era, and one recipe still prints a deprecated-`size` idiom. The style is stable; the code is not necessarily current.
 - **British spelling throughout** (`colour`, `visualisation`). Quotes above preserve it; prose elsewhere in this wiki uses American spelling.
-- **No accessibility content at all.** No contrast floor, no colorblind guidance, no alt text, despite the output being web-published PNGs. Compare [chartability.md](chartability.md) and [datawrapper-academy.md](datawrapper-academy.md).
+- **No accessibility content at all.** No contrast floor, no colorblind guidance, no alt text, despite the output being web-published PNGs. [chartability.md](chartability.md) and [datawrapper-academy.md](datawrapper-academy.md) cover that ground.
 - **No color palette.** The hex codes recur across recipes (`#1380A1` blue, `#FAAB18` yellow, `#990000` red, `#588300` green, `#dddddd` gray) but are never defined as a palette or justified.
 
 ## Where this source is used

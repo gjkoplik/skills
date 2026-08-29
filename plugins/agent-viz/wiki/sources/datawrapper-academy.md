@@ -37,21 +37,21 @@ Article 140 is a numbered list, which makes it easy to check a chart against. Th
 
 > "Using grey for less important elements in your chart makes your highlight colors (which should be reserved for your most important data points) stick out even more. Grey is also helpful for general context data, less important annotations, to show what's unselected by the user, or to calm down the overall visual impression of your charts. Since grey can seem a bit cold, consider using it with a hint of color: Try a warm grey (grey+yellow/orange/red), or use another very light color as an alternative (e.g. super light yellow)."
 
-Inventory topic 29. The warm-gray detail is the practical part and appears nowhere else in this corpus. Note again that this rule has **no controlled study behind it** ([refutations.md](../refutations.md)); it is a good default with three independent style guides behind it and zero experiments.
+Inventory topic 29. The warm-gray detail is the practical part and appears nowhere else in this corpus. Again, this rule has **no controlled study behind it** ([refutations.md](../refutations.md)); it is a default with three independent style guides behind it and zero experiments.
 
 **Every mark gets explained.**
 
 > "Every visual mark that represents a value or variable should be explained: What does the height of your bar mean? What does the size of your circles on a symbol map represent? The same is true for colors."
 
-Inventory topic 42, and the best phrasing of it, because it generalizes past color to any mapped channel.
+Inventory topic 42, generalized past color to any mapped channel.
 
-**Do not cross palette class with data type**, stated with the mechanism rather than as a rule:
+**Crossing palette class with data type implies a ranking**, stated with the mechanism rather than as a rule:
 
 > "It might be tempting to use shades of one hue (e.g. blue) even for categories, to make your chart look less colorful. However, since many readers will associate dark colors with 'more/high' and bright colors with 'less/low', such a color palette will imply a ranking of your categories."
 
 **Lightness, not hue, builds a gradient,** with a grayscale check attached: "Your gradient should work in black and white, too. Gradients with many variations in lightness (like rainbow scales) can confuse readers." Same conclusion as matplotlib, argued in one sentence.
 
-**Diverging midpoints should be light gray, not white.** A small, specific, rarely-stated detail.
+**Diverging midpoints are light gray, not white.** A small, specific, rarely-stated detail.
 
 **Intuitive color, with a named exception for gender:**
 
@@ -61,7 +61,7 @@ Same position as the Urban Institute ([urban-institute.md](urban-institute.md)),
 
 **Seven colors, again.** "If you need more than seven colors in a chart, consider using another chart type or to group categories together." Third independent source with the same cap and no study behind any of them.
 
-**Consider whether color should encode the value at all:**
+**Whether color should encode the value at all:**
 
 > "Consider showing your most important values with bars, position (like in a dot plot), or even areas, and use colors to only show categories."
 
@@ -71,7 +71,7 @@ That is channel-effectiveness ranking (inventory topic 6) offered as a first mov
 
 > "The contrast ratio between background and foreground should be at least 2.5 for big text and at least 4 for small text. In addition to having a high contrast ratio, avoid complementary hues (e.g. red and green, orange and blue) and bright colors for backgrounds."
 
-WCAG 2.0 AA is 4.5:1 for normal text and 3:1 for large text and for graphical objects. Datawrapper's numbers are lower on both. This is a genuine disagreement between two sources in this wiki, both of which a figure bar might cite, and **it has to be resolved explicitly rather than averaged.** The recommendation here is to use the WCAG numbers, because they are a published standard and because Chartability, the only peer-reviewed accessibility source in the corpus, uses them ([chartability.md](chartability.md)). Datawrapper's floor is a chart-specific softening with no stated derivation.
+WCAG 2.0 AA is 4.5:1 for normal text and 3:1 for large text and for graphical objects. Datawrapper's numbers are lower on both. This is a genuine disagreement between two sources in this wiki, both of which a figure bar might cite, and **the two floors are incompatible rather than averageable.** The WCAG figures are a published standard, and Chartability, the only peer-reviewed accessibility source in the corpus, uses them ([chartability.md](chartability.md)). Datawrapper's floor is a chart-specific softening with no stated derivation.
 
 ## Zero baselines, enforced by the product
 
@@ -81,7 +81,7 @@ Article 326 is unusual: a help article explaining why a feature does not exist.
 >
 > "We have a responsibility towards your readers -- we don't want them to be misled. That's why Datawrapper doesn't allow you to begin your y-axis at something greater than zero."
 
-Two things to note carefully.
+Two things in it.
 
 **The citation is sound, and it matters which part of the paper it uses.** Datawrapper cites Pandey et al., CHI 2015, and quotes "participants who saw the deceptive visualization perceived the underlying message in its exaggerated form" and that these techniques "do lead to major misinterpretation from the reader's side and that the effects are also rather large." [refutations.md](../refutations.md) documents that this same paper contradicts itself in its Discussion section about the inverted-axis condition, misreporting a 2.5% control error rate as 18.4%. Datawrapper does not touch the broken passage. Its citation is on the sound part of the paper, and the effect-size claim it quotes recomputes correctly from Table 2.
 
@@ -91,7 +91,7 @@ Two things to note carefully.
 - A line chart, if the categories are ordered.
 - Plot the differences between the bars instead of the values.
 
-That is the shape a quality bar should copy. A rule that only prohibits produces truncated bars with a rationalization attached; a rule that supplies three replacements produces a different chart.
+A rule that only prohibits produces truncated bars with a rationalization attached; a rule that supplies three replacements produces a different chart.
 
 ## And yet: Datawrapper now ships a dual-axis chart
 
@@ -103,7 +103,7 @@ and, on the data:
 
 > "The values do not have to be of the same measure (in our examples, rainfall in mm and temperature in degree Celcius) -- in fact, your dual-axis chart will be easiest to understand if they're not."
 
-This matters for the wiki's bookkeeping. [inventory.md](../inventory.md) topic 13 cites Datawrapper among the practitioner sources behind a flat dual-axis ban, and [refutations.md](../refutations.md) already finds no experiment supporting one. Datawrapper, which is willing to hard-block a feature it thinks is deceptive, **built this one on purpose.** Set that against the fact that it refuses to let you truncate a bar axis and the contrast is informative: the same organization treats truncation as a bright line and dual axes as a design tool with a caveat.
+This matters for the wiki's bookkeeping. [inventory.md](../inventory.md) topic 13 cites Datawrapper among the practitioner sources behind a flat dual-axis ban, and [refutations.md](../refutations.md) already finds no experiment supporting one. Datawrapper, which is willing to hard-block a feature it thinks is deceptive, **built this one on purpose.** Against its refusal to allow a truncated bar axis, the contrast is informative: the same organization treats truncation as a bright line and dual axes as a design tool with a caveat.
 
 That caveat inverts the usual worry. The danger of a twin axis is spurious apparent correlation; Datawrapper's advice is that *unrelated units* make it safer, not more dangerous, because nobody mistakes millimeters of rain for degrees Celsius.
 
@@ -111,7 +111,7 @@ That caveat inverts the usual worry. The danger of a twin axis is spurious appar
 
 Article 207 is the only serious treatment of number formatting in this entire corpus, and inventory topic 18 names it as one of the most common visible defects in machine-generated figures.
 
-The format tokens are a compact vocabulary worth stealing conceptually even outside Datawrapper:
+The format tokens are a compact vocabulary, and the ideas in them generalize past Datawrapper:
 
 | Token | Effect |
 |---|---|
@@ -142,7 +142,7 @@ and, more sharply:
 
 > "You don't actually set a width for your visualization; the width gets set by your reader's screen size."
 
-The most transferable idea in the article is the **plot height versus chart height** distinction:
+The article distinguishes **plot height from chart height**:
 
 > "The plot is the chart area without header, footer, color key, or annotations. In Datawrapper, you set a height for the plot instead of the full chart. That's because on mobile screens, a long title, footer, or annotations shown as a key would otherwise 'eat away' the space for the actual chart."
 
@@ -156,7 +156,7 @@ Article 206 lists four shipped features rather than rules, which is the honest f
 
 - **A colorblind checker** that "warns you if the colors in your chart/map would not be distinguishable by those with any of the three main types of color vision deficiency."
 - **Data download.** "a reader with a visual impairment has the possibility to download the data so that they can get it to read or interpreted to them by a screen reader in the way that suits their needs." Inventory topic 72, and the only source here that treats reachable underlying data as an accessibility feature rather than a reproducibility one.
-- **Alternative descriptions**, with a mechanism detail worth knowing: writing one sets the chart body to `aria-hidden`, so the description replaces the auto-generated announcements rather than adding to them.
+- **Alternative descriptions**, with a mechanism detail attached: writing one sets the chart body to `aria-hidden`, so the description replaces the auto-generated announcements rather than adding to them.
 - **Fallback descriptions**, an experiment in what a screen reader says when nobody wrote alt text. The examples are specific: "Line chart with 7 lines", "Horizontal date axis, ranging from January 2019 to March 2021", "Category legend with x items", "This chart has one annotation." Rolled out for line charts and scatter plots only. Inventory topic 74.
 
 Article 330, on writing alt text, is the practical companion and gives a usable formula, credited to Amy Cesal:
@@ -167,18 +167,18 @@ with the three parts glossed as chart type, what the axes show, and "the 'why': 
 
 > "This formula is not set in stone. You could also argue that any mention of the chart type is unnecessary: The visualization is a way of representing the data; if words are used instead to describe the data, there's no need to talk about visual elements at all."
 
-Two other rules from that article that a bar should carry:
+Two other rules from that article:
 
-- **Do not repeat the frame.** "The header and footer (including the title, description, data source, byline, notes etc.) are being read out by the screen reader, so you don't need to worry about repeating the same points."
+- **The frame is not repeated.** "The header and footer (including the title, description, data source, byline, notes etc.) are being read out by the screen reader, so you don't need to worry about repeating the same points."
 - **Live-updating charts need maintained alt text.** "Make sure you update your alt text every time the highlight in your chart changes." An alt text with a stale number in it is worse than none.
 
-Compare the W3C's two-part short/long pattern ([w3c-wai-complex-images.md](w3c-wai-complex-images.md)), which is the standard this is an implementation of.
+The W3C's two-part short/long pattern ([w3c-wai-complex-images.md](w3c-wai-complex-images.md)) is the standard this implements.
 
 ## Where this source is used
 
 Inventory topics 6, 18, 19, 23, 24, 26, 29, 30, 31, 32, 33, 37, 39, 41, 42, 44, 45, 62, 71, 72, 74, 80. See [roll-call.md](../roll-call.md).
 
-**Two corrections to carry forward.** Datawrapper should no longer be cited in support of a flat dual-axis ban (topic 13); it ships the chart type. And its contrast numbers (topic 33) should be recorded as the softer, non-standard floor they are, not blended with WCAG's.
+**Two corrections.** Datawrapper no longer supports a flat dual-axis ban (topic 13); it ships the chart type. And its contrast numbers (topic 33) are a softer, non-standard floor, distinct from WCAG's.
 
 ## Links
 

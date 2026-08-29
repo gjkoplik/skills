@@ -8,21 +8,21 @@ aliases: [Bee swarm, Beeswarm plot, Swarm plot]
 
 One dot per observation, placed at its value on a shared quantitative axis, with the perpendicular axis used for nothing except displacing dots that would otherwise collide, so every observation keeps its true value and no mark is hidden behind another.
 
-**Also called a swarm plot or a bee swarm.** Some tools additionally offer a **sina plot** or a **violin scatter**, and those are different constructions rather than other names for this one. The **sina plot is now defined at primary**: [Wilke](../sources/wilke-fundamentals.md) calls it, citing Sidiropoulos et al. 2018, "a hybrid between a violin plot and jittered points", which is a different construction from this page's deterministic displacement. **"Violin scatter" is still undefined anywhere here**, so confirm which form someone means before relying on that name. The corpus does not define "beeswarm" either. Its single appearance is a listing: the Urban Institute style guide includes a beeswarm among its chart examples ([roll-call.md](../roll-call.md)), with no gloss recorded here, and that guide is not independent of [Schwabish](../people/jonathan-schwabish.md) ([urban-institute.md](../sources/urban-institute.md)). Read the definition above as this page's stipulation.
+**Also called a swarm plot or a bee swarm.** Some tools additionally offer a **sina plot** or a **violin scatter**, and those are different constructions rather than other names for this one. The **sina plot is now defined at primary**: [Wilke](../sources/wilke-fundamentals.md) calls it, citing Sidiropoulos et al. 2018, "a hybrid between a violin plot and jittered points", which is a different construction from this page's deterministic displacement. **"Violin scatter" is still undefined anywhere here**, so the name identifies no form in this corpus. The corpus does not define "beeswarm" either. Its single appearance is a listing: the Urban Institute style guide includes a beeswarm among its chart examples ([roll-call.md](../roll-call.md)), with no gloss recorded here, and that guide is not independent of [Schwabish](../people/jonathan-schwabish.md) ([urban-institute.md](../sources/urban-institute.md)). The definition above is this page's own stipulation.
 
 ## When to reach for it, and when not
 
-**Reach for it when** the observations themselves are the message, there are enough of them that they would collide at their true values, and you want the collisions resolved without either hiding points or moving them randomly. Its offer over a strip plot is narrow and exact: **every observation is visible and countable, and the layout is deterministic, so there is no seed and the same data redraws identically.**
+**The form applies where** the observations themselves are the message, there are enough of them that they would collide at their true values, and the collisions are resolved without either hiding points or moving them randomly. Its offer over a strip plot is narrow and exact: **every observation is visible and countable, and the layout is deterministic, so there is no seed and the same data redraws identically.**
 
-**Do not reach for it when:**
+**Questions the form does not answer:**
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | What is each item, and which one is which? | [Dot strip plot](dot-strip-plot.md) with direct labels, or a table. A swarm identifies nothing |
 | Where does each item place in the order? | [Ranking](ranking.md). Same dots, different question, and the sideways displacement gets in the way |
 | Ten thousand observations | The swarm becomes a solid slab. A [violin](violin-plot.md), a [histogram](histogram.md), or a 2D binning |
 | Twelve groups compared on location and spread | [Box plot](boxplot.md). Twelve swarms cost twelve times the space and the reading is the same |
-| What is the median, exactly? | [Box plot](boxplot.md) or a table. A swarm draws no statistic unless you overlay one |
+| What is the median, exactly? | [Box plot](boxplot.md) or a table. A swarm draws no statistic unless one is overlaid |
 | Is this bimodal? | A [histogram](histogram.md) or [violin](violin-plot.md), where the density has a stated parameter. A swarm's width suggests modality without declaring how |
 | Is this difference beyond chance? | The dots are the sample. That is a question about an estimate; see [distribution.md](distribution.md) |
 
@@ -49,7 +49,7 @@ Three consequences, all definitional:
 
 **Position along a common scale for the value**, shared across groups, inherited from [channels.md](../concepts/channels.md) with the standing caveat that the mapping from mark to channel is conjecture in the source literature. That is the whole of the intended encoding.
 
-**The perpendicular axis carries no data.** The width of the swarm at a given value is a monotone function of how many observations sit near that value at the mark size you happened to pick. So the outline of the swarm reads as a density. It has no axis, no legend, no stated bandwidth, and it changes if you resize the figure or the dots. **It is a density estimate whose smoothing parameter is the dot radius, presented as though it were a layout artifact.** That is definitional: the width does vary with local count, by construction, and it is undeclared, by construction. What readers actually take from it has not been measured by anyone in this corpus.
+**The perpendicular axis carries no data.** The width of the swarm at a given value is a monotone function of how many observations sit near that value at the chosen mark size. So the outline of the swarm reads as a density. It has no axis, no legend, no stated bandwidth, and it changes with the figure size or the dot size. **It is a density estimate whose smoothing parameter is the dot radius, presented as though it were a layout artifact.** That is definitional: the width does vary with local count, by construction, and it is undeclared, by construction. What readers actually take from it has not been measured by anyone in this corpus.
 
 This inverts the contrast that [boxplot.md](boxplot.md) draws with the [violin](violin-plot.md). The box plot's offer is that it has no tuning parameter; the violin's cost is that it has one and shows the result of it. A beeswarm has one and does not look like it does.
 
@@ -67,15 +67,15 @@ A beeswarm is one way to draw the observations, and that is the whole of the con
 - The recommendation is about **drawing the points**, not about this layout. It is equally satisfied by a strip plot, which is what they actually name.
 - And the ranges do not line up. At n = 4 there is almost nothing to collide, so the layout this form exists for earns nothing; it starts to matter well above the sizes where the review's argument is strongest. That follows from the construction, not from a study.
 
-[Matejka & Fitzmaurice (2017)](../studies/matejka-2017-datasaurus.md) is the picture people reach for next, and it is a construction with no participants, no task and no measurement of comprehension. It supports *these summary statistics are compatible with radically different data*, which is true by construction and therefore the strongest form of true available, and it supports *so plot the data*. It does not support *readers are misled by summaries* or *drawing the points produces better conclusions*. Use it for the slide and Weissgerber for the argument.
+[Matejka & Fitzmaurice (2017)](../studies/matejka-2017-datasaurus.md) is the picture people reach for next, and it is a construction with no participants, no task and no measurement of comprehension. It supports *these summary statistics are compatible with radically different data*, which is true by construction and therefore the strongest form of true available, and it supports *so plot the data*. It does not support *readers are misled by summaries* or *drawing the points produces better conclusions*.
 
 ## What it is measurably bad at
 
 **Nothing measured.** Three exposures follow from the construction:
 
-- **Large n.** The swarm fills its lane and the individual dots stop being resolvable, which is the condition [inventory.md](../inventory.md) topic 60 names: past the point where marks are readable, change idiom rather than pushing this one further. From Wilke, `authority-asserted`, with no measured threshold.
+- **Large n.** The swarm fills its lane and the individual dots stop being resolvable, which is the condition [inventory.md](../inventory.md) topic 60 names: past the point where marks are readable, the idiom changes rather than being pushed further. From Wilke, `authority-asserted`, with no measured threshold.
 - **The redraw problem.** Mark size and figure width are inputs to the layout, so a figure regenerated at a different size is a genuinely different arrangement of the same data. Nothing in the output says so. This is [inventory.md](../inventory.md) topic 77, repeatability, arriving from an unusual direction: the drawing is deterministic in the seed sense and still not stable.
-- **No statistic at all.** There is no median, no interval and no n on the chart unless you overlay them, and a reader counting dots in a dense swarm will undercount.
+- **No statistic at all.** There is no median, no interval and no n on the chart unless they are overlaid, and a reader counting dots in a dense swarm undercounts.
 
 ## What is contested
 
@@ -83,7 +83,7 @@ Nothing. There is no record here to disagree with itself. The one live argument 
 
 ## The failure mode it invites
 
-**Reading the swarm's width as a measured density.** It is a density readout the reader was never told about: undeclared, unlabeled, and parameterized by the dot radius. That the width is undeclared is definitional. What a reader concludes from it is `absence of evidence`, not a refuted claim, and the cheap mitigation is to say in the caption that the width is a layout artifact, or to overlay a form whose parameter is stated.
+**Reading the swarm's width as a measured density.** It is a density readout the reader was never told about: undeclared, unlabeled, and parameterized by the dot radius. That the width is undeclared is definitional. What a reader concludes from it is `absence of evidence`, not a refuted claim. The mitigations named here are a caption stating that the width is a layout artifact, or an overlaid form whose parameter is declared.
 
 **Letting n grow until the swarm is a slab.** The form's promise is that every observation is visible. At the point where the dots merge, the promise is broken and the chart still looks like it is keeping it.
 
@@ -107,7 +107,7 @@ Nothing on this page qualifies. The available inheritance is that value sits on 
 
 **Commonly repeated, and the evidence does not support it:**
 
-- ~~"A beeswarm shows the density."~~ It shows a width that varies with how many points sit near a value at the dot size you picked. No axis, no stated parameter, and it changes with the figure size.
+- ~~"A beeswarm shows the density."~~ It shows a width that varies with how many points sit near a value at the chosen dot size. No axis, no stated parameter, and it changes with the figure size.
 - ~~"It is a strip plot with the overlap fixed, so the strip plot evidence applies."~~ There is no strip plot evidence. Nothing in this corpus tests either form, and [dot-strip-plot.md](dot-strip-plot.md) says the same from its side.
 - ~~"A beeswarm is a better violin."~~ Nobody has compared them. The one experiment here that drew a violin was testing an encoding of a mean and its error against a bar with error bars ([correll-gleicher-2014-error-bars-harmful.md](../studies/correll-gleicher-2014-error-bars-harmful.md)), which is a different chart answering a different question.
 - ~~"Showing every observation leads readers to better conclusions."~~ The prevalence of summary-only figures is measured and the claim that many distributions produce one summary is secure by construction. The step from those to what readers conclude is untested. [distribution.md](distribution.md) and [dot-strip-plot.md](dot-strip-plot.md) carry the same entry.

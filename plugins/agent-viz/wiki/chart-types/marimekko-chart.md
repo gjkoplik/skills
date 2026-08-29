@@ -14,17 +14,17 @@ Also called a **mekko chart** or just a **Mekko**, and also a **mosaic plot**. [
 
 It is also a magnitude chart: the bar widths compare the groups against each other, which is a size comparison and not a composition reading. It is indexed under [part-to-whole](part-to-whole.md) first because the full rectangle is the whole, and under [magnitude](magnitude.md) for the widths.
 
-**The name "mosaic plot" collides.** In statistical graphics it names a display built from a contingency table, and **no source in this wiki defines that form**, so this page does not describe it and does not claim it is the same chart. Treat the term as ambiguous and confirm which form is meant. The one document in this corpus's reach that would settle it is Stephen Few's "Are Mosaic Plots Worthwhile", listed among his unread newsletter articles ([stephen-few.md](../people/stephen-few.md)).
+**The name "mosaic plot" collides.** In statistical graphics it names a display built from a contingency table, and **no source in this wiki defines that form**, so this page does not describe it and does not claim it is the same chart. The one document in this corpus's reach that would settle it is Stephen Few's "Are Mosaic Plots Worthwhile", listed among his unread newsletter articles ([stephen-few.md](../people/stephen-few.md)).
 
 **Where it is filed also disagrees.** Schwabish files Marimekko and Mosaic under **Comparing Categories**, verified from the book's own contents pages, while this index files the form under part-to-whole because the rectangle exhausts a real total. The filing is the verified part; what the book argues about the form is not, since its prose is unopened here. Two schemes putting one chart in two groups is the ordinary case rather than a problem, and [README.md](README.md) is where that argument lives.
 
 ## When to reach for it, and when not
 
-**Reach for it when** the data has two categorical dimensions and one count, the reader needs the split inside each group *and* the relative size of the groups, and "this rectangle is all of it" is part of the claim. If the group sizes are not part of the message, the width channel is costing you a dimension of reading for nothing.
+The form is defined for the case where the data has two categorical dimensions and one count, the reader needs the split inside each group *and* the relative size of the groups, and "this rectangle is all of it" is part of the claim. Where the group sizes are not part of the message, the width channel costs a dimension of reading for nothing.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | How big is this segment? | A table. Three quantities are encoded here and none is read off a value axis |
 | Which group is biggest? | Sorted [bar chart](bar-chart.md). Position instead of width |
@@ -54,7 +54,7 @@ Vertically, this is a stacked bar and inherits its channel split exactly: the bo
 
 Horizontally the same structure repeats: the leftmost column starts at the axis, and every column after it floats. **So the floating-segment problem appears twice, in two directions**, and the only mark with a common baseline in both is the bottom-left one.
 
-The area reading is the one the form adds. [Heer & Bostock (2010)](../studies/heer-bostock-2010.md) measured rectangular area, and two of their results bear on this form. Rectangular area matches circular area for accuracy, so nothing extra is lost by using rectangles. And aspect ratio 1 was the worst case, "a result robust across both the rectangle and treemap display conditions". State what that was: two marked rectangles, aspect ratios drawn from a squarified treemap layout, one proportional judgment. It was not a marimekko, whose rectangles come from the data rather than from a layout algorithm, and nobody has run the experiment on this form.
+The area reading is the one the form adds. [Heer & Bostock (2010)](../studies/heer-bostock-2010.md) measured rectangular area, and two of their results bear on this form. Rectangular area matches circular area for accuracy, so nothing extra is lost by using rectangles. And aspect ratio 1 was the worst case, "a result robust across both the rectangle and treemap display conditions". That result was two marked rectangles, aspect ratios drawn from a squarified treemap layout, one proportional judgment. It was not a marimekko, whose rectangles come from the data rather than from a layout algorithm, and nobody has run the experiment on this form.
 
 ## What it is measurably good at
 
@@ -64,7 +64,7 @@ Its one secure property is definitional: the drawing is a partition, so the area
 
 ## What it is measurably bad at
 
-Nothing measured **on this form**. Two inherited results apply and should be cited as inheritance:
+Nothing measured **on this form**. Two inherited results apply, as inheritance:
 
 - **Floating segments read as length rather than position**, at 40% to 250% more error, measured on divided bars ([stacked-bar.md](stacked-bar.md)). This chart has floating segments in both directions.
 - **Area is read less accurately than position or angle** ([channels.md](../concepts/channels.md), via Heer & Bostock). The area reading is the one the form exists for.
@@ -75,13 +75,13 @@ Nothing here measures what happens when a reader does both at once, which is the
 
 Nothing about how it is read, because nothing has been measured.
 
-What is genuinely unsettled is the **name**, above: the same word covers this form and a statistical-graphics form that no source in this wiki defines. That is a fact about the term rather than about the chart, and it is the reason to say "marimekko" when you mean this one.
+What is genuinely unsettled is the **name**, above: the same word covers this form and a statistical-graphics form that no source in this wiki defines. That is a fact about the term rather than about the chart; "marimekko" names this form without the collision.
 
 ## The failure mode it invites
 
 **Reading height as area.** Segment heights are shares *within* a group; segment areas are shares of the *whole*. Two segments with the same height have different areas whenever their groups differ in width, and the chart shows both readings at once with nothing to say which one a label refers to. This is the mistake the form is built to invite, and it follows from the geometry rather than from an experiment.
 
-**Tracking one part across the groups.** The stacked bar's worst case, plus a varying column width. The remedy is the same one and it is nearly free: put the series the reader has to compare on the baseline ([stacked-bar.md](stacked-bar.md)).
+**Tracking one part across the groups.** The stacked bar's worst case, plus a varying column width. The remedy is the same one and it is nearly free: the series the reader has to compare sits on the baseline ([stacked-bar.md](stacked-bar.md)).
 
 **Too many cells.** Every extra group or part shrinks rectangles in one dimension while the labels stay the same size. There is no measured threshold, and the practical one arrives early.
 
@@ -89,7 +89,7 @@ What is genuinely unsettled is the **name**, above: the same word covers this fo
 
 **Defensible, evidence-backed:**
 
-Nothing about this form directly. What is available is inherited and should be stated that way: "I put the series in question on the baseline, because floating segments are read as length, which carries 40% to 250% more error than position. That was measured on divided bars, not on this chart."
+Nothing about this form directly. What is available is inherited, and stated that way: "I put the series in question on the baseline, because floating segments are read as length, which carries 40% to 250% more error than position. That was measured on divided bars, not on this chart."
 
 **Defensible, with the label said out loud:**
 

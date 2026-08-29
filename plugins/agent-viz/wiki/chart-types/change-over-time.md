@@ -6,28 +6,28 @@ type: index
 
 One or more quantities measured repeatedly along an ordered axis, almost always time, drawn so that the shape of the change is what the reader takes away.
 
-## Is time the question, or just a column you happen to have?
+## Is time the question, or just a column in the data?
 
 Almost every dataset has a timestamp. Very few questions are about it. Three tests, and a form in this group needs all three.
 
-**Would the answer survive deleting the middle?** "How much did it grow" and "which is bigger now" are answered by two numbers and a subtraction. Draw the path only when the path is the answer: when the series accelerates, reverses, plateaus, spikes, or has a season in it. If you cannot name the feature you want the reader to see, you are drawing a shape and hoping.
+**Would the answer survive deleting the middle?** "How much did it grow" and "which is bigger now" are answered by two numbers and a subtraction. The path earns its place when the path is the answer: when the series accelerates, reverses, plateaus, spikes, or has a season in it. Where no such feature can be named, the drawing carries a shape and no claim.
 
 **Does the space between two adjacent points mean anything?** A connecting mark asserts that the values in between lie along it. That is a claim, and it is false when x is a set of unordered categories, when successive measurements are not comparable, or when the gap is missing data rather than a straight run. [Song & Szafir (2019)](../studies/song-szafir-2019-missing-data.md) measured the sharp end of this: methods that remove information "even lead to incorrect responses if missing values break the visual continuity of a visualization."
 
 **Is the message robust to the window?** If extending the axis by a year flips the conclusion, the conclusion belongs to the window. The FT builds this into the category definition itself: "Choosing the correct time period is important to provide suitable context for the reader" ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). `authority-asserted`.
 
-If a test fails, you are in the wrong group:
+A failed test places the question in another group:
 
-| The reader's actual question | Go to |
+| The reader's actual question | Group |
 |---|---|
 | How big is each of these? | [Magnitude](magnitude.md). A [bar chart](bar-chart.md), zero baseline |
 | Which is biggest, and in what order? | [Ranking](ranking.md). A sorted bar chart |
-| Did the order change between two dates? | **Stay here**, and see [slope-chart.md](slope-chart.md), which is also a ranking chart |
+| Did the order change between two dates? | **This group**; [slope-chart.md](slope-chart.md) is also a ranking chart |
 | How did the mix shift? | [Part-to-whole](part-to-whole.md). [Stacked bar](stacked-bar.md), or lines of shares |
 | How do these two variables relate, with time incidental? | [Correlation](correlation.md). A [scatterplot](scatterplot.md) |
 | How far is each period from target? | [Deviation](deviation.md) |
 | How spread out are the values within each period? | [Distribution](distribution.md). A box or violin per period |
-| Is this rising, falling, cycling, or breaking? | **Stay here** |
+| Is this rising, falling, cycling, or breaking? | **This group** |
 
 ## What this group costs
 
@@ -35,16 +35,16 @@ If a test fails, you are in the wrong group:
 
 First, **the task is wrong for the literature.** The graphical-perception record measures reading a value off a mark and reporting it as a number. Nobody reads a line chart that way. They read slope, shape, crossing points and turning points, and the source authors say plainly that their ordering does not speak to those tasks ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)). The one study aimed squarely at slope judgment, [Talbot, Gerth & Hanrahan (2012)](../studies/talbot-2012-slope-ratio.md), concludes that "the theory of aspect ratio selection is not as simple as it once seemed."
 
-Second, and this is the real price, **the trend is partly a design output.** Aspect ratio and axis range both change the apparent rate of change without changing a single number, and neither is visible to the reader as a choice. Both have been measured:
+Second, **the trend is partly a design output.** Aspect ratio and axis range both change the apparent rate of change without changing a single number, and neither is visible to the reader as a choice. Both have been measured:
 
 - [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) manipulated the aspect ratio of a line chart and moved mean response on a 5-point "how much bigger" scale from 1.39 to 3.19, an increase of 129.5%, **with the true values printed on the chart.**
 - [Correll, Bertini & Franconeri (2020)](../studies/correll-2020-truncating-the-y-axis.md) found truncation drove perceived severity up, F(2, 76) = 89, p < 0.0001, and that being a line chart rather than a bar chart did not help: "There was no significant effect of visualization design on perceived effect size (F(1, 38) = 0.5, p = 0.50)."
 
-Every other group in this wiki asks you to pick a mark. This one also asks you to pick two free parameters that decide what the mark says, and you own both.
+Every other group in this wiki turns on the choice of mark. This one also turns on two free parameters that decide what the mark says.
 
 ## Choosing a form
 
-| Form | Carries the change as | Reach for it when |
+| Form | Carries the change as | Where it applies |
 |---|---|---|
 | [Line chart](line-chart.md) | Endpoint position, read as slope and shape | Many ordered points, and the connection between them is real |
 | [Area chart](area-chart.md) | The same, plus filled area | One series or a stacked total, where the amount under the curve is a real quantity. The fill brings the zero baseline back into scope |
@@ -61,9 +61,9 @@ Fan charts and horizon graphs both belong to this group and neither has a page. 
 
 Three constraints that follow from the evidence rather than from taste:
 
-- **Pick the aspect ratio deliberately, and do not reach for a rule to justify it.** The library default is a choice you did not make. The received fix, banking to 45 degrees, is scope-limited rather than general; see the contested section of [line-chart.md](line-chart.md#what-is-contested).
+- **The aspect ratio is a free choice, and no rule in this corpus settles it.** The library default is an unmade choice. The received fix, banking to 45 degrees, is scope-limited rather than general; the contested section of [line-chart.md](line-chart.md#what-is-contested) carries it.
 - **Truncating the y-axis is a rhetorical decision on every mark in this group, filled or not.** The proportional-ink argument releases lines and dots. The measured exaggeration effect does not.
-- **Draw missing values as missing.** Highlighting beat downplaying beat removal on perceived data quality, and zero-filling was the worst imputation tested (Song & Szafir).
+- **Missing values drawn as missing.** Highlighting beat downplaying beat removal on perceived data quality, and zero-filling was the worst imputation tested (Song & Szafir).
 
 ## Justifying the choice
 
@@ -81,16 +81,16 @@ Three constraints that follow from the evidence rather than from taste:
 
 **Commonly repeated, and the evidence does not support it:**
 
-- ~~"Bank the slopes to 45 degrees."~~ Talbot et al.: "we find that, in general, slope ratio errors are not minimized around 45°." Cleveland's model fits inside the moderate range he tested and fails to extrapolate. The accurate sentence keeps the scope.
+- ~~"Bank the slopes to 45 degrees."~~ Talbot et al.: "we find that, in general, slope ratio errors are not minimized around 45°." Cleveland's model fits inside the moderate range he tested and fails to extrapolate.
 - ~~"Line charts are exempt from the truncation critique, because there is no bar to cut off."~~ Two different rules get merged here. Proportional ink is scoped by mark and genuinely releases an unfilled line. The exaggeration effect is not scoped by mark and was measured on lines.
-- ~~"An axis-break glyph makes the truncation honest."~~ The two static designs tested produced no measurable reduction. Note the care the source takes: at F(2, 60) = 3.1 and n = 31 this is a knife-edge failure to reject, not a demonstrated null, so "placebo" overstates it.
+- ~~"An axis-break glyph makes the truncation honest."~~ The two static designs tested produced no measurable reduction. The source is careful here: at F(2, 60) = 3.1 and n = 31 this is a knife-edge failure to reject, not a demonstrated null, so "placebo" overstates it.
 - ~~"A log scale is fine, my audience is technical."~~ Menge et al. found the gap did not close for PhDs, professors, or people who report being comfortable with logarithms.
 
 ## The failure mode this group invites
 
-**Presenting a trend as a property of the data when it is partly a property of the drawing.** Nothing in the numbers changes when you stretch the plot, crop the axis, or start the series a year later, and all three change what the reader concludes. This is the group where a figure can be entirely accurate and still wrong.
+**Presenting a trend as a property of the data when it is partly a property of the drawing.** Nothing in the numbers changes when the plot is stretched, the axis cropped, or the series started a year later, and all three change what the reader concludes. This is the group where a figure can be entirely accurate and still wrong.
 
-A usable check: state the conclusion out loud, then redraw at a different aspect ratio and a different axis range. If the sentence stops being true, the sentence was about your choices.
+A check on that: the conclusion stated out loud, then the figure redrawn at a different aspect ratio and a different axis range. A sentence that stops being true was a sentence about the drawing.
 
 ## Types in this index
 

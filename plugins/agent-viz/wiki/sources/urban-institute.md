@@ -11,7 +11,7 @@ The Urban Institute's public data visualization style guide, covering typography
 
 **How this was read.** The full guide at `urbaninstitute.github.io/graphics-styleguide/` and the `UrbanInstitute/urbnthemes` README were fetched and converted locally, retrieved 2026-08-23. Quotes are verbatim.
 
-**Authorship: this guide is not independent of [Jonathan Schwabish](../people/jonathan-schwabish.md).** The guide carries no byline, but its Additional Resources section names him as its sole point of contact ("Contact Jon Schwabish", `jschwabish@urban.org`, live page text verified 2026-08-25), and he is a Senior Fellow at Urban. **Do not count this guide and Schwabish as two sources for the same claim.** One such double-count has already been corrected, in [schwabish.md](schwabish.md).
+**Authorship: this guide is not independent of [Jonathan Schwabish](../people/jonathan-schwabish.md).** The guide carries no byline, but its Additional Resources section names him as its sole point of contact ("Contact Jon Schwabish", `jschwabish@urban.org`, live page text verified 2026-08-25), and he is a Senior Fellow at Urban. **This guide and Schwabish are not two sources for the same claim.** One such double-count has already been corrected, in [schwabish.md](schwabish.md).
 
 **What it is good for.** The **broadest** single source in this corpus. It is the only one that covers chart parts, color, prohibitions, accessibility, tables, maps, and the ethics of ordering people-groups in one document, from an organization that publishes research rather than journalism. It is also the source with the most quotable one-liners, which is why it appears against more inventory topics than anything except Wilke.
 
@@ -25,7 +25,7 @@ The guide opens the best-practices section by arguing against charts, which is r
 
 > "Although charts are great for communicating data, they are not the appropriate tool for every situation. If you find explanatory sentences do a better job of distilling the information you want to convey, consider going without a chart. If your main goal is to present detailed information as opposed to showing patterns, or if it's important that the reader can accurately determine the values of your data, consider using a table instead. You may also find that simply including a single, large number (commonly known as 'big aggregate numbers') may be sufficient."
 
-Inventory topic 4. Note the three-way split: sentence, table, or big number. It gives a criterion, too, which most sources do not: **patterns argue for a chart, accurate value retrieval argues for a table.**
+Inventory topic 4. The split is three-way: sentence, table, or big number. It gives a criterion, too, which most sources do not: **patterns argue for a chart, accurate value retrieval argues for a table.**
 
 ## The "Data Visualization Absolutes"
 
@@ -49,7 +49,7 @@ That is proportional ink, correctly scoped to length and height encodings. It is
 
 > "(There are two exceptions to this rule: charts that show the translation of a single measure such as Fahrenheit and Celsius temperatures; and the Pareto chart, which shows individual values as bars and a line showing the cumulative sum.)"
 
-Both exceptions are cases where the two axes are not independent variables: one is a unit conversion of the other, and the other is a cumulative function of the other. That is a principled line, and a better rule than the flat ban. It also sits well with [refutations.md](../refutations.md), which finds no experiment supporting a flat ban. Anyone citing Urban for "never use two axes" should quote the parenthesis too.
+Both exceptions are cases where the two axes are not independent variables: one is a unit conversion of the other, and the other is a cumulative function of the other. That is a principled line, and a better rule than the flat ban. It also sits well with [refutations.md](../refutations.md), which finds no experiment supporting a flat ban. The parenthesis belongs with any citation of Urban for "never use two axes."
 
 Elsewhere the guide states the practice as an editorial fact rather than a rule, which is the honest form: connected scatterplots are "a clearer substitute for dual-axis line charts, which Urban does not publish."
 
@@ -99,7 +99,7 @@ Highlighting is stated twice, once as a technique and once as a caution:
 >
 > "The observations you want the reader to focus on should be rendered in a color that helps them stand out (usually pink or yellow at Urban), while the rest of the series are in a different color (usually blue, black, or gray). However, be selective with your use of color to highlight specific values, series, or observations, because too many colors can make it difficult to pick out the values on which you want your reader to focus."
 
-Note the shape of Urban's palette hierarchy: cyan, gray, black as main colors, with yellow and magenta as **highlight-only** secondaries used "sparingly". The emphasis palette is a property of the palette, not of the individual chart.
+Urban's palette hierarchy has a shape: cyan, gray, black as main colors, with yellow and magenta as **highlight-only** secondaries used "sparingly". The emphasis palette is a property of the palette, not of the individual chart.
 
 And consistency across a set: "Once you've chosen blue to represent one group in one chart, make sure all other charts in your publication or slide deck use blue to represent that group as well." Topic 30.
 
@@ -111,7 +111,7 @@ Urban's section is compliance-shaped: Section 508 of the Rehabilitation Act plus
 
 > "Web Content Accessibility Guidelines (WCAG) 2.0 Level AA requires the contrast ratio of the luminance (think: brightness) of two colors to be 4.5:1 for normal text and 3:1 for large text. A higher level of contrast (Level AAA), requires a contrast ratio of 7:1 for normal text and 4.5:1 for large text. Large text is defined as 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger. **Text standards also apply to text in graphics, such as data labels in a chart or text boxes in a logic model.**"
 
-That last sentence is the one that makes this actionable for figures rather than for web pages. Note that Datawrapper publishes a *softer* chart-specific floor (2.5 for big text, 4 for small); the two disagree, and a bar has to pick one. Chartability picks the WCAG numbers and adds the 3:1 non-text floor for marks.
+That last sentence is the one that makes this actionable for figures rather than for web pages. Datawrapper publishes a *softer* chart-specific floor (2.5 for big text, 4 for small); the two disagree, and a bar has to pick one. Chartability picks the WCAG numbers and adds the 3:1 non-text floor for marks.
 
 **Alt text**, with the best one-line definition in the corpus:
 
@@ -151,13 +151,13 @@ Same pattern as `bbplot` ([bbc-cookbook.md](bbc-cookbook.md)): a written guide, 
 
 > "library(urbnthemes) makes ggplot2 output align more closely with this style guide, but it does not produce publication-ready graphics. Visual styles must still be edited using your project's normal editing workflow."
 
-A theme gets you the mechanizable part. It does not get you the judgment part. That split is the same one the floor-and-ceiling idea makes about review.
+A theme covers the mechanizable part. It does not cover the judgment part. That split is the same one the floor-and-ceiling idea makes about review.
 
 ## Where this source is used
 
 Inventory topics 4, 5, 9, 13, 21, 22, 23, 28, 29, 30, 32, 33, 36, 37, 38, 39, 41, 43, 44, 45, 47, 53, 54, 55, 57, 62, 68, 71, 73, 79, 80, 86, 90. See [roll-call.md](../roll-call.md).
 
-**One correction to carry forward:** the roll-call and inventory record the dual-axis rule as a flat ban. The current text states two exceptions. Topic 13 should be re-worded from the primary.
+**One correction:** the roll-call and inventory record the dual-axis rule as a flat ban. The current text states two exceptions, so topic 13 is out of date against the primary.
 
 ## Links
 

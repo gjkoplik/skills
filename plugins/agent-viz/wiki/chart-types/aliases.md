@@ -4,7 +4,7 @@ type: index
 
 # Chart name aliases
 
-A name-resolution index: arrive with a chart name, leave with the page that covers it, or with a plain statement that nothing here does.
+A name-resolution index: a chart name maps to the page that covers it, or to a plain statement that nothing here does.
 
 ## Why this page exists
 
@@ -20,10 +20,10 @@ So a reader who looks up "joyplot" and finds nothing has learned nothing about w
 
 ## What the third column means, and what it is not
 
-**The evidence class of this whole page is unusual, and it gets stated once here rather than on every row.** A name mapping is not an empirical claim about a chart, so `evidence-backed`, `authority-asserted` and `contested` do not apply to a row the way they apply to a finding. What a row can carry is provenance, in three kinds:
+**The evidence class of this page is unusual.** A name mapping is not an empirical claim about a chart, so `evidence-backed`, `authority-asserted` and `contested` do not apply to a row the way they apply to a finding. What a row can carry is provenance, in three kinds:
 
 - **Recorded in a source read here.** The name appears in a source someone in this corpus opened. The source is named in the row.
-- **This page's own stipulation**, or another page's. The wiki uses the name and says so, with nothing behind it. [spine-chart.md](spine-chart.md) is the model for saying this out loud.
+- **This page's own stipulation**, or another page's. The wiki uses the name and says so, with nothing behind it. [spine-chart.md](spine-chart.md) states this about its own name.
 - **In circulation, and no source here defines it.** The name is in use in the field and this corpus does not vouch for it.
 
 Two limits on that first kind, both of which cost rows their vouching:
@@ -78,6 +78,7 @@ Canonical names and aliases together, so anything can be looked up.
 | Dot plot | [dot-strip-plot.md](dot-strip-plot.md) | **Loose.** The name is recorded in two sources read here, Schwabish's **Dot Plot** entry and Datawrapper's zero-baseline article, and neither defines it. This corpus uses it for at least two drawings: one dot per row, which is a [lollipop](lollipop-chart.md) without its stem, and several dots on a shared strip |
 | Dot strip plot | [dot-strip-plot.md](dot-strip-plot.md) | In circulation, no source here defines it |
 | Dumbbell plot | [dumbbell-plot.md](dumbbell-plot.md) | In circulation. That page records that neither taxonomy in this corpus names the form separately |
+| Flow map | [flow-map.md](flow-map.md) | Recorded: the FT files **Flow map** under Spatial with a quoted gloss, and Schwabish files **Flow Map** under Geospatial. Neither files it under Flow; [flow.md](flow.md) indexing it there is this wiki's own reading |
 | Gap chart | [dumbbell-plot.md](dumbbell-plot.md) | In circulation, no source here defines it |
 | Gauge | [gauge-and-bullet.md](gauge-and-bullet.md) | Recorded: Schwabish files **Gauge and Bullet** as one entry under Comparing Categories |
 | Grid plot | [waffle-chart.md](waffle-chart.md) | In circulation, no source here defines it |
@@ -90,7 +91,7 @@ Canonical names and aliases together, so anything can be looked up.
 | Joyplot | [ridgeline-plot.md](ridgeline-plot.md) | In circulation, no source here defines it. "Ridgeline plot" is now vouched; this older informal name is not |
 | Line chart | [line-chart.md](line-chart.md) | Recorded: an FT Change-over-Time entry, and Schwabish files **Line** under Time |
 | Lollipop chart | [lollipop-chart.md](lollipop-chart.md) | Recorded: the FT's lollipop gloss is quoted in this wiki in full |
-| Marimekko chart | [marimekko-chart.md](marimekko-chart.md) | Recorded: Schwabish catalogs **Marimekko and Mosaic** as one entry. Say this name rather than "mosaic"; see the collision below |
+| Marimekko chart | [marimekko-chart.md](marimekko-chart.md) | Recorded: Schwabish catalogs **Marimekko and Mosaic** as one entry. "Mosaic" collides; see below |
 | Matrix chart | [heatmap.md](heatmap.md) | In circulation, no source here defines it |
 | Mekko | [marimekko-chart.md](marimekko-chart.md) | In circulation, no source here defines it |
 | Micro chart | [sparkline.md](sparkline.md) | In circulation, no source here defines it |
@@ -99,6 +100,7 @@ Canonical names and aliases together, so anything can be looked up.
 | Network diagram | [node-link.md](node-link.md) | Recorded: Schwabish files **Network Diagrams** under Relationship; the FT files networks under Flow |
 | Node-link diagram | [node-link.md](node-link.md) | Recorded: the term is used for the stimulus in [Ghoniem et al. (2004)](../studies/ghoniem-2004.md) and [Okoe et al. (2018)](../studies/okoe-2018.md), both `primary-read` |
 | Normalized stacked area | [stacked-area-chart.md](stacked-area-chart.md) | In circulation, as another name for the 100% case |
+| Origin-destination map | [flow-map.md](flow-map.md) | In circulation, no source here defines it. Used where the underlying table is an origin-destination matrix and the drawing is a flow map |
 | Paired dot plot | [dumbbell-plot.md](dumbbell-plot.md) | In circulation. That page says the form is structurally a paired dot plot with the pair connected, and stops there |
 | Pie chart | [pie-and-donut.md](pie-and-donut.md) | Recorded: a stimulus in [Skau & Kosara (2016)](../studies/skau-kosara-2016.md), and filed by both catalogs |
 | Population pyramid | [spine-chart.md](spine-chart.md) | That page's stipulation, as the familiar instance of the form. **Schwabish files a separate Pyramid entry under Distribution**, and no source here says the two are the same thing |
@@ -158,7 +160,7 @@ A table cannot hold these. None is resolved here, because none can be resolved f
 
 **Largely settled, 2026-08-27, by a primary definition.** [Wilke](../sources/wilke-fundamentals.md) defines the term in running text and files it with the treemap under proportions: "unlike in a stacked bar plot, in a mosaic plot both the heights and the widths of individual shaded areas vary." That is the marimekko drawing. He then attaches the condition that the statistical usage turns on: "This is a critical condition for a mosaic plot: Every categorical variable shown must cover all the observations in the dataset." So the two referents are **one drawing under a constraint**, not two charts, and the constraint is what a contingency table supplies.
 
-**What is still open.** Whether every user of "mosaic plot" means it with that condition attached. Few's unread "Are Mosaic Plots Worthwhile" ([stephen-few.md](../people/stephen-few.md)) is still the document that would show how contested the term is in practice. Naming the constraint out loud remains cheaper than arguing about the word.
+**What is still open.** Whether every user of "mosaic plot" means it with that condition attached. Few's unread "Are Mosaic Plots Worthwhile" ([stephen-few.md](../people/stephen-few.md)) is still the document that would show how contested the term is in practice.
 
 ### "Heat map"
 
@@ -174,13 +176,13 @@ A table cannot hold these. None is resolved here, because none can be resolved f
 
 **Who files what.** [Datawrapper](../sources/datawrapper-academy.md) uses "range plot" for the first sense, in passing, while explaining why the form needs no zero baseline: "Readers don't expect dot plots (or, for two values, range plots) to start at zero because there's no filled bar or column that would indicate that." It is named again in the same source's list of chart types whose height is fixed by row count. Neither passage defines it. Nothing in this corpus uses the term in the second sense, which is recorded on the type page from the field rather than from a source.
 
-**What this wiki cannot settle.** Which sense a given person means, so the type page's advice is to say in the caption which one you drew. What would move it: Datawrapper's own chart-type documentation, which defines the types the product ships. Seven Academy articles were read for this wiki and the rest of the Academy was not.
+**What this wiki cannot settle.** Which sense a given person means; the type page records a caption naming which one was drawn. What would move it: Datawrapper's own chart-type documentation, which defines the types the product ships. Seven Academy articles were read for this wiki and the rest of the Academy was not.
 
 ## Names with no page here at all
 
 Named somewhere in this tier or its sources, and unwritten. Unlinked on purpose, since a link to a page that does not exist is a broken link. Each gets one clause on where it would go.
 
-**Recorded in a source read here.** Arc chart, a Schwabish Relationship entry, and arc diagram, named on the network index, would go under network and topology. Candlestick, pyramid and stem-and-leaf, all Schwabish Distribution entries, would go under distribution. Circular line, cycle, gantt, horizon and flow charts and timelines, all Schwabish Time entries, would go under change over time. Flow map, a Schwabish Geospatial entry also named on the flow index, and proportional symbol map, which carries a quoted FT gloss ("Use for totals rather than rates"), would go under spatial. Tree diagram, a Schwabish Relationship entry, would go under part-to-whole. Parallel coordinates is filed by Schwabish under Relationship but by **the FT under Magnitude**, glossed "An alternative to radar charts", which is a filing disagreement rather than a settled home. Nightingale and voronoi, Schwabish Part-to-Whole entries, would go under part-to-whole. Isotype and pictogram share Schwabish's Unit/Isotype/Waffle entry, and **the full FT listing corrects an earlier note here**: the FT files them under **Magnitude**, and files the grid form separately as **Gridplot** under Part-to-whole. The FT splitting them across two relationships is independent support for [waffle-chart.md](waffle-chart.md) treating them as neighbors rather than as one form. Venn does have an FT home, **Part-to-whole**, correcting an earlier note here that it had none; Euler is not named anywhere in this corpus. Fan chart, which the FT files under Change over Time for uncertainty in projections, would go under change over time. Gradient plot, the other encoding tested by Correll & Gleicher, and nested bubbles, a Schwabish entry, would go under distribution and magnitude. Arrow plot, named in Datawrapper's resizing article, would go under ranking. Word cloud, word tree, icons, quotes and coloring phrases are the Schwabish Qualitative chapter and would go under qualitative.
+**Recorded in a source read here.** Arc chart, a Schwabish Relationship entry, and arc diagram, named on the network index, would go under network and topology. Candlestick, pyramid and stem-and-leaf, all Schwabish Distribution entries, would go under distribution. Circular line, cycle, gantt, horizon and flow charts and timelines, all Schwabish Time entries, would go under change over time. Proportional symbol map, which carries a quoted FT gloss ("Use for totals rather than rates"), would go under spatial. Tree diagram, a Schwabish Relationship entry, would go under part-to-whole. Parallel coordinates is filed by Schwabish under Relationship but by **the FT under Magnitude**, glossed "An alternative to radar charts", which is a filing disagreement rather than a settled home. Nightingale and voronoi, Schwabish Part-to-Whole entries, would go under part-to-whole. Isotype and pictogram share Schwabish's Unit/Isotype/Waffle entry, and **the full FT listing corrects an earlier note here**: the FT files them under **Magnitude**, and files the grid form separately as **Gridplot** under Part-to-whole. The FT splitting them across two relationships is independent support for [waffle-chart.md](waffle-chart.md) treating them as neighbors rather than as one form. Venn does have an FT home, **Part-to-whole**, correcting an earlier note here that it had none; Euler is not named anywhere in this corpus. Fan chart, which the FT files under Change over Time for uncertainty in projections, would go under change over time. Gradient plot, the other encoding tested by Correll & Gleicher, and nested bubbles, a Schwabish entry, would go under distribution and magnitude. Arrow plot, named in Datawrapper's resizing article, would go under ranking. Word cloud, word tree, icons, quotes and coloring phrases are the Schwabish Qualitative chapter and would go under qualitative.
 
 **Named in this tier, with no source behind the name.** ECDF and histogram-of-histograms, under distribution. Alluvial diagram and parallel sets, under flow. Biofabric, edge bundling and bipartite layouts, under network and topology. Binned density plot, hexbin or 2D histogram, under correlation. Small multiples, which every index reaches for and which is a layout rather than a form. Column over time, under change over time. Surplus and deficit filled line, under deviation. Ordered proportional symbols, under ranking. Grouped bars, under magnitude. Icon array, under qualitative. Scatterplot matrix or SPLOM, sina plot and violin scatter, all three flagged on existing pages as different constructions from the pages that flag them.
 

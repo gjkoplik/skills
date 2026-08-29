@@ -41,7 +41,7 @@ The recommendation, also from the abstract:
 
 > "We recommend that ecology curricula include explicit instruction on how to interpret log-scaled axes and equations, and we also recommend that authors take the potential for misconceptions into account when deciding how to visualize data."
 
-**Note the wording of that second recommendation.** It is "take the potential for misconceptions into account," not "do not use log scales."
+That second recommendation is "take the potential for misconceptions into account," not "do not use log scales."
 
 ## Method, from the supplements
 
@@ -60,7 +60,7 @@ The survey flow (Supplementary PDF 4) randomizes which items each respondent see
 - Self-reported comfort with logarithms (Supplementary Table 5): 73% comfortable to some degree (8% extremely, 39% moderately, 26% slightly), 9% neutral, 18% uncomfortable. **89% had log-transformed data for analysis themselves.**
 - Stated preference: 21% linear, 0.5% log, 67% "usually linear," 3% "usually log," 9% no opinion.
 
-## The result that most people miss
+## Correctness by demographic
 
 Supplementary Table 3 splits percent correct by demographic. For graphs, the linear / log-untransformed / log-transformed triple is:
 
@@ -71,7 +71,7 @@ Supplementary Table 3 splits percent correct by demographic. For graphs, the lin
 | Professor / other | 94 / 93 | 55 / 56 | 55 / 53 |
 | Over 43 / under 43 | 93 / 94 | 54 / 56 | 54 / 53 |
 
-**The gap does not close for anyone.** Holding a PhD buys 3 points on linear graphs and 0 points on log-untransformed graphs. That is the finding that makes this paper worth citing, and it is in a supplementary table rather than the abstract.
+**The gap does not close for anyone.** Holding a PhD buys 3 points on linear graphs and 0 points on log-untransformed graphs. That finding is in a supplementary table rather than in the abstract.
 
 Supplementary Figure 7 regresses correctness against self-reported comfort with logarithms and reports the coefficients: for graphs, 0.58 ± 0.53 (linear), 0.93 ± 0.61 (log untransformed), -0.06 ± 0.66 (log transformed), with t values 1.1, 1.5 and -0.08. **Self-reported comfort with logs does not predict getting log graphs right.**
 
@@ -93,8 +93,8 @@ Observable limits from what was reached:
 - **Not a general claim about all audiences.** The population is ecologists. It generalizes *downward* comfortably (if PhD ecologists who routinely log-transform data get 56%, a lay audience will not do better) but the specific numbers belong to this population.
 - **Not "log-log versus linear-linear" as the only comparison.** There are three conditions. The middle one, log axes with untransformed values, is the one most charts actually use, and it scored about the same as fully log-transformed.
 - **Not a claim about labeled, gridded, or annotated log axes.** The stimuli were what they were. No remediation was tested.
-- **Do not quote 93%/56% as if each rested on 623 respondents.** It is an aggregate over randomized item subsets.
-- **Do not quote author limitations from this page.** There are none here to quote.
+- **Not 93%/56% as two figures each resting on 623 respondents.** They are aggregates over randomized item subsets.
+- **Not any author-stated limitation.** There are none on this page to quote.
 
 ## Links
 

@@ -14,8 +14,8 @@ Three crowdsourced experiments on whether y-axis truncation inflates perceived e
 
 ## What it is good for
 
-- The one place to point when someone claims **line charts are exempt** from the truncation critique. Chart type made no significant difference.
-- The one place to point when someone proposes a **jagged-axis marker as the honesty fix**. The tested markers did not measurably help.
+- Whether **line charts are exempt** from the truncation critique. Chart type made no significant difference.
+- Whether a **jagged-axis marker works as the honesty fix**. The tested markers did not measurably help.
 - A carefully hedged source for the position that **there is no honest/dishonest binary** for quantitative axes.
 
 ## What it does not settle
@@ -64,7 +64,7 @@ Materials, data and analyses: [osf.io/gz98h](https://osf.io/gz98h/).
 
 Prolific crowd workers, graphically literate as a group: mean scores of 10, 10.8 and 11 on the 13-item Galesic and Garcia-Retamero graph literacy scale, and 78%, 78% and 84% respectively answered the scale's own y-axis-truncation item correctly.
 
-One arithmetic caution: Experiment Three reports F(1, 20) for a three-level factor with 25 participants. The numerator df of 1 and the error df of 20 are both inconsistent with a straightforward three-level within-subjects test on 25 people. The direction and the effect are not in doubt, but do not build anything on that particular df.
+One arithmetic caution: Experiment Three reports F(1, 20) for a three-level factor with 25 participants. The numerator df of 1 and the error df of 20 are both inconsistent with a straightforward three-level within-subjects test on 25 people. The direction and the effect are not in doubt, but that particular df is unreliable.
 
 ## Limits the authors state themselves
 
@@ -78,7 +78,7 @@ The paper's Limitations & Future Work section, quoted:
 
 > "visualizations from different sources or presented with different levels of perceived expertise or authority could produce differing patterns of judgment in different audiences... a quantitative study of the persuasive power of y-axis truncation (especially for decision-making tasks) falls to future work."
 
-And in the Discussion, the hedge that matters most:
+And in the Discussion:
 
 > "Merely indicating that truncation has occurred, even in a prominent and unambiguous way, **may not be sufficient** to 'de-bias' viewers of truncated charts."
 
@@ -102,3 +102,4 @@ They also explicitly refuse the maximalist reading in the other direction:
 - [refutations.md](../refutations.md), "Axis-break glyphs as the truncation remedy"
 - [inventory.md](../inventory.md), topic 10 (axis truncation)
 - Related: [Pandey et al. 2015](pandey-2015-deceptive-visualizations.md), whose rating-scale design this study extends and cites as reference 27
+- [../people/michael-correll.md](../people/michael-correll.md) — the first author, and the other rules his name gets attached to

@@ -10,13 +10,13 @@ Points ordered along a continuous axis, usually time, joined by segments, so tha
 
 ## When to reach for it, and when not
 
-**Reach for it when** x is continuous and ordered, the connection between consecutive points is a claim you are willing to defend, there are enough points that the shape carries information a table would not, and the reader's question is about the shape rather than about individual values.
+The form is defined for the case where x is continuous and ordered, the connection between consecutive points is a defensible claim, there are enough points that the shape carries information a table would not, and the reader's question is about the shape rather than about individual values.
 
-**The two decisions that matter most are not the mark.** They are the aspect ratio and the y-axis range, and both have been measured.
+Two of the decisions here are not about the mark: the aspect ratio and the y-axis range, and both have been measured.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | What was the value in each of these four quarters? | A column chart from zero, or a table. Values are the job, not shape |
 | Which of these categories is biggest? | Sorted bar chart. Ranking, not time |
@@ -24,7 +24,7 @@ Points ordered along a continuous axis, usually time, joined by segments, so tha
 | x is a set of unordered categories | Bar or dot plot. A connecting line asserts a path between things that are not adjacent |
 | How did the mix shift? | [Stacked bar](stacked-bar.md), or lines of shares rather than levels |
 | How do these two variables relate, with time along for the ride? | [Scatterplot](scatterplot.md), or a [connected scatterplot](connected-scatterplot.md) |
-| The amount accumulated under the curve is the point | [Area chart](area-chart.md), and accept the zero baseline with it |
+| The amount accumulated under the curve is the point | [Area chart](area-chart.md), which brings the zero baseline with it |
 | Every one of nine series matters equally | Small multiples. Schwabish's first redesign move on a multi-series line chart ([jonathan-schwabish.md](../people/jonathan-schwabish.md)), `authority-asserted` |
 
 ## Structural decomposition
@@ -32,7 +32,7 @@ Points ordered along a continuous axis, usually time, joined by segments, so tha
 | Slot | |
 |---|---|
 | Data | One row per (series, time, value) |
-| Transform | Usually none. Optionally smoothing, resampling, or interpolation across gaps, each of which is an assertion about values you do not have |
+| Transform | Usually none. Optionally smoothing, resampling, or interpolation across gaps, each of which is an assertion about values that are missing |
 | Geometry | Path through the ordered points, optionally with a marker per point |
 | Scale | Time to position on x, value to position on y. **Slope is a function of both scales together, not of the data alone** |
 | Coordinates | Cartesian |
@@ -52,7 +52,7 @@ The complication is that **the reading a line chart is for is not the reading th
 
 **Nothing in this corpus measures a line chart against an alternative.** No study here compares it to a bar chart, a table, or a slope chart for any task. That is a statement about the field's coverage.
 
-One adjacent result is worth carrying, because slope judgment is this chart's core task. [Talbot et al. (2012)](../studies/talbot-2012-slope-ratio.md) randomly gave half their subjects a visible horizontal baseline under each line segment:
+One adjacent result bears on slope judgment, this chart's core task. [Talbot et al. (2012)](../studies/talbot-2012-slope-ratio.md) randomly gave half their subjects a visible horizontal baseline under each line segment:
 
 > "As predicted, the addition of a baseline nearly eliminates the judgment error for mid-angles less than 45°. The error here is now nearly as small as in the height approximation results from Experiment 1. But, unpredicted, the linear trend was not eliminated for mid-angles larger than 45°."
 
@@ -60,11 +60,11 @@ Their own summary is "Our hypothesis is not fully confirmed." The stimulus is tw
 
 ## What it is measurably bad at
 
-Each of these is better read as something the form fails to protect the reader from.
+Each of these is something the form fails to protect the reader from.
 
-**Resisting the designer's aspect-ratio choice.** [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) changed nothing but the aspect ratio of a line chart and moved mean response on a 5-point "how much bigger" scale from 1.39 to 3.19, +129.5%, Mann-Whitney U = 1409, Z = 5.88, p < 0.0001, r = 0.66. The actual numbers were printed on the chart, so this is not a failure to read values. Do not use this to rank distortions against each other: chart type and distortion are confounded one to one in that study, and the authors say so.
+**Resisting the designer's aspect-ratio choice.** [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) changed nothing but the aspect ratio of a line chart and moved mean response on a 5-point "how much bigger" scale from 1.39 to 3.19, +129.5%, Mann-Whitney U = 1409, Z = 5.88, p < 0.0001, r = 0.66. The actual numbers were printed on the chart, so this is not a failure to read values. The study does not support ranking distortions against each other: chart type and distortion are confounded one to one in it, and the authors say so.
 
-**Resisting truncation.** [Correll et al. (2020)](../studies/correll-2020-truncating-the-y-axis.md) found perceived severity rose with truncation, F(2, 76) = 89, p < 0.0001, and that the chart being a line made no significant difference: "There was no significant effect of visualization design on perceived effect size (F(1, 38) = 0.5, p = 0.50)." One subjective measure on one task, and it is the one place to point when someone claims lines are exempt.
+**Resisting truncation.** [Correll et al. (2020)](../studies/correll-2020-truncating-the-y-axis.md) found perceived severity rose with truncation, F(2, 76) = 89, p < 0.0001, and that the chart being a line made no significant difference: "There was no significant effect of visualization design on perceived effect size (F(1, 38) = 0.5, p = 0.50)." One subjective measure on one task, and the only result in this corpus bearing on whether lines are exempt.
 
 **Silent gaps.** [Song & Szafir (2019)](../studies/song-szafir-2019-missing-data.md), on line graphs among other stimuli: "Information removal can significantly degrade perceptions of data quality, and confidence. These methods even lead to incorrect responses if missing values break the visual continuity of a visualization." Highlighting missing values beat downplaying them, which beat removing them, and zero-filling was the worst of the three imputation methods tested. The authors describe their own result as preliminary guidance, and they are explicit that degrading reader confidence is not automatically the goal.
 
@@ -78,13 +78,13 @@ Each of these is better read as something the form fails to protect the reader f
 - The FT applies the rule by mark, capitalizing "always" for the filled column and writing "does not HAVE to start at zero (but preferable)" for the lollipop ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). Observable Plot forces zero only where area encodes the value ([observable-plot.md](../sources/observable-plot.md)). Datawrapper hard-blocks truncated bar axes in the product and offers a line chart as one of its three remedies ([datawrapper-academy.md](../sources/datawrapper-academy.md)).
 - [Vega-Lite](../sources/vega-lite.md) goes the other way and ships the strict version as a default: `zero` is true "for x and y channels if the quantitative field is not binned and no custom domain is provided," for every mark type. That is a stronger commitment than any style guide here makes, and it is the position with the least support behind it.
 
-**What survives.** Proportional ink is an argument about filled marks, and it genuinely does not bind an unfilled line; four sources reach that independently and it is `authority-asserted` with tooling corroboration, not measured. The exaggeration effect is a separate claim, it was measured, and it is not scoped by mark. Both facts hold at once: you are allowed to truncate a line chart, and truncating it will inflate what the reader takes away. Correll et al. refuse the maximalist reading in as many words, "we resist the interpretation... that all charts with quantitative axes should include 0," while measuring the effect anyway. Treat the range as a rhetorical choice you own and disclose.
+**What survives.** Proportional ink is an argument about filled marks, and it genuinely does not bind an unfilled line; four sources reach that independently and it is `authority-asserted` with tooling corroboration, not measured. The exaggeration effect is a separate claim, it was measured, and it is not scoped by mark. Both facts hold at once: the guidance releases a line chart from the zero baseline, and truncating it inflates what the reader takes away. Correll et al. refuse the maximalist reading in as many words, "we resist the interpretation... that all charts with quantitative axes should include 0," while measuring the effect anyway. The range is a rhetorical choice rather than a neutral default.
 
-**Whether an axis-break glyph fixes it.** The two static designs tested, a broken-axis glyph and a gradient fade, produced no significant difference in perceived severity. F(2, 60) = 3.1 against a critical value of 3.1504 means p is about 0.052, with 31 participants, no equivalence test and no Bayes factor. That is a knife-edge failure to reject, not evidence of no effect, and "placebo" overstates it. The supportable version is that you cannot rely on a jagged marker to do the work.
+**Whether an axis-break glyph fixes it.** The two static designs tested, a broken-axis glyph and a gradient fade, produced no significant difference in perceived severity. F(2, 60) = 3.1 against a critical value of 3.1504 means p is about 0.052, with 31 participants, no equivalence test and no Bayes factor. That is a knife-edge failure to reject, not evidence of no effect, and "placebo" overstates it. The supportable version is that a jagged marker was not shown to do the work.
 
 **Banking to 45 degrees.** Cleveland's aspect-ratio guideline is in every curriculum. [Talbot et al. (2012)](../studies/talbot-2012-slope-ratio.md) widened the sampled space and reported that "we find that, in general, slope ratio errors are not minimized around 45°." Two things a careless citation drops. The shift "from near 45° to below 30°" belongs to the ANGLE submodel only, and Cleveland's subjects were instructed to compare heights. And Cleveland replicates inside his own range: his model "fit our data well in the regions considered in the original study" and fails to extrapolate. **Accurate phrasing: 45 degrees is not the error-minimizing ratio in general, and Cleveland's result holds within the moderate regime he tested.** The constructive replacement is a direction rather than a rule, that flatter and wider ratios than banking algorithms produce should be preferred, and it has never been tested on real plots.
 
-**Log scales in general.** The direction is well supported and "never" is not. Menge et al. recommend instruction and author awareness rather than a ban; Romano et al. recommend linear "at least as a default option" and themselves name a contemporaneous Canadian study that found no effect. Cite the pair, or neither.
+**Log scales in general.** The direction is well supported and "never" is not. Menge et al. recommend instruction and author awareness rather than a ban; Romano et al. recommend linear "at least as a default option" and themselves name a contemporaneous Canadian study that found no effect.
 
 ## The failure mode it invites
 
@@ -116,7 +116,7 @@ Each of these is better read as something the form fails to protect the reader f
 
 ## See also
 
-- [change-over-time.md](change-over-time.md) — the group, and the two free parameters it hands you
+- [change-over-time.md](change-over-time.md) — the group, and its two free parameters
 - [area-chart.md](area-chart.md) — this chart plus a fill, and what the fill costs
 - [../concepts/channels.md](../concepts/channels.md) — the evidence this page inherits, and its stated scope
 - [../refutations.md](../refutations.md) — banking, truncation remedies, log scales

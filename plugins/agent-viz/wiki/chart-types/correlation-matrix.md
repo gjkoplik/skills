@@ -10,21 +10,21 @@ A square grid with the same variables on both axes, one cell per pair, each cell
 
 **Also called a correlogram or a corrplot.** [Wilke](../sources/wilke-fundamentals.md) defines the first at primary: "Visualizations of correlation coefficients are called correlograms." **"Corrplot" is still in circulation with nothing here defining it**, and it is the name of an R package as often as a form.
 
-**One collision that matters, and it is not a naming nuisance.** The same grid is also drawn with a **scatterplot** in every cell rather than a colored coefficient, and that object is called a **scatterplot matrix** or a **SPLOM**; the two get called by each other's names freely. They are different charts. A scatterplot matrix shows the data. A colored correlation matrix shows one number per pair and nothing else, and the number is exactly the one that does not determine the picture, which is the Datasaurus argument below. No source in this corpus defines either term: [Schwabish](../sources/schwabish.md) files a **Correlation Matrix** under Relationship, with the membership verified from the book's contents pages and his prose unread, and there is no scatterplot-matrix entry anywhere in the corpus. The names are recorded here rather than adjudicated.
+**One collision, and it is not a naming nuisance.** The same grid is also drawn with a **scatterplot** in every cell rather than a colored coefficient, and that object is called a **scatterplot matrix** or a **SPLOM**; the two get called by each other's names freely. They are different charts. A scatterplot matrix shows the data. A colored correlation matrix shows one number per pair and nothing else, and the number is exactly the one that does not determine the picture, which is the Datasaurus argument below. No source in this corpus defines either term: [Schwabish](../sources/schwabish.md) files a **Correlation Matrix** under Relationship, with the membership verified from the book's contents pages and his prose unread, and there is no scatterplot-matrix entry anywhere in the corpus. The names are recorded here rather than adjudicated.
 
 The general case, color on a grid whatever the cells hold, is a [heatmap](heatmap.md), and this page does not restate that argument. That page also carries the filing tangle around the two names. What follows here is only what comes from the cells being correlation coefficients.
 
 ## When to reach for it, and when not
 
-**Reach for it when** there are enough variables that plotting every pair is not an option, they are measured on the same units, and the job is to decide which pairs are worth a real chart. It is a screening device whose proper output is a shortlist of scatterplots, and it is at its most honest when it is labeled as one.
+**The form applies where** there are enough variables that plotting every pair is not an option, they are measured on the same units, and the job is to decide which pairs are worth a real chart. It is a screening device whose output is a shortlist of scatterplots.
 
-**Do not reach for it when:**
+**Questions the form does not answer:**
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | What does the relationship between these two variables look like? | [Scatterplot](scatterplot.md). One coefficient is compatible with radically different pictures |
 | There are four variables | The six scatterplots. A grid of four cells is a table with color on it |
-| The exact coefficients are the deliverable | [A table](tables.md). Numbers read exactly, and a small table beats a grid you have to decode against a legend |
+| The exact coefficients are the deliverable | [A table](tables.md). Numbers read exactly, and a small table needs no legend to decode |
 | The relationship might not be monotone | [Scatterplot](scatterplot.md). The twelve Datasaurus datasets, including a dinosaur and a star, all share Pearson's r to two decimals ([matejka-2017-datasaurus.md](../studies/matejka-2017-datasaurus.md)) |
 | The cells are counts, rates or measurements rather than coefficients | A [heatmap](heatmap.md). Everything below about symmetry, the diagonal and the bounded midpoint stops holding |
 | Which variable drives which? | Nothing here answers that. [correlation.md](correlation.md) states the limit and it is a limit on inference, not on the chart |
@@ -47,14 +47,14 @@ All of this is definitional and carries no evidence label. It is also most of wh
 
 **It is symmetric, so half of it is redundant.** The coefficient for (x, y) is the coefficient for (y, x), so the two triangles are the same numbers drawn twice. Nothing is lost by drawing one triangle, and what is gained is space for the labels.
 
-**The diagonal is 1 by construction.** It carries no information about the data, and on a full-range color scale it is the strongest ink in the figure, so the most conspicuous marks on the chart are the ones guaranteed in advance. Blank it, or accept that it is decoration.
+**The diagonal is 1 by construction.** It carries no information about the data, and on a full-range color scale it is the strongest ink in the figure, so the most conspicuous marks on the chart are the ones guaranteed in advance. Blanked, or left as decoration.
 
 **The scale is bounded, and its midpoint means something.** Coefficients run from -1 to 1 and zero is not an arbitrary place on that interval, it is the absence of the thing being measured, with sign on either side. That makes a **diverging colormap a property of the data here rather than a style preference**, which is unusual: on most colored grids the choice is a judgment call. Two inventory topics fall out of it directly, both `authority-asserted`:
 
 - **Colormap class matched to data type** ([inventory.md](../inventory.md) topic 23). matplotlib's own guidance: "Diverging: change in lightness and possibly saturation of two different colors that meet in the middle at an unsaturated color; should be used when the information being plotted has a critical middle value, such as topography or when the data deviates around zero" ([matplotlib.md](../sources/matplotlib.md)). A correlation coefficient deviates around zero by construction.
 - **The midpoint is set explicitly and labeled** ([inventory.md](../inventory.md) topic 32). The Urban Institute: "The center of the diverging palette should always be labeled to avoid confusing the reader" ([urban-institute.md](../sources/urban-institute.md)). [Observable Plot](../sources/observable-plot.md) makes it typed rather than incidental, pivoting diverging scales at zero by default.
 
-**The color domain is a free parameter, and fixing it is the safer default.** Spanning the full interval from -1 to 1 makes two figures comparable; fitting the domain to the observed range makes a matrix of weak correlations look like a matrix of strong ones. That follows from the scale rather than from a study, and nobody in this corpus has measured what the difference does to a reader.
+**The color domain is a free parameter.** Spanning the full interval from -1 to 1 makes two figures comparable; fitting the domain to the observed range makes a matrix of weak correlations look like a matrix of strong ones. That follows from the scale rather than from a study, and nobody in this corpus has measured what the difference does to a reader.
 
 ## Channels
 
@@ -76,7 +76,7 @@ The nearest measured neighbor is the [adjacency matrix](adjacency-matrix.md), wh
 
 Nothing measured on the form. The inherited exposure is the color channel, above, and it is the one the chart cannot avoid, since the coefficient has nowhere else to go.
 
-One more, worth naming because the fix is cheap: **a banded colormap invents groups.** [Ware, Stone & Szafir (2023)](../studies/ware-2023-rainbow-colormaps.md), a position piece rather than an experiment, concede the point directly: "people tend to read meaning into color categories even when they are simply artifacts of the colormap." On this chart that means an apparent tier of strong correlations and an apparent tier of weak ones, drawn by the colormap rather than found in the data.
+One more: **a banded colormap invents groups.** [Ware, Stone & Szafir (2023)](../studies/ware-2023-rainbow-colormaps.md), a position piece rather than an experiment, concede the point directly: "people tend to read meaning into color categories even when they are simply artifacts of the colormap." On this chart that means an apparent tier of strong correlations and an apparent tier of weak ones, drawn by the colormap rather than found in the data.
 
 ## What is contested
 
@@ -86,13 +86,13 @@ The disagreement in the corpus is about filing, and it is small. [Schwabish](../
 
 ## The failure mode it invites
 
-**Scanning the grid for the darkest cells.** The chart lays out many coefficients at once and gives no visual difference between one you predicted and one you noticed, so the extreme cells are the ones that get reported. That is multiple comparisons done by eye. It follows from the structure of the chart, it is `authority-asserted` at most, and there is no result in this corpus measuring either how often readers do it or what it costs. The cheap defense is to say how many coefficients are on the chart, which is k(k-1)/2 and is usually larger than people expect.
+**Scanning the grid for the darkest cells.** The chart lays out many coefficients at once and gives no visual difference between one that was predicted and one that was noticed, so the extreme cells are the ones that get reported. That is multiple comparisons done by eye. It follows from the structure of the chart, it is `authority-asserted` at most, and there is no result in this corpus measuring either how often readers do it or what it costs. The defense named here is stating how many coefficients are on the chart, which is k(k-1)/2 and is usually larger than people expect.
 
-**Treating the cell as the finding.** The cells are exactly the summary statistic that does not determine the shape of the data. [Matejka & Fitzmaurice (2017)](../studies/matejka-2017-datasaurus.md) hold x and y means, x and y standard deviations and Pearson's r at -0.06 to two decimals across twelve wildly different datasets. That construction supports *these summary statistics are compatible with radically different data*, which is true by construction and therefore the strongest form of true available, and it supports *so plot the data*. It **does not** support *readers are misled by summary statistics*, and it has no participants, no task and no measurement of comprehension. Keep the two apart, as [correlation.md](correlation.md) does. When the claim you need is empirical, [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md) is the citation with data under it.
+**Treating the cell as the finding.** The cells are exactly the summary statistic that does not determine the shape of the data. [Matejka & Fitzmaurice (2017)](../studies/matejka-2017-datasaurus.md) hold x and y means, x and y standard deviations and Pearson's r at -0.06 to two decimals across twelve wildly different datasets. That construction supports *these summary statistics are compatible with radically different data*, which is true by construction and therefore the strongest form of true available, and it supports *so plot the data*. It **does not** support *readers are misled by summary statistics*, and it has no participants, no task and no measurement of comprehension. [correlation.md](correlation.md) keeps the two apart. For the empirical claim, [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md) is the citation with data under it.
 
 **Shipping the default ordering.** Row and column order is a free parameter and it is the whole of the visible structure: blocks of related variables appear only if the ordering puts them next to each other. Column order in the source file is arbitrary with respect to the data. [adjacency-matrix.md](adjacency-matrix.md) makes this argument in full, and it transfers directly, with one difference in this chart's favor: the ordering can be derived from the coefficients themselves by clustering or seriation, so the input for a structural ordering is already on the chart.
 
-**Reading adjacency as similarity.** Two neighboring rows are neighbors because of the ordering you chose, which may be alphabetical. Same trap, same page.
+**Reading adjacency as similarity.** Two neighboring rows are neighbors because of the chosen ordering, which may be alphabetical. Same trap, same page.
 
 ## Justifying the choice
 

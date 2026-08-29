@@ -80,7 +80,7 @@ On the stimuli being a deliberate extreme:
 
 They also concede a **confound they cannot rule out**: the Holmes images are tightly coupled to the data. The monster's mouth and teeth trace the rising trend, and the word "monstrous" is in the title. So the imagery is not decoration in the chartjunk sense, it is partly a redundant encoding of the message. Their own explanation for the value-message advantage is that "the images do often convey values, and this was likely the intention of the designer," and that a monster would not fit a story about rising life expectancy. That means the result may be about *well-designed integrated imagery by a professional* rather than about embellishment as a category. The paper says as much: "Finding an accompanying graphic that fits the story ... and finding a way to integrate the image into the representation of data, are likely to be difficult tasks that cannot be done well without a skilled designer."
 
-Their closing observation is the durable one, and it is weaker than the way the paper gets cited:
+Their closing observation, weaker than the way the paper gets cited:
 
 > "there may be more to the usability and utility of charts than is currently captured by minimalist design approaches."
 
@@ -103,7 +103,7 @@ The authors' framing is careful, and it cuts against a lazy reading in either di
 
 > "Our comparison-analysis shows that many of the findings from the original paper were confirmed by one or more of the replication studies."
 
-The pattern, synchronous replicates and asynchronous does not, points at experimenter presence and prompting as moderators rather than at the effect being absent. But it does mean **the long-term recall advantage is not a stable finding at n = 20**, and anyone quoting it should say so.
+The pattern, synchronous replicates and asynchronous does not, points at experimenter presence and prompting as moderators rather than at the effect being absent. **The long-term recall advantage is not a stable finding at n = 20.**
 
 ## The 2014 critique
 
@@ -111,7 +111,7 @@ The pattern, synchronous replicates and asynchronous does not, points at experim
 
 > "Researchers have examined the effects of visual embellishment on comprehension and memorability of charts under specific conditions, such as charts with a small number of data points that were viewed with no time limit (Bateman et al., 2010). This paper extends previous studies and investigates the effects of visual embellishment given different time limits for viewing these charts. Similar to the Bateman et al. (2010) study, we compared embellished charts (selected from the work of Nigel Holmes) and plain, grayscale charts, but we limited our selection to those that consisted of larger data sets (10 or more data points). Results showed that the presence of a time limit affected comprehension and short-term recall performance, while the type of chart significantly affected short-term recall. In addition, the type of chart affected the time needed to review the chart while answering the questions. Participants found Holmes charts more attractive and memorable."
 
-So the critique targets exactly the two limits Bateman et al. named themselves: unlimited viewing time, and small data sets. The abstract does not report the *direction* of the chart-type effects, so do not attribute a direction to it. **Mark anything drawn from this paper beyond the abstract as unverified.**
+So the critique targets exactly the two limits Bateman et al. named themselves: unlimited viewing time, and small data sets. The abstract does not report the *direction* of the chart-type effects, so no direction can be attributed to it. Anything drawn from this paper beyond the abstract is unverified.
 
 ## What this result does not license
 

@@ -14,7 +14,7 @@ Two crowdsourced studies, 303 participants total, measuring how 14 ways of drawi
 
 ## What it is good for
 
-[inventory.md](../inventory.md) topic 55 flags missing data as weakly sourced in the visualization canon, and this is the paper that fixes it. Come here for the ordering result, **highlighting beats downplaying beats removal**, and for the specific finding that removal can produce outright wrong answers when it breaks visual continuity. Also come here for the framing that "less reader confidence" is not automatically the goal.
+[inventory.md](../inventory.md) topic 55 flags missing data as weakly sourced in the visualization canon, and this is the paper that fixes it. It carries the ordering result, **highlighting beats downplaying beats removal**, the specific finding that removal can produce outright wrong answers when it breaks visual continuity, and the framing that "less reader confidence" is not automatically the goal.
 
 ## What it does not settle
 
@@ -31,7 +31,7 @@ The paper's own four-bullet summary:
 
 The third bullet is the one carrying a hard consequence. Everything else on the list is about perception; that one is about **accuracy**. Silently dropping a point is not a neutral act when the surrounding mark implies continuity.
 
-Two structural results are more useful than the headline.
+Two further structural results sit behind the headline.
 
 **Continuity, not uncertainty-marking, is what the encoding has to preserve.** Error bars helped when connected and hurt when not:
 
@@ -75,7 +75,7 @@ Their stated limitations:
 
 They also want future work on "more subtle amounts of missing data" and on multiple imputation and machine-learning-based methods, neither of which was tested.
 
-The authors describe their own contribution as "preliminary evidence" and "preliminary guidance" more than once. That is the right weight to give it. It is a real experiment and it is the only one of its kind in this cluster, which is a statement about the field's coverage rather than about the paper's strength.
+The authors describe their own contribution as "preliminary evidence" and "preliminary guidance" more than once. It is a real experiment and it is the only one of its kind in this cluster, which is a statement about the field's coverage rather than about the paper's strength.
 
 One conflict they surface themselves: the finding that highlighting is preferred "runs somewhat contrary to prior work on preference in decision support" (Andreasson & Riveiro 2014). They reconcile it with the visual-selection and trust literature rather than dismissing the earlier result.
 
@@ -83,5 +83,5 @@ One conflict they surface themselves: the finding that highlighting is preferred
 
 - Open copy: [par.nsf.gov/servlets/purl/10111567](https://par.nsf.gov/servlets/purl/10111567)
 - [inventory.md](../inventory.md), topics 55 (missing data is shown as missing) and 56, both flagged there as thin
-- [checks/matplotlib.md](../checks/matplotlib.md) for the mechanizable version: compare input row count to plotted point count
+- [checks/matplotlib.md](../checks/matplotlib.md) — the mechanizable version: input row count against plotted point count
 - [weissgerber-2015-beyond-bar-line.md](weissgerber-2015-beyond-bar-line.md), the other paper in this cluster about a figure hiding what the reader would need to evaluate it

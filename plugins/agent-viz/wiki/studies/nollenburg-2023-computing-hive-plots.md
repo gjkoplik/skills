@@ -30,16 +30,16 @@ The authors' own sentence:
 
 > "Each of the three steps is related to a well-studied, but NP-complete computational problem."
 
-**Read "related to" literally.** The paper does not prove hive-plot-specific NP-completeness. It identifies each step with a known-hard problem from the literature and cites the existing results:
+**"Related to" is literal.** The paper does not prove hive-plot-specific NP-completeness. It identifies each step with a known-hard problem from the literature and cites the existing results:
 
 - Step 2 is essentially the **circular arrangement problem**, whose minimum is NP-complete for undirected and directed graphs, with a known polynomial-time O(log n) approximation for the undirected case. Minimizing crossings in a circular arrangement is separately NP-complete.
 - Step 3 reduces to repeated **2-layer crossing minimization**, which "is already NP-hard, even if one layer is fixed."
 
 The distinction matters for citation hygiene. "All three subproblems are shown to be NP-complete" is a slightly stronger claim than the paper makes, and it is the phrasing that tends to appear in summaries. The correct version is that each step is an instance of, or reduces to, a problem already known to be hard, which is enough to support the practical conclusion without overstating what was proved here.
 
-## Why this matters for the type page
+## Where the hardness lives
 
-It supplies the reason the hive plot's central design decision is human-made. The partition and the ordering are not choices somebody has failed to automate. **Automating them optimally is intractable in general**, so the framework adapts heuristics (a constrained barycenter algorithm for crossing minimization) rather than solving anything exactly.
+The result supplies the reason the hive plot's central design decision is human-made. The partition and the ordering are not choices somebody has failed to automate. **Automating them optimally is intractable in general**, so the framework adapts heuristics (a constrained barycenter algorithm for crossing minimization) rather than solving anything exactly.
 
 That reframes the "you have to choose a partition" property. It is not a rough edge; it is where the hardness lives.
 

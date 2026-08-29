@@ -8,19 +8,19 @@ aliases: [Cartogram, Dorling cartogram, Hex grid map, Tile grid map]
 
 A map whose regions are resized, or replaced by simpler shapes, so that each region's **area** encodes a value and the geography is deliberately distorted to make room for it.
 
-**One distinction first, because the family is filed together and does not reason together.** In a value-by-area cartogram (contiguous, non-contiguous, Dorling circles) area *is* the encoding. In a tile or hex grid map every region gets an identical cell, which removes land area as a distortion and removes area as an encoding at the same time, handing the value back to fill color. **A tile grid map is a [choropleth](choropleth-map.md) on a schematic base geography, not a value-by-area cartogram.** Everything below is about the value-by-area kind unless it says otherwise.
+**The family is filed together and does not reason together.** In a value-by-area cartogram (contiguous, non-contiguous, Dorling circles) area *is* the encoding. In a tile or hex grid map every region gets an identical cell, which removes land area as a distortion and removes area as an encoding at the same time, handing the value back to fill color. **A tile grid map is a [choropleth](choropleth-map.md) on a schematic base geography, not a value-by-area cartogram.** Everything below is about the value-by-area kind unless it says otherwise.
 
 ## When to reach for it, and when not
 
-**Reach for it when** the value is a total, the base geography's land areas are badly out of proportion to where that total actually sits, and that mismatch is part of what you are asserting. This is the form you use when the honest sentence is "the map you are picturing is the wrong shape for this quantity."
+**The form applies where** the value is a total, the base geography's land areas are badly out of proportion to where that total actually sits, and that mismatch is part of the assertion. The sentence it makes is "the map you are picturing is the wrong shape for this quantity."
 
-**Do not reach for it when:**
+**Questions the form does not answer:**
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | Which is biggest, and in what order? | Sorted bar chart. Area does not support reliable ordering by eye |
 | The value is a rate | [Choropleth](choropleth-map.md). Rates do not add up over area, so sizing a region by one asserts nothing |
-| The reader has to find their own region | [Choropleth](choropleth-map.md), or a table. Recognizability is exactly what you spent |
+| The reader has to find their own region | [Choropleth](choropleth-map.md), or a table. Recognizability is exactly what the form spends |
 | The audience does not already know this map well | Almost anything else. The distortion only reads as distortion against a map the reader carries in their head |
 | What are the exact values? | A table, or a sorted bar chart |
 | How did it change between two years? | Not two cartograms. Layout is recomputed per dataset, so nothing is positionally stable |
@@ -36,7 +36,7 @@ A map whose regions are resized, or replaced by simpler shapes, so that each reg
 | Coordinates | A named projection, with a distortion applied on top of it |
 | Guides | An area legend with at least two reference sizes, region labels (shape no longer identifies anything), and often an inset of the true geography |
 
-**The layout algorithm sits in the transform slot**, exactly as it does for a [treemap](treemap.md). Two cartograms of the same data under different algorithms can look entirely different, so the algorithm is a data-encoding decision rather than a styling one, and it belongs in the caption.
+**The layout algorithm sits in the transform slot**, exactly as it does for a [treemap](treemap.md). Two cartograms of the same data under different algorithms can look entirely different, so the algorithm is a data-encoding decision rather than a styling one.
 
 **Zero is not optional here**, for the same arithmetic reason as on a [bubble chart](bubble-chart.md): proportionality to a value means nothing if zero area does not mean zero.
 
@@ -68,7 +68,7 @@ Nothing measured on this form. The inherited exposure is the area channel, above
 
 **Assuming the reader knows the map.** The distortion carries information only against a mental image the reader already holds. Drawn for an audience without that image, a cartogram is an unlabeled abstract shape diagram, and the whole payment bought nothing. `authority-asserted`, and it follows from the construction.
 
-**Sizing a rate.** Area is additive over regions and a rate is not, so a region sized by its unemployment rate is asserting a quantity that does not exist. This is the mirror image of the choropleth's totals error, and it comes from the same place: match the mark's extent to whether the quantity is extensive or intensive.
+**Sizing a rate.** Area is additive over regions and a rate is not, so a region sized by its unemployment rate is asserting a quantity that does not exist. This is the mirror image of the choropleth's totals error, and it comes from the same place: whether the mark's extent tracks an extensive or an intensive quantity.
 
 **Scaling by a linear dimension instead of by area.** The standard area-encoding bug, worked through on [bubble-chart.md](bubble-chart.md). It inflates large values quadratically and it will not look wrong.
 
@@ -93,7 +93,7 @@ Nothing native. The one inherited sentence is a caution rather than a justificat
 
 - ~~"Heer & Bostock validated cartograms."~~ They named cartograms as a motivation for studying rectangles and then measured rectangles. There is no map in that paper.
 - ~~"A cartogram is more accurate than a choropleth."~~ Nobody has measured either one. What can be said is structural: the visual weight now comes from the variable instead of from land area. Accuracy is a different claim with nothing behind it.
-- ~~"Distortion is fine, people adjust."~~ Untested, in either direction. The honest position is that the form trades a certain defect for an uncertain one and you should say which trade you made.
+- ~~"Distortion is fine, people adjust."~~ Untested, in either direction. What the record supports is that the form trades a certain defect for an uncertain one.
 
 ## See also
 

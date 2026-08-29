@@ -2,7 +2,7 @@
 
 The audit trail for [inventory.md](inventory.md). For each source, its own published outline is enumerated and every entry is mapped either to an inventory topic or to a stated exclusion.
 
-An omission becomes a **visibly unmapped chapter** rather than an absence nobody can see. "Graded on breadth" with no artifact is a hope with a label on it; this is the artifact.
+An omission becomes a **visibly unmapped chapter** rather than an absence nobody can see.
 
 **What this proves and does not prove.** It proves the mapping was performed. It does **not** prove the one-line rule attached to each topic is well worded. A chapter mapped to a badly-named topic looks identical to one mapped well.
 
@@ -64,7 +64,7 @@ Chapter list from cs.ubc.ca/~tmm/vadbook/.
 | 6. Rules of Thumb | 68 (no unjustified 3D), 84 (eyes beat memory, resolution over immersion), 82 (overview first), 83 (responsiveness), 27 (get it right in black and white), 92 (function first, form next) |
 | 7. Arrange Tables | 5, 57 |
 | 8. Arrange Spatial Data | 21, 22 |
-| 9. Arrange Networks and Trees | 5, the graph-specific chapter. A general bar owes at minimum "node-link versus matrix is a size-dependent choice", folded into 5 and 61 rather than given its own row. |
+| 9. Arrange Networks and Trees | 5, the graph-specific chapter. "node-link versus matrix is a size-dependent choice" is folded into 5 and 61 rather than given its own row. |
 | 10. Map Color and Other Channels | 23 through 36 |
 | 11. Manipulate View | 82 |
 | 12. Facet into Multiple Views | 62, 63 |
@@ -89,9 +89,9 @@ Chapter list from cs.ubc.ca/~tmm/vadbook/.
 | 9. Case studies | **excluded**: worked examples |
 | 10. Final thoughts | **excluded**: closing matter |
 
-**Caveat, and it matters.** The chapter list came from search aggregation plus a publisher-derived snippet; storytellingwithdata.com publishes no chapter list. Chapter *titles* are corroborated across two independent aggregations. Any gloss on chapter 5's contents is **from background familiarity, not a retrieved quote, and is unvouched.**
+**Caveat.** The chapter list came from search aggregation plus a publisher-derived snippet; storytellingwithdata.com publishes no chapter list. Chapter *titles* are corroborated across two independent aggregations. Any gloss on chapter 5's contents is **from background familiarity, not a retrieved quote, and is unvouched.**
 
-This is the weakest link in the roll-call, and it is load-bearing: Knaflic is the source a practitioner is most likely to name when they say a bar is missing something basic.
+Knaflic is the source a practitioner is most likely to name when they say a bar is missing something basic.
 
 ## Few, *Data Visualization Effectiveness Profile*
 
@@ -105,7 +105,7 @@ This is the weakest link in the roll-call, and it is load-bearing: Knaflic is th
 | Aesthetics (emotive) | 89 |
 | Engagement (emotive) | 89 |
 
-**Caveat.** The PDF at perceptualedge.com returned as unreadable/password-protected binary. The criteria list and the informative/emotive split came from search aggregation of that PDF. **Everything mapped to Few is unvouched at the primary level and should be re-verified before anyone builds on it.**
+**Caveat.** The PDF at perceptualedge.com returned as unreadable/password-protected binary. The criteria list and the informative/emotive split came from search aggregation of that PDF. **Everything mapped to Few is unvouched at the primary level.**
 
 ## Cairo, five qualities
 
@@ -275,10 +275,10 @@ All headings retrieved from bbc.github.io/rcookbook/.
 
 ## Corrections found when each source got its own page (2026-08-23)
 
-The per-source pages were written by agents that opened the sources. They found four things wrong with this roll-call, which is the roll-call working as intended.
+The per-source pages were written by agents that opened the sources. They found four things wrong with this roll-call.
 
-- **Tufte has no row here at all**, and his name appears nowhere in `inventory.md` or `refutations.md` except secondhand through Wilke ch. 23. He is the canon's most-cited author on this subject and he entered the 92 topics only by quotation. **The roll-call's guarantee does not cover a source that was never enumerated**: an omission shows up as an unmapped chapter only if the chapters were listed. See [sources/tufte.md](sources/tufte.md), which now lists nine chapters for whoever has a copy.
-- **Munzner ch. 6 has eight rules of thumb, and the row above maps seven.** The missing one is **No Unjustified 2D**, which is the one most relevant to network layouts. *Corrected 2026-08-27: this line previously said nine and eight; the section list extracted on [sources/munzner-vad.md](sources/munzner-vad.md) has eight rules plus two framing sections.* Also, "Get It Right in Black and White" is Maureen Stone's phrase, cited by Munzner to her 2010 post rather than coined by her.
+- **Tufte has no row here at all**, and his name appears nowhere in `inventory.md` or `refutations.md` except secondhand through Wilke ch. 23. He is the canon's most-cited author on this subject and he entered the 92 topics only by quotation. **The roll-call's guarantee does not cover a source that was never enumerated**: an omission shows up as an unmapped chapter only if the chapters were listed. [sources/tufte.md](sources/tufte.md) now lists nine chapters.
+- **Munzner ch. 6 has eight rules of thumb, and the row above maps seven.** The missing one is **No Unjustified 2D**, which bears on network layouts. *Corrected 2026-08-27: the section list extracted on [sources/munzner-vad.md](sources/munzner-vad.md) has eight rules plus two framing sections.* Also, "Get It Right in Black and White" is Maureen Stone's phrase, cited by Munzner to her 2010 post rather than coined by her.
 - **The Few mappings are partly extrapolation.** Topics 6 and 3 check out. The mappings to 16, 33, 42, 45 and 46 do not: Few's *Completeness* is about **comparison context** ("comparisons to targets, measures of the norm, and historical values"), not legends, notes and sample size, and **no inventory topic covers it**. His *Truthfulness* is accuracy **and validity**, and **validity has no topic at all**. Two real gaps, found only because his primary turned out to be readable after all.
 - **Two quotes could not be located in the available material.** Topic 7's Munzner quote ("express all of, and only...") appears nowhere in her 689-slide deck, and topic 91's Cairo quote ("paramount among these five") appears nowhere in the 46-page sample, where the word "paramount" does not occur. Both are flagged on their source pages rather than removed, since neither the book nor the full text was reached.
 
@@ -286,9 +286,9 @@ The per-source pages were written by agents that opened the sources. They found 
 
 ## Sources deliberately not consulted
 
-Named so the next pass knows where to look rather than re-deriving the same list:
+Named so the next pass has the list rather than re-deriving it:
 
 - **Cairo, *How Charts Lie***. Would sharpen truncation, inverted axes and map distortion (10, 11, 21).
-- **Chartability** (Elavsky, Bennett & Moritz, EuroVis 2022). 50 accessibility heuristics under POUR+CAF, CC-BY-SA, with a 14-test shortlist. Discovered *after* the accessibility topics were derived. **Importing beats deriving here**: the inventory's four accessibility topics map onto eight of its fifty heuristics, one only partially.
+- **Chartability** (Elavsky, Bennett & Moritz, EuroVis 2022). 50 accessibility heuristics under POUR+CAF, CC-BY-SA, with a 14-test shortlist. Discovered *after* the accessibility topics were derived. The inventory's four accessibility topics map onto eight of its fifty heuristics, one only partially.
 - **The statistical-reporting canon.** Cumming/Fidler/Vaux, Weissgerber, Belia, Song & Szafir. Not in the original source set at all, which is exactly why topics 46, 55 and 56 came out weakly sourced. See [refutations.md](refutations.md).
 - **Draco** (Moritz et al., TVCG 2019). Formalizes encoding-choice knowledge as constraints with weights learned from experiment. Covers mark and channel selection only; does not touch titles, annotation or narrative.

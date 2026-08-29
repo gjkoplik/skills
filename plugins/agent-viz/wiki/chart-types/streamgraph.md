@@ -8,17 +8,17 @@ aliases: [River plot, Stream chart, Streamgraph, ThemeRiver]
 
 A [stacked area chart](stacked-area-chart.md) whose baseline is computed from the data rather than fixed at zero, usually so the bands sit symmetrically about a center, so each band's thickness is that series' value and the silhouette's overall thickness is the total.
 
-Also called a **ThemeRiver**, which is the older research name, and a **stream chart** or a **river plot**. **None of those names, including "streamgraph" itself, is defined by any source in this wiki.** The one vouched fact about the form in this corpus is a filing: [Schwabish](../sources/schwabish.md) lists **Streamgraph** as a type in his Time chapter, read from the book's own contents pages. What he argues about it is unread, and the aliases above are recorded as names in circulation rather than as definitions. Confirm which form someone means before relying on any of them, and check this page against any source later opened that defines one.
+Also called a **ThemeRiver**, which is the older research name, and a **stream chart** or a **river plot**. **None of those names, including "streamgraph" itself, is defined by any source in this wiki.** The one vouched fact about the form in this corpus is a filing: [Schwabish](../sources/schwabish.md) lists **Streamgraph** as a type in his Time chapter, read from the book's own contents pages. What he argues about it is unread, and the aliases above are recorded as names in circulation rather than as definitions. Nothing in the corpus fixes which form any of those names refers to, and the page stands unchecked against any source later opened that defines one.
 
 ## When to reach for it, and when not
 
-**Reach for it when** there are many components over many time points, and the reading you want is the silhouette of the total plus which bands are large and roughly when they grew. That is a qualitative reading, and it is the only one on offer.
+The form is defined for the case where there are many components over many time points, and the reading on offer is the silhouette of the total plus which bands are large and roughly when they grew. That reading is qualitative, and it is the only one the form supports.
 
-**The baseline is the whole difference from a stacked area, and it costs the last fixed reference on the chart.** A stacked area keeps two accurate readings, the total and the bottom band. Removing the fixed baseline removes both. What you buy is that no single series is forced to absorb every wiggle underneath it.
+**The baseline is the whole difference from a stacked area, and it costs the last fixed reference on the chart.** A stacked area keeps two accurate readings, the total and the bottom band. Removing the fixed baseline removes both. What it returns is that no single series is forced to absorb every wiggle underneath it.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | What was the total at each point? | [Line chart](line-chart.md) or [area chart](area-chart.md) of the total. Here the total is a thickness with no axis under it |
 | How did this one component change? | [Line chart](line-chart.md) of that component, or small multiples. The FT's caution on area charts is about exactly this, and this is the extreme case of it |
@@ -39,15 +39,15 @@ Also called a **ThemeRiver**, which is the older research name, and a **stream c
 | Coordinates | Cartesian |
 | Guides | An x axis. A y axis is usually absent, and where one is drawn its origin is a computed offset rather than zero. Direct labels on the bands, or a legend |
 
-**This is [stacked-area-chart.md](stacked-area-chart.md) with the baseline slot turned into a free parameter**, and that single change is the whole of the form. Fix the baseline at zero and you have a stacked area back.
+**This is [stacked-area-chart.md](stacked-area-chart.md) with the baseline slot turned into a free parameter**, and that single change is the whole of the form. A baseline fixed at zero gives a stacked area back.
 
-**No source in this wiki describes the layout algorithms**, so the transform row above says what the offset does and not how any particular implementation computes it. Do not read a named algorithm into it.
+**No source in this wiki describes the layout algorithms**, so the transform row above says what the offset does and not how any particular implementation computes it. No named algorithm is recorded here.
 
 ## Channels
 
 **Band thickness, for every series, with no common baseline anywhere on the chart.**
 
-That is the structural observation to bring to the choice, and it is definitional. [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md) measured the divided bar, where the first segment sits on the axis and every segment above it floats; [stacked-bar.md](stacked-bar.md) carries the quote and the 40% to 250% figure. A stacked area keeps that split: the bottom band and the total are still read against the axis. **A streamgraph keeps neither, because the baseline is itself a function of the data.** Nothing on the chart is a position reading against a fixed scale, including the total.
+That is definitional. [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md) measured the divided bar, where the first segment sits on the axis and every segment above it floats; [stacked-bar.md](stacked-bar.md) carries the quote and the 40% to 250% figure. A stacked area keeps that split: the bottom band and the total are still read against the axis. **A streamgraph keeps neither, because the baseline is itself a function of the data.** Nothing on the chart is a position reading against a fixed scale, including the total.
 
 Two further steps separate this from the thing that was measured, and both are reasoning rather than measurement: the bands are bounded by curves rather than by straight parallel edges, and the reference those thicknesses are judged against moves along the x axis. **Neither has been tested on readers in this corpus.**
 
@@ -103,5 +103,5 @@ Nothing. No study in this corpus touches this form, and unlike a stacked area it
 - [stacked-area-chart.md](stacked-area-chart.md) — the same chart with the baseline fixed at zero, and where the inherited evidence is closest
 - [area-chart.md](area-chart.md) — the single-series parent, and the zero-baseline record
 - [stacked-bar.md](stacked-bar.md) — the one place the floating-segment cost was actually measured
-- [change-over-time.md](change-over-time.md) — the group, and the free parameters it hands you
+- [change-over-time.md](change-over-time.md) — the group, and the free parameters it leaves open
 - [../concepts/channels.md](../concepts/channels.md) — the inheritance rule this page leans on and then declines to complete

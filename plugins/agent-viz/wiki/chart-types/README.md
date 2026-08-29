@@ -4,7 +4,7 @@ One page per chart type, stored flat, with separate **index pages** that group t
 
 **What it is good for.** Choosing a form for a specific dataset and question, and being able to defend the choice afterward. Two entry points: arrive with a question ("this is composition") and get pointed at the candidates, or arrive with a named chart and go straight to its page.
 
-**What it does not settle.** It will not hand you an answer from a lookup table, because the answer depends on the reader's question rather than on the shape of the data. What it does is narrow the candidates, name what each one costs, and tell you which justifications hold up. Where the evidence is silent it says so rather than inventing a tiebreaker.
+**What it does not settle.** It does not hand over an answer from a lookup table, because the answer depends on the reader's question rather than on the shape of the data. What it does is narrow the candidates, name what each one costs, and record which justifications hold up. Where the evidence is silent it says so rather than inventing a tiebreaker.
 
 ---
 
@@ -12,21 +12,13 @@ One page per chart type, stored flat, with separate **index pages** that group t
 
 Every type page lives directly in this directory. Grouping happens in index pages that point at them.
 
-**A data relationship is a view of a chart, not a property of it.** A stacked bar is part-to-whole; it is also magnitude, and it is change-over-time the moment you make it an area chart. A dot plot is ranking and distribution. A directory tree forces each type into exactly one home and demotes its other readings to cross-links, which encodes a claim about the type that is not true. Flat storage lets a type appear in three indexes with no duplication.
+**A data relationship is a view of a chart, not a property of it.** A stacked bar is part-to-whole; it is also magnitude, and it is change-over-time once it becomes an area chart. A dot plot is ranking and distribution. A directory tree forces each type into exactly one home and demotes its other readings to cross-links, which encodes a claim about the type that is not true. Flat storage lets a type appear in three indexes with no duplication.
 
-Three consequences, all of which are why this is the structure rather than a compromise:
-
-**Nobody's taxonomy gets amended.** The FT's nine relationships are an authority-asserted scheme by other people. An earlier draft of this tier added a tenth category for networks, which meant editing that scheme while still citing it. Under indexes, the FT nine stay as published and [network-topology.md](network-topology.md) is visibly an index of ours, sitting alongside rather than inside.
-
-**Paths are stable.** Reclassifying a type is an edit to an index, not a file move that breaks every inbound link. This wiki is densely cross-linked.
-
-**Bespoke forms have somewhere to go.** A chart that fits no relationship cleanly still gets a page. It just appears in fewer indexes, or in none, and that is information rather than a filing problem.
-
-**Membership is declared on the page**, in the `relationships:` frontmatter field, so an index can be checked against the pages rather than maintained by hand. `validate.py` in the maintenance skill enforces the agreement. This is the trick [roll-call.md](../roll-call.md) plays against [inventory.md](../inventory.md): the audit is possible because the claim is written down in two places that must agree.
+Membership is declared on the page, in the `relationships:` frontmatter field, so an index can be checked against the pages rather than maintained by hand. That is the trick [roll-call.md](../roll-call.md) plays against [inventory.md](../inventory.md): the audit is possible because the claim is written down in two places that must agree.
 
 ## The indexes
 
-Twelve indexes are written. They are more than pointer lists: each carries the argument that is common to its group, which is the part that would otherwise be repeated on every member page.
+The indexes are more than pointer lists: each carries the argument that is common to its group, which is the part that would otherwise be repeated on every member page.
 
 **All nine FT relationships now have one**: part-to-whole, magnitude, distribution, correlation, change over time, deviation, ranking, spatial and flow. Three more are ours, sitting alongside the FT nine rather than inside them: **network-topology**, **tables** and **qualitative**. The last two come from Schwabish, whose scheme has chapters the FT has no slot for, and the argument for adding them rather than amending the nine is in [../sources/schwabish.md](../sources/schwabish.md).
 
@@ -34,78 +26,22 @@ Twelve indexes are written. They are more than pointer lists: each carries the a
 
 **Evidence class of the taxonomy itself: `authority-asserted`.** No experiment establishes that these are the right nine, that they are exhaustive, or that they are mutually exclusive. It is a well-designed practitioner scheme that works for retrieval. Used here as an index, not as a claim.
 
-Other index axes are possible on the same flat store and would be genuinely useful: an index **by channel** (every type that puts the reader on area) would fall straight out of the decomposition already on each page. [aliases.md](aliases.md) is the first index of this kind actually built, and it indexes names.
-
-## Who these pages are for, and what that rules out
-
-**The reader is someone standing in front of a dataset who has to pick a form and defend the pick.** Usually an agent, sometimes a person. Every section on every page earns its place by helping with that, or it comes out.
-
-Three consequences, and the first two are where the early drafts of this tier went wrong:
-
-**Lead with the choice, not the anatomy.** The first substantive question is always *is this group even the right frame for the reader's question*, because the most common failure is not picking the wrong chart within a group, it is being in the wrong group. Composition charts get reached for when the question is really ranking. Network diagrams get drawn when the question is answerable from a per-node table. That section goes first, before structure, channels or evidence.
-
-**No process narration.** How this wiki was built, which page was written first, what is a "shape-setter" for the tier, what remains uncovered: none of it helps someone choose a chart. Coverage and status belong in this README. They do not belong on a page an agent reads to make a decision.
-
-**Give it the sentences.** The reader has to *justify* the choice to someone. Pages carry a short "justifying the choice" section: what is defensible and evidence-backed, what is defensible with the label said out loud, and what is commonly said and wrong. That last one is where this wiki's research actually pays off, and it is useless if it only exists in `refutations.md`.
-
-## The page template
-
-**Neither kind of page carries the four-field header block** used on sources, studies and people. That block answers "should I open this page?", and this reader has already arrived with data in front of them. Facts live in frontmatter; the body opens on the decision. One line of definition under the title is enough.
-
-**Index pages** (one per relationship) carry: is this group the right frame, and how to tell; what the group costs, in channel terms; how to choose a form within it; how to justify the choice; the failure mode the group invites; the types it indexes.
-
-**Type pages** carry, after the frontmatter and a one-line definition:
-
-**1. When to reach for it, and when not.** The conditions under which this form is the right answer, and the nearest alternative when it is not. A table of "the reader's actual question → go here instead" does this well.
-
-**2. Structural decomposition.** Six slots, borrowed from Wilkinson's *Grammar of Graphics* by way of ggplot2's layered restatement:
-
-| Slot | The question |
-|---|---|
-| Data | What is one row |
-| Transform | What statistic is computed before drawing, if any |
-| Geometry | What mark is drawn |
-| Scale | How values map to the mark's properties |
-| Coordinates | What space the mark is placed in |
-| Guides | What axes, legends and reference marks are required to read it |
-
-**These slots carry no evidence label.** They are definitional: they describe what the chart *is* and assert nothing empirical. Labeling them would dilute the labels on rows that are actually claims. See [../concepts/evidence-class.md](../concepts/evidence-class.md#what-is-exempt-and-why-the-exemption-matters).
-
-The decomposition earns its place by collapsing near-duplicates. A coxcomb is a bar chart with polar coordinates. An area chart is a line chart with a fill. Stacked and grouped bars differ in one transform slot. Without it, this tier becomes sixty pages holding ten pages of content.
-
-**3. Channels.** Which perceptual channel the mark puts the reader on, primary and secondary, linking to [../concepts/channels.md](../concepts/channels.md). Flagged as conjecture unless a study has decomposed this specific type, which for most types it has not.
-
-**4. What it is measurably good at.** Only claims traceable to a study. Cited, with the effect.
-
-**5. What it is measurably bad at.** Same bar.
-
-**6. What is contested.** Where the record disagrees with itself, both sides named.
-
-**7. The failure mode it invites.** What goes wrong in practice. Usually `authority-asserted`, and labeled as such.
-
-**8. Justifying the choice.** The defensible sentences, and the commonly repeated ones that the evidence does not support.
-
-## The inheritance rule
-
-**Evidence attaches to channels, not to chart types.** No controlled study has tested a chart type as an artifact in the world; they test stripped judgment tasks on stimuli that resemble one. So every accuracy claim on these pages is a two-step inference, and the first step (this chart puts the reader on that channel) is conjecture in the source literature, flagged as such by Cleveland and McGill every time they make it.
-
-A type page may therefore **inherit** an accuracy claim with a link. It may not **restate** it as a native finding, and it may not present the mapping as settled when the source calls it a conjecture. The full argument is in [../concepts/channels.md](../concepts/channels.md).
-
-Where a study *has* decomposed a specific type into its channels, that is a genuine type-level finding and belongs here rather than upstream. [pie-and-donut.md](pie-and-donut.md) is the model case and currently the only one.
+Other index axes are possible on the same flat store: an index **by channel** (every type that puts the reader on area) would fall straight out of the decomposition already on each page. [aliases.md](aliases.md) is the first index of this kind built, and it indexes names.
 
 ## Where the evidence runs out
 
 Stated up front, because it determines how thin most of this tier has to be:
 
 - The graphical-perception literature concentrates almost entirely on **proportional judgment**: read a value off a mark, report it as a number. Groups whose job is something else inherit very little from it.
-- Most individual chart types have **no study at all**. Pie, donut, treemap and bar are unusually well studied. Violin plots, slope charts, connected scatterplots, bump charts, the whole flow family, every map, and everything added in wave three are not.
-- A page with nothing to inherit says so and stops. Padding it with plausible practitioner advice dressed as findings is the specific failure this structure exists to avoid. [hive-plot.md](hive-plot.md) is the page where that discipline costs the most: two papers describe the form in detail and neither ran a user study, so the page separates what follows from the construction (secure, and stated flatly) from what would need an experiment (absent, and stated as absent).
+- Most individual chart types have **no study at all**. Pie, donut, treemap and bar are unusually well studied. Violin plots, slope charts, connected scatterplots, bump charts, the whole flow family and every map are not.
+- A page with nothing to inherit says so and stops. Padding it with plausible practitioner advice dressed as findings is the specific failure this structure exists to avoid. [hive-plot.md](hive-plot.md) is one case: two papers describe the form in detail and neither ran a user study, so the page separates what follows from the construction (secure, and stated flatly) from what would need an experiment (absent, and stated as absent).
 
 ## Coverage
 
-**40 type pages, 12 indexes.** The Evidence column is the honest one: **31 of the 40 say plainly that no study in
-this corpus tests the form**, and several more inherit everything they have from a channel result rather than from a
-measurement of the chart. That is a fact about the literature, not about the pages.
+**Most type pages say plainly that no study in this corpus tests the form**, marked **None** in the Evidence column
+below, and several more inherit everything they have from a channel result rather than from a measurement of the
+chart. That is a fact about the literature, not about the pages. The [../README.md](../README.md) schema section
+covers why coverage here is stated in words rather than as a number derived by reading prose.
 
 **Type pages**
 
@@ -119,13 +55,14 @@ measurement of the chart. That is a fact about the literature, not about the pag
 | [bubble-chart.md](bubble-chart.md) | Correlation | Area is measured; the bubble form is not |
 | [bump-chart.md](bump-chart.md) | Ranking, Change over time | **None** |
 | [cartogram.md](cartogram.md) | Spatial, Magnitude | **None.** Heer & Bostock on rectangular area is adjacent, not transferable |
-| [chord-diagram.md](chord-diagram.md) | Flow, Network and topology | **None** |
+| [chord-diagram.md](chord-diagram.md) | Flow, Network and topology | One study, against a Sankey; small effects, mostly first-exposure |
 | [choropleth-map.md](choropleth-map.md) | Spatial | **None** |
 | [connected-scatterplot.md](connected-scatterplot.md) | Correlation, Change over time | **None** |
 | [correlation-matrix.md](correlation-matrix.md) | Correlation | **None**; the Datasaurus bears on what the coefficient hides |
 | [diverging-bar-chart.md](diverging-bar-chart.md) | Deviation | **None**; inherits the floating-segment result from stacked bar |
 | [dot-density-map.md](dot-density-map.md) | Spatial | **None** |
 | [dot-strip-plot.md](dot-strip-plot.md) | Ranking, Distribution | **None** |
+| [flow-map.md](flow-map.md) | Spatial, Flow | **None**, and the one flow study does not reach it |
 | [dumbbell-plot.md](dumbbell-plot.md) | Ranking, Change over time | **None** |
 | [gauge-and-bullet.md](gauge-and-bullet.md) | Magnitude | **None.** Few's design spec reports no test |
 | [heatmap.md](heatmap.md) | Magnitude, Correlation | **None** on value extraction from a colored cell |
@@ -138,7 +75,7 @@ measurement of the chart. That is a fact about the literature, not about the pag
 | [pie-and-donut.md](pie-and-donut.md) | Part-to-whole | Two studies, one a direct channel decomposition |
 | [radar-chart.md](radar-chart.md) | Magnitude | **None** |
 | [ridgeline-plot.md](ridgeline-plot.md) | Distribution, Change over time | **None**, and the name is unvouched by any source here |
-| [sankey-diagram.md](sankey-diagram.md) | Flow, Network and topology | **None** |
+| [sankey-diagram.md](sankey-diagram.md) | Flow, Network and topology | One study, against a chord diagram; the large effect is preference |
 | [scatterplot.md](scatterplot.md) | Correlation | Position is measured; trend and cluster reading is not |
 | [slope-chart.md](slope-chart.md) | Change over time, Ranking | **None** |
 | [sparkline.md](sparkline.md) | Change over time | **None** on the form; Gillan & Richman on axis removal is the nearest |
@@ -154,30 +91,30 @@ measurement of the chart. That is a fact about the literature, not about the pag
 
 **Indexes**
 
-| Index | Whose scheme | Types indexed |
-|---|---|---|
-| [part-to-whole.md](part-to-whole.md) | FT | 7 |
-| [magnitude.md](magnitude.md) | FT | 10 |
-| [distribution.md](distribution.md) | FT | 6 |
-| [correlation.md](correlation.md) | FT | 5 |
-| [change-over-time.md](change-over-time.md) | FT | 11 |
-| [deviation.md](deviation.md) | FT | 2 |
-| [ranking.md](ranking.md) | FT | 5 |
-| [spatial.md](spatial.md) | FT | 3 |
-| [flow.md](flow.md) | FT | 3 |
-| [network-topology.md](network-topology.md) | Ours | 5 |
-| [tables.md](tables.md) | Ours, after Schwabish | 0 |
-| [qualitative.md](qualitative.md) | Ours, after Schwabish | 0 |
+| Index | Whose scheme |
+|---|---|
+| [part-to-whole.md](part-to-whole.md) | FT |
+| [magnitude.md](magnitude.md) | FT |
+| [distribution.md](distribution.md) | FT |
+| [correlation.md](correlation.md) | FT |
+| [change-over-time.md](change-over-time.md) | FT |
+| [deviation.md](deviation.md) | FT |
+| [ranking.md](ranking.md) | FT |
+| [spatial.md](spatial.md) | FT |
+| [flow.md](flow.md) | FT |
+| [network-topology.md](network-topology.md) | Ours |
+| [tables.md](tables.md) | Ours, after Schwabish |
+| [qualitative.md](qualitative.md) | Ours, after Schwabish |
 
-**Plus [aliases.md](aliases.md), which indexes names rather than a data relationship.** A reader arrives with a chart name, not with a data relationship, and the names are not stable. It resolves 103 names and marks each mapping as recorded in a source read here, stipulated by a page, or in circulation with nothing here defining it. It carries no `relationships:` field for the obvious reason.
+**Plus [aliases.md](aliases.md), which indexes names rather than a data relationship.** A reader arrives with a chart name, not with a data relationship, and the names are not stable. It resolves chart names and marks each mapping as recorded in a source read here, stipulated by a page, or in circulation with nothing here defining it. It carries no `relationships:` field.
 
 **The last two index nothing, and `tables.md` argues it should stay that way**: every form it names is a way of
 leaving the chart tier rather than a chart with a page, and routing the reader out is what the page is for. It still
 earns its place by giving [../inventory.md](../inventory.md) topic 4, "should this be a chart at all", somewhere to
 land inside the tier.
 
-Part-to-whole was done first deliberately: it is where the channel evidence is densest, which forces the
-inheritance rule to be right before it gets applied to groups where there is nothing to inherit.
+Part-to-whole is where the channel evidence is densest, so it is the group where the inheritance rule has the most
+to work with and the group where getting it wrong would show.
 
 ## See also
 

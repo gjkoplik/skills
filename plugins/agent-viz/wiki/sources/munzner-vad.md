@@ -8,7 +8,7 @@ retrieved: 2026-08-27
 
 # Munzner, *Visualization Analysis and Design*
 
-Tamara Munzner, *Visualization Analysis and Design* (A K Peters / CRC Press, 2014, 428 pp). A framework book rather than a chart cookbook: it decomposes every design into *what* data you have, *why* the user is looking, and *how* the encoding and interaction are built. Companion site at [cs.ubc.ca/~tmm/vadbook](https://www.cs.ubc.ca/~tmm/vadbook/).
+Tamara Munzner, *Visualization Analysis and Design* (A K Peters / CRC Press, 2014, 428 pp). A framework book rather than a chart cookbook: it decomposes every design into *what* data there is, *why* the user is looking, and *how* the encoding and interaction are built. Companion site at [cs.ubc.ca/~tmm/vadbook](https://www.cs.ubc.ca/~tmm/vadbook/).
 
 **How this was read.** The book is not free and was not read. Retrieved 2026-08-23:
 
@@ -16,7 +16,7 @@ Tamara Munzner, *Visualization Analysis and Design* (A K Peters / CRC Press, 201
 2. **Munzner's own 689-slide deck** covering the entire book (`vadallslides-2021.pdf`, 68 MB, from her companion site), downloaded and text-extracted locally with `pypdf`;
 3. the companion site itself.
 
-Every quote below is **from the slides, not the book**. They are the author's own words on the same material, which is a stronger secondary than a review or a summary, and it is still not the book's sentences. Do not present them as quotations from *Visualization Analysis and Design*.
+Every quote below is **from the slides, not the book**. They are the author's own words on the same material, which is a stronger secondary than a review or a summary, and it is still not the book's sentences. They are not quotations from *Visualization Analysis and Design*.
 
 This is an upgrade on the previous state, which had chapter names from two third-party decks and no rule text at all.
 
@@ -24,7 +24,7 @@ This is an upgrade on the previous state, which had chapter names from two third
 
 Two provenance details from that extraction. The deck's spatial-data section is captioned "Spatial Data (Ch 9)" although the book's chapter 9 is Arrange Networks and Trees and its spatial chapter is 8; the surrounding content is the spatial chapter, so this is a slide typo. And two slides embed page images from a **draft galley** of the book, watermarked "Permission needed" and numbered against a chapter scheme the published book does not use. They are the only book prose reached in this project and they are not quoted here, because a draft with different chapter numbers is not the book.
 
-**What it is good for.** Come back here with: *what is this figure for, what is the data actually made of, and is the most important attribute on the most accurate channel*. Munzner is also the only canon source with serious coverage of **networks and trees** (node-link versus matrix as a size-dependent choice), **interaction** as an encoding decision rather than a feature, and **reduction** (filter, aggregate) as a legitimate design move.
+**What it is good for.** The question it answers: *what is this figure for, what is the data actually made of, and is the most important attribute on the most accurate channel*. Munzner is also the only canon source with serious coverage of **networks and trees** (node-link versus matrix as a size-dependent choice), **interaction** as an encoding decision rather than a feature, and **reduction** (filter, aggregate) as a legitimate design move.
 
 **What it does not settle.** Nothing on titles, captions, annotation, source lines, number formatting, locale, or narrative. No accessibility beyond "get it right in black and white". No production or reproducibility. The four-levels validation framework in chapter 4 is research methodology and is deliberately excluded from the inventory, not overlooked.
 
@@ -68,7 +68,7 @@ Chapters 1 to 6 and 10 carry no idiom slides; they are the framework and the cha
 **Four filings here disagree with the two chart catalogs in this corpus, and the disagreements are structural rather than arbitrary.**
 
 - **Treemap and sunburst are tree layouts**, filed under networks and trees, because what they encode is containment. [schwabish.md](schwabish.md) files both under Part-to-Whole, and so does this tier. Neither is wrong: the same drawing answers a composition question and a hierarchy question, which is precisely why [../chart-types/README.md](../chart-types/README.md) stores types flat.
-- **Histogram and boxplot are reduction idioms**, filed in chapter 13 with filtering and aggregation rather than with distributions. Every other scheme here files them as distribution charts. Munzner's reading is that they are what you draw *after* deciding to aggregate, which is a claim about the workflow rather than about the chart.
+- **Histogram and boxplot are reduction idioms**, filed in chapter 13 with filtering and aggregation rather than with distributions. Every other scheme here files them as distribution charts. Munzner's reading is that they are what gets drawn *after* the decision to aggregate, which is a claim about the workflow rather than about the chart.
 - **Streamgraph, Gantt, slopegraph, pie, radar and parallel coordinates are all table arrangements.** Schwabish spreads the same six across Time, Relationship and Comparing Categories; the FT spreads them across Change over Time, Magnitude and Correlation. Munzner has no bucket for them to disagree about, because her top-level split is by dataset type.
 - **Arc diagrams are a node-link layout**, a restricted one: "lay out nodes around circle or along line". This tier's network index names arc diagrams with no source behind the name, and this is one.
 
@@ -145,7 +145,7 @@ Inventory topic 7 carries this, attributed to Munzner:
 
 > "the visual encoding should express all of, and only, the information in the dataset attributes"
 
-That sentence does not appear anywhere in the 689-slide deck. The slides state expressiveness as "match channel type to data type". The quoted sentence may well be in the book, which was not read. Treat it as unvouched until someone opens chapter 5.
+That sentence does not appear anywhere in the 689-slide deck. The slides state expressiveness as "match channel type to data type". The quoted sentence may well be in the book, which was not read. It is unvouched until someone opens chapter 5.
 
 ## Where its advice is contested
 
@@ -158,7 +158,7 @@ The rules of thumb themselves are authority-asserted. "No Unjustified 3D" has su
 
 ## Inventory topics it grounds
 
-Per [roll-call.md](../roll-call.md), do not recompute: 1, 2, 4, 5, 6, 7, 21, 22, 23 through 36 (which already includes 27), 57, 61, 62, 63, 68, 82, 83, 84, 92.
+Per [roll-call.md](../roll-call.md), not recomputed here: 1, 2, 4, 5, 6, 7, 21, 22, 23 through 36 (which already includes 27), 57, 61, 62, 63, 68, 82, 83, 84, 92.
 
 Chapter 4 is a stated exclusion (research-methodology framework, not mechanizable for a one-off chart). Chapter 15 is a stated exclusion (worked examples).
 

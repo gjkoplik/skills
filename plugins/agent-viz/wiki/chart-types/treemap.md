@@ -10,11 +10,11 @@ A rectangle recursively subdivided so that each sub-rectangle's area is proporti
 
 ## When to reach for it, and when not
 
-**Reach for it when** there are too many parts to label in any other part-to-whole form, or when the parts nest in a hierarchy and the hierarchy is part of the point, and the canvas is fixed. It is the form that trades value-reading accuracy for showing hundreds of parts at once.
+The form is defined for the case where there are too many parts to label in any other part-to-whole form, or where the parts nest in a hierarchy and the hierarchy is part of the point, and the canvas is fixed. It trades value-reading accuracy for showing hundreds of parts at once.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | Which is biggest, and in what order? | Sorted bar chart. Area does not support reliable ordering by eye |
 | How does this compare to last quarter? | Anything else. Layout recomputes per dataset, so nothing is positionally stable |
@@ -46,7 +46,7 @@ Two things follow immediately, and both are measured rather than assumed:
 
 ## What it is measurably good at
 
-**Not interfering with itself.** Heer & Bostock found no significant difference between judging bare center-aligned rectangles and judging the same rectangles inside a full treemap, "suggesting that other elements in a treemap display do not interfere with judgment accuracy." The surrounding clutter is free, which is not obvious and is worth knowing.
+**Not interfering with itself.** Heer & Bostock found no significant difference between judging bare center-aligned rectangles and judging the same rectangles inside a full treemap, "suggesting that other elements in a treemap display do not interfere with judgment accuracy." The surrounding clutter is free.
 
 The authors flag one untested extension: they did not vary color intensity, so interference from a colored treemap is unmeasured.
 
@@ -62,7 +62,7 @@ The authors flag one untested extension: they did not vary color intensity, so i
 
 Squarified treemap algorithms exist to drive aspect ratios toward 1. On this evidence, the closer they get to that goal, the worse the comparison accuracy. The proposed mechanism, that viewers compare side lengths as a proxy for area and that this proxy is maximally ambiguous between squares, is offered by the authors as consistent rather than demonstrated: "Additional experimentation is needed to form an accurate perceptual model."
 
-**Treat the effect as measured and the explanation as a hypothesis.** And note the practical implication is not "avoid squarified layouts," since aspect-ratio extremes have their own problems that this experiment's range does not probe.
+The effect is measured; the explanation is a hypothesis. The practical implication does not reach "avoid squarified layouts," since aspect-ratio extremes have their own problems that this experiment's range does not probe.
 
 ## What is contested
 
@@ -87,7 +87,7 @@ Squarified treemap algorithms exist to drive aspect ratios toward 1. On this evi
 
 **Not defensible:**
 
-- ~~"Squarified layouts are better because near-1 aspect ratios are easier to compare."~~ Measured, aspect ratio 1 was the **worst** case, robust across both display conditions. Treat the effect as real and the side-length-proxy explanation as the authors' hypothesis rather than an established mechanism.
+- ~~"Squarified layouts are better because near-1 aspect ratios are easier to compare."~~ Measured, aspect ratio 1 was the **worst** case, robust across both display conditions. The effect is real; the side-length-proxy explanation is the authors' hypothesis rather than an established mechanism.
 - ~~"You can see which of these two is bigger."~~ Not reliably, from area, for similar sizes.
 
 ## See also

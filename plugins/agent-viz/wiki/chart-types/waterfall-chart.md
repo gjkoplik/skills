@@ -10,11 +10,11 @@ A running total drawn as a sequence of floating bars, each bar's length encoding
 
 ## When to reach for it, and when not
 
-**Reach for it when** one total moves to another through an ordered sequence of increases and decreases, and both the individual steps and the end point are part of the message.
+The form is defined for the case where one total moves to another through an ordered sequence of increases and decreases, and both the individual steps and the end point are part of the message.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | How does this total break down, with no sequence in it? | [Stacked bar](stacked-bar.md) or [treemap](treemap.md), and see [part-to-whole.md](part-to-whole.md) |
 | Which contribution is biggest? | A sorted [bar chart](bar-chart.md) of the contributions. Ranking, not flow |
@@ -40,13 +40,13 @@ A running total drawn as a sequence of floating bars, each bar's length encoding
 
 **Almost every bar floats.** Only the opening total and any explicitly drawn subtotals or closing total start at the axis, so only those are read as position along a common scale. Every step in between is a length with no common baseline. That statement is about what the chart *is*, and it is secure.
 
-What it does not license is a conclusion about readers. The floating-segment penalty is measured at the channel level, on divided bars, in [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md): "the average errors for length judgments are 40%-250% larger than those for position judgments" ([stacked-bar.md](stacked-bar.md)). **That was not measured on a waterfall**, and separating the segments into their own columns changes the stimulus in ways nobody has tested. Inherit it as an exposure, not as a result about this chart.
+What it does not license is a conclusion about readers. The floating-segment penalty is measured at the channel level, on divided bars, in [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md): "the average errors for length judgments are 40%-250% larger than those for position judgments" ([stacked-bar.md](stacked-bar.md)). **That was not measured on a waterfall**, and separating the segments into their own columns changes the stimulus in ways nobody has tested. It stands as an exposure, not as a result about this chart.
 
-One reading does survive on the good channel, and it is easy to miss: **each bar's upper and lower edge sits at a running total on the shared axis**, so the level at every point in the sequence is a position reading. The waterfall gives you the trajectory on position and the increments on floating length, which is the same split [stacked-bar.md](stacked-bar.md) has.
+One reading does survive on the good channel: **each bar's upper and lower edge sits at a running total on the shared axis**, so the level at every point in the sequence is a position reading. The waterfall puts the trajectory on position and the increments on floating length, which is the same split [stacked-bar.md](stacked-bar.md) has.
 
 ## The connectors assert a sequence, and the sequence is a choice
 
-The horizontal connectors say these steps happened in this order. Frequently the order is an accounting convention the analyst picked, not a fact about the world: revenue before costs, fixed before variable, one segment before another. Reorder the steps and every intermediate bar moves, the shape of the descent changes completely, and nothing in the figure records that a choice was made.
+The horizontal connectors say these steps happened in this order. Frequently the order is an accounting convention the analyst picked, not a fact about the world: revenue before costs, fixed before variable, one segment before another. Reordering the steps moves every intermediate bar and changes the shape of the descent completely, and nothing in the figure records that a choice was made.
 
 This is [change-over-time](change-over-time.md)'s free-parameter problem in a group where it is less expected, because a waterfall looks like arithmetic rather than like a trend. Whether readers infer chronology or causation from the connectors is untested. That the picture depends on the order is definitional.
 
@@ -74,7 +74,7 @@ The record disagrees only about filing: the FT puts it under both Part-to-whole 
 
 ## The failure mode it invites
 
-**A sequence presented as a finding.** The order is yours, the connectors make it look given, and the reader has no way to see the alternative orderings. `authority-asserted`, and it follows from the structure.
+**A sequence presented as a finding.** The order is an input, the connectors make it look given, and the reader has no way to see the alternative orderings. `authority-asserted`, and it follows from the structure.
 
 **Steps that are themselves nets.** A bar labeled "pricing" that is a net of increases and decreases hides a decomposition inside a chart whose entire purpose is decomposition. The remedy is more steps, and more steps is where the floating-length reading gets worse.
 
@@ -96,8 +96,8 @@ Nothing is native to this form. The inheritable sentence is a channel claim:
 
 **Commonly repeated, and the evidence does not support it:**
 
-- ~~"A waterfall shows what drove the change."~~ It shows one ordered decomposition of a difference. Which factors appear, and in what order, is your model of the change rather than the chart's finding.
-- ~~"The connectors show how one step led to the next."~~ They show the arithmetic of a running total in the order you supplied.
+- ~~"A waterfall shows what drove the change."~~ It shows one ordered decomposition of a difference. Which factors appear, and in what order, is the analyst's model of the change rather than the chart's finding.
+- ~~"The connectors show how one step led to the next."~~ They show the arithmetic of a running total in the order it was supplied.
 - ~~"Pulling the segments apart makes them easier to read than a stacked bar."~~ Plausible, and nobody has tested it. Both forms leave every intermediate quantity floating.
 
 ## See also

@@ -13,9 +13,9 @@ retrieved: 2026-08-23
 
 - ***Notes on Matters Affecting the Health, Efficiency, and Hospital Administration of the British Army* (1858)**, her privately printed report, was pulled as full text from the Internet Archive (`b20387118`, 2.2 MB of OCR) and read locally. Public domain.
 - **Both diagrams were downloaded at full resolution and examined**, not described from memory: the wedges plate (`dr_diagram-of-the-causes-of-mortality-in-the-army-in-the-east-10563002`, 1536x880) and its rejected predecessor, the "bat's wing" (`dr_diagrams-representing-the-relative-mortality-from-zymotic-diseases-blue-10564004`, 1477x1536). Every visual claim below comes from looking at those files.
-- **The letters, the print runs, and the naming history are from Hugh Small's 1998 conference paper**, hosted on York's history-of-statistics pages, fetched with `curl` and extracted locally rather than summarized: <https://www.york.ac.uk/depts/maths/histstat/small.htm>. He cites British Library manuscripts I have not seen. Treat those as reported.
+- **The letters, the print runs, and the naming history are from Hugh Small's 1998 conference paper**, hosted on York's history-of-statistics pages, fetched with `curl` and extracted locally rather than summarized: <https://www.york.ac.uk/depts/maths/histstat/small.htm>. He cites British Library manuscripts I have not seen; those are reported rather than verified.
 
-**What they are good for.** Come back here with: *this figure has to change one decision, made by named people, this quarter*. Nightingale is the strongest case in the canon for designing backward from the decision, and, because the failed first version survives, she is the only case where you can see the same author get the encoding wrong and then fix it in public.
+**What they are good for.** The case she supplies: *this figure has to change one decision, made by named people, this quarter*. Nightingale is the strongest case in the canon for designing backward from the decision, and, because the failed first version survives, she is the only case where the same author gets the encoding wrong and then fixes it in public.
 
 **What they do not settle.** Whether it worked. The causal claim, that these diagrams moved policy, is not established anywhere on this page, and Small, who has read the archives, says so explicitly.
 
@@ -76,7 +76,7 @@ The bat's wing plate is a genuinely different construction, and a designer's err
 
 Small records that she recognized the error, inserted an erratum slip, and replaced the diagram in the three later documents. So the famous chart is **a correction**, which is the most useful thing about it and almost never mentioned.
 
-Note the trade she made. Fixing the encoding meant abandoning the radial scale, because a scale-free area comparison is honest and a labeled radius was not. The corrected chart is quantitatively sound and completely unreadable as numbers, and the numbers live in the tables instead.
+The trade she made: fixing the encoding meant abandoning the radial scale, because a scale-free area comparison is honest and a labeled radius was not. The corrected chart is quantitatively sound and completely unreadable as numbers, and the numbers live in the tables instead.
 
 ### "The chart convinced Parliament" is not established
 
@@ -96,14 +96,14 @@ The chart does not establish this. The tables do. The chart is the part people l
 
 ### What the form costs, in this wiki's own terms
 
-A polar-area diagram puts the reader on **area**, which [Cleveland & McGill](../studies/cleveland-mcgill-1984.md) place below position, length and angle, and the equal angles make each wedge look like a share of a whole when it is not. It is the pie chart's problem without the pie chart's excuse. See [pie-and-donut.md](../chart-types/pie-and-donut.md), and note the twist: since [Skau & Kosara](../studies/skau-kosara-2016.md) found angle the *worst* of a pie's three cues, holding angle constant and varying radius is not obviously the wrong trade.
+A polar-area diagram puts the reader on **area**, which [Cleveland & McGill](../studies/cleveland-mcgill-1984.md) place below position, length and angle, and the equal angles make each wedge look like a share of a whole when it is not. It is the pie chart's problem without the pie chart's excuse. See [pie-and-donut.md](../chart-types/pie-and-donut.md), where there is a twist: since [Skau & Kosara](../studies/skau-kosara-2016.md) found angle the *worst* of a pie's three cues, holding angle constant and varying radius is not obviously the wrong trade.
 
 The overlay is the sharper problem. Where black exceeds blue in a month, the visible blue is not the blue quantity. She names those months in the caption. Most modern polar-area charts do not.
 
 ## Works, and where they sit in this wiki
 
 - ***Notes on Matters Affecting the Health, Efficiency, and Hospital Administration of the British Army*** (1858). **No source page.** Read in full text for this page.
-- ***Mortality of the British Army*** (1858), the actual "coxcomb" booklet, 2,000 copies. **Not reached.** It carries the erroneous bat's wing and is the object the word refers to, so anyone writing about the naming should get hold of it.
+- ***Mortality of the British Army*** (1858), the actual "coxcomb" booklet, 2,000 copies. **Not reached.** It carries the erroneous bat's wing and is the object the word refers to, so it is the artifact any account of the naming rests on.
 - ***A Contribution to the Sanitary History of the British Army*** (1859), the anonymous public reply to a pamphlet accusing her of exaggerating, and the first appearance of the corrected wedges. **Not reached.**
 - ***Notes on Nursing*** (1860) is on the Internet Archive in several editions and is out of scope here.
 

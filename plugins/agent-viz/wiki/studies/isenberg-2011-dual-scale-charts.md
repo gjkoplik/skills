@@ -12,13 +12,13 @@ A design-space analysis plus a controlled experiment comparing four ways of pack
 
 **How this was read.** Extracted locally with `pdftotext` from the author copy at [petra.isenberg.cc](https://petra.isenberg.cc/publications/papers/Isenberg_2011_ASO.pdf). PDF metadata identifies it as the author camera-ready ("Submission for InfoVis 2011", created September 2011, carrying the IEEE accepted-1-August-2011 block), so it has no published page numbering and could in principle differ from the IEEE typeset version in copyediting. Retrieval date: **2026-08-23**.
 
-The HAL and LRI mirrors are currently behind bot-check walls. Do not substitute a fetch summary for this paper: see the extraction warning below.
+The HAL and LRI mirrors are currently behind bot-check walls. A fetch summary is not a substitute for this paper: see the extraction warning below.
 
 ## What it is good for
 
 - Choosing among **focus-plus-context chart designs** when one series has to be shown at two resolutions.
 - A grounded caution against the **superimposed** design specifically, which lost on accuracy, on time, and on subjective ranking.
-- The paper's own statement that **empirical evidence on dual-scale charts was missing**, which is still the cleanest citation for the evidence gap.
+- The paper's own statement that **empirical evidence on dual-scale charts was missing**, which still stands as the record of that evidence gap.
 
 ## What it does not settle
 
@@ -40,7 +40,7 @@ The practical recommendation the authors land on is more nuanced than "use cut-o
 
 > "Due to the ease of implementation of the broken chart we recommend to use this chart as an alternative to the cut-out chart if one has to save display space or cannot easily generate a cut-out chart."
 
-## The category error this page exists to stop
+## The category error in the citation record
 
 **Dual-scale is not dual-variable.** The paper defines its own term: "Although the term dual-scale has been often used to specifically refer to superimposed charts, in this article we use it to refer to any chart showing two main scales." Every stimulus is two magnifications of **one** series, a focus region and a context region.
 
@@ -98,11 +98,11 @@ They also flag that their slope task collapsed into a length comparison by desig
 - **Not a claim about slope perception under scale change.** Limitation (6) plus the authors' own note that the slope task reduced to a length judgment.
 - **Not a transferable "cut-out wins" rule.** Limitation (1) says the regular chart's strong showing is an artifact of always keeping the modulus visible in the focus, and limitation (2) says a real-world cut-out chart usually uses two y-scales, unlike the tested one.
 
-For the flat-dual-axis-ban question specifically, the honest formulation is the one in [refutations.md](../refutations.md): a caution with its reason. The apparent correlation between two series on twin axes is a free parameter of the scaling choice, so prefer two stacked panels sharing an x-axis, and if the twin axis stays, say what each scale was pinned to. There is also a published defense of the form in the literature ("Dual Y Axes Charts Defended"), which further undercuts a flat ban.
+For the flat-dual-axis-ban question specifically, the formulation in [refutations.md](../refutations.md) is a caution with its reason: the apparent correlation between two series on twin axes is a free parameter of the scaling choice. The alternatives recorded there are two stacked panels sharing an x-axis, and, where the twin axis remains, a statement of what each scale was pinned to. There is also a published defense of the form in the literature ("Dual Y Axes Charts Defended"), which further undercuts a flat ban.
 
 ## Extraction warning
 
-This paper is the origin of one of the two [retrieval hazards](../../CONTRIBUTING.md#retrieval-hazards) on record here. Asked to summarize it, a web-fetch summarization returned, **in quotation marks**, "Superimposed charts performed best overall and are recommended for most tasks." The abstract says the exact opposite. Re-extract the PDF locally.
+This paper is the origin of one of the two [retrieval hazards](../../CONTRIBUTING.md#retrieval-hazards) on record here. Asked to summarize it, a web-fetch summarization returned, **in quotation marks**, "Superimposed charts performed best overall and are recommended for most tasks." The abstract says the exact opposite. Everything on this page comes from a local extraction of the PDF instead.
 
 ## Links
 

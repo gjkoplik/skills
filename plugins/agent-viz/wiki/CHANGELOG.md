@@ -2,8 +2,9 @@
 
 What changed in the **research**, as distinct from what changed in the **bar**. Most recent first.
 
-Calendar versioned, `vYYYY.MM.DD`. A wiki release records that the corpus grew or that a claim moved, and it carries no
-semantic promise: nothing installs against it and no version pins to it.
+Calendar dated, `vYYYY.MM.DD`, by the work that produced the entry. **These are not releases.** Nothing installs
+against a wiki date and no version pins to it; release cadence belongs to the plugin and does not apply here. An entry
+records that the corpus grew or that a claim moved, and it is written the day the work lands.
 
 ## Why this is separate from the plugin changelog
 
@@ -22,25 +23,29 @@ version for nothing or hide the work entirely.
 **A plugin release cites this file rather than restating it.** When research does move a rule, the plugin changelog says
 what the rule now is and links the entry here for why.
 
-## What counts as an entry
-
-- A new page in `sources/`, `studies/`, `people/`, `concepts/` or `chart-types/`.
-- A `status` change, especially `secondary-only` or `not-reached` becoming `primary-read`. That is the wiki's core
-  currency and it is always worth a line.
-- A new or corrected entry in `refutations.md`. These are the highest-value events in the project.
-- A structural change to the schema or the tiers.
-- A correction to a claim the wiki previously made. **Corrections are recorded, never quietly edited**, in keeping with
-  the discipline the corpus applies to everyone else.
-
-Routine copy-editing, link fixes and formatting do not earn an entry.
-
-**Sectioning starts at the second release.** From then on entries group under **Added**, **Changed** and
-**Corrected**, because a reader will have a previous version to compare against and the three answer different
-questions. The first release has no previous version, so it is one section: everything in it is new, and a
-correction made to unreleased work is not a correction anyone can have been misled by. Corrections to claims the
-wiki has actually published always get their own line, and are recorded rather than quietly edited.
-
 ---
+
+## v2026.08.29
+
+The results of a dream run: the weekly research sweep, plus a corpus-wide pass converting the wiki
+from advice-voice to record-voice.
+
+### Added
+
+- [studies/gutwin-2023-chord-vs-sankey.md](studies/gutwin-2023-chord-vs-sankey.md). First experiment in the corpus on any form in [chart-types/flow.md](chart-types/flow.md). Sankey beat chord on time, errors, effort and preference; the performance effects are small and largely gone by the fourth exposure, and the stimuli were static.
+- [chart-types/flow-map.md](chart-types/flow-map.md). The type page both the flow and spatial indexes named as missing.
+- [people/michael-correll.md](people/michael-correll.md). Four preprints read at primary.
+- [concepts/channels.md](concepts/channels.md) records Bertini, Correll & Franconeri's argument that the channel ranking is derived from one task and untested on the rest. A position paper, and its authors decline the strong reading.
+
+### Changed
+
+- [chart-types/chord-diagram.md](chart-types/chord-diagram.md), [chart-types/sankey-diagram.md](chart-types/sankey-diagram.md) and [chart-types/network-topology.md](chart-types/network-topology.md) no longer report that no study tests these forms.
+- [refutations.md](refutations.md) gains the chord-versus-Sankey entry: the primary supports the finding, not the strength the abstract implies.
+
+### Corrected
+
+- The 3:1 contrast floor for graphical objects is WCAG 2.1 SC 1.4.11, not WCAG 2.0, whose guideline 1.4 stops at 1.4.9. Corrected in [checks/matplotlib.md](checks/matplotlib.md) and [inventory.md](inventory.md) topic 33.
+- Four source pages record an `author` for the first time: Few, Knaflic, Schwabish, Tufte.
 
 ## v2026.08.27
 

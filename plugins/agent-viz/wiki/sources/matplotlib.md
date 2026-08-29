@@ -10,9 +10,9 @@ The official documentation for matplotlib, the default plotting library for Pyth
 
 **How this was read.** Six pages were fetched and converted to text locally (matplotlib 3.11.1 docs, retrieved 2026-08-23): `colors/colormaps`, `axes/colorbar_placement`, `axes/axes_scales`, `axes/axes_ticks`, `axes/legend_guide`, and `customizing`. Every quote below is verbatim from those files.
 
-**What it is good for.** The single best free source on **why one colormap is worse than another**, stated in perceptual terms rather than taste. Also the reference for what matplotlib does *by default* when you don't say, which is what an agent driving the API is actually up against.
+**What it is good for.** The single best free source on **why one colormap is worse than another**, stated in perceptual terms rather than taste. Also the reference for what matplotlib does *by default* when nothing is specified, which is what an agent driving the API is actually up against.
 
-**What it does not settle.** Almost nothing outside color. The scales, ticks, and legend guides are API reference, not advice: they show you how to set a log scale, not when. The colormaps page is prescriptive; the rest of matplotlib's narrative documentation is deliberately not. Do not cite matplotlib for anything about titles, annotation, uncertainty, chart-type choice, or narrative. It has no position on those.
+**What it does not settle.** Almost nothing outside color. The scales, ticks, and legend guides are API reference, not advice: they cover how to set a log scale, not when. The colormaps page is prescriptive; the rest of matplotlib's narrative documentation is deliberately not. It has no position on titles, annotation, uncertainty, chart-type choice, or narrative.
 
 ---
 
@@ -78,12 +78,12 @@ This is the same move the newsroom style guides make, arrived at independently. 
 
 ## Colorbars, scales, ticks, legends
 
-These four pages are worth reading once so you know what exists, and are not worth citing as authority.
+These four pages are an inventory of what exists rather than a source of authority.
 
-- **Colorbars.** The useful practical content is that colorbars steal space from the parent Axes, that this desynchronizes panel widths in a shared-x layout, and that `layout='constrained'` is the fix. A `fig.colorbar(pcm, ax=axs[:, col])` call attaches one colorbar to a column of panels, which is the mechanism for *not* silently rescaling color between panels. The page does not tell you to label the colorbar or to pin `vmin`/`vmax`; that judgment is elsewhere.
+- **Colorbars.** The useful practical content is that colorbars steal space from the parent Axes, that this desynchronizes panel widths in a shared-x layout, and that `layout='constrained'` is the fix. A `fig.colorbar(pcm, ax=axs[:, col])` call attaches one colorbar to a column of panels, which is the mechanism for *not* silently rescaling color between panels. The page says nothing about labeling the colorbar or pinning `vmin`/`vmax`; that judgment is elsewhere.
 - **Axis scales.** Enumerates the registered scales: `asinh`, `function`, `functionlog`, `linear`, `log`, `logit`, `symlog`. No guidance on when a log axis is appropriate or how to label it as log. For that, see the log-scale entry in [refutations.md](../refutations.md), which is the only place in this wiki with evidence attached.
 - **Axis ticks.** Locators and formatters. The one durable idea is that hand-set ticks "work well for specific final plots, but do not adapt as the user interacts with the Axes", which is the argument for a formatter over a literal label list in anything interactive.
-- **Legends.** Entirely mechanical. Note one trap that bites generated code: "Artists with an empty string as label or with a label starting with an underscore, `_`, will be ignored." A silently missing legend entry usually traces to that rule, not to a bug.
+- **Legends.** Entirely mechanical. One trap bites generated code: "Artists with an empty string as label or with a label starting with an underscore, `_`, will be ignored." A silently missing legend entry usually traces to that rule, not to a bug.
 
 ## Where this source is used
 

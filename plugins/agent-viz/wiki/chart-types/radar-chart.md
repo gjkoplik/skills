@@ -8,24 +8,24 @@ aliases: [Radar chart, Spider chart, Star chart]
 
 Several quantitative axes radiating from a shared center, one point per axis for each series, joined into a closed polygon. Also called a spider or star chart.
 
-**This corpus contains one sentence about radar charts.** No study here uses one as a stimulus, and no style guide in the source set rules on it. The page is short because the record is, and the usual criticisms of the form are not supported by anything in it.
+**This corpus contains one sentence about radar charts.** No study here uses one as a stimulus, and no style guide in the source set rules on it. The usual criticisms of the form are not supported by anything in it.
 
 ## When to reach for it, and when not
 
-**Reach for it when** you want a profile: several measures for one entity, shown together as a shape, where the shape rather than any individual value is what the reader is meant to carry away. That is what the form is for and it is `authority-asserted` at best, since the corpus contains no evaluation of it.
+The form is defined for a profile: several measures for one entity, shown together as a shape, where the shape rather than any individual value is what the reader is meant to carry away. That is what the form is for and it is `authority-asserted` at best, since the corpus contains no evaluation of it.
 
 The one piece of guidance available, the FT's line ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)):
 
 > "make sure they are organised in a way that makes sense to reader"
 
-which is about axis order, and which is the right thing to worry about for a reason given under Channels.
+which is about axis order, for the reason given under Structural decomposition.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | How big is each of these measures? | [Bar chart](bar-chart.md). Position along a common scale, and the measures do not have to share units |
-| Which entity is bigger overall? | [Bar chart](bar-chart.md) of the aggregate you actually mean. The polygon's size is not that aggregate |
+| Which entity is bigger overall? | [Bar chart](bar-chart.md) of the intended aggregate. The polygon's size is not that aggregate |
 | How do six entities compare? | Small multiples of anything. Overlaid polygons occlude each other |
 | How do two variables relate? | Correlation. A scatterplot |
 | Does this add up? | [Part-to-whole](part-to-whole.md). The axes are separate measures and do not compose a total |
@@ -43,7 +43,7 @@ which is about axis order, and which is the right thing to worry about for a rea
 
 Two properties follow from the slots and assert nothing empirical:
 
-**The angular position is a category, not a value.** Unlike a coxcomb, where the angle is swept by the data, here the angle just says which measure you are on.
+**The angular position is a category, not a value.** Unlike a coxcomb, where the angle is swept by the data, here the angle just says which measure the point belongs to.
 
 **The enclosed area is a function of the axis order, not only of the data.** Permuting the axes leaves every value unchanged and changes the polygon's area and shape. That is arithmetic, not a claim about readers, and it is the reason the FT's line about organizing the axes is the guidance that exists.
 
@@ -63,13 +63,13 @@ Nothing has been measured.
 
 ## What is contested
 
-Nothing, and that is not a compliment. **Contested requires a record that disagrees with itself**, and here there is no record ([evidence-class.md](../concepts/evidence-class.md)). The familiar criticisms, that radar charts break down past a few axes, that overlaid polygons are unreadable, that the area misleads, are all plausible and none of them is supported by anything in this corpus. `absence of evidence`, which is not the same as refuted and not the same as endorsed.
+Nothing. **Contested requires a record that disagrees with itself**, and here there is no record ([evidence-class.md](../concepts/evidence-class.md)). The familiar criticisms, that radar charts break down past a few axes, that overlaid polygons are unreadable, that the area misleads, are all plausible and none of them is supported by anything in this corpus. `absence of evidence`, which is not the same as refuted and not the same as endorsed.
 
 ## The failure mode it invites
 
 **Reading the polygon's size as a total.** The area depends on which measures sit next to which, so two orderings of the same data give two different shapes. That much is definitional. The failure is treating the resulting shape as a summary of the entity. Stated as a caution with its reason rather than as a prohibition, because no one has tested whether readers do it.
 
-**Normalizing each axis and then not saying so.** Radar charts almost always rescale each measure to a common radius, which means the polygon compares percentiles or min-max positions rather than quantities. That is a transform you are responsible for disclosing, and it is the same obligation any derived statistic carries.
+**Normalizing each axis and then not saying so.** Radar charts almost always rescale each measure to a common radius, which means the polygon compares percentiles or min-max positions rather than quantities. That is an undisclosed transform, carrying the same obligation any derived statistic does.
 
 ## Justifying the choice
 

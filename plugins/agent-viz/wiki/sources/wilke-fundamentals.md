@@ -11,7 +11,7 @@ Claus O. Wilke, *Fundamentals of Data Visualization* (O'Reilly, 2019), 30 chapte
 
 **How this was read.** Two passes, both at primary. The design-principles chapters were pulled 2026-08-23. **Chapters 5 through 16, the catalog of forms, were pulled in full on 2026-08-27**: each chapter page fetched with `curl` and a browser user-agent, stripped to text locally, and read end to end. Every quote below was re-extracted from that HTML, not taken from a fetch summary. One caveat that belongs here: the free web version is described on its own welcome page as "the complete author manuscript before final copy-editing and other quality control," licensed CC BY-NC-ND 4.0. Wording in the printed O'Reilly edition may differ slightly, and at least one sentence quoted below carries an uncorrected typo.
 
-**What it is good for.** Come back here with: *which chart form does this data relationship want*, and *what is wrong with the figure I already have*. Chapters 5 through 16 are a directory of visualizations organized by relationship (amounts, distributions, proportions, x-y, geospatial, uncertainty). Chapters 17 through 26 are the design-principles half, and they are the part a figure bar actually reuses. Part III is the only place in the canon that treats image formats, plotting-software choice, reproducibility and separation of content from design as first-class quality topics.
+**What it is good for.** The questions it answers: *which chart form does this data relationship want*, and *what is wrong with an existing figure*. Chapters 5 through 16 are a directory of visualizations organized by relationship (amounts, distributions, proportions, x-y, geospatial, uncertainty). Chapters 17 through 26 are the design-principles half, and they are the part a figure bar actually reuses. Part III is the only place in the canon that treats image formats, plotting-software choice, reproducibility and separation of content from design as first-class quality topics.
 
 **What it does not settle.** Wilke runs no experiments, and most of the book is authority-asserted, which the inventory labels correctly. **One correction from the full read: "cites few" undersells chapter 16**, which carries real citations (Kay et al. 2016 for quantile dotplots, Hullman et al. 2015 and Kale et al. 2018 for hypothetical outcome plots) and chapter 13 cites Haroz et al. 2016 against the connected scatterplot. Those are the places where his chart advice has a study behind it rather than a preference. Accessibility is limited to color-vision deficiency: no alt text, no screen readers, no contrast ratios. There is nothing on interaction, nothing on latency, and nothing on the statistical-reporting questions Cairo covers. The data-ink discussion is a corrective to Tufte, not evidence about him; see [tufte.md](tufte.md) and [refutations.md](../refutations.md).
 
@@ -52,7 +52,7 @@ Chapter 18 belongs to this list in practice even though it sits in the design-pr
 
 ## Names it defines that nothing else in this corpus does
 
-[../chart-types/aliases.md](../chart-types/aliases.md) records that 43 of the 103 names it resolves have no source in this wiki defining them. This chapter set closes a batch of them **at primary**, which is a stronger warrant than any other catalog here can give, because a contents line records that a name exists while these are definitions in running text.
+[../chart-types/aliases.md](../chart-types/aliases.md) marks a large share of the names it resolves as in circulation with no source in this wiki defining them. This chapter set closes a batch of those **at primary**, which is a stronger warrant than any other catalog here can give, because a contents line records that a name exists while these are definitions in running text.
 
 - **Correlogram.** "Visualizations of correlation coefficients are called correlograms."
 - **Sina plot**, with a citation: "This method, called a sina plot (Sidiropoulos et al. 2018), can be thought of as a hybrid between a violin plot and jittered points".
@@ -66,7 +66,7 @@ Chapter 18 belongs to this list in practice even though it sits in the design-pr
 - **Half eyes and eye plots**: "Ridgeline plots with error bars underneath are called half eyes, and violin plots with error bars are called eye plots."
 - **Phase portrait**, as an alias: "Physicists and engineers often call this a phase portrait, because in their disciplines it is commonly used to represent movement in phase space."
 
-Three names this catalog does **not** carry, so do not assume it does: streamgraph, sunburst and spine chart. Wilke's nested-pie section describes the sunburst construction without using the word.
+Three names this catalog does **not** carry: streamgraph, sunburst and spine chart. Wilke's nested-pie section describes the sunburst construction without using the word.
 
 ## Where it disagrees with the other catalogs about filing
 
@@ -120,9 +120,9 @@ That puts him with Observable Plot, the FT and Schwabish on the by-mark form of 
 
 He also names two conditions under which a non-density quantity is acceptable: the colored areas are all about the same size and shape, or they are small relative to the map and the quantity varies on a larger scale than they do. **That is a partial fill for the hole, and it is not the same question as which break algorithm to use**, which he never raises. See [cairo-truthful-art.md](cairo-truthful-art.md) for where that question is filed and why it is still unread.
 
-**One claim in chapter 16 to watch.** He writes "Research in human perception shows that we are much better at perceiving, counting, and judging the relative frequencies of discrete objects" and cites nothing for it, in a chapter that otherwise cites carefully. Treat it as authority-asserted despite the wording.
+**One claim in chapter 16 carries no citation.** He writes "Research in human perception shows that we are much better at perceiving, counting, and judging the relative frequencies of discrete objects" and cites nothing for it, in a chapter that otherwise cites carefully. It is authority-asserted despite the wording.
 
-## The three-way labeling scheme, which is worth stealing
+## The three-way labeling scheme
 
 Chapter 1 defines the vocabulary the rest of the book grades with:
 
@@ -164,11 +164,11 @@ On narrative (ch. 29):
 
 Only in one place, and it is not really Wilke's advice being contested. Chapter 23 quotes Tufte's data-ink ratio and then argues against reading it maximally. The empirical record on data-ink and chartjunk is genuinely mixed in both directions and lives in [refutations.md](../refutations.md). Wilke's "within reason" framing survives that record better than Tufte's original does, but it is still an assertion, not a finding.
 
-Two smaller places where a reader should notice the boundary of the claim: chapter 14 treats bin width and smoothing bandwidth as analysis choices without giving a rule, and chapter 17's proportional-ink principle is stated as a principle rather than measured. Both are fine; neither is evidence.
+Two smaller places where the claim has a boundary: chapter 14 treats bin width and smoothing bandwidth as analysis choices without giving a rule, and chapter 17's proportional-ink principle is stated as a principle rather than measured. Both are fine; neither is evidence.
 
 ## Inventory topics it grounds
 
-Per [roll-call.md](../roll-call.md), do not recompute: 2, 5, 6, 7, 8, 9, 12, 14, 16, 17, 18, 20, 21, 22, 23, 26, 29, 35, 37, 39, 43, 48, 49, 50, 51, 52, 53, 54, 56, 58, 59, 60, 62, 63, 64, 66, 67, 68, 69, 70, 75, 76, 77, 78, 79, 85, 86, 87, 88, 91.
+Per [roll-call.md](../roll-call.md), not recomputed here: 2, 5, 6, 7, 8, 9, 12, 14, 16, 17, 18, 20, 21, 22, 23, 26, 29, 35, 37, 39, 43, 48, 49, 50, 51, 52, 53, 54, 56, 58, 59, 60, 62, 63, 64, 66, 67, 68, 69, 70, 75, 76, 77, 78, 79, 85, 86, 87, 88, 91.
 
 That is more topics than any other source in the set, which is why "the canon" in this project is really Wilke plus corrections.
 
@@ -179,7 +179,7 @@ One attribution nit, recorded here and on the Tufte page: inventory topic 67 cit
 Two things this page itself had understated before chapters 5 through 16 were read in full:
 
 - **"Cites few" was wrong for the uncertainty chapter.** Corrected above. Chapter 16 is study-backed in a way no other chart-choice writing in this corpus is.
-- **The catalog half was treated as a chapter list.** It is a per-form catalog with a definition and an argument for each form, and it was the only full-text one available the whole time. Everything in [../chart-types/aliases.md](../chart-types/aliases.md) marked "in circulation, no source here defines it" should be checked against the names section above before it is written up as undefined.
+- **The catalog half was treated as a chapter list.** It is a per-form catalog with a definition and an argument for each form, and it was the only full-text one available the whole time. Everything in [../chart-types/aliases.md](../chart-types/aliases.md) marked "in circulation, no source here defines it" is checkable against the names section above before it is written up as undefined.
 
 ## Links
 

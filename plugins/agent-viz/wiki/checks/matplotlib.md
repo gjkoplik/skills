@@ -4,7 +4,7 @@ Every snippet here was executed against a real matplotlib figure before being wr
 
 **Most of the honesty rules are mechanizable**, and cheaply: the whole battery below runs in well under a second. Several of them catch defects that are **invisible in source review**, because the bug is in the rendered artifact rather than in the code that produced it.
 
-Use `matplotlib.use("Agg")` and assert against the live `Axes` object. There is no static-grep version of most of these: the violation is typically a `set_ylim` call at a distance from the `ax.bar` call.
+The checks run under `matplotlib.use("Agg")` and assert against the live `Axes` object. There is no static-grep version of most of these: the violation is typically a `set_ylim` call at a distance from the `ax.bar` call.
 
 ---
 
@@ -27,9 +27,9 @@ def simulate_cvd(fig, matrix=DEUTER):
     return np.clip(rgb @ matrix.T, 0.0, 1.0)
 ```
 
-Diff the result against the original, or just look at it. **This is an approximation, not a clinical simulation**, and it should be described that way.
+The result is read by diffing it against the original or by eye. **This is an approximation, not a clinical simulation.**
 
-The cheap fallback, when you want a number rather than an image: convert to luminance and assert the encoded series still separate.
+The cheap fallback, for a numeric rather than visual result: convert to luminance and assert the encoded series still separate.
 
 ## WCAG contrast
 
@@ -50,7 +50,9 @@ def contrast_ratio(fg255, bg255):
     return (hi + 0.05) / (lo + 0.05)
 ```
 
-Verified: `#2166AC` on white returns **5.9**, which clears the 4.5:1 floor for normal text. WCAG 2.0 AA wants 4.5:1 for text and 3:1 for graphical objects.
+Verified: `#2166AC` on white returns **5.9**, which clears the 4.5:1 floor for normal text.
+
+**The two floors come from different versions of WCAG.** SC 1.4.3 Contrast (Minimum), Level AA, has been 4.5:1 for text and 3:1 for large text since WCAG 2.0. The **3:1 floor for graphical objects is SC 1.4.11 Non-text Contrast, which does not exist in WCAG 2.0**: guideline 1.4 stops at 1.4.9 there, and the criterion arrived in 2.1. It is carried unchanged into WCAG 2.2, the current W3C Recommendation as of 12 December 2024, where its text covers "Parts of graphics required to understand the content". So a mark, a gridline or a series color is checked against a criterion the Urban Institute's WCAG 2.0 framing does not contain. *(Checked against the W3C specs on 2026-08-29.)*
 
 ## Zero baseline when area encodes the value
 
@@ -69,7 +71,7 @@ Verified: returns `True` on a truncated bar chart with `ylim` starting at 95.
 
 ## Axis truncation ratio
 
-Report the number, do not auto-fail on it. The literature explicitly refuses a threshold.
+The check reports the number rather than auto-failing on it. The literature explicitly refuses a threshold.
 
 ```python
 def axis_span_ratio(ax, data):
@@ -83,7 +85,7 @@ Near 1.0 means the axis hugs the data, which is aggressive truncation. Much grea
 
 ## Inverted axes
 
-The cheapest check in the set, and the failure mode is catastrophic: inversion reverses the conclusion rather than exaggerating it, and readers do not notice.
+One line, and the failure mode is catastrophic: inversion reverses the conclusion rather than exaggerating it, and readers do not notice.
 
 ```python
 inverted = ax.yaxis_inverted() or ax.xaxis_inverted()
@@ -99,7 +101,7 @@ labelled = bool(ax.get_ylabel())
 
 ## Dual axes
 
-Detection is trivial; the verdict is judgment. Flag it so the author justifies it, do not fail on it.
+Detection is trivial; the verdict is judgment. The check flags the figure for the author to justify rather than failing it.
 
 ```python
 def twin_axes(fig, ax):
@@ -124,7 +126,7 @@ Costs one draw call.
 
 ## Raw floats reaching a label
 
-The highest catch-rate-per-line item, and specific to programmatic plotting. `f"threshold {0.1 + 0.2}"` renders `0.30000000000000004`, which looks fine in source review and only appears in the artifact.
+High catch rate per line, and specific to programmatic plotting. `f"threshold {0.1 + 0.2}"` renders `0.30000000000000004`, which looks fine in source review and only appears in the artifact.
 
 ```python
 import re, matplotlib.text
@@ -137,7 +139,7 @@ def raw_floats(fig, min_decimals=8):
 
 Sweeps tick labels, titles and annotations alike. Verified: catches `'threshold 0.30000000000000004'` from an f-string title.
 
-Related and not mechanizable: **significant digits**. A median of five timings supports two significant figures. A label reading `2.3847 s` asserts precision the sampling design cannot deliver, and no regex will tell you that.
+Related and not mechanizable: **significant digits**. A median of five timings supports two significant figures. A label reading `2.3847 s` asserts precision the sampling design cannot deliver, and no regex detects that.
 
 ## Colorbars
 
@@ -158,7 +160,7 @@ shared = len({im.get_clim() for im in images}) == 1
 diverging_centred = abs(norm.vmin + norm.vmax) < tol   # when cmap name is in a known diverging set
 ```
 
-**Trap worth knowing:** the colorbar label check must test both `cbar.ax.get_ylabel()` and the axes title. `fig.colorbar(..., label=...)` populates the former, but `cbar.ax.set_title(...)` does not, and a naive `get_ylabel()` check reports a false violation on a perfectly well-labeled figure.
+The colorbar label check must test both `cbar.ax.get_ylabel()` and the axes title. `fig.colorbar(..., label=...)` populates the former, but `cbar.ax.set_title(...)` does not, and a naive `get_ylabel()` check reports a false violation on a perfectly well-labeled figure.
 
 ## Interval bounds inside the variable's domain
 

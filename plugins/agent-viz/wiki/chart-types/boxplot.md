@@ -10,20 +10,20 @@ One variable reduced to five numbers per group: a box spanning the upper and low
 
 ## When to reach for it, and when not
 
-**Reach for it when** several groups have to be compared on one axis, each group has enough observations for a summary to mean anything, and the question is about location and spread rather than about shape. The form's real offer is that one very simple mark repeats across a strip, so ten groups cost the same reading effort as two.
+**The form applies where** several groups have to be compared on one axis, each group has enough observations for a summary to mean anything, and the question is about location and spread rather than about shape. The form's offer is that one very simple mark repeats across a strip, so ten groups cost the same reading effort as two.
 
-Its second real offer is that **it has no tuning parameter**. Nothing about a box plot can be adjusted until the picture agrees with you, which is a deliberate design property and the sharpest difference between it and a [violin](violin-plot.md) ([john-tukey.md](../people/john-tukey.md)).
+Its second offer is that **it has no tuning parameter**. Nothing about a box plot can be adjusted until the picture agrees with the analyst, which is a deliberate design property and the main difference between it and a [violin](violin-plot.md) ([john-tukey.md](../people/john-tukey.md)).
 
-**Do not reach for it when:**
+**Questions the form does not answer:**
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
-| n is 3 to 6 per group | Plot the observations. A strip plot or univariate scatterplot |
+| n is 3 to 6 per group | A strip plot or univariate scatterplot of the observations |
 | Is this bimodal? | [Violin](violin-plot.md), or a [histogram](histogram.md) per group. Five numbers cannot express a second mode |
-| How many observations are in each group? | The box plot does not say. State n, or use a form that draws every point |
-| Is this group significantly different from that one? | The box is a descriptive interval, not an inferential one, unless you redefine it and say so |
+| How many observations are in each group? | The box plot does not say. n stated in the caption, or a form that draws every point |
+| Is this group significantly different from that one? | The box is a descriptive interval, not an inferential one, unless it is redefined and the redefinition declared |
 | What is the exact first quartile? | A table. Implementations disagree about what the box ends even are |
-| One group, and the shape is the whole point | [Histogram](histogram.md) or an ECDF. The comparison strip is what you are paying for |
+| One group, and the shape is the whole point | [Histogram](histogram.md) or an ECDF. The comparison strip is what the form charges for |
 
 ## Structural decomposition
 
@@ -38,7 +38,7 @@ Its second real offer is that **it has no tuning parameter**. Nothing about a bo
 
 **Every drawn statistic sits at a real observation or at a robust summary of them**, which is what separates this from a mean and an SD: nothing on the plot is at a coordinate the data does not support ([john-tukey.md](../people/john-tukey.md)).
 
-**The box ends are hinges, or fourths, and those are not identical to quartiles under most quantile definitions.** Implementations differ further: nine quantile types are in circulation, some tools substitute fixed quantiles for the whisker extremes, and multipliers other than 1.5 are in use. This is definitional rather than a claim, and it is the reason "what is the first quartile" is a question for a table. One detail is unresolved and should not be papered over: the secondary account this wiki relies on places the fences 1.5 inter-fourth ranges from the *median*, while every implementation known here measures from the *hinges*. Those are different plots. The primary was not reached, so neither phrasing should be cited as Tukey's own.
+**The box ends are hinges, or fourths, and those are not identical to quartiles under most quantile definitions.** Implementations differ further: nine quantile types are in circulation, some tools substitute fixed quantiles for the whisker extremes, and multipliers other than 1.5 are in use. This is definitional rather than a claim, and it is the reason "what is the first quartile" is a question for a table. One detail is unresolved: the secondary account this wiki relies on places the fences 1.5 inter-fourth ranges from the *median*, while every implementation known here measures from the *hinges*. Those are different plots. The primary was not reached, so neither phrasing is vouched as Tukey's own.
 
 ## Channels
 
@@ -52,9 +52,9 @@ Two results, and they are the only measurements in this source set that decompos
 
 **It does not produce the bar chart's containment bias.** [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) found a significant interaction between an outcome's position and the encoding, F(2,2) = 21.3, p < 0.0001: with a bar chart, outcomes below the mean and so inside the bar were rated significantly likelier than outcomes the same distance above it. That effect was not significant for the box plot or for either of the other symmetric encodings. Adherence to the expected strategy was 87.4% of trials with the box plot against 83.2% with bars.
 
-**Deleting the box makes it worse.** Tufte proposed a box-less *midgap* variant to raise the data-ink ratio, and Stock & Behrens (1991) found it "substantially less accurate than the original." This is the cleanest case in the whole wiki of a specific reduction tested against the thing it reduced and losing. It is reported rather than primary: the result reaches this wiki through Wickham & Stryjewski's history, and Stock & Behrens was not reached ([refutations.md](../refutations.md)).
+**Deleting the box makes it worse.** Tufte proposed a box-less *midgap* variant to raise the data-ink ratio, and Stock & Behrens (1991) found it "substantially less accurate than the original." It is a case of a specific reduction tested against the thing it reduced, and losing. It is reported rather than primary: the result reaches this wiki through Wickham & Stryjewski's history, and Stock & Behrens was not reached ([refutations.md](../refutations.md)).
 
-**Two scope notes that keep those honest.** Correll & Gleicher's box plot was modified for their task: whiskers at the 95% t-confidence interval, box at a 50% t-confidence interval, center line at the mean rather than the median. It is a box-plot-shaped uncertainty encoding, not Tukey's box plot. And on confidence, rather than accuracy, their box plot did not separate from bars at all: both sat at M = 4.86, below the two encodings carrying distribution detail.
+**Two scope notes.** Correll & Gleicher's box plot was modified for their task: whiskers at the 95% t-confidence interval, box at a 50% t-confidence interval, center line at the mean rather than the median. It is a box-plot-shaped uncertainty encoding, not Tukey's box plot. And on confidence, rather than accuracy, their box plot did not separate from bars at all: both sat at M = 4.86, below the two encodings carrying distribution detail.
 
 ## What it is measurably bad at
 
@@ -66,12 +66,12 @@ Two results, and they are the only measurements in this source set that decompos
 
 ## What is contested
 
-**Whether the box plot is the fix for the bar chart with error bars.** It is the most common recommendation in the neighborhood and the record splits on it:
+**Whether the box plot is the fix for the bar chart with error bars.** It is the most common recommendation in the neighborhood, and the record splits on it:
 
 - **For:** Correll & Gleicher measured the containment bias away. On their inferential tasks the box plot behaved like the other symmetric encodings and unlike the bar.
 - **Against:** Weissgerber et al. explicitly decline to recommend it. Their objection is not about the glyph, it is that at the sample sizes in question no summary form is defensible, box plots included.
 
-What survives both: **the argument is about sample size, not about a ranked list of chart types.** With enough data per group the box plot is a defensible replacement for a bar and error bars. With four observations per group nothing in this family is, and the answer is to draw the four.
+What survives both: **the argument is about sample size, not about a ranked list of chart types.** With enough data per group the box plot is a defensible replacement for a bar and error bars. With four observations per group nothing in this family is, and the remaining option is drawing the four.
 
 ## The failure mode it invites
 

@@ -3,6 +3,7 @@ type: source
 status: secondary-only
 status_partial: true
 retrieved: 2026-08-23
+author: edward-tufte
 ---
 
 # Tufte, *The Visual Display of Quantitative Information*
@@ -12,14 +13,14 @@ Edward R. Tufte, *The Visual Display of Quantitative Information* (Graphics Pres
 **How this was read.** `secondary-only`, and thinly. The book is not free and was not read. Retrieved 2026-08-23:
 
 - **Chapter list**: a library catalog contents note, obtained from the Internet Archive metadata API for the cataloged 1983 edition (`archive.org/metadata/visualdisplayofq00tuft`). A cataloger's transcription of the book's own contents page, so reliable for structure and useless for wording.
-- **Publisher description**: reachable, and this page's status is upgradeable as a result. It was previously recorded here as unreachable, wrongly. Someone should redo this section from the source.
-- **Tufte's two load-bearing sentences**: quoted verbatim **inside Wilke chapter 23**, which was primary-read. See [wilke-fundamentals.md](wilke-fundamentals.md).
+- **Publisher description**: reachable, and this page's status is upgradeable as a result. It was previously recorded here as unreachable, wrongly, and this section has not yet been redone from it.
+- **The two Tufte sentences this wiki relies on**: quoted verbatim **inside Wilke chapter 23**, which was primary-read. See [wilke-fundamentals.md](wilke-fundamentals.md).
 
-**Do not treat the Tufte quotes below as read from Tufte.** They are read from Wilke quoting Tufte. That is a quote of a quote, and the distinction is the entire point of this wiki.
+**The Tufte quotes below were not read from Tufte.** They are read from Wilke quoting Tufte. That is a quote of a quote, and the distinction is the entire point of this wiki.
 
-Archive.org's full-text search-inside endpoint was tried for verification and returned `Invalid filename`. The scanned item is a lending copy; no attempt was made to obtain the text, and none should be.
+Archive.org's full-text search-inside endpoint was tried for verification and returned `Invalid filename`. The scanned item is a lending copy; no attempt was made to obtain the text.
 
-**What it is good for.** Come back here for the vocabulary, and for the two ideas that survive intact: **small multiples** and **graphical integrity** (the lie factor, design variation versus data variation). Also come back before citing "data-ink" at anyone, because the phrase is almost always deployed as if it were a finding.
+**What it is good for.** The vocabulary, and the two ideas that survive intact: **small multiples** and **graphical integrity** (the lie factor, design variation versus data variation). Also the status of "data-ink", a phrase almost always deployed as if it were a finding.
 
 **What it does not settle.** Whether removing non-data ink helps anybody read anything. See below. The book also predates color displays, screens, accessibility, and plotting software entirely, so it says nothing about most of what a modern figure bar owes.
 
@@ -73,9 +74,9 @@ Wilke then splits the instruction into two readings, which is the most useful th
 - **Data-ink specifically.** Gillan & Richman (1994) ran four experiments and found the effect **element-conditional**. Removing the y-axis line and the x axis generally *increased* response time, meaning removal hurt. Removing y-axis tick marks did the opposite. Each element's effect was conditional on graph type, task, and which other elements were present. **Caveat, from refutations.md: that experiment-by-experiment breakdown was reached via secondary summaries; the primary was not read.**
 - **Chartjunk.** Contested in both directions. Bateman et al. (CHI 2010) found accuracy on embellished charts "no worse than for plain charts" and recall after two to three weeks significantly better; Inbar, Tractinsky & Meyer found a preference for non-minimalist bar graphs; Borkin et al. found pictograms act as memory hooks. Against embellishment, Skau et al. (2015) found that changing bar *shape* raises error rates. **Caveat: a methodological critique of Bateman was unreachable (403).**
 
-The accurate phrasing this project settled on is short: **strip decoration, keep orientation. "Maximize" is the verb the data does not support.**
+The accurate phrasing this project settled on is short: **stripping decoration is supported, keeping orientation is supported, and "maximize" is the verb the data does not support.**
 
-Two things that are *not* contested and should not be thrown out with the ratio: small multiples (chapter 8) and graphical integrity (chapter 2). Nothing in the record argues against either.
+Two things are *not* contested: small multiples (chapter 8) and graphical integrity (chapter 2). Nothing in the record argues against either.
 
 ## Inventory topics it grounds
 
@@ -87,7 +88,7 @@ Small multiples (topic 62) is Tufte's chapter 8, but the roll-call sources that 
 
 Two things, one small and one structural.
 
-**Small.** Inventory topic 67 cites `Wilke ch. 23: "Maximize the data-ink ratio, within reason."` The sentence is Tufte's; Wilke is quoting it and adding the emphasis. The citation should read "Tufte, quoted in Wilke ch. 23." The topic's substance, that this is the canonical case where a bar must not present an authority claim as an empirical one, is right.
+**Small.** Inventory topic 67 cites `Wilke ch. 23: "Maximize the data-ink ratio, within reason."` The sentence is Tufte's; Wilke is quoting it and adding the emphasis. The correct citation is "Tufte, quoted in Wilke ch. 23." The topic's substance, that this is the canonical case where a bar must not present an authority claim as an empirical one, is right.
 
 **Structural.** The roll-call's whole method is "enumerate a source's published outline, map every entry to a topic or a stated exclusion, so an omission shows up as a visibly unmapped chapter." Tufte was never enumerated. He has no chapter rows, no exclusions, and therefore no visible gap. The method's own guarantee does not cover him, because he was never entered into it. A source that is absent from the roll-call is invisible to the roll-call's audit, which is a weakness of the artifact rather than of the source.
 

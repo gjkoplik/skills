@@ -47,7 +47,7 @@ ANOVA: F(5, 4650) = 121.955, p < 0.001.
 
 > "Error was smaller for the baseline charts, area chart, and the arc chart than the two angle-only charts. This was not what we hypothesized, and contradicts common wisdom that angles are critical to pie and donut chart perception."
 
-Four findings worth keeping separate:
+Four distinct findings:
 
 **Angle is the worst of the three, not the primary one.** Both angle-only conditions produced the highest error and the widest spread. The channel the literature named as the mechanism is the channel that performs worst when isolated.
 
@@ -57,7 +57,7 @@ Four findings worth keeping separate:
 
 > "The unusual area-only chart has very similar error to the pie and donut. This is remarkable, given how difficult it generally is to correctly estimate area, and also the chart's lack of familiarity."
 
-**Arc length is the most consistent.** Highest mean error among the non-angle conditions but the tightest distribution: "the amount a participant would be wrong by is be more predictable." Mean and variance disagree here, and which one matters depends on whether you care about typical error or worst-case error.
+**Arc length is the most consistent.** Highest mean error among the non-angle conditions but the tightest distribution: "the amount a participant would be wrong by is be more predictable." Mean and variance disagree here, and which one matters depends on whether typical error or worst-case error is at issue.
 
 **Segment size matters.** All conditions except the two angle-only ones show more error as the segment gets larger. The angle-only conditions are V-shaped, with lowest error in the middle third.
 
@@ -86,4 +86,4 @@ Four findings worth keeping separate:
 
 - [cleveland-mcgill-1984.md](cleveland-mcgill-1984.md) — where the angle conjecture comes from, flagged as a conjecture by its own authors
 - [../chart-types/pie-and-donut.md](../chart-types/pie-and-donut.md) — the type page that inherits this
-- [../concepts/channels.md](../concepts/channels.md) — why type-level decompositions like this one are rare and valuable
+- [../concepts/channels.md](../concepts/channels.md) — why type-level decompositions like this one are rare

@@ -2,6 +2,7 @@
 type: source
 status: primary-read
 retrieved: 2026-08-23
+author: stephen-few
 ---
 
 # Few, *Data Visualization Effectiveness Profile*
@@ -14,7 +15,7 @@ Stephen Few, "Data Visualization Effectiveness Profile", *Visual Business Intell
 
 **This retires the roll-call's warning that "everything mapped to Few is unvouched at the primary level."** It is vouched now, and two of the mappings turn out to be looser than they looked.
 
-**What it is good for.** Come back here with: *is this figure informative, and separately, will anyone look at it*. Few's split between **informative** and **emotive** criteria is the useful move, and his acceptable-range figure is the closest thing in the canon to this wiki's [floor-and-ceiling](../concepts/floor-and-ceiling.md) idea. He is also the only source in the set that names **construct validity** as a chart problem.
+**What it is good for.** The question it answers: *is this figure informative, and separately, will anyone look at it*. Few's split between **informative** and **emotive** criteria is the useful move, and his acceptable-range figure is the closest thing in the canon to this wiki's [floor-and-ceiling](../concepts/floor-and-ceiling.md) idea. He is also the only source in the set that names **construct validity** as a chart problem.
 
 **What it does not settle.** Almost everything, and Few says so himself. There is no evidence here, no study, one author, seven axes, and an explicit refusal to quantify. It is a critique frame, not a rubric to score with.
 
@@ -39,7 +40,7 @@ Stephen Few, "Data Visualization Effectiveness Profile", *Visual Business Intell
 | Aesthetics | Ugly | Pleasing to the eye | Beautiful |
 | Engagement | Distracts from data | Neutral | Draws one into the data |
 
-Note the emotive scales have a labeled midpoint and the informative ones do not.
+The emotive scales have a labeled midpoint and the informative ones do not.
 
 ## What each criterion actually means, in his words
 
@@ -61,7 +62,7 @@ Note the emotive scales have a labeled midpoint and the informative ones do not.
 
 **Aesthetics** and **Engagement** are separated on purpose. Engagement is not decoration: "I do not mean visual effects or ornamentation that entice people to examine those qualities only without becoming engaged with the information itself."
 
-## The acceptable-range figure, which is the best part
+## The acceptable-range figure
 
 Page 10 gives target ranges rather than target scores, and the ranges are not the same width:
 
@@ -71,7 +72,7 @@ And he names the exception rather than leaving it implied: "A journalistic infog
 
 That is a floor on truthfulness and a ceiling that scales with the artifact's job, arrived at from a different direction than this wiki did.
 
-## Few's own disclaimers, which a citer should carry
+## Few's own disclaimers
 
 He gives away more than most authority sources do:
 
@@ -104,7 +105,7 @@ The others: Minard's march on Moscow (optimal on everything except intuitiveness
 
 ## Inventory topics it grounds
 
-Per [roll-call.md](../roll-call.md), do not recompute: 1, 3, 5, 6, 9, 10, 11, 16, 31, 33, 42, 45, 46, 89, 91. See the corrections above before leaning on 16, 33, 42, 45 or 46.
+Per [roll-call.md](../roll-call.md), not recomputed here: 1, 3, 5, 6, 9, 10, 11, 16, 31, 33, 42, 45, 46, 89, 91. The corrections above bear on 16, 33, 42, 45 and 46.
 
 ## What the project got wrong about it
 

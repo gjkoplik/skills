@@ -36,7 +36,7 @@ This is the machinery by which a figure *argues*. A figure that is not making an
 
 - **Storytelling.** A finding, a paper figure, a blog post, a README hero. Owes the floor and the ceiling.
 - **Instructional.** A demo of what a parameter or method does, where the *code* is as much the artifact as the picture. Owes the floor. Its real quality bar is minimal, clean, copy-able source. A plain literal title, library-default colors and no custom legend are **correct** here.
-- **Diagnostic.** Something you will look at once. Owes the floor, and barely that: it needs to not mislead *you*.
+- **Diagnostic.** A figure looked at once. Owes the floor, and barely that: it needs to not mislead *its own author*.
 
 ## The asymmetry that keeps this honest
 
@@ -50,7 +50,7 @@ A truncated baseline, an unlabeled log scale, a silently clipped colorbar or an 
 
 A figure can be subject to constraints that operate at the level of the **document set** rather than the figure. The clearest example: deliberately orthogonalizing colors across a gallery so neighboring entries stay visually distinguishable. A palette that looks arbitrary in isolation can be correct in context, and a reviewer looking at one figure cannot see the constraint.
 
-The pushback that still applies: **orthogonalize inside the floor, not out of it.** Differentiating by reaching for a rainbow ramp on ordered data, or a red-against-green pairing, buys distinctiveness with a floor violation. There is room to differentiate among perceptually safe options.
+The limit that still applies: **orthogonalization happens inside the floor, not out of it.** Differentiating by reaching for a rainbow ramp on ordered data, or a red-against-green pairing, buys distinctiveness with a floor violation. There is room to differentiate among perceptually safe options.
 
 ## Where the boundary is genuinely arguable
 
@@ -60,7 +60,7 @@ Stated rather than hidden:
 - **"Every mark on the canvas is explained."** Reads like clarity, which is ceiling. But an unexplained encoded value is closer to a correctness problem than a polish problem, so it sits on the floor here.
 - **Axis titles with units.** Arguably clarity. Treated as floor, because a unitless quantitative axis is not merely unpolished, it is ambiguous about what was measured.
 
-If you disagree with any of these placements, the structure survives the disagreement. That is the point of separating the structure from the assignments.
+The structure survives disagreement about any of these placements, which is why the structure and the assignments are separable.
 
 ## See also
 

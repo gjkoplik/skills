@@ -10,13 +10,13 @@ Observations of one continuous variable sorted into contiguous bins, with the co
 
 ## When to reach for it, and when not
 
-**Reach for it when** one variable is the subject, there are enough observations for a shape to exist, and the question is about that shape: where the mass sits, whether there are one or two modes, whether there is a gap, whether the tail is long. The histogram is the form that keeps every observation in the picture without drawing every observation.
+The form is defined for the case where one variable is the subject, there are enough observations for a shape to exist, and the question is about that shape: where the mass sits, whether there are one or two modes, whether there is a gap, whether the tail is long. The histogram is the form that keeps every observation in the picture without drawing every observation.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
-| I have eight observations | Plot the eight. At the sample sizes [Weissgerber et al.](../studies/weissgerber-2015-beyond-bar-line.md) measured, "boxplots and histograms would be difficult to interpret" |
+| There are eight observations | The eight observations, plotted individually. At the sample sizes [Weissgerber et al.](../studies/weissgerber-2015-beyond-bar-line.md) measured, "boxplots and histograms would be difficult to interpret" |
 | How do these twelve groups compare? | [Box plot](boxplot.md) or [violin](violin-plot.md). Histograms do not tile well and are hard to overlay past two |
 | What is the median, and what is the spread? | A table, or a [box plot](boxplot.md). Reading a quantile off bar heights is a poor way to get a number |
 | What proportion falls below this threshold? | An ECDF. No page here and no study; the cumulative reading is what it is built for |
@@ -62,11 +62,11 @@ What follows from the construction, and needs no experiment: a histogram at a re
 
 Nothing is contested. The record does not disagree with itself here; it is mostly silent, which [evidence-class.md](../concepts/evidence-class.md) keeps deliberately distinct from contested and from refuted.
 
-The specific hole worth naming: **there is no evidence-backed rule for bin width in this source set**, and the most complete general reference in it declines to give one, treating bin width and smoothing bandwidth as analysis choices ([wilke-fundamentals.md](../sources/wilke-fundamentals.md), chapters 7 and 14). Sturges, Freedman-Diaconis, Scott and the square-root rule are statistical derivations under distributional assumptions, not results about readers. `absence of evidence`.
+The specific hole: **there is no evidence-backed rule for bin width in this source set**, and the most complete general reference in it declines to give one, treating bin width and smoothing bandwidth as analysis choices ([wilke-fundamentals.md](../sources/wilke-fundamentals.md), chapters 7 and 14). Sturges, Freedman-Diaconis, Scott and the square-root rule are statistical derivations under distributional assumptions, not results about readers. `absence of evidence`.
 
 ## The failure mode it invites
 
-**Tuning the bin width until the shape agrees with the conclusion, and not saying what it was.** The knob is invisible in the output, the reader cannot check it, and two defensible widths can show one mode or two. The mitigation is the one [inventory.md](../inventory.md) topic 52 states: pick it explicitly, and confirm the claim survives a wider and a narrower choice. `authority-asserted`.
+**Tuning the bin width until the shape agrees with the conclusion, and not saying what it was.** The knob is invisible in the output, the reader cannot check it, and two defensible widths can show one mode or two. The mitigation [inventory.md](../inventory.md) topic 52 states is an explicit choice, confirmed against a wider and a narrower one. `authority-asserted`.
 
 **Truncating the count axis.** A histogram is a bar chart, and bars encode by length from zero. [Correll, Bertini & Franconeri (2020)](../studies/correll-2020-truncating-the-y-axis.md) measured truncation inflating perceived effect size, found no significant difference between chart types, and found that the two tested axis-break glyphs did not measurably fix it. Their stimuli were bar and line charts of values rather than histograms, so this is inherited and scope-limited, not a result about histograms.
 
@@ -90,7 +90,7 @@ The specific hole worth naming: **there is no evidence-backed rule for bin width
 **Commonly repeated, and not supported:**
 
 - ~~"The histogram is the default way to show a distribution."~~ At the sample sizes actually found in published science it is the wrong choice, and the review that measured them recommends plotting the observations instead. It is also the least-tested common chart in this wiki: nothing here measures how anyone reads one.
-- ~~"Use N bins, by rule."~~ Every named bin-count rule is a derivation under assumptions about the underlying distribution. None of them is a finding about readers, and no study here compares any two of them. `absence of evidence`, so state your choice rather than citing a rule as though it settled the matter.
+- ~~"Use N bins, by rule."~~ Every named bin-count rule is a derivation under assumptions about the underlying distribution. None of them is a finding about readers, and no study here compares any two of them. `absence of evidence`.
 
 ## See also
 

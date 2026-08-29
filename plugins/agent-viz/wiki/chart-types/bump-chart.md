@@ -10,20 +10,20 @@ One line per item across several periods, with the vertical axis carrying **posi
 
 ## When to reach for it, and when not
 
-**Reach for it when** there are several periods, few enough items to label at the ends, and the reader's question is who overtook whom. It is the only form in this wiki that puts the rank itself on an axis, and that is both the reason to use it and everything it costs.
+**The form applies where** there are several periods, few enough items to label at the ends, and the reader's question is who overtook whom. It is the only form in this wiki that puts the rank itself on an axis, which is both what it offers and what it costs.
 
-It is also a change-over-time chart. It is indexed under [ranking](ranking.md) because the ordering is what it draws; the amounts do not survive the transform. See [change-over-time.md](change-over-time.md) for the group's other free parameters.
+It is also a change-over-time chart. It is indexed under [ranking](ranking.md) because the ordering is what it draws; the amounts do not survive the transform. [change-over-time.md](change-over-time.md) carries the group's other free parameters.
 
-**Do not reach for it when:**
+**Questions the form does not answer:**
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | How much did each one change? | [Line chart](line-chart.md). The rank axis has already thrown the amount away |
 | There are exactly two periods | [Slope chart](slope-chart.md). Same crossings, and it keeps the values |
 | How big is each item now? | [Magnitude](magnitude.md). A [bar chart](bar-chart.md), sorted |
 | Is one item's trend accelerating or plateauing? | [Line chart](line-chart.md). Shape in the value, which is not on this axis |
-| Which items are close together and which are far apart? | Nothing here can tell you. Draw the values |
-| There are fifty items | Nothing here works either. Aggregate, facet, or draw only the ones you mean |
+| Which items are close together and which are far apart? | Nothing here answers it. The values, drawn |
+| There are fifty items | Nothing here works either. Aggregation, faceting, or a drawn subset |
 
 ## Structural decomposition
 
@@ -38,9 +38,9 @@ It is also a change-over-time chart. It is indexed under [ranking](ranking.md) b
 
 **It is a [line chart](line-chart.md) with a rank transform in front of it.** That is the whole structural difference, and two consequences follow that carry no evidence label because they are definitional.
 
-**A rank axis throws away the magnitude, which is the point and the cost at the same time.** The transform maps every value to its place, so the spacing between adjacent lines is a property of the item count rather than of the data. Two lines crossing means a reordering **of any size**, including one that turned on a rounding error. Two lines running parallel a long way apart may be separated by a hair. The chart is built to make the ordering unambiguous and it does that by deleting the only thing that would tell you whether the ordering mattered.
+**A rank axis throws away the magnitude, which is the point and the cost at the same time.** The transform maps every value to its place, so the spacing between adjacent lines is a property of the item count rather than of the data. Two lines crossing means a reordering **of any size**, including one that turned on a rounding error. Two lines running parallel a long way apart may be separated by a hair. The chart is built to make the ordering unambiguous and it does that by deleting the only thing that would say whether the ordering mattered.
 
-**The vertical range is not a free parameter.** It runs from first place to last and the item count fixes it, so the axis-range manipulation measured on other charts in this family has no handle here. There is nothing to truncate. The aspect ratio is still yours, and so is the choice of periods.
+**The vertical range is not a free parameter.** It runs from first place to last and the item count fixes it, so the axis-range manipulation measured on other charts in this family has no handle here. There is nothing to truncate. The aspect ratio remains a free parameter, and so does the choice of periods.
 
 ## Channels
 
@@ -56,7 +56,7 @@ The inheritance is thinner here than on most pages rather than merely absent. A 
 
 ## What it is measurably bad at
 
-Nothing measured. Two untested exposures are worth naming as exposures and not as findings:
+Nothing measured. Two untested exposures, recorded as exposures and not as findings:
 
 **Whether readers over-read a crossing.** The definitional half is secure and is above. Whether people take a crossing for a large change is `absence of evidence`: nobody has looked, and it is not a prohibition.
 
@@ -68,7 +68,7 @@ Nothing. Nobody has published a result about this form that could disagree with 
 
 ## The failure mode it invites
 
-**Presenting a reordering as a change.** The form's whole job is to make crossings visible, and a crossing is exactly as loud when the two items were a rounding error apart as when one collapsed. The remedy is not to avoid the form; it is to put the amount back somewhere the reader can reach it, in end labels, in a companion panel of the values, or in a caption line saying how close the ranks were. `authority-asserted` as advice; the underlying fact about the transform is definitional.
+**Presenting a reordering as a change.** The form's whole job is to make crossings visible, and a crossing is exactly as loud when the two items were a rounding error apart as when one collapsed. The remedy recorded here is not avoiding the form but putting the amount back somewhere the reader can reach it: end labels, a companion panel of the values, or a caption line saying how close the ranks were. `authority-asserted` as advice; the underlying fact about the transform is definitional.
 
 **Letting the item set do the work.** A rank is relative to the population, so adding or dropping one item moves every rank below it while nothing about the remaining items has changed. Two bump charts built from different sets are not comparable, and the chart shows no sign of it. [ranking.md](ranking.md) states this once for the whole group.
 
@@ -78,7 +78,7 @@ Nothing. Nobody has published a result about this form that could disagree with 
 
 **Defensible, evidence-backed:**
 
-- Nothing. This is the page in the group with the least available, and the reason is structural: the rank transform puts the form out of reach of even the channel inheritance the other pages lean on.
+- Nothing. The rank transform puts the form out of reach of even the channel inheritance the other pages lean on.
 
 **Defensible, with the label said out loud:**
 

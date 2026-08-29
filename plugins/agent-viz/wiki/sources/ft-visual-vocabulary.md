@@ -7,7 +7,7 @@ retrieved: 2026-08-27
 
 # FT Visual Vocabulary
 
-A poster and companion repository from the Financial Times Visual Journalism Team that organizes chart types under **nine data relationships**, so that chart choice starts from what you are showing rather than from a menu of shapes. The listing runs to **67 entries under 59 distinct names**, eight names being filed under two relationships each.
+A poster and companion repository from the Financial Times Visual Journalism Team that organizes chart types under **nine data relationships**, so that chart choice starts from what is being shown rather than from a menu of shapes. The listing runs to **67 entries under 59 distinct names**, eight names being filed under two relationships each.
 
 **How this was read.** `primary-read`, with one scope note, and read twice.
 
@@ -48,7 +48,7 @@ Each carries a definition and example FT uses. These are the categories, with th
 
 Two of those definitions are doing more than categorizing.
 
-**Correlation carries a warning about the reader's inference,** not about the chart. That is a different kind of rule from anything else in this corpus: it is about what the audience will conclude regardless of what you drew.
+**Correlation carries a warning about the reader's inference,** not about the chart. That is a different kind of rule from anything else in this corpus: it is about what the audience will conclude regardless of what was drawn.
 
 **Part-to-whole and Magnitude are defined against each other.** "If the reader's interest is solely in the size of the components, consider a magnitude-type chart instead." The taxonomy is explicit that the same data can sit in two families and the *question* decides. This is the whole argument for organizing by relationship rather than by data shape.
 
@@ -56,7 +56,7 @@ Two of those definitions are doing more than categorizing.
 
 ## The complete listing
 
-Every type the Visual Vocabulary names, under its category, with its one-line gloss verbatim. Cite from here rather than from memory. Counts per category are the FT's, not this wiki's.
+Every type the Visual Vocabulary names, under its category, with its one-line gloss verbatim. Counts per category are the FT's, not this wiki's.
 
 ### Deviation (4 types)
 
@@ -177,7 +177,7 @@ The FT files eight of its 59 names under two relationships each, which is the ta
 
 | Name | Filed under | Do the two glosses differ? |
 |---|---|---|
-| Column | Change over Time, Magnitude | Yes, and this is the important one. See below |
+| Column | Change over Time, Magnitude | Yes, and the zero rule sits in only one of them. See below |
 | Lollipop chart | Ranking, Magnitude | Yes. Only the Magnitude entry mentions zero |
 | Slope | Ranking, Change over Time | Yes. Rank change in one, simplification to 2 or 3 points in the other |
 | Dot strip plot | Ranking, Distribution | Yes. Space efficiency across categories in one, individual values and overplotting in the other |
@@ -215,7 +215,7 @@ Recording absences matters as much as the listing, because a name missing here c
 
 > "This is not an attempt to teach everyone how to make charts, but how to recognise the opportunities to use them effectively alongside words."
 
-That sentence is why the Visual Vocabulary is worth a page and why it should not be cited for much. It is a recognition aid for a newsroom-wide chart-literacy training session, not a quality bar. Inventory topics 5 and 4 draw on it; nothing else should.
+That sentence is why the Visual Vocabulary is worth a page and what bounds the claims it can carry. It is a recognition aid for a newsroom-wide chart-literacy training session, not a quality bar. Inventory topics 5 and 4 draw on it, and nothing else in the inventory does.
 
 The lineage is credited: "inspired by the Graphic Continuum by Jon Schwabish and Severino Ribecca."
 
@@ -254,7 +254,7 @@ That matters, because inventory topic 8 (directory-of-visualization coverage) ex
 - The poster exists in English, Japanese, traditional Chinese, and simplified Chinese.
 - The README labels its own related-reading section "_This is a work in progress._"
 - Three entries are defined only by cross-reference and carry no gloss of their own: **Ordered column** under Ranking, and **Bar** and **Paired bar** under Magnitude, all of which say "See above."
-- **Licensing:** "Copyright © The Financial Times Limited, all rights reserved." Cite and link. Do not reproduce the poster.
+- **Licensing:** "Copyright © The Financial Times Limited, all rights reserved." The material is citable and linkable; the poster is not reproducible.
 
 ## Where this source is used
 

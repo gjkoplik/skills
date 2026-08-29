@@ -10,7 +10,7 @@ William S. Cleveland and Robert McGill, "Graphical Perception: Theory, Experimen
 
 **How this was read.** The reachable copies are JSTOR scans with no text layer, so local text extraction returns only the JSTOR cover sheet. Quotes below were transcribed from rendered page images of the article itself. Not OCR, not a fetch summary. Page numbers are the journal's.
 
-**What it is good for.** The actual ordering, and the limits the authors put on it in their own words. Come here before citing "the Cleveland-McGill ranking," because the version in circulation is not the version in the paper.
+**What it is good for.** The actual ordering, and the limits the authors put on it in their own words. The version of "the Cleveland-McGill ranking" in circulation is not the version in the paper.
 
 **What it does not settle.** Most of what it is cited for beyond rank 1. The ordering contains ties the authors could not break, only two of its comparisons were tested, and the two experiments are not comparable to each other by the authors' own statement.
 
@@ -33,7 +33,7 @@ Six ranks, ten tasks. Immediately following, on p. 537:
 
 > "Three of the ranks—3, 5, and 6—have more than one task; at the moment there is not enough information to separate the ties."
 
-**This is the most-degraded fact in the paper.** The ranking is routinely reproduced as a fully ordered list of seven to nine items, with length above angle above area. In the source, **length, direction, and angle occupy the same rank**, and the authors say explicitly that they cannot separate them.
+The ranking is routinely reproduced as a fully ordered list of seven to nine items, with length above angle above area. In the source, **length, direction, and angle occupy the same rank**, and the authors say explicitly that they cannot separate them.
 
 ## What was actually tested
 
@@ -60,11 +60,11 @@ Also p. 541:
 
 > "Within an experiment it is reasonable to compare the means of the judgments because the set of true percentages is the same for each judgment, but it would be inappropriate to compare the means of the first experiment with those of the second."
 
-Length was measured against position in one experiment. Angle was measured against position in a different one. The authors say you may not put those two on a common scale. So **the paper contains no test of length versus angle**, which is exactly why rank 3 is a tie. The tie and the caveat are the same fact stated twice.
+Length was measured against position in one experiment. Angle was measured against position in a different one. The authors state that the two sets of means may not be compared. So **the paper contains no test of length versus angle**, which is exactly why rank 3 is a tie. The tie and the caveat are the same fact stated twice.
 
-Anyone citing Cleveland & McGill for "bars beat pies because length beats angle" is using the paper to support a comparison the paper twice declines to make. See [heer-bostock-2010.md](heer-bostock-2010.md), where the comparison was finally run under a common format and did not come out that way.
+"Bars beat pies because length beats angle" is a comparison the paper twice declines to make. In [heer-bostock-2010.md](heer-bostock-2010.md) the comparison was finally run under a common format and did not come out that way.
 
-## Four more things careless citation drops
+## Four qualifications the citation record drops
 
 **Color hue and texture are excluded, not ranked last.** From p. 532:
 
@@ -96,7 +96,7 @@ The mapping from chart type to elementary task, the step every downstream chart 
 
 On bar charts, the same hedge: position is primary, "but judgments of area and length probably also play a role."
 
-So "pie charts encode angle" is a 1984 conjecture, flagged as one by its authors. Skau & Kosara later tested the decomposition directly. That result belongs on the pie chart page rather than here.
+So "pie charts encode angle" is a 1984 conjecture, flagged as one by its authors. Skau & Kosara later tested the decomposition directly. That result is recorded on the pie chart page.
 
 ## Sample and era limits
 

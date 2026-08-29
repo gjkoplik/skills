@@ -8,23 +8,23 @@ aliases: [Hive plot]
 
 Nodes assigned to a small number of radial axes by a rule, positioned along their axis by a structural quantity, with edges drawn as curves between axes. A network layout with a node coordinate system.
 
-**Disclosure.** This wiki's author maintains a hive plot library. That is why this page is held to the same standard as the others rather than a looser one. [evidence-class.md](../concepts/evidence-class.md) says labeling a rule you rely on is the part that costs something.
+**Disclosure.** This wiki's author maintains a hive plot library, so this page is held to the same standard as the others rather than a looser one. [evidence-class.md](../concepts/evidence-class.md) says labeling a rule the labeler relies on is the part that costs something.
 
 ## When to reach for it, and when not
 
-**Reach for it when** you need to compare two or more networks, or you need the same graph to lay out identically every time, and you have or can compute a variable to partition on and one to sort by. Comparability and reproducibility are the form's real offer, and they follow from its construction rather than needing an experiment.
+The form is defined for the case where two or more networks are compared, or the same graph has to lay out identically every time, and a variable to partition on and one to sort by exist or can be computed. Comparability and reproducibility are the form's real offer, and they follow from its construction rather than needing an experiment.
 
-**You do not need node metadata.** Both of the original paper's worked examples partition on graph structure alone: edge directionality for directed graphs, clustering-coefficient bands for undirected ones, with connectivity for position. A bare edge list is sufficient input.
+**Node metadata is not required.** Both of the original paper's worked examples partition on graph structure alone: edge directionality for directed graphs, clustering-coefficient bands for undirected ones, with connectivity for position. A bare edge list is sufficient input.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The situation | Use instead |
+| The situation | Alternative |
 |---|---|
 | One exploratory look at one sparse graph | [Node-link](node-link.md). Cheaper, familiar, and better evidenced |
 | The question is about paths | [Node-link](node-link.md). Edges here are curves between axes and are not built for tracing |
 | The question is about dense local structure | [Adjacency matrix](adjacency-matrix.md) |
-| Nodes cannot be partitioned so edges run between neighboring axes | Reconsider the partition. Beyond three axes, edges must cross or route around, which the paper says "should be avoided" |
-| The audience will see it once and needs no comparison | [Node-link](node-link.md). The reproducibility you are paying for is not being used |
+| Nodes cannot be partitioned so edges run between neighboring axes | A different partition. Beyond three axes, edges must cross or route around, which the paper says "should be avoided" |
+| The audience will see it once and needs no comparison | [Node-link](node-link.md). The reproducibility the form provides is not being used |
 
 ## Structural decomposition
 
@@ -45,14 +45,14 @@ In a force-directed [node-link diagram](node-link.md), position is the output of
 
 A hive plot spends it on a value. Node position becomes **position along non-aligned scales**, rank 2 in the [Cleveland-McGill ordering](../concepts/channels.md#the-working-ranking), one step below a bar chart's baseline and above length, angle and area. Axis membership is an unordered categorical channel, which that ranking excludes by design rather than ranking last.
 
-**Label this carefully, because the overclaim is easy and tempting.** That position becomes a real encoding is *definitional*: it follows from the decomposition above. That an encoding at rank 2 is read more accurately than length, angle or area is *evidence-backed*. The conclusion people want from stringing those together, that hive plots are therefore read more accurately, is **not supported**, for two independent reasons:
+That position becomes a real encoding is *definitional*: it follows from the decomposition above. That an encoding at rank 2 is read more accurately than length, angle or area is *evidence-backed*. The conclusion people want from stringing those together, that hive plots are therefore read more accurately, is **not supported**, for two independent reasons:
 
 1. The ranking measures accuracy of reading a value off a mark. Network tasks are search, path, neighborhood, grouping and comparison, and the ranking's authors restrict it to value extraction explicitly. See [the scope limit](../concepts/channels.md#what-the-ranking-is-not-about).
 2. Nobody has run the experiment.
 
 ## What the axes are built from
 
-The single most misunderstood thing about the form: **a hive plot does not need pre-existing node metadata.** Both the partition and the position are normally derived from the graph's own topology.
+**A hive plot does not need pre-existing node metadata.** Both the partition and the position are normally derived from the graph's own topology.
 
 From Krzywinski et al., the rules are Boolean tests on structural quantities: "is the node a sink?" or "is the node's 'clustering coefficient' smaller than 0.5?". Positions come from "the absolute or rank-ordered value of a node parameter, such as connectivity." Both worked examples in the paper are purely structural:
 
@@ -97,11 +97,11 @@ experiment; it is the next section.
 
 Nothing. **Contested requires a record that disagrees with itself.** Here there is no record. This is `absence of evidence`, which [evidence-class.md](../concepts/evidence-class.md) keeps deliberately distinct from contested and from refuted.
 
-The honest position, both halves stated together: the structural argument is sound and does not depend on an experiment; the perceptual claims are unmeasured. The second half should not be quietly dropped when the first is quoted.
+Both halves: the structural argument is sound and does not depend on an experiment; the perceptual claims are unmeasured.
 
 ## The failure mode it invites
 
-**Treating the axis assignment as a finding.** The partition is an input. A hive plot showing clean separation between three groups shows that you partitioned by those groups, not that the network has that structure. This is the same trap as reading meaning into force-directed proximity, arriving from the opposite direction, and it is arguably easier to fall into because the picture looks principled.
+**Treating the axis assignment as a finding.** The partition is an input. A hive plot showing clean separation between three groups shows that the partition was by those groups, not that the network has that structure. This is the same trap as reading meaning into force-directed proximity, arriving from the opposite direction, and it is arguably easier to fall into because the picture looks principled.
 
 The mitigation that follows from the form rather than from taste: because the layout is cheap and deterministic, sweeping several partition and sort choices and showing them together is tractable in a way that sweeping force-directed seeds is not.
 
@@ -123,12 +123,12 @@ The honest justification here is weaker than the enthusiastic one.
 
 - ~~"Hive plots are easier to read than node-link diagrams."~~ Nobody has measured it. Not contested, not refuted: untested.
 - ~~"Position is on a rank-2 channel here, so readers extract values more accurately."~~ The premise is true and the conclusion does not follow. The channel ranking measures reading a value off a mark, and network tasks are not that.
-- ~~"The three clean groups on the axes show the network's structure."~~ The groups are your partition. That is an input, not a finding.
+- ~~"The three clean groups on the axes show the network's structure."~~ The groups are the partition. That is an input, not a finding.
 
 ## What would move this page
 
 - A controlled comparison against node-link and matrix on the standard network task taxonomies at matched interaction levels. The [Okoe et al.](../studies/okoe-2018.md) protocol would transfer nearly unchanged.
-- A test of comparability as a *reader* claim rather than an algorithmic one: can people detect differences between two networks better from two hive plots than from two force-directed layouts. This is the form's headline claim and the one most worth measuring.
+- A test of comparability as a *reader* claim rather than an algorithmic one: can people detect differences between two networks better from two hive plots than from two force-directed layouts. This is the form's headline claim.
 
 ## See also
 

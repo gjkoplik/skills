@@ -3,6 +3,7 @@ type: source
 status: primary-read
 status_partial: true
 retrieved: 2026-08-23
+author: jonathan-schwabish
 ---
 
 # Jonathan Schwabish
@@ -37,7 +38,7 @@ Andy Kirk's blurb on the Routledge page for the Excel book frames the split betw
 
 ## Chart-type selection: can his taxonomy be a spine?
 
-**Short answer: as a source of type-page content, yes and it is the best candidate in the corpus. As the index scheme, no, and it should not be, for a reason [../chart-types/README.md](../chart-types/README.md) already worked out.**
+**Short answer: as a source of type-page content, yes, and it is the best candidate in the corpus. As the index scheme, no, for a reason [../chart-types/README.md](../chart-types/README.md) already worked out.**
 
 ### What the scheme actually is, verified
 
@@ -99,7 +100,7 @@ upgrades it from our reasoning to our reasoning plus a corroborating scheme. It 
 and Waterfall under both Part-to-whole and Flow. Three placements for two charts across two schemes is the clearest
 available evidence that these taxonomies are retrieval aids rather than facts about charts.
 
-**Radar is a relationship chart to him**, a magnitude chart to the FT. Worth knowing before a type page asserts either.
+**Radar is a relationship chart to him**, a magnitude chart to the FT.
 
 **Arc is a relationship chart to him**, a part-to-whole chart to the FT.
 
@@ -107,7 +108,7 @@ available evidence that these taxonomies are retrieval aids rather than facts ab
 Spatial.
 
 Read together with the earlier conclusion that his scheme is too coarse to serve as our index, the membership data
-supports the same call: **use him for what belongs on a type page, not for where the type is filed.**
+supports the same call: **he is a source for what belongs on a type page, not for where the type is filed.**
 
 ### Types he covers that the FT list does not
 
@@ -143,11 +144,11 @@ Four observations that are worth more than the table.
 
 **But the two categories he has and the FT does not are real holes the tier will hit.** There is no FT relationship for qualitative or text data, and none for "this should be a table". The tier already committed to the pattern for exactly this case: `network-topology.md` is an index of ours, sitting alongside the FT nine rather than inside them, because amending someone else's published scheme while still citing it is the degradation this project exists to catch. A `tables.md` index and a `qualitative.md` index would be ours on the same footing, and Schwabish is the citable precedent that they belong in a chart-type catalog at all. The Tables one also gives [../inventory.md](../inventory.md) topic 4 ("should this be a chart at all") somewhere to land inside the tier instead of only upstream of it.
 
-**Deviation and Flow have no home in his scheme**, which means anyone using the book to fill FT index pages will find those two unserved and should expect to look elsewhere.
+**Deviation and Flow have no home in his scheme**, so anyone using the book to fill FT index pages finds those two unserved.
 
 **The real contribution is not the taxonomy at all, it is the per-type text.** The taxonomy is a coarser cousin of a scheme the tier already uses, descended from the same 2014 poster. What the tier is actually short of is what each type page needs in slots 2 through 6: what the type is for, what it invites, when not to use it. That is what "more than eighty visualization types, from histograms to horizon charts, ridgeline plots to choropleth maps, and explains how each has its place in the visual toolkit" (CUP's description, so unvouched as to the book's contents) is offering, and it is the densest such catalog anyone has published.
 
-**The blocker is status, not fit.** All of that is `secondary-only` until somebody opens the book. A type page that inherits practitioner guidance from a publisher blurb has no business existing next to [../chart-types/pie-and-donut.md](../chart-types/pie-and-donut.md).
+**The blocker is status, not fit.** All of that is `secondary-only` until somebody opens the book. A type page inheriting practitioner guidance from a publisher blurb would sit at a different evidence class from [../chart-types/pie-and-donut.md](../chart-types/pie-and-donut.md).
 
 ### One Chart at a Time is the free proxy, with a caveat
 
@@ -211,7 +212,7 @@ Scoped to bars and columns, with the perceptual reason attached rather than an a
 
 **Corrected: this is a third source, not a fourth.** An earlier version of this line counted Schwabish and the Urban Institute style guide as separate voices. They are not independent. Schwabish is a Senior Fellow at Urban and is the sole named contact on the guide, which asks readers to "Contact Jon Schwabish" at an `@urban.org` address (verified on the live page, 2026-08-25). See [urban-institute.md](urban-institute.md).
 
-The general rule this cost: **independence is a claim that needs support, and the absence of a byline is not support for it.** A source with no named author should be checked for authorship before it is counted alongside a person.
+The general rule this cost: **independence is a claim that needs support, and the absence of a byline is not support for it.** A corroboration count that includes an unbylined source rests on an unchecked authorship claim.
 
 **Pie charts: the angle mechanism [refutations.md](../refutations.md) refuted appears here, and the attribution has to be exact.**
 
@@ -223,7 +224,7 @@ The next paragraph **is** his own voice, and it is angle-based:
 
 > "Pie chart slices that form 90-degree right angles -- that is, slices that form one-quarter increments -- are the most familiar to our eyes. Other amounts can be far more difficult to discern."
 
-Two qualifiers before anyone files this as a contradiction. The 2014 article predates [../studies/skau-kosara-2016.md](../studies/skau-kosara-2016.md) by two years, so this is the pre-2016 consensus stated cleanly rather than a live disagreement with the record. And he flags the section's provenance himself: "much of the discussion in this section is based on Few 2007", which means this is **not** an independent source for the angle mechanism, it is Few's argument relayed. **Whether *Better Data Visualizations* (2021) still says it is unknown and should be checked by anyone who opens the book**, because a 2021 book repeating a 2016-refuted mechanism is a different matter from a 2014 article doing so.
+Two qualifiers before anyone files this as a contradiction. The 2014 article predates [../studies/skau-kosara-2016.md](../studies/skau-kosara-2016.md) by two years, so this is the pre-2016 consensus stated cleanly rather than a live disagreement with the record. And he flags the section's provenance himself: "much of the discussion in this section is based on Few 2007", which means this is **not** an independent source for the angle mechanism, it is Few's argument relayed. **Whether *Better Data Visualizations* (2021) still says it is unknown**, and a 2021 book repeating a 2016-refuted mechanism would be a different matter from a 2014 article doing so.
 
 His verdict on the form is not the usual one, either. The article calls the debate "among the most contentious in the field of data visualization", and it gives pies a legitimate job rather than dismissing them: "Figure 8C shows the true purpose of the pie chart, which is to individually compare each part to the whole". His rotation demonstration (Figures 7A and 7B, same data, largest slice moved to the 12 o'clock position, with the observation that "One small change obscures the information") is an anchoring effect that neither [../concepts/channels.md](../concepts/channels.md) nor [../chart-types/pie-and-donut.md](../chart-types/pie-and-donut.md) currently covers.
 

@@ -40,7 +40,7 @@ The results split hard by task.
 | triangle | 1.70 | 1.68 | 0.012 |
 | quadratic | 1.70 | 1.78 | significant |
 
-Note that rounded (0.009) and triangle (0.012) both sit just above the corrected α = 0.0083, so they count as non-significant here by a hair. The paper's summary of this task is that "only quadratic bars performed significantly worse than the baseline."
+Rounded (0.009) and triangle (0.012) both sit just above the corrected α = 0.0083, so they count as non-significant here by a hair. The paper's summary of this task is that "only quadratic bars performed significantly worse than the baseline."
 
 **Relative comparisons** (estimate one bar as a percentage of another, no y-axis, to force comparison rather than reading off the scale). Everything except extension below zero got significantly worse.
 
@@ -56,7 +56,7 @@ Note that rounded (0.009) and triangle (0.012) both sit just above the corrected
 
 > "All adaptations except the extended embellishment performed significantly worse than the baseline on relative judgements. Even small changes, for example the rounded bar, produced a significantly higher error rate."
 
-## The mechanism they propose, which is the reusable part
+## The mechanism they propose
 
 The capped bar (a T-shape, wider at the top than the body) performed *equally well as, and with slightly lower variance than*, the baseline on absolute judgments, while every embellishment that softens or points the top performed worse:
 
@@ -104,7 +104,7 @@ They also name the scope directly in the conclusion: the contribution is "a basi
 
 ## Why this does not actually contradict Bateman
 
-Both results can be true at once, and reading them as a contradiction is the most common error in this corner of the literature.
+Both results can be true at once.
 
 [Bateman et al.](bateman-2010-useful-junk.md) tested Nigel Holmes cartoon imagery placed *around and behind* a correctly drawn chart, and measured verbal description and recall. Skau et al. tested deformations *of the bar itself*, and measured numeric estimation error. The bars in a Holmes chart still have flat tops. Under the mechanism Skau proposes, they would be expected to read accurately, which is what Bateman found.
 

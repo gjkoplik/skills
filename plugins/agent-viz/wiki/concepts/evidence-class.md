@@ -26,14 +26,14 @@ Concrete instances, all in [refutations.md](../refutations.md):
 - "Maximize data-ink" turns out to be element-conditional, with removing axis lines *hurting* reading speed.
 - "Gray plus one accent", a rule this project uses and likes, has **no controlled study behind it**.
 
-That last one is the useful test of whether you are applying this honestly. It is easy to label the rules you dislike as authority-asserted. Labeling a rule you rely on is the part that costs something.
+That last one is the test of whether the labeling is being applied honestly. Labeling a disliked rule as authority-asserted is easy. Labeling a relied-on rule is not.
 
 ## The three states, not two
 
 Two labels are not quite enough. In practice a rule sits in one of:
 
-- **Evidence-backed.** A study, experiment or published standard supports it. Cite the source and the number. WCAG's contrast ratios are the cleanest case: a standard, unambiguous, and checkable.
-- **Authority-asserted.** A practitioner or design book asserts it, plausibly and without an experiment. Perfectly usable as a default. Say so and move on.
+- **Evidence-backed.** A study, experiment or published standard supports it, and the source and the number are cited. WCAG's contrast ratios are the cleanest case: a standard, unambiguous, and checkable.
+- **Authority-asserted.** A practitioner or design book asserts it, plausibly and without an experiment. Perfectly usable as a default, with the status stated.
 - **Contested.** The record disagrees with itself. The chartjunk literature is the canonical case, with results in both directions from competent people. A bar that picks a side here is misrepresenting the field.
 
 A fourth state worth naming: **absence of evidence**, which is not evidence of absence and is not the same as contested. The dual-axis ban lives here. Nobody has shown it is harmful; nobody has shown it is fine.
@@ -46,24 +46,24 @@ The clearest case is the structural decomposition on every page in [../chart-typ
 
 Labeling these would be worse than leaving them unlabeled, for two reasons. It dilutes the labels on the rows that *are* claims, and it invites the reverse error: an unlabeled definitional statement reads as unsupported when it is actually the most secure kind of statement on the page.
 
-**The trap is the hinge.** Definitional statements are often true and load-bearing, and it is tempting to run one into an empirical conclusion without noticing the transition. "A hive plot puts node position on a real data scale" is definitional and secure. "Therefore readers read it more accurately" is an empirical claim with no study behind it. Same sentence, two different warrants, and the security of the first half is doing unearned work for the second. Watch for *therefore*.
+**The trap is the hinge.** Definitional statements are often true and consequential, and it is tempting to run one into an empirical conclusion without noticing the transition. "A hive plot puts node position on a real data scale" is definitional and secure. "Therefore readers read it more accurately" is an empirical claim with no study behind it. Same sentence, two different warrants, and the security of the first half is doing unearned work for the second. The hinge word is *therefore*.
 
-## How to write a rule under each label
+## How a rule reads under each label
 
-- Evidence-backed: state it flatly. "Truncation inflates perceived effect size."
-- Authority-asserted: state it as a default with the status visible. "Default to gray plus one accent. This is convention, not a measured result."
-- Contested: state the rule, then the contest, then what survives. "Strip decoration, keep orientation" is what survives the data-ink argument once you know removing axis lines hurts.
-- Absence of evidence: state the caution and its *reason*, not a prohibition. "The correlation a reader sees is a free parameter of your scaling choice" is actionable in a way "never use dual axes" is not.
+- Evidence-backed: stated flatly. "Truncation inflates perceived effect size."
+- Authority-asserted: stated as a default with the status visible. "Default to gray plus one accent. This is convention, not a measured result."
+- Contested: the rule, then the contest, then what survives. "Strip decoration, keep orientation" is what survives the data-ink argument once removing axis lines is known to hurt.
+- Absence of evidence: the caution and its *reason*, rather than a prohibition. "The correlation a reader sees is a free parameter of your scaling choice" is actionable in a way "never use dual axes" is not.
 
 ## The rule that makes this operational
 
-**Do not upgrade a convention into a finding when quoting the bar.**
+**A convention upgraded into a finding is where the degradation happens.**
 
-This is where the degradation happens. Someone reads "default to gray plus one accent, this is convention", cites it downstream as "research shows single-accent emphasis improves comprehension", and now a fabricated finding is in circulation with your name on it. The label has to survive the quotation, which means it belongs in the sentence rather than in a footnote.
+Someone reads "default to gray plus one accent, this is convention", cites it downstream as "research shows single-accent emphasis improves comprehension", and a fabricated finding is now in circulation carrying the bar's name. The label has to survive the quotation, which means it belongs in the sentence rather than in a footnote.
 
 ## The uncomfortable corollary
 
-Applying this consistently means your bar gets **less** authoritative-sounding, not more. Several rules that read as settled become hedged. That is the correct direction, and it is the thing that makes the unhedged rules mean something.
+Applying this consistently makes a bar **less** authoritative-sounding, not more. Several rules that read as settled become hedged. The unhedged rules mean something because of it.
 
 ## See also
 

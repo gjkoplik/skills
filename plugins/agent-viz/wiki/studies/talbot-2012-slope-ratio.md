@@ -16,7 +16,7 @@ A re-examination of Cleveland, McGill & McGill's "banking to 45 degrees" guideli
 
 - Establishing that **45 degrees is not the general error-minimizing aspect ratio**, and that Cleveland's result is a local fit rather than a global one.
 - The independent finding that **a visible baseline substantially reduces slope-judgment error**, which supports the zero-baseline and gridline rules from an unrelated direction.
-- A constructive replacement guideline: prefer **flatter, wider** aspect ratios than existing banking algorithms produce.
+- A constructive replacement guideline: **flatter, wider** aspect ratios than existing banking algorithms produce.
 
 ## What it does not settle
 
@@ -95,7 +95,7 @@ They also leave their own model's failures on the record: it does not explain th
 - **Not a validated aspect-ratio algorithm.** The application section fits the model to a set of time series and shows the resulting ratios are flatter. There is no experiment showing readers do better on those plots.
 - **Not a claim about how people read real charts.** The stimulus is two isolated line segments in opposite quadrants, and the authors name this as the major shared limitation.
 - **Not a demographic result.** With 8 and 20 subjects drawn from a CS department, the ANGLE-versus-HEIGHT prevalence is an observation, not a population estimate.
-- **Not evidence that baselines fix slope judgment.** They fixed it for mid-angles below 45 degrees and did nothing above.
+- **Not evidence that baselines fix slope judgment.** The paper does report that "visible baselines can substantially mitigate errors made in slope judgments," and that sentence is quoted elsewhere as independent support for the zero-baseline rule. It does not reach that far: baselines fixed it for mid-angles below 45 degrees and did nothing above.
 
 ## Naming note
 

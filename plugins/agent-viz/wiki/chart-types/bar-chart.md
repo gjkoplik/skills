@@ -10,26 +10,26 @@ One filled rectangle per category, running from a common baseline, its length en
 
 ## When to reach for it, and when not
 
-**Reach for it when** the reader has to get values off the chart and compare them across a handful of named categories. It is the default for a reason: the value sits on position along a common scale, which is read more accurately than anything else that has been tested ([channels.md](../concepts/channels.md)). Being the default is also its failure mode, below.
+**The form applies where** the reader has to get values off the chart and compare them across a handful of named categories. The value sits on position along a common scale, which is read more accurately than anything else that has been tested ([channels.md](../concepts/channels.md)). Being the default is also its failure mode, below.
 
-**Do not reach for it when:**
+**Questions the form does not answer:**
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | Does this add up, and to what? | [Part-to-whole](part-to-whole.md). A bar chart asserts nothing about a total |
 | What does the distribution look like? | A histogram, or a univariate scatterplot of the raw points. A bar of the mean is compatible with distributions that disagree |
 | Are these two group means different? | Not a bar with error bars. The bar glyph biases the judgment; see below |
 | How did this move over time? | A line chart. Change over time |
-| There are forty categories | [Lollipop chart](lollipop-chart.md), or aggregate the tail. A bar chart's height is set by its row count and cannot be shrunk |
+| There are forty categories | [Lollipop chart](lollipop-chart.md), or an aggregated tail. A bar chart's height is set by its row count and cannot be shrunk |
 | Where does each item sit relative to a target? | [Deviation](deviation.md). A [diverging bar](diverging-bar-chart.md) off the reference, not off zero |
-| The values span orders of magnitude | Not a truncated bar. Consider a log scale with the base stated, or a different mark |
+| The values span orders of magnitude | Not a truncated bar. A log scale with the base stated, or a different mark |
 
 ## Structural decomposition
 
 | Slot | |
 |---|---|
 | Data | One row per category, with a magnitude |
-| Transform | None, usually. A count, mean or rate computed upstream is a transform you are responsible for disclosing |
+| Transform | None, usually. A count, mean or rate computed upstream is a transform, and the chart does not disclose it |
 | Geometry | Filled rectangle, one edge on the baseline |
 | Scale | Magnitude to length, anchored at zero |
 | Coordinates | Cartesian. Vertical and horizontal bars differ only in which axis carries the value |
@@ -75,11 +75,11 @@ Reported as an aside rather than as this paper's experiment, so treat it as evid
 
 > "All adaptations except the extended embellishment performed significantly worse than the baseline on relative judgements. Even small changes, for example the rounded bar, produced a significantly higher error rate."
 
-Mean log error ran 1.43 for the baseline, 1.86 for merely rounding the top, and 2.33 for quadratically scaled bars. On absolute judgments, where the axis was present, only the quadratic bars cleared the corrected significance threshold. **The task decides how much this costs**, which is why quoting the paper as a flat "embellishment raises error" distorts it.
+Mean log error ran 1.43 for the baseline, 1.86 for merely rounding the top, and 2.33 for quadratically scaled bars. On absolute judgments, where the axis was present, only the quadratic bars cleared the corrected significance threshold. **The task decides how much this costs.** A flat reading of the paper as "embellishment raises error" drops that split.
 
 **Being truncated.** [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) measured a truncated bar axis against the same data drawn honestly and found responses on a "how much bigger" scale went from a control mean of 1.45 to 2.77, an increase of **91.0%** (Mann-Whitney U = 1144, Z = 3.36, p = 0.0003). Evidence-backed, on a chart where the true values were printed.
 
-**Being fixed afterward with a break glyph.** [Correll, Bertini & Franconeri (2020)](../studies/correll-2020-truncating-the-y-axis.md) tested two truncation-marking designs and could not distinguish them from plain truncation on perceived severity, and found "the exaggeration introduced through truncation appears to persist across chart types and chart designs, and even when participants make accurate reports of the numbers they observe." Their own phrasing is hedged, and the statistics are knife-edge; the honest reading is in [refutations.md](../refutations.md#axis-break-glyphs-as-the-truncation-remedy).
+**Being fixed afterward with a break glyph.** [Correll, Bertini & Franconeri (2020)](../studies/correll-2020-truncating-the-y-axis.md) tested two truncation-marking designs and could not distinguish them from plain truncation on perceived severity, and found "the exaggeration introduced through truncation appears to persist across chart types and chart designs, and even when participants make accurate reports of the numbers they observe." Their own phrasing is hedged and the statistics are knife-edge; [refutations.md](../refutations.md#axis-break-glyphs-as-the-truncation-remedy) carries the reading.
 
 **Carrying an error bar.** Correll & Gleicher named two defects, both measured:
 
@@ -110,9 +110,9 @@ So: **decoration around the mark is contested; deformation of the mark is not.**
 
 **Being drawn because nobody decided anything.** The bar chart is the shape a plotting library produces from a grouped table, so it absorbs questions belonging to distribution, uncertainty and change over time. Weissgerber's prevalence numbers are that failure measured in one field. `authority-asserted` as a rule; the prevalence itself is evidence-backed.
 
-**Leaving the categories in the order they arrived.** Alphabetical order is what you get for not choosing, which the BBC cookbook treats as a bug fix rather than a design decision ([bbc-cookbook.md](../sources/bbc-cookbook.md)). `authority-asserted`.
+**Leaving the categories in the order they arrived.** Alphabetical order is the default in the absence of a choice, which the BBC cookbook treats as a bug fix rather than a design decision ([bbc-cookbook.md](../sources/bbc-cookbook.md)). `authority-asserted`.
 
-**Truncating to make a small difference visible.** The temptation is real and so is the exaggeration. Urban names the remedy that keeps the mark honest: "consider adjusting the data to show percent change, difference, or some other similar adjustment" ([urban-institute.md](../sources/urban-institute.md)). Plot the difference rather than moving the baseline under the bar.
+**Truncating to make a small difference visible.** Urban names a remedy that leaves the mark intact: "consider adjusting the data to show percent change, difference, or some other similar adjustment" ([urban-institute.md](../sources/urban-institute.md)).
 
 ## Justifying the choice
 

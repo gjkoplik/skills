@@ -8,26 +8,26 @@ aliases: [Grid plot, Square pie, Unit chart, Waffle chart]
 
 A grid of identical cells, one cell per unit of the total, with each part given a whole number of cells. The value is carried by **how many cells a part has**, so the reading is a count rather than a judgment of size.
 
-Also called a **unit chart**, a **grid plot** or a **square pie**. The **isotype** and the **pictogram** are the same construction with a labeled icon in place of the square. **This page treats those two as neighbors rather than as the same form**, for two reasons: the icon carries a pictorial reference the square does not, and the one measured result anywhere near this family is about pictographs specifically rather than about counting (below). Neither icon form has a page in this wiki. A reader arriving from [Schwabish](../sources/schwabish.md) should know he files all three as a single catalog entry, "Unit/Isotype/Waffle".
+Also called a **unit chart**, a **grid plot** or a **square pie**. The **isotype** and the **pictogram** are the same construction with a labeled icon in place of the square. **This page treats those two as neighbors rather than as the same form**, for two reasons: the icon carries a pictorial reference the square does not, and the one measured result anywhere near this family is about pictographs specifically rather than about counting (below). Neither icon form has a page in this wiki. [Schwabish](../sources/schwabish.md) files all three as a single catalog entry, "Unit/Isotype/Waffle".
 
 **The FT agrees with this index and splits the family.** It files **Gridplot** under Part-to-whole and **Isotype (pictogram)** under Magnitude, as two separate entries ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). That is independent support for treating the icon forms as neighbors rather than as the same form, arrived at by a scheme that had no stake in this page's decision.
 
-Schwabish files his single entry under **Comparing Categories**, not Part-to-Whole. The filing is verified from the book's own contents pages; what the book argues about the form is not, since its prose is unopened in this corpus. This index files the waffle under part-to-whole because a fixed grid of 100 cells asserts a whole. Both readings are real and the reader's question decides which one you are making, which is the standing position in [README.md](README.md).
+Schwabish files his single entry under **Comparing Categories**, not Part-to-Whole. The filing is verified from the book's own contents pages; what the book argues about the form is not, since its prose is unopened in this corpus. This index files the waffle under part-to-whole because a fixed grid of 100 cells asserts a whole. Both readings are real and the reader's question decides which one is being made, which is the standing position in [README.md](README.md).
 
 ## When to reach for it, and when not
 
-**Reach for it when** the total is a real count, the grid is small enough to tally by eye, one or two shares are the message, and you want the reader to be able to check the number by counting rather than by trusting the drawing. Being able to check the number by counting is the whole of what this form offers over a pie or a bar.
+The form is defined for the case where the total is a real count, the grid is small enough to tally by eye, one or two shares are the message, and the reader is meant to be able to check the number by counting rather than by trusting the drawing. Being able to check the number by counting is the whole of what this form offers over a pie or a bar.
 
-Before that, the first question on [part-to-whole.md](part-to-whole.md) bites hardest here: if one share is the message, a large number and a sentence may carry it better than a hundred squares.
+The first question on [part-to-whole.md](part-to-whole.md) applies here with particular force: where one share is the message, a large number and a sentence may carry it better than a hundred squares.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | How big is this part, precisely? | A table, or a [bar chart](bar-chart.md). A count is only as precise as the grid |
 | Which of these is biggest? | Sorted [bar chart](bar-chart.md). Position instead of a tally |
 | There are six or more parts | [Pie](pie-and-donut.md) or [treemap](treemap.md). A grid of six colors stops being countable and becomes a texture |
-| The shares are not whole numbers at your grid resolution | A form with a continuous scale. Rounding is the failure this one invites |
+| The shares are not whole numbers at the grid's resolution | A form with a continuous scale. Rounding is the failure this one invites |
 | How did composition change between two periods? | [Stacked bar](stacked-bar.md), or a line of shares. Two grids are compared by counting twice, and nothing here says how that goes |
 
 ## Structural decomposition
@@ -53,7 +53,7 @@ That ordering scores one task, reading a value off a mark and reporting it as a 
 
 A tally is a different task. The ranking does not cover it, and no study in this corpus measures it.
 
-**That cuts both ways.** Nothing here supports "a waffle is read more accurately than a pie". The ordering that would have to back such a claim does not reach the task, so the claim has no evidence rather than weak evidence. The honest statement is that this form moves the reader off the channels the literature measured, onto one it did not.
+**That cuts both ways.** Nothing here supports "a waffle is read more accurately than a pie". The ordering that would have to back such a claim does not reach the task, so the claim has no evidence rather than weak evidence. What the form does is move the reader off the channels the literature measured, onto one it did not.
 
 Two things ride along, both unmeasured here. **Hue carries identity**, which is what hue is good at and what neither Cleveland & McGill table scores ([channels.md](../concepts/channels.md)). And **the filled block has an area**, since one part's cells are usually contiguous. Whether a reader counts the cells or estimates the block is what nobody has tested. `absence of evidence`.
 
@@ -67,19 +67,19 @@ The nearest measured result is not about this form. Haroz, Kosara & Franconeri (
 
 Nothing measured.
 
-The structural cost is **resolution**: a 100-cell grid cannot express anything finer than one percent. That is arithmetic, not an experimental finding, and it is the one thing to check before choosing the form.
+The structural cost is **resolution**: a 100-cell grid cannot express anything finer than one percent. That is arithmetic, not an experimental finding.
 
 ## What is contested
 
 Nothing. There is no record here to disagree with itself.
 
-One pointer for anyone extending this page: Stephen Few's "Unit Charts Are For Kids" sits in the list of his unread newsletter articles ([stephen-few.md](../people/stephen-few.md)). It is the one document within this corpus's reach that would put a named authority against the form, and until somebody opens it the case against the waffle is not in this wiki at all.
+Stephen Few's "Unit Charts Are For Kids" sits in the list of his unread newsletter articles ([stephen-few.md](../people/stephen-few.md)). It is the one document within this corpus's reach that would put a named authority against the form, and it is unopened, so the case against the waffle is not in this wiki at all.
 
 ## The failure mode it invites
 
 **Rounding, presented as a count.** A part worth 0.4% of the total gets zero cells or one, and either way the grid asserts a whole number the data does not have. The form's entire promise is that the reader can verify by counting, and rounding breaks that promise without leaving a mark.
 
-**Slicing a cell to repair the rounding.** The FT's gloss for the isotype variant is the sharpest constraint available on this family ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)):
+**Slicing a cell to repair the rounding.** The FT's gloss for the isotype variant states the constraint ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)):
 
 > "use only with whole numbers (do not slice off an arm to represent a decimal)"
 

@@ -10,7 +10,7 @@ Anshul Vikram Pandey, Katharina Rall, Margaret L. Satterthwaite, Oded Nov, Enric
 
 The first controlled experiment measuring how much four common chart distortions actually move a reader's interpretation. Four distortions: truncated axis (bar chart), area-as-quantity (bubble chart), aspect ratio (line chart), and inverted axis (line-area chart). Crowdsourced on Mechanical Turk.
 
-**How this was read.** Extracted locally with `pdftotext` from the authors' own preprint, hosted at [enrico.bertini.io/s/deceptive-chi2015.pdf](http://enrico.bertini.io/s/deceptive-chi2015.pdf), which is also NYU School of Law Public Law & Legal Theory Working Paper 15-03 and carries the line "Preprint of the full paper published at ACM CHI 2015." The ACM camera-ready was paywalled. Every number below is from that preprint. If a figure ever needs to be quoted in a context where a one-digit difference matters, re-check against the ACM version.
+**How this was read.** Extracted locally with `pdftotext` from the authors' own preprint, hosted at [enrico.bertini.io/s/deceptive-chi2015.pdf](http://enrico.bertini.io/s/deceptive-chi2015.pdf), which is also NYU School of Law Public Law & Legal Theory Working Paper 15-03 and carries the line "Preprint of the full paper published at ACM CHI 2015." The ACM camera-ready was paywalled. Every number below is from that preprint. None of them has been cross-checked against the ACM version.
 
 ## What it is good for
 
@@ -62,11 +62,11 @@ That sentence took the two **correct**-column percentages, relabeled them incorr
 
 > "Out of the 38 selected participants who saw the deceptive visualization, 30 responded incorrectly, 7 correctly and one chose the uncertain response. For the 40 participants who saw the control condition, 39 responded correctly, 1 responded incorrectly and no participant reported uncertainty."
 
-So it is two body passages against one Discussion sentence. The error is direction-preserving, so the paper's conclusion survives intact. But **anyone quoting 18.4% as a control error rate is off by roughly 7x**; the real control error rate is 2.5%.
+So it is two body passages against one Discussion sentence. The error is direction-preserving, so the paper's conclusion survives intact. The 18.4% in that sentence is the deceptive group's *correct* rate; **the control error rate is 2.5%**, roughly a seventh of it.
 
 Table 3 also misprints the deceptive-condition Uncertain cell as 1 (0.02%). 1/38 is 2.63%.
 
-**Not established:** that the field propagates the wrong figure. A search for secondary sources repeating 97.5%/18.4% found none. Do not ship that claim without naming specific offenders.
+**Not established:** that the field propagates the wrong figure. A search for secondary sources repeating 97.5%/18.4% found none.
 
 ## Method
 
@@ -102,12 +102,12 @@ They also scope the definition deliberately: the working definition of deceptive
 
 ## What this result does not license
 
-- **Do not cite 18.4% as a control-group error rate.** It is the deceptive group's *correct* rate. The control error rate is 2.5%.
-- **Do not use this to rank distortion techniques.** Line/aspect-ratio produced the largest effect and bubble/area the smallest, but chart type and distortion are confounded one-to-one. The paper never varies distortion within a chart type.
-- **Do not cite it as evidence that labeling values fixes distortion.** The opposite: values were printed on every chart and the effect appeared anyway. If anything this is evidence against the labeling remedy, which is [Correll 2020](correll-2020-truncating-the-y-axis.md)'s conclusion too.
-- **Do not cite it as measuring "deception" in the intentional sense.** The construct measured is a shift in a rating-scale response, on a single trial, from a single chart, per participant.
-- **Do not treat n=38 versus n=40 as a well-powered reversal experiment.** The effect is enormous and the test is exact, so the conclusion holds, but this is one chart in one scenario.
-- **Do not extend the 129.5% figure to charts without printed values, to other domains, or to decision-making tasks.** It is a between-subjects difference in mean Likert response for one water-access scenario.
+- **Not 18.4% as a control-group error rate.** It is the deceptive group's *correct* rate. The control error rate is 2.5%.
+- **Not a ranking of distortion techniques.** Line/aspect-ratio produced the largest effect and bubble/area the smallest, but chart type and distortion are confounded one-to-one. The paper never varies distortion within a chart type.
+- **Not evidence that labeling values fixes distortion.** The opposite: values were printed on every chart and the effect appeared anyway. If anything this is evidence against the labeling remedy, which is [Correll 2020](correll-2020-truncating-the-y-axis.md)'s conclusion too.
+- **Not a measurement of "deception" in the intentional sense.** The construct measured is a shift in a rating-scale response, on a single trial, from a single chart, per participant.
+- **Not a well-powered reversal experiment.** The effect is enormous and the test is exact at n=38 versus n=40, so the conclusion holds, but this is one chart in one scenario.
+- **Not a figure that extends beyond its stimulus.** The 129.5% is a between-subjects difference in mean Likert response for one water-access scenario, on charts with printed values, and it carries to no other domain or to decision-making tasks.
 
 ## Extraction trap
 

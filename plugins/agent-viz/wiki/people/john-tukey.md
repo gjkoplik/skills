@@ -7,7 +7,7 @@ retrieved: 2026-08-23
 
 # John Tukey
 
-**What they are known for.** Naming and arguing for *exploratory data analysis*, the idea that you look at data and ask what it suggests before you ask what it establishes, and building the hand-drawable displays that make that possible: the box-and-whisker plot and the stem-and-leaf.
+**What they are known for.** Naming and arguing for *exploratory data analysis*, the idea of asking data what it suggests before asking what it establishes, and building the hand-drawable displays that make that possible: the box-and-whisker plot and the stem-and-leaf.
 
 **How this was read.** `primary-read` on the 1962 manifesto, `not reached` on the 1977 book. Retrieved 2026-08-23.
 
@@ -15,7 +15,7 @@ retrieved: 2026-08-23
 - ***Exploratory Data Analysis*** (Addison-Wesley, 1977) is **not reached**. Not on the Internet Archive under any identifier tried, in copyright, no open deposit. Nothing on this page quotes it.
 - **The box plot's history** comes from Wickham & Stryjewski, *40 years of boxplots* (2011), fetched and extracted locally from `vita.had.co.nz/papers/boxplots.pdf`. `primary-read` as to that paper, which is itself a secondary account of Tukey.
 
-**What they are good for.** Come back here with: *am I plotting this to find something out, or to show somebody something*. Tukey is the canon's clearest statement that those are different jobs with different standards, and the origin of the position that the exploratory figure is allowed to be ugly, ad hoc, and thrown away.
+**What they are good for.** The question he answers: *am I plotting this to find something out, or to show somebody something*. Tukey is the canon's clearest statement that those are different jobs with different standards, and the origin of the position that the exploratory figure is allowed to be ugly, ad hoc, and thrown away.
 
 **What they do not settle.** Whether any of his displays are read accurately. Tukey ran no perceptual experiments. The box plot is the most-used statistical graphic invented in the twentieth century and it entered the world entirely [authority-asserted](../concepts/evidence-class.md).
 
@@ -23,21 +23,21 @@ retrieved: 2026-08-23
 
 ## "In the style of Tukey" means, concretely
 
-**Draw it in a medium that cannot do anything fancy.** His displays were designed for pencil, graph paper, and a line printer. Monochrome. No fills. No gradients. Nothing that needs a rendering pipeline. That constraint is the aesthetic, and it is why the box plot survived the transition to every plotting library ever written: it is five numbers and some line segments.
+**The medium cannot do anything fancy.** His displays were designed for pencil, graph paper, and a line printer. Monochrome. No fills. No gradients. Nothing that needs a rendering pipeline. That constraint is the aesthetic, and it is why the box plot survived the transition to every plotting library ever written: it is five numbers and some line segments.
 
-**Show the data twice, at two resolutions.** The stem-and-leaf is a histogram whose bars are the actual digits, so the shape and the values are the same object. That is the move to imitate: a summary that has not thrown the numbers away.
+**The data appears twice, at two resolutions.** The stem-and-leaf is a histogram whose bars are the actual digits, so the shape and the values are the same object. That is the move: a summary that has not thrown the numbers away.
 
 **Robust summaries located at real data points.** Median not mean, fourths not standard deviations, whisker ends at an actual observation rather than at a computed distance. Nothing on a Tukey plot is at a coordinate no datum occupies.
 
-**No tuning parameters.** Compare a kernel density estimate, which has a bandwidth you can fiddle until you like the answer. A box plot has nothing to fiddle. That is a deliberate property.
+**No tuning parameters.** A kernel density estimate has a bandwidth that can be adjusted until the answer looks right. A box plot has nothing to adjust. That is a deliberate property.
 
 **Many small identical displays, side by side.** His plots exist to compare groups, and the comparison is done by repeating one very simple mark across a strip.
 
-**Plot the residuals.** Fit something crude, subtract it, and plot what is left. Half of the 1962 paper's machinery is about examining what a fit failed to absorb rather than the fit itself.
+**Residuals get plotted.** Something crude is fitted, subtracted, and what is left is plotted. Half of the 1962 paper's machinery is about examining what a fit failed to absorb rather than the fit itself.
 
-**Name the parts oddly, on purpose.** Hinge, fourth, fence, whisker, out-lier, straggler, wild shot, vacuum cleaner, FUNOP, FUNOR-FUNOM. He coined a private vocabulary and then used it flatly, and the effect is that a Tukey procedure is memorable in a way a Greek-lettered one is not. If you want a figure to read as his, the label on the part is doing real work.
+**The parts are named oddly, on purpose.** Hinge, fourth, fence, whisker, out-lier, straggler, wild shot, vacuum cleaner, FUNOP, FUNOR-FUNOM. He coined a private vocabulary and then used it flatly, and the effect is that a Tukey procedure is memorable in a way a Greek-lettered one is not. In a figure that reads as his, the label on the part is doing real work.
 
-**The figure is a working tool, not an artifact.** Nothing in this style is meant to be published, framed, or captioned for a general reader. It is what you draw on the way to knowing something. That distinction is [floor-and-ceiling](../concepts/floor-and-ceiling.md) fifty years early, and it is why importing Tukey wholesale into a presentation figure goes wrong.
+**The figure is a working tool, not an artifact.** Nothing in this style is meant to be published, framed, or captioned for a general reader. It is what gets drawn on the way to knowing something. That distinction is [floor-and-ceiling](../concepts/floor-and-ceiling.md) fifty years early, and it is why importing Tukey wholesale into a presentation figure goes wrong.
 
 ## What they actually established, and what gets over-claimed in their name
 
@@ -71,7 +71,7 @@ The invention is the choice of statistics, not the picture. Also from the same p
 
 Tukey's box ends are **hinges**, the upper and lower **fourths**, which are not identical to quartiles under most quantile definitions. Wickham & Stryjewski note that implementations differ further, citing Hyndman & Fan's nine quantile types, that some replace the extremes with fixed quantiles, and that multipliers other than 1.5 are in use.
 
-**One thing to be careful about, flagged rather than resolved.** Wickham & Stryjewski describe the fences as lying "1.5 times the inter-fourth range from the **median**". The standard definition, and the one every implementation I know of uses, puts the inner fences at 1.5 times the H-spread from the **hinges**, not from the median. Those are different constructions and they give different plots. I could not settle it against the primary because *Exploratory Data Analysis* was not reached. **Do not cite either phrasing as Tukey's own wording on the strength of this page.**
+**One thing to be careful about, flagged rather than resolved.** Wickham & Stryjewski describe the fences as lying "1.5 times the inter-fourth range from the **median**". The standard definition, and the one every implementation I know of uses, puts the inner fences at 1.5 times the H-spread from the **hinges**, not from the median. Those are different constructions and they give different plots. I could not settle it against the primary because *Exploratory Data Analysis* was not reached. **Neither phrasing is vouched as Tukey's own wording on the strength of this page.**
 
 ### The one perceptual result in the vicinity goes against a redesign, not against Tukey
 

@@ -11,7 +11,7 @@ retrieved: 2026-08-23
 
 **How this was read.** `primary-read` for Cleveland & McGill (1985) and Cleveland (2001), unread for the books. The 1985 *Science* paper was pulled as a JSTOR scan; its text layer is three-column and interleaves badly, so the quotes and the table below were **transcribed from rendered page images at 200 dpi**, not from a `-layout` dump and not from a summary. [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md) is already `primary-read` in this wiki by the same method. The book contents below come from library-catalog contents scans, extracted locally. Retrieval date: **2026-08-23**.
 
-**What they are good for.** Come here before citing "the Cleveland-McGill ranking," because there are **two of them**, they disagree, and the one everybody reproduces is not the one this wiki has a page for.
+**What they are good for.** The status of "the Cleveland-McGill ranking": there are **two of them**, they disagree, and the one everybody reproduces is not the one this wiki has a page for.
 
 **What they do not settle.** Almost everything past rank 1, by their own statement. Also: nothing about attention, memory, narrative, or aesthetics. Cleveland's entire program is about the accuracy of reading a number off a mark, and he says so in both papers.
 
@@ -37,7 +37,7 @@ The *Science* paper from August 1985 prints a different table. Verbatim from Tab
 | 6 | Volume; Density; Color saturation |
 | 7 | Color hue |
 
-**Read the two side by side.** Length and angle are no longer tied. Color hue is no longer excluded; it is ranked, and it is last. Curvature has disappeared and density has appeared. Slope enters with a caveat about its own working range.
+**The two side by side.** Length and angle are no longer tied. Color hue is no longer excluded; it is ranked, and it is last. Curvature has disappeared and density has appeared. Slope enters with a caveat about its own working range.
 
 **This resolves a puzzle the wiki currently records as an error.** [refutations.md](../refutations.md) says the fully ordered `position > length > angle > area > volume > color` list "is not the version in the paper," and [cleveland-mcgill-1984.md](../studies/cleveland-mcgill-1984.md) says that a ranking putting color at the bottom and meaning hue "is not reporting this paper." Both are correct about the 1984 paper and both are incomplete, because the list in circulation is an accurate reproduction of the 1985 *Science* table. The citation is not fabricated. It is pointed at the wrong one of two papers by the same two authors.
 
@@ -65,11 +65,11 @@ So the 1985 separation of length from angle is **not a new measurement**. No thi
 
 > "Because the plan is ambitious and implies substantial change, the altered field will be called 'data science'."
 
-There is no experiment in it and no claim of priority over the term. Cite it for what it is: a statistician proposing that his own department reallocate a fifth of its effort away from theory.
+There is no experiment in it and no claim of priority over the term. It is a statistician proposing that his own department reallocate a fifth of its effort away from theory.
 
 ### The prescriptive half, which almost nobody cites
 
-Both papers end by telling you to change what you draw, and both prescriptions are ignored relative to the rankings. 1984's abstract conclusion is "radical surgery on these popular graphs is needed," with dot charts and framed-rectangle charts offered as the replacements. The 1985 paper closes on the same list: dot charts, Tukey box plots, graphing on a log base 2 scale, two-tiered error bars, and lowess.
+Both papers end by prescribing a change in what gets drawn, and both prescriptions are ignored relative to the rankings. 1984's abstract conclusion is "radical surgery on these popular graphs is needed," with dot charts and framed-rectangle charts offered as the replacements. The 1985 paper closes on the same list: dot charts, Tukey box plots, graphing on a log base 2 scale, two-tiered error bars, and lowess.
 
 One of those prescriptions predates a study this wiki already has, by thirty years. From p. 832:
 
@@ -83,11 +83,11 @@ The 1985 paper reports its subject groups did not differ by technical training, 
 
 ---
 
-## What they would object to in your figure
+## What they would object to in a figure
 
-*Reconstruction from his stated priorities. He has not seen your figure.*
+*Reconstruction from his stated priorities, not a response to any actual figure.*
 
-He would go straight to the encoding and ignore everything around it. Is a comparison the reader has to make encoded as position along a **common** scale, or did you split it across panels and demote it to rank 2 for no reason? Is anything important riding on area, or on color saturation, when a dot chart would put it on position? Are you showing means and standard deviations where the distribution is the actual finding? Is the aspect ratio destroying the rate of change you are asking people to see? He would not comment on your title, your palette's taste, or whether the figure tells a story, because none of those are in his frame. He would also, and this is the part people forget, tell you to stop drawing the chart and draw a different one: his conclusions are prescriptive, and the prescription is usually a dot chart.
+He would go straight to the encoding and ignore everything around it. Is a comparison the reader has to make encoded as position along a **common** scale, or was it split across panels and demoted to rank 2 for no reason? Is anything important riding on area, or on color saturation, when a dot chart would put it on position? Are means and standard deviations being shown where the distribution is the actual finding? Is the aspect ratio destroying the rate of change the reader is being asked to see? He would not comment on the title, the palette's taste, or whether the figure tells a story, because none of those are in his frame. He would also, and this is the part people forget, call for a different chart entirely: his conclusions are prescriptive, and the prescription is usually a dot chart.
 
 ---
 
@@ -104,7 +104,7 @@ He would go straight to the encoding and ignore everything around it. Is a compa
 | Cleveland, McGill & McGill (1988), "The Shape Parameter of a Two-Variable Graph," *JASA* 83(402) | `not-reached`. Closed on both OpenAlex and Semantic Scholar; no repository copy anywhere. | The banking paper. Covered indirectly through [talbot-2012-slope-ratio.md](../studies/talbot-2012-slope-ratio.md) and [refutations.md](../refutations.md), never directly. |
 | Cleveland & Devlin (1988), loess, *JASA* | Reachable, not read: [sites.stat.washington.edu](https://sites.stat.washington.edu/courses/stat527/s13/readings/Cleveland_Delvin_JASA_1988.pdf) | No page. Out of scope here, listed for completeness. |
 
-**Where the banking guidance actually lives in book form.** *The Elements of Graphing Data* gives it two sections, one prescriptive and one perceptual: **2.4 Banking to 45°** under *Principles of Graph Construction*, and **4.7 Banking to 45°** under *Graphical Perception*. Chapter 4 also carries 4.1 The Model, 4.6 Order on Dot Plots, 4.9 Graphing Along a Common Scale, and 4.10 Pop Charts, which is the prescriptive half of the 1984 paper turned into a chapter. Anyone chasing the scope of the banking result to its source should start at 4.7 rather than at the 1988 JASA paper, which has no open copy at all.
+**Where the banking guidance actually lives in book form.** *The Elements of Graphing Data* gives it two sections, one prescriptive and one perceptual: **2.4 Banking to 45°** under *Principles of Graph Construction*, and **4.7 Banking to 45°** under *Graphical Perception*. Chapter 4 also carries 4.1 The Model, 4.6 Order on Dot Plots, 4.9 Graphing Along a Common Scale, and 4.10 Pop Charts, which is the prescriptive half of the 1984 paper turned into a chapter. The scope of the banking result traces to 4.7 rather than to the 1988 JASA paper, which has no open copy at all.
 
 ## See also
 

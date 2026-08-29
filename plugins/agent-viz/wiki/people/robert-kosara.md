@@ -10,7 +10,7 @@ retrieved: 2026-08-23
 
 **How this was read.** Eight of his papers were downloaded from `media.eagereyes.org` and extracted locally with `pdftotext`, plus the wiki's existing primary readings of Skau & Kosara (2016) and Skau, Harrison & Kosara (2015). Retrieval date: **2026-08-23**. Affiliations below are as printed on each paper (UNC Charlotte, then Tableau Research); no claim is made about where he works now.
 
-**What they are good for.** Come here with *is there actually a study behind this rule*. He is the canon's most productive source of **decompositions**, meaning experiments that take a chart type apart into the cues it carries instead of comparing two whole charts. That is the step [concepts/channels.md](../concepts/channels.md) identifies as the weak link in every chart-type claim, and Kosara has run it more times than anyone else.
+**What they are good for.** The question he answers: *is there actually a study behind this rule*. He is the canon's most productive source of **decompositions**, meaning experiments that take a chart type apart into the cues it carries instead of comparing two whole charts. That is the step [concepts/channels.md](../concepts/channels.md) identifies as the weak link in every chart-type claim, and Kosara has run it more times than anyone else.
 
 **What they do not settle.** Whether pie charts are a good idea, which he is careful not to claim. Nothing about color, nothing about perception below the level of a chart, and nothing about narrative beyond arguing it deserves study. His pie work is also almost entirely about **reading one value off a chart**, which is the same narrow task the 1984 lineage runs on.
 
@@ -28,7 +28,7 @@ retrieved: 2026-08-23
 
 He also names the alternative explanation himself and then argues against it from his own orientation data, which is the right way round.
 
-**Step 2b, 2016, again with Skau: the popular pie variants all cost accuracy.** Exploded pie, pie with an enlarged slice, elliptical pie and square pie, against a plain pie baseline. Their finding is the one a design guide should be quoting: "even variants that do not distort central angle cause greater error than regular pie charts. Charts that distort the shape show the highest error." That is the same shape-deformation principle [skau-2015-embellished-bars.md](../studies/skau-2015-embellished-bars.md) found in bars, arrived at independently in a different chart type.
+**Step 2b, 2016, again with Skau: the popular pie variants all cost accuracy.** Exploded pie, pie with an enlarged slice, elliptical pie and square pie, against a plain pie baseline. Their finding: "even variants that do not distort central angle cause greater error than regular pie charts. Charts that distort the shape show the highest error." That is the same shape-deformation principle [skau-2015-embellished-bars.md](../studies/skau-2015-embellished-bars.md) found in bars, arrived at independently in a different chart type.
 
 **Step 3, 2019: the design space around the pie.** After the isolating conditions in the 2016 study threw up a chart nobody had tested that performed as well as a pie, he went looking for more. Centered shapes turned out much worse than the same shape off-center.
 
@@ -46,7 +46,7 @@ and the distribution result, which is a null he reports plainly: he expected lon
 
 **Embellishment, 2015, with Steve Haroz and Steven Franconeri.** The ISOTYPE paper is the most useful thing in the chartjunk literature because it separates two cases the debate keeps merging: "superfluous images can distract. But we find no user costs, and some intriguing benefits, when pictographs are used to represent the data." That is the same distinction [refutations.md](../refutations.md) arrives at from Bateman and Skau, and this paper states it directly as a finding rather than leaving it to be reconstructed across two studies.
 
-**Position, 2016.** *An Empire Built On Sand* is a **BELIV position paper**, not a study, and it should never be cited as evidence for anything. What it is good for is its inventory of things the field believes without testing, and its argument about how seminal papers go wrong in transit:
+**Position, 2016.** *An Empire Built On Sand* is a **BELIV position paper**, not a study, and it reports no experiment. What it carries is an inventory of things the field believes without testing, and an argument about how seminal papers go wrong in transit:
 
 > "A seminal paper does not lose its importance if limitations are found, or if parts of it are found to not or no longer be true. The value of the paper is not in providing facts, but in establishing a way of thinking, showing a new direction, introducing a methodology."
 
@@ -74,11 +74,11 @@ Both are one-line summaries in sections that are not the paper's contribution, a
 
 ---
 
-## What they would object to in your figure
+## What they would object to in a figure
 
-*Reconstruction from his stated priorities. He has not seen your figure.*
+*Reconstruction from his stated priorities, not a response to any actual figure.*
 
-He would not start with the figure. He would start with whatever rule you applied to make it and ask what study supports that rule, and if the answer is "everyone knows," he would treat that as the interesting finding. He would ask whether the figure is for **analysis or presentation**, on the grounds that those are different jobs with different standards and the field keeps conflating them. He would be unmoved by chartjunk objections and actively annoyed by "never use a pie chart," not because pies are good but because the reason usually given for it is false. If you showed him a comparison, he would want to know whether anyone had replicated it. And if you told him a chart type is bad, he would ask which cue you think the reader is using, and then whether that has ever been measured.
+He would not start with the figure. He would start with whatever rule produced it and ask what study supports that rule, and where the answer is "everyone knows," he would treat that as the interesting finding. He would ask whether the figure is for **analysis or presentation**, on the grounds that those are different jobs with different standards and the field keeps conflating them. He would be unmoved by chartjunk objections and actively annoyed by "never use a pie chart," not because pies are good but because the reason usually given for it is false. Shown a comparison, he would want to know whether anyone had replicated it. Told a chart type is bad, he would ask which cue the reader is supposed to be using, and then whether that has ever been measured.
 
 ---
 

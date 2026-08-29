@@ -14,11 +14,11 @@ Also called a **radial treemap**, a **multilevel pie** or a **ring chart**. **A 
 
 ## When to reach for it, and when not
 
-**Reach for it when** the data is a hierarchy, the reader needs the top-level split and its subdivisions at once, "these are all of it" is part of the claim, and the tree is shallow enough that the outer ring still holds labelable arcs.
+The form is defined for the case where the data is a hierarchy, the reader needs the top-level split and its subdivisions at once, "these are all of it" is part of the claim, and the tree is shallow enough that the outer ring still holds labelable arcs.
 
-**Do not reach for it when:**
+Questions the form does not answer:
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | How big is this node? | A table, or a [bar chart](bar-chart.md). No axis exists on this form |
 | Which of these is biggest? | Sorted [bar chart](bar-chart.md). Position instead of arc |
@@ -55,7 +55,7 @@ The one direct measurement of which cue a circular form actually puts the reader
 
 So on a circular form, arc length and area are what readers use, and angle is the weakest of the three ([pie-and-donut.md](pie-and-donut.md) carries the full result).
 
-The measurement was made on **single-ring, two-segment pies and donuts**. The structural fact is that on a sunburst, angle is constant across rings for a given share while arc length and area are not: a node holding a tenth of the circle has several times more arc on the outermost ring than on the innermost. Those two statements sit next to each other and do not join up into a result. Whether an outer-ring share is therefore read differently from an inner-ring one is a live question that **nobody in this corpus has tested**. `absence of evidence`, and it is the question this form most needs answered.
+The measurement was made on **single-ring, two-segment pies and donuts**. The structural fact is that on a sunburst, angle is constant across rings for a given share while arc length and area are not: a node holding a tenth of the circle has several times more arc on the outermost ring than on the innermost. Those two statements sit next to each other and do not join up into a result. Whether an outer-ring share is therefore read differently from an inner-ring one is a question **nobody in this corpus has tested**. `absence of evidence`.
 
 The treemap results do not transfer either. Heer & Bostock measured rectangles in Cartesian coordinates, including the finding that the surrounding treemap does not interfere with the judgment ([heer-bostock-2010.md](../studies/heer-bostock-2010.md)). Annular sectors at varying radii were not in the experiment.
 
@@ -67,11 +67,11 @@ The treemap results do not transfer either. Heer & Bostock measured rectangles i
 
 Nothing measured on this form.
 
-One inherited result applies and is worth carrying: on proportional judgment, a bar chart beats a pie, measured and replicated ([cleveland-mcgill-1984.md](../studies/cleveland-mcgill-1984.md), [heer-bostock-2010.md](../studies/heer-bostock-2010.md)). A sunburst is a pie with a depth dimension added, so there is no reason to expect it does better at reading values off a mark, and no measurement saying it does.
+One inherited result applies: on proportional judgment, a bar chart beats a pie, measured and replicated ([cleveland-mcgill-1984.md](../studies/cleveland-mcgill-1984.md), [heer-bostock-2010.md](../studies/heer-bostock-2010.md)). A sunburst is a pie with a depth dimension added, so there is no reason to expect it does better at reading values off a mark, and no measurement saying it does.
 
 ## What is contested
 
-Nothing about this form. The contest it inherits from [pie-and-donut.md](pie-and-donut.md) is worth knowing anyway, because it is the argument most often reached for here: the claim that circular forms fail *because* they encode angle is refuted, and the claim that length beats angle is unsupported by the one head-to-head test ([channels.md](../concepts/channels.md)). Bars beating pies for value extraction survives; the mechanism does not.
+Nothing about this form. The contest it inherits from [pie-and-donut.md](pie-and-donut.md) bears on the argument commonly made here: the claim that circular forms fail *because* they encode angle is refuted, and the claim that length beats angle is unsupported by the one head-to-head test ([channels.md](../concepts/channels.md)). Bars beating pies for value extraction survives; the mechanism does not.
 
 ## The failure mode it invites
 

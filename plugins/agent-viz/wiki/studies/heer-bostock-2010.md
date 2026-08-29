@@ -26,7 +26,7 @@ The replication held:
 
 with one noted difference: types 1 and 2 came closer together, which the authors attribute to the smaller display reducing the effect of distance, and types 4 and 5 were more accurate than in the original. Position still significantly outperformed length.
 
-**A methodological detail worth stealing.** Subjects had to pass a qualification test of three multiple-choice charts whose wrong answers were "grossly wrong." The point was not to filter for accuracy, which "would bias the responses," but to confirm the instructions were understood. A pilot without it produced over 10% unusable responses.
+**A methodological detail.** Subjects had to pass a qualification test of three multiple-choice charts whose wrong answers were "grossly wrong." The point was not to filter for accuracy, which "would bias the responses," but to confirm the instructions were understood. A pilot without it produced over 10% unusable responses.
 
 ## The finding that contradicts the folk ranking
 
@@ -34,13 +34,13 @@ Types 6 and 7 were built to the same task format as the others precisely so that
 
 > "Indeed, the new results match expectations: psychophysical theory [7, 34] predicts area to perform worse than angle, and both to be significantly worse than position. Theory also suggests that angle should perform worse than length, but the results do not support this. Cleveland & McGill also did not find angle to perform worse than length, but as stated their position-angle results are not directly comparable to their position-length results."
 
-Three claims land here, and they should be kept distinct:
+Three distinct claims land here:
 
 - **Confirmed.** Area is worse than angle. Both are significantly worse than position.
 - **Not supported.** Angle worse than length. The theory predicts it; the one study designed to test it head to head did not find it.
 - **Correctly attributed.** Cleveland & McGill did not find it either, and could not have, because their two experiments are not comparable.
 
-So the widely repeated ordering `position > length > angle > area` is **contested at the length-angle step specifically**. Every other step in it survives. This is the cleanest available case of a rule that is right in outline and wrong at one joint, which is exactly the kind of thing that survives summarization intact and should not.
+So the widely repeated ordering `position > length > angle > area` is **contested at the length-angle step specifically**. Every other step in it survives. The ordering is right in outline and wrong at one joint.
 
 ## Rectangular area, and the square-is-worst result
 
@@ -54,11 +54,11 @@ Two results:
 
 > "Somewhat surprisingly, comparisons of rectangles with aspect ratio 1 exhibited the worst performance, a result robust across both the rectangle and treemap display conditions. This finding suggests that viewers actually benefit from the inability of a squarified treemap algorithm to perfectly optimize the rectangles to 1:1 aspect ratios. The result is consistent with the hypothesis that viewers use 1D length comparisons to help estimate area: comparing the lengths of sides as a proxy for area leads to maximal error when comparing squares."
 
-The authors hedge it themselves: "Additional experimentation is needed to form an accurate perceptual model." Treat the mechanism as a hypothesis and the effect as measured.
+The authors hedge it themselves: "Additional experimentation is needed to form an accurate perceptual model." The mechanism is a hypothesis; the effect is measured.
 
 **Treemap surround does not interfere.** No significant difference between bare center-aligned rectangles (T8) and the same judgment inside a full treemap (T9), suggesting the other rectangles in the display do not degrade the judgment. The authors note they did not test for interference from varying color intensity.
 
-## Limits worth carrying
+## Limits
 
 - Proportional judgment only. Same narrow task as 1984: identify the smaller of two marked values, estimate what percent it is of the larger.
 - 380x380 pixel charts. Chart size was a variable in a *different* experiment in this paper, which is itself a reason not to treat any single-size result as scale-free.

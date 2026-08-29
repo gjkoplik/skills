@@ -12,11 +12,11 @@ Published authors in psychology, behavioral neuroscience and medicine were asked
 
 **How this was read.** PDF retrieved from `edmeasurement.net/5245/Belia-2005-CIs-SEs.pdf` and re-extracted locally with `pdftotext -layout`.
 
-One extraction caveat: the text layer drops several math glyphs, so `p < .05` comes out as `p  .05` and `M ± tC × SE` comes out as `M  tC  SE`. Quotes below were chosen to avoid passages where a dropped glyph would change the meaning. If a figure ever needs quoting where a comparison operator matters, re-check against the APA version.
+One extraction caveat: the text layer drops several math glyphs, so `p < .05` comes out as `p  .05` and `M ± tC × SE` comes out as `M  tC  SE`. Quotes below were chosen to avoid passages where a dropped glyph would change the meaning. Passages where a comparison operator carries the meaning have not been checked against the APA version.
 
 ## What it is good for
 
-The evidentiary backing for "label your error bars, and do not expect the label to save you." This is the paper to cite when someone argues that a figure's uncertainty encoding is fine because the audience is expert. The respondents *were* the experts. Everyone in the sample had published in a leading journal in their field.
+The evidentiary backing for "label your error bars, and do not expect the label to save you." It bears on the argument that a figure's uncertainty encoding is fine because the audience is expert: the respondents *were* the experts. Everyone in the sample had published in a leading journal in their field.
 
 ## What it does not settle
 
@@ -48,7 +48,7 @@ E-mail invitations went to 3,944 authors of research articles in 21 psychology, 
 
 Each respondent saw exactly one of three tasks, split roughly in thirds within each discipline: the CI task, the SE task, or the repeated-measures (RM) task. Group 1's mean was fixed at 300. An applet let the respondent click Group 2's mean up or down, with roughly three-unit granularity, until the two were judged just significantly different at p < .05 two-tailed.
 
-Design details worth carrying forward, because they are the kind of thing a sloppy replication would skip:
+Design details of the instrument:
 
 - The invitation and the site URLs contained no clue to the authors' psychology affiliation or to which discipline a participant had been sorted into.
 - **Pilot testing found an anchoring effect**, so half of each discipline-by-task cell started with Group 2 at 800 and half at 300. The overall anchoring difference was 53 units, and all reported responses are adjusted for it. The authors read the size of that effect as itself diagnostic: "This sizable anchoring effect suggests that many respondents may not have been very confident in their ability to accurately carry out the task."
@@ -66,7 +66,7 @@ They name the response rate and argue about its direction:
 
 > "Our response rate was low, but we think it reasonable to assume that nonrespondents, including those who visited the site and elected not to complete the task, would if anything be less statistically confident and competent than respondents. If so, our findings are underestimates of the severity and prevalence of misconception among researchers in the three disciplines."
 
-That is an argument, not a measurement. It is a plausible one, and it should be reported as the authors' inference rather than as an established fact about nonrespondents.
+That is an argument, not a measurement. It is a plausible one, and it is the authors' inference rather than an established fact about nonrespondents.
 
 They also flag that the framing is not their preferred one:
 
@@ -74,7 +74,7 @@ They also flag that the framing is not their preferred one:
 
 They kept the follow-up questions minimal on purpose, to avoid prompting an analytic attitude, which means there is very little data about *why* individual respondents answered as they did. 59% typed a free-text comment; 61% of those comments contained a statement that was clearly or probably statistically incorrect.
 
-Their recommendation is partly a design recommendation, which is why this paper belongs in a visualization wiki at all:
+Their recommendation is partly a design recommendation:
 
 > "we need better graphical conventions for displaying interval estimates that reduce ambiguity, make the status of independent variables salient, and signal more clearly how intervals may be used for data interpretation."
 

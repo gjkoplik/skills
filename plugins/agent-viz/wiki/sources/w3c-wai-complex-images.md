@@ -40,7 +40,7 @@ Long, described as covering:
 
 > "detailed information, including scales, values, relationships and trends that are represented visually. For example, the long description can point out the declining values for site 1, consistent values for site 2, and increasing values for site 3 that are encoded in the bar chart."
 
-**Scales, values, relationships, trends.** That four-item list is the most usable specification of long-description content anywhere in this corpus, and it is the thing to check a generated description against. A description that names the chart type and the axes but says nothing about direction has covered scales and values and skipped the two that matter.
+**Scales, values, relationships, trends.** That four-item list is the most usable specification of long-description content anywhere in this corpus. A description that names the chart type and the axes but says nothing about direction has covered scales and values and skipped the other two.
 
 ## Composition can be part of the information
 
@@ -48,9 +48,9 @@ A subtle point the page makes that most alt-text advice misses:
 
 > "There are situations where the composition of an image is important and needs to be provided in the long description. For example, the sequence of colors used and the relative heights of the columns in a bar chart may be relevant information about the structure of the chart, in addition to the actual values and trends that it depicts."
 
-So the standard's own position is that "describe the data, not the visuals" is **too simple**. When the encoding carries meaning, the encoding is content. Compare Datawrapper's article, which argues the opposite in passing ("if words are used instead to describe the data, there's no need to talk about visual elements at all") and then concedes it is a judgment call. The W3C's version is the better one: it depends on whether the composition is load-bearing.
+So the standard's own position is that "describe the data, not the visuals" is **too simple**. When the encoding carries meaning, the encoding is content. Datawrapper's article argues the opposite in passing ("if words are used instead to describe the data, there's no need to talk about visual elements at all") and then concedes it is a judgment call. The W3C's version is the better one: it depends on whether the composition is load-bearing.
 
-## Long descriptions should be visible to everyone
+## Long descriptions as visible content
 
 > "Complex images can be difficult to understand by many people -- especially those with low vision, learning disabilities, and limited subject-matter experience. Make long descriptions available to everyone to reach a wider audience with your content. For example, show the description as part of the main content. It may also be possible to reduce unnecessary complexity in your images and make them easier to understand for everyone."
 
@@ -72,9 +72,9 @@ Given a `chart.png` with a short `alt`, the long description can be attached thr
 
 **3. `<figure>` containing both.** Image and long description together, the description "presented as headings, text, and a table", wrapped in `<figcaption>`, with `role="group"` for backward compatibility.
 
-`role="group"` appears in all three because `<figure>` semantics were historically inconsistent across browsers. Worth knowing before treating a bare `<figure>` as sufficient.
+`role="group"` appears in all three because `<figure>` semantics were historically inconsistent across browsers, so a bare `<figure>` is not equivalent.
 
-Note that none of the three is `longdesc`. That attribute is absent from the current tutorial.
+None of the three is `longdesc`. That attribute is absent from the current tutorial.
 
 ## What this means for a figure produced by a plotting library
 

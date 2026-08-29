@@ -10,19 +10,19 @@ A map carrying one dot per fixed number of units, each dot placed where those un
 
 ## When to reach for it, and when not
 
-**Reach for it when** the variable is a count of discrete things, you know where within each region those things actually are, and the message is where the concentration falls rather than what any one region's number is.
+**The form applies where** the variable is a count of discrete things, the locations of those things within each region are known, and the message is where the concentration falls rather than what any one region's number is.
 
-The FT gloss is the only one of its three spatial glosses that is about annotation rather than about the encoding: a dot density map should "make sure to annotate any patterns the reader should see" ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). Read that as a warning about the form. It is telling you the figure does not deliver a reading on its own.
+The FT gloss is the only one of its three spatial glosses that is about annotation rather than about the encoding: a dot density map should "make sure to annotate any patterns the reader should see" ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). That gloss is a statement about the form: the figure does not deliver a reading on its own.
 
-**Do not reach for it when:**
+**Questions the form does not answer:**
 
-| The question | Use instead |
+| The question | Alternative |
 |---|---|
 | How many, exactly, in this region? | A table, or a sorted bar chart |
 | The value is a rate | [Choropleth](choropleth-map.md). Density of dots is a count per area, not a rate per person |
-| You have region totals and no sub-region locations | [Choropleth](choropleth-map.md), or a proportional symbol map. Scattering dots inside a polygon invents locations the data does not contain |
-| The concentrations are urban | The dots merge into solid fill and the encoding saturates. Bin to a hex grid, or map a rate |
-| There are twelve things | Plot them as labeled points. Density is not the reading at that count |
+| Region totals with no sub-region locations | [Choropleth](choropleth-map.md), or a proportional symbol map. Scattering dots inside a polygon invents locations the data does not contain |
+| The concentrations are urban | The dots merge into solid fill and the encoding saturates. A hex-grid binning, or a rate mapped |
+| There are twelve things | Labeled points. Density is not the reading at that count |
 | Which region is highest? | Sorted bar chart. Comparing two ink densities by eye is not a judgment this corpus supports |
 
 ## Structural decomposition
@@ -36,7 +36,7 @@ The FT gloss is the only one of its three spatial glosses that is about annotati
 | Coordinates | A named map projection |
 | Guides | The dot value, stated in the legend or subtitle, and annotation naming the pattern |
 
-**The dot value and the placement rule decide what the map says, and neither is visible in the drawing.** Definitional, and it is the thing to check first on someone else's dot map. A dot value set too high erases small concentrations; set too low, everything saturates into a solid field. Placement is the worse of the two: if dots are scattered at random inside an administrative polygon, the map shows a fabricated distribution at every scale finer than that polygon, and nothing on the page marks the boundary between what was measured and what was generated.
+**The dot value and the placement rule decide what the map says, and neither is visible in the drawing.** Definitional. A dot value set too high erases small concentrations; set too low, everything saturates into a solid field. Placement is the worse of the two: if dots are scattered at random inside an administrative polygon, the map shows a fabricated distribution at every scale finer than that polygon, and nothing on the page marks the boundary between what was measured and what was generated.
 
 **Total ink is proportional to the count**, which is the one structural advantage this form has over a [choropleth](choropleth-map.md). The reader's visual field is weighted by the variable rather than by land area, and that is why the form can carry totals where the choropleth must not. Definitional, and it is the whole offer.
 
@@ -56,7 +56,7 @@ Cleveland & McGill's 1985 *Science* table does include density, grouped with vol
 
 Nothing measured. Two exposures worth naming.
 
-**The channel is untested and the one ranking that includes it says so.** See above. Treat "readers can compare these two densities" as unsupported rather than as refuted.
+**The channel is untested and the one ranking that includes it says so.** See above. "Readers can compare these two densities" is unsupported rather than refuted.
 
 **Saturation.** Above some density the dots overlap into a solid field and every further unit adds nothing. The encoding stops responding to the data in exactly the places where the data is most concentrated, which is usually where the story is. Definitional; the threshold depends on dot size, dot value and output resolution, and no source here puts a number on it.
 
@@ -66,7 +66,7 @@ Nothing measured. Two exposures worth naming.
 
 ## The failure mode it invites
 
-**Random placement presented as location.** The most damaging failure in this form, because it is undetectable from the figure and it looks like precision. If your data is county counts, your dots are county counts however finely you scatter them. `authority-asserted`, and the underlying point is definitional: nothing in the drawing distinguishes a measured position from a generated one.
+**Random placement presented as location.** The most damaging failure in this form, because it is undetectable from the figure and it looks like precision. Data that is county counts stays county counts however finely the dots are scattered. `authority-asserted`, and the underlying point is definitional: nothing in the drawing distinguishes a measured position from a generated one.
 
 **Not stating the dot value.** Without it the map is unreadable as a quantity, and there is no axis to fall back on.
 
@@ -78,13 +78,13 @@ Nothing measured. Two exposures worth naming.
 
 **Defensible, evidence-backed:**
 
-Nothing. No study in this corpus tests this form, and none tests the channel it uses either. Saying otherwise would be inventing a warrant.
+Nothing. No study in this corpus tests this form, and none tests the channel it uses either.
 
 **Defensible, with the label said out loud:**
 
 - "Dots rather than a choropleth, because the quantity is a count and total ink is proportional to it. That is structural: the visual weight comes from the variable rather than from land area. It is not a claim that readers read the counts well."
 - "One dot per 100 households, stated in the subtitle." Convention, and the minimum that makes the figure legible as a quantity.
-- "Dots are placed at the address level, not scattered inside tracts." The line between measured and generated location, and it belongs in the note.
+- "Dots are placed at the address level, not scattered inside tracts." The line between measured and generated location.
 - "The three concentrations are annotated." The FT's own instruction for this chart. `authority-asserted`.
 
 **Commonly repeated, and the evidence does not support it:**

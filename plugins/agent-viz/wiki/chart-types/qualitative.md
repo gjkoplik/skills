@@ -8,25 +8,25 @@ Figures whose input is text or coded qualitative material rather than a measured
 
 This index is ours rather than the FT's, on the same footing as [network-topology.md](network-topology.md) and [tables.md](tables.md): the nine relationships stay as published and this one sits alongside them. The FT taxonomy has no slot for text or qualitative data at all ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). The citable precedent for putting one in a chart catalog is *Better Data Visualizations*, whose chapter 10 is Qualitative and covers icons, word clouds, word trees, specific words, quotes, coloring phrases, and matrices and lists ([schwabish.md](../sources/schwabish.md)). That is the chapter's existence and contents, verified from the book's own contents pages; what it argues is unread in this corpus and is not cited below.
 
-**This page is short because the tier has almost nothing to say here.** No study, no style-guide section, and no [inventory](../inventory.md) topic. Schwabish calls a chapter's worth of this "something that seems to have escaped many data visualization books to date", and that holds for this corpus too, so a missing inventory topic is recorded as a candidate rather than asserted as an omission. One publisher's contents line is thin ground.
+**The tier has almost nothing to say here.** No study, no style-guide section, and no [inventory](../inventory.md) topic. Schwabish calls a chapter's worth of this "something that seems to have escaped many data visualization books to date", and that holds for this corpus too, so a missing inventory topic is recorded as a candidate rather than asserted as an omission. One publisher's contents line is thin ground.
 
 ## Is this group the right frame?
 
-One test decides almost every case: **has anything been counted yet?** Coded interviews, tagged responses and word frequencies become quantities the moment the count exists, and a count goes on a bar chart like any other count. Once you are counting, you have left this group.
+One test decides almost every case: **has anything been counted yet?** Coded interviews, tagged responses and word frequencies become quantities the moment the count exists, and a count goes on a bar chart like any other count. Once the counting has happened, the question has left this group.
 
-| The reader's actual question | Go to |
+| The reader's actual question | Group |
 |---|---|
 | How often does each code appear? | [Magnitude](magnitude.md). A sorted bar chart of the counts |
 | How do two coded groups differ? | [Deviation](deviation.md), or a grouped bar in [magnitude](magnitude.md) |
 | How did the coding shift over the interviews? | [Change over time](change-over-time.md) |
 | What did people actually say? | [Tables](tables.md). Quotes, matrices and lists are text, and the text is the artifact |
-| Which words are frequent, and nothing beyond that? | **Stay here** |
+| Which words are frequent, and nothing beyond that? | **This group** |
 
 ## What this group costs
 
 Nothing measured. No study in this corpus tests any form in this group, and no style guide here has a section on it.
 
-One thing follows from the structure, and it is the only claim on this page: **a word cloud puts frequency on text size, which is an area-like channel, and it discards word order, adjacency and context entirely.** So it answers "which words are frequent" and nothing else. Two consequences:
+One thing follows from the structure: **a word cloud puts frequency on text size, which is an area-like channel, and it discards word order, adjacency and context entirely.** So it answers "which words are frequent" and nothing else. Two consequences:
 
 - Area is read less accurately than position or angle, inherited from [channels.md](../concepts/channels.md) with the same conjectural step every type page takes to get from a chart to a channel. [treemap.md](treemap.md) and [bubble-chart.md](bubble-chart.md) carry that inheritance in full and nothing here adds to it.
 - **The mark's area is not a clean function of the value.** Frequency is normally mapped to font size, so glyph area grows as the square of the value, and a long word covers more canvas than a short one set at the same size. That is arithmetic rather than measurement, and it is a defect on top of the ordinary area penalty rather than the same one.
@@ -41,7 +41,7 @@ No basis here for choosing among them. The one catalog in this corpus with such 
 
 **Defensible, with the label said out loud:**
 
-- "The codes were counted and the counts went on a bar chart." That is a magnitude chart with a text-derived variable, and it inherits everything on [magnitude.md](magnitude.md). Say it that way rather than calling it qualitative visualization.
+- "The codes were counted and the counts went on a bar chart." That is a magnitude chart with a text-derived variable, and it inherits everything on [magnitude.md](magnitude.md).
 - "The quotes are printed as quotes." A published catalog files quotes, matrices and lists as forms in this group, so the precedent exists. `authority-asserted`, from a chapter nobody here has opened.
 
 **Commonly repeated, and the evidence does not support it:**
@@ -51,11 +51,11 @@ No basis here for choosing among them. The one catalog in this corpus with such 
 
 ## The failure mode this group invites
 
-**Text made to look measured.** These forms produce a figure with no axis, no scale and no guide, carrying counts on an unlabeled size channel, from material that was often never a quantity. The picture reads as a result. Structural rather than measured, and the cheap check is whether you could put a number on the figure: if the answer is a count, draw the count.
+**Text made to look measured.** These forms produce a figure with no axis, no scale and no guide, carrying counts on an unlabeled size channel, from material that was often never a quantity. The picture reads as a result. Structural rather than measured: where the number behind the figure is a count, the count is a magnitude chart.
 
 ## Types in this index
 
-None, and the index does not want any. For most questions that arrive here the honest route is out, into [magnitude.md](magnitude.md) or [tables.md](tables.md).
+None. For most questions that arrive here the route is out, into [magnitude.md](magnitude.md) or [tables.md](tables.md).
 
 Candidates, none of which has a study or a page: word cloud, word tree, icon array, and coloring phrases inside a printed passage.
 
