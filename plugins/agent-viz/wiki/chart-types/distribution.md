@@ -47,12 +47,13 @@ A failed test places the question in a different group, or in a different figure
 | Strip plot / univariate scatterplot *(no page yet)* | Every observation | n is small. The recommended form at the sample sizes Weissgerber et al. measured |
 | [Beeswarm](beeswarm-plot.md) | Every observation, displaced sideways so that none is hidden | Same intent as the strip plot, with the collisions resolved deterministically rather than by jitter or overlap. Untested |
 | [Histogram](histogram.md) | Counts per bin | One variable, enough data, and modality or gaps matter |
+| [ECDF](ecdf-plot.md) | Every observation at its value against its rank, as a step function | The question is cumulative: what fraction is below a threshold, or where a quantile sits. No bin width and no bandwidth. Untested |
 | [Box plot](boxplot.md) | Five numbers per group | Many groups compared at once, and within-group shape is not the question |
 | [Violin plot](violin-plot.md) | A mirrored density estimate | Shape matters across groups, or a mean and its error are being encoded on a symmetric continuous mark |
 | [Ridgeline](ridgeline-plot.md) | One density estimate per group, stacked and overlapping | Many groups in a known order have to share one value axis in one figure, and occlusion is accepted to get them there. Untested |
 | Gradient plot *(no page yet)* | Continuous uncertainty around an estimate | The other alternative [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) tested, and they decline to rank it against the violin |
 
-ECDF, histogram-of-histograms and the whole small-multiple family have no page here for the same reason: no study in this source set touches them. **A page is not a warrant.** [beeswarm-plot.md](beeswarm-plot.md) and [ridgeline-plot.md](ridgeline-plot.md) have pages and no study either; what they carry is a decomposition and a set of cautions.
+Histogram-of-histograms and the whole small-multiple family have no page here. **A page is not a warrant, and the absence of one is not a verdict.** [beeswarm-plot.md](beeswarm-plot.md), [ridgeline-plot.md](ridgeline-plot.md) and [ecdf-plot.md](ecdf-plot.md) have pages and no study behind any of them; what they carry is a decomposition and a set of cautions.
 
 Four constraints that follow from the evidence rather than from taste:
 
@@ -102,7 +103,7 @@ A usable check: if a reader could not reconstruct roughly how many observations 
 - [ridgeline-plot.md](ridgeline-plot.md)
 - [dot-strip-plot.md](dot-strip-plot.md), which is the strip plot drawn for a ranking question and is indexed primarily under [ranking.md](ranking.md)
 
-ECDFs and gradient plots have no page. The gradient plot is the one with a real result attached to it, in Correll & Gleicher, and it is a result about encoding a mean and its error rather than about showing a sample. Ridgelines and beeswarms now have pages and still have no study: no experiment in this source set tests either form against anything, and the pages say so under *measurably good at*.
+The gradient plot has no page, and it is the one with a real result attached to it, in Correll & Gleicher, which is a result about encoding a mean and its error rather than about showing a sample. Ridgelines, beeswarms and ECDFs now have pages and still have no study: no experiment in this source set tests any of the three against anything, and the pages say so under *measurably good at*.
 
 ## A note on filing
 

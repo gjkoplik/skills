@@ -14,7 +14,7 @@ What a reader needs from this page is the index below and the honest account of 
 
 Several claims here changed when someone finally opened the primary. One cited paper turned out to contain arithmetically impossible numbers, and a web summarizer once returned, inside quotation marks, the reverse of a paper's stated conclusion. A `secondary-only` page has not earned the same trust as a `primary-read` one.
 
-**Current state: 51 `primary-read`, 6 `secondary-only`, 0 `not-reached`, of which 23 are `status_partial`.** Parsed from frontmatter across `sources/`, `studies/` and `people/` by `validate.py`, which fails if this line drifts. `concepts/` and `chart-types/` are synthesis and structure, and are not counted.
+**Current state: 53 `primary-read`, 6 `secondary-only`, 0 `not-reached`, of which 25 are `status_partial`.** Parsed from frontmatter across `sources/`, `studies/` and `people/` by `validate.py`, which fails if this line drifts. `concepts/` and `chart-types/` are synthesis and structure, and are not counted.
 
 This is the only count in the wiki, and it exists because a machine enforces it.
 
@@ -73,6 +73,7 @@ This is the only count in the wiki, and it exists because a machine enforces it.
 | [krzywinski-2012-hive-plots.md](studies/krzywinski-2012-hive-plots.md) | `primary-read` | Hive plots. Rules are structural, so no node metadata is needed. **No user study.** |
 | [nollenburg-2023-computing-hive-plots.md](studies/nollenburg-2023-computing-hive-plots.md) | `primary-read` | Hive plot construction is three known-hard problems. Also no user study. |
 | [gutwin-2023-chord-vs-sankey.md](studies/gutwin-2023-chord-vs-sankey.md) | `primary-read` | Sankey beat chord on time, errors, effort and preference. **The performance effects are tiny and mostly wear off by the fourth look.** |
+| [siqueira-rodrigues-2026-vr-graphical-perception.md](studies/siqueira-rodrigues-2026-vr-graphical-perception.md) | `primary-read` | Position beats length beats area, replicated in a headset. The horizontal-bar penalty is large at oblique angles and **absent face-on**. |
 
 ## Concepts
 
@@ -110,7 +111,7 @@ Stated plainly, because a wiki that hides its holes is worse than a short one.
 
 **Accessibility should be imported, not derived.** The four accessibility topics here map onto eight of Chartability's fifty heuristics, one of them only partially; the mapping is in [sources/chartability.md](sources/chartability.md). Its page carries the license analysis and a six-step adoption plan.
 
-Chart-type coverage is broad and thin. Every FT relationship has an index, and **most type pages state that no study in this corpus tests the form**; the per-page position is in the coverage table at [chart-types/README.md](chart-types/README.md). Named types still without a page include the horizon graph, arc diagram, Gantt, cycle plot, stem-and-leaf, candlestick, ECDF, Venn and Euler diagrams, and the isotype and pictogram, which [chart-types/waffle-chart.md](chart-types/waffle-chart.md) deliberately treats as neighbors rather than as the same form.
+Chart-type coverage is broad and thin. Every FT relationship has an index, and **most type pages state that no study in this corpus tests the form**; the per-page position is in the coverage table at [chart-types/README.md](chart-types/README.md). Named types still without a page include the horizon graph, arc diagram, Gantt, cycle plot, stem-and-leaf, candlestick, Venn and Euler diagrams, and the isotype and pictogram, which [chart-types/waffle-chart.md](chart-types/waffle-chart.md) deliberately treats as neighbors rather than as the same form. **The horizon graph is the one of those with a study waiting for it**: Heer, Kong & Agrawala (2009) is read at primary and recorded on [people/jeffrey-heer.md](people/jeffrey-heer.md) with no page of its own.
 
 **Chart names are not stable, and the tier cannot yet resolve them.** Several type pages record that the name they are filed under is unvouched by any source in this corpus, and three genuine collisions are flagged and unresolved: "mosaic plot" (a business chart and a contingency-table display), "heat map" (a categorical grid, a geographic density surface, and loosely a choropleth), and "range plot" (two measurements, or an interval around an estimate). A name-resolution index is the next piece of work.
 

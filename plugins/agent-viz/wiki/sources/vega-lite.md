@@ -1,6 +1,7 @@
 ---
 type: source
 status: primary-read
+author: jeffrey-heer
 retrieved: 2026-08-23
 ---
 
@@ -11,6 +12,8 @@ The scale reference for Vega-Lite, a declarative grammar of interactive graphics
 **How this was read.** The scale docs page was fetched and converted locally, retrieved 2026-08-23. Quotes below are verbatim from that page.
 
 **What it is good for.** What a chart grammar decides on its own when the spec says nothing. Vega-Lite is unusually honest about this, because a declarative grammar has to write its defaults down or nobody can predict what a spec renders.
+
+**On authorship.** The `author` field names Jeffrey Heer, who is one of four authors of the Vega-Lite paper (Satyanarayan, Moritz, Wongsuphasawat & Heer, 2017) rather than a byline on this documentation page, which the project publishes unsigned. It is recorded because independence is a claim this wiki makes and has already got wrong once; see [../people/jeffrey-heer.md](../people/jeffrey-heer.md) for what that overlap does and does not reach.
 
 **What it does not settle.** This is one page of a large specification. Vega-Lite has an encoding-channel opinion set, a mark set, and a config system that are not covered here at all; [roll-call.md](../roll-call.md) flags the same sampling gap. Nothing on color choice beyond default scheme names, nothing on annotation, accessibility, or narrative.
 

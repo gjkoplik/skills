@@ -60,13 +60,18 @@ Both tables are hypotheses, both authors say so, and the 1985 one separates leng
 
 | Comparison | Status | Source |
 |---|---|---|
-| Position beats length | Evidence-backed, errors 40% to 250% larger | CM84, HB10 |
+| Position beats length | Evidence-backed, errors 40% to 250% larger | CM84, HB10, SR26 |
 | Position beats angle | Evidence-backed, factor ~2 | CM84, HB10 |
-| Position beats area | Evidence-backed | HB10 |
+| Position beats area | Evidence-backed | HB10, SR26 |
 | Angle beats area | Evidence-backed | HB10 |
+| Length beats area | Evidence-backed | SR26 |
 | **Length beats angle** | **Contested. Predicted by theory, not found in the one head-to-head test** | HB10 |
 | Rectangular area ≈ circular area | Evidence-backed | HB10 |
 | Everything at ranks 5 and 6 | Authority-asserted, from psychophysics and reasoning | CM84 |
+
+CM84 is [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md), HB10 is [Heer & Bostock (2010)](../studies/heer-bostock-2010.md), SR26 is [Siqueira Rodrigues, Israel & Kosch (2026)](../studies/siqueira-rodrigues-2026-vr-graphical-perception.md).
+
+**The third source is a different medium, which is what it adds.** SR26 ran the ratio task in a head-mounted display and got aligned bars at 3.68% mean absolute error, unaligned lengths at 6.61% and circle areas at 12.05%, with all three conditions inside one design and all pairwise contrasts significant at d = 1.28 or larger. Two things follow. The position-length-area chain is now measured outside a flat 2D display. And the three conditions were comparable to each other by construction, which is the property [Cleveland & McGill's own two experiments lack](../studies/cleveland-mcgill-1984.md#the-comparability-caveat-that-kills-the-popular-reading). Angle was not a condition, so nothing there touches rank 3.
 
 ## The one joint where the folk ranking breaks
 

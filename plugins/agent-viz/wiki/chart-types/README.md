@@ -64,6 +64,7 @@ covers why coverage here is stated in words rather than as a number derived by r
 | [dot-strip-plot.md](dot-strip-plot.md) | Ranking, Distribution | **None** |
 | [flow-map.md](flow-map.md) | Spatial, Flow | **None**, and the one flow study does not reach it |
 | [dumbbell-plot.md](dumbbell-plot.md) | Ranking, Change over time | **None** |
+| [ecdf-plot.md](ecdf-plot.md) | Distribution | **None** on the form. Two primary sources agree it has no free parameter and that shape is harder to see on it, neither tested a reader |
 | [gauge-and-bullet.md](gauge-and-bullet.md) | Magnitude | **None.** Few's design spec reports no test |
 | [heatmap.md](heatmap.md) | Magnitude, Correlation | **None** on value extraction from a colored cell |
 | [histogram.md](histogram.md) | Distribution | **None**, and the bin width is a free parameter |

@@ -23,6 +23,7 @@ Every quote was **re-extracted locally**, not taken from a fetch summary. See [R
 | ["Bertin's seven visual variables"](#bertins-seven-visual-variables) | The number is wrong | Eight. Collapsing the plane's two dimensions into one breaks the argument it came from |
 | [Anand & Chattaraj on instruction stacking](#a-preprint-to-use-directionally-only) | Directional only | Verbatim correct, unreviewed, and its own Table 7 breaks the remediation story |
 | ["Chord is harder to read than Sankey"](#chord-diagrams-are-harder-to-read-than-sankey-diagrams) | Supported, and tiny | Effect sizes 0.02 and 0.001, gone by the fourth exposure. The large effect is preference |
+| ["Horizontal bars are read less accurately than vertical"](#horizontal-bar-charts-are-read-less-accurately-than-vertical-ones) | Measured in VR, absent face-on | Large at oblique viewing angles in a headset, no difference at all at the one face-on position, and untested on a flat screen |
 
 ---
 
@@ -209,3 +210,17 @@ The large effect is preference, not performance: 42 of 51 preferred the Sankey, 
 **Accurate phrasing:** for a static, one-look audience, a Sankey is read faster and with much less reported effort than an equivalent chord diagram, and is strongly preferred. The accuracy difference is negligible, the speed difference mostly disappears with familiarity, and nothing here has been tested with interaction.
 
 Detail: [studies/gutwin-2023-chord-vs-sankey.md](studies/gutwin-2023-chord-vs-sankey.md).
+
+## "Horizontal bar charts are read less accurately than vertical ones"
+
+**Status: measured, and conditional on a viewing geometry a screen does not have. Retrieved 2026-09-05.**
+
+[Siqueira Rodrigues, Israel & Kosch (2026)](studies/siqueira-rodrigues-2026-vr-graphical-perception.md) put 13 participants in a head-mounted display and had them read ratios off bar charts on a virtual wall. Collapsed across positions, horizontal bars produced 6.40% mean absolute error against vertical bars' 3.33%, a gap of 3.07 percentage points at d = 2.46 and generalized η² = .49. Their abstract states it as a property of orientation: horizontal bars "produced higher error and greater between-participant variability than vertical bar charts."
+
+**The collapsed number hides the finding.** The design crossed orientation with three lateral offsets, and at the face-on position the two orientations did not differ at all (p = .713). The gap appears only at offsets of 2.75 m and 4.8125 m along the wall, where the value axis of a horizontal bar runs along the direction of perspective foreshortening and a vertical bar's runs across it. Within the horizontal condition error rose monotonically with offset; within the vertical condition **no pairwise contrast was significant** (p = .942, .998, .960).
+
+The authors are explicit that their result diverges from the physical-display study they replicated, and attribute the divergence to the apparatus rather than to the encoding: their virtual wall has no bezels to serve as length references, an outcome they call "consistent with the removal of bezel-based spatial anchors rather than a fundamental change in the perceptual hierarchy." Two of the three mechanisms they offer are properties of the headset optics.
+
+**Accurate phrasing:** in a head-mounted display, a bar chart viewed at an oblique angle is read less accurately when its bars extend along the foreshortened axis. Nothing here has been tested on a display the reader faces squarely, where the same experiment found no difference, and this corpus contains no study of bar orientation on a flat screen at all. The style-guide practice of turning bars horizontal to fit long category labels is untouched.
+
+Detail: [studies/siqueira-rodrigues-2026-vr-graphical-perception.md](studies/siqueira-rodrigues-2026-vr-graphical-perception.md), [chart-types/bar-chart.md](chart-types/bar-chart.md).

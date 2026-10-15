@@ -25,6 +25,23 @@ what the rule now is and links the entry here for why.
 
 ---
 
+## v2026.09.05
+
+The weekly research sweep: one paper, one chart type, one person.
+
+### Added
+
+- [studies/siqueira-rodrigues-2026-vr-graphical-perception.md](studies/siqueira-rodrigues-2026-vr-graphical-perception.md). Position beats length beats area, replicated in a head-mounted display with all three conditions inside one design. Separately, horizontal bars lose to vertical ones at oblique viewing angles and not at all face-on.
+- [chart-types/ecdf-plot.md](chart-types/ecdf-plot.md). The distribution form with no free parameter in its transform. Two primary sources, no study behind either.
+- [people/jeffrey-heer.md](people/jeffrey-heer.md). Four papers read at primary, three of which have no page and one of which would give the horizon graph a study.
+
+### Changed
+
+- [concepts/channels.md](concepts/channels.md) gains a third source on position-beats-length and position-beats-area, and a first on length-beats-area.
+- [chart-types/bar-chart.md](chart-types/bar-chart.md) records bar orientation as contested in immersive displays and `absence of evidence` on a flat screen.
+- [refutations.md](refutations.md) gains the horizontal-bar entry: real, large, and gone at the one face-on condition.
+- [sources/vega-lite.md](sources/vega-lite.md) records an author for the first time, which puts an unaudited independence claim in [inventory.md](inventory.md) topic 35 on the record.
+
 ## v2026.08.29
 
 The results of a dream run: the weekly research sweep, plus a corpus-wide pass converting the wiki
