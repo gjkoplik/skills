@@ -7,27 +7,19 @@ retrieved: 2026-08-23
 
 # Edward Tufte
 
-**What they are known for.** *The Visual Display of Quantitative Information* (1983) and three successors, self-published through his own press, which gave the field its working vocabulary: data-ink, chartjunk, the lie factor, small multiples, sparklines. He is the most-cited author on this subject and the one whose central rule has held up worst.
+**What they are known for.** *The Visual Display of Quantitative Information* (1983) and three self-published successors, which gave the field its working vocabulary: data-ink, chartjunk, the lie factor, small multiples, sparklines. He is the most-cited author on this subject and the one whose central rule has held up worst.
 
-**How this was read.** There is one upgrade and one reachability correction. Retrieved 2026-08-23.
+**How this was read.** `secondary-only`, with two exceptions read directly: `tufte.css`, and Tufte's own excerpt of the sparklines chapter of *Beautiful Evidence*, fetched with `curl` and stripped to text locally (<https://www.edwardtufte.com/notebook/sparkline-theory-and-practice-edward-tufte/>). That excerpt is reachable, so the unreachable status on [sources/tufte.md](../sources/tufte.md) is upgradeable. The four books are not free and were not read. Data-ink and chartjunk live on [sources/tufte.md](../sources/tufte.md) and [refutations.md](../refutations.md), with their caveats.
 
-**The upgrade.** Tufte posted an excerpt of the sparklines chapter of *Beautiful Evidence* on his own site, and it is reachable and readable: <https://www.edwardtufte.com/notebook/sparkline-theory-and-practice-edward-tufte/>. The page was fetched with `curl` and stripped to text locally. The sparkline material below is **read from Tufte**, which makes it the only thing in this wiki that is.
+**What they are good for.** The vocabulary. Small multiples and graphical integrity, which nothing in the record argues against. The most fully specified visual house style in the canon. The status of citations made in his name, which almost always deploy an assertion as a finding.
 
-**Reachability.** [sources/tufte.md](../sources/tufte.md) records this source as unreachable. It is not, and that page's status is upgradeable.
-
-**Everything else remains secondhand.** The four books are not free and were not read. The data-ink and chartjunk material on this page is deliberately not restated; it lives at [sources/tufte.md](../sources/tufte.md) and [refutations.md](../refutations.md), which carry their own caveats, and this page points rather than repeats.
-
-**What they are good for.** The vocabulary; small multiples and graphical integrity, which nothing in the record argues against; and the most fully specified visual house style anyone in the canon has produced. Also the status of citations made in his name, which almost always deploy an assertion as a finding.
-
-**What they do not settle.** Whether removing non-data ink helps anyone read anything. He ran no experiments; the books contain no user studies.
+**What they do not settle.** Whether removing non-data ink helps anyone read anything. He ran no experiments, and the books contain no user studies.
 
 ---
 
 ## "In the style of Tufte" means, concretely
 
-Unusually tractable, because the look is codified twice over: in his own typeset books, and in `tufte-css`, the third-party stylesheet that reverse-engineers them and is maintained under his GitHub organization.
-
-**The page, with numbers.** From `tufte.css`, fetched and read directly:
+The look is codified in his books and in `tufte-css`, a third-party stylesheet that reverse-engineers them, maintained under his GitHub organization:
 
 | | |
 |---|---|
@@ -38,75 +30,64 @@ Unusually tractable, because the look is codified twice over: in his own typeset
 | Margin notes and side figures | `40%`, in the space the text column does not use |
 | Full-width figures | `100%`, breaking the text measure entirely |
 
-The load-bearing decision is that **the margin is not empty space, it is a second column**. Notes, small figures and asides live beside the sentence that refers to them, so nothing is deferred to a footnote or a numbered figure elsewhere. Figures sit at the exact point of reference. Many are not numbered at all, because numbering is what a figure placed somewhere else requires.
+The margin is a second column. Notes, small figures and asides sit beside the sentence that refers to them, so many figures need no number.
 
-**The chart marks.** Reductive to the point of austerity: the **range-frame**, where the axis line is trimmed to run only across the span the data occupies, so the frame itself reports the min and max; the **dot-dash plot**, where the axis is replaced by a marginal rug of the actual observations; the **midgap** box plot, with the box deleted and the median reduced to a dot. Gridlines removed or reduced to hairlines. Legends replaced by direct labels. Color used sparingly and usually as one accent against gray or against the paper.
+**Chart marks.** The **range-frame** trims the axis to the span of the data, so the frame reports min and max. The **dot-dash plot** replaces the axis with a rug of the observations. The **midgap** box plot deletes the box and reduces the median to a dot. Gridlines become hairlines or go, direct labels replace legends, and color is one accent against gray.
 
-**Sparklines, which is the one part read from him directly.** From his own excerpt: a sparkline is a small word-sized graphic embedded in text, and he calls them "datawords". The construction he demonstrates, on a clinical glucose series:
+**Sparklines**, from his excerpt: small word-sized graphics in text, which he calls "datawords". His clinical glucose example is a bare line with no axis or frame, sized to the type (14 letterspaces wide), with the latest value printed beside it, tied to the rightmost point by a shared accent color, and a gray band for the normal range. Stacked in a table, hundreds of series compare in parallel. In a financial table he uses red for the oldest and newest values and blue for the yearly low and high. His stated design target is **"General idea = max[data], min[design]."** He defends the low resolution as approximately right rather than exactly wrong.
 
-- a bare line, no axis and no frame, sized to the type around it (he gives 14 letterspaces as a working width),
-- the most recent value printed as a **number** beside the line, with the line's rightmost point and that number tied together by a shared color accent,
-- the normal range shown as a **gray band** behind the line, so "above the band" and "below the band" are the reading,
-- stacked into a table so hundreds of series compare in parallel.
+**The tell.** Cream paper, a very small serif face, a live margin column, a chart with no frame, no legend and one accent color, and the graphic inside the sentence.
 
-For a financial table he uses red for the oldest and newest values in the series and blue for the yearly low and high. His stated design target on the same page is compact: **"General idea = max[data], min[design]."** And his defense of the resolution trade is that the idea is to be approximately right rather than exactly wrong.
+## What they established, and what gets over-claimed in their name
 
-**The tell.** Cream paper, a very small serif face, a live margin column, a chart with no frame and no legend and one accent color, and text and graphic interleaved so tightly that the graphic is inside the sentence.
+### Data-ink is not settled
 
-## What they actually established, and what gets over-claimed in their name
+The record is on [refutations.md](../refutations.md) under "Chartjunk and the data-ink ratio as settled", and on [sources/tufte.md](../sources/tufte.md).
 
-### Data-ink is not settled, and this page will not pretend otherwise
+- [Gillan & Richman (1994)](../studies/gillan-richman-1994-data-ink.md) found the effect element-conditional. Experiment 1 supports Tufte in aggregate. Later experiments found that removing the y-axis line and the x axis generally increased response time, while removing tick marks helped. That page is `secondary-only`, since the full text was not reached.
+- Chartjunk is contested in both directions. Decoration around the marks is contested. Deformation of the marks is not.
 
-**The empirical record is at [refutations.md](../refutations.md) under "Chartjunk and the data-ink ratio as settled", with its caveats attached, and at [sources/tufte.md](../sources/tufte.md).** The compressed version, with the caveats intact:
+Stripping decoration is supported, keeping orientation is supported, deforming the mark is not, and "maximize" is the verb the element-level data does not support.
 
-- [Gillan & Richman (1994)](../studies/gillan-richman-1994-data-ink.md) found the effect **element-conditional**. Their Experiment 1 supports Tufte in aggregate. The later experiments found removing the y-axis line and the x axis generally **increased** response time, meaning removal hurt, while removing tick marks helped. That page is `secondary-only`; the full text was not reached.
-- Chartjunk is contested in both directions, and the sharper reading in `refutations.md` is that decoration **around** the marks is contested while deformation **of** the marks is not.
+### "Within reason" is Tufte's sentence with Wilke's italics
 
-The phrasing this project settled on: **stripping decoration is supported, keeping orientation is supported, deforming the mark is not, and "maximize" is the verb the element-level data does not support.**
+**"Maximize the data-ink ratio, within reason"** is Tufte, quoted by Wilke in chapter 23 of *Fundamentals*. The italics on *within reason* are Wilke's, and in the same passage he says he thinks Tufte forgets the qualifier for the rest of the book. Correct form: *Tufte, quoted in Wilke ch. 23.*
 
-### The attribution point, recorded so it stays fixed
+### One of his redesigns was measured, and it lost
 
-The sentence **"Maximize the data-ink ratio, within reason"** is **Tufte's**, quoted by Wilke in chapter 23 of *Fundamentals*. The italics on *within reason* are **Wilke's**, added deliberately, and Wilke says in the same passage that he thinks Tufte forgets the qualifier for the rest of the book. This wiki previously cited the sentence as Wilke's own. Correct form: *Tufte, quoted in Wilke ch. 23.* Full detail at [sources/tufte.md](../sources/tufte.md), which is where the correction was made.
-
-### One of his own redesigns has been measured, and it lost
-
-This is new to this wiki.
-
-Tufte's **midgap** box plot deletes the box to raise the data-ink ratio, keeping only the whiskers and a dot for the median. No information is removed and the plot gets substantially more compact, so on his own criterion it is a strict improvement. Wickham & Stryjewski, *40 years of boxplots*, report that it was tested:
+The midgap box plot removes no information and is more compact, so by his own criterion it is a strict improvement. Wickham & Stryjewski, *40 years of boxplots*, report:
 
 > "perceptual studies (Stock and Behrens, 1991) have found Tufte's variation to be substantially less accurate than the original."
 
-**Stock & Behrens was not reached**, so this is a reported result from a `primary-read` secondary source, and it is one study on one redesign. It is the clearest available case of a data-ink minimization being measured against the thing it minimized and coming out worse. It sits well next to Gillan & Richman's axis-line finding, which points the same direction from a different angle. See [john-tukey.md](john-tukey.md).
+Stock & Behrens was not reached. This is one study of one redesign, reported by a `primary-read` secondary source. It is the clearest available case of a data-ink minimization losing to the original. Gillan & Richman's axis-line finding points the same way. See [john-tukey.md](john-tukey.md).
 
-### He ran no experiments, and this is the thing most often forgotten
+### He ran no experiments
 
-*The Visual Display of Quantitative Information* is 197 pages of argument, historical example and redesign. It contains no controlled study. Every rule in it is [authority-asserted](../concepts/evidence-class.md), by an unusually good authority, and the characteristic failure in his name is people citing "Tufte showed that chartjunk hurts comprehension." Nothing showed that. Bateman et al. later tested something adjacent and found accuracy no worse on embellished charts.
+The first book is argument, historical example and redesign, with no controlled study. Every rule in it is [authority-asserted](../concepts/evidence-class.md). The characteristic failure is citing "Tufte showed that chartjunk hurts comprehension." Nothing showed that. Bateman et al. later tested something adjacent and found accuracy no worse on embellished charts.
 
-### What survives untouched
+### What survives
 
-**Small multiples** (chapter 8) and **graphical integrity** (chapter 2, the lie factor, design variation versus data variation). Nothing in the record argues against either, and neither is implicated in the data-ink contest.
+**Small multiples** (chapter 8) and **graphical integrity** (chapter 2: the lie factor, design variation versus data variation). Nothing in the record argues against either. The term "small multiples" is his, the practice older. Nightingale's 1858 plate is two panels on a shared area scale, and Bertin's matrix method is small multiples with the sorting made explicit ([florence-nightingale.md](florence-nightingale.md), [jacques-bertin.md](jacques-bertin.md)).
 
-One qualification on small multiples: **the term is his, the practice is much older**. Nightingale's 1858 plate is two panels on a shared area scale with a leader line tying them together, and Bertin's entire matrix method is small multiples with the sorting made explicit. See [florence-nightingale.md](florence-nightingale.md) and [jacques-bertin.md](jacques-bertin.md).
+### Minard, and the missing Nightingale
 
-### The Minard problem, and the omission behind it
-
-Tufte calls Minard's 1869 march-on-Moscow figure possibly the best statistical graphic ever drawn, and that judgment has propagated further than almost anything else he wrote. [Hugh Small](https://www.york.ac.uk/depts/maths/histstat/small.htm) points out that Minard's temperature curve implies the army froze to death, while roughly 300,000 were lost on the advance against 90,000 on the retreat. Small also notes that **Tufte does not mention Nightingale in the book at all**, which is a real omission in a history that reaches back to Playfair and forward to Minard, and part of why the canon this project sampled had no route to her. Both points are `secondary-only`, from Small.
+Tufte calls Minard's 1869 march-on-Moscow figure possibly the best statistical graphic ever drawn, his most widely repeated judgment. [Hugh Small](https://www.york.ac.uk/depts/maths/histstat/small.htm) points out that Minard's temperature curve implies the army froze to death, while roughly 300,000 were lost on the advance against 90,000 on the retreat. Small also notes that the book, whose history runs from Playfair to Minard, never mentions Nightingale. Both points are `secondary-only`, from Small.
 
 ## Works, and where they sit in this wiki
 
-- ***The Visual Display of Quantitative Information*** (1983; 2nd ed. 2001, 197 pp) has a page at [sources/tufte.md](../sources/tufte.md), including the chapter list, the two Tufte quotes that reached this project through Wilke, and the structural argument for why a thin page here is worse than a thin page elsewhere.
-- ***Envisioning Information*** (1990), ***Visual Explanations*** (1997), ***Beautiful Evidence*** (2006). **No pages.** The sparklines chapter of the last is pages 46-63 and its excerpt is the one thing here read from him.
-- ***The Cognitive Style of PowerPoint*** (essay) and ***Visual and Statistical Thinking***. **Not covered**, and out of scope for a figure bar.
-- **`tufte-css`**, at `edwardtufte.github.io/tufte-css`. **Not a Tufte work.** A third-party codification under his GitHub organization. Read directly for this page, and it is the most executable specification of the look that exists.
+- ***The Visual Display of Quantitative Information*** (1983; 2nd ed. 2001). [sources/tufte.md](../sources/tufte.md) has the chapter list and the two Tufte quotes that arrived through Wilke.
+- ***Envisioning Information*** (1990), ***Visual Explanations*** (1997), ***Beautiful Evidence*** (2006). **No pages.** The sparklines chapter of the last is pages 46-63.
+- ***The Cognitive Style of PowerPoint*** and ***Visual and Statistical Thinking***. Out of scope for a figure bar.
+- **`tufte-css`** (`edwardtufte.github.io/tufte-css`). **Not a Tufte work.** A third-party codification, and the most executable specification of the look.
 
-**The structural gap has not closed.** He still has no row in [roll-call.md](../roll-call.md) and no entry in [inventory.md](../inventory.md) except by quotation through Wilke. This page is about the person and the style; it does not enumerate the book, and enumerating the book is what the roll-call's own guarantee requires. Nine chapters are listed on [sources/tufte.md](../sources/tufte.md) and somebody with a copy could map them in an afternoon.
+He has no row in [roll-call.md](../roll-call.md) and appears in [inventory.md](../inventory.md) only through Wilke. The roll-call's guarantee needs the book enumerated, and [sources/tufte.md](../sources/tufte.md) lists nine chapters without mapping them.
 
 ## Links
 
-- [sources/tufte.md](../sources/tufte.md), the work, the quote provenance, and the audit gap
-- [refutations.md](../refutations.md), the data-ink and chartjunk record with its caveats
-- [studies/gillan-richman-1994-data-ink.md](../studies/gillan-richman-1994-data-ink.md), the element-conditional finding
-- [concepts/evidence-class.md](../concepts/evidence-class.md), the distinction his reputation routinely erases
-- [claus-wilke.md](claus-wilke.md), who inherits the data-ink position and then argues it down in the text
-- [john-tukey.md](john-tukey.md), whose box plot he redesigned, and whose original beat the redesign under test
-- [jacques-bertin.md](jacques-bertin.md), the other theorist whose most-cited rule rests on assertion, and who got there sixteen years earlier
+- [sources/tufte.md](../sources/tufte.md): the work, the quote provenance, the audit gap
+- [refutations.md](../refutations.md): the data-ink and chartjunk record
+- [studies/gillan-richman-1994-data-ink.md](../studies/gillan-richman-1994-data-ink.md): the element-conditional finding
+- [concepts/evidence-class.md](../concepts/evidence-class.md): the distinction his reputation erases
+- [claus-wilke.md](claus-wilke.md): inherits the data-ink position, then argues it down
+- [john-tukey.md](john-tukey.md): whose box plot beat Tufte's redesign under test
+- [jacques-bertin.md](jacques-bertin.md): the other theorist whose most-cited rule rests on assertion, sixteen years earlier

@@ -7,26 +7,19 @@ retrieved: 2026-08-27
 
 # FT Visual Vocabulary
 
-A poster and companion repository from the Financial Times Visual Journalism Team that organizes chart types under **nine data relationships**, so that chart choice starts from what is being shown rather than from a menu of shapes. The listing runs to **67 entries under 59 distinct names**, eight names being filed under two relationships each.
+A poster and companion repository from the Financial Times Visual Journalism Team. It files chart types under **nine data relationships**, so chart choice starts from what is being shown rather than from a menu of shapes. The listing has **67 entries under 59 distinct names**, eight names being filed under two relationships each.
 
-**How this was read.** `primary-read`, with one scope note, and read twice.
+**What it is good for.** The answer to "what family of chart does this question call for", with a one-line gloss per type.
 
-- **2026-08-23.** The `visual-vocabulary` README in the `Financial-Times/chart-doctor` repository was fetched and converted locally. That pass recorded all nine category definitions and a sample of the per-chart glosses.
-- **2026-08-27.** The raw markdown was fetched again with `curl -sL` from `raw.githubusercontent.com` on the repository's default branch, saved locally, and its identity confirmed from the opening lines before anything was quoted. The full listing below was extracted from that saved file by walking its `###` category headings and `####` type headings and taking the first prose line under each, so every gloss here is machine-lifted from the source text rather than retyped. 67 type headings were found and 67 glosses recovered, with none missing.
+**What it does not settle.** Color, typography, accessibility, annotation and layout, which the README says it does not cover. It is **copyright, all rights reserved** by The Financial Times Limited, so it can be cited but not copied. The glosses are quoted with attribution. The poster and the README's related-reading apparatus are not reproduced.
 
-Quotes are verbatim, including the source's own typos, which are frequent enough to be worth expecting: "value pf multiple variables", "the arrngement of the variables", "count/magnitde", "earthquakes by contintent", "in a table,they work best". **One repair was made and only one.** The nine category definitions in the raw markdown have words run together where the poster's line breaks were pasted in ("can bebroken down", "issolely", "chartinstead", "locations orgeographical"). Those spaces are restored in the definitions below. No gloss needed the repair.
-
-**The PDF poster itself has still not been opened**, so any claim about the poster's layout or visual design is not vouched here. That is now the only unread part of this source: the README is covered end to end.
-
-**What it is good for.** The taxonomy, and now the complete type listing under it. It is the answer to "what family of chart does this question call for", and it is the only source in this corpus organized that way. The per-chart glosses are one line each and are unusually sharp.
-
-**What it does not settle.** Nearly everything else. No color guidance, no typography, no accessibility, no annotation, no layout. It says so itself. It is also **copyright, all rights reserved** by The Financial Times Limited, unlike the openly licensed material elsewhere in this wiki, so it can be cited but not copied. The glosses below are quoted with attribution, which is citation. The poster is not reproduced and neither is the README's related-reading apparatus, which is the bulk of the document by length.
+**How this was read.** `primary-read` for the README, end to end. The PDF poster was not opened, so nothing about its layout or design is vouched for. The `visual-vocabulary` README in `Financial-Times/chart-doctor` was first fetched and converted locally for the category definitions and a sample of glosses. The raw markdown was then fetched with `curl -sL` from `raw.githubusercontent.com` on the default branch, saved, and identified from its opening lines before quoting. The listing was machine-lifted from that file by walking its `###` category and `####` type headings and taking the first prose line under each; every type heading yielded a gloss. Quotes keep the source's typos ("value pf multiple variables", "count/magnitde"). One repair: the category definitions run words together where the poster's line breaks were pasted in ("can bebroken down", "issolely"), and those spaces are restored. No gloss needed it.
 
 ---
 
 ## The nine relationships
 
-Each carries a definition and example FT uses. These are the categories, with the definitions verbatim where they do work:
+Each carries a definition and an FT example. The definitions, verbatim:
 
 **Deviation.** "Emphasise variations (+/-) from a fixed reference point. Typically the reference point is zero but it can also be a target or a long-term average. Can also be used to show sentiment (positive/neutral/negative)."
 
@@ -46,17 +39,11 @@ Each carries a definition and example FT uses. These are the categories, with th
 
 **Flow.** "Show the reader volumes or intensity of movement between two or more states or conditions. These might be logical sequences or geographical locations."
 
-Two of those definitions are doing more than categorizing.
-
-**Correlation carries a warning about the reader's inference,** not about the chart. That is a different kind of rule from anything else in this corpus: it is about what the audience will conclude regardless of what was drawn.
-
-**Part-to-whole and Magnitude are defined against each other.** "If the reader's interest is solely in the size of the components, consider a magnitude-type chart instead." The taxonomy is explicit that the same data can sit in two families and the *question* decides. This is the whole argument for organizing by relationship rather than by data shape.
-
-**Spatial says "used only when",** which is inventory topic 22 embedded in the taxonomy itself.
+Correlation's warning is about what the audience will infer, not about what was drawn. Part-to-whole and Magnitude are defined against each other, so the same data can sit in two families and the question decides. Spatial's "used only when" is inventory topic 22 built into the taxonomy.
 
 ## The complete listing
 
-Every type the Visual Vocabulary names, under its category, with its one-line gloss verbatim. Counts per category are the FT's, not this wiki's.
+Every type the Visual Vocabulary names, under its category, with its one-line gloss verbatim. Per-category counts are the FT's.
 
 ### Deviation (4 types)
 
@@ -170,10 +157,9 @@ Every type the Visual Vocabulary names, under its category, with its one-line gl
 | **Chord** | "A complex but powerful diagram which can illustrate 2-way flows (and net winner) in a matrix." |
 | **Network** | "Used for showing the strength and inter-connectedness of relationships of varying types." |
 
-
 ## Eight names, filed twice
 
-The FT files eight of its 59 names under two relationships each, which is the taxonomy applying its own rule that the reader's question decides. Where the two glosses differ, both are given above and the difference is the point.
+Eight of the 59 names sit under two relationships each, which is the taxonomy applying its own rule that the reader's question decides. Where the two glosses differ, both are in the listing above.
 
 | Name | Filed under | Do the two glosses differ? |
 |---|---|---|
@@ -188,50 +174,44 @@ The FT files eight of its 59 names under two relationships each, which is the ta
 
 ## The zero baseline is attached to Magnitude, not to columns
 
-This is the finding the earlier partial reading got half right. The FT states the zero rule twice and both statements sit in **Magnitude**:
+Both of the FT's zero statements sit in **Magnitude**:
 
 - **Column** (Magnitude): "The standard way to compare the size of things. Must always start at 0 on the axis"
 - **Lollipop chart** (Magnitude): "Lollipop charts draw more attention to the data value than standard bar/column – does not HAVE to start at zero (but preferable)."
 
-Nowhere else in the listing does the word zero appear in a gloss. The **Column** entry under Change over Time says only "Columns work well for showing change over time - but usually best with only one series of data at a time." **Ordered bar** and **Ordered column** under Ranking say nothing about a baseline. The same mark, drawn the same way, carries the rule in one category and not in the other two.
+No other gloss uses the word zero. **Column** under Change over Time says only "Columns work well for showing change over time - but usually best with only one series of data at a time." **Ordered bar** and **Ordered column** under Ranking say nothing about a baseline. The same mark carries the rule in one category and not in the other two.
 
-So the FT is doing two things at once, and both matter for inventory topic 9:
+That gives inventory topic 9 two readings:
 
-1. **By mark, within a category.** Filled column must start at zero, lollipop does not have to. The capitals on "HAVE" are the FT's own, and they sit on the negation rather than on the rule. (The earlier partial reading of this source claimed the README also capitalizes "always" on the column. It does not; the raw markdown reads "Must always start at 0 on the axis" with no emphasis of any kind. The poster may set it differently, and the poster is unread.) Same reasoning as Datawrapper's dot-plot remedy and Observable Plot's radius-only enforcement: the constraint follows from whether length or area encodes the value, not from the axis being quantitative. Three sources reaching that independently is the strongest form the topic takes.
-2. **By question, across categories.** The rule is stated where the reader's task is "compare the size of things" and dropped where the task is trend or rank. That is a stronger claim than the by-mark reading alone and it is not one this wiki has recorded from anywhere else.
+1. **By mark, within a category.** A filled column must start at zero; a lollipop does not have to. The capitals on "HAVE" are the FT's and sit on the negation. The README does not capitalize "always"; the poster may, and is unread. Datawrapper's dot-plot remedy and Observable Plot's radius-only enforcement reason the same way: the constraint follows from whether length or area encodes the value, not from the axis being quantitative. Three sources reach that reading independently.
+2. **By question, across categories.** The rule is stated where the task is "compare the size of things" and dropped where the task is trend or rank. No other source here makes that stronger claim.
 
-Read together, the FT's position is that the zero baseline belongs to the size-comparison task rather than to the bar. It is authority-asserted, not evidence-backed, and the FT immediately links out to both sides of the argument (below).
+The FT ties the zero baseline to the size-comparison task rather than to the bar. Authority-asserted, not evidence-backed.
 
 ## Names the taxonomy does not carry
 
-Recording absences matters as much as the listing, because a name missing here cannot be cited to the FT at all.
+A name missing here cannot be cited to the FT.
 
-- **Marimekko and mosaic.** Neither word is a heading. The FT's entry for the form is **Proportional stacked bar**, under both Part-to-whole and Magnitude, and the only further reading attached to either copy is a Chart Doctor piece, "How to apply Marimekko to data". So the FT does file the form, twice, under a name this wiki does not use for it.
-- **Waffle and unit chart.** The FT's name is **Gridplot**, under Part-to-whole. **Isotype (pictogram)** is a separate entry filed under **Magnitude**. The FT therefore splits the two constructions across two relationships rather than treating them as one form.
-- **Adjacency matrix, hive plot, bump chart, sunburst, streamgraph, alluvial diagram, arc diagram.** None appear. The FT's **Arc** entry is unrelated to an arc diagram: it is "A hemicycle, often used for visualising political results in parliaments", filed under Part-to-whole.
-- **Uncertainty** as a relationship. See the Todo gap below.
+- **Marimekko and mosaic.** Not headings. The FT files the form as **Proportional stacked bar**, under Part-to-whole and Magnitude, and the only further reading on either copy is a Chart Doctor piece, "How to apply Marimekko to data".
+- **Waffle and unit chart.** The FT's name is **Gridplot**, under Part-to-whole. **Isotype (pictogram)** is a separate entry under **Magnitude**, so the two constructions sit in different relationships.
+- **Adjacency matrix, hive plot, bump chart, sunburst, streamgraph, alluvial diagram, arc diagram.** Absent. The FT's **Arc** is "A hemicycle, often used for visualising political results in parliaments", unrelated to an arc diagram.
+- **Uncertainty** as a relationship. See below.
 
-## The stated scope, which is the honest part
+## Stated scope
 
 > "This is not an attempt to teach everyone how to make charts, but how to recognise the opportunities to use them effectively alongside words."
 
-That sentence is why the Visual Vocabulary is worth a page and what bounds the claims it can carry. It is a recognition aid for a newsroom-wide chart-literacy training session, not a quality bar. Inventory topics 5 and 4 draw on it, and nothing else in the inventory does.
+It is a recognition aid for newsroom chart-literacy training, not a quality bar. Inventory topics 4 and 5 rest on it, and several others cite it in passing. The lineage is credited: "inspired by the Graphic Continuum by Jon Schwabish and Severino Ribecca."
 
-The lineage is credited: "inspired by the Graphic Continuum by Jon Schwabish and Severino Ribecca."
+## Further reading: both sides, no ruling
 
-## The FT ships the argument, not a ruling
+Most of the README is a per-type related-reading list, labeled "_This is a work in progress._" Under **Line** in Change over Time it links ONS "Does the axis have to start at zero? (Part 1 – line charts)", Quartz "It's OK not to start your y-axis at zero", Vox "Shut up about the y-axis", and Emily Schuch "How to Make a Line Chart that Doesn't Lie". **Column** in the same category links the ONS Part 2 piece on bar charts. **Column** under Magnitude, which states the rule, links nothing.
 
-Most of the README by length is a per-type related-reading list, described in its own words as a work in progress. It is not summarized here beyond what the argument needs, and none of it is reproduced.
+**Line + Column** in Correlation links two dual-axis cautions and HBR on spurious correlations; **Connected scatterplot** repeats one caution beside Kosara's paper. **Pie** links nine items, among them three Kosara pieces, an ONS series, Spence's history, "In defense of pie charts" and Few's "Save the Pies for Dessert". Where the BBC and Urban guides settle these arguments, the FT links to them, which matches a record that is contested on zero baselines, dual axes and chartjunk ([refutations.md](../refutations.md)).
 
-Under **Line** in Change over Time the further reading includes, in one list, ONS "Does the axis have to start at zero? (Part 1 – line charts)", Quartz "It's OK not to start your y-axis at zero", Vox "Shut up about the y-axis", and Emily Schuch "How to Make a Line Chart that Doesn't Lie". Under **Column** in the same category it links the ONS Part 2 piece on bar charts. The **Column** entry under Magnitude, the one that states the rule, links nothing at all.
+## No uncertainty family
 
-Under **Line + Column** in Correlation it links two separate pieces cautioning about dual axes plus HBR on spurious correlations; the **Connected scatterplot** entry repeats one of the dual-axis cautions alongside Kosara's paper. Under **Pie** it links nine items, including three of Kosara's pie-chart pieces, both parts of an ONS series, Spence's history, "In defense of pie charts" and Few's "Save the Pies for Dessert". Both sides, at length.
-
-A style guide that links to the argument instead of settling it is doing something different from the BBC's or Urban's. Whether that is a virtue depends on the reader: it is excellent for someone building a rulebook and useless for someone who wanted a rule. For the topics where this wiki finds the evidence genuinely contested (zero baselines, dual axes, chartjunk; see [refutations.md](../refutations.md)), the FT's refusal to rule looks like the better call in retrospect.
-
-## The gap: uncertainty is a TODO
-
-At the bottom of the README, after all nine categories, sit five unfinished sections:
+The README ends with five unfinished sections:
 
 ```
 Todo:
@@ -242,27 +222,24 @@ Todo:
 ### Colour
 ```
 
-Uncertainty, Animation and Interactivity each carry two or three reading links and no types. Map projections and Colour are empty headings.
+Uncertainty, Animation and Interactivity carry two or three reading links and no types. Map projections and Colour are empty. A fan chart sits under Change over Time ("Use to show the uncertainty in future projections - usually this grows the further forward to projection"), and box plot and violin under Distribution, but no relationship covers "this value is not known precisely".
 
-**The FT taxonomy has no uncertainty family.** A fan chart appears under Change over Time ("Use to show the uncertainty in future projections - usually this grows the further forward to projection") and a box plot and violin under Distribution, but there is no relationship category for "this value is not known precisely", and the section that would create one is a stub.
-
-That matters, because inventory topic 8 (directory-of-visualization coverage) explicitly requires a general bar to say something about **uncertainty** alongside amounts, distributions, proportions, x-y relationships and geospatial data. The most widely circulated chart-selection taxonomy in the field does not have a slot for it. That is some evidence that the topic's under-coverage is a property of the field rather than of any one guide. The statistical-reporting canon fills the gap, and [refutations.md](../refutations.md) records that it was not in this project's original source set either.
+Inventory topic 8 requires a general bar to cover **uncertainty** alongside amounts, distributions, proportions, x-y relationships and geospatial data. The most widely circulated chart-selection taxonomy has no slot for it, which is some evidence that the under-coverage belongs to the field rather than to one guide. The statistical-reporting canon fills the gap; [refutations.md](../refutations.md) records that it was not in this project's original source set.
 
 ## Practical notes
 
-- There are D3 templates in FT style in a separate repository, `ft-interactive/visual-vocabulary`. Same config-beats-prose pattern as `bbplot` and `urbnthemes` (see [bbc-cookbook.md](bbc-cookbook.md), [urban-institute.md](urban-institute.md)), in a different language.
+- FT-style D3 templates live in `ft-interactive/visual-vocabulary`, the same config-over-prose pattern as `bbplot` and `urbnthemes` ([bbc-cookbook.md](bbc-cookbook.md), [urban-institute.md](urban-institute.md)).
 - The poster exists in English, Japanese, traditional Chinese, and simplified Chinese.
-- The README labels its own related-reading section "_This is a work in progress._"
-- Three entries are defined only by cross-reference and carry no gloss of their own: **Ordered column** under Ranking, and **Bar** and **Paired bar** under Magnitude, all of which say "See above."
-- **Licensing:** "Copyright © The Financial Times Limited, all rights reserved." The material is citable and linkable; the poster is not reproducible.
+- **Ordered column** (Ranking), **Bar** and **Paired bar** (Magnitude) are defined by cross-reference: "See above."
+- **Licensing:** "Copyright © The Financial Times Limited, all rights reserved." Citable and linkable; the poster is not reproducible.
 
 ## Where this source is used
 
-Inventory topics 4, 5, 21, 22, 50, 54, 79. See [roll-call.md](../roll-call.md), which maps all nine categories to topic 5 collectively.
+Inventory topics 4, 5, 21, 22, 50, 54, 79. [roll-call.md](../roll-call.md) maps all nine categories to topic 5 collectively.
 
 ## Links
 
 - [Financial-Times/chart-doctor: visual-vocabulary](https://github.com/Financial-Times/chart-doctor/tree/main/visual-vocabulary)
 - [Visual Vocabulary poster (PDF)](https://github.com/ft-interactive/chart-doctor/blob/master/visual-vocabulary/Visual-vocabulary.pdf)
 - [Interactive web version](http://ft-interactive.github.io/visual-vocabulary/)
-- [Graphic Continuum](https://policyviz.com/2014/09/09/graphic-continuum/), the acknowledged inspiration
+- [Graphic Continuum](https://policyviz.com/2014/09/09/graphic-continuum/): the acknowledged inspiration

@@ -6,9 +6,9 @@ retrieved: 2026-08-23
 
 # Lisa Charlotte Muth
 
-**What they are known for.** The Datawrapper blog, where since 2017 she has written the best working practitioner's treatment of color in charts: not "use a colorblind-safe palette" but a numbered account of hue distance, saturation balance, lightness ordering, and how to de-emphasize without accidentally creating a new category. She also writes about text in charts, and argues in public for simple chart types.
+**What they are known for.** The Datawrapper blog, where since 2017 she has written a detailed practitioner's treatment of chart color: hue distance, saturation balance, lightness ordering, and de-emphasis without an accidental new category. She also writes about chart text and defends simple chart types.
 
-**How this was read.** Retrieved 2026-08-23. Five posts under her byline on `datawrapper.de/blog` were pulled with `curl` and stripped to text locally with BeautifulSoup. Every quote below is verbatim from those local files:
+**How this was read.** Five posts under her byline on `datawrapper.de/blog` were pulled with `curl` and stripped to text locally with BeautifulSoup. Every quote is verbatim from those files.
 
 | Post | Date |
 |---|---|
@@ -18,72 +18,68 @@ retrieved: 2026-08-23
 | What to consider when using text in data visualizations | 28 Sep 2022 |
 | Emphasize what you want readers to see with color | undated on the page |
 
-Her own site (`lisacharlottemuth.com`) supplied the biographical line: she writes, creates, talks and hosts events about data vis "currently for Datawrapper in Berlin," and has been paid by Datawrapper to do so since November 2017.
+Her site (`lisacharlottemuth.com`) says she writes, creates, talks and hosts events about data vis "currently for Datawrapper in Berlin," paid by Datawrapper since November 2017.
 
-**What they are good for.** The question she answers: *these colors are technically fine and the chart still looks bad*. Nobody else in this section operates at her resolution. Where [Knaflic](cole-nussbaumer-knaflic.md) says use one accent against neutral, Muth names which hue, at what saturation, how far from a pure hue, and what happens to it in grayscale. She is also the only one of the five with a worked-out theory of **de-emphasis** as distinct from emphasis.
+**What they are good for.** Colors that are technically fine on a chart that still looks bad. Where [Knaflic](cole-nussbaumer-knaflic.md) says one accent against neutral, Muth names the hue, saturation, distance from a pure hue, and grayscale result. She also has a worked-out theory of **de-emphasis**.
 
-**What they do not settle.** Everything is authority-asserted house practice, and it is bound to a hosted tool with a fixed feature set. She cites one paper (Bartram, Patra and Stone 2017 on affective color) across five posts. There is nothing on statistical honesty, uncertainty, or scales, and the chart-type advice is explicitly scoped to "a mainstream, lay audience."
+**What they do not settle.** Everything is authority-asserted house practice, bound to a hosted tool with a fixed feature set. She cites one paper (Bartram, Patra and Stone 2017 on affective color) across five posts. Nothing on statistical honesty, uncertainty, or scales, and the chart-type advice is scoped to "a mainstream, lay audience."
 
 ---
 
 ## "In the style of Lisa Charlotte Muth" means, concretely
 
-**How much of this is inference.** Very little. Her posts are numbered rule lists about her own practice, so this section is mostly quotation. What is **not** grounded here: I did not measure her rendered charts. Her published figures are Datawrapper charts, and no pixel sampling was done, so the palette section below is her stated method rather than a measurement of her output. That is the reverse of the [Schwabish](jonathan-schwabish.md) page, which bears on any comparison of the two.
+Mostly quotation from her numbered rule lists. Her Datawrapper charts were not pixel-sampled, so the palette below is her stated method, not a measurement. The [Schwabish](jonathan-schwabish.md) palette is measured, which matters for any comparison.
 
-**Palette habits.** She does not have a fixed palette. She has a **procedure**, and it is checkable at every step.
+**Palette habits.** A procedure, not a fixed palette.
 
-- **One neighborhood of the wheel.** "There's no need to rely on hues from all around the color wheel... It will look more professional, and therefore more trustworthy, when it only uses a few hues and their neighbors." She names a specific harmony to refuse: "square" or "tetradic," because "it will result in too many hues."
-- **Warm plus blue is the default.** "There's a complementary color combination that is especially loved by data visualization designers: **yellow/orange/red and blue.**" Her reasons are versatility and accessibility: "colorblind people can easily distinguish blue and orange/red from each other." Her summary line is "when in doubt, use an orange/red with blue," which lands in the same place as Schwabish's grayscale-safe pair by a completely different route.
-- **Green is a special case.** Forest green runs roughly 90 to 150 degrees with its peak at 120, and she wants the hue out of the middle of it. "So when using green, make it a bit yellow or a bit blue." She backs it with a measurement of somebody else's chart: the Washington Post green she points at is "a 142° green, but only 14% saturated."
-- **Pure hues are avoided.** Exactly 0, 60, 120, 180, 240, 300 degrees. "If you want to have bright, saturated colors, rely on mixed colors **at least 5-10° away from the pure hues.**" There is a check that needs no color picker: "If at least two of the [RGB] values are the same, they're 'pure'."
-- **The top corner is avoided.** "If your colors come close to 100% saturation **and** 100% brightness, it's likely your colors are too colorful."
-- **Lightness varies deliberately.** "Get it right in black & white." Converted to grayscale, categories that land on the same gray are fixed in the colors rather than with white borders. She names picking categorical colors out of a sequential ramp as a legitimate shortcut, because "all these gradients move smoothly from light to dark."
-- **Then rebalancing.** Having given the colors different lightness, "you'll need to balance them out. Try to desaturate bright colors. Put more saturation in dark colors." The goal is that most colors are "more or less equally attention-grabbing," with only one or two meant to stand out.
+- **One neighborhood of the wheel.** "There's no need to rely on hues from all around the color wheel... It will look more professional, and therefore more trustworthy, when it only uses a few hues and their neighbors." She rejects "square" or "tetradic" harmony because "it will result in too many hues."
+- **Warm plus blue by default.** "There's a complementary color combination that is especially loved by data visualization designers: **yellow/orange/red and blue.**" Partly for accessibility: "colorblind people can easily distinguish blue and orange/red from each other." Her summary, "when in doubt, use an orange/red with blue," lands on Schwabish's grayscale-safe pair by another route.
+- **Green pushed off center.** Forest green runs roughly 90 to 150 degrees with its peak at 120: "So when using green, make it a bit yellow or a bit blue." Her example is a Washington Post green, "a 142° green, but only 14% saturated."
+- **No pure hues** (exactly 0, 60, 120, 180, 240, 300 degrees). "If you want to have bright, saturated colors, rely on mixed colors **at least 5-10° away from the pure hues.**" The check: "If at least two of the [RGB] values are the same, they're 'pure'."
+- **Not the top corner.** "If your colors come close to 100% saturation **and** 100% brightness, it's likely your colors are too colorful."
+- **Varied lightness.** "Get it right in black & white." Categories that collapse to one gray get new colors, not white borders. Taking categorical colors from a sequential ramp works because "all these gradients move smoothly from light to dark."
+- **Rebalancing.** "you'll need to balance them out. Try to desaturate bright colors. Put more saturation in dark colors." Most colors should be "more or less equally attention-grabbing," with one or two standing out.
 
-Her **de-emphasis** rules are the distinctive part, and the strongest one is a prohibition:
+Her strongest de-emphasis rule is a prohibition:
 
 > Don't get experimental here, another hue will communicate "this is a separate category," not "these are all less important categories"
 
-She sources that to a documented mistake by Sarah Leo at The Economist, quoting Leo: "The visualiser (me!) ignored the fact that a change of colour often implies a categorical change." The fix is to keep the hue and drop the saturation. Gray is allowed, but only as a special status, never as a spare category color: "If a category is as important as other, colorful ones, don't make it gray." And there is a mechanical trick she gives outright: lower opacity instead of lowering saturation, because a desaturated red "becomes almost brownish" while an 80%-opaque red "looks like a nice pastel red."
+Her source is Sarah Leo's documented mistake at The Economist: "The visualiser (me!) ignored the fact that a change of colour often implies a categorical change." The fix keeps the hue and drops the saturation. Gray marks a special status, never a spare category color: "If a category is as important as other, colorful ones, don't make it gray." Lower opacity beats lower saturation, because a desaturated red "becomes almost brownish" while an 80%-opaque red "looks like a nice pastel red."
 
-**Title and annotation voice.** Heavily annotated, directly labeled, and colloquial at the top.
+**Title and annotation voice.** Heavily annotated, directly labeled, colloquial at the top.
 
-- **No legend where it can be avoided.** "One big part of doing so is to **remove the color key and directly label your categories.**" Her museum analogy is the argument: a legend is a label placed next to the door.
-- **Annotation on principle, not on exception.** "If you're creating an *explanatory* chart or map, it will likely be better with annotations in it." Three prompts she gives: any design element that needs explaining, any data point readers should see, and any context that explains why the data looks the way it does.
-- **Titles are conversational; precision moves down.** "'Is higher than ever' can be a stronger choice in a title than 'peaks'." And, flatly: "if you're visualizing for a mainstream audience, don't use words like 'median' or 'standard deviation' in your title." The precise definition goes in the description or the note, and she walks through a Washington Post map to show the three-tier split of title, description, and small gray footnote.
-- **Two text levels, not five.** "use only two levels of hierarchy that are clearly different from each other, like a 12px gray and a 14px black."
-- **Left alignment.** "Left- or right-aligned text looks tidier than center-aligned text... Both center- and right-aligned annotations are also harder to read, so don't use them for lengthy text (everything above roughly 10 words)." ([Knaflic](cole-nussbaumer-knaflic.md) independently names center alignment as a pet peeve. They agree.)
-- **Axis labels are never rotated.** "Instead of rotating axis labels, find another place inside your chart for them." Where the labels are still too long, the chart type changes rather than the text.
-- **Text that overlaps anything gets an outline.** "If your text sits on other elements, even just a subtle gridline, consider using a **text outline.**"
-- **Numbers are rounded.** "Don't add unnecessary precision when showing numbers," and she prefers `20k` / `20m` / `20b` to a multiplier note in the description.
+- **Direct labels.** "One big part of doing so is to **remove the color key and directly label your categories.**" Her analogy: a legend is a museum label placed next to the door.
+- **Annotation by default.** "If you're creating an *explanatory* chart or map, it will likely be better with annotations in it." Her three prompts: a design element that needs explaining, a data point readers should see, and context for why the data looks as it does.
+- **Plain titles, precision lower down.** "'Is higher than ever' can be a stronger choice in a title than 'peaks'." And "if you're visualizing for a mainstream audience, don't use words like 'median' or 'standard deviation' in your title." Definitions go lower, as in a Washington Post map she walks through: title, description, small gray footnote.
+- **Two text levels.** "use only two levels of hierarchy that are clearly different from each other, like a 12px gray and a 14px black."
+- **Left alignment.** "Left- or right-aligned text looks tidier than center-aligned text... Both center- and right-aligned annotations are also harder to read, so don't use them for lengthy text (everything above roughly 10 words)." [Knaflic](cole-nussbaumer-knaflic.md) independently names center alignment as a pet peeve.
+- **No rotated axis labels.** "Instead of rotating axis labels, find another place inside your chart for them." If labels are still too long, the chart type changes.
+- **Outlined text.** "If your text sits on other elements, even just a subtle gridline, consider using a **text outline.**"
+- **Rounded numbers.** "Don't add unnecessary precision when showing numbers," with `20k` / `20m` / `20b` preferred to a multiplier note.
 
-Her stated body-text default is unusually specific: "sans-serif, regular, sentence case, neither overly narrow nor wide, >12px, (almost) black text."
+Body text default: "sans-serif, regular, sentence case, neither overly narrow nor wide, >12px, (almost) black text."
 
-**Chart-type preferences and aversions.** She is the section's defender of the plain chart, and she has published the argument under that name. Her scope: "bar, column, line, area, pie, and donut charts, and others like them." **Pie and donut are inside her fence**, which puts her at odds with [Knaflic](cole-nussbaumer-knaflic.md), whose book has a named visuals-to-avoid section containing both.
+**Chart-type preferences and aversions.** Her defense of simple charts covers "bar, column, line, area, pie, and donut charts, and others like them." Pie and donut are inside it, against [Knaflic](cole-nussbaumer-knaflic.md), whose book lists both among visuals to avoid. She distrusts the ornate one-off (glyphs, novel forms, extra encodings, combinations), and labels that as taste: "When I look at a nonstandard chart, I might marvel at the beauty and ingenuity of its design. But often, I become skeptical. I often assume that its content can't be *extremely* interesting, otherwise, it would be shown more simply." Her positive claim: "there's a reason why journalists show us the data we're most interested in as simple charts."
 
-What she is skeptical of is not any particular type but the ornate one-off: glyphs, novel forms, chart types with extra encodings layered on, combinations. Her stated reaction is a taste position honestly labeled as one: "When I look at a nonstandard chart, I might marvel at the beauty and ingenuity of its design. But often, I become skeptical. I often assume that its content can't be *extremely* interesting, otherwise, it would be shown more simply." Her positive claim is that "there's a reason why journalists show us the data we're most interested in as simple charts."
+**Density and restraint.** Restrained in color, generous in text. "**By sacrificing some legibility for your gray categories, you can gain great clarity for the highlighted few.**" Nothing read states a position on gridlines or frames.
 
-**Density and restraint.** Not minimal. Restrained in **color**, generous in **text**. That combination is the thing that separates her from everyone else here: she will spend a paragraph getting a category down to a desaturated gray-blue and then put four annotations on the plot area. Her framing of the tradeoff is explicit: "**By sacrificing some legibility for your gray categories, you can gain great clarity for the highlighted few.**"
-
-She has no stated position on gridlines or frames in what was read, which is a real gap in this profile.
-
-**The tell.** Direct labels where a legend should be, a bold left-aligned title in plain speech with a smaller gray description under it, annotations sitting on the plot area with a background-colored stroke around the letters, exactly two type sizes, one orange-red against one blue, and the de-emphasized series in a paler version of the **same** hue rather than in gray or in a new color. If the unimportant category is a desaturated sibling of the important one, that is her signature and almost nobody else in this canon states it as a rule.
+**The tell.** Direct labels where a legend would be, a bold left-aligned title in plain speech with a smaller gray description under it, annotations on the plot area with a background-colored stroke around the letters, exactly two type sizes, one orange-red against one blue, and the de-emphasized series in a paler version of the **same** hue rather than gray or a new color. Almost nobody else in this canon states that last one as a rule.
 
 ## What they would say about a figure first
 
-She would go to the color, and not to whether it is accessible. She would ask what the color is **doing**: which category it is telling the reader to look at, and whether that was a decision or a tool default. Her opening move is procedural: gray everything out first, then color back in only what matters. "I actually recommend **graying out all your colorful categories first.**" Then she would check whether the de-emphasis is a different hue, because that is the specific mistake she has written about most. Then grayscale: convert the whole thing and see whether the categories collapse into the same value. Then the text, which she takes to be the least considered part of most figures. "Text is maybe the most underrated element in any data visualization." She would have the title said out loud as if to a friend, and a title containing a statistical term or the phrasing of the dataset's official documentation would get rewritten. What she would **not** do is call the chart type too plain. "Simple charts are great. That they're underappreciated. Necessary. And that you should be proud of yourself if you create simple charts."
+She would go first to what the color is doing, not to whether it is accessible, and ask whether it was a decision or a tool default: "I actually recommend **graying out all your colorful categories first.**" Then whether de-emphasis uses a new hue, whether categories collapse in grayscale, and the text: "Text is maybe the most underrated element in any data visualization." A title with a statistical term gets rewritten as if said aloud to a friend. She would not call the chart too plain: "Simple charts are great. That they're underappreciated. Necessary. And that you should be proud of yourself if you create simple charts."
 
 ## Works, and where they sit in this wiki
 
-- **[sources/datawrapper-academy.md](../sources/datawrapper-academy.md)** is `primary-read` and covers seven Datawrapper Academy help articles, including article 140, "What to consider when choosing colors for data visualization," which covers ground overlapping the blog posts above. **The distinction**: the Academy is Datawrapper's product documentation and the articles carry no byline, so this page does not attribute them to her. The blog posts here do carry her byline. Number formats, responsive sizing, alt text, the zero-baseline enforcement and the contrast floor are on the Academy page, not here.
-- **The blog series "Which color scale to use when visualizing data"** runs to four parts. Only part 1 was read. Parts 2 through 4, and the separate post on choosing an interpolation for a color scale, are **not covered anywhere in this wiki** and are the obvious next retrieval. Interpolation in particular is a topic nothing else in the canon touches.
-- **"A detailed guide to colors in data vis style guides"** was fetched but not read in this pass. At 85KB of extracted text it is the longest thing she has written on the subject and would bear directly on any house-style work.
-- **Her personal site**, talks, and the data vis crossword are not covered.
+- [sources/datawrapper-academy.md](../sources/datawrapper-academy.md) is `primary-read` and covers seven Datawrapper Academy help articles, including article 140, "What to consider when choosing colors for data visualization," which overlaps the posts above. The Academy is unbylined product documentation, so this page does not attribute it to her. Number formats, responsive sizing, alt text, zero-baseline enforcement and the contrast floor are there.
+- "Which color scale to use when visualizing data" has four parts, and only part 1 was read. Parts 2 through 4 and her post on color-scale interpolation are not covered, and nothing else in the canon covers interpolation.
+- "A detailed guide to colors in data vis style guides" was fetched but not read. It is her longest piece on the subject.
+- Her personal site, talks, and the data vis crossword are not covered.
 
 ## Links
 
-- [sources/datawrapper-academy.md](../sources/datawrapper-academy.md), the product documentation side of the same house
-- [cole-nussbaumer-knaflic.md](cole-nussbaumer-knaflic.md), the same emphasis-through-color problem at lower resolution, and the opposite verdict on pie charts
-- [jonathan-schwabish.md](jonathan-schwabish.md), whose book she argues with by name over whether simple charts are boring
-- [refutations.md](../refutations.md), for why "gray plus one accent" is an assertion rather than a finding no matter who is stating it
-- [concepts/channels.md](../concepts/channels.md), the evidence her color reasoning does and does not rest on
+- [sources/datawrapper-academy.md](../sources/datawrapper-academy.md): the same house's product documentation
+- [cole-nussbaumer-knaflic.md](cole-nussbaumer-knaflic.md): the same color-emphasis problem at lower resolution, and the opposite verdict on pies
+- [jonathan-schwabish.md](jonathan-schwabish.md): whose book she argues with by name over whether simple charts are boring
+- [refutations.md](../refutations.md): why "gray plus one accent" is an assertion rather than a finding, whoever states it
+- [concepts/channels.md](../concepts/channels.md): the evidence her color reasoning does and does not rest on
