@@ -6,8 +6,8 @@
     "name": "Gary Koplik",
     "url": "https://github.com/gjkoplik"
   },
-  "homepage": "https://github.com/gjkoplik/agent-viz",
-  "repository": "https://github.com/gjkoplik/agent-viz",
+  "homepage": "https://github.com/gjkoplik/skills/tree/main/plugins/agent-viz",
+  "repository": "https://github.com/gjkoplik/skills",
   "license": "MIT",
   "keywords": [
     "visualization",

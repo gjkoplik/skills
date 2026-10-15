@@ -10,6 +10,15 @@ ceremony.
 a different event on a different clock, is in [wiki/CHANGELOG.md](wiki/CHANGELOG.md). Entries here link there
 rather than restating it.
 
+## Unreleased
+
+### Changed
+
+- **The whole wiki is rewritten for the agent reading it at decision time.** Shorter pages, record voice, no process narration; every fact, quotation and evidence label kept. The research entry is [wiki/CHANGELOG.md](wiki/CHANGELOG.md) under v2026.10.15.
+- `SKILL.md` drops its stale alias count and tightens without changing any rule. The chart-chooser routine is unchanged.
+- The README and CONTRIBUTING drop the account of the research run's internal process and keep what a user needs: install, what is here, what the research found, known gaps, and the retrieval hazards.
+- `plugin.json` points at this monorepo rather than the retired standalone repo.
+
 ## 0.0.1
 
 First public cut, deliberately early. The sourcing is real and the structure is not settled, which is what the version
