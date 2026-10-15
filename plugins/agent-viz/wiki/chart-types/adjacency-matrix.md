@@ -6,21 +6,17 @@ aliases: [Adjacency matrix]
 
 # Adjacency matrices
 
-Nodes on both axes, a filled cell where an edge exists. The representation that cannot produce a hairball, and cannot show a path.
+Nodes on both axes, a filled cell where an edge exists. It cannot produce a hairball or show a path.
 
 ## When to reach for it, and when not
 
-**The form applies where** the graph is dense, or the display is static, or the question is about groups and clusters. It is the representation that cannot produce a hairball: density adds ink to distinct cells rather than overlapping marks.
-
-The ordering is the design. A structural ordering (community, clustering, seriation) makes block structure visible. Alphabetical or insertion order is effectively random with respect to structure and produces a matrix that looks like static.
-
-**Questions the form does not answer:**
+The form is defined for dense graphs, static displays, and questions about groups and clusters.
 
 | The situation | Alternative |
 |---|---|
-| The question is about paths | [Node-link](node-link.md). Matrices lost path finding in every condition tested |
-| The graph is very sparse | [Node-link](node-link.md). The matrix is quadratic in node count regardless of edge count, so a sparse graph wastes the canvas |
-| No meaningful ordering is available | Without one, the form's main advantage is gone |
+| The question is about paths | [Node-link](node-link.md). Matrices lost it in every condition tested |
+| The graph is very sparse | [Node-link](node-link.md). A sparse matrix is mostly empty canvas |
+| No meaningful ordering | The main advantage is gone |
 
 ## Structural decomposition
 
@@ -29,52 +25,50 @@ The ordering is the design. A structural ordering (community, clustering, seriat
 | Data | A node table and an edge table |
 | Transform | **A node ordering.** Optionally an edge-weight aggregation |
 | Geometry | Cell, one per node pair |
-| Scale | Presence, or weight, mapped to cell fill |
+| Scale | Presence, or weight, to cell fill |
 | Coordinates | Cartesian, discrete on both axes |
-| Guides | Two node axes, one legend if weighted |
+| Guides | Two node axes, a legend if weighted |
 
-**The ordering is the entire design decision.** It sits where a layout algorithm sits for a node-link diagram, and it determines whether structure is visible. The same matrix under a random ordering and under a clustered ordering are different charts.
+The ordering plays the role of a [node-link](node-link.md) layout. A structural ordering (community, clustering, seriation) shows blocks. Alphabetical or insertion order looks like static.
 
 ## Channels
 
-Position along two discrete non-aligned scales for identity, plus a fill channel for the cell.
-
-The fill sits near the bottom of the ordering if it encodes weight by lightness, and it is nowhere on it at all if it encodes mere presence, since presence is not a magnitude. The ranking excludes unordered channels: **a binary matrix asks no magnitude question of the reader**, so the channel evidence is silent on it.
+Position on two discrete scales identifies nodes. Lightness for weight ranks near the bottom ([channels.md](../concepts/channels.md)), and presence is not a magnitude.
 
 ## What it is measurably good at
 
-**Dense and large graphs, on most tasks.** [Ghoniem et al. (2004)](../studies/ghoniem-2004.md): "when graphs are bigger than twenty vertices, the matrix-based visualization outperforms node-link diagrams on most tasks," across densities 0.2 to 0.6.
+**Dense and large graphs.** [Ghoniem et al. (2004)](../studies/ghoniem-2004.md): "when graphs are bigger than twenty vertices, the matrix-based visualization outperforms node-link diagrams on most tasks," at densities 0.2 to 0.6.
 
-**Group and cluster tasks, even on sparse real networks.** [Okoe et al. (2018)](../studies/okoe-2018.md): "AM outperforms NL for group tasks," at 2 of 4 tested. Consistent with the 2004 finding that a good ordering makes block structure visible.
+**Groups and clusters, even on sparse real networks.** [Okoe et al. (2018)](../studies/okoe-2018.md): "AM outperforms NL for group tasks," in 2 of 4 tested.
 
-**Node and link finding at scale**, which Ghoniem et al. attribute to orderability: the hypothesis "was related to the significant impact of orderability of matrices on node and link finding tasks. 'findNode' and 'findLink' tasks validate this hypothesis for large graphs and for dense graphs."
+**Node and link finding at scale**, tied to orderability: the hypothesis "was related to the significant impact of orderability of matrices on node and link finding tasks. 'findNode' and 'findLink' tasks validate this hypothesis for large graphs and for dense graphs."
 
-**Not degrading.** Density adds ink to distinct cells rather than overlapping marks. A matrix at density 0.6 is legible where the equivalent node-link diagram is not. This is structural, and it is why the crossover exists.
+**Density.** Edges land in distinct cells, so a matrix at density 0.6 stays legible where node-link does not.
 
 ## What it is measurably bad at
 
-**Path finding.** Lost consistently across every condition in 2004. Following a path means jumping from a cell to a row to another cell, repeatedly, with no visual continuity. The authors' conclusion is that paths are hard on both and need interaction, but the node-link advantage here is the one result that held everywhere.
+**Path finding.** It lost in every 2004 condition, since a path means jumping cell to row to cell. The authors call paths hard on both forms, but this result held everywhere.
 
-**Topology and connectivity questions on sparse networks with interaction**, per 2018.
+**Topology and connectivity** on sparse networks with interaction (Okoe et al. 2018).
 
-**Space.** The matrix is quadratic in node count regardless of edge count, so a sparse network wastes almost the entire canvas. Not measured in either study; it follows from the form.
+**Space.** The matrix is quadratic in node count regardless of edge count. Unmeasured.
 
 ## What is contested
 
-The [crossover](network-topology.md#choosing-between-node-link-and-matrix). "Matrices win above twenty nodes" is a scope-limited result quoted as a general one. The scope is: static displays, random graphs, density at or above 0.2.
+The [crossover](network-topology.md#choosing-between-node-link-and-matrix). "Matrices win above twenty nodes" holds for static displays of random graphs at density 0.2 and above, and gets quoted as general.
 
 ## The failure mode it invites
 
-**Shipping the default ordering.** Alphabetical or insertion order is effectively random with respect to structure, and produces a matrix that looks like static. The form's entire advantage on group tasks depends on the ordering, and the ordering is the one thing a default cannot supply. `authority-asserted`, though it follows directly from the measured orderability result.
+**Shipping the default ordering.** Group tasks depend on the ordering. `authority-asserted`; the measured orderability result covers node and link finding, not group tasks.
 
-**Reading adjacency as similarity.** Two adjacent rows are adjacent because of the ordering, which may be arbitrary. Same trap as proximity in a node-link layout, from the opposite direction.
+**Adjacency read as similarity.** Row neighbors are an artifact of the ordering.
 
 ## Justifying the choice
 
 **Defensible, evidence-backed:**
 
 - "The graph is dense and this is a static figure, so a matrix. Node-link readability was measured to degrade with density across all seven tasks tested."
-- "I ordered by community rather than alphabetically. The matrix's advantage on group tasks is attributed directly to orderability."
+- "I ordered by community rather than alphabetically. Ghoniem et al. attribute the matrix's advantage on node and link finding to orderability, and the group-task advantage plausibly rests on the same property, untested."
 
 **Defensible, with the label said out loud:**
 
@@ -82,8 +76,8 @@ The [crossover](network-topology.md#choosing-between-node-link-and-matrix). "Mat
 
 **Not defensible:**
 
-- ~~"Matrices beat node-link above twenty nodes."~~ True for static displays of random graphs at density 0.2 and above. Quoted as a general rule it is a scope-limited result stated as a universal one, and a larger sparse interactive study found the opposite.
-- ~~"These two rows are adjacent, so those nodes are similar."~~ Adjacency in the matrix is a property of the chosen ordering.
+- ~~"Matrices beat node-link above twenty nodes."~~ Scoped as above. A larger sparse interactive study found the opposite.
+- ~~"These two rows are adjacent, so those nodes are similar."~~ Row adjacency comes from the ordering.
 
 ## See also
 

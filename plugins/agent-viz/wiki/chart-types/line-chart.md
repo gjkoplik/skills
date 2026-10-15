@@ -6,15 +6,11 @@ aliases: [Line chart]
 
 # Line charts
 
-Points ordered along a continuous axis, usually time, joined by segments, so that the slope of each segment stands for a rate of change and the whole path stands for the shape of the series.
+Points ordered along a continuous axis, usually time, joined by segments, so that each segment's slope stands for a rate of change and the whole path stands for the shape of the series.
 
 ## When to reach for it, and when not
 
-The form is defined for the case where x is continuous and ordered, the connection between consecutive points is a defensible claim, there are enough points that the shape carries information a table would not, and the reader's question is about the shape rather than about individual values.
-
-Two of the decisions here are not about the mark: the aspect ratio and the y-axis range, and both have been measured.
-
-Questions the form does not answer:
+The form is defined for a continuous, ordered x where connecting consecutive points is a defensible claim, with enough points that the shape says what a table would not, and for questions about shape rather than individual values. The aspect ratio and the y-axis range sit outside the mark, and both have been measured.
 
 | The question | Alternative |
 |---|---|
@@ -34,89 +30,93 @@ Questions the form does not answer:
 | Data | One row per (series, time, value) |
 | Transform | Usually none. Optionally smoothing, resampling, or interpolation across gaps, each of which is an assertion about values that are missing |
 | Geometry | Path through the ordered points, optionally with a marker per point |
-| Scale | Time to position on x, value to position on y. **Slope is a function of both scales together, not of the data alone** |
+| Scale | Time to position on x, value to position on y. Slope is a function of both scales together, not of the data alone |
 | Coordinates | Cartesian |
 | Guides | Two axes, direct labels or a legend, optional gridlines |
 
-The near-duplicates this collapses: an [area chart](area-chart.md) is this chart with a fill added to the geometry slot, a sparkline is this chart with the guides slot emptied, a [slope chart](slope-chart.md) is this chart with exactly two x positions and direct labels in place of axes, and a [connected scatterplot](connected-scatterplot.md) swaps the x scale from time to a second variable.
+An [area chart](area-chart.md) adds a fill, a sparkline drops the guides, a [slope chart](slope-chart.md) keeps two x positions and labels them directly, and a [connected scatterplot](connected-scatterplot.md) puts a second variable on x.
 
 ## Channels
 
-**Position along a common scale, for each plotted point**, inherited from [channels.md](../concepts/channels.md) rather than measured on this form. The mapping step is conjecture in the source literature and Cleveland & McGill flag it as one every time they make it, so it stays conjecture here.
+Each point is position along a common scale, inherited from [channels.md](../concepts/channels.md) with the usual conjecture in the step from mark to channel. Hue carries series identity, not magnitude ([what "color is the worst channel" actually means](../concepts/channels.md#what-color-is-the-worst-channel-actually-means)).
 
-**Hue, for series identity.** Not a magnitude channel and not scored as one. See [what "color is the worst channel" actually means](../concepts/channels.md#what-color-is-the-worst-channel-actually-means).
-
-The complication is that **the reading a line chart is for is not the reading the ranking scores.** Slope, curvature, crossings and turning points are not value extraction, and the ranking's authors scope themselves out of exactly those tasks ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)). Cleveland & McGill's 1985 table also says the authors "have been unable to distinguish the relative accuracy of some tasks, such as judging slope and judging angle." So a line chart puts endpoints on the best-measured channel and then asks for a judgment the measurements do not cover.
+Slope, curvature, crossings and turning points are not value extraction, and the ranking's authors scope those tasks out ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)). Cleveland & McGill's 1985 table says the authors "have been unable to distinguish the relative accuracy of some tasks, such as judging slope and judging angle." So the endpoints sit on the best-measured channel, and the judgment the chart asks for is unmeasured.
 
 ## What it is measurably good at
 
-**Nothing in this corpus measures a line chart against an alternative.** No study here compares it to a bar chart, a table, or a slope chart for any task. That is a statement about the field's coverage.
+No study in this corpus compares a line chart to a bar chart, a table or a slope chart for any task.
 
-One adjacent result bears on slope judgment, this chart's core task. [Talbot et al. (2012)](../studies/talbot-2012-slope-ratio.md) randomly gave half their subjects a visible horizontal baseline under each line segment:
+On slope judgment, [Talbot et al. (2012)](../studies/talbot-2012-slope-ratio.md) gave a random half of their subjects a horizontal baseline under each segment:
 
 > "As predicted, the addition of a baseline nearly eliminates the judgment error for mid-angles less than 45°. The error here is now nearly as small as in the height approximation results from Experiment 1. But, unpredicted, the linear trend was not eliminated for mid-angles larger than 45°."
 
-Their own summary is "Our hypothesis is not fully confirmed." The stimulus is two isolated segments rather than a plot, and the authors name that as the study's major limitation. So: a visible baseline or gridline is an evidence-backed lead for slope judgment in half the tested range, not a demonstrated property of real line charts.
+Their summary is "Our hypothesis is not fully confirmed." The stimuli were isolated segment pairs, which the authors call the study's major limitation. A baseline or gridline is an evidence-backed lead for slope judgment in half the tested range, not a property of real line charts.
 
 ## What it is measurably bad at
 
-Each of these is something the form fails to protect the reader from.
+**Aspect ratio.** [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) changed only the aspect ratio of a line chart and moved mean response on a 5-point "how much bigger" scale from 1.39 to 3.19, +129.5% (Mann-Whitney U = 1409, Z = 5.88, p < 0.0001, r = 0.66). The true values were printed on the chart. Chart type and distortion are confounded one to one, so the study cannot rank distortions, as the authors say.
 
-**Resisting the designer's aspect-ratio choice.** [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) changed nothing but the aspect ratio of a line chart and moved mean response on a 5-point "how much bigger" scale from 1.39 to 3.19, +129.5%, Mann-Whitney U = 1409, Z = 5.88, p < 0.0001, r = 0.66. The actual numbers were printed on the chart, so this is not a failure to read values. The study does not support ranking distortions against each other: chart type and distortion are confounded one to one in it, and the authors say so.
+**Truncation.** [Correll et al. (2020)](../studies/correll-2020-truncating-the-y-axis.md) found perceived severity rose with truncation, F(2, 76) = 89, p < 0.0001, and a line chart was no exception:
 
-**Resisting truncation.** [Correll et al. (2020)](../studies/correll-2020-truncating-the-y-axis.md) found perceived severity rose with truncation, F(2, 76) = 89, p < 0.0001, and that the chart being a line made no significant difference: "There was no significant effect of visualization design on perceived effect size (F(1, 38) = 0.5, p = 0.50)." One subjective measure on one task, and the only result in this corpus bearing on whether lines are exempt.
+> "There was no significant effect of visualization design on perceived effect size (F(1, 38) = 0.5, p = 0.50)."
 
-**Silent gaps.** [Song & Szafir (2019)](../studies/song-szafir-2019-missing-data.md), on line graphs among other stimuli: "Information removal can significantly degrade perceptions of data quality, and confidence. These methods even lead to incorrect responses if missing values break the visual continuity of a visualization." Highlighting missing values beat downplaying them, which beat removing them, and zero-filling was the worst of the three imputation methods tested. The authors describe their own result as preliminary guidance, and they are explicit that degrading reader confidence is not automatically the goal.
+It is one subjective measure on one task, and this corpus's only test of whether lines are exempt.
 
-**Log axes.** Among 623 Ecological Society of America members, comprehension was 93% on linear-linear against 56% on log-log ([Menge et al. 2018](../studies/menge-2018-log-scales.md)), and the gap did not close for PhDs, professors, or self-reported log-comfortable respondents. On the general public reading real COVID-19 death curves, a log axis left readers with "a less accurate understanding of how the pandemic has developed," worse forecasts, and different policy preferences ([Romano et al. 2020](../studies/romano-2020-log-scales-covid.md)). Time series are where log scales get reached for most.
+**Silent gaps.** [Song & Szafir (2019)](../studies/song-szafir-2019-missing-data.md), on line graphs among other stimuli:
+
+> "Information removal can significantly degrade perceptions of data quality, and confidence. These methods even lead to incorrect responses if missing values break the visual continuity of a visualization."
+
+Highlighting missing values beat downplaying them, which beat removing them. Zero-filling was the worst of three imputation methods. The authors call this preliminary guidance and say lower reader confidence is not automatically the goal.
+
+**Log axes.** Among 623 Ecological Society of America members, comprehension was 93% on linear-linear and 56% on log-log, and the gap held for PhDs, professors and self-reported log-comfortable respondents ([Menge et al. 2018](../studies/menge-2018-log-scales.md)). On real COVID-19 death curves, a log axis left the general public with "a less accurate understanding of how the pandemic has developed," worse forecasts and different policy preferences ([Romano et al. 2020](../studies/romano-2020-log-scales-covid.md)).
 
 ## What is contested
 
-**Whether a line chart needs a zero baseline. The sources disagree, and they disagree about scope rather than about honesty.**
+**The zero baseline.** The sources disagree about scope, not honesty. [The Urban Institute guide](../sources/urban-institute.md) makes zero baselines absolute, then releases other chart types:
 
-- [The Urban Institute guide](../sources/urban-institute.md) makes zero baselines an absolute and then explicitly releases this form: other chart types "that do not use length or height as the primary encoding -- including, for example, scatterplots and line charts -- do not necessarily need to start at zero."
-- The FT applies the rule by mark, capitalizing "always" for the filled column and writing "does not HAVE to start at zero (but preferable)" for the lollipop ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). Observable Plot forces zero only where area encodes the value ([observable-plot.md](../sources/observable-plot.md)). Datawrapper hard-blocks truncated bar axes in the product and offers a line chart as one of its three remedies ([datawrapper-academy.md](../sources/datawrapper-academy.md)).
-- [Vega-Lite](../sources/vega-lite.md) goes the other way and ships the strict version as a default: `zero` is true "for x and y channels if the quantitative field is not binned and no custom domain is provided," for every mark type. That is a stronger commitment than any style guide here makes, and it is the position with the least support behind it.
+> "that do not use length or height as the primary encoding -- including, for example, scatterplots and line charts -- do not necessarily need to start at zero."
 
-**What survives.** Proportional ink is an argument about filled marks, and it genuinely does not bind an unfilled line; four sources reach that independently and it is `authority-asserted` with tooling corroboration, not measured. The exaggeration effect is a separate claim, it was measured, and it is not scoped by mark. Both facts hold at once: the guidance releases a line chart from the zero baseline, and truncating it inflates what the reader takes away. Correll et al. refuse the maximalist reading in as many words, "we resist the interpretation... that all charts with quantitative axes should include 0," while measuring the effect anyway. The range is a rhetorical choice rather than a neutral default.
+The FT scopes the rule by mark, capitalizing "always" for the filled column and writing "does not HAVE to start at zero (but preferable)" for the lollipop ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). Observable Plot forces zero only where area encodes the value ([observable-plot.md](../sources/observable-plot.md)). Datawrapper blocks truncated bar axes and offers a line chart as one of three remedies ([datawrapper-academy.md](../sources/datawrapper-academy.md)). [Vega-Lite](../sources/vega-lite.md) goes the other way, defaulting `zero` to true "for x and y channels if the quantitative field is not binned and no custom domain is provided," for every mark type, the strictest and least supported position here.
 
-**Whether an axis-break glyph fixes it.** The two static designs tested, a broken-axis glyph and a gradient fade, produced no significant difference in perceived severity. F(2, 60) = 3.1 against a critical value of 3.1504 means p is about 0.052, with 31 participants, no equivalence test and no Bayes factor. That is a knife-edge failure to reject, not evidence of no effect, and "placebo" overstates it. The supportable version is that a jagged marker was not shown to do the work.
+Proportional ink binds filled marks, not an unfilled line. Four sources reach that independently, so it is `authority-asserted` with tooling corroboration. The exaggeration effect is measured and not scoped by mark. So a line chart is released from the zero baseline, and truncating it still inflates the takeaway. Correll et al. measured that effect and still wrote "we resist the interpretation... that all charts with quantitative axes should include 0," so the range is a rhetorical choice, not a neutral default.
 
-**Banking to 45 degrees.** Cleveland's aspect-ratio guideline is in every curriculum. [Talbot et al. (2012)](../studies/talbot-2012-slope-ratio.md) widened the sampled space and reported that "we find that, in general, slope ratio errors are not minimized around 45°." Two things a careless citation drops. The shift "from near 45° to below 30°" belongs to the ANGLE submodel only, and Cleveland's subjects were instructed to compare heights. And Cleveland replicates inside his own range: his model "fit our data well in the regions considered in the original study" and fails to extrapolate. **Accurate phrasing: 45 degrees is not the error-minimizing ratio in general, and Cleveland's result holds within the moderate regime he tested.** The constructive replacement is a direction rather than a rule, that flatter and wider ratios than banking algorithms produce should be preferred, and it has never been tested on real plots.
+**Axis-break glyphs.** In the same study, a broken-axis glyph and a gradient fade made no significant difference to perceived severity. F(2, 60) = 3.1 against a critical value of 3.1504 puts p near 0.052, with 31 participants and no equivalence test or Bayes factor. A narrow failure to reject is not evidence of no effect, so "placebo" overstates it.
 
-**Log scales in general.** The direction is well supported and "never" is not. Menge et al. recommend instruction and author awareness rather than a ban; Romano et al. recommend linear "at least as a default option" and themselves name a contemporaneous Canadian study that found no effect.
+**Banking to 45 degrees.** [Talbot et al. (2012)](../studies/talbot-2012-slope-ratio.md) widened Cleveland's sampled space and reported that "we find that, in general, slope ratio errors are not minimized around 45°." The shift "from near 45° to below 30°" is in the ANGLE submodel only, and Cleveland's subjects were told to compare heights. Cleveland's model "fit our data well in the regions considered in the original study" and fails to extrapolate. Talbot et al.'s replacement, ratios flatter and wider than banking algorithms produce, is a direction rather than a rule, untested on real plots.
+
+**Log scales in general.** The direction is well supported and "never" is not. Menge et al. recommend instruction and author awareness rather than a ban; Romano et al. recommend linear "at least as a default option" and name a contemporaneous Canadian study that found no effect.
 
 ## The failure mode it invites
 
-**Spaghetti.** Every series drawn at equal weight, so the chart shows that there are many series and nothing else. The standard remedies are small multiples and gray-plus-one-accent highlighting, and both are `authority-asserted`: Schwabish's guideline is literally named "Avoid the Spaghetti Chart," Urban recommends "gray for the majority of states and add color to just the few you want to highlight," and a search for a controlled experiment testing one-accent emphasis returned nothing ([refutations.md](../refutations.md)). The breadth of agreement is not evidence.
+**Spaghetti.** Every series at equal weight shows only that there are many series. Small multiples and gray-plus-one-accent highlighting are the standard remedies, both `authority-asserted`. Schwabish's guideline is "Avoid the Spaghetti Chart," Urban recommends "gray for the majority of states and add color to just the few you want to highlight," and a search for a controlled experiment on one-accent emphasis found none ([refutations.md](../refutations.md)).
 
-**Connecting points the data does not connect.** Unordered categories on x, uneven sampling drawn as if even, or a straight run across a period where the data is missing. The first two are `authority-asserted`; the third is the measured one, and it is the only failure in this section that produced wrong answers rather than lower confidence.
+**Connecting points the data does not connect.** Unordered categories on x, uneven sampling drawn as even, or a straight run across missing data. The first two are `authority-asserted`. The third is measured, and the only one shown to produce wrong answers rather than lower confidence.
 
 ## Justifying the choice
 
 **Defensible, evidence-backed:**
 
 - "The y-axis starts at 40 rather than 0, and the subtitle says so. Truncation inflates perceived effect size on line charts as much as on bars, measured, so I am not treating the absence of a fill as an exemption."
-- "The 2019 gap is drawn as a gap rather than interpolated. Breaking visual continuity silently is the one thing in this literature that produced incorrect answers, not just lower confidence."
-- "I did not put this on a log axis. Log-log comprehension measured 56% against 93% linear among professional ecologists, and holding a PhD bought zero points on the log condition."
+- "The 2019 gap is drawn as a gap rather than interpolated. In the missing-data study, breaking visual continuity silently produced incorrect answers, not just lower confidence."
+- "I did not put this on a log axis. Log-log comprehension measured 56% against 93% linear among professional ecologists, and holding a PhD bought zero points on log axes with untransformed values."
 - "The aspect ratio is a deliberate choice, because aspect ratio alone moved reader judgments by 129.5% on a line chart with the true values printed on it."
 
 **Defensible, with the label said out loud:**
 
-- "Flatter and wider than the default." That is Talbot et al.'s constructive result from a model, not a validated design rule, and it has not been shown to transfer to real plots.
-- "Gridlines are on, which may help slope judgment." A visible baseline nearly eliminated slope error below 45 degrees and did nothing above it, on isolated line segments rather than plots.
-- "Nine series became nine small multiples, with everything else gray." Practitioner consensus, stated by every major source here and tested by none of them.
+- "Flatter and wider than the default." Talbot et al.'s model result, untested on real plots.
+- "Gridlines are on, which may help slope judgment." Measured on isolated segments, and only below 45 degrees.
+- "Nine series became nine small multiples, with everything else gray." Consensus across the major sources here, tested by none.
 
 **Commonly repeated, and the evidence does not support it:**
 
-- ~~"Bank the slopes to 45 degrees."~~ Not the error-minimizing ratio in general. Cleveland's result is a local fit inside the range he tested, and the paper that showed this calls its own conclusion deflationary: "the theory of aspect ratio selection is not as simple as it once seemed."
-- ~~"Line charts do not need a zero baseline, so truncation is not an issue here."~~ Two rules spliced into one. The first half is right and the second does not follow from it.
-- ~~"An axis break tells the reader what happened, so the chart is honest."~~ The tested designs did not measurably reduce the exaggeration, at a sample size that could not have detected a small one either.
-- ~~"Log scales are fine for a technical audience."~~ The population that failed at 56% was 69% PhDs, 89% of whom had log-transformed data themselves.
+- ~~"Bank the slopes to 45 degrees."~~ A local fit, not a general optimum. Talbot et al. call their conclusion deflationary: "the theory of aspect ratio selection is not as simple as it once seemed."
+- ~~"Line charts do not need a zero baseline, so truncation is not an issue here."~~ Two rules spliced together. The second half does not follow.
+- ~~"An axis break tells the reader what happened, so the chart is honest."~~ The tested designs, on bar charts, did not measurably reduce the exaggeration, at a sample too small to detect a small reduction.
+- ~~"Log scales are fine for a technical audience."~~ The population that failed at 56% was 69% PhDs, and 89% of all respondents had log-transformed data themselves.
 
 ## See also
 
-- [change-over-time.md](change-over-time.md) — the group, and its two free parameters
-- [area-chart.md](area-chart.md) — this chart plus a fill, and what the fill costs
-- [../concepts/channels.md](../concepts/channels.md) — the evidence this page inherits, and its stated scope
-- [../refutations.md](../refutations.md) — banking, truncation remedies, log scales
+- [change-over-time.md](change-over-time.md): the group, and its two free parameters
+- [area-chart.md](area-chart.md): this chart plus a fill, and what the fill costs
+- [../concepts/channels.md](../concepts/channels.md): the evidence this page inherits, and its stated scope
+- [../refutations.md](../refutations.md): banking, truncation remedies, log scales

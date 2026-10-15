@@ -6,79 +6,67 @@ aliases: [Bump chart]
 
 # Bump charts
 
-One line per item across several periods, with the vertical axis carrying **position in the ordering** rather than the value, so each line traces where its item sat at each period and the crossings are the reorderings.
+One line per item across several periods, with the vertical axis carrying position in the ordering rather than the value, so the crossings are the reorderings.
 
 ## When to reach for it, and when not
 
-**The form applies where** there are several periods, few enough items to label at the ends, and the reader's question is who overtook whom. It is the only form in this wiki that puts the rank itself on an axis, which is both what it offers and what it costs.
-
-It is also a change-over-time chart. It is indexed under [ranking](ranking.md) because the ordering is what it draws; the amounts do not survive the transform. [change-over-time.md](change-over-time.md) carries the group's other free parameters.
-
-**Questions the form does not answer:**
+The form is defined for several periods, few enough items to label at the ends, and the question of who overtook whom. It is filed under [ranking](ranking.md) and [change-over-time](change-over-time.md), and the rank axis is both its offer and its cost.
 
 | The question | Alternative |
 |---|---|
-| How much did each one change? | [Line chart](line-chart.md). The rank axis has already thrown the amount away |
+| How much did each one change? | [Line chart](line-chart.md). The rank axis has thrown the amount away |
 | There are exactly two periods | [Slope chart](slope-chart.md). Same crossings, and it keeps the values |
-| How big is each item now? | [Magnitude](magnitude.md). A [bar chart](bar-chart.md), sorted |
-| Is one item's trend accelerating or plateauing? | [Line chart](line-chart.md). Shape in the value, which is not on this axis |
-| Which items are close together and which are far apart? | Nothing here answers it. The values, drawn |
-| There are fifty items | Nothing here works either. Aggregation, faceting, or a drawn subset |
+| How big is each item now? | [Magnitude](magnitude.md): a sorted [bar chart](bar-chart.md) |
+| Is one item's trend accelerating or plateauing? | [Line chart](line-chart.md), which keeps the value |
+| Which items are close together and which are far apart? | The values, drawn |
+| There are fifty items | Aggregation, faceting, or a drawn subset |
 
 ## Structural decomposition
 
 | Slot | |
 |---|---|
 | Data | One row per item per period, with a value |
-| Transform | **Rank within each period.** The only slot doing real work, and it is destructive: the value does not survive it |
+| Transform | **Rank within each period.** The only slot doing work, and the value does not survive it |
 | Geometry | One line per item across the periods, usually with a marker at each period |
-| Scale | Rank to position on a common vertical scale, conventionally inverted so that first place sits at the top |
+| Scale | Rank to position on a common vertical scale, usually inverted so first place is on top |
 | Coordinates | Cartesian, with x taking one position per period |
-| Guides | A rank axis or per-period rank labels, direct item labels at one or both ends, and highlighting for the items the reader is meant to follow |
+| Guides | A rank axis or per-period rank labels, direct item labels at one or both ends, and highlighting for the items to follow |
 
-**It is a [line chart](line-chart.md) with a rank transform in front of it.** That is the whole structural difference, and two consequences follow that carry no evidence label because they are definitional.
-
-**A rank axis throws away the magnitude, which is the point and the cost at the same time.** The transform maps every value to its place, so the spacing between adjacent lines is a property of the item count rather than of the data. Two lines crossing means a reordering **of any size**, including one that turned on a rounding error. Two lines running parallel a long way apart may be separated by a hair. The chart is built to make the ordering unambiguous and it does that by deleting the only thing that would say whether the ordering mattered.
-
-**The vertical range is not a free parameter.** It runs from first place to last and the item count fixes it, so the axis-range manipulation measured on other charts in this family has no handle here. There is nothing to truncate. The aspect ratio remains a free parameter, and so does the choice of periods.
+It is a [line chart](line-chart.md) with a rank transform in front, and two definitional consequences follow. Line spacing reflects the item count, not the data, so a crossing can be a reordering of any size, including a rounding error, and distant lines may differ by a hair. And the vertical range is fixed from first place to last, so there is nothing to truncate. The aspect ratio and the choice of periods stay free.
 
 ## Channels
 
-**Position along a common scale**, carrying the rank. That inheritance from [channels.md](../concepts/channels.md) comes with the usual caveat that the mapping is conjecture in the source literature, and with a second one specific to this form: the accuracy ordering measures how well a reader gets a *value* off a mark, and by the time the mark is drawn here the value has been replaced by an ordinal. The best-measured channel in the literature is being used to carry something the literature never measured anyone reading. See [the scope limit](../concepts/channels.md#what-the-ranking-is-not-about).
+Rank sits on position along a common scale ([channels.md](../concepts/channels.md)), a mapping that is conjecture. The accuracy ordering measures reading a *value* off a mark, and here the value has become an ordinal, which nobody has measured anyone reading ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)).
 
-**Direction and slope** carry the movement, and slope is among the tasks Cleveland & McGill said they could not separate from angle, in an ordering they called a tentative working hypothesis ([channels.md](../concepts/channels.md)). Slope means less here than on a [line chart](line-chart.md) anyway: its steepness is places-per-period, not units-per-period.
+Movement is on direction and slope. Cleveland & McGill could not separate slope from angle, in an ordering they called a tentative working hypothesis ([channels.md](../concepts/channels.md)). Slope here is places per period, not units per period as on a [line chart](line-chart.md).
 
 ## What it is measurably good at
 
-**Nothing. No study in this corpus tests a bump chart.**
-
-The inheritance is thinner here than on most pages rather than merely absent. A [line chart](line-chart.md) can at least borrow the position result, because there are values on its axis. This form cannot borrow it in the usual sense, since what sits on position is the output of the transform.
+No study in this corpus tests the form, and unlike a [line chart](line-chart.md) it cannot borrow the position result, since its axis holds ranks.
 
 ## What it is measurably bad at
 
-Nothing measured. Two untested exposures, recorded as exposures and not as findings:
+Nothing measured. Whether readers take a crossing for a large change is untested. `absence of evidence`.
 
-**Whether readers over-read a crossing.** The definitional half is secure and is above. Whether people take a crossing for a large change is `absence of evidence`: nobody has looked, and it is not a prohibition.
-
-**Tangle at many items.** Same shape of problem as the spaghetti chart, with no measured threshold. Schwabish's name for the guideline is "Avoid the Spaghetti Chart" ([schwabish.md](../sources/schwabish.md)). `authority-asserted`.
+Lines tangle at many items, with no measured threshold. Schwabish's guideline is "Avoid the Spaghetti Chart" ([schwabish.md](../sources/schwabish.md)). `authority-asserted`.
 
 ## What is contested
 
-Nothing. Nobody has published a result about this form that could disagree with anything else.
+Nothing contested in this corpus.
 
 ## The failure mode it invites
 
-**Presenting a reordering as a change.** The form's whole job is to make crossings visible, and a crossing is exactly as loud when the two items were a rounding error apart as when one collapsed. The remedy recorded here is not avoiding the form but putting the amount back somewhere the reader can reach it: end labels, a companion panel of the values, or a caption line saying how close the ranks were. `authority-asserted` as advice; the underlying fact about the transform is definitional.
+**Presenting a reordering as a change.** The recorded remedy puts the amount back within reach: end labels, a companion panel of values, or a caption saying how close the ranks were. `authority-asserted`.
 
-**Letting the item set do the work.** A rank is relative to the population, so adding or dropping one item moves every rank below it while nothing about the remaining items has changed. Two bump charts built from different sets are not comparable, and the chart shows no sign of it. [ranking.md](ranking.md) states this once for the whole group.
+**Letting the item set do the work.** Adding or dropping one item moves every rank below it, so charts built from different sets are not comparable ([ranking.md](ranking.md)).
 
-**Cherry-picking the first and last period.** The middle is what distinguishes this form from a [slope chart](slope-chart.md), so a bump chart whose story is entirely in its endpoints was a slope chart that would have kept the values.
+**Cherry-picking the first and last period.** A bump chart whose story is all in its endpoints should have been a [slope chart](slope-chart.md), which keeps the values.
 
 ## Justifying the choice
 
 **Defensible, evidence-backed:**
 
-- Nothing. The rank transform puts the form out of reach of even the channel inheritance the other pages lean on.
+- Nothing, not even the usual channel inheritance, which the rank transform breaks.
 
 **Defensible, with the label said out loud:**
 
@@ -89,14 +77,14 @@ Nothing. Nobody has published a result about this form that could disagree with 
 
 **Commonly repeated, and the evidence does not support it:**
 
-- ~~"A bump chart shows the change clearly."~~ It shows the ordering and its changes. The change itself is the thing the rank transform deleted, and nobody has measured what a reader takes from one either way.
-- ~~"Lines crossing means the two swapped in a meaningful way."~~ Definitionally it means they swapped. By how much is not on the chart, and cannot be recovered from it.
-- ~~"It is a line chart, so the line-chart evidence carries over."~~ The line-chart evidence is about reading values off position. There are no values on this chart.
+- ~~"A bump chart shows the change clearly."~~ It shows the ordering. The size of the change is what the transform deleted.
+- ~~"Lines crossing means the two swapped in a meaningful way."~~ They swapped. By how much cannot be recovered from the chart.
+- ~~"It is a line chart, so the line-chart evidence carries over."~~ That evidence is about reading values off position, and this chart has none.
 
 ## See also
 
-- [line-chart.md](line-chart.md) — the same geometry with the value on the axis, and where the evidence is
-- [slope-chart.md](slope-chart.md) — two periods, crossings still carrying the reordering, values kept
-- [ranking.md](ranking.md) — the group, and why a rank is relative to its set
-- [change-over-time.md](change-over-time.md) — the other group this belongs to, and its free parameters
-- [../concepts/channels.md](../concepts/channels.md) — including why the accuracy ordering does not speak to reading an order
+- [line-chart.md](line-chart.md): the same geometry with values, and the evidence
+- [slope-chart.md](slope-chart.md): two periods, with values kept
+- [ranking.md](ranking.md): the group, and why a rank is relative to its set
+- [change-over-time.md](change-over-time.md): the other group's free parameters
+- [../concepts/channels.md](../concepts/channels.md): why the accuracy ordering does not speak to reading an order

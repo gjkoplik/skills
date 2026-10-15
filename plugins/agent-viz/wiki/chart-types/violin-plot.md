@@ -10,78 +10,64 @@ A kernel density estimate of one variable, mirrored about the group's axis posit
 
 ## When to reach for it, and when not
 
-The form is defined for the case where several groups have to be compared on one axis, there are enough observations per group for a density estimate to be about the data rather than about the bandwidth, and the shape within a group is part of the question: a second mode, a heavy tail, a pile-up at a bound.
-
-The other case in the record is a mean and its error, which is the one use anybody has tested. [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) proposed the violin as one of two example encodings satisfying a property they state directly: "We can mitigate these problems by choosing encodings that are visually symmetric and visually continuous."
-
-Questions the form does not answer:
+The form is defined for several groups on one axis, each large enough that the density describes the data rather than the bandwidth, where within-group shape matters: a second mode, a heavy tail, a pile-up at a bound. The one tested use is a mean and its error. [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) proposed the violin as one of two encodings with the property they ask for: "We can mitigate these problems by choosing encodings that are visually symmetric and visually continuous."
 
 | The question | Alternative |
 |---|---|
-| n is small per group | The observations themselves. A density over six points is a picture of the bandwidth |
-| What is the median, exactly? | [Box plot](boxplot.md), or a table. The density's peak is not the median |
-| Is this group significantly different? | The width is the spread of the sample, not an interval about an estimate, unless an interval was drawn and labeled as one |
-| One group, and the shape is the point | [Histogram](histogram.md). The mirroring buys nothing when there is nothing to compare against |
-| How many observations are in each group? | The violin does not say, and area normalization can actively hide it |
-| Many groups, compactly, with no knob to defend | [Box plot](boxplot.md) |
+| n is small per group | The observations. A density over six points pictures the bandwidth |
+| What is the median, exactly? | [Box plot](boxplot.md) or a table. The peak is not the median |
+| Is this group significantly different? | A labeled interval. The width is sample spread |
+| One group, shape is the point | [Histogram](histogram.md). Mirroring needs something to compare against |
+| How many observations per group? | Not shown, and area normalization can hide it |
+| Many groups, compactly, no knob to defend | [Box plot](boxplot.md) |
 
 ## Structural decomposition
 
 | Slot | |
 |---|---|
-| Data | One row per observation, one continuous variable, usually one grouping variable |
-| Transform | Kernel density estimate with a chosen kernel and bandwidth, evaluated on a grid, then normalized: per group to equal area, or across groups to encode count |
-| Geometry | Filled polygon, the density mirrored about the group's position. Often a box plot or quantile marks inside |
-| Scale | Value to position along a common scale; density to half-width, so the visible extent is twice the density |
+| Data | One row per observation, one continuous variable, usually a grouping variable |
+| Transform | Kernel density estimate (kernel, bandwidth, grid), normalized per group to equal area or across groups to encode count |
+| Geometry | Filled polygon mirrored about the group's position, often with a box plot or quantiles inside |
+| Scale | Value to position, density to half-width |
 | Coordinates | Cartesian, one axis categorical |
-| Guides | The value axis; the bandwidth and the normalization rule; n per group. The density itself usually has no axis at all |
+| Guides | The value axis, the bandwidth and normalization rule, n per group. The density usually has no axis |
 
-Three consequences follow from that transform, all definitional and none of them empirical:
-
-- **The estimate places density where no observation lies**, including past the most extreme one, unless the kernel is truncated at a bound. A bounded quantity can be drawn with mass outside its own domain.
-- **Bandwidth decides modality.** Wide enough and two modes merge; narrow enough and noise separates into modes. The picture reports a choice as well as the data.
-- **The normalization decides what width means.** Equal-area-per-group makes a group of eight as wide as a group of eight hundred.
+Three consequences are definitional. The estimate puts density where no observation lies, even outside a bounded domain unless the kernel is truncated. Bandwidth decides modality. Equal-area normalization draws a group of eight as wide as a group of eight hundred.
 
 ## Channels
 
-Value on position along a common scale; density on width, which is an area reading once the shape is filled and mirrored. Those accuracy claims are inherited from [channels.md](../concepts/channels.md), where position is measured as read more accurately than area, and they are not restated here as native findings.
-
-**No study in this source set has decomposed a violin into its cues.** [Skau & Kosara (2016)](../studies/skau-kosara-2016.md) did exactly that for the pie and found the received channel account wrong, which is a reason to hold the mapping above loosely rather than a reason to doubt it specifically.
-
-The mirroring is an open question rather than a defect: it doubles the ink for one density and it is the thing that makes the shape symmetric, which is the property Correll & Gleicher's result actually turns on. Whether readers use both halves is untested.
+Value is position along a common scale and density is width, an area reading once filled, both inherited from [channels.md](../concepts/channels.md). No study has decomposed a violin into cues, and [Skau & Kosara (2016)](../studies/skau-kosara-2016.md) found the received account wrong for the pie. Mirroring doubles the ink but creates the symmetry Correll & Gleicher's result turns on. Whether readers use both halves is untested.
 
 ## What it is measurably good at
 
-**Inferential judgments about a mean and its error, compared with a bar and error bars.** Correll & Gleicher, 240 participants across three crowdsourced experiments:
+Inferential judgments about a mean and its error, against a bar with error bars. Correll & Gleicher, 240 participants, three crowdsourced experiments:
 
 - The bar's "false metaphor of containment" made outcomes inside the bar look likelier than outcomes the same distance above the mean, a significant interaction at F(2,2) = 21.3, p < 0.0001. Not significant for the violin.
 - Adherence to the expected strategy was highest with the violin, 89.2% of trials, against 83.2% for bars.
 - Confidence was higher with the two encodings carrying distribution detail (violin M = 5.06, gradient M = 5.12) than with bars and box plots (both M = 4.86).
-- Unfamiliarity cost this audience nothing. Mechanical Turk workers, not statisticians, did better with the unusual mark than with the standard one.
+- Mechanical Turk workers did better with the unfamiliar mark than with the standard one.
 
-**Scope.** That experiment drew violins as encodings of a mean and its error, not as displays of a raw sample. The tasks were low-stakes prediction with no real consequences, and the authors say so: "One area not well-covered by our experimental tasks was decision-making." They also decline to say the alternatives are practically important: "the practical effect of these differences is difficult to determine."
+The violins encoded a mean and error, not a raw sample, on low-stakes tasks. The authors: "One area not well-covered by our experimental tasks was decision-making." And: "the practical effect of these differences is difficult to determine."
 
 ## What it is measurably bad at
 
-**Nothing has been measured.** No study in this source set tests a violin against a box plot, against a histogram, or against plotting the observations, on any task.
-
-Two things follow from the construction rather than from an experiment: at small n the shape is the bandwidth, and the smoothed estimate can put visible mass outside the data's range.
+No study in this corpus tests a violin against a box plot, a histogram or the plotted observations, on any task.
 
 ## What is contested
 
-**Which symmetric encoding to use.** The authors who established that a symmetric continuous encoding beats a bar with error bars refuse to rank their own two candidates: "Our data do not support the use of one over the other for decisions tasks, however paper authors, reviewers, and colleagues have stated differing preferences between the two on aesthetic and theoretical grounds." Choosing the violin over the gradient plot is preference rather than evidence.
+Which symmetric encoding to use. Correll & Gleicher decline to rank their two: "Our data do not support the use of one over the other for decisions tasks, however paper authors, reviewers, and colleagues have stated differing preferences between the two on aesthetic and theoretical grounds."
 
-Everything else here is `absence of evidence` rather than contested, which [evidence-class.md](../concepts/evidence-class.md) keeps deliberately distinct from refuted. Nobody has measured whether readers detect bimodality more reliably from a violin than from a histogram, whether the mirrored half helps, or how bandwidth choice moves a reader's conclusion. The general treatment of bandwidth as an undetermined analysis choice comes from [wilke-fundamentals.md](../sources/wilke-fundamentals.md) chapter 14 and [inventory.md](../inventory.md) topic 52, both `authority-asserted`.
+The rest is `absence of evidence` ([evidence-class.md](../concepts/evidence-class.md)): bimodality detection against a histogram, the value of the mirrored half, and how bandwidth moves a conclusion. Bandwidth as an undetermined analysis choice comes from [wilke-fundamentals.md](../sources/wilke-fundamentals.md) chapter 14 and [inventory.md](../inventory.md) topic 52, both `authority-asserted`.
 
 ## The failure mode it invites
 
-**A confident shape over almost no data.** The estimate always produces a smooth curve, and the curve looks equally authoritative at n = 6 and n = 600. This is the [box plot](boxplot.md)'s missing-n problem with a smoothing parameter added on top, and the sample sizes [Weissgerber et al.](../studies/weissgerber-2015-beyond-bar-line.md) measured in published science, median minimum group size 4, are squarely in the range where it bites.
+**A confident shape over almost no data.** The curve looks as smooth at n = 6 as at n = 600. It is the [box plot](boxplot.md)'s missing-n problem plus a smoothing parameter, and the group sizes [Weissgerber et al.](../studies/weissgerber-2015-beyond-bar-line.md) found in published science, median minimum 4, are in that range.
 
-**Tuning the bandwidth until the modes appear.** The knob is invisible in the output and the reader cannot check it. The mitigation [inventory.md](../inventory.md) topic 52 states: the bandwidth is chosen explicitly, and the claim is checked against a wider and a narrower choice. `authority-asserted`.
+**Bandwidth tuned until modes appear.** The knob is invisible. [inventory.md](../inventory.md) topic 52's mitigation is an explicit bandwidth, with the claim checked against a wider and a narrower one. `authority-asserted`.
 
-**Comparing widths across groups that were normalized separately.** Equal-area normalization is a common default and it makes width incomparable in count between groups. Definitional, and easy to miss because the drawing gives no sign of which normalization ran.
+**Widths compared across separately normalized groups.** Equal area is a common default, and the drawing does not say it ran.
 
-**Density spilling past a bound.** A distribution of durations, counts or proportions can be drawn with visible mass below zero or above one. The mechanism is the same one seaborn names for symmetric error bars on bounded quantities, where an interval "may extend to 'impossible' values" ([seaborn.md](../sources/seaborn.md)); that quote is about error bars, and the transfer to a kernel estimate is by construction, not by measurement.
+**Density past a bound.** Durations, counts or proportions can show mass below zero or above one. [seaborn](../sources/seaborn.md) says symmetric error bars "may extend to 'impossible' values". The transfer to kernel estimates is by construction.
 
 ## Justifying the choice
 
@@ -99,13 +85,13 @@ Everything else here is `absence of evidence` rather than contested, which [evid
 
 **Commonly repeated, and not supported:**
 
-- ~~"A violin shows the data."~~ It shows a smoothed estimate with a tunable parameter. At small n it shows the parameter. Plotting the observations, which is what "shows the data" describes, is a different chart.
-- ~~"Violin plots are more accurate than box plots."~~ Not established. The one study that drew both compared each against bars, and its box plot was a modified uncertainty encoding rather than a Tukey box plot. On confidence the violin separated from the box plot; on accuracy nobody has ranked them.
-- ~~"The violin is the modern replacement for the box plot."~~ The comparison has not been run. What the evidence supports is narrower and more specific: a symmetric continuous encoding beat a bar with error bars on inferential tasks.
-- ~~"Symmetry is decoration."~~ It is the property the measured result turns on, and the paper states it as the design requirement rather than as an aesthetic.
+- ~~"A violin shows the data."~~ It shows a smoothed estimate, and at small n it shows the bandwidth.
+- ~~"Violin plots are more accurate than box plots."~~ The one study with both compared each against bars, using a modified uncertainty box plot, not Tukey's. They differed on confidence. Nobody has ranked them on accuracy.
+- ~~"The violin is the modern replacement for the box plot."~~ Never compared. The evidence covers a symmetric continuous encoding against a bar with error bars.
+- ~~"Symmetry is decoration."~~ The paper states it as the design requirement its result turns on.
 
 ## See also
 
-- [distribution.md](distribution.md) — the group, and the sample-size gate that decides most of this
-- [boxplot.md](boxplot.md) — the same strip with no tuning parameter and no shape
-- [../studies/correll-gleicher-2014-error-bars-harmful.md](../studies/correll-gleicher-2014-error-bars-harmful.md) — the only experiment here that put a violin under test, and what it was testing
+- [distribution.md](distribution.md): the group, and the sample-size gate
+- [boxplot.md](boxplot.md): the same strip with no tuning parameter and no shape
+- [../studies/correll-gleicher-2014-error-bars-harmful.md](../studies/correll-gleicher-2014-error-bars-harmful.md): the one experiment with a violin

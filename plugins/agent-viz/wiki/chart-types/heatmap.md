@@ -6,29 +6,25 @@ aliases: [Calendar heatmap, Heat map, Heatmap, Matrix chart, Tile chart, XY heat
 
 # Heatmaps
 
-A grid of equal cells, two categorical or ordered keys running along the two axes, and one quantitative value per cell encoded in **color**.
+A grid of equal cells, with two categorical or ordered keys along the axes and one quantitative value per cell encoded in color.
 
-Also called a **matrix chart** or a **tile chart**; an **XY heatmap** when both keys are ordered; a **calendar heatmap** when the two keys are day-of-week and week-of-year; and a **correlation matrix** when the cells hold correlation coefficients and the two keys are the same list of variables.
+Also called a matrix or tile chart. Variants are the XY heatmap (both keys ordered), the calendar heatmap (day-of-week by week-of-year) and the correlation matrix (one list of variables crossed with itself). [Schwabish](../sources/schwabish.md) files Heatmap under Comparing Categories and Correlation Matrix under Relationship (contents pages). The [FT Visual Vocabulary](../sources/ft-visual-vocabulary.md) puts an XY heatmap under Correlation, a heat map under Spatial and a Calendar heatmap under Change over Time. So one name carries four filings across two schemes, plus a fifth under another name, which fits the moral on Schwabish's page: these taxonomies are retrieval aids. It is indexed under [magnitude](magnitude.md) because the cell value is a size comparison.
 
-**The filing problem here is about the name rather than about the drawing.** [Schwabish](../sources/schwabish.md) files **Heatmap** under **Comparing Categories** and **Correlation Matrix**, the same grid with correlations in the cells, under **Relationship**. The [FT Visual Vocabulary](../sources/ft-visual-vocabulary.md) splits the name itself: an **XY heatmap** under **Correlation** and a **heat map** under **Spatial**. Both filings are recorded in this wiki: the first read from the book's own contents pages, the second from the Visual Vocabulary's own category listing. Neither is a claim about what anyone argues about the form. The FT's full listing carries a third heatmap of its own, **Calendar heatmap**, under Change over Time. So one name carries at least four filings across two schemes, plus a fifth for the same construction under another name. `sources/schwabish.md` draws the moral for the Sankey and waterfall case and it applies here without modification: three placements for two charts across two schemes is evidence that these taxonomies are retrieval aids rather than facts about charts. It is indexed here under [magnitude](magnitude.md) because the cell value is a size comparison; it would sit as comfortably under correlation or spatial, and that is a fact about taxonomies rather than about the form.
-
-Two name collisions need keeping straight. A [choropleth map](choropleth-map.md) is loosely called a heat map in ordinary usage, and it is a different construction: its geometry comes from a base geography rather than from a grid, which changes what the mark can be asked to carry. And a **density heatmap**, a two-dimensional histogram over continuous coordinates with the bin counts shown in color, shares the name and is not a grid of categorical cells; its two keys are binned continuous variables and its cell value is a count the transform produced. **Nothing in this wiki settles which of those the bare word "heatmap" refers to**, and this page does not resolve it. Everything below is about the grid of keyed cells.
+Two other things share the name. A [choropleth map](choropleth-map.md) is loosely called a heat map, but its geometry comes from a base geography. A density heatmap is a two-dimensional histogram over binned continuous coordinates, with counts in the cells. Nothing in this wiki settles which one the bare word "heatmap" means. This page covers the grid of keyed cells.
 
 ## When to reach for it, and when not
 
-The form is defined for the case where every combination of two keys has a value, the reader's job is to find where the highs and lows sit or to see block structure across the grid, and approximate magnitudes are enough. The form's offer is that it shows the entire cross-tabulation at once, with no mark occluding another and no space cost per value beyond one cell.
-
-Questions the form does not answer:
+The form is defined for a complete cross-tabulation of two keys, read for where highs and lows sit or for block structure, with approximate magnitudes enough. It shows every value at once, with no occlusion.
 
 | The question | Alternative |
 |---|---|
 | How big is each of these, and by how much? | [Bar chart](bar-chart.md). Position along a common scale rather than color |
 | What is the rank order? | [Ranking](ranking.md). Color does not support ordering by eye the way position does |
-| There is only one key | [Bar chart](bar-chart.md) or a [lollipop chart](lollipop-chart.md). A one-row heatmap throws away the accurate channel for nothing |
-| The reader needs the numbers | [Tables](tables.md). A table with the cells shaded is still a table, and it keeps the digits |
+| There is only one key | [Bar chart](bar-chart.md) or [lollipop chart](lollipop-chart.md). A one-row heatmap wastes the accurate channel |
+| The reader needs the numbers | [Tables](tables.md). A table with shaded cells keeps the digits |
 | Does this add up, and to what? | [Part-to-whole](part-to-whole.md). A grid asserts no total |
 | Where is this? | [Spatial](spatial.md). A [choropleth](choropleth-map.md) puts the value where its thing is |
-| Which nodes connect to which? | [Adjacency matrix](adjacency-matrix.md), which is this form applied to a graph |
+| Which nodes connect to which? | [Adjacency matrix](adjacency-matrix.md), this form applied to a graph |
 | Do these two variables move together, observation by observation? | [Correlation](correlation.md). A [scatterplot](scatterplot.md) shows the observations; a correlation matrix shows one number per pair |
 
 ## Structural decomposition
@@ -36,67 +32,59 @@ Questions the form does not answer:
 | Slot | |
 |---|---|
 | Data | One row per (row key, column key) pair, carrying one value |
-| Transform | **An ordering for the rows and an ordering for the columns.** Often an aggregation into the cell, and sometimes a per-pair statistic such as a correlation |
+| Transform | An ordering for the rows and one for the columns. Often an aggregation into the cell, sometimes a per-pair statistic such as a correlation |
 | Geometry | One rectangle per key pair, all the same size |
 | Scale | Value to fill color, on a sequential, diverging or binned ramp |
 | Coordinates | Cartesian, discrete on both axes |
 | Guides | Two key axes, and a colorbar or legend with units. A diverging ramp also needs its midpoint labeled |
 
-Two properties follow from those slots and assert nothing empirical.
+Every cell is the same size in the same place whatever the values, so color is the only channel carrying magnitude. A [choropleth](choropleth-map.md) shares this, with the extent fixed by geography instead of a grid.
 
-**The geometry takes no input from the value.** Every cell is the same size and sits in the same place whatever the numbers are, so color is the only channel carrying the magnitude. That is the same structural fact a [choropleth](choropleth-map.md) has, arrived at from the opposite direction: there the mark's extent is fixed by a base geography, here by a grid. In both cases there is no secondary channel to fall back on.
-
-**The row and column ordering is a free parameter that decides what the picture looks like.** Permuting rows changes no value and changes the image completely: a clustered ordering shows blocks, an alphabetical one shows noise. [adjacency-matrix.md](adjacency-matrix.md) makes this argument in full for the graph case, where the ordering "sits where a layout algorithm sits for a node-link diagram", and the argument is the same one because an adjacency matrix **is** a heatmap of a graph. The consequence for a general heatmap is that the ordering is a design decision, and a default sort order is a decision made by whatever produced the dataframe.
+The row and column ordering is a free parameter that decides the picture. A clustered order shows blocks, and an alphabetical one shows noise. [adjacency-matrix.md](adjacency-matrix.md) makes the full argument for graphs, where the ordering "sits where a layout algorithm sits for a node-link diagram", and an adjacency matrix is a heatmap of a graph. A default sort order is a decision made by whatever produced the dataframe.
 
 ## Channels
 
-**Color, carrying the magnitude, and position carrying only identity.** The two axes place a cell by its keys, which are categories or an order rather than values, so the position channel is doing lookup work and not magnitude work. Everything quantitative rides on the fill.
+Color carries the magnitude. Position carries only identity. The step from "this chart puts the reader on that channel" to an accuracy number is conjecture in the source literature. [channels.md](../concepts/channels.md) separates two defects that "color is the worst channel" blurs.
 
-[channels.md](../concepts/channels.md) sets out what "color is the worst channel" actually means; the usual one-line version blurs two different defects.
+Ordered lightness or saturation is low-accuracy for magnitude, and that is measured. Shading and color saturation share the bottom rank of the 1984 Cleveland & McGill table, below area and volume. The 1985 table keeps saturation and density near the bottom and adds hue below them. A heatmap supports "more here than there", not "twice as much there as here".
 
-**Ordered lightness or saturation is low-accuracy for magnitude**, and that part is measured territory: shading and color saturation sit together in the bottom rank of the 1984 Cleveland & McGill table, below area and below volume, and the 1985 table keeps saturation and density near the bottom while adding hue below them ([channels.md](../concepts/channels.md)). Inherited with the standard caveat that the step from "this chart puts the reader on that channel" to the accuracy number is conjecture in the source literature. The practical reading is that a heatmap supports "more here than there" and does not support "twice as much there as here".
+Hue is unsuited to magnitude, a different defect. The 1984 paper leaves hue off the list because it has no unambiguous order from small to large. The remedy for a rainbow is a ramp whose lightness moves monotonically. [matplotlib](../sources/matplotlib.md): "Researchers have found that the human brain perceives changes in the lightness parameter as changes in the data much better than, for example, changes in hue."
 
-**Hue is not low-accuracy for magnitude, it is unsuited to it**, which is a different defect with a different remedy. The 1984 paper excludes hue from the list because it has no unambiguous ordering from small to large. A heatmap drawn with a rainbow colormap is making that specific error: it asks the reader to order hues, which have no order to find, and the remedy is not "be more careful" but a ramp whose lightness moves monotonically. matplotlib states the underlying result flatly ([matplotlib.md](../sources/matplotlib.md)): "Researchers have found that the human brain perceives changes in the lightness parameter as changes in the data much better than, for example, changes in hue."
+The colormap class matches the data type: sequential for ordered values, diverging for one with a critical middle, qualitative only for unordered ones ([inventory.md](../inventory.md) topic 23, `authority-asserted` from matplotlib's documentation). A diverging ramp's midpoint asserts which value is neutral, and topic 32 records the labeling rule as `authority-asserted`, from the Urban Institute: "The center of the diverging palette should always be labeled to avoid confusing the reader." A correlation matrix has a true midpoint at zero.
 
-**So the colormap class has to match the data type**, which is [inventory.md](../inventory.md) topic 23, `authority-asserted` from matplotlib's own documentation: sequential for an ordered value, diverging for one with a critical middle, qualitative only for something unordered. And **if the ramp diverges, the midpoint is an assertion about which value is neutral**, so it must be set deliberately and labeled. That is topic 32, `authority-asserted`, from the Urban Institute: "The center of the diverging palette should always be labeled to avoid confusing the reader." A correlation matrix is the case where this is least optional, since zero is a real midpoint and a ramp centered anywhere else is claiming something false for free.
-
-On rainbows specifically, the record in this corpus is [ware-2023-rainbow-colormaps.md](../studies/ware-2023-rainbow-colormaps.md). **That piece is a Visualization Viewpoints department article and not a study**: no experiment, no participants, no data of its own. It argues that the blanket prohibition overreaches for purpose-built rainbows while conceding that classic RGB-interpolated rainbows "inevitably perform poorly on any test of perceived metric distance between displayed quantities". Its constructive point: feature resolving power is driven mostly by the **luminance gradient**, so what a detection task needs from a colormap is a monotonic or deliberately shaped lightness profile, whatever the hues do.
+[Ware, Stone & Szafir (2023)](../studies/ware-2023-rainbow-colormaps.md) is a Visualization Viewpoints article with no experiment, participants or data. It argues the blanket rainbow ban overreaches for purpose-built rainbows, while conceding that classic RGB-interpolated rainbows "inevitably perform poorly on any test of perceived metric distance between displayed quantities". Its point is that feature resolving power comes mostly from the luminance gradient, whatever the hues do.
 
 ## What it is measurably good at
 
-**Nothing. No study in this corpus tests a heatmap**, compares one against another form, or decomposes it into channels the way [Skau & Kosara](../studies/skau-kosara-2016.md) decomposed the pie. `absence of evidence`.
+No study in this corpus tests a heatmap, compares one against another form, or decomposes it the way [Skau & Kosara](../studies/skau-kosara-2016.md) decomposed the pie. `absence of evidence`.
 
-The nearest measured thing in this corpus is the matrix-versus-node-link pair, and it does not transfer. [Ghoniem et al. (2004)](../studies/ghoniem-2004.md) and [Okoe et al. (2018)](../studies/okoe-2018.md) both measured **graph-reading tasks** on an [adjacency matrix](adjacency-matrix.md): counting nodes and links, finding a named node, finding a link between two named nodes, finding a common neighbor, finding a path, identifying and comparing clusters. Not one of those is extracting a quantity from a colored cell. What they establish is that a matrix layout survives density and supports group and cluster tasks, which is an argument about the grid, and they say nothing at all about how accurately anyone reads a value off a fill.
+[Ghoniem et al. (2004)](../studies/ghoniem-2004.md) and [Okoe et al. (2018)](../studies/okoe-2018.md) do not transfer. They measured graph-reading tasks on an [adjacency matrix](adjacency-matrix.md), such as finding nodes, paths and clusters, and none involves reading a quantity from a colored cell. Their result is about the grid surviving density, not about the fill.
 
 ## What it is measurably bad at
 
-**Also unmeasured on this form.** The one thing that can be said without measuring is inherited rather than native: the value sits on the family of channels ranked least accurate for magnitude, so precise value extraction is unsupported ([channels.md](../concepts/channels.md)). That is an inheritance, and it does not license a number.
+Unmeasured on this form. The value sits on the channel family ranked least accurate for magnitude, so precise value extraction is unsupported by inheritance ([channels.md](../concepts/channels.md)), with no number attached.
 
-One structural cost is certain. **Every cell has the same visual weight**, so a grid full of near-identical values and three extreme ones looks like three colored cells on a flat field, and a grid of wildly different values at the same ordering can look like the same picture under a different ramp. The image is a joint function of the values, the ordering and the color scale, and only the first of those is data.
+Every cell has the same visual weight, and the image is a joint function of the values, the ordering and the color scale. Only the values are data.
 
 ## What is contested
 
-**Not the form, which nothing here disputes. The palette, and only at one edge.**
-
-[inventory.md](../inventory.md) topic 25 records the rainbow ban as `authority-asserted` with an evidence-backed lightness argument, and **contested at the edges**: matplotlib names `turbo` among the maps whose lightness runs dark-light-dark, so that "This would make it impossible for a viewer to interpret the information in a plot once it is printed in grayscale", while Observable Plot ships turbo as its **default** continuous color scheme, "chosen primarily to ensure high-contrast visibility". Two projects reading the same evidence and shipping opposite defaults ([matplotlib.md](../sources/matplotlib.md), [refutations.md](../refutations.md)). The disagreement is about a specific family of maps and not about whether lightness carries ordered data better than hue, which neither side disputes.
+The palette, at one edge. [inventory.md](../inventory.md) topic 25 records the rainbow ban as `authority-asserted` with an evidence-backed lightness argument, and contested at the edges. matplotlib names `turbo` among the maps whose lightness runs dark-light-dark, so that "This would make it impossible for a viewer to interpret the information in a plot once it is printed in grayscale". Observable Plot ships turbo as its default continuous color scheme, "chosen primarily to ensure high-contrast visibility" ([matplotlib.md](../sources/matplotlib.md), [refutations.md](../refutations.md)). Neither side disputes that lightness carries ordered data better than hue.
 
 ## The failure mode it invites
 
-**Shipping the default ordering.** Alphabetical or insertion order is effectively random with respect to structure, and the whole picture is a function of the ordering. This is the same failure [adjacency-matrix.md](adjacency-matrix.md) names for its own form, and there it is anchored to a measured result about orderability. Here it is `authority-asserted`, and it follows directly from the transform slot.
+**Shipping the default ordering.** Alphabetical or insertion order is effectively random with respect to structure. [adjacency-matrix.md](adjacency-matrix.md) ties the same failure to a measured result about orderability. Here it is `authority-asserted`, from the transform slot.
 
-**Reading adjacency as similarity.** Two neighboring rows are neighbors because of an ordering somebody chose. If that ordering came from a clustering, the adjacency means something, and which clustering produced it is part of the fact; if it came from the alphabet, it means nothing.
+**Reading adjacency as similarity.** Adjacency from a clustering means something, and which clustering is part of the fact. Adjacency from the alphabet means nothing.
 
-**Asking the reader to read values off the fill.** The failure is not the heatmap, it is the sentence under it that quotes a number the reader is expected to verify. Where the numbers matter, they are printed in the cells or held in a table next to the grid. `authority-asserted`, with the accuracy half inherited and measured.
+**Asking the reader to read values off the fill.** Numbers that matter go in the cells or a table beside the grid. `authority-asserted`, with the accuracy half inherited and measured.
 
-**A diverging ramp with an accidental midpoint**, which asserts a neutral value nobody chose. Topic 32.
-
-**A rainbow on a continuous quantity**, which asks for an ordering hue does not have.
+**An accidental midpoint** on a diverging ramp asserts a neutral value nobody chose (topic 32). **A rainbow on a continuous quantity** asks for an order hue does not have.
 
 ## Justifying the choice
 
 **Defensible, evidence-backed:**
 
-- Nothing is native to this form. The one inherited sentence available is about the channel rather than the chart: "the value is on color, which is read less accurately for magnitude than position or length, measured, so nothing precise rides on any single cell." The step from this chart to that channel is conjecture in the source literature.
+- Nothing native. The inherited sentence is about the channel: "the value is on color, which is read less accurately for magnitude than position or length, measured, so nothing precise rides on any single cell."
 
 **Defensible, with the label said out loud:**
 
@@ -107,15 +95,15 @@ One structural cost is certain. **Every cell has the same visual weight**, so a 
 
 **Commonly repeated, and the evidence does not support it:**
 
-- ~~"Color is the least accurate channel, so a heatmap is a poor chart."~~ Two errors stacked. The ranking is about magnitude judgments only, and it separates ordered lightness, which is imprecise, from hue, which is unsuited. And no study in this corpus has tested a heatmap against anything.
-- ~~"Matrices are known to beat other layouts at this size."~~ That result is about graph-reading tasks on an adjacency matrix, it is scope-limited to static displays of random graphs at density 0.2 and above, a larger sparse interactive study found the opposite for topology tasks, and none of it was about reading a value from a cell.
-- ~~"A study showed rainbow colormaps are fine."~~ No study. [Ware, Stone & Szafir (2023)](../studies/ware-2023-rainbow-colormaps.md) is a Viewpoints essay with no experiment, arguing about how to read other people's evidence, and it concedes that classic rainbows perform poorly on metric judgments.
+- ~~"Color is the least accurate channel, so a heatmap is a poor chart."~~ The ranking covers magnitude only and separates imprecise lightness from unsuited hue. No study here tests a heatmap against anything.
+- ~~"Matrices are known to beat other layouts at this size."~~ That result is about graph-reading on an adjacency matrix, limited to static displays of random graphs at density 0.2 and above. A larger sparse interactive study found the opposite for topology tasks.
+- ~~"A study showed rainbow colormaps are fine."~~ No study. [Ware, Stone & Szafir (2023)](../studies/ware-2023-rainbow-colormaps.md) is an essay, and it concedes classic rainbows perform poorly on metric judgments.
 
 ## See also
 
-- [magnitude.md](magnitude.md) — the group it is indexed under, and the one it fits least comfortably
-- [adjacency-matrix.md](adjacency-matrix.md) — the same grid applied to a graph, where the ordering argument is made in full and has a measured result behind it
-- [choropleth-map.md](choropleth-map.md) — the other form whose geometry is fixed before the values arrive, and the one people mean when they say heat map about a map
-- [../concepts/channels.md](../concepts/channels.md) — ordered lightness versus hue, and why the difference is not a matter of degree
-- [../sources/schwabish.md](../sources/schwabish.md) — the filing, verified, and the moral about taxonomies
-- [../sources/matplotlib.md](../sources/matplotlib.md) — the colormap classes and the grayscale argument
+- [magnitude.md](magnitude.md): the group it is indexed under, and fits least comfortably
+- [adjacency-matrix.md](adjacency-matrix.md): the same grid on a graph, with a measured ordering result
+- [choropleth-map.md](choropleth-map.md): geometry fixed before the values arrive, and the other "heat map"
+- [../concepts/channels.md](../concepts/channels.md): ordered lightness versus hue
+- [../sources/schwabish.md](../sources/schwabish.md): the filing, and the moral about taxonomies
+- [../sources/matplotlib.md](../sources/matplotlib.md): the colormap classes and the grayscale argument

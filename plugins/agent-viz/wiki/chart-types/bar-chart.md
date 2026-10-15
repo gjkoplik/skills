@@ -6,115 +6,101 @@ aliases: [Bar chart, Column chart, Coxcomb, Grouped bar chart]
 
 # Bar charts
 
-One filled rectangle per category, running from a common baseline, its length encoding the value. The form every other chart in this wiki is measured against, and the only one that was the stimulus in the experiment that produced the measuring stick.
+One filled rectangle per category, running from a common baseline, its length encoding the value.
 
 ## When to reach for it, and when not
 
-**The form applies where** the reader has to get values off the chart and compare them across a handful of named categories. The value sits on position along a common scale, which is read more accurately than anything else that has been tested ([channels.md](../concepts/channels.md)). Being the default is also its failure mode, below.
-
-**Questions the form does not answer:**
+The form is defined for reading and comparing values across a handful of named categories, on position along a common scale ([channels.md](../concepts/channels.md)).
 
 | The question | Alternative |
 |---|---|
 | Does this add up, and to what? | [Part-to-whole](part-to-whole.md). A bar chart asserts nothing about a total |
-| What does the distribution look like? | A histogram, or a univariate scatterplot of the raw points. A bar of the mean is compatible with distributions that disagree |
-| Are these two group means different? | Not a bar with error bars. The bar glyph biases the judgment; see below |
-| How did this move over time? | A line chart. Change over time |
-| There are forty categories | [Lollipop chart](lollipop-chart.md), or an aggregated tail. A bar chart's height is set by its row count and cannot be shrunk |
-| Where does each item sit relative to a target? | [Deviation](deviation.md). A [diverging bar](diverging-bar-chart.md) off the reference, not off zero |
-| The values span orders of magnitude | Not a truncated bar. A log scale with the base stated, or a different mark |
+| What does the distribution look like? | A histogram or the raw points (below) |
+| Are these two group means different? | Not a bar with error bars (below) |
+| How did this move over time? | A line chart |
+| Forty categories | [Lollipop chart](lollipop-chart.md) or an aggregated tail. Row count sets the height |
+| Where does each item sit relative to a target? | A [diverging bar](diverging-bar-chart.md) off the reference ([deviation](deviation.md)) |
+| The values span orders of magnitude | A log scale with the base stated, not a truncated bar |
 
 ## Structural decomposition
 
 | Slot | |
 |---|---|
 | Data | One row per category, with a magnitude |
-| Transform | None, usually. A count, mean or rate computed upstream is a transform, and the chart does not disclose it |
+| Transform | Usually none. A count, mean or rate computed upstream is an undisclosed transform |
 | Geometry | Filled rectangle, one edge on the baseline |
 | Scale | Magnitude to length, anchored at zero |
-| Coordinates | Cartesian. Vertical and horizontal bars differ only in which axis carries the value, on a display the reader faces squarely |
-| Guides | One quantitative axis with its baseline visible, a category axis, and labels |
+| Coordinates | Cartesian. Orientation only picks the value axis |
+| Guides | A quantitative axis with visible baseline, a category axis, labels |
 
-A **column chart** is this chart with the axes swapped, which is a layout decision rather than a different form. A **grouped bar chart** adds a second categorical variable to the position slot. A **[stacked bar](stacked-bar.md)** adds a cumulative sum to the transform. A **coxcomb**, or polar-area diagram, sets coordinates to polar, with equal angles and the quantity carried by area. The name is a documented misnomer: Nightingale used "coxcomb" for a booklet and never for a diagram, and the transfer to the chart is traceable to Cook's 1914 biography ([florence-nightingale.md](../people/florence-nightingale.md)). A **[lollipop](lollipop-chart.md)** changes the geometry slot alone, from a filled rectangle to a point plus a stem.
+A **column chart** swaps the axes. A **grouped bar chart** adds a second category, a **[stacked bar](stacked-bar.md)** a cumulative sum, and a **[lollipop](lollipop-chart.md)** a point and stem in place of the rectangle. A **coxcomb** (polar-area diagram) puts it in polar coordinates with equal angles, the quantity encoded by radius and read as area. Nightingale used "coxcomb" for a booklet, never a diagram, and Cook's 1914 biography moved the name to the chart ([florence-nightingale.md](../people/florence-nightingale.md)).
 
 ## Channels
 
-**Primary: position along a common scale**, read at the bar's end. **Secondary: length**, since the bar's extent is also available.
+Cleveland & McGill call the mapping conjecture: position along a common scale, read at the bar's end, is primary "but judgments of area and length probably also play a role." Claims are inherited from [channels.md](../concepts/channels.md) unless a study used bars.
 
-That mapping is a conjecture in the source, and Cleveland & McGill flag it as one: on bar charts, position is primary "but judgments of area and length probably also play a role." The accuracy claims below are inherited from [channels.md](../concepts/channels.md) rather than measured on this artifact, with two exceptions noted where they occur.
-
-**One piece of direct type-level evidence exists for the mapping.** [Skau, Harrison & Kosara (2015)](../studies/skau-2015-embellished-bars.md) found that a capped bar, one with a strong horizontal terminator wider than the body, matched the plain baseline on absolute judgments with slightly lower variance, while every embellishment that rounded or pointed the top made things worse:
+[Skau, Harrison & Kosara (2015)](../studies/skau-2015-embellished-bars.md) give the one piece of type-level evidence. A capped bar matched the plain bar on absolute judgments with slightly lower variance, and rounded or pointed tops did worse:
 
 > "This result suggests that users indeed rely on strong lines at the ends of bars to mentally extend the bar end to the value axis, especially when considering the comparatively poor performance of the embellishments that distort the top of the bar (rounded caps, triangles, etc.)"
 
-That is a mechanism for *how* the reader gets to position, offered by the authors as a hypothesis consistent with their data rather than as a tested finding. It is the closest thing this wiki has to a channel decomposition of the bar chart.
+It is offered as a hypothesis, not a tested finding.
 
 ## What it is measurably good at
 
-**Reading a value off the mark, against every alternative that has been tested.**
-
-[Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md), position-length experiment, on the substitution a stacked or floating bar forces:
+**Reading a value off the mark.** [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md), on the substitution a stacked or floating bar forces:
 
 > "the average errors for length judgments are 40%-250% larger than those for position judgments"
 
-Their second experiment put a bar chart directly against a pie chart, which makes it one of the few genuinely type-level results in the perception literature rather than a channel result wearing a chart's clothes:
+Their second experiment set bars against pies:
 
 > "In only 3 of the 40 cases was the pie chart more accurate on average than the bar chart."
 
-with an overall error difference of "a factor of 2^.97 = 1.96, and is statistically significant." Replicated on Mechanical Turk by [Heer & Bostock (2010)](../studies/heer-bostock-2010.md), where "position still significantly outperformed length" and both angle and area came in worse than position.
+The error difference was "a factor of 2^.97 = 1.96, and is statistically significant." [Heer & Bostock (2010)](../studies/heer-bostock-2010.md) replicated it on Mechanical Turk: "position still significantly outperformed length," and angle and area also trailed position.
 
-**Ratio comparisons, including against dot plots.** From [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md), a paper otherwise arguing against bars:
+**Ratio comparisons.** [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md), in an aside, so evidence-backed at secondhand:
 
 > "There are tasks where asymmetric encodings outperform symmetric encodings; for instance, comparing ratios can be done quickly and more accurately with bar charts as compared to dot plots."
 
-Reported as an aside rather than as this paper's experiment, so treat it as evidence-backed and secondhand within the same paper.
-
 ## What it is measurably bad at
 
-**Surviving deformation of the bar itself.** Skau et al. tested six embellishments against a plain baseline. On relative comparisons, with the axis removed so readers had to compare bars rather than read the scale, everything except extending the bar below zero got significantly worse:
+**A deformed bar.** Skau et al. tested six embellishments. On relative comparisons, with the axis removed:
 
 > "All adaptations except the extended embellishment performed significantly worse than the baseline on relative judgements. Even small changes, for example the rounded bar, produced a significantly higher error rate."
 
-Mean log error ran 1.43 for the baseline, 1.86 for merely rounding the top, and 2.33 for quadratically scaled bars. On absolute judgments, where the axis was present, only the quadratic bars cleared the corrected significance threshold. **The task decides how much this costs.** A flat reading of the paper as "embellishment raises error" drops that split.
+Mean log error was 1.43 plain, 1.86 with a rounded top and 2.33 for quadratically scaled bars. On absolute judgments, with the axis present, only the quadratic bars cleared the corrected threshold.
 
-**Being truncated.** [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) measured a truncated bar axis against the same data drawn honestly and found responses on a "how much bigger" scale went from a control mean of 1.45 to 2.77, an increase of **91.0%** (Mann-Whitney U = 1144, Z = 3.36, p = 0.0003). Evidence-backed, on a chart where the true values were printed.
+**Truncation.** In [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md), a truncated bar axis moved responses on a "how much bigger" scale from a control mean of 1.45 to 2.77, up 91.0% (Mann-Whitney U = 1144, Z = 3.36, p = 0.0003), Evidence-backed, with true values printed.
 
-**Being fixed afterward with a break glyph.** [Correll, Bertini & Franconeri (2020)](../studies/correll-2020-truncating-the-y-axis.md) tested two truncation-marking designs and could not distinguish them from plain truncation on perceived severity, and found "the exaggeration introduced through truncation appears to persist across chart types and chart designs, and even when participants make accurate reports of the numbers they observe." Their own phrasing is hedged and the statistics are knife-edge; [refutations.md](../refutations.md#axis-break-glyphs-as-the-truncation-remedy) carries the reading.
+**Repair by break glyph.** [Correll, Bertini & Franconeri (2020)](../studies/correll-2020-truncating-the-y-axis.md) could not tell two truncation markers from plain truncation on perceived severity: "the exaggeration introduced through truncation appears to persist across chart types and chart designs, and even when participants make accurate reports of the numbers they observe." The phrasing is hedged and the statistics knife-edge ([refutations.md](../refutations.md#axis-break-glyphs-as-the-truncation-remedy)).
 
-**Carrying an error bar.** Correll & Gleicher named two defects, both measured:
+**Error bars.** The first of two defects Correll & Gleicher measured:
 
 > "**Within-the-bar bias:** the glyph of a bar provides a false metaphor of containment, where values within the bar are seen as likelier than values outside the bar."
 
-In their first experiment, proposed outcomes falling *inside* the bar were rated significantly more likely than ones the same distance above the mean (interaction F(2,2) = 21.3, p < 0.0001), an effect absent from every symmetric encoding they tested. The bias survived moving the proposed outcome out of the chart into text; it lifted only when the margin of error left the chart too, at which point strategy adherence collapsed from 91.6% of trials to 62.2% while confidence went *up*.
+Outcomes inside the bar were rated significantly likelier than outcomes equally far above the mean (interaction F(2,2) = 21.3, p < 0.0001), and no symmetric encoding did this. It persisted with the outcome in text and lifted only when the margin of error left the chart too, when strategy adherence fell from 91.6% of trials to 62.2% while confidence rose.
 
-**Standing in for a distribution.** [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md): 85.6% of 703 physiology articles used a bar graph, at a median minimum group size of 4, and "many different data distributions can lead to the same bar or line graph." Their Fig 1 shows four datasets, one symmetric, one outlier-driven, one possibly bimodal, one at n = 3, whose bars are within half a unit of each other. Prevalence and construction, not a reader experiment.
+**Standing in for a distribution.** [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md): 85.6% of 703 physiology articles used a bar graph, at a median minimum group size of 4, and "many different data distributions can lead to the same bar or line graph." Their Fig 1 shows four datasets (symmetric, outlier-driven, possibly bimodal, n = 3) whose bars are within half a unit. No readers were tested.
 
 ## What is contested
 
-**Embellishment around the bar.** This is the live one, and the two papers usually set against each other are not actually opposed.
+**Embellishment around the bar.** [Bateman et al. (2010)](../studies/bateman-2010-useful-junk.md) put Nigel Holmes imagery around correctly drawn bars. Accuracy was "no worse than for plain charts," recall was better after two to three weeks, and the value-message score favored the embellished charts (p = .003). Skau et al. deformed the bar itself, and error rose. A Holmes bar keeps its flat top, so Skau's mechanism predicts Bateman's result, and Skau warns only that embellishment touching "the primary chart elements can reduce the communication accuracy of the chart." Decoration around the mark is contested. Deformation of the mark is not. Two limits on Bateman:
 
-[Bateman et al. (2010)](../studies/bateman-2010-useful-junk.md) used Nigel Holmes cartoon charts, where imagery sits *around and behind* a correctly drawn bar, and measured verbal description and recall: accuracy "no worse than for plain charts," recall better after two to three weeks, and a significant *advantage* for the embellished charts on the value-message score (p = .003). Skau et al. deformed *the bar itself* and measured numeric estimation error, which went up.
+- In a four-way replication (Syeda et al. 2023), the asynchronous study found no significant difference on any of the four long-term recall questions, while synchronous replications matched. Preference held in all five studies, and description accuracy replicated best. Bateman's directional tests were one-tailed at α = .05, uncorrected across a dozen-plus comparisons.
+- The designer encoded the message into the imagery, as the authors concede: the monster's teeth trace the trend and the title says "monstrous." The result may concern integrated illustration, not embellishment in general.
 
-**The distinction that reconciles them is where the paint lands.** A Holmes bar still has a flat top and a straight side. Under Skau's own proposed mechanism, readers project from that terminator onto the axis, so a Holmes bar should read accurately, which is exactly what Bateman found. Skau's paper says so in its own words, positioning the result as a qualification rather than a refutation: embellishment that touches "the primary chart elements can reduce the communication accuracy of the chart."
+**Why "bars beat pies."** The finding is secure and replicated. The reason everyone gives for it is not. "Length beats angle" was never tested by Cleveland & McGill, whose two experiments they say may not be compared, and Heer & Bostock ran it head to head and reported "the results do not support this" ([channels.md](../concepts/channels.md#the-one-joint-where-the-folk-ranking-breaks)). Bars are read on position, and position against angle is measured.
 
-So: **decoration around the mark is contested; deformation of the mark is not.** Two things follow that are usually dropped from citations in both directions:
+**Orientation, in immersive displays only.** [Siqueira Rodrigues, Israel & Kosch (2026)](../studies/siqueira-rodrigues-2026-vr-graphical-perception.md) measured 6.40% mean absolute error for horizontal bars against 3.33% for vertical in a head-mounted display (d = 2.46, generalized η² = .49). The gap was absent face-on (p = .713) and grew with lateral offset (2.75 m, 4.8125 m) for horizontal bars only, as their value axis foreshortens. The authors call it an apparatus effect, "consistent with the removal of bezel-based spatial anchors rather than a fundamental change in the perceptual hierarchy." No study here tests orientation on a flat screen. `absence of evidence`.
 
-- Bateman's headline long-term recall result **does not replicate cleanly.** A four-way replication (Syeda et al. 2023) found no significant differences on any of the four long-term questions in the asynchronous study, while synchronous replications matched. What is robust across all five studies is *preference*; what replicates best is description accuracy holding up. Bateman's directional tests were one-tailed at α = .05 with no correction for the dozen-plus comparisons run.
-- Bateman's stimuli were built by a professional who **encoded the message into the imagery**, which the authors concede: the monster's teeth trace the trend and the title says "monstrous." That may make the result about integrated illustration rather than about embellishment as a category.
-
-**The mechanism behind "bars beat pies."** The finding is secure and replicated. The reason everyone gives for it is not. "Length beats angle" was never tested by Cleveland & McGill, whose two experiments they say may not be compared, and Heer & Bostock ran it head to head and reported "the results do not support this" ([the one joint where the folk ranking breaks](../concepts/channels.md#the-one-joint-where-the-folk-ranking-breaks)). The confusion is compounded here, because a bar chart's primary reading is **position**, not length. Position against angle *is* measured, and it is the comparison that supports the finding.
-
-**Orientation, in immersive displays only.** [Siqueira Rodrigues, Israel & Kosch (2026)](../studies/siqueira-rodrigues-2026-vr-graphical-perception.md) measured horizontal bars at 6.40% mean absolute error against vertical bars' 3.33% on a virtual wall in a head-mounted display, a large effect (d = 2.46, generalized η² = .49). **The gap is absent at the one face-on position** (p = .713) and appears only at lateral offsets of 2.75 m and 4.8125 m, where a horizontal bar's value axis lies along the direction being foreshortened and a vertical bar's does not. Error rose monotonically with offset for horizontal bars and not at all for vertical ones. The authors read their own divergence from the physical-wall study they replicated as an artifact of the apparatus, "consistent with the removal of bezel-based spatial anchors rather than a fundamental change in the perceptual hierarchy." Nothing here bears on a bar chart on a screen the reader faces, and the corpus has no study that tests orientation there. `absence of evidence` for the flat-display case.
-
-**The zero baseline.** Every style guide in this corpus scopes it by mark and none ran an experiment on the rule itself. Vega-Lite disagrees, defaulting to zero on every quantitative positional scale regardless of mark ([vega-lite.md](../sources/vega-lite.md)). What *is* measured is the harm from truncating a bar specifically, and the failure of a break glyph to undo it. `authority-asserted` for the rule; evidence-backed for the consequence.
+**The zero baseline.** Every style guide here scopes the rule by mark, and none tested it. [Vega-Lite](../sources/vega-lite.md) forces zero on every quantitative positional scale. `authority-asserted`.
 
 ## The failure mode it invites
 
-**Being drawn because nobody decided anything.** The bar chart is the shape a plotting library produces from a grouped table, so it absorbs questions belonging to distribution, uncertainty and change over time. Weissgerber's prevalence numbers are that failure measured in one field. `authority-asserted` as a rule; the prevalence itself is evidence-backed.
+**Drawn by default.** Plotting libraries draw a grouped table as bars, so the form absorbs questions about distribution, uncertainty and change. `authority-asserted`, though Weissgerber's prevalence numbers are evidence-backed.
 
-**Leaving the categories in the order they arrived.** Alphabetical order is the default in the absence of a choice, which the BBC cookbook treats as a bug fix rather than a design decision ([bbc-cookbook.md](../sources/bbc-cookbook.md)). `authority-asserted`.
+**Categories in arrival order.** The [BBC cookbook](../sources/bbc-cookbook.md) treats sorting as a bug fix, not a design decision. `authority-asserted`.
 
-**Truncating to make a small difference visible.** Urban names a remedy that leaves the mark intact: "consider adjusting the data to show percent change, difference, or some other similar adjustment" ([urban-institute.md](../sources/urban-institute.md)).
+**Truncation to show a small difference.** The [Urban Institute](../sources/urban-institute.md) remedy keeps the mark intact: "consider adjusting the data to show percent change, difference, or some other similar adjustment."
 
 ## Justifying the choice
 
@@ -134,15 +120,15 @@ So: **decoration around the mark is contested; deformation of the mark is not.**
 
 **Commonly repeated and not supported:**
 
-- ~~"Bars beat pies because length is a better channel than angle."~~ The conclusion is right and the reason is not. The one head-to-head test of length against angle did not find it, and Cleveland & McGill's two experiments cannot be compared to each other. A bar's primary channel is position anyway.
-- ~~"Studies show chartjunk hurts comprehension."~~ What is shown is that deforming the bar raises numeric estimation error, mostly on comparison tasks. Imagery placed around a correctly drawn bar did not hurt description accuracy, and was preferred.
-- ~~"Embellished charts are remembered better."~~ The long-term recall advantage is the least stable part of Bateman, and did not survive the asynchronous replication.
-- ~~"Every quantitative axis must start at zero."~~ Scoped by mark. The authors of the truncation study explicitly refuse this version of the rule.
+- ~~"Bars beat pies because length is a better channel than angle."~~ Right conclusion, wrong reason (above).
+- ~~"Studies show chartjunk hurts comprehension."~~ Only deforming the bar was shown to raise error (above).
+- ~~"Embellished charts are remembered better."~~ It did not survive the asynchronous replication.
+- ~~"Every quantitative axis must start at zero."~~ The truncation study's authors explicitly refuse this version.
 
 ## See also
 
-- [../studies/cleveland-mcgill-1984.md](../studies/cleveland-mcgill-1984.md) — the bar-versus-pie experiment and the ties it could not break
-- [../studies/skau-2015-embellished-bars.md](../studies/skau-2015-embellished-bars.md) — deformation, task by task, and the terminator mechanism
-- [../studies/bateman-2010-useful-junk.md](../studies/bateman-2010-useful-junk.md) — the other half of the embellishment question
-- [../refutations.md](../refutations.md#chartjunk-and-the-data-ink-ratio-as-settled) — the reconciliation, stated once for the whole wiki
+- [../studies/cleveland-mcgill-1984.md](../studies/cleveland-mcgill-1984.md)
+- [../studies/skau-2015-embellished-bars.md](../studies/skau-2015-embellished-bars.md)
+- [../studies/bateman-2010-useful-junk.md](../studies/bateman-2010-useful-junk.md)
+- [../refutations.md](../refutations.md#chartjunk-and-the-data-ink-ratio-as-settled)
 - [magnitude.md](magnitude.md) and [../concepts/channels.md](../concepts/channels.md)

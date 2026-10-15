@@ -25,6 +25,21 @@ what the rule now is and links the entry here for why.
 
 ---
 
+## v2026.10.15
+
+A corpus-wide prose pass: every page rewritten for voice, length and audience, with every fact, quotation, number, link and evidence label kept.
+
+### Changed
+
+- Every page under `chart-types/`, `sources/`, `studies/`, `people/` and `concepts/`, plus [inventory.md](inventory.md), [refutations.md](refutations.md) and [roll-call.md](roll-call.md), is shorter and written for the agent choosing a chart at decision time. Zingers, meta-commentary, inline dated corrections, retrieval dates in body text and self-referential counts are gone; the changelog holds the history they narrated.
+- Type pages with nothing measured now say so in one line per section instead of a paragraph.
+- See-also glosses use a colon instead of an em-dash.
+
+### Corrected
+
+- [studies/talbot-2012-slope-ratio.md](studies/talbot-2012-slope-ratio.md) and [refutations.md](refutations.md) no longer say baselines "did nothing" above 45 degrees; the source says the error was not eliminated there.
+- [chart-types/scatterplot.md](chart-types/scatterplot.md) files the no-zero-baseline sentence as `authority-asserted` rather than evidence-backed, and sources the small-n preference to the group sizes Weissgerber et al. measured rather than an unsourced "dozen".
+
 ## v2026.09.05
 
 The weekly research sweep: one paper, one chart type, one person.
@@ -40,7 +55,7 @@ The weekly research sweep: one paper, one chart type, one person.
 - [concepts/channels.md](concepts/channels.md) gains a third source on position-beats-length and position-beats-area, and a first on length-beats-area.
 - [chart-types/bar-chart.md](chart-types/bar-chart.md) records bar orientation as contested in immersive displays and `absence of evidence` on a flat screen.
 - [refutations.md](refutations.md) gains the horizontal-bar entry: real, large, and gone at the one face-on condition.
-- [sources/vega-lite.md](sources/vega-lite.md) records an author for the first time, which puts an unaudited independence claim in [inventory.md](inventory.md) topic 35 on the record.
+- [sources/vega-lite.md](sources/vega-lite.md) records an author for the first time, which puts an unaudited independence claim in [inventory.md](inventory.md) topic 9 on the record.
 
 ## v2026.08.29
 
