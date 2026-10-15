@@ -124,7 +124,7 @@ Sections whose names sound like advice still hold facts. "When to reach for it" 
 
 ## House prose style
 
-Direct, slightly informal, American spelling. Plain declaratives, one idea per sentence, around twenty words. A full sentence beats a fragment with a colon. No em-dashes outside a verbatim quotation, including in see-also glosses (`- [x.md](x.md): gloss`). No "delve", "moreover", "furthermore", "it is worth noting", "in essence".
+Direct, slightly informal, American spelling. Plain declaratives, one idea per sentence, around twenty words. A full sentence beats a fragment with a colon. No em-dashes outside a verbatim quotation, including in see-also glosses, where a colon follows the link. No "delve", "moreover", "furthermore", "it is worth noting", "in essence".
 
 What gets cut on sight:
 
