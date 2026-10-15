@@ -10,56 +10,50 @@ Two variables measured on the same units over time, drawn as points in the x-y p
 
 ## When to reach for it, and when not
 
-**The form applies where** two quantities move over time on the same units, the joint trajectory is the message, and the alternative on the table is a dual-axis line chart. The [Urban Institute guide](../sources/urban-institute.md) states the substitution as an editorial fact rather than a rule: connected scatterplots are "a clearer substitute for dual-axis line charts, which Urban does not publish." `authority-asserted`. What it substitutes *for* carries its own limit: the case against dual axes is itself `absence of evidence`, so this is one unmeasured preference standing in for another ([refutations.md](../refutations.md#a-flat-ban-on-dual-axes)).
-
-**Questions the form does not answer:**
+The form is defined for two quantities tracked together over time, where the joint path is the message. The [Urban Institute guide](../sources/urban-institute.md) states an editorial preference, not a rule: connected scatterplots are "a clearer substitute for dual-axis line charts, which Urban does not publish." `authority-asserted`. The case against dual axes is itself `absence of evidence` ([refutations.md](../refutations.md#a-flat-ban-on-dual-axes)).
 
 | The question | Alternative |
 |---|---|
-| When did this happen, or how fast? | A line chart per variable. Time is not on an axis here, it is only in the order of the path |
-| How did one variable move? | A line chart. Reading one variable alone means projecting the path onto an axis |
-| Is there a relationship across many units? | A plain [scatterplot](scatterplot.md). This form is one unit traced through time, not a population |
-| The observations are not ordered | A plain [scatterplot](scatterplot.md). The line is the ordering, and drawing it without one asserts something false |
-| There are many time points, or the path crosses itself repeatedly | Two stacked panels sharing an x-axis. The tangle is not a finding |
+| When did this happen, or how fast? | A line chart per variable. Time is only in the path order |
+| How did one variable move? | A line chart |
+| Is there a relationship across many units? | A [scatterplot](scatterplot.md). This form traces one unit |
+| The observations are not ordered | A [scatterplot](scatterplot.md). The line would assert a false order |
+| Many time points, or a self-crossing path | Two stacked panels sharing an x-axis |
 
 ## Structural decomposition
 
 | Slot | |
 |---|---|
-| Data | One row per time point, carrying two quantitative values for the same unit |
-| Transform | None. The ordering by time is a sort, not a statistic |
-| Geometry | Point per observation, plus a path connecting consecutive observations in time order |
-| Scale | Each variable maps to one spatial axis. Time maps to nothing spatial |
+| Data | One row per time point, two values for one unit |
+| Transform | None. Time order is a sort |
+| Geometry | Points, joined by a path in time order |
+| Scale | Each variable to a spatial axis. Time to nothing spatial |
 | Coordinates | Cartesian |
-| Guides | Two axes, plus whatever marks the direction and endpoints of the path: arrows, labeled start and end, or labeled time points |
+| Guides | Two axes, plus arrows or labeled time points for direction |
 
-The guides row is the whole difference from a [scatterplot](scatterplot.md). Time is carried entirely by the order of the path, so if nothing marks direction, one of the chart's three variables is unreadable. That is `definitional`, not a claim about readers.
+Only the guides differ from a [scatterplot](scatterplot.md). Without a direction mark, time is unreadable, which is `definitional`.
 
 ## Channels
 
-Both axes are position along a common scale, inherited from [channels.md](../concepts/channels.md) rather than restated. Path segments put the reader on **direction**, which [Cleveland & McGill](../studies/cleveland-mcgill-1984.md) place at the **same rank as length and angle**, with the authors' own note that "there is not enough information to separate the ties."
-
-**Time is on path order, which appears in neither ranking.** Nobody has scored it, so nothing about it can be inherited from anywhere.
+Both axes are position along a common scale ([channels.md](../concepts/channels.md)). Segments carry direction, which [Cleveland & McGill](../studies/cleveland-mcgill-1984.md) tie with length and angle: "there is not enough information to separate the ties." Time is on path order, which no ranking includes.
 
 ## What it is measurably good at
 
-**Nothing has been measured in this wiki.**
-
-One directly relevant study exists and is in this corpus's reading list without a page: Haroz, Kosara & Franconeri (2016), "The Connected Scatterplot for Presenting Paired Time Series," recorded as `primary-read` on [Robert Kosara's page](../people/robert-kosara.md) with no findings written up here. Until it is, this page has nothing to inherit. That is a gap with a name and a PDF behind it.
+Nothing measured here. Haroz, Kosara & Franconeri (2016), "The Connected Scatterplot for Presenting Paired Time Series," tests the form but is only recorded as `primary-read` on [Robert Kosara's page](../people/robert-kosara.md).
 
 ## What it is measurably bad at
 
-Nothing measured, for the same reason and from the same missing page.
+Nothing measured.
 
 ## What is contested
 
-**Nothing.** Contested requires a record that disagrees with itself, and here there is no record. `absence of evidence`, which [evidence-class.md](../concepts/evidence-class.md) keeps distinct from contested and from refuted.
+Nothing contested. The record is `absence of evidence` ([evidence-class.md](../concepts/evidence-class.md)).
 
 ## The failure mode it invites
 
-**Shipping it without direction marks**, which leaves the reader a closed scribble with no beginning. `authority-asserted`.
+**No direction marks.** A closed scribble with no beginning. `authority-asserted`.
 
-**Reading loops as structure.** A path that returns near an earlier point means the two variables returned to earlier values; whether that is a cycle, a reversal or a coincidence is not in the picture. Same shape as reading clusters off a force-directed layout: the geometry is a consequence of the encoding, not a finding.
+**Loops read as structure.** A path that returns near an earlier point could be a cycle, a reversal or a coincidence.
 
 ## Justifying the choice
 
@@ -69,16 +63,16 @@ Nothing measured, for the same reason and from the same missing page.
 
 **Defensible, with the label said out loud:**
 
-- "I used a connected scatterplot instead of a dual-axis line chart. That substitution is a stated editorial preference at more than one publisher, not a measured result, and the case against dual axes has no experiment under it either."
+- "I used a connected scatterplot instead of a dual-axis line chart. That substitution is a stated editorial preference at the Urban Institute, not a measured result, and the case against dual axes has no experiment under it either."
 - "Both variables are on positional axes rather than one being on a second y-scale, so the apparent relationship is not a free parameter of how I scaled the second axis. That follows from the construction; that readers *do better* with it is untested."
 
 **Not defensible:**
 
-- ~~"Connected scatterplots are easier to read than dual-axis charts."~~ Untested here. Not contested, not refuted: nobody in this source set has measured it.
-- ~~"The path shows that x drove y."~~ Ordering in time is in the data; the causal claim is not, and no chart supplies it.
+- ~~"Connected scatterplots are easier to read than dual-axis charts."~~ Untested, so neither contested nor refuted.
+- ~~"The path shows that x drove y."~~ Time order is in the data. Causation is not.
 
 ## See also
 
-- [scatterplot.md](scatterplot.md) — the same marks without the path
-- [correlation.md](correlation.md) — the group argument
-- [../people/robert-kosara.md](../people/robert-kosara.md) — where the unwritten study on this form is recorded
+- [scatterplot.md](scatterplot.md)
+- [correlation.md](correlation.md)
+- [../people/robert-kosara.md](../people/robert-kosara.md)

@@ -8,17 +8,18 @@ author: jonathan-schwabish
 
 # Jonathan Schwabish
 
-An economist at the Urban Institute who has spent a decade turning research-communication practice into teachable form: four books, the Graphic Continuum, PolicyViz, and the One Chart at a Time video series. A synthesizer and teacher rather than an experimentalist.
+An Urban Institute economist who teaches research communication through four books, the Graphic Continuum, PolicyViz and the One Chart at a Time videos. A synthesizer, not an experimentalist.
 
-**What it is good for.** Chart-type breadth and practical when-to-use judgment, and unusually clear writing aimed at people who make charts as part of some other job.
+**What it is good for.** Chart-type breadth and when-to-use judgment, written for people who make charts as part of another job.
 
-**How this was read.** Split, and the split is the point.
+**What it does not settle.** Nothing here is evidence-backed on its own authority. The JEP article sources its claims to Few, Healey and Enns, Cleveland, Tufte, Skau and others, and the books are catalogs of judgment. The 2014 article's tool sections are dated (Adobe Kuler, Flash, TileMill). Every chapter's prose is unread, so this page says where a type sits ([Chapter memberships](#chapter-memberships-verified-from-the-contents-pages)), never what the book argues about it.
 
-- `primary-read` for **"An Economist's Guide to Visualizing Data"** (*Journal of Economic Perspectives* 28(1), Winter 2014, 209-234). The complimentary full-text PDF was downloaded from aeaweb.org with `curl` and a browser user-agent and referer, then extracted locally with `pdftotext`, retrieved 2026-08-23. Quotes from it are verbatim.
-- `primary-read` for the **PolicyViz pages** quoted below (the Graphic Continuum announcement, the One Chart at a Time announcement, the "Inside *Better Data Visualizations*" post, the About page, and the June 2025 post on legends in titles), and for the **Columbia University Press product page** including its contents listing. All fetched and converted locally, retrieved 2026-08-23.
-- **`secondary-only` for all four books.** None was opened. Everything below about a book's contents comes from the publisher's own page, from the author's own summary of it, or from a blurb, and is labeled inline every time. **No free excerpt of *Better Data Visualizations* was found**, so the publisher-excerpt route that worked for [knaflic-swd.md](knaflic-swd.md) does not exist here. One retrieval note for anyone who tries: in a February 2021 comment on his own announcement post Schwabish said the publisher had decided against an electronic version, but the CUP product page now sells a PDF e-book (ISBN 9780231550154) through the Columbia UP app. The comment is stale; a paid electronic copy exists.
+**How this was read.** The status is split.
 
-**What it does not settle.** Nothing here is evidence-backed on its own authority. Schwabish is a practitioner-synthesizer: the JEP article's claims are sourced to Few, Healey and Enns, Cleveland, Tufte, Skau and others, and the books are catalogs of judgment. The 2014 article is also genuinely dated in its tool sections (Adobe Kuler, Flash, TileMill). **Memberships are now verified** from the book's own contents pages, read in the Google Books preview on 2026-08-25; see [Chapter memberships](#chapter-memberships-verified-from-the-contents-pages). What remains unread is the prose of every chapter, so nothing here claims what the book *argues* about any type, only where each type sits.
+- `primary-read`: **"An Economist's Guide to Visualizing Data"** (*Journal of Economic Perspectives* 28(1), Winter 2014, 209-234), the complimentary PDF downloaded from aeaweb.org with `curl`, a browser user-agent and a referer, and extracted locally with `pdftotext`.
+- `primary-read`: the PolicyViz pages quoted below (the Graphic Continuum and One Chart at a Time announcements, the "Inside *Better Data Visualizations*" post, the About page, the June 2025 post on legends in titles) and the Columbia University Press product page with its contents listing, all fetched and converted locally.
+- `primary-read`: the chapter memberships of *Better Data Visualizations*, from its contents pages (pp. viii-x) in the Google Books preview. The preview warns "some pages are omitted", but the contents pages were fully legible.
+- `secondary-only`: the text of all four books, known only from the publisher, the author's summary or a blurb, labeled inline. No free excerpt of *Better Data Visualizations* was found, unlike [knaflic-swd.md](knaflic-swd.md). A paid PDF e-book exists (ISBN 9780231550154, Columbia UP app), despite a February 2021 comment by Schwabish that there would be none.
 
 ---
 
@@ -34,27 +35,21 @@ An economist at the Urban Institute who has spent a decade turning research-comm
 | One Chart at a Time | 2021 | **Yes, YouTube** | 50+ short videos, one chart type each, 50+ different presenters |
 | *Data Visualization in Excel* (A K Peters/CRC) | 2023 | No | How to build the charts, one chapter per chart |
 
-Andy Kirk's blurb on the Routledge page for the Excel book frames the split between the books better than the publisher copy does: "there are three core questions: what, when, and how. What different options exist. When should I use. How do I make them." *Better Data Visualizations* is the what and the when. That is precisely the question [../inventory.md](../inventory.md) topic 5 asks.
+Andy Kirk's blurb for the Excel book on the Routledge page: "there are three core questions: what, when, and how. What different options exist. When should I use. How do I make them." *Better Data Visualizations* is the what and the when, the question [../inventory.md](../inventory.md) topic 5 asks.
 
-## Chart-type selection: can his taxonomy be a spine?
+## His taxonomy, as content source and as index
 
-**Short answer: as a source of type-page content, yes, and it is the best candidate in the corpus. As the index scheme, no, for a reason [../chart-types/README.md](../chart-types/README.md) already worked out.**
+The best candidate in the corpus for type-page content, and a poor index scheme ([../chart-types/README.md](../chart-types/README.md)).
 
-### What the scheme actually is, verified
-
-The Graphic Continuum announcement, in his own words:
+### The scheme
 
 > "We've plotted nearly 90 different graphics across five main categories: Distribution, Time, Comparing Categories, Geospatial, Part-to-Whole, and Relationships."
 
-That sentence says five and lists six. It is a slip in a 2014 blog post and nothing rests on it, but it is recorded here because this wiki's habit is to note where a source disagrees with itself rather than to quietly fix it.
-
-The book reorganizes the same space. From "Inside *Better Data Visualizations*", Schwabish's own summary of his own book:
+The Graphic Continuum announcement says five and lists six. The book reorganizes the same space, per "Inside *Better Data Visualizations*":
 
 > "Here, I discuss each of more than eighty different graphs, charts, and diagrams split across six different data categories: comparing categories, time, distribution, geospatial, relationship, and part-to-whole. There is also a chapter on visualizing qualitative data, which is something that seems to have escaped many data visualization books to date. Finally, I've included a chapter on good table design"
 
-and the lineage, again in his own words: "The organization of the book mimics my Graphic Continuum projects."
-
-The Columbia University Press contents listing confirms it at chapter level, verbatim:
+On the lineage: "The organization of the book mimics my Graphic Continuum projects." The CUP contents listing, verbatim:
 
 ```
 Part II: Chart Types
@@ -70,10 +65,7 @@ Part II: Chart Types
 
 ### Chapter memberships, verified from the contents pages
 
-Read from the book's own contents pages (pp. viii-x) in the Google Books preview, 2026-08-25. The preview warns that
-"some pages are omitted", but the contents pages themselves were fully legible. Part Two runs pp. 65-346, which is
-**282 of 464 pages, about 61% of the book**. That is the concrete reason this is the best candidate in the corpus for
-type-page content.
+Part Two runs pp. 65-346, 282 of 464 pages, about 61% of the book.
 
 | Chapter | Types, in the book's order |
 |---|---|
@@ -86,44 +78,27 @@ type-page content.
 | **10. Qualitative** (311) | Icons, Word Clouds and Specific Words, Word Trees, Specific Words, Quotes, Coloring Phrases, Matrices and Lists |
 | **11. Tables** (327) | The Ten Guidelines of Better Tables, plus two worked redesigns |
 
-### Where he and the FT disagree about membership, and why it matters
+The two uncertainty sections (pp. 187 and 204) are the one place his catalog overlaps this wiki's statistical-honesty studies on something measured.
 
-Names mapped cleanly. Memberships do not, and the disagreements are not noise.
+### Where he and the FT disagree about membership
 
-**Networks are not flow, on a second independent taxonomy.** Schwabish files Network Diagrams, Chord, Arc and Tree
-under **Relationship**. The FT files Chord and Network under **Flow**. This wiki had already split
-[network-topology](../chart-types/network-topology.md) out of Flow on the argument that a network is a dataset rather
-than a message. That argument now has a practitioner taxonomy agreeing with it from a different direction, which
-upgrades it from our reasoning to our reasoning plus a corroborating scheme. It remains `authority-asserted`.
+Names map cleanly to the [FT's](ft-visual-vocabulary.md) scheme. Memberships do not.
 
-**Sankey and Waterfall are comparison charts to him**, not flow or part-to-whole charts. The FT puts Sankey under Flow
-and Waterfall under both Part-to-whole and Flow. Three placements for two charts across two schemes is the clearest
-available evidence that these taxonomies are retrieval aids rather than facts about charts.
+- **Networks.** He files Network Diagrams, Chord, Arc and Tree under Relationship. The FT files Chord and Network under Flow. That corroborates this wiki's split of [network-topology](../chart-types/network-topology.md) out of Flow (a network is a dataset, not a message), which remains `authority-asserted`.
+- **Sankey and Waterfall** are comparison charts to him. The FT puts Sankey under Flow and Waterfall under Part-to-whole and Flow. Two charts in three categories across two schemes: the taxonomies are retrieval aids, not facts about charts.
+- **Radar** is relationship to him, magnitude to the FT.
+- **Arc** is a relationship chart to him. The FT's "Arc" is a parliament hemicycle under part-to-whole, a different form under the same name.
+- **Heatmap** is Comparing Categories to him. The FT has XY heatmap under Correlation and Heat map under Spatial.
 
-**Radar is a relationship chart to him**, a magnitude chart to the FT.
-
-**Arc is a relationship chart to him**, a part-to-whole chart to the FT.
-
-**Heatmap sits under Comparing Categories** for him. The FT splits it, XY heatmap under Correlation and Heat map under
-Spatial.
-
-Read together with the earlier conclusion that his scheme is too coarse to serve as our index, the membership data
-supports the same call: **he is a source for what belongs on a type page, not for where the type is filed.**
+He is a source for what belongs on a type page, not for where the type is filed.
 
 ### Types he covers that the FT list does not
 
-Candidates for future pages, and the reason this book is the better source for coverage: Marimekko and Mosaic, Gauge and
-Bullet, Nested Bubbles, Circular Line, Sparklines, Bump, Cycle, Streamgraph, Horizon, Gantt, Pyramid, Candlestick,
-Ridgeline, Stem-and-Leaf, Correlation Matrix, Tree Diagrams, Sunburst, Nightingale, and the whole Qualitative and Tables
-chapters, which have no FT equivalent at all.
-
-**The Distribution chapter carries two dedicated uncertainty sections**, at pp. 187 and 204. That is the part of his
-catalog that touches this wiki's statistical-honesty studies most directly, and it is the one place his catalog and our
-evidence base overlap on something measured rather than asserted.
+Gauge and Bullet, Nested Bubbles, Circular Line, Sparklines, Bump, Cycle, Streamgraph, Horizon, Gantt, Ridgeline, Stem-and-Leaf, Correlation Matrix, Tree Diagrams, Sunburst, Nightingale, and the Qualitative and Tables chapters, which have no FT equivalent. Marimekko, Pyramid and Candlestick appear in the FT under other names (Proportional stacked bar, Population pyramid, Stock price).
 
 ### Mapped against the FT nine
 
-Names only. This maps what the categories are called, not what is in them.
+Names only, not contents.
 
 | Schwabish (BDV Part II) | FT Visual Vocabulary |
 |---|---|
@@ -138,23 +113,15 @@ Names only. This maps what the categories are called, not what is in them.
 | *no equivalent* | Deviation |
 | *no equivalent* | Flow |
 
-Four observations that are worth more than the table.
+His scheme is strictly coarser. Comparing Categories absorbs Magnitude and Ranking, losing the FT's definition of Part-to-Whole and Magnitude against each other by what the reader wants. Deviation and Flow have no home in it.
 
-**His scheme is strictly coarser, so it cannot replace the FT nine as an index.** Six or eight buckets retrieve worse than nine, and Comparing Categories swallowing both Magnitude and Ranking loses the FT's sharpest definitional move, that Part-to-Whole and Magnitude are defined against each other by what the reader wants. Adopting his categories would be trading down.
+The FT has no relationship for text and none for "this should be a table". Schwabish is the citable precedent for `tables.md` and `qualitative.md` indexes beside the FT nine, on the footing of `network-topology.md`. A Tables index would give [../inventory.md](../inventory.md) topic 4 ("should this be a chart at all") a place in the tier.
 
-**But the two categories he has and the FT does not are real holes the tier will hit.** There is no FT relationship for qualitative or text data, and none for "this should be a table". The tier already committed to the pattern for exactly this case: `network-topology.md` is an index of ours, sitting alongside the FT nine rather than inside them, because amending someone else's published scheme while still citing it is the degradation this project exists to catch. A `tables.md` index and a `qualitative.md` index would be ours on the same footing, and Schwabish is the citable precedent that they belong in a chart-type catalog at all. The Tables one also gives [../inventory.md](../inventory.md) topic 4 ("should this be a chart at all") somewhere to land inside the tier instead of only upstream of it.
+His value is per-type text (slots 2 to 6 of a type page). CUP says the book covers "more than eighty visualization types, from histograms to horizon charts, ridgeline plots to choropleth maps, and explains how each has its place in the visual toolkit", which is unvouched. That text stays `secondary-only` until the book is opened, a different evidence class from [../chart-types/pie-and-donut.md](../chart-types/pie-and-donut.md).
 
-**Deviation and Flow have no home in his scheme**, so anyone using the book to fill FT index pages finds those two unserved.
+### One Chart at a Time
 
-**The real contribution is not the taxonomy at all, it is the per-type text.** The taxonomy is a coarser cousin of a scheme the tier already uses, descended from the same 2014 poster. What the tier is actually short of is what each type page needs in slots 2 through 6: what the type is for, what it invites, when not to use it. That is what "more than eighty visualization types, from histograms to horizon charts, ridgeline plots to choropleth maps, and explains how each has its place in the visual toolkit" (CUP's description, so unvouched as to the book's contents) is offering, and it is the densest such catalog anyone has published.
-
-**The blocker is status, not fit.** All of that is `secondary-only` until somebody opens the book. A type page inheriting practitioner guidance from a publisher blurb would sit at a different evidence class from [../chart-types/pie-and-donut.md](../chart-types/pie-and-donut.md).
-
-### One Chart at a Time is the free proxy, with a caveat
-
-The video series was built as a companion to the book: "One of my goals in that book is to help expand readers' graphic literacy. Instead of relying on the tried-and-true bar, line, and pie charts, what about trying a slope chart, dot plot, or tile grid map?" More than fifty videos, free on YouTube, one chart type each.
-
-The brief he gave every contributor:
+More than fifty free videos, one type each, built as a companion to the book: "One of my goals in that book is to help expand readers' graphic literacy. Instead of relying on the tried-and-true bar, line, and pie charts, what about trying a slope chart, dot plot, or tile grid map?" The brief to every contributor:
 
 > "Can you please describe the graph?"
 >
@@ -162,13 +129,11 @@ The brief he gave every contributor:
 >
 > "Can you please share an example of this chart you really like?"
 
-Those three questions are close to slots 1, 6 and an example in the tier's page template, arrived at independently. That is mild corroboration that the template asks the right questions.
+Those match slots 1 and 6 of the type-page template, plus an example. Each video is one presenter's `authority-asserted` view, and there are fifty-odd presenters. The series does not mirror the book: "Not every graph, chart, and diagram in the book is covered in this video series." Contributors include Claus Wilke, Cole Nussbaumer Knaflic, Robert Kosara, Steve Franconeri, Steve Haroz, Kenneth Field, Alice Feng and Severino Ribecca.
 
-Two cautions before treating the series as a source. Each video is one practitioner's authority-asserted view, and the contributor list is fifty-odd different people, so trustworthiness varies video by video rather than source-wide. And Schwabish says plainly that the series is not a mirror of the book: "Not every graph, chart, and diagram in the book is covered in this video series." Contributors include Claus Wilke, Cole Nussbaumer Knaflic, Robert Kosara, Steve Franconeri, Steve Haroz, Kenneth Field, Alice Feng and Severino Ribecca, several of whom already have pages or studies here.
+## The five guidelines
 
-## The five guidelines, and the one place they are vouched
-
-*Better Data Visualizations* chapter 2 is "Five Guidelines for Better Data Visualizations". From Schwabish's own post about the book, so this is his description rather than the book's text:
+*Better Data Visualizations* chapter 2 is "Five Guidelines for Better Data Visualizations". His post about the book lists them:
 
 > "Show the Data
 >
@@ -182,7 +147,7 @@ Two cautions before treating the series as a source. Each video is one practitio
 
 He adds: "I think this last guideline can be especially helpful -- make everything gray so that you are forced to make purposeful decisions about your data visualizations."
 
-**Three of those five are readable at primary in the JEP article**, and he says so himself: the book's types-of-visualization chapter "is largely based on this blog post and this article I wrote for the *Journal of Economic Perspectives* in 2014." The 2014 text states them as "Three basic principles":
+The book's types-of-visualization chapter "is largely based on this blog post and this article I wrote for the *Journal of Economic Perspectives* in 2014." That article states the first three as "Three basic principles", readable at primary:
 
 > "First, show the data."
 >
@@ -190,57 +155,49 @@ He adds: "I think this last guideline can be especially helpful -- make everythi
 >
 > "Third, integrate the text and the graph. Standard research reports often suffer from the 'slideshow effect,' in which the writer narrates the text elements that appear in the graph. A better model is one in which visualizations are constructed to complement the text and at the same time to contain enough information to stand alone"
 
-So the 2014 article is a legitimate, free, vouched proxy for three of the book's five guidelines, by the author's own account of the relationship. It is not a proxy for the chart-type catalog, which did not exist in 2014.
+The article is a free, vouched proxy for those three, not for the catalog, which did not exist in 2014.
 
-## The audience frame, which the brief for this page had slightly misplaced
+## Audience
 
-The strength usually described as "presenting to non-expert audiences" belongs to *Better Presentations* and *Elevate the Debate*, not to *Better Data Visualizations*, whose subtitle names its audience as the **makers** ("Scholars, Researchers, and Wonks"). *Elevate the Debate* is co-authored with Urban's communications department and is about a multiplatform communication strategy, which is one step further from a figure quality bar than a book about slides. Neither is a priority to reach.
+"Presenting to non-expert audiences" describes *Better Presentations* and *Elevate the Debate* (a multiplatform communication strategy, written with Urban's communications department). *Better Data Visualizations* names the makers in its subtitle ("Scholars, Researchers, and Wonks").
 
-One sentence in the JEP article states [../inventory.md](../inventory.md) topic 3 better than the topic itself currently does:
+The JEP article states [../inventory.md](../inventory.md) topic 3, the exploratory/explanatory distinction, as an obligation on research figures:
 
 > "One thing researchers should keep in mind is that graphs in research reports or articles, and even those shown in verbal presentations, are not meant for the author, but for the reader or the seminar audience. The line chart that a researcher uses in the data exploration phase -- with default gridlines, tick marks, and colors -- may not be the one that will best communicate the researcher's ideas to others."
 
-That is the exploratory/explanatory distinction stated as an obligation on a *research* figure specifically, which is the case a library's docs figures actually are.
+## Where he touches rules this wiki has argued about
 
-## Where he touches things this wiki has already argued about
-
-**Zero baselines: he is on the by-mark side, in 2014.**
+**Zero baselines.** In 2014 he scopes the rule to the mark:
 
 > "When it comes to bar and column charts, a first rule is to start the chart at zero. Otherwise, the differences between the columns are overemphasized."
 
-Scoped to bars and columns, with the perceptual reason attached rather than an axis-wide rule. That puts him with Observable Plot and the FT on the stronger form of topic 9, and against Vega-Lite's by-axis default.
+That puts him with Observable Plot and the FT on the stronger form of topic 9, against Vega-Lite's by-axis default. He and the Urban Institute style guide count as one voice. He is a Senior Fellow at Urban and the guide's sole named contact ("Contact Jon Schwabish", at an `@urban.org` address, [urban-institute.md](urban-institute.md)).
 
-**Corrected: this is a third source, not a fourth.** An earlier version of this line counted Schwabish and the Urban Institute style guide as separate voices. They are not independent. Schwabish is a Senior Fellow at Urban and is the sole named contact on the guide, which asks readers to "Contact Jon Schwabish" at an `@urban.org` address (verified on the live page, 2026-08-25). See [urban-institute.md](urban-institute.md).
-
-The general rule this cost: **independence is a claim that needs support, and the absence of a byline is not support for it.** A corroboration count that includes an unbylined source rests on an unchecked authorship claim.
-
-**Pie charts: the angle mechanism [refutations.md](../refutations.md) refuted appears here, and the attribution has to be exact.**
-
-He does not assert it in his own voice at first. He reports it as one side of a debate, and the sentence begins "But others argue that":
+**Pie charts.** The angle mechanism [refutations.md](../refutations.md) records as refuted appears here. He first reports it as one side of a debate, beginning "But others argue that":
 
 > "But others argue that because pie charts force readers to make comparisons using the areas of the slices or the angles formed by the slices -- something that our visual perception does not accurately support -- they are not an effective way to communicate information."
 
-The next paragraph **is** his own voice, and it is angle-based:
+The next paragraph is in his own voice, and angle-based:
 
 > "Pie chart slices that form 90-degree right angles -- that is, slices that form one-quarter increments -- are the most familiar to our eyes. Other amounts can be far more difficult to discern."
 
-Two qualifiers before anyone files this as a contradiction. The 2014 article predates [../studies/skau-kosara-2016.md](../studies/skau-kosara-2016.md) by two years, so this is the pre-2016 consensus stated cleanly rather than a live disagreement with the record. And he flags the section's provenance himself: "much of the discussion in this section is based on Few 2007", which means this is **not** an independent source for the angle mechanism, it is Few's argument relayed. **Whether *Better Data Visualizations* (2021) still says it is unknown**, and a 2021 book repeating a 2016-refuted mechanism would be a different matter from a 2014 article doing so.
+The article predates [../studies/skau-kosara-2016.md](../studies/skau-kosara-2016.md) by two years. He notes "much of the discussion in this section is based on Few 2007", so it is Few's argument relayed, not independent support. Whether the 2021 book repeats it is unknown.
 
-His verdict on the form is not the usual one, either. The article calls the debate "among the most contentious in the field of data visualization", and it gives pies a legitimate job rather than dismissing them: "Figure 8C shows the true purpose of the pie chart, which is to individually compare each part to the whole". His rotation demonstration (Figures 7A and 7B, same data, largest slice moved to the 12 o'clock position, with the observation that "One small change obscures the information") is an anchoring effect that neither [../concepts/channels.md](../concepts/channels.md) nor [../chart-types/pie-and-donut.md](../chart-types/pie-and-donut.md) currently covers.
+He calls the debate "among the most contentious in the field of data visualization" and gives pies a job: "Figure 8C shows the true purpose of the pie chart, which is to individually compare each part to the whole". His Figures 7A and 7B rotate the largest slice to 12 o'clock with the same data, and "One small change obscures the information". That anchoring effect is not covered on [../concepts/channels.md](../concepts/channels.md) or [../chart-types/pie-and-donut.md](../chart-types/pie-and-donut.md).
 
-**"Start with Gray" broadens the authority base for a rule refutations records as unevidenced.** The [refutations.md](../refutations.md) entry on "gray plus one accent" finds no controlled study and attributes the rule to Knaflic. Schwabish states a stronger version as one of his five core rules, independently. That does not change the evidence class one bit, and the negative result stands. It does mean the entry currently under-credits how widespread the assertion is, which matters because "one author's house style" and "the field's shared default with no experiment behind it" are different problems.
+**Start with Gray.** The [refutations.md](../refutations.md) entry on "gray plus one accent" finds no controlled study and credits the rule to Knaflic. Schwabish independently states a stronger version as a core rule. The evidence class is unchanged. The entry under-credits how widespread the rule is, and "one author's house style" and "the field's shared default with no experiment behind it" are different problems.
 
-**Color in the title as a legend: he gives it a condition the repo's own guidance lacks.** A June 2025 PolicyViz post walks through his own hesitation about color-coding legend words inside a title, then lands on:
+**Color in the title as a legend.** A June 2025 PolicyViz post concludes:
 
 > "Use color in the title when it reinforces categories already made clear through other visual cues -- like bar direction or grouping. When done right, this technique can add clarity without sacrificing accessibility."
 
-The repo already recommends the technique and does not state the condition. His reasoning is exactly the redundant-encoding argument (inventory topic 69) applied to text, and it converts a stylistic suggestion into a testable one: the title may carry color only when removing the color loses nothing. Same post, on a red-and-green chart he approves of: "my testing shows that the red and green colors are consistent for readers with color vision deficiencies. But even if they hadn't, the colors are not critical to understanding the chart." That is a working practitioner applying the scoped version of the red-versus-green rule, not the flat one, and doing the simulation rather than eyeballing it.
+The repo's guidance recommends the technique without the condition. It is redundant encoding (inventory topic 69) applied to text, and testable: the title carries color only when removing the color loses nothing. On a red-and-green chart in the same post: "my testing shows that the red and green colors are consistent for readers with color vision deficiencies. But even if they hadn't, the colors are not critical to understanding the chart." That is the scoped red-versus-green rule, checked by simulation.
 
-**Qualitative data has no inventory topic at all.** He calls a whole chapter's worth of it "something that seems to have escaped many data visualization books to date", and he is right about this corpus: nothing here says anything about visualizing text or coded qualitative material. That is a candidate missing topic in the same class as Few's *validity*, and it is recorded as a candidate, not asserted as an omission, since one publisher's contents line is thin ground.
+**Qualitative data has no inventory topic.** He calls it "something that seems to have escaped many data visualization books to date", and nothing in this corpus covers text or coded qualitative material. It is a candidate missing topic, like Few's *validity*.
 
-## Inventory topics he bears on
+## Lineage of the FT nine
 
-**One correction to carry forward.** [../chart-types/README.md](../chart-types/README.md) says the FT nine "descends from Schwabish and Ribecca (2014) by way of the FT (2016)", which is right and is confirmed here from his side. What the note does not say is that his own scheme *also* moved between 2014 and 2021, gaining Qualitative and Tables. The FT froze a 2014 snapshot; the author did not.
+[../chart-types/README.md](../chart-types/README.md) says the FT nine "descends from Schwabish and Ribecca (2014) by way of the FT (2016)", and his side confirms it. His own scheme gained Qualitative and Tables by 2021. The FT kept the 2014 snapshot.
 
 ## Links
 

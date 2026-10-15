@@ -1,18 +1,12 @@
 # Per-source roll-call
 
-The audit trail for [inventory.md](inventory.md). For each source, its own published outline is enumerated and every entry is mapped either to an inventory topic or to a stated exclusion.
-
-An omission becomes a **visibly unmapped chapter** rather than an absence nobody can see.
-
-**What this proves and does not prove.** It proves the mapping was performed. It does **not** prove the one-line rule attached to each topic is well worded. A chapter mapped to a badly-named topic looks identical to one mapped well.
-
-Numbers refer to inventory topic numbers. Retrieval: **2026-08-22**.
+The audit trail for [inventory.md](inventory.md). Each source's published outline is listed, and every entry maps to inventory topic numbers or to a stated exclusion, so an omission shows up as a visibly unmapped chapter. This proves the mapping was done, not that each topic's one-line rule is well worded: a chapter mapped to a badly named topic looks identical to one mapped well. It covers only sources that were enumerated (see [Tufte](#tufte)).
 
 ---
 
 ## Wilke, *Fundamentals of Data Visualization*
 
-Full table of contents retrieved from clauswilke.com/dataviz/.
+Outline from the full table of contents at clauswilke.com/dataviz/.
 
 | Chapter | Topics |
 |---|---|
@@ -48,7 +42,7 @@ Full table of contents retrieved from clauswilke.com/dataviz/.
 | 30. Annotated bibliography | **excluded**: bibliography, not a quality topic |
 | Preface / technical notes / references | **excluded**: front and back matter |
 
-**Every substantive chapter maps. No unmapped chapters.**
+Every substantive chapter maps.
 
 ## Munzner, *Visualization Analysis and Design*
 
@@ -59,7 +53,7 @@ Chapter list from cs.ubc.ca/~tmm/vadbook/.
 | 1. What's Vis, and Why Do It? | 1, 4 |
 | 2. What: Data Abstraction | 2 |
 | 3. Why: Task Abstraction | 1 |
-| 4. Analysis: Four Levels for Validation | **excluded**: a research-methodology framework (domain / abstraction / idiom / algorithm validation with threat-of-mismatch reasoning). A figure bar inherits its spirit via 1 and 2 but cannot mechanize four-level validation for a one-off chart. Deliberate exclusion, not an omission. |
+| 4. Analysis: Four Levels for Validation | **excluded**: a research-methodology framework (domain / abstraction / idiom / algorithm validation with threat-of-mismatch reasoning). A figure bar inherits its spirit via 1 and 2 but cannot mechanize four-level validation for a one-off chart. |
 | 5. Marks and Channels | 6, 7 |
 | 6. Rules of Thumb | 68 (no unjustified 3D), 84 (eyes beat memory, resolution over immersion), 82 (overview first), 83 (responsiveness), 27 (get it right in black and white), 92 (function first, form next) |
 | 7. Arrange Tables | 5, 57 |
@@ -72,7 +66,7 @@ Chapter list from cs.ubc.ca/~tmm/vadbook/.
 | 14. Embed: Focus+Context | 82 |
 | 15. Analysis Case Studies | **excluded**: worked examples, not prescriptions |
 
-**Caveat.** Chapter 6's rule *names* are confirmed across two independent slide decks (UBC and HKUST). Verbatim one-line statements from the book itself were not obtained.
+**Caveat.** Chapter 6 has eight rules of thumb ([sources/munzner-vad.md](sources/munzner-vad.md)), and the row maps seven. It omits **No Unjustified 2D**, which bears on network layouts. "Get It Right in Black and White" is Maureen Stone's phrase, cited by Munzner to Stone's 2010 post. Topic 7's quote ("express all of, and only...") is not in her 689-slide deck, and the book was not reached, so the quote is flagged rather than removed.
 
 ## Knaflic, *Storytelling with Data*
 
@@ -89,9 +83,7 @@ Chapter list from cs.ubc.ca/~tmm/vadbook/.
 | 9. Case studies | **excluded**: worked examples |
 | 10. Final thoughts | **excluded**: closing matter |
 
-**Caveat.** The chapter list came from search aggregation plus a publisher-derived snippet; storytellingwithdata.com publishes no chapter list. Chapter *titles* are corroborated across two independent aggregations. Any gloss on chapter 5's contents is **from background familiarity, not a retrieved quote, and is unvouched.**
-
-Knaflic is the source a practitioner is most likely to name when they say a bar is missing something basic.
+**Caveat.** storytellingwithdata.com publishes no chapter list. This one came from search aggregation plus a publisher-derived snippet, with chapter *titles* corroborated across two independent aggregations. Any gloss on chapter 5's contents is **from background familiarity, not a retrieved quote, and is unvouched.**
 
 ## Few, *Data Visualization Effectiveness Profile*
 
@@ -105,7 +97,7 @@ Knaflic is the source a practitioner is most likely to name when they say a bar 
 | Aesthetics (emotive) | 89 |
 | Engagement (emotive) | 89 |
 
-**Caveat.** The PDF at perceptualedge.com returned as unreadable/password-protected binary. The criteria list and the informative/emotive split came from search aggregation of that PDF. **Everything mapped to Few is unvouched at the primary level.**
+**Caveat.** The perceptualedge.com PDF was read in full and the mappings checked against it ([sources/few-effectiveness-profile.md](sources/few-effectiveness-profile.md)). Topics 3 and 6 check out; 16, 33, 42, 45 and 46 are extrapolation. Few's *Completeness* is **comparison context** ("comparisons to targets, measures of the norm, and historical values"), not legends, notes and sample size, and **no inventory topic covers it**. His *Truthfulness* is accuracy **and validity**, and **validity has no topic**.
 
 ## Cairo, five qualities
 
@@ -117,11 +109,11 @@ Knaflic is the source a practitioner is most likely to name when they say a bar 
 | Insightful | 37, 41 |
 | Enlightening | **excluded**: Cairo defines it as the composite of the other four, not an independent check |
 
-**Caveat.** Secondary summary, not Cairo's own text. *How Charts Lie* was not reached at all and would likely sharpen topics 10, 11 and 21.
+**Caveat.** Secondary summary, not Cairo's own text. Topic 91's Cairo quote ("paramount among these five") is not in the 46-page sample, where the word "paramount" does not occur. The full text was not reached, so the quote is flagged rather than removed.
 
 ## matplotlib, *Choosing Colormaps*
 
-Retrieved in full.
+Read in full.
 
 | Section | Topics |
 |---|---|
@@ -137,7 +129,7 @@ Retrieved in full.
 | Color vision deficiencies | 26 |
 | References | **excluded**: bibliography |
 
-The page's own section navigation additionally enumerates matplotlib's documented figure concerns: placing colorbars (34), axis scales (12), axis ticks (15), legends (39, 40), constrained layout (65), style sheets and rcParams (79), annotations (41), fonts (47), animations (82). All mapped.
+Its section navigation also lists these figure concerns, all mapped: placing colorbars (34), axis scales (12), axis ticks (15), legends (39, 40), constrained layout (65), style sheets and rcParams (79), annotations (41), fonts (47), animations (82).
 
 ## seaborn
 
@@ -164,7 +156,7 @@ The page's own section navigation additionally enumerates matplotlib's documente
 | Default scale type by field type | 2, 7 |
 | Remaining scale properties (domain, range, padding, interpolate, nice…) | **excluded**: parameter reference, except `clamp` which touches 56 |
 
-**Sampling caveat.** Vega-Lite has a documented encoding-channel opinion set reached only via the scale page.
+**Caveat.** Vega-Lite has a documented encoding-channel opinion set, reached here only via the scale page.
 
 ## Observable Plot, Scales
 
@@ -180,7 +172,7 @@ The page's own section navigation additionally enumerates matplotlib's documente
 
 ## BBC Visual and Data Journalism cookbook
 
-All headings retrieved from bbc.github.io/rcookbook/.
+All headings from bbc.github.io/rcookbook/.
 
 | Heading group | Topics |
 |---|---|
@@ -194,7 +186,7 @@ All headings retrieved from bbc.github.io/rcookbook/.
 | Small multiples (facets, free scales) | 62 |
 | Other (margins, export margins, reorder bars by size, reorder manually, conditional color) | 65, 57, 29 |
 
-**Every heading maps.**
+Every heading maps.
 
 ## Urban Institute Data Visualization Style Guide
 
@@ -227,7 +219,7 @@ All headings retrieved from bbc.github.io/rcookbook/.
 | Tables | 18, 43, 44, 45 |
 | Tables for the web | 80 |
 
-**Every section maps.**
+Every section maps.
 
 ## Datawrapper Academy
 
@@ -273,22 +265,13 @@ All headings retrieved from bbc.github.io/rcookbook/.
 
 ---
 
-## Corrections found when each source got its own page (2026-08-23)
+## Tufte
 
-The per-source pages were written by agents that opened the sources. They found four things wrong with this roll-call.
-
-- **Tufte has no row here at all**, and his name appears nowhere in `inventory.md` or `refutations.md` except secondhand through Wilke ch. 23. He is the canon's most-cited author on this subject and he entered the 92 topics only by quotation. **The roll-call's guarantee does not cover a source that was never enumerated**: an omission shows up as an unmapped chapter only if the chapters were listed. [sources/tufte.md](sources/tufte.md) now lists nine chapters.
-- **Munzner ch. 6 has eight rules of thumb, and the row above maps seven.** The missing one is **No Unjustified 2D**, which bears on network layouts. *Corrected 2026-08-27: the section list extracted on [sources/munzner-vad.md](sources/munzner-vad.md) has eight rules plus two framing sections.* Also, "Get It Right in Black and White" is Maureen Stone's phrase, cited by Munzner to her 2010 post rather than coined by her.
-- **The Few mappings are partly extrapolation.** Topics 6 and 3 check out. The mappings to 16, 33, 42, 45 and 46 do not: Few's *Completeness* is about **comparison context** ("comparisons to targets, measures of the norm, and historical values"), not legends, notes and sample size, and **no inventory topic covers it**. His *Truthfulness* is accuracy **and validity**, and **validity has no topic at all**. Two real gaps, found only because his primary turned out to be readable after all.
-- **Two quotes could not be located in the available material.** Topic 7's Munzner quote ("express all of, and only...") appears nowhere in her 689-slide deck, and topic 91's Cairo quote ("paramount among these five") appears nowhere in the 46-page sample, where the word "paramount" does not occur. Both are flagged on their source pages rather than removed, since neither the book nor the full text was reached.
-
-**One recorded limitation reversed.** Few's profile, described above as an unreadable, password-protected binary, is neither. It was read in full, and the mappings drawn from it are corrected in the section above.
+Tufte has no row, so his chapters leave no visible gap. He enters the inventory only by quotation, secondhand through Wilke ch. 23. [sources/tufte.md](sources/tufte.md) lists his nine chapters.
 
 ## Sources deliberately not consulted
 
-Named so the next pass has the list rather than re-deriving it:
-
 - **Cairo, *How Charts Lie***. Would sharpen truncation, inverted axes and map distortion (10, 11, 21).
-- **Chartability** (Elavsky, Bennett & Moritz, EuroVis 2022). 50 accessibility heuristics under POUR+CAF, CC-BY-SA, with a 14-test shortlist. Discovered *after* the accessibility topics were derived. The inventory's four accessibility topics map onto eight of its fifty heuristics, one only partially.
-- **The statistical-reporting canon.** Cumming/Fidler/Vaux, Weissgerber, Belia, Song & Szafir. Not in the original source set at all, which is exactly why topics 46, 55 and 56 came out weakly sourced. See [refutations.md](refutations.md).
-- **Draco** (Moritz et al., TVCG 2019). Formalizes encoding-choice knowledge as constraints with weights learned from experiment. Covers mark and channel selection only; does not touch titles, annotation or narrative.
+- **Chartability** (Elavsky, Bennett & Moritz, EuroVis 2022). 50 accessibility heuristics under POUR+CAF, CC-BY-SA, with a 14-test shortlist. The inventory's four accessibility topics map onto eight of them, one only partially.
+- **The statistical-reporting canon.** Cumming/Fidler/Vaux, Weissgerber, Belia, Song & Szafir. Its absence is why topics 46, 55 and 56 are weakly sourced. See [refutations.md](refutations.md).
+- **Draco** (Moritz et al., TVCG 2019). Encoding-choice knowledge as constraints with weights learned from experiment, covering mark and channel selection only.

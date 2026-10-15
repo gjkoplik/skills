@@ -10,69 +10,59 @@ A [line chart](line-chart.md) with the region between the path and a baseline fi
 
 ## When to reach for it, and when not
 
-**The form applies where** the accumulated amount under the curve is a real quantity the reader cares about (volume shipped, hours logged, total spend), or where a stacked set has a total that matters as much as its parts. One series, or a small number of stacked ones.
-
-The fill is the whole difference from a line chart. It puts a second encoding on the same number, it occludes anything behind it, and it brings the zero baseline back into scope.
-
-**Questions the form does not answer:**
+The form applies where the amount under the curve is a quantity (volume shipped, hours logged, total spend), or where a few stacked series have a total that matters as much as the parts. The fill double-encodes the number, occludes what is behind it, and brings the zero baseline into scope.
 
 | The question | Alternative |
 |---|---|
-| How do these four series' trends compare? | [Line chart](line-chart.md). Fills occlude each other, and stacked bands above the bottom have no shared baseline |
-| How did this one component change? | [Line chart](line-chart.md) of that component, or small multiples. The FT's own gloss: area charts are "good at showing changes to total, but seeing change in components can be very difficult" |
-| The interesting range excludes zero | [Line chart](line-chart.md). A filled mark that does not start at its baseline breaks the one rule this whole corpus agrees on |
-| The quantity is a rate, an index, a temperature | [Line chart](line-chart.md). If the integral under the curve is not a thing, the area is decoration standing in for data |
+| How do these four series' trends compare? | [Line chart](line-chart.md). Fills occlude, and upper bands share no baseline |
+| How did this one component change? | [Line chart](line-chart.md) of that component, or small multiples. The FT: area charts are "good at showing changes to total, but seeing change in components can be very difficult" |
+| The interesting range excludes zero | [Line chart](line-chart.md). A filled mark off its baseline breaks the one rule every source here agrees on |
+| The quantity is a rate, an index, a temperature | [Line chart](line-chart.md). If the integral is not a thing, the area is decoration |
 | Composition across a few discrete periods | [Stacked bar](stacked-bar.md) |
-| Only the shares matter | A 100% stacked area, which removes the total, the reason for the fill in the first place. Same trade [stacked-bar.md](stacked-bar.md) documents |
+| Only the shares matter | A 100% stacked area, which drops the total the fill was for ([stacked-bar.md](stacked-bar.md) has the same trade) |
 
 ## Structural decomposition
 
 | Slot | |
 |---|---|
 | Data | One row per (series, time, value) |
-| Transform | None for a single series. Cumulative sum across series for a stacked area, optionally normalized to 100% |
+| Transform | None for one series. Cumulative sum across series when stacked, optionally normalized to 100% |
 | Geometry | Filled polygon between the path and a baseline, usually with the boundary drawn |
-| Scale | Time to position on x, value to position on y, and simultaneously to the height of the fill at each x |
+| Scale | Time to position on x. Value to position on y, and to the fill's height at each x |
 | Coordinates | Cartesian |
-| Guides | Two axes including the baseline, legend or direct labels on the bands |
+| Guides | Two axes including the baseline, and a legend or direct labels on the bands |
 
-**One slot from a line chart, one slot from a stacked bar.** A fill added to [line-chart.md](line-chart.md) produces this form. The continuous x replaced with categories produces [stacked-bar.md](stacked-bar.md), which is why the stacked version inherits that page's channel problem rather than having one of its own.
+It is a line chart plus a fill. With categories on x it becomes a [stacked bar](stacked-bar.md), whose channel problem the stacked version inherits.
 
 ## Channels
 
-**Position along a common scale** for the boundary, and **area** for the fill, both inherited from [channels.md](../concepts/channels.md) rather than measured on this form. Area is measured below position and below angle, and the mapping from this chart to those channels is the conjectural step the inheritance rule exists to flag.
+The boundary is position along a common scale and the fill is area, which ranks below position and angle ([channels.md](../concepts/channels.md); the mark-to-channel step is conjecture in the source literature). In a stacked area only the bottom band sits on the axis, the structure Cleveland & McGill measured on divided bars: "All other values must be compared by the elementary task of perceiving different bar lengths" ([stacked-bar.md](stacked-bar.md) has the full quote and the 40% to 250% error figure). The transfer from bars to bands is reasoning.
 
-For a **stacked** area, only the bottom band sits on the axis. Every band above it floats, which is the structure Cleveland & McGill measured directly on divided bars: "All other values must be compared by the elementary task of perceiving different bar lengths" ([stacked-bar.md](stacked-bar.md) carries the full quote and the 40% to 250% error figure). That transfer from bars to bands over a continuous axis is reasoning, not measurement.
-
-**A caution about miscitation.** [Skau & Kosara (2016)](../studies/skau-kosara-2016.md) report that error was smaller for their "area chart" than for their angle-only conditions. That stimulus is a pie-cue isolation condition, not this chart. It says nothing about area charts.
+The "area chart" in [Skau & Kosara (2016)](../studies/skau-kosara-2016.md), which beat their angle-only conditions, is a pie-cue isolation stimulus, not this form.
 
 ## What it is measurably good at
 
-**Nothing in this corpus measures it.** No study here tests an area chart against a line chart, or against anything else, on any task. The form's stated purpose, making a total legible while its parts stay visible, is `authority-asserted` across the practitioner literature and unmeasured.
+No study in this corpus tests the form. Its stated purpose, a legible total with visible parts, is `authority-asserted` and unmeasured.
 
 ## What it is measurably bad at
 
-**Everything the line chart is bad at**, since it is a line chart plus a fill: aspect ratio, truncation, silently repaired gaps and log axes all apply unchanged. They are recorded at [what it is measurably bad at](line-chart.md#what-it-is-measurably-bad-at) rather than restated here.
+The line chart's exposures apply unchanged: aspect ratio, truncation, silently repaired gaps, log axes ([what it is measurably bad at](line-chart.md#what-it-is-measurably-bad-at)).
 
-**Surviving an inverted axis.** This is the closest thing to a native finding. The reversal condition in [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) was a line-area chart with a flipped y-axis, and the effect is the largest in that paper. From its Table 3: in the control condition 39 of 40 participants answered correctly; in the deceptive condition 7 of 38 answered correctly and 30 answered incorrectly, Fisher exact p < 0.0001. The paper's Discussion mislabels these figures and swaps the conditions; the table is the accurate record, and the discrepancy is in [refutations.md](../refutations.md). Caveats: one chart, one scenario, n of 38 against 40. The effect is enormous and the test is exact, so the direction is not in doubt, but this is not a well-powered study.
-
-**Tracking a band that is not on the baseline**, in the stacked variant. Inherited from the divided-bar measurement rather than measured here.
+**Inverted axes.** The reversal condition in [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) was a line-area chart with a flipped y-axis, the paper's largest effect. Per Table 3, 39 of 40 control participants answered correctly, against 7 of 38 in the deceptive condition, where 30 answered incorrectly (Fisher exact p < 0.0001). The Discussion swaps the conditions; the table is the record ([refutations.md](../refutations.md)). With one chart, one scenario and 38 against 40, the direction holds but the study is not well powered. `evidence-backed`.
 
 ## What is contested
 
-Less than the line chart's record would suggest: the disagreement that lives on [line-chart.md](line-chart.md) mostly evaporates here.
+Most of the disagreement on [line-chart.md](line-chart.md) disappears here.
 
-**The zero baseline.** Every source in this corpus binds the rule to the mark, and this mark is the one it binds to. Wilke's proportional-ink principle covers shaded areas; the Urban Institute scopes its absolute to charts that use length or height as the primary encoding and releases lines and scatterplots by name; Observable Plot forces zero exactly where area encodes the value; Vega-Lite forces zero for area marks at the mark level, before its broader default even applies. Four sources, one answer.
+**The zero baseline.** Every source binds the rule to the mark, and this is the mark. Wilke's proportional ink covers shaded areas. The Urban Institute scopes its absolute to length or height encodings. Observable Plot forces zero where area encodes the value, and Vega-Lite forces it for area marks before its broader default applies. That agreement is `authority-asserted`, and the headcount overstates it. No experiment here tests a truncated filled area. Wilke states the principle without measuring it ([wilke-fundamentals.md](../sources/wilke-fundamentals.md)), and two of the four are software defaults. The FT and Schwabish are not independent voices: Urban names Schwabish its sole contact, and the FT credits his Graphic Continuum ([urban-institute.md](../sources/urban-institute.md), [ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). The nearest measurement, Pandey et al.'s area-as-quantity condition, is a bubble chart, a different mark.
 
-**That agreement is `authority-asserted`, not evidence-backed, and a headcount overstates it.** No experiment in this corpus tests a truncated filled area against an untruncated one. Wilke states the principle rather than measuring it ([wilke-fundamentals.md](../sources/wilke-fundamentals.md)); two of the four are software defaults, which is a design position shipped as code. The FT and Schwabish are not additions to the tally: the Urban guide names Schwabish as its sole point of contact and the FT credits his Graphic Continuum as its own inspiration ([urban-institute.md](../sources/urban-institute.md), [ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)), so several of the voices are one voice. The nearest measurement, Pandey et al.'s area-as-quantity condition, is a bubble chart where area is the only encoding, which is a different mark doing a different job. The rule is sound reasoning that everybody endorses, and it is not a finding.
-
-**Whether the fill helps at all.** Unmeasured in either direction. The FT's gloss and the general practitioner position are that the fill helps the total and hurts the components, and no study here tests that split. `absence of evidence`.
+**Whether the fill helps.** Practitioners, the FT included, say it helps the total and hurts the components. Untested here. `absence of evidence`.
 
 ## The failure mode it invites
 
-**Stacking until the bands stop being readable, then inviting the reader to track one.** Each band above the baseline floats, so following the orange band across the chart is a set of length judgments with no shared reference, which is the one thing the divided-bar literature measured and found expensive. The remedy recorded for stacked bars is the same one here: the series in question on the baseline, or removed and drawn as its own line.
+**Stacking until the bands are unreadable, then asking the reader to track one.** The stacked-bar remedy applies: the series in question on the baseline, or drawn as its own line.
 
-**Filling because it looks better.** A fill asserts that the area is a quantity. On a rate, an index, a price or a temperature it is not, and the reader is being handed an encoding that means nothing. `authority-asserted`, and it follows from what the mark is rather than from taste.
+**Filling because it looks better.** A fill asserts the area is a quantity, which a rate, index, price or temperature is not. `authority-asserted`.
 
 ## Justifying the choice
 
@@ -85,17 +75,17 @@ Less than the line chart's record would suggest: the disagreement that lives on 
 
 - "It starts at zero because the mark is filled, and proportional ink is scoped by mark. That is four sources agreeing and no experiment, and two of the four are software defaults rather than findings."
 - "I filled it because cumulative volume is the quantity the reader wants, and I stacked only three components. Both of those are convention, not measured thresholds."
-- "The components are also drawn as small multiples, because seeing change in a component inside a stack is the thing this form is worst at." Widely asserted, including by the FT's own one-line gloss, and never tested.
+- "The components are also drawn as small multiples, because seeing change in a component inside a stack is the thing this form is worst at." Widely asserted, including by the FT's gloss, and never tested.
 
 **Commonly repeated, and the evidence does not support it:**
 
-- ~~"Readers can follow each band in a stacked area."~~ They can follow the bottom one. Everything above it floats, and the bar version of exactly that comparison carries 40% to 250% more error than a position reading.
-- ~~"The fill makes the trend easier to see."~~ No study in this corpus tests a filled series against an unfilled one. Absence of evidence, not a refutation, and not a justification either.
-- ~~"An area chart is just a prettier line chart."~~ It is a line chart with one slot changed, and that slot is what puts the zero baseline back in force and what occludes everything behind it.
+- ~~"Readers can follow each band in a stacked area."~~ Only the bottom one. On bars, the floating comparison carries 40% to 250% more error than position.
+- ~~"The fill makes the trend easier to see."~~ Untested here. `absence of evidence`, which justifies nothing.
+- ~~"An area chart is just a prettier line chart."~~ The fill restores the zero baseline and occludes what is behind it.
 
 ## See also
 
-- [line-chart.md](line-chart.md) — the same chart minus the fill, and where most of the evidence lives
-- [stacked-bar.md](stacked-bar.md) — the measured version of the floating-band problem
-- [change-over-time.md](change-over-time.md) — the group
-- [../concepts/channels.md](../concepts/channels.md) — the inheritance rule this page leans on twice
+- [line-chart.md](line-chart.md): the same chart without the fill, and most of the evidence
+- [stacked-bar.md](stacked-bar.md): the measured version of the floating-band problem
+- [change-over-time.md](change-over-time.md): the group
+- [../concepts/channels.md](../concepts/channels.md): the inherited channel evidence

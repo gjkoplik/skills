@@ -10,7 +10,7 @@ Gary Koplik's Claude Code plugins, and the marketplace that lists them.
 
 | Plugin | What it does | |
 | --- | --- | --- |
-| **agent-viz** | A researched quality bar for any figure a person will look at, plus the 41-page wiki it came from. | [`plugins/agent-viz`](plugins/agent-viz) |
+| **agent-viz** | A researched quality bar for any figure a person will look at, plus the research wiki it came from. | [`plugins/agent-viz`](plugins/agent-viz) |
 | **what-if** | A cheap look at a half-formed idea before committing to a conversation about it. | [`plugins/what-if`](plugins/what-if) |
 
 ```

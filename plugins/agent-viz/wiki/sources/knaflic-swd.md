@@ -8,25 +8,17 @@ author: cole-nussbaumer-knaflic
 
 # Knaflic, *Storytelling with Data*
 
-Cole Nussbaumer Knaflic, *storytelling with data: a data visualization guide for business professionals* (Wiley, 2015; 10th Anniversary Edition, December 2025). Ten chapters that argue a sequence rather than catalog a space: understand the context, choose the visual, remove clutter, direct attention, design, and tell a story.
+Cole Nussbaumer Knaflic, *storytelling with data: a data visualization guide for business professionals* (Wiley, 2015; 10th Anniversary Edition, December 2025). Ten chapters that argue a sequence: understand the context, choose the visual, remove clutter, direct attention, design, and tell a story.
 
-**How this was read.** `primary-read`, partial. Retrieved 2026-08-23 from Wiley's own excerpt PDFs, downloaded with `curl` and text-extracted locally with `pypdf`:
+**What it is good for.** What the audience is being asked to do, and what can be deleted. Knaflic is the canon's main source on the pre-figure questions (who, what, how), on decluttering as a named procedure rather than taste, and on narrative structure.
 
-- **chapter 1 in full** (16 pages)
-- the **contents page** of both editions
-- the **complete index** (12 pages)
+**What it does not settle.** It is design authority with no evidence base of its own, and the inventory labels it so. The frame is business communication (slides, dashboards, stakeholders), so it says nothing on statistical honesty (uncertainty, intervals, distribution versus summary), log or nonlinear scales, maps, or reproducibility and export. The "gray plus one accent" rule usually attributed here has no controlled study behind it ([refutations.md](../refutations.md)).
 
-Chapters 2 through 10 were not read. The section-level structure below comes from the index, which is the book's own, and is labeled as such. Quotes are from chapter 1 only and are verbatim.
-
-**This retires the roll-call's self-declared weakest link.** The previous state was a chapter list from search aggregation, with the note that "any gloss on chapter 5's contents is from background familiarity, not a retrieved quote, and is unvouched." The chapter list is now confirmed against the publisher's own contents page, and chapter 5's four sections are confirmed from the index.
-
-**What it is good for.** The question it answers: *what am I actually asking this audience to do, and what should I delete*. Knaflic is the best source in the canon on the pre-figure questions (who, what, how), on decluttering as a **named procedure** rather than a taste, and on narrative structure. She is the source a practitioner is most likely to be quoting when they say a bar is missing something basic.
-
-**What it does not settle.** No evidence base of its own: this is design authority, and the inventory labels it that way. The frame is business communication (slides, dashboards, stakeholders), so there is nothing on statistical honesty (uncertainty, intervals, distribution versus summary), nothing on log or nonlinear scales, nothing on maps, and nothing on reproducibility or export. And per [refutations.md](../refutations.md), the "gray plus one accent" rule usually attributed here has **no controlled study** behind it.
+**How this was read.** `primary-read`, partial. Wiley's own excerpt PDFs were downloaded with `curl` and text-extracted locally with `pypdf`: chapter 1 in full, the contents page of both editions, and the complete index. Chapters 2 through 10 were not read. The section structure below comes from the book's own index. Quotes are from chapter 1 only.
 
 ---
 
-## Editions, because Wiley's own pages are confusing
+## Editions
 
 | | 1st edition | 10th Anniversary Edition |
 |---|---|---|
@@ -34,9 +26,9 @@ Chapters 2 through 10 were not read. The section-level structure below comes fro
 | Date | November 2015 | December 2025 |
 | Pages | 288 | 336 |
 
-**The ten chapters and their page numbers are identical across both editions.** The anniversary edition adds a "reflecting on the past 10 years" front piece and three appendices: A, the narrative arc (257); B, your role in storytelling with data (277); C, more model visuals (293).
+The ten chapters and their page numbers are identical across editions. The anniversary edition adds a "reflecting on the past 10 years" front piece and three appendices: A, the narrative arc (257); B, your role in storytelling with data (277); C, more model visuals (293).
 
-One trap: Wiley serves the **anniversary-edition** excerpt files from the **first edition's** product page. The "Chapter 01 (PDF)" linked off the 2015 listing carries a 2025 typesetting date and references *storytelling with you* (2022) in its text. The contents PDF on that page is the genuine first-edition one (bibliography 257, index 261). A page-number citation therefore has to name the edition.
+Wiley serves the anniversary-edition excerpts from the first edition's product page. The "Chapter 01 (PDF)" there carries a 2025 typesetting date and references *storytelling with you* (2022). The contents PDF on that page is the genuine first-edition one (bibliography 257, index 261). A page-number citation has to name the edition.
 
 ## Structure
 
@@ -56,11 +48,11 @@ chapter 9  case studies 207
 chapter 10 final thoughts 241
 ```
 
-The roll-call's chapter titles match this exactly, and its four exclusions (6, 8, 9, 10 as worked examples and closing matter) are confirmed by the contents page and the index.
+The roll-call's chapter titles match, and the contents page and index confirm its four exclusions (6, 8, 9, 10 as worked examples and closing matter).
 
 ## Section structure, from the book's index
 
-This is the part that was previously unvouched. Page ranges are the index's own.
+Page ranges are the index's own.
 
 **Ch. 3, clutter is your enemy!** Cognitive load (71 to 73), including "data-ink/signal-to-noise ratio, 72". Gestalt Principles of Visual Perception (74 to 81): proximity, similarity, enclosure, closure, continuity, connection. Lack of visual order (81 to 86): alignment, white space. Nonstrategic use of contrast (86 to 90). Decluttering (90 to 97): remove chart border, remove gridlines, remove data markers, clean up axis labels, label data directly, leverage consistent color.
 
@@ -72,11 +64,11 @@ This is the part that was previously unvouched. Page ranges are the index's own.
 
 **Ch. 7, lessons in storytelling.** The magic of story (cinema, plays, written word), constructing the story (plot, rising action, climax, falling action, resolution, tension), narrative structure and flow, repetition ("Bing, Bang, Bongo"), and clarity tactics: horizontal logic, vertical logic, reverse storyboarding.
 
-Two entries matter for cross-referencing: the index puts **Tufte at ix, 72, 231**, and *The Visual Display of Quantitative Information* at 72, which is inside the clutter chapter's cognitive-load section. That is the whole of Knaflic's engagement with data-ink.
+The index puts Tufte at ix, 72 and 231, and *The Visual Display of Quantitative Information* at 72, inside the cognitive-load section. By the index, that is the whole of Knaflic's engagement with data-ink.
 
 ## Quotes verified verbatim (chapter 1 only)
 
-On exploratory versus explanatory analysis, which is the book's opening move:
+On exploratory versus explanatory analysis, the book's opening move:
 
 > When we do exploratory analysis, it's like hunting for pearls in oysters. We might have to open 100 oysters (test 100 different hypotheses or look at the data in 100 different ways) to find perhaps two pearls.
 
@@ -86,34 +78,32 @@ On audience:
 
 > Avoid general audiences, such as "internal and external stakeholders" or "anyone who might be interested"
 
-Her reason, in the same sentence: communicating to too many people with disparate needs at once leaves the communicator unable to reach any one of them as effectively.
+Her reason, in the same sentence, is that a communicator addressing too many disparate needs at once reaches none of them as effectively.
 
-On having a point at all:
+On having a point:
 
 > You should always want your audience to know or do something. If you can't concisely articulate that, you should revisit whether you need to communicate in the first place.
 
-On the temptation to show only supporting data, which is a stronger statement than the book's reputation suggests:
+On showing only the supporting data:
 
 > You might assume that showing only the data that backs up your point and ignoring the rest will make for a stronger case. I do not recommend this. Beyond being misleading by painting a one-sided story, this is very risky.
 
 ## Where its advice is contested
 
-- **Gray plus one accent.** The rule everyone attributes here is authority-asserted and a search for a controlled experiment testing one-accent against two-saturated-color emphasis returned nothing. See [refutations.md](../refutations.md). The index confirms a "using color sparingly, 118 to 120" section exists, which is consistent with the attribution, but **that passage was not read**, so no statement of the rule here carries quotation marks.
-- **Decluttering.** Chapter 3's remove-the-border, remove-the-gridlines, remove-the-data-markers list is the practical form of data-ink maximization, and the empirical record on that is contested in both directions. See [tufte.md](tufte.md) and [refutations.md](../refutations.md). Gillan & Richman found removals to be **element-conditional**, with some removals hurting reading speed.
+- **Gray plus one accent.** Authority-asserted. A search for a controlled experiment testing one accent against two saturated colors returned nothing ([refutations.md](../refutations.md)). The index shows a "using color sparingly, 118 to 120" section, consistent with the attribution, but that passage was not read, so no statement of the rule here is quoted.
+- **Decluttering.** Chapter 3's removals (border, gridlines, data markers) are the working form of data-ink maximization, and the empirical record on that is contested in both directions ([tufte.md](tufte.md), [refutations.md](../refutations.md)). Gillan & Richman found removals to be element-conditional, with some hurting reading speed.
 
 ## Inventory topics it grounds
 
-Per [roll-call.md](../roll-call.md), not recomputed here: 1, 3, 4, 5, 6, 29, 37, 41, 47, 65, 66, 67, 71, 79, 85, 86, 87, 89.
-
-One addition the roll-call could not have made: the anniversary edition's **Appendix A, the narrative arc** (257 to 275) is new material bearing on topics 85 through 87. The roll-call predates that edition.
+Per [roll-call.md](../roll-call.md), not recomputed here: 1, 3, 4, 5, 6, 29, 37, 41, 47, 65, 66, 67, 71, 79, 85, 86, 87, 89. The anniversary edition's Appendix A, the narrative arc (257 to 275), bears on topics 85 through 87 and postdates the roll-call.
 
 ## What the project got wrong about it
 
-Only the status, and it was correctly flagged as the weak link rather than hidden. The chapter titles the roll-call recorded were right. The gloss on chapter 5 that it flagged as unvouched turns out to be right too: affordances, accessibility, aesthetics, acceptance.
+Only the status. The roll-call's chapter titles were right. It had noted that "any gloss on chapter 5's contents is from background familiarity, not a retrieved quote, and is unvouched." The index confirms that gloss: affordances, accessibility, aesthetics, acceptance.
 
 ## Links
 
-- [inventory.md](../inventory.md), the topics this source grounds
-- [roll-call.md](../roll-call.md), the chapter mapping and its stated exclusions
-- [refutations.md](../refutations.md), the gray-plus-one-accent negative result
-- [tufte.md](tufte.md), the data-ink lineage behind chapter 3
+- [inventory.md](../inventory.md): the topics this source grounds
+- [roll-call.md](../roll-call.md): the chapter mapping and its stated exclusions
+- [refutations.md](../refutations.md): the gray-plus-one-accent negative result
+- [tufte.md](tufte.md): the data-ink lineage behind chapter 3

@@ -6,96 +6,78 @@ aliases: [Bee swarm, Beeswarm plot, Swarm plot]
 
 # Beeswarm plots
 
-One dot per observation, placed at its value on a shared quantitative axis, with the perpendicular axis used for nothing except displacing dots that would otherwise collide, so every observation keeps its true value and no mark is hidden behind another.
+One dot per observation at its value on a shared quantitative axis, with the perpendicular axis used only to displace dots that would otherwise collide, so every observation keeps its true value and none is hidden.
 
-**Also called a swarm plot or a bee swarm.** Some tools additionally offer a **sina plot** or a **violin scatter**, and those are different constructions rather than other names for this one. The **sina plot is now defined at primary**: [Wilke](../sources/wilke-fundamentals.md) calls it, citing Sidiropoulos et al. 2018, "a hybrid between a violin plot and jittered points", which is a different construction from this page's deterministic displacement. **"Violin scatter" is still undefined anywhere here**, so the name identifies no form in this corpus. The corpus does not define "beeswarm" either. Its single appearance is a listing: the Urban Institute style guide includes a beeswarm among its chart examples ([roll-call.md](../roll-call.md)), with no gloss recorded here, and that guide is not independent of [Schwabish](../people/jonathan-schwabish.md) ([urban-institute.md](../sources/urban-institute.md)). The definition above is this page's own stipulation.
+It is also called a swarm plot or a bee swarm. The corpus does not define "beeswarm", so that definition is this page's own. The name appears once, in the Urban Institute style guide's chart examples ([roll-call.md](../roll-call.md)), and that guide is not independent of [Schwabish](../people/jonathan-schwabish.md) ([urban-institute.md](../sources/urban-institute.md)). A sina plot is a different construction, which [Wilke](../sources/wilke-fundamentals.md), citing Sidiropoulos et al. 2018, calls "a hybrid between a violin plot and jittered points". "Violin scatter" is defined nowhere here.
 
 ## When to reach for it, and when not
 
-**The form applies where** the observations themselves are the message, there are enough of them that they would collide at their true values, and the collisions are resolved without either hiding points or moving them randomly. Its offer over a strip plot is narrow and exact: **every observation is visible and countable, and the layout is deterministic, so there is no seed and the same data redraws identically.**
-
-**Questions the form does not answer:**
+The form is defined for cases where the observations themselves are the message and there are enough of them to collide at their true values. Over a strip plot, every observation is visible and countable, and the layout is deterministic, so the same data redraws identically with no seed.
 
 | The question | Alternative |
 |---|---|
-| What is each item, and which one is which? | [Dot strip plot](dot-strip-plot.md) with direct labels, or a table. A swarm identifies nothing |
-| Where does each item place in the order? | [Ranking](ranking.md). Same dots, different question, and the sideways displacement gets in the way |
-| Ten thousand observations | The swarm becomes a solid slab. A [violin](violin-plot.md), a [histogram](histogram.md), or a 2D binning |
-| Twelve groups compared on location and spread | [Box plot](boxplot.md). Twelve swarms cost twelve times the space and the reading is the same |
-| What is the median, exactly? | [Box plot](boxplot.md) or a table. A swarm draws no statistic unless one is overlaid |
-| Is this bimodal? | A [histogram](histogram.md) or [violin](violin-plot.md), where the density has a stated parameter. A swarm's width suggests modality without declaring how |
-| Is this difference beyond chance? | The dots are the sample. That is a question about an estimate; see [distribution.md](distribution.md) |
+| What is each item, and which one is which? | [Dot strip plot](dot-strip-plot.md) with direct labels, or a table |
+| Where does each item place in the order? | [Ranking](ranking.md). The sideways displacement gets in the way |
+| Ten thousand observations | A [violin](violin-plot.md), a [histogram](histogram.md), or 2D binning |
+| Twelve groups compared on location and spread | [Box plot](boxplot.md), at a twelfth of the space |
+| What is the median, exactly? | [Box plot](boxplot.md) or a table |
+| Is this bimodal? | A [histogram](histogram.md) or [violin](violin-plot.md), where the density has a stated parameter |
+| Is this difference beyond chance? | A question about an estimate; see [distribution.md](distribution.md) |
 
 ## Structural decomposition
 
 | Slot | |
 |---|---|
 | Data | One row per observation, one continuous variable, usually one grouping variable |
-| Transform | **None on the value.** A layout pass computes a perpendicular offset for each point from the positions of the others, such that no two marks overlap at the chosen mark size |
+| Transform | None on the value. A layout pass computes each point's perpendicular offset from the others, so no two marks overlap at the chosen mark size |
 | Geometry | One point per observation |
-| Scale | Value to position along a common scale, shared across groups. **The perpendicular offset is not a scale. It maps nothing** |
+| Scale | Value to position along a common scale, shared across groups. The offset maps nothing |
 | Coordinates | Cartesian, one axis categorical |
-| Guides | The value axis, group labels, n per group, and the mark size, which is a parameter of the layout rather than a styling choice |
+| Guides | Value axis, group labels, n per group, and the mark size, which is a layout parameter |
 
-Three consequences, all definitional:
-
-- **Nothing is summarized.** Every mark on the chart is an observation at its own value. That is the property the form is chosen for and it is secure without any experiment.
-- **The offset is a function of the whole set.** Adding one observation can move others sideways, and the layout depends on mark size and on the figure's width. The same data at a different figure size is a different picture.
-- **The layout is deterministic**, which is what separates it from jitter. Same data, same size, same drawing, with no seed to record.
-
-**The neighbor to keep it apart from is the [dot strip plot](dot-strip-plot.md), and the difference is what the layout does with collisions.** A strip plot lets points overlap, or displaces them randomly with jitter. A beeswarm displaces them deterministically so that none overlaps. What that buys: no point is hidden, so the count is recoverable by eye, and no seed is needed for the figure to be reproducible. What it costs: the sideways position of any one point now depends on every other point, on the mark size and on the figure width, none of which is data; a strip plot's overlap at least advertises itself as overlap. Wilke's warning about jitter, "if we jitter too much, we end up placing points in locations that are not representative of the underlying dataset" ([wilke-fundamentals.md](../sources/wilke-fundamentals.md), and [inventory.md](../inventory.md) topics 58 and 59), applies to the perpendicular axis here as well. It bites less only because that axis was carrying nothing to begin with.
+It differs from a [dot strip plot](dot-strip-plot.md) in the transform. A strip plot lets points overlap or jitters them randomly; a beeswarm displaces them deterministically. The cost is that each point's sideways position depends on every other point, the mark size and the figure width, none of which is data. Wilke's warning about jitter, "if we jitter too much, we end up placing points in locations that are not representative of the underlying dataset", applies here too ([wilke-fundamentals.md](../sources/wilke-fundamentals.md); [inventory.md](../inventory.md) topics 58 and 59), though less, since the axis carries nothing.
 
 ## Channels
 
-**Position along a common scale for the value**, shared across groups, inherited from [channels.md](../concepts/channels.md) with the standing caveat that the mapping from mark to channel is conjecture in the source literature. That is the whole of the intended encoding.
+The value is position along a common scale ([channels.md](../concepts/channels.md)), with the usual caveat that the mark-to-channel mapping is conjecture in the source literature.
 
-**The perpendicular axis carries no data.** The width of the swarm at a given value is a monotone function of how many observations sit near that value at the chosen mark size. So the outline of the swarm reads as a density. It has no axis, no legend, no stated bandwidth, and it changes with the figure size or the dot size. **It is a density estimate whose smoothing parameter is the dot radius, presented as though it were a layout artifact.** That is definitional: the width does vary with local count, by construction, and it is undeclared, by construction. What readers actually take from it has not been measured by anyone in this corpus.
-
-This inverts the contrast that [boxplot.md](boxplot.md) draws with the [violin](violin-plot.md). The box plot's offer is that it has no tuning parameter; the violin's cost is that it has one and shows the result of it. A beeswarm has one and does not look like it does.
-
-No study in this source set has decomposed a beeswarm into its cues, the way [Skau & Kosara (2016)](../studies/skau-kosara-2016.md) did for the pie.
+The swarm's width grows with how many observations sit near a value, so the outline reads as a density with no axis, no legend and no stated bandwidth. Its smoothing parameter is the dot radius, and it changes with figure or dot size. That is definitional. What readers take from it is unmeasured. A [box plot](boxplot.md) has no tuning parameter and a [violin](violin-plot.md) has one and shows it; a beeswarm has one and hides it. No study here has decomposed the form into its cues, as [Skau & Kosara (2016)](../studies/skau-kosara-2016.md) did for the pie.
 
 ## What it is measurably good at
 
-**Nothing. No study in this corpus tests a beeswarm against anything.**
+No study in this corpus tests the form.
 
-The closest thing to a warrant it has is [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md), and the distance has to be stated rather than glossed. They reviewed 703 physiology articles: 85.6% included a bar graph, 13.4% a univariate scatterplot, 5.3% a box plot. They measured the sample sizes behind the figures, and the minimum group size shown in a figure had a median of 4, interquartile range 3 to 6. At those sizes their recommendation is to draw the observations: "Univariate scatterplots are the best choice for showing the distribution of the data in these small samples, as boxplots and histograms would be difficult to interpret."
+The nearest warrant is [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md). Of 703 physiology articles, 85.6% included a bar graph, 13.4% a univariate scatterplot and 5.3% a box plot. The minimum group size shown had a median of 4, interquartile range 3 to 6. They recommend drawing the observations: "Univariate scatterplots are the best choice for showing the distribution of the data in these small samples, as boxplots and histograms would be difficult to interpret." The counts are measured; the recommendation is the authors' argument, with no reader tested. It names a strip plot, not this layout, and at n = 4 almost nothing collides.
 
-A beeswarm is one way to draw the observations, and that is the whole of the connection.
-
-- The prevalence and the sample sizes are **measured**. The recommendation that follows is the **authors' argument**, and no reader was tested. Nobody has compared a beeswarm against a jittered strip plot, a box plot, a violin, or anything else.
-- The recommendation is about **drawing the points**, not about this layout. It is equally satisfied by a strip plot, which is what they actually name.
-- And the ranges do not line up. At n = 4 there is almost nothing to collide, so the layout this form exists for earns nothing; it starts to matter well above the sizes where the review's argument is strongest. That follows from the construction, not from a study.
-
-[Matejka & Fitzmaurice (2017)](../studies/matejka-2017-datasaurus.md) is the picture people reach for next, and it is a construction with no participants, no task and no measurement of comprehension. It supports *these summary statistics are compatible with radically different data*, which is true by construction and therefore the strongest form of true available, and it supports *so plot the data*. It does not support *readers are misled by summaries* or *drawing the points produces better conclusions*.
+[Matejka & Fitzmaurice (2017)](../studies/matejka-2017-datasaurus.md) is a construction with no participants or task. It supports *these summary statistics are compatible with radically different data* and *so plot the data*, not *readers are misled by summaries* or *drawing the points produces better conclusions*.
 
 ## What it is measurably bad at
 
-**Nothing measured.** Three exposures follow from the construction:
+Nothing measured. Three exposures follow from the construction.
 
-- **Large n.** The swarm fills its lane and the individual dots stop being resolvable, which is the condition [inventory.md](../inventory.md) topic 60 names: past the point where marks are readable, the idiom changes rather than being pushed further. From Wilke, `authority-asserted`, with no measured threshold.
-- **The redraw problem.** Mark size and figure width are inputs to the layout, so a figure regenerated at a different size is a genuinely different arrangement of the same data. Nothing in the output says so. This is [inventory.md](../inventory.md) topic 77, repeatability, arriving from an unusual direction: the drawing is deterministic in the seed sense and still not stable.
-- **No statistic at all.** There is no median, no interval and no n on the chart unless they are overlaid, and a reader counting dots in a dense swarm undercounts.
+- **Large n.** The dots stop being resolvable, and [inventory.md](../inventory.md) topic 60 says the idiom changes there, from Wilke, `authority-asserted`, with no measured threshold.
+- **Redraws.** A figure regenerated at another size is a different arrangement, and nothing says so. This is [inventory.md](../inventory.md) topic 77, repeatability: deterministic in the seed sense, still not stable.
+- **No statistic.** No median, interval or n appears unless overlaid, and readers counting a dense swarm undercount.
 
 ## What is contested
 
-Nothing. There is no record here to disagree with itself. The one live argument nearby is inherited and is about sample size rather than about this form: whether a summary form is defensible at the sizes published science actually uses, which [boxplot.md](boxplot.md) carries in full.
+Nothing contested in this corpus. The inherited argument, whether a summary is defensible at the sample sizes published science uses, is on [boxplot.md](boxplot.md).
 
 ## The failure mode it invites
 
-**Reading the swarm's width as a measured density.** It is a density readout the reader was never told about: undeclared, unlabeled, and parameterized by the dot radius. That the width is undeclared is definitional. What a reader concludes from it is `absence of evidence`, not a refuted claim. The mitigations named here are a caption stating that the width is a layout artifact, or an overlaid form whose parameter is declared.
+**Reading the width as a measured density.** What readers conclude from it is `absence of evidence`. The mitigations named here are a caption calling the width a layout artifact, or an overlay with a declared parameter.
 
-**Letting n grow until the swarm is a slab.** The form's promise is that every observation is visible. At the point where the dots merge, the promise is broken and the chart still looks like it is keeping it.
+**Letting n grow until the swarm is a slab**, where the chart still appears to show every observation.
 
-**Treating "shows every point" as the end of the argument.** It is definitional that a beeswarm draws every observation. It is untested that readers reach better conclusions from one, and running those two together in a sentence upgrades a definition into a finding.
+**Treating "shows every point" as the whole argument.** That is definitional; better reader conclusions are untested.
 
-**Overlaying a box plot and letting the two disagree silently.** A common composite, and the box's quantile definition and whisker rule still have to be stated ([boxplot.md](boxplot.md)). The dots do not settle them.
+**An overlaid box plot with unstated rules.** Its quantile definition and whisker rule still need stating ([boxplot.md](boxplot.md)).
 
 ## Justifying the choice
 
 **Defensible, evidence-backed:**
 
-Nothing on this page qualifies. The available inheritance is that value sits on position along a common scale ([channels.md](../concepts/channels.md)), and that accuracy claim is about extracting a number from a mark, which is not why this form was chosen. It buys less here than it looks like it does; see [the scope limit](../concepts/channels.md#what-the-ranking-is-not-about).
+- Nothing on this page qualifies. Value on position is inherited ([channels.md](../concepts/channels.md)), but that is about extracting a number from a mark, which is not why the form is chosen ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)).
 
 **Defensible, with the label said out loud:**
 
@@ -107,15 +89,15 @@ Nothing on this page qualifies. The available inheritance is that value sits on 
 
 **Commonly repeated, and the evidence does not support it:**
 
-- ~~"A beeswarm shows the density."~~ It shows a width that varies with how many points sit near a value at the chosen dot size. No axis, no stated parameter, and it changes with the figure size.
-- ~~"It is a strip plot with the overlap fixed, so the strip plot evidence applies."~~ There is no strip plot evidence. Nothing in this corpus tests either form, and [dot-strip-plot.md](dot-strip-plot.md) says the same from its side.
-- ~~"A beeswarm is a better violin."~~ Nobody has compared them. The one experiment here that drew a violin was testing an encoding of a mean and its error against a bar with error bars ([correll-gleicher-2014-error-bars-harmful.md](../studies/correll-gleicher-2014-error-bars-harmful.md)), which is a different chart answering a different question.
-- ~~"Showing every observation leads readers to better conclusions."~~ The prevalence of summary-only figures is measured and the claim that many distributions produce one summary is secure by construction. The step from those to what readers conclude is untested. [distribution.md](distribution.md) and [dot-strip-plot.md](dot-strip-plot.md) carry the same entry.
+- ~~"A beeswarm shows the density."~~ It shows a width set by local count and dot size, with no stated parameter.
+- ~~"It is a strip plot with the overlap fixed, so the strip plot evidence applies."~~ Nothing in this corpus tests either form ([dot-strip-plot.md](dot-strip-plot.md)).
+- ~~"A beeswarm is a better violin."~~ Nobody has compared them. The one experiment here with a violin tested an encoding of a mean and its error against bars with error bars ([correll-gleicher-2014-error-bars-harmful.md](../studies/correll-gleicher-2014-error-bars-harmful.md)).
+- ~~"Showing every observation leads readers to better conclusions."~~ Summary-only figures are measured as common, and many distributions sharing one summary is true by construction. What readers conclude is untested. [distribution.md](distribution.md) and [dot-strip-plot.md](dot-strip-plot.md) carry the same entry.
 
 ## See also
 
-- [dot-strip-plot.md](dot-strip-plot.md) — the same dots with collisions left alone or jittered, usually drawn for a ranking question
-- [violin-plot.md](violin-plot.md) — the same silhouette computed from a kernel with a declared bandwidth, instead of falling out of the dots
-- [boxplot.md](boxplot.md) — five numbers instead of every point, and the form with no tuning parameter at all
-- [distribution.md](distribution.md) — the group, and the sample-size gate that decides most of this
-- [../studies/weissgerber-2015-beyond-bar-line.md](../studies/weissgerber-2015-beyond-bar-line.md) — the show-the-data argument, what it measured, and what it did not
+- [dot-strip-plot.md](dot-strip-plot.md): the same dots with collisions left alone or jittered
+- [violin-plot.md](violin-plot.md): the same silhouette from a kernel with a declared bandwidth
+- [boxplot.md](boxplot.md): five numbers instead of every point, with no tuning parameter
+- [distribution.md](distribution.md): the group, and the sample-size gate
+- [../studies/weissgerber-2015-beyond-bar-line.md](../studies/weissgerber-2015-beyond-bar-line.md): the show-the-data argument and its limits

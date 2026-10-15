@@ -7,108 +7,95 @@ retrieved: 2026-08-23
 
 # John Tukey
 
-**What they are known for.** Naming and arguing for *exploratory data analysis*, the idea of asking data what it suggests before asking what it establishes, and building the hand-drawable displays that make that possible: the box-and-whisker plot and the stem-and-leaf.
+**What they are known for.** *Exploratory data analysis*, asking data what it suggests before what it establishes, and the hand-drawable displays for it: the box-and-whisker plot and the stem-and-leaf.
 
-**How this was read.** `primary-read` on the 1962 manifesto, `not reached` on the 1977 book. Retrieved 2026-08-23.
+**How this was read.** `primary-read` on the 1962 manifesto, `not reached` on the 1977 book.
 
-- **"The Future of Data Analysis"** (*Annals of Mathematical Statistics* 33(1):1-67, March 1962) was downloaded and extracted locally with `pypdf`, 68 pages. Every Tukey quote below is from that extraction. **Provenance caveat:** Project Euclid, which hosts it open access, returns a robots interstitial to `curl` and to the WebFetch tool alike. The copy read is a JSTOR scan (stable URL `2237638`) mirrored on a university course page at `mat.ufrgs.br`. It is the article, page numbering intact, but it is not the publisher's file.
-- ***Exploratory Data Analysis*** (Addison-Wesley, 1977) is **not reached**. Not on the Internet Archive under any identifier tried, in copyright, no open deposit. Nothing on this page quotes it.
-- **The box plot's history** comes from Wickham & Stryjewski, *40 years of boxplots* (2011), fetched and extracted locally from `vita.had.co.nz/papers/boxplots.pdf`. `primary-read` as to that paper, which is itself a secondary account of Tukey.
+- **"The Future of Data Analysis"** (*Annals of Mathematical Statistics* 33(1):1-67, March 1962), extracted locally with `pypdf`. Every Tukey quote below is from it. Project Euclid, the open-access host, serves `curl` and WebFetch a robots interstitial, so the copy read is a JSTOR scan (stable URL `2237638`) mirrored on a course page at `mat.ufrgs.br`: the article with page numbering intact, not the publisher's file.
+- ***Exploratory Data Analysis*** (Addison-Wesley, 1977): in copyright, no open deposit, not on the Internet Archive under any identifier tried.
+- **Box plot history**: Wickham & Stryjewski, *40 years of boxplots* (2011), extracted locally from `vita.had.co.nz/papers/boxplots.pdf`. `primary-read` as to that paper, itself a secondary account of Tukey.
 
-**What they are good for.** The question he answers: *am I plotting this to find something out, or to show somebody something*. Tukey is the canon's clearest statement that those are different jobs with different standards, and the origin of the position that the exploratory figure is allowed to be ugly, ad hoc, and thrown away.
+**What they are good for.** *Am I plotting this to find something out, or to show somebody something?* He is the canon's clearest statement that those are different jobs with different standards, and that an exploratory figure may be ugly, ad hoc and thrown away.
 
-**What they do not settle.** Whether any of his displays are read accurately. Tukey ran no perceptual experiments. The box plot is the most-used statistical graphic invented in the twentieth century and it entered the world entirely [authority-asserted](../concepts/evidence-class.md).
+**What they do not settle.** Whether any of his displays are read accurately. He ran no perceptual experiments. The box plot is the most-used statistical graphic invented in the twentieth century, and it entered the world entirely [authority-asserted](../concepts/evidence-class.md).
 
 ---
 
 ## "In the style of Tukey" means, concretely
 
-**The medium cannot do anything fancy.** His displays were designed for pencil, graph paper, and a line printer. Monochrome. No fills. No gradients. Nothing that needs a rendering pipeline. That constraint is the aesthetic, and it is why the box plot survived the transition to every plotting library ever written: it is five numbers and some line segments.
+- **Pencil, graph paper, line printer**: monochrome, no fills, no gradients. The box plot survived into every plotting library because it is five numbers and some line segments.
+- **The data at two resolutions.** A stem-and-leaf is a histogram whose bars are the digits.
+- **Robust summaries at data points.** Median not mean, fourths not standard deviations, whiskers ending at an observation. With an odd count, nothing on a Tukey plot is at a coordinate no datum occupies.
+- **No tuning parameters**, unlike a kernel density estimate's bandwidth, which can be adjusted until the answer looks right.
+- **Many small identical displays, side by side**, to compare groups.
+- **Residuals get plotted**, and half the 1962 paper's machinery examines what a crude fit failed to absorb.
+- **Odd names for the parts**: hinge, fourth, fence, whisker, out-lier, straggler, wild shot, vacuum cleaner, FUNOP, FUNOR-FUNOM. They make a procedure memorable in a way a Greek-lettered one is not.
+- **A working tool, not an artifact**, never meant for a general reader. That is the [floor-and-ceiling](../concepts/floor-and-ceiling.md) distinction fifty years early, and why importing Tukey wholesale into a presentation figure goes wrong.
 
-**The data appears twice, at two resolutions.** The stem-and-leaf is a histogram whose bars are the actual digits, so the shape and the values are the same object. That is the move: a summary that has not thrown the numbers away.
+## What they established, and what gets over-claimed in their name
 
-**Robust summaries located at real data points.** Median not mean, fourths not standard deviations, whisker ends at an actual observation rather than at a computed distance. Nothing on a Tukey plot is at a coordinate no datum occupies.
+### EDA is stated in 1962, fifteen years before the book
 
-**No tuning parameters.** A kernel density estimate has a bandwidth that can be adjusted until the answer looks right. A box plot has nothing to adjust. That is a deliberate property.
-
-**Many small identical displays, side by side.** His plots exist to compare groups, and the comparison is done by repeating one very simple mark across a strip.
-
-**Residuals get plotted.** Something crude is fitted, subtracted, and what is left is plotted. Half of the 1962 paper's machinery is about examining what a fit failed to absorb rather than the fit itself.
-
-**The parts are named oddly, on purpose.** Hinge, fourth, fence, whisker, out-lier, straggler, wild shot, vacuum cleaner, FUNOP, FUNOR-FUNOM. He coined a private vocabulary and then used it flatly, and the effect is that a Tukey procedure is memorable in a way a Greek-lettered one is not. In a figure that reads as his, the label on the part is doing real work.
-
-**The figure is a working tool, not an artifact.** Nothing in this style is meant to be published, framed, or captioned for a general reader. It is what gets drawn on the way to knowing something. That distinction is [floor-and-ceiling](../concepts/floor-and-ceiling.md) fifty years early, and it is why importing Tukey wholesale into a presentation figure goes wrong.
-
-## What they actually established, and what gets over-claimed in their name
-
-### The EDA argument is stated in 1962, fifteen years before the book
-
-The 1977 book gets the credit. The position is fully formed in the 1962 paper, section 45:
+Section 45 of the 1962 paper:
 
 > "we must plan to learn to ask first of the data what it suggests, leaving for later consideration the question of what it establishes."
 
-The same section asks for "a free use of ad hoc and informal procedures in seeking indications", on the grounds that when the purpose is to ask what the data suggests, "it would be foolish to be bound by formalities". And the paper's opening redefines the field around it: data analysis is "a larger and more varied field than inference, or incisive procedures, or allocation."
+The same section asks for "a free use of ad hoc and informal procedures in seeking indications", since when asking what the data suggests "it would be foolish to be bound by formalities". The opening calls data analysis "a larger and more varied field than inference, or incisive procedures, or allocation." "Tukey invented EDA in 1977" is a publication date, not an intellectual one.
 
-**So "Tukey invented EDA in 1977" is a book-publication date, not an intellectual one.**
+### The famous maxim is in quotation marks in the original
 
-### The famous maxim is in this paper, and he puts it in quotation marks
-
-Section 11, on facing uncertainty, page 13:
+Section 11, page 13:
 
 > "Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise."
 
-Verified verbatim. One detail everyone drops: **Tukey sets it in quotation marks and attributes it to nobody.** He introduces it as "the most important maxim for data analysis to heed". Whether he is coining it or quoting an unnamed source is not resolvable from the text, and it is universally attributed to him without the quotation marks.
+Tukey sets it in quotation marks, attributes it to nobody, and introduces it as "the most important maxim for data analysis to heed". Whether he coined it or quoted someone is not resolvable from the text. It is universally attributed to him, without the quotation marks.
 
 ### He did not invent the box plot's shape
 
-Wickham & Stryjewski are blunt about this:
-
 > "The basic graphic form of the boxplot, the range-bar, was established in the early 1950's Spear (1952, pg. 164). Tukey's contribution was to think deeply about appropriate summary statistics that worked for a wide range of data and to connect those to the visual components of the range bar."
 
-The invention is the choice of statistics, not the picture. Also from the same paper: what he first published in the 1970 preliminary edition he called a **schematic plot**, and "it did not become widely known until formal publication (Tukey, 1977)."
+He first published it in the 1970 preliminary edition as a **schematic plot**, and "it did not become widely known until formal publication (Tukey, 1977)."
 
-### The box plot does not show quartiles, and its whiskers are frequently misdescribed
+### Hinges are not quartiles, and the whiskers are often misdescribed
 
-Tukey's box ends are **hinges**, the upper and lower **fourths**, which are not identical to quartiles under most quantile definitions. Wickham & Stryjewski note that implementations differ further, citing Hyndman & Fan's nine quantile types, that some replace the extremes with fixed quantiles, and that multipliers other than 1.5 are in use.
+Tukey's box ends are **hinges**, the upper and lower **fourths**, which differ from quartiles under most quantile definitions. Wickham & Stryjewski list further variation: Hyndman & Fan's nine quantile types, fixed quantiles replacing the extremes, and multipliers other than 1.5.
 
-**One thing to be careful about, flagged rather than resolved.** Wickham & Stryjewski describe the fences as lying "1.5 times the inter-fourth range from the **median**". The standard definition, and the one every implementation I know of uses, puts the inner fences at 1.5 times the H-spread from the **hinges**, not from the median. Those are different constructions and they give different plots. I could not settle it against the primary because *Exploratory Data Analysis* was not reached. **Neither phrasing is vouched as Tukey's own wording on the strength of this page.**
+They place the fences "1.5 times the inter-fourth range from the **median**". The standard definition, and every implementation known to this page's author, puts the inner fences 1.5 H-spreads from the **hinges**, which gives a different plot. Without *Exploratory Data Analysis* this cannot be settled, so neither phrasing is vouched for as Tukey's wording.
 
-### The one perceptual result in the vicinity goes against a redesign, not against Tukey
+### The one perceptual result nearby goes against a redesign, not against Tukey
 
-Wickham & Stryjewski report that Tufte proposed a box-less **midgap** variant to improve the box plot's data-ink ratio, and that:
+Of Tufte's box-less **midgap** variant, built to improve the data-ink ratio, Wickham & Stryjewski report:
 
 > "perceptual studies (Stock and Behrens, 1991) have found Tufte's variation to be substantially less accurate than the original."
 
-**Stock & Behrens itself was not reached**, so that is a reported result. A data-ink minimization was measured against the thing it minimized, and it lost. It belongs on the [Tufte page](edward-tufte.md) as much as this one.
+Stock & Behrens was not reached, so this is a reported result. See the [Tufte page](edward-tufte.md).
 
 ### What the box plot cannot do, and he knew
 
-There is no display of group size, so no way to judge whether a difference between two boxes means anything. McGill & Larsen's 1978 variable-width and notched variants exist precisely to patch that, and almost nobody uses them.
+It hides group size, so nothing shows whether a difference between two boxes means anything. McGill, Tukey & Larsen's 1978 variable-width and notched variants patch that, and almost nobody uses them. The five numbers also hide multimodality. [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md) argue for plotting the points at small n, a Tukey-descended argument: show more of the data, not less.
 
-More broadly, the box plot's five numbers hide multimodality completely, which is the argument [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md) make for plotting the points at small n, and it is a Tukey-descended argument rather than an anti-Tukey one: show more of the data, not less.
-
-### The coinages, which are folklore-adjacent
+### The coinages
 
 "Bit" (1947) is securely his. **"Software" is not settled**: his 1958 *American Mathematical Monthly* article carries the earliest known printed use in the computing sense, and there are competing priority claims for earlier unpublished use. `secondary-only` here; neither source was opened, and the confident "Tukey coined software" is more confident than the record.
 
-### The over-claim to avoid
+### The over-claim
 
-"Tukey showed that you should look at your data before modeling it." He argued it, at length and persuasively, and produced tools for doing it. He did not show it. No experiment in this material compares an exploratory-first workflow against a model-first one on any outcome. It is a strong and probably correct piece of authority assertion by a formidable authority, and it is not evidence.
+"Tukey showed that you should look at your data before modeling it." He argued it and built tools for it, but did not show it. No experiment in this material compares exploratory-first and model-first workflows on any outcome. It is a strong, probably correct authority assertion, not evidence.
 
 ## Works, and where they sit in this wiki
 
-- **"The Future of Data Analysis"** (1962). **No study page**, though it earns one more than most things here. Read in full for this page.
-- ***Exploratory Data Analysis*** (1977). **No page, not reached.** The box plot, the stem-and-leaf, the fences and the hinges all have their definitive statement here and this wiki has never opened it. That is the single largest reachability gap on this page.
-- **"Some Graphic and Semigraphic Displays"** (1972). **Not reached, not covered.**
-- ***The Collected Works of John W. Tukey***, volumes on graphics. On the Internet Archive as a lending item (`collectedworksof0001tuke`), so text extraction was not attempted.
+- **"The Future of Data Analysis"** (1962). **No study page.** Read in full.
+- ***Exploratory Data Analysis*** (1977). **No page, not reached**, though the box plot, stem-and-leaf, fences and hinges have their definitive statement there.
+- **"Some Graphic and Semigraphic Displays"** (1972). **Not reached.**
+- ***The Collected Works of John W. Tukey***, graphics volumes. An Internet Archive lending item (`collectedworksof0001tuke`), not extracted.
 
-**Coverage before this page: zero.** Tukey appeared nowhere in this wiki, which is odd given that [Cleveland & McGill](../studies/cleveland-mcgill-1984.md), the study the whole [channels](../concepts/channels.md) tier rests on, comes directly out of the Bell Labs statistical-graphics tradition he built. See [william-cleveland.md](william-cleveland.md).
+[Cleveland & McGill](../studies/cleveland-mcgill-1984.md), the study the [channels](../concepts/channels.md) tier rests on, comes out of the Bell Labs statistical-graphics tradition he built ([william-cleveland.md](william-cleveland.md)).
 
 ## Links
 
-- [concepts/floor-and-ceiling.md](../concepts/floor-and-ceiling.md), the exploratory-versus-presentation split, which is his distinction
-- [concepts/evidence-class.md](../concepts/evidence-class.md), where "the box plot is standard practice" actually sits
-- [studies/weissgerber-2015-beyond-bar-line.md](../studies/weissgerber-2015-beyond-bar-line.md), plot the points at small n
-- [studies/correll-gleicher-2014-error-bars-harmful.md](../studies/correll-gleicher-2014-error-bars-harmful.md), which measures bar-and-whisker against gradient and violin and finds the encoding changes the decision
-- [edward-tufte.md](edward-tufte.md), whose redesign of the box plot is the one Tukey artifact anybody has measured
-- [jacques-bertin.md](jacques-bertin.md), working the same decade on the opposite question: not what to compute, but what a mark can carry
+- [concepts/floor-and-ceiling.md](../concepts/floor-and-ceiling.md): his exploratory-versus-presentation split
+- [concepts/evidence-class.md](../concepts/evidence-class.md): where "the box plot is standard practice" sits
+- [studies/weissgerber-2015-beyond-bar-line.md](../studies/weissgerber-2015-beyond-bar-line.md): plot the points at small n
+- [studies/correll-gleicher-2014-error-bars-harmful.md](../studies/correll-gleicher-2014-error-bars-harmful.md): bar-and-whisker measured against gradient and violin, where the encoding changes the decision
+- [edward-tufte.md](edward-tufte.md): the box plot redesign, the one Tukey artifact anybody has measured
+- [jacques-bertin.md](jacques-bertin.md): the same decade, on what a mark can carry rather than what to compute

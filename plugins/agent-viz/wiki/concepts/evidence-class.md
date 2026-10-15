@@ -4,66 +4,42 @@ type: concept
 
 # Evidence class
 
-**What it is.** Labeling every rule in a quality bar as either **evidence-backed** (a study, an experiment, a published standard) or **authority-asserted** (a design book or style guide asserting it). Both are usable. Conflating them is the characteristic failure of visualization advice.
+**What it is.** Labeling each rule in a quality bar by its warrant: **evidence-backed** (a study, an experiment, a published standard) or **authority-asserted** (a design book or style guide asserts it). Both are usable. Conflating them is the characteristic failure of visualization advice.
 
-**Status.** Synthesis. The practice is ordinary in other fields; applying it rule-by-rule to a viz bar is what this project did.
+**Status.** Synthesis of a practice ordinary in other fields, applied here rule by rule to a visualization bar.
 
-**What it is good for.** Deciding how hard to push a rule, and knowing which rules will not survive being challenged by someone who has read the sources.
+**What it is good for.** Deciding how hard to push a rule, and which rules fail when challenged by someone who has read the sources.
 
-**What it does not settle.** Whether a rule is *right*. An authority-asserted rule can be excellent and an evidence-backed one can be narrow. The label describes the warrant, not the quality.
+**What it does not settle.** Whether a rule is right. An authority-asserted rule can be excellent, and the label describes the warrant, not the quality.
 
 ---
 
-## Why it matters here specifically
+## Where received wisdom degrades
 
-Roughly a third of the received wisdom this project checked did not survive contact with its primary source. Not because the sources were bad, but because the *citation chain* degraded: careful papers get summarized into confident rules, and the confidence survives the summarization while the caveats do not.
-
-Concrete instances, all in [refutations.md](../refutations.md):
+Roughly a third of the received wisdom this project checked did not survive contact with its primary source. The usual failure is the citation chain, where careful papers become confident rules without their caveats. Cases from [refutations.md](../refutations.md):
 
 - "Bank to 45 degrees" is a scope-limited result reported as a general one.
-- The axis-break remedy for truncation was tested and did not measurably work, but the test is a knife-edge null that does not license "placebo" either.
-- The flat dual-axis ban has no supporting experiment at all; the paper usually cited studied something adjacent.
-- "Maximize data-ink" turns out to be element-conditional, with removing axis lines *hurting* reading speed.
-- "Gray plus one accent", a rule this project uses and likes, has **no controlled study behind it**.
+- The axis-break remedy for truncation did not measurably work, but the test is a knife-edge null that does not license "placebo" either.
+- The flat dual-axis ban has no supporting experiment. The paper usually cited studied something adjacent.
+- "Maximize data-ink" is element-conditional. Removing axis lines *hurt* reading speed.
+- "Gray plus one accent", a rule this project uses and likes, has no controlled study behind it.
 
-That last one is the test of whether the labeling is being applied honestly. Labeling a disliked rule as authority-asserted is easy. Labeling a relied-on rule is not.
+## The labels
 
-## The three states, not two
-
-Two labels are not quite enough. In practice a rule sits in one of:
-
-- **Evidence-backed.** A study, experiment or published standard supports it, and the source and the number are cited. WCAG's contrast ratios are the cleanest case: a standard, unambiguous, and checkable.
-- **Authority-asserted.** A practitioner or design book asserts it, plausibly and without an experiment. Perfectly usable as a default, with the status stated.
-- **Contested.** The record disagrees with itself. The chartjunk literature is the canonical case, with results in both directions from competent people. A bar that picks a side here is misrepresenting the field.
-
-A fourth state worth naming: **absence of evidence**, which is not evidence of absence and is not the same as contested. The dual-axis ban lives here. Nobody has shown it is harmful; nobody has shown it is fine.
+- **Evidence-backed.** A study, experiment or published standard, with the source and number cited. WCAG's contrast ratios are the cleanest case. Stated flatly: "Truncation inflates perceived effect size."
+- **Authority-asserted.** A practitioner or design book asserts it without an experiment. A usable default, with the status visible: "Default to gray plus one accent. This is convention, not a measured result."
+- **Contested.** The record disagrees with itself, as the chartjunk literature does, and a bar that picks a side misrepresents the field. Stated as the rule, the contest, and what survives: "Strip decoration, keep orientation" survives the data-ink argument once removing axis lines is known to hurt.
+- **Absence of evidence.** Nobody has tested it, which is neither refutation nor contest. The dual-axis ban sits here. Stated as the caution and its reason: "The correlation a reader sees is a free parameter of your scaling choice" can be acted on, and "never use dual axes" cannot.
 
 ## What is exempt, and why the exemption matters
 
-**Definitional content carries no label.** A statement that describes what something *is*, rather than asserting something that could turn out to be false, is not a claim and does not take a warrant.
+Definitional content carries no label, because a statement of what something is could not turn out false. The structural decomposition on every page in [../chart-types/](../chart-types/) is the clearest case: a pie chart normalizing to shares and drawing wedges in polar coordinates describes the chart, not its readers. So does "force-directed layouts are not reproducible," which follows from their being stochastic. Labeling these would dilute the labels on real claims and make the most secure statements on a page look unsupported.
 
-The clearest case is the structural decomposition on every page in [../chart-types/](../chart-types/): that a pie chart normalizes to shares and draws wedges in polar coordinates is not a finding about readers, it is a description of the chart. Likewise "force-directed layouts are not reproducible," which follows from their being stochastic optimizations rather than from anyone having measured it.
+The risk is the step into an empirical claim. "A hive plot puts node position on a real data scale" is definitional and secure. "Therefore readers read it more accurately" has no study behind it. The hinge word is *therefore*.
 
-Labeling these would be worse than leaving them unlabeled, for two reasons. It dilutes the labels on the rows that *are* claims, and it invites the reverse error: an unlabeled definitional statement reads as unsupported when it is actually the most secure kind of statement on the page.
+## Where the degradation happens
 
-**The trap is the hinge.** Definitional statements are often true and consequential, and it is tempting to run one into an empirical conclusion without noticing the transition. "A hive plot puts node position on a real data scale" is definitional and secure. "Therefore readers read it more accurately" is an empirical claim with no study behind it. Same sentence, two different warrants, and the security of the first half is doing unearned work for the second. The hinge word is *therefore*.
-
-## How a rule reads under each label
-
-- Evidence-backed: stated flatly. "Truncation inflates perceived effect size."
-- Authority-asserted: stated as a default with the status visible. "Default to gray plus one accent. This is convention, not a measured result."
-- Contested: the rule, then the contest, then what survives. "Strip decoration, keep orientation" is what survives the data-ink argument once removing axis lines is known to hurt.
-- Absence of evidence: the caution and its *reason*, rather than a prohibition. "The correlation a reader sees is a free parameter of your scaling choice" is actionable in a way "never use dual axes" is not.
-
-## The rule that makes this operational
-
-**A convention upgraded into a finding is where the degradation happens.**
-
-Someone reads "default to gray plus one accent, this is convention", cites it downstream as "research shows single-accent emphasis improves comprehension", and a fabricated finding is now in circulation carrying the bar's name. The label has to survive the quotation, which means it belongs in the sentence rather than in a footnote.
-
-## The uncomfortable corollary
-
-Applying this consistently makes a bar **less** authoritative-sounding, not more. Several rules that read as settled become hedged. The unhedged rules mean something because of it.
+A convention becomes a finding in quotation: someone reads "default to gray plus one accent, this is convention", cites it as "research shows single-accent emphasis improves comprehension", and a fabricated finding circulates under the bar's name. So the label belongs in the sentence, where it survives quotation. Consistent labeling makes a bar sound less authoritative, and its unhedged rules mean more.
 
 ## See also
 

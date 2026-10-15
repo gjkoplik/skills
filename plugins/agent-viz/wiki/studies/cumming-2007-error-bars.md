@@ -8,23 +8,15 @@ retrieved: 2026-08-23
 
 Geoff Cumming, Fiona Fidler, David L. Vaux. *The Journal of Cell Biology* 177(1):7-11, April 2007. DOI [10.1083/jcb.200611141](https://doi.org/10.1083/jcb.200611141).
 
-A five-page tutorial that lays out what the four common error bars mean and gives **eight numbered rules** for using them. It is the closest thing the statistical-reporting literature has to a checkable style guide for figures.
+A tutorial on what the four common error bars mean, with **eight numbered rules** for using them.
 
-**How this was read.** Full text retrieved from the Europe PMC REST API (`/PMC2064100/fullTextXML`), which serves the publisher-deposited JATS. The article is CC-BY-NC-SA after its first six months. The PMC PDF endpoint returns a "Preparing to download" HTML interstitial rather than the PDF, so the XML route is the one that works.
+**What it is good for.** What a figure owes the reader about its error bars (the bar type and n, in the legend), and what counts as n. The replicates-versus-independent-experiments distinction is how a figure can state its sample size and still be meaningless.
 
-## What it is good for
+**What it does not settle.** Anything experimental. It is expert guidance from the group behind [Belia et al. 2005](belia-2005-ci-misconceptions.md), so the rules are authority-asserted with a reason ([evidence-class](../concepts/evidence-class.md)). Encoding choices are [Correll & Gleicher](correll-gleicher-2014-error-bars-harmful.md)'s territory, and showing the distribution instead is [Weissgerber](weissgerber-2015-beyond-bar-line.md)'s.
 
-Two questions. First, *what does a figure owe the reader about its error bars?* This paper answers with mechanizable rules: the bar type is named in the legend and n is stated. Second, *what counts as n?* The replicates-versus-independent-experiments distinction is the part a naive reading of "state your sample size" misses entirely, and it is the reason a figure can satisfy the letter of the rule and still be meaningless.
-
-## What it does not settle
-
-Nothing here is an experiment. It is expert guidance, written by the same group whose experimental evidence is [Belia et al. 2005](belia-2005-ci-misconceptions.md). The rules are authority-asserted-with-a-reason rather than measured effects; see [evidence-class](../concepts/evidence-class.md).
-
-It also does not touch chart *design*. There is no claim about bar-plus-error-bar versus gradient or violin encodings, which is [Correll & Gleicher](correll-gleicher-2014-error-bars-harmful.md)'s territory, and no claim about showing the distribution instead, which is [Weissgerber](weissgerber-2015-beyond-bar-line.md)'s.
+**How this was read.** Full text from the Europe PMC REST API (`/PMC2064100/fullTextXML`), the publisher-deposited JATS, CC-BY-NC-SA after six months. The PMC PDF endpoint returns a "Preparing to download" HTML interstitial instead of the PDF.
 
 ## The eight rules, verbatim
-
-They are reproduced in full rather than paraphrased.
 
 > **Rule 1:** when showing error bars, always describe in the figure legends what they are.
 
@@ -42,56 +34,51 @@ They are reproduced in full rather than paraphrased.
 
 > **Rule 8:** in the case of repeated measurements on the same group (e.g., of animals, individuals, cultures, or reactions), CIs or SE bars are irrelevant to comparisons within the same group.
 
-Rules 1 and 2 are the mechanizable pair. Rules 5 through 7 are eyeball approximations for reading an existing figure rather than rules for drawing one.
+Rules 1 and 2 can be checked mechanically. Rules 5 through 7 are eyeball approximations for reading a figure, not for drawing one.
 
 ## Why rule 1 exists
 
-The four bar types are drawn identically and mean different things. Range and SD are **descriptive** (how spread out the data are). SE and CI are **inferential** (how well the mean is pinned down). The paper's framing:
+Range and SD are **descriptive** (spread of the data). SE and CI are **inferential** (precision of the mean). All four are drawn identically.
 
 > "Because error bars can be descriptive or inferential, and could be any of the bars listed in Table I or even something else, they are meaningless, or misleading, if the figure legend does not state what kind they are."
 
-The practical asymmetry: SD does not shrink as n grows, SE and CI both do. So an unlabeled bar that looks tight might mean "the data cluster" or might mean "we ran it a lot of times," and the reader cannot tell which.
+SD does not shrink with n; SE and CI do. A tight unlabeled bar might mean "the data cluster" or "we ran it a lot of times," with no way to tell.
 
 ## Replicates versus independent experiments
 
-This is rule 3, and it is the rule that survives being ported out of cell biology into any other domain.
-
 > "It is essential that n (the number of independent results) is carefully distinguished from the number of replicates, which refers to repetition of measurement on one individual in a single condition, or multiple measurements of the same or identical samples."
 
-Their example: one mutant mouse's tail measured 20 times and one wild-type mouse's tail measured 20 times yield means, SDs and SEs, but n = 1 per genotype and the comparison is unavailable no matter how many measurements were taken. The pipetting example has the same shape. Replicate wells from one stock culture measure pipetting fidelity, not reproducibility of the biological effect.
+One mutant and one wild-type mouse tail, each measured 20 times, give means, SDs and SEs but n = 1 per genotype. Replicate wells from one stock culture measure pipetting fidelity, not the effect.
 
 > "If an experiment involves triplicate cultures, and is repeated four independent times, then n = 4, not 3 or 12."
 
-And the diagnostic they hand the reader:
-
 > "Whenever you see a figure with very small error bars ... you should ask yourself whether the very small variation implied by the error bars is due to analysis of replicates rather than independent samples. If so, the bars are useless for making the inference you are considering."
 
-The generalization outside biology: repeated measurement of one thing is not a sample of things. A benchmark run 20 times on one machine has n = 1 machine. Twenty raters scoring one document have n = 1 document. The rule is about which population a claim is entitled to cover.
+Outside biology, a benchmark run 20 times on one machine has n = 1 machine. Twenty raters scoring one document have n = 1 document.
 
-## The n = 3 problem, stated against their own advice
-
-They give rules for n = 3 while disclaiming them:
+## The n = 3 problem
 
 > "We illustrate and give rules for n = 3 not because we recommend using such a small n, but because researchers currently often use such small n values and it is necessary to be able to interpret their papers. It is highly desirable to use larger n, to achieve narrower inferential error bars and more precise estimates of true population values."
 
-Rule 4's escape hatch, that at very small n the points are plotted instead of the bars, is the same recommendation [Weissgerber](weissgerber-2015-beyond-bar-line.md) arrives at from a systematic review eight years later.
+Rule 4's fallback, plotting the points at very small n, is what [Weissgerber](weissgerber-2015-beyond-bar-line.md) recommends from a systematic review eight years later.
 
 ## Method and sample
 
-There is no experiment and no sample. It is a tutorial with seven worked figures, published as a Rockefeller University Press feature. Its evidentiary support is by citation, principally to [Belia et al. 2005](belia-2005-ci-misconceptions.md) (its reference 1), Cumming, Williams & Fidler 2004, and Schenker & Gentleman 2001.
+None. A tutorial with seven worked figures, published as a Rockefeller University Press feature, supported by citation: mainly [Belia et al. 2005](belia-2005-ci-misconceptions.md) (its reference 1), Cumming, Williams & Fidler 2004, and Schenker & Gentleman 2001.
 
 ## Limits the authors state themselves
 
-They close by scoping the whole apparatus:
-
 > "remember that error bars and other statistics can only be a guide: you also need to use your biological understanding to appreciate the meaning of the numbers shown in any figure."
 
-The overlap rules in 6 and 7 carry assumptions the article states but does not belabor: independent means, and approximations that behave differently at n = 3 than at n ≥ 10. Rule 8 is the explicit carve-out for correlated measurements, where the drawn bars simply do not answer the within-group question.
+## What this result does not license
+
+- **Not a measured effect.** The reader evidence is in Belia et al.
+- **Not overlap rules for repeated measures.** Rules 6 and 7 assume independent means and behave differently at n = 3 than at n ≥ 10. Rule 8 says the bars do not answer within-group questions.
 
 ## Links
 
 - Open text: [pmc.ncbi.nlm.nih.gov/articles/PMC2064100](https://pmc.ncbi.nlm.nih.gov/articles/PMC2064100/)
-- [belia-2005-ci-misconceptions.md](belia-2005-ci-misconceptions.md), the experiment showing that researchers do not read these bars correctly even when labeled
-- [weissgerber-2015-beyond-bar-line.md](weissgerber-2015-beyond-bar-line.md), how often rules 1 through 4 are ignored in practice
-- [correll-gleicher-2014-error-bars-harmful.md](correll-gleicher-2014-error-bars-harmful.md), the encoding rather than the labeling of mean and error
+- [belia-2005-ci-misconceptions.md](belia-2005-ci-misconceptions.md): researchers misread these bars even when labeled
+- [weissgerber-2015-beyond-bar-line.md](weissgerber-2015-beyond-bar-line.md): how often figures show a summary and an SE where the points or an SD would serve, measured across 703 articles
+- [correll-gleicher-2014-error-bars-harmful.md](correll-gleicher-2014-error-bars-harmful.md): the encoding, rather than the labeling, of mean and error
 - [inventory.md](../inventory.md), topics 49 (error-bar semantics must be stated) and 50 (show the distribution, not only the summary)

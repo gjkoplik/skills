@@ -8,21 +8,19 @@ One or more quantities measured repeatedly along an ordered axis, almost always 
 
 ## Is time the question, or just a column in the data?
 
-Almost every dataset has a timestamp. Very few questions are about it. Three tests, and a form in this group needs all three.
+Almost every dataset has a timestamp, and few questions are about it. A form here needs to pass three tests.
 
-**Would the answer survive deleting the middle?** "How much did it grow" and "which is bigger now" are answered by two numbers and a subtraction. The path earns its place when the path is the answer: when the series accelerates, reverses, plateaus, spikes, or has a season in it. Where no such feature can be named, the drawing carries a shape and no claim.
+**Would the answer survive deleting the middle?** "How much did it grow" is two numbers and a subtraction. The path is the answer only when the series accelerates, reverses, plateaus, spikes or has a season. Without such a feature, the drawing carries a shape and no claim.
 
-**Does the space between two adjacent points mean anything?** A connecting mark asserts that the values in between lie along it. That is a claim, and it is false when x is a set of unordered categories, when successive measurements are not comparable, or when the gap is missing data rather than a straight run. [Song & Szafir (2019)](../studies/song-szafir-2019-missing-data.md) measured the sharp end of this: methods that remove information "even lead to incorrect responses if missing values break the visual continuity of a visualization."
+**Does the space between adjacent points mean anything?** A connecting mark asserts that the values in between lie along it. That is false for unordered categories, for successive measurements that are not comparable, and across missing data. [Song & Szafir (2019)](../studies/song-szafir-2019-missing-data.md) found that methods that remove information "even lead to incorrect responses if missing values break the visual continuity of a visualization."
 
-**Is the message robust to the window?** If extending the axis by a year flips the conclusion, the conclusion belongs to the window. The FT builds this into the category definition itself: "Choosing the correct time period is important to provide suitable context for the reader" ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). `authority-asserted`.
-
-A failed test places the question in another group:
+**Is the message robust to the window?** If extending the axis by a year flips the conclusion, the conclusion belongs to the window. The FT writes this into the category definition: "Choosing the correct time period is important to provide suitable context for the reader" ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). `authority-asserted`.
 
 | The reader's actual question | Group |
 |---|---|
 | How big is each of these? | [Magnitude](magnitude.md). A [bar chart](bar-chart.md), zero baseline |
 | Which is biggest, and in what order? | [Ranking](ranking.md). A sorted bar chart |
-| Did the order change between two dates? | **This group**; [slope-chart.md](slope-chart.md) is also a ranking chart |
+| Did the order change between two dates? | **This group**. A [slope chart](slope-chart.md), also a ranking chart |
 | How did the mix shift? | [Part-to-whole](part-to-whole.md). [Stacked bar](stacked-bar.md), or lines of shares |
 | How do these two variables relate, with time incidental? | [Correlation](correlation.md). A [scatterplot](scatterplot.md) |
 | How far is each period from target? | [Deviation](deviation.md) |
@@ -31,39 +29,34 @@ A failed test places the question in another group:
 
 ## What this group costs
 
-**It is the one group that spends the best channel on the value and still cannot claim the evidence.** Both axes are position along a common scale, which is the most accurately read channel measured ([channels.md](../concepts/channels.md)). That should be the end of the argument, and it is not, for two reasons.
+Both axes are position along a common scale, the most accurately read channel ([channels.md](../concepts/channels.md)). The group still cannot claim that evidence.
 
-First, **the task is wrong for the literature.** The graphical-perception record measures reading a value off a mark and reporting it as a number. Nobody reads a line chart that way. They read slope, shape, crossing points and turning points, and the source authors say plainly that their ordering does not speak to those tasks ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)). The one study aimed squarely at slope judgment, [Talbot, Gerth & Hanrahan (2012)](../studies/talbot-2012-slope-ratio.md), concludes that "the theory of aspect ratio selection is not as simple as it once seemed."
+**The task differs.** The graphical-perception record measures reading a value off a mark. Line charts are read for slope, shape, crossings and turning points, which the source authors place outside their ordering ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)). The one study aimed at slope judgment, [Talbot, Gerth & Hanrahan (2012)](../studies/talbot-2012-slope-ratio.md), concludes that "the theory of aspect ratio selection is not as simple as it once seemed."
 
-Second, **the trend is partly a design output.** Aspect ratio and axis range both change the apparent rate of change without changing a single number, and neither is visible to the reader as a choice. Both have been measured:
+**The trend is partly a design output.** Aspect ratio and axis range change the apparent rate without changing a number, and the reader cannot see either choice. Both effects are measured:
 
-- [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) manipulated the aspect ratio of a line chart and moved mean response on a 5-point "how much bigger" scale from 1.39 to 3.19, an increase of 129.5%, **with the true values printed on the chart.**
-- [Correll, Bertini & Franconeri (2020)](../studies/correll-2020-truncating-the-y-axis.md) found truncation drove perceived severity up, F(2, 76) = 89, p < 0.0001, and that being a line chart rather than a bar chart did not help: "There was no significant effect of visualization design on perceived effect size (F(1, 38) = 0.5, p = 0.50)."
-
-Every other group in this wiki turns on the choice of mark. This one also turns on two free parameters that decide what the mark says.
+- [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) changed a line chart's aspect ratio and moved mean response on a 5-point "how much bigger" scale from 1.39 to 3.19, up 129.5%, with the true values printed on the chart.
+- [Correll, Bertini & Franconeri (2020)](../studies/correll-2020-truncating-the-y-axis.md) found truncation raised perceived severity, F(2, 76) = 89, p < 0.0001, and lines fared no better than bars: "There was no significant effect of visualization design on perceived effect size (F(1, 38) = 0.5, p = 0.50)."
 
 ## Choosing a form
 
 | Form | Carries the change as | Where it applies |
 |---|---|---|
-| [Line chart](line-chart.md) | Endpoint position, read as slope and shape | Many ordered points, and the connection between them is real |
-| [Area chart](area-chart.md) | The same, plus filled area | One series or a stacked total, where the amount under the curve is a real quantity. The fill brings the zero baseline back into scope |
-| [Stacked area chart](stacked-area-chart.md) | Band thickness, plus position for the total and the bottom band | A few components on a continuous axis, where the total matters as much as the parts |
-| [Streamgraph](streamgraph.md) | Band thickness, against a baseline computed from the data | Many components, and the reading wanted is the silhouette of the total rather than any value |
-| [Slope chart](slope-chart.md) | Two endpoint positions on a shared scale | Exactly two periods, many categories, and direction plus reordering is the story |
+| [Line chart](line-chart.md) | Endpoint position, read as slope and shape | Many ordered points, with a real connection between them |
+| [Area chart](area-chart.md) | The same, plus filled area | One series or total whose area under the curve is a real quantity. The fill brings back the zero baseline |
+| [Stacked area chart](stacked-area-chart.md) | Band thickness, plus position for the total and the bottom band | A few components, the total as important as the parts |
+| [Streamgraph](streamgraph.md) | Band thickness, against a baseline computed from the data | Many components, read as a silhouette rather than as values |
+| [Slope chart](slope-chart.md) | Two endpoint positions on a shared scale | Exactly two periods, many categories, direction and reordering as the story |
 | [Stacked bar](stacked-bar.md) | Segment length | A few discrete periods where composition and total both matter |
-| [Connected scatterplot](connected-scatterplot.md) | Position in a two-variable plane, with time only in the path order | Two quantities move together and the joint trajectory is the message. Time comes off the axis entirely |
-| [Bump chart](bump-chart.md) | Position on a rank axis, with the value discarded | Several periods, few items, and who overtook whom is the question rather than by how much |
-| [Sparkline](sparkline.md) | Shape alone, with the axes removed by design | The graphic belongs inside a sentence or a table row, and no value has to be read off it |
-| Column over time *(no page yet)* | Length from zero | Few discrete periods, counted quantities, and the value rather than the trend is the point |
+| [Connected scatterplot](connected-scatterplot.md) | Position in a two-variable plane, with time only in the path order | Two quantities whose joint trajectory is the message. Time leaves the axis |
+| [Bump chart](bump-chart.md) | Position on a rank axis, with the value discarded | Several periods, few items, who overtook whom rather than by how much |
+| [Sparkline](sparkline.md) | Shape alone, with the axes removed by design | Inside a sentence or a table row, with no value to read off |
+| Column over time *(no page yet)* | Length from zero | Few discrete periods of counted quantities, the value mattering more than the trend |
 
-Fan charts and horizon graphs both belong to this group and neither has a page. No study in this corpus tests either of them, and none tests the bump chart, the stacked area chart, the streamgraph or the sparkline either.
+Fan charts and horizon graphs have no page. No study here tests them, or the bump chart, stacked area chart, streamgraph or sparkline.
 
-Three constraints that follow from the evidence rather than from taste:
-
-- **The aspect ratio is a free choice, and no rule in this corpus settles it.** The library default is an unmade choice. The received fix, banking to 45 degrees, is scope-limited rather than general; the contested section of [line-chart.md](line-chart.md#what-is-contested) carries it.
-- **Truncating the y-axis is a rhetorical decision on every mark in this group, filled or not.** The proportional-ink argument releases lines and dots. The measured exaggeration effect does not.
-- **Missing values drawn as missing.** Highlighting beat downplaying beat removal on perceived data quality, and zero-filling was the worst imputation tested (Song & Szafir).
+- **Aspect ratio** is a free choice that no rule in this corpus settles, and a library default is an unmade choice. Banking to 45 degrees is scope-limited ([line-chart.md](line-chart.md#what-is-contested)).
+- **Missing values** are drawn as missing. Highlighting beat downplaying beat removal on perceived data quality, and zero-filling was the worst imputation tested (Song & Szafir).
 
 ## Justifying the choice
 
@@ -71,43 +64,41 @@ Three constraints that follow from the evidence rather than from taste:
 
 - "This axis is truncated and the subtitle says so. Truncation inflates perceived effect size, measured, and it does that on line charts as much as on bars, so I did not treat the absence of a fill as an exemption."
 - "The gap in 2019 is drawn as a gap. Repairing a break in continuity silently is the one thing in this literature that produced outright wrong answers rather than just lower confidence."
-- "The axis is linear. Log-log comprehension measured 56% against 93% for linear-linear among professional ecologists, 69% of them PhDs, so an expert audience is not the escape hatch" ([Menge et al. 2018](../studies/menge-2018-log-scales.md); the figures come from the publisher's own abstract, the main text is unread).
+- "The axis is linear. Log-log comprehension measured 56% against 93% for linear-linear among professional ecologists, 69% of them PhDs, so an expert audience is not the escape hatch" ([Menge et al. 2018](../studies/menge-2018-log-scales.md); figures from the publisher's abstract, main text unread).
 
 **Defensible, with the label said out loud:**
 
-- "I chose a flatter, wider aspect ratio than the default." Talbot et al.'s model selects flatter and wider ratios than the banking algorithms do, and they never showed that readers do better on the resulting plots. A lead, not a rule.
+- "I chose a flatter, wider aspect ratio than the default." Talbot et al.'s model picks flatter, wider ratios than banking does, but they never showed readers do better on them. A lead, not a rule.
 - "Everything is gray except the one series in question." Universal practitioner advice with no controlled experiment under it ([refutations.md](../refutations.md)).
-- "Five series became five small multiples." Schwabish's own name for the guideline is "Avoid the Spaghetti Chart" ([schwabish.md](../sources/schwabish.md)). `authority-asserted`.
+- "Five series became five small multiples." Schwabish calls the guideline "Avoid the Spaghetti Chart" ([schwabish.md](../sources/schwabish.md)). `authority-asserted`.
 
 **Commonly repeated, and the evidence does not support it:**
 
 - ~~"Bank the slopes to 45 degrees."~~ Talbot et al.: "we find that, in general, slope ratio errors are not minimized around 45°." Cleveland's model fits inside the moderate range he tested and fails to extrapolate.
-- ~~"Line charts are exempt from the truncation critique, because there is no bar to cut off."~~ Two different rules get merged here. Proportional ink is scoped by mark and genuinely releases an unfilled line. The exaggeration effect is not scoped by mark and was measured on lines.
-- ~~"An axis-break glyph makes the truncation honest."~~ The two static designs tested produced no measurable reduction. The source is careful here: at F(2, 60) = 3.1 and n = 31 this is a knife-edge failure to reject, not a demonstrated null, so "placebo" overstates it.
+- ~~"Line charts are exempt from the truncation critique, because there is no bar to cut off."~~ Two rules merged. Proportional ink is scoped by mark and releases an unfilled line. The exaggeration effect is not, and was measured on lines.
+- ~~"An axis-break glyph makes the truncation honest."~~ The two static designs tested produced no measurable reduction. At F(2, 60) = 3.1 and n = 31 that is a narrow failure to reject, not a demonstrated null, so "placebo" overstates it.
 - ~~"A log scale is fine, my audience is technical."~~ Menge et al. found the gap did not close for PhDs, professors, or people who report being comfortable with logarithms.
 
 ## The failure mode this group invites
 
-**Presenting a trend as a property of the data when it is partly a property of the drawing.** Nothing in the numbers changes when the plot is stretched, the axis cropped, or the series started a year later, and all three change what the reader concludes. This is the group where a figure can be entirely accurate and still wrong.
-
-A check on that: the conclusion stated out loud, then the figure redrawn at a different aspect ratio and a different axis range. A sentence that stops being true was a sentence about the drawing.
+**A trend presented as a property of the data when it is partly a property of the drawing.** Stretching the plot, cropping the axis or starting a year later changes no number and changes the conclusion. Redrawing at a different aspect ratio and axis range is the check. A conclusion that stops being true was about the drawing.
 
 ## Types in this index
 
 - [line-chart.md](line-chart.md)
 - [area-chart.md](area-chart.md)
-- [stacked-area-chart.md](stacked-area-chart.md), which is also a part-to-whole form and keeps only the total and the bottom band on a fixed baseline
-- [streamgraph.md](streamgraph.md), the same stack with the baseline computed from the data, so nothing on it is a fixed-scale reading
-- [sparkline.md](sparkline.md), a line chart with the guides removed on purpose, so nothing on it is a value
-- [slope-chart.md](slope-chart.md), which is also a ranking chart
-- [bump-chart.md](bump-chart.md), which is primarily a ranking chart and puts the rank on the axis instead of the value
-- [ridgeline-plot.md](ridgeline-plot.md), for the common case where the stacked variable is time, and which is primarily a distribution chart
-- [dumbbell-plot.md](dumbbell-plot.md), for the case where the two values are two dates, and which is primarily a ranking chart
-- [stacked-bar.md](stacked-bar.md), which is here for repeated composition and is primarily a part-to-whole form
-- [connected-scatterplot.md](connected-scatterplot.md), which is primarily a correlation chart and takes time off the axis
+- [stacked-area-chart.md](stacked-area-chart.md): also part-to-whole
+- [streamgraph.md](streamgraph.md)
+- [sparkline.md](sparkline.md)
+- [slope-chart.md](slope-chart.md): also ranking
+- [bump-chart.md](bump-chart.md): primarily ranking
+- [ridgeline-plot.md](ridgeline-plot.md): primarily distribution, here when the stacked variable is time
+- [dumbbell-plot.md](dumbbell-plot.md): primarily ranking, here when the two values are two dates
+- [stacked-bar.md](stacked-bar.md): primarily part-to-whole, here for repeated composition
+- [connected-scatterplot.md](connected-scatterplot.md): primarily correlation
 
 ## See also
 
-- [../concepts/channels.md](../concepts/channels.md) — and specifically why the accuracy ordering says so little about trend reading
-- [../refutations.md](../refutations.md) — banking, truncation remedies, and log scales all have entries
-- [README.md](README.md) — the page template and the inheritance rule
+- [../concepts/channels.md](../concepts/channels.md): why the accuracy ordering says little about trend reading
+- [../refutations.md](../refutations.md): banking, truncation remedies and log scales
+- [README.md](README.md): the page template and the inheritance rule
