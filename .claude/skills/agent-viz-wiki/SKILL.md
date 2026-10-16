@@ -75,16 +75,16 @@ Type pages live flat in `wiki/chart-types/`. Index pages, one per data relations
 
 **Index pages** carry: is this group the right frame, and how to tell; what the group costs in channel terms; how to choose a form within it; how to justify the choice; the failure mode the group invites; the types it indexes.
 
-**Type pages** carry these eight `##` sections, in this order, spelled exactly as `validate.py` checks them. A section with nothing to say is one line ("No study in this corpus tests the form.").
+**Type pages** carry these six `##` sections, in this order, spelled exactly as `validate.py` checks them. A section with nothing to say is one line ("No study in this corpus tests the form.").
 
 1. **When to reach for it, and when not.** The conditions the form is defined for, and a table of "the reader's question → the alternative".
 2. **Structural decomposition.** The six slots below.
 3. **Channels.** Which channel each mark puts the reader on, linking to `concepts/channels.md`.
-4. **What it is measurably good at.** Only study-traceable claims, cited, with the effect.
-5. **What it is measurably bad at.** Same bar.
-6. **What is contested.** Both sides named.
-7. **The failure mode it invites.** Usually `authority-asserted`, and labeled.
-8. **Justifying the choice.** The three lists.
+4. **What is measured.** Only study-traceable claims, cited, with the effect and its scope: what the form is measured as good at, what it is measured as bad at, and where the record disagrees with itself. Nearby results that do not transfer get one sentence each saying why.
+5. **The failure mode it invites.** Usually `authority-asserted`, and labeled.
+6. **Justifying the choice.** The three lists.
+
+**Evidence labels are written one way:** inline, in backticks, from exactly this vocabulary: `evidence-backed`, `authority-asserted`, `contested`, `absence of evidence`. Definitional statements carry no label. No bold labels, no "Mixed", no "refuted by this paper" used as a label.
 
 The six slots, from Wilkinson's *Grammar of Graphics* by way of ggplot2:
 

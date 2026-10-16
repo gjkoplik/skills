@@ -59,7 +59,7 @@ Scope follows the ask. Making or choosing a chart: run this. Asked for feedback 
 
 **2. Name the reader's question.** People hand you the shape of their data and a chart they already have in mind. They never hand you a question. "Four categories summing to 100%, I was thinking a pie" is shape plus a proposal, and whether the pie is right turns on whether the reader needs *which is biggest* (a sorted bar) or *does this add up* (a pie is defensible). State the question you inferred in one line, so it can be corrected. Ask only when the ambiguity changes the destination.
 
-**3. Route to exactly one index.**
+**3. Route to exactly one group.** [choose](wiki/chart-types/choose.md) is the whole chooser on one page: a data-shape test that rules groups out before the question is asked, this routing table, and every group's forms table with its evidence state. Open it first.
 
 | What the reader needs to answer | Index |
 |---|---|
@@ -67,6 +67,7 @@ Scope follows the ask. Making or choosing a chart: run this. Asked for feedback 
 | Which is biggest, in what order? | [ranking](wiki/chart-types/ranking.md) |
 | What is it made of, and does it add up? | [part-to-whole](wiki/chart-types/part-to-whole.md) |
 | How is it spread? Is there enough data to say? | [distribution](wiki/chart-types/distribution.md) |
+| How sure is this estimate? Is the difference real? | [uncertainty](wiki/chart-types/uncertainty.md) |
 | Do these two move together? | [correlation](wiki/chart-types/correlation.md) |
 | How did it change over time? | [change-over-time](wiki/chart-types/change-over-time.md) |
 | How far from a baseline or target? | [deviation](wiki/chart-types/deviation.md) |
@@ -79,7 +80,7 @@ Scope follows the ask. Making or choosing a chart: run this. Asked for feedback 
 
 If the page is not there, say so and reason from [channels](wiki/concepts/channels.md). Do not invent a route.
 
-**4. Open the index before any type page.** Type pages are written to be fair to their subject, so reading one first confirms whatever was proposed. The index is the only page that asks whether the group is the right frame at all. Budget: one index, at most two type pages.
+**4. Descend only as far as the doubt goes.** The chooser settles most cases. Open the group's index when the group itself is in doubt, since the index is the page that asks whether the group is the right frame. Open a type page to defend the form, never to pick it: type pages are written to be fair to their subject, so reading one first confirms whatever was proposed. Budget: the chooser, at most one index, at most two type pages.
 
 Three checks, and they fail differently:
 
