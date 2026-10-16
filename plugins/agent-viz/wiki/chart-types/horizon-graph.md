@@ -42,17 +42,17 @@ Within a band, value is height in the strip, position along a common scale ([cha
 
 ## What is measured
 
-Heer, Kong & Agrawala (2009), *Sizing the Horizon*, read at primary and recorded on [people/jeffrey-heer.md](../people/jeffrey-heer.md#horizon-graphs-heer-kong-agrawala-2009). No study page exists for it yet. It compared line charts with mirrored and layered variants across heights, scoring value-comparison error against a within-5-values target. Every result below is `evidence-backed` for that task only.
+[Heer, Kong & Agrawala (2009)](../studies/heer-2009-horizon-graphs.md), *Sizing the Horizon*, compared line charts with mirrored and layered variants across heights, scoring value-comparison error against a within-5-values target. Every result below is `evidence-backed` for that task only.
 
 - **Mirroring.** Flipping negatives above the axis in a different color "neither slowed estimation time nor hurt estimation accuracy," at half the height.
-- **Layering.** Bands increased time and error at constant height. Below 24 pixels, two-band mirrored charts were more accurate. Four or more bands were worse on both measures, and subjects called them tiring.
+- **Layering.** Bands increased time and error at constant height. Below 24 pixels, two-band mirrored charts were more accurate than line charts and one-band mirrored charts of the same height. In the data the three were comparable at 12 pixels and the two-band advantage showed at 6, and the analysis found no significant chart-by-height interaction. Four bands, the most tested, were worse on both measures, and subjects called them tiring.
 - **Size.** For line charts and one-band mirror charts, 24 pixels minimized estimation time without costing accuracy.
 
 Rates of change were not measured. The authors note that "graphical perception of time series typically involves observing rates of change in addition to comparing values." Whether horizon graphs serve trend or turning-point reading is `absence of evidence`.
 
 ## The failure mode it invites
 
-**Too many bands.** Each band saves height and adds a shade to decode. Four or more measured worse, above.
+**Too many bands.** Each band saves height and adds a shade to decode. Four measured worse, above.
 
 **Reading height as the value.** Two points at the same height in different bands differ by a whole band's range, and only the shade and the key say so. That follows from the structure. Whether readers make the error is untested, `absence of evidence`.
 
@@ -63,7 +63,7 @@ Rates of change were not measured. The authors note that "graphical perception o
 **Defensible, evidence-backed:**
 
 - "Negatives are mirrored above the baseline in a second hue. In the one study of this form, mirroring cost neither time nor accuracy, at half the height."
-- "Two bands rather than four. Four or more bands were slower and less accurate on value comparison, and subjects found them tiring."
+- "Two bands rather than four. Four bands were slower and less accurate on value comparison, and subjects found them tiring."
 - "Each strip is about 24 pixels tall. In that study, 24 pixels minimized estimation time for line charts and one-band mirror charts without costing accuracy." Value comparison only.
 
 **Defensible, with the label said out loud:**
@@ -74,7 +74,7 @@ Rates of change were not measured. The authors note that "graphical perception o
 **Commonly repeated, and the evidence does not support it:**
 
 - ~~"Horizon graphs show trends better than line charts."~~ Only value comparison was measured.
-- ~~"More bands means more resolution, so more accuracy."~~ Four or more bands measured worse on time and error.
+- ~~"More bands means more resolution, so more accuracy."~~ Four bands measured worse on time and error.
 - ~~"Folding the negatives over confuses readers."~~ Mirroring measured as free.
 
 ## See also
@@ -83,4 +83,4 @@ Rates of change were not measured. The authors note that "graphical perception o
 - [area-chart.md](area-chart.md): the unfolded form
 - [sparkline.md](sparkline.md): the other form built for little height
 - [line-chart.md](line-chart.md): the comparison form in the study
-- [../people/jeffrey-heer.md](../people/jeffrey-heer.md): the study, read at primary
+- [../studies/heer-2009-horizon-graphs.md](../studies/heer-2009-horizon-graphs.md): the study, read at primary

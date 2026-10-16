@@ -14,7 +14,7 @@ An experiment comparing four ways to show **two magnifications of the same serie
 
 **What it does not settle.** Dual-*variable* twin axes, which it did not test ([below](#dual-scale-is-not-dual-variable)).
 
-**How this was read.** Extracted locally with `pdftotext` from the author copy at [petra.isenberg.cc](https://petra.isenberg.cc/publications/papers/Isenberg_2011_ASO.pdf). PDF metadata marks it as the author camera-ready ("Submission for InfoVis 2011", created September 2011, IEEE acceptance block dated 1 August 2011), so it could differ from the typeset version in copyediting. The HAL and LRI mirrors were behind bot-check walls. This paper is the origin of one of the [retrieval hazards](../../CONTRIBUTING.md#retrieval-hazards): a web-fetch summarizer returned, **in quotation marks**, "Superimposed charts performed best overall and are recommended for most tasks." The abstract says the opposite.
+**How this was read.** Extracted locally with `pdftotext` from the author copy at [petra.isenberg.cc](https://petra.isenberg.cc/publications/papers/Isenberg_2011_ASO.pdf). PDF metadata marks it as the author camera-ready ("Submission for InfoVis 2011", created September 2011, IEEE acceptance block dated 1 August 2011), so it could differ from the typeset version in copyediting. The text layer garbles the error formula's 1/8 term as "81", so the formula was read from a render of page 7. The HAL and LRI mirrors were behind bot-check walls. This paper is the origin of one of the [retrieval hazards](../../CONTRIBUTING.md#retrieval-hazards): a web-fetch summarizer returned, **in quotation marks**, "Superimposed charts performed best overall and are recommended for most tasks." The abstract says the opposite.
 
 ## The finding
 
@@ -22,7 +22,7 @@ An experiment comparing four ways to show **two magnifications of the same serie
 
 Cut-out ranked first in the questionnaire for every task and location. Superimposed ranked last every time, and last overall for 14 of 15 participants, who called it "very confusing and demanding too much concentration or reflection to decipher the non-monotonic and discontinuous nature of the two scales." On the 7-point confidence scale, "for S all participants reported not to be confident about their answers."
 
-On the position task, chart affected error, F(4,56) = 25, p < .0001. Mean absolute error was -0.2 for regular, -0.07 for cut-out, 0.26 for lens, 0.95 for broken and 2.1 for superimposed.
+On the position task, chart affected error, F(4,56) = 25, p < .0001. Mean error was -0.2 for regular, -0.07 for cut-out, 0.26 for lens, 0.95 for broken and 2.1 for superimposed. The paper calls these "Mean absolute error," but they are on the log scale it defines as log2(|judged percent − true percent| + 1/8), which is why two are negative (the floor is -3, a perfect answer). Figure 8 labels the same axis "Mean log_diff".
 
 The recommendation also admits the broken chart:
 
@@ -42,7 +42,7 @@ So the paper most often cited for a twin-axis ban reports that no such evidence 
 
 ## Method
 
-Within-subjects: five charts, three tasks, each in focus, context and across-scale locations, at breakpoint magnifications u_b = 2, 5, 10. Six trials per cell gave **720 trials per participant**, Latin-square ordered, in 90 to 120 minutes. Participants judged a stimulus as a percentage (0 to 100%) of a reference object, in **data space** rather than drawing space, so tick spacing mattered. Measures were error and time to first keypress. Gridlines were equally spaced on all charts, following Zanella et al.'s finding that a grid is the most useful cue for a visual distortion.
+Within-subjects: five charts, three tasks, each in focus, context and across-scale locations, at breakpoint magnifications u_b = 2, 5, 10. Six trials per cell gave **720 trials per participant**, Latin-square ordered, in 90 to 120 minutes. Participants judged a stimulus as a percentage (0 to 100%) of a reference object, in **data space** rather than drawing space, so tick spacing mattered. Measures were log error, log2(|judged percent − true percent| + 1/8), and time to first keypress. Gridlines were equally spaced on all charts, following Zanella et al.'s finding that a grid is the most useful cue for a visual distortion.
 
 ## Sample size and population
 

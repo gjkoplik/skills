@@ -14,7 +14,7 @@ A randomized survey experiment on about 2,000 US residents in April 2020. Half s
 
 **What it does not settle.** Replication. The paper names a contemporaneous null result, and its comprehension effect sizes are implausibly large.
 
-**How this was read.** Extracted locally with `pdftotext` from the published open-access version deposited at LSE Research Online.
+**How this was read.** Extracted locally with `pdftotext` from the published open-access version deposited at LSE Research Online. Tables 5 and 7 sit on rotated pages that the text layer scrambles, so they were read from page renders.
 
 ## The finding
 
@@ -39,7 +39,9 @@ Linear Group coefficient 0.489*** for an *accurate* prediction and -0.481*** for
 
 ### Policy and attitudes: modest, mixed in sign
 
-Support for closing nonessential businesses: -0.378** and -0.424** (p = 0.019, 0.012). Days until reopening: +17.38** and +14.65** (p = 0.014, 0.037). The linear group wanted closures *longer* while endorsing them *less*. Table 7 odds ratios for worry, mask use, mask tax and business closure all have p above 0.10.
+Support for closing nonessential businesses (Table 5, ordered logit): 0.0406 without controls (p = 0.621), then -0.378** and -0.424** with controls (p = 0.019, 0.012). Days until reopening (OLS): 2.295 without controls (p = 0.464), then +17.38** and +14.65** (p = 0.014, 0.037). With controls, the linear group wanted closures *longer* while endorsing them *less*. Worry about the health crisis rose in the linear group, 0.327** with full controls (Table 4, p = 0.038).
+
+Table 7 gives odds ratios for the fully controlled models: 1.387 for worry, 0.705 for mask use, 1.356 for a mask-buying tax and 0.654 for business closure. Each is starred at p < 0.05 under Table 7's own legend, `*p < 0.05, **p < 0.01, ***p < 0.001`, which is stricter than the `*p < 0.10` legend of Tables 2 to 6. The parentheses in Table 7 hold standard errors, not p-values. The odds ratios agree with the coefficients: exp(0.327) = 1.387 and exp(-0.424) = 0.654.
 
 > "We cannot know the mechanism leading to these preferences, but we advance the conjecture that the shape of the curves could explain these findings. The flat logarithmic curve can give the impression that we reached a plateau and that, while the present situation is very serious, things are about to get better soon."
 

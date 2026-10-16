@@ -12,7 +12,7 @@ Justin Matejka, George Fitzmaurice. *Same Stats, Different Graphs: Generating Da
 
 **What it does not settle.** Anything about readers. The Datasaurus circulates as if it were evidence.
 
-**How this was read.** PDF from Autodesk Research (`damassets.autodesk.net/.../same-stats-different-graphs.pdf`), re-extracted with `pdftotext -layout`.
+**How this was read.** PDF from Autodesk Research (`damassets.autodesk.net/.../same-stats-different-graphs.pdf`), re-extracted with `pdftotext -layout`, with Figures 1, 3 and 6 checked on page renders. The paper never uses the name "Datasaurus Dozen", so the Dozen's count comes from the HTML project page at [research.autodesk.com](https://www.research.autodesk.com/publications/same-stats-different-graphs/), fetched with curl.
 
 ## It is a construction, not an experiment
 
@@ -30,7 +30,7 @@ It does not support these, none of which it measures:
 
 ## Attribution
 
-The Datasaurus is **Alberto Cairo's**. The paper cites it as reference 4, a 2016 post on thefunctionalart.com titled "Download the Datasaurus: Never trust summary statistics alone; always visualize your data." Matejka and Fitzmaurice use it as the *seed* and generate eleven more datasets matching its statistics (x̄ = 54.26, ȳ = 47.83, sd_x = 16.76, sd_y = 26.93, Pearson's r = -0.06).
+The Datasaurus is **Alberto Cairo's**. The paper cites it as reference 4, a 2016 post on thefunctionalart.com titled "Download the Datasaurus: Never trust summary statistics alone; always visualize your data." Matejka and Fitzmaurice use it as the *seed* for datasets matching its statistics (x̄ = 54.26, ȳ = 47.83, sd_x = 16.76, sd_y = 26.93, Pearson's r = -0.06). The paper shows four (Figure 6). The project page describes the released set: "To generate the Datasaurus Dozen, we created 12 shapes to direct the dots towards." The Dozen is the dinosaur plus twelve generated datasets, thirteen in all.
 
 The ancestor is Anscombe's Quartet (1973), whose method Anscombe never explained: "it is not known how Anscombe came up with his datasets."
 
@@ -50,9 +50,9 @@ Each perturbation moves individual points, and annealing biases moves toward a t
 
 ## The six examples
 
-1. **Target shapes.** 182 points, 200,000 iterations, about 10 minutes on a laptop.
+1. **Target shapes.** A generic point cloud of 182 points, coerced toward the 11 target shapes in Figure 3, at 200,000 iterations, about 10 minutes on a laptop. Figure 1's twelve scatterplots, the seed plus a star, an X and parallel lines among them, share x/y means, x/y standard deviations and Pearson's r (+0.32) to two decimal places. No dinosaur is among them.
 2. **Alternate statistical measures.** The same seed held on nonparametric properties instead.
-3. **The Datasaurus Dozen.** Twelve scatterplots, including a dinosaur, a star and parallel lines, sharing x/y means, x/y standard deviations and Pearson's r to two decimal places.
+3. **Specific initial dataset.** Cairo's Datasaurus as the seed. Figure 6 drives it toward four shapes (concentric rings, slanted lines, horizontal lines, an X), all holding its statistics to two decimal places. The released Datasaurus Dozen extends this example to twelve shapes.
 4. **Simpson's paradox.** A dataset with overall Pearson's r of +0.81, coerced toward sloping lines so each subgroup is negatively correlated.
 5. **Anonymization.** A Kolmogorov-Smirnov constraint in `ISERROROK` (x and y K-S statistic both below 0.05) keeps the shape while every point moves.
 6. **1D boxplots.** Six distributions with identical first quartile, median, third quartile and 1.5-IQR whisker positions, so identical boxplots. Box plots, the usual recommended *fix* for the bar-chart problem, are what gets defeated.
@@ -74,6 +74,7 @@ The conclusion:
 ## Links
 
 - Code and datasets: [autodeskresearch.com/publications/samestats](https://www.autodeskresearch.com/publications/samestats)
+- Project page with the Datasaurus Dozen: [research.autodesk.com/publications/same-stats-different-graphs](https://www.research.autodesk.com/publications/same-stats-different-graphs/)
 - [weissgerber-2015-beyond-bar-line.md](weissgerber-2015-beyond-bar-line.md): the same point with evidence attached
 - [evidence-class](../concepts/evidence-class.md): the Datasaurus is a vivid artifact treated as an empirical result
 - [inventory.md](../inventory.md), topic 50

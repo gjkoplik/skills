@@ -6,7 +6,7 @@ Pages carry their facts in frontmatter and their argument in the body. The schem
 
 **Status is not decoration.** `primary-read` means someone opened the source and the quotes come from a local extraction. `secondary-only` means abstracts or summaries, and its quotes are unvouched. `not-reached` means the page says where it looked. `status_partial` means the page covers several artifacts and did not reach them all equally, with `status` recording the principal subject. Several claims here changed when someone opened the primary, so a `secondary-only` page has not earned the trust of a `primary-read` one.
 
-**Current state: 53 `primary-read`, 6 `secondary-only`, 0 `not-reached`, of which 25 are `status_partial`.** Parsed from frontmatter across `sources/`, `studies/` and `people/` by `validate.py`, which fails if this line drifts. `concepts/` and `chart-types/` are synthesis and structure, and are not counted. This is the only count in the wiki, because it is the only one a machine enforces.
+**Current state: 54 `primary-read`, 6 `secondary-only`, 0 `not-reached`, of which 25 are `status_partial`.** Parsed from frontmatter across `sources/`, `studies/` and `people/` by `validate.py`, which fails if this line drifts. `concepts/` and `chart-types/` are synthesis and structure, and are not counted. This is the only count in the wiki, because it is the only one a machine enforces.
 
 ## Start here
 
@@ -66,6 +66,7 @@ No controlled study has tested a chart type; they test channels. Every claim abo
 | [skau-2015-embellished-bars.md](studies/skau-2015-embellished-bars.md) | `primary-read` | Deforming the bar raises error. Compatible with Bateman, not opposed to it. |
 | [cleveland-mcgill-1984.md](studies/cleveland-mcgill-1984.md) | `primary-read` | The channel ranking. It has ties, and length, direction and angle share rank 3. |
 | [heer-bostock-2010.md](studies/heer-bostock-2010.md) | `primary-read` | The replication. Square rectangles are the worst case for area. Length-beats-angle did not reproduce. |
+| [heer-2009-horizon-graphs.md](studies/heer-2009-horizon-graphs.md) | `primary-read` | Mirroring negatives is free on value comparison. Bands cost time and error, and pay in accuracy only below 24 pixels. |
 | [skau-kosara-2016.md](studies/skau-kosara-2016.md) | `primary-read` | Pies are not read by angle. Donuts are as accurate as pies. |
 | [ghoniem-2004.md](studies/ghoniem-2004.md) | `primary-read` | Matrices beat node-link above ~20 nodes, at densities 0.2 to 0.6, static. |
 | [okoe-2018.md](studies/okoe-2018.md) | `primary-read` | The interactive real-network replication that comes out the other way. |
@@ -98,6 +99,6 @@ One page per author in [people/](people/), covering the person across their work
 
 **Accessibility should be imported, not derived.** The four accessibility topics here map onto eight of Chartability's fifty heuristics; the mapping, the license analysis and an adoption plan are on [sources/chartability.md](sources/chartability.md).
 
-**Chart-type coverage is broad and thin.** Most type pages record that no study in this corpus tests the form; the per-page position is in the coverage table at [chart-types/README.md](chart-types/README.md). Deviation, ranking and spatial have no experiment behind any of their forms. Named types without a page include the horizon graph (which has a study waiting for it, recorded on [people/jeffrey-heer.md](people/jeffrey-heer.md)), arc diagram, Gantt, cycle plot, stem-and-leaf, candlestick, Venn and Euler diagrams, and the isotype and pictogram, which [waffle-chart.md](chart-types/waffle-chart.md) treats as neighbors rather than the same form. Three name collisions are flagged and unresolved on [aliases.md](chart-types/aliases.md): "mosaic plot", "heat map" and "range plot".
+**Chart-type coverage is broad and thin.** Most type pages record that no study in this corpus tests the form; the per-page position is in the coverage table at [chart-types/README.md](chart-types/README.md). Deviation, ranking and spatial have no experiment behind any of their forms. Named types without a page include the arc diagram, Gantt, cycle plot, stem-and-leaf, candlestick, Venn and Euler diagrams, and the isotype and pictogram, which [waffle-chart.md](chart-types/waffle-chart.md) treats as neighbors rather than the same form. Three name collisions are flagged and unresolved on [aliases.md](chart-types/aliases.md): "mosaic plot", "heat map" and "range plot".
 
 **Everything is matplotlib-tested.** No claim is made about how the checks translate.

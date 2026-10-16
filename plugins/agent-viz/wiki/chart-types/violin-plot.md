@@ -42,7 +42,7 @@ Value is position along a common scale and density is width, an area reading onc
 
 Inferential judgments about a mean and its error, against a bar with error bars, are measured. Correll & Gleicher ran 240 participants through three crowdsourced experiments. `evidence-backed`.
 
-- The bar's "false metaphor of containment" made outcomes inside the bar look likelier than outcomes the same distance above the mean, a significant interaction at F(2,2) = 21.3, p < 0.0001. Not significant for the violin.
+- The bar's "false metaphor of containment" made outcomes inside the bar look likelier than outcomes the same distance above the mean, a significant interaction at F(2,2) = 21.3, p < 0.0001 (degrees of freedom as misprinted in the paper). Not significant for the violin.
 - Adherence to the expected strategy was highest with the violin, 89.2% of trials, against 83.2% for bars.
 - Mean confidence was 5.06 with the violin and 5.12 with the gradient, against 4.86 for both bars and box plots. No pairwise test of the violin against the box plot or the bar is reported.
 - Mechanical Turk workers showed no within-the-bar bias with the unfamiliar mark, and the authors report that unfamiliarity cost a general audience nothing.

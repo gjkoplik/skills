@@ -14,23 +14,23 @@ A crowdsourced experiment testing six infographic embellishments of the bar itse
 
 **What it does not settle.** Bar charts only, two tasks only, Mechanical Turk, and no memorability measure. It names a memorability-versus-accuracy tradeoff but measured only the accuracy side.
 
-**How this was read.** PDF retrieved from [kosara.net/papers/2015/Skau-EuroVis-2015.pdf](https://kosara.net/papers/2015/Skau-EuroVis-2015.pdf) and re-extracted with `pdftotext -layout`. The text layer loses apostrophes and mangles Table 1's hypothesis-versus-result grid across columns. Numbers here come from Tables 2 and 3 and the running text, which extract cleanly. Table 1's pairings are not reproduced.
+**How this was read.** PDF retrieved from [kosara.net/papers/2015/Skau-EuroVis-2015.pdf](https://kosara.net/papers/2015/Skau-EuroVis-2015.pdf) and re-extracted with `pdftotext -layout`. The text layer loses apostrophes and mangles Table 1's hypothesis-versus-result grid across columns. Numbers here come from Tables 2 and 3 and the running text, which extract cleanly. Both tables were also checked against renders of pages 7 and 8. Table 1's pairings are not reproduced.
 
 ## The finding
 
 > "none of the embellishments tested in this experiment performed better at communication of the data than the baseline standardized chart."
 
-**Absolute judgments** (estimate one bar's value, y-axis present). Rounded (0.009) and triangle (0.012) sit just above the corrected α = 0.0083, so they count as non-significant.
+**Absolute judgments** (estimate one bar's value, y-axis present). Rounded (0.009) and triangle (0.012) sit just above the corrected α = 0.0083, so they count as non-significant. The SD column is the paper's own: Tables 2 and 3 print the same SD for every condition except extended (1.68 against 1.66), and the running text repeats those values.
 
 | Embellishment | Mean MLAE | SD | p vs. baseline |
 |---|---|---|---|
 | baseline | 1.41 | 1.85 | n/a |
 | capped | 1.41 | 1.68 | 0.50 |
-| extended below zero | 1.45 | 1.68 | not significant |
-| overlapping triangles | 1.64 | 1.76 | 0.012 |
+| extended below zero | 1.45 | 1.68 | 0.562 |
+| overlapping triangles | 1.64 | 1.76 | 0.048 |
 | rounded | 1.67 | 1.77 | 0.009 |
 | triangle | 1.70 | 1.68 | 0.012 |
-| quadratic | 1.70 | 1.78 | significant |
+| quadratic | 1.70 | 1.78 | 0.007 |
 
 The paper sums up this task as "only quadratic bars performed significantly worse than the baseline."
 

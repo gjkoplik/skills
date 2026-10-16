@@ -6,13 +6,13 @@ retrieved: 2026-08-23
 
 # seaborn documentation
 
-The tutorial documentation for seaborn, the statistical plotting layer over matplotlib: *Choosing color palettes* and *Statistical estimation and error bars*.
+The tutorial documentation for seaborn, the statistical plotting layer over matplotlib: *Choosing color palettes*, *Statistical estimation and error bars* and *Visualizing distributions of data*.
 
 **What it is good for.** Uncertainty display. The error-bars chapter separates an interval showing the spread of the data from one showing uncertainty about an estimate, which most sources conflate, and then argues against the plot it has just taught.
 
 **What it does not settle.** Titles, annotation, layout, export, and accessibility past one sentence. For the perceptual color claim, [matplotlib.md](matplotlib.md) is the better citation.
 
-**How this was read.** Both pages were fetched and converted locally from the seaborn v0.13.2 docs. Quotes are verbatim.
+**How this was read.** All three pages were fetched and converted locally from the seaborn v0.13.2 docs. Quotes are verbatim. The distributions tutorial is quoted on [ecdf-plot.md](../chart-types/ecdf-plot.md), not here.
 
 ---
 
@@ -93,4 +93,5 @@ Inventory topics 23, 24, 26, 28, 32, 49, 50, 51, 69, mapped in [roll-call.md](..
 
 - [Choosing color palettes](https://seaborn.pydata.org/tutorial/color_palettes.html)
 - [Statistical estimation and error bars](https://seaborn.pydata.org/tutorial/error_bars.html)
+- [Visualizing distributions of data](https://seaborn.pydata.org/tutorial/distributions.html)
 - Related: [matplotlib.md](matplotlib.md), the perceptual argument in its stronger form

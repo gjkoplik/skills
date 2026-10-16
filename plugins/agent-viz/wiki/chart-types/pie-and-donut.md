@@ -43,7 +43,7 @@ Received wisdom, from Cleveland & McGill onward, says angle. Measured on this ch
 
 > "Error was smaller for the baseline charts, area chart, and the arc chart than the two angle-only charts. This was not what we hypothesized, and contradicts common wisdom that angles are critical to pie and donut chart perception."
 
-Eells (1926) pointed the same way by asking readers: 51% reported reading arc length, 25% area, 23% angle, 1% chord length.
+Eells (1926), as reported by [Skau & Kosara](../studies/skau-kosara-2016.md), pointed the same way by asking readers which method they used "exclusively or predominantly": 51% reported arc length, 25% area, 23% angle, 1% chord length.
 
 Cleveland & McGill, the usual citation for angle, wrote:
 

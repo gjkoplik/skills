@@ -14,7 +14,7 @@ The form is defined for one variable and a cumulative question: what fraction si
 
 > "they both share the limitation that the resulting figure depends to a substantial degree on parameters the user has to choose, such as the bin width for histograms and the bandwidth for density plots. As a result, both have to be considered as an interpretation of the data rather than a direct visualization of the data itself."
 
-He adds: "These types of visualizations require no arbitrary parameter choices, and they show all of the data at once." [seaborn](../sources/seaborn.md)'s distributions tutorial states the same two properties: "Unlike the histogram or KDE, it directly represents each datapoint. That means there is no bin size or smoothing parameter to consider." seaborn alone adds that monotonic curves overlay without occluding, `authority-asserted`: "because the curve is monotonically increasing, it is well-suited for comparing multiple distributions."
+He adds: "These types of visualizations require no arbitrary parameter choices, and they show all of the data at once." [seaborn](../sources/seaborn.md)'s distributions tutorial states the same two properties: "Unlike the histogram or KDE, it directly represents each datapoint. That means there is no bin size or smoothing parameter to consider." seaborn alone adds that monotonic curves suit comparing several distributions on one plot, `authority-asserted`: "because the curve is monotonically increasing, it is well-suited for comparing multiple distributions".
 
 | The question | Alternative |
 |---|---|
@@ -74,7 +74,7 @@ seaborn names the task: "The major downside to the ECDF plot is that it represen
 
 - "There is no bin width or bandwidth in this figure, so no analysis choice of mine is shaping the shape. Two primary sources state that property; neither tested a reader." `authority-asserted`.
 - "The question is what fraction falls below a threshold, and this is the form built for the cumulative reading."
-- "Four groups are overlaid without occlusion because the curves are monotonic. seaborn's documentation, one source, no experiment." `authority-asserted`.
+- "Four groups are overlaid on one plot, which monotonic curves suit. seaborn's documentation, one source, no experiment." `authority-asserted`.
 - "The tail is drawn as a descending log-log ECDF because a power law is a straight line there. Readers misread log-log axes badly in the one study that measured it, on a different chart, so the caption states the finding in words as well."
 
 **Commonly repeated, and the evidence does not support it:**

@@ -45,7 +45,7 @@ Table 3, the inverted-axis condition:
 | Control | 40 | 39 (97.50%) | 1 (2.5%) | 0 |
 | Deceptive | 38 | 7 (18.42%) | 30 (78.95%) | 1 (0.02%) |
 
-Freeman-Halton extension of Fisher's Exact Test, p < 0.0001. The deceptive Uncertain cell is misprinted: 1/38 is 2.63%.
+Freeman-Halton extension of Fisher's Exact Test, p < 0.0001. The deceptive Uncertain cell is reproduced as the paper's own Table 3 prints it, and the paper misprints it: 1/38 is 2.63%, which makes the row sum to 100%.
 
 ## The Discussion misstates Table 3
 

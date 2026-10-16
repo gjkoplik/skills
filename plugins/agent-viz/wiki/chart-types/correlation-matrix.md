@@ -19,7 +19,7 @@ The form is defined for too many same-unit variables to plot every pair. It scre
 | What does the relationship between these two variables look like? | [Scatterplot](scatterplot.md). One coefficient fits radically different pictures |
 | There are four variables | The six scatterplots. A four-by-four grid with six distinct cells is a table with color on it |
 | The exact coefficients are the deliverable | [A table](tables.md), which reads exactly and needs no legend |
-| The relationship might not be monotone | [Scatterplot](scatterplot.md). The twelve Datasaurus datasets, a dinosaur and a star among them, share Pearson's r to two decimals ([matejka-2017-datasaurus.md](../studies/matejka-2017-datasaurus.md)) |
+| The relationship might not be monotone | [Scatterplot](scatterplot.md). The Datasaurus Dozen, Cairo's dinosaur plus twelve datasets generated from it, thirteen in all, share Pearson's r to two decimals ([matejka-2017-datasaurus.md](../studies/matejka-2017-datasaurus.md)) |
 | The cells are counts, rates or measurements | A [heatmap](heatmap.md). The symmetry, diagonal and bounded midpoint below no longer hold |
 | Which variable drives which? | Nothing here. [correlation.md](correlation.md) states the limit, which is on inference, not the chart |
 | Who is connected to whom? | [Network and topology](network-topology.md). An [adjacency matrix](adjacency-matrix.md) is the same layout carrying edges |
@@ -63,7 +63,7 @@ No study in this corpus tests the form, and nothing about it is contested. Two n
 
 **Reporting the darkest cells.** A predicted coefficient and a noticed one look the same, so the extremes get reported. That is multiple comparisons by eye, `authority-asserted` at most and unmeasured. The named defense is stating the count shown, k(k-1)/2, usually more than people expect.
 
-**Treating the cell as the finding.** [Matejka & Fitzmaurice (2017)](../studies/matejka-2017-datasaurus.md) hold means, standard deviations and Pearson's r (-0.06) fixed to two decimals across twelve very different datasets. That shows the statistics fit radically different data, so the data should be plotted. It has no participants, so it does not show that readers are misled. [correlation.md](correlation.md) keeps the two apart. For the empirical claim, [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md) is the citation with data under it.
+**Treating the cell as the finding.** [Matejka & Fitzmaurice (2017)](../studies/matejka-2017-datasaurus.md) hold means, standard deviations and Pearson's r (-0.06) fixed to two decimals across the dinosaur and the very different datasets generated from it, thirteen in all in the released Datasaurus Dozen. That shows the statistics fit radically different data, so the data should be plotted. It has no participants, so it does not show that readers are misled. [correlation.md](correlation.md) keeps the two apart. For the empirical claim, [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md) is the citation with data under it.
 
 **Shipping the default ordering.** Related variables form blocks only when the ordering puts them together, and file order is arbitrary. [adjacency-matrix.md](adjacency-matrix.md) makes the argument in full, including the twin failure of reading alphabetical neighbors as similar. Here the ordering can come from the coefficients themselves, by clustering or seriation.
 

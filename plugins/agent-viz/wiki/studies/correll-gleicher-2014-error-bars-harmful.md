@@ -32,7 +32,7 @@ The fix is a property, not a chart:
 
 **Experiment 1, one-sample judgments** (96 participants, 8 per encoding-by-framing cell). Participants rated the likelihood of a red-dot outcome, at six margin-of-error levels from 2.5 to 15.0.
 
-- Dot position interacted with encoding, F(2,2) = 21.3, p < 0.0001. With bars, dots *below* the mean, inside the bar, were rated significantly more likely than dots above (post-hoc HSD). No symmetric encoding showed this.
+- Dot position interacted with encoding, F(2,2) = 21.3, p < 0.0001. The degrees of freedom are as the preprint prints them and look misprinted: position by four encodings has 3 numerator degrees of freedom, and the experiment's other tests report denominators near 3,360. With bars, dots *below* the mean, inside the bar, were rated significantly more likely than dots above (post-hoc HSD). No symmetric encoding showed this.
 - Adherence to the expected strategy was 83.2% of trials with bars, against 87.4% box, 88.5% gradient and 89.2% violin.
 - Confidence was higher for gradient (M = 5.12) and violin (M = 5.06) than for bars and box plots (both M = 4.86).
 
@@ -52,7 +52,7 @@ Mechanical Turk, North American workers. Encoding and framing (polling, weather 
 
 ## Sample size and population
 
-368 recruited including piloting. The three reported experiments had **240 participants** (102 male, 138 female, mean age 33.3, SD 10.2): 90 with some college, 110 college graduates, 31 with postgraduate degrees.
+368 recruited including piloting. The three reported experiments had **240 participants** (102 male, 138 female, mean age 33.3, SD 10.2): 90 with some college, 110 college graduates, 31 with postgraduate degrees. The paper says "the remainder were high school graduates with no college experience," which is 9 by subtraction.
 
 ## Limits the authors state themselves
 
