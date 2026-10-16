@@ -10,7 +10,7 @@ A scatterplot with a third quantitative variable encoded on the area of each poi
 
 ## When to reach for it, and when not
 
-The form is defined for a [scatterplot](scatterplot.md) whose marks carry a third quantity that only needs to be read roughly, because area is the least accurately read of the measured channels. Population behind a per-capita scatter is the archetype, telling the reader which points to take seriously without ever being read as a number.
+The form is defined for a [scatterplot](scatterplot.md) whose marks carry a third quantity that only needs to be read roughly, because area is the least accurately read of the channels [Heer & Bostock](../studies/heer-bostock-2010.md) tested. Cleveland & McGill's ordering does put volume, curvature and shading below it ([channels.md](../concepts/channels.md)). Population behind a per-capita scatter is the archetype, telling the reader which points to take seriously without ever being read as a number.
 
 | The question | Alternative |
 |---|---|
@@ -31,31 +31,23 @@ The form is defined for a [scatterplot](scatterplot.md) whose marks carry a thir
 | Coordinates | Cartesian |
 | Guides | Two axes, plus a size legend showing at least two reference bubbles with their values |
 
-The transform and scale rows are arithmetic, not evidence. Mapped to radius, a doubled value gets four times the ink. And this is the one place in its group where zero is not optional, since proportionality means nothing unless zero area is zero.
+The transform and scale rows are arithmetic, not evidence. Mapped to radius, a doubled value gets four times the ink. This is the one place in its group where zero is not optional, since proportionality means nothing unless zero area is zero. The form's offer is structural: three variables on one mark, without faceting or a second panel.
 
 ## Channels
 
-x and y are position along a common scale, and the third variable is circular area. [Heer & Bostock (2010)](../studies/heer-bostock-2010.md) found area worse than angle, both significantly worse than position, and circular and rectangular area comparably accurate ([channels.md](../concepts/channels.md)). Their area stimulus was drawn as a bubble chart, which shortens the usual step from chart to channel. The task was still proportional judgment on a stripped stimulus, so the result is inherited, not native.
+x and y are position along a common scale, and the third variable is circular area. [Heer & Bostock (2010)](../studies/heer-bostock-2010.md) found area worse than angle, both significantly worse than position, and circular and rectangular area comparably accurate ([channels.md](../concepts/channels.md)). Area was the least accurate channel in their set, so the size variable is context, not content. Their area stimulus was drawn as a bubble chart, which shortens the usual step from chart to channel. The task was still proportional judgment on a stripped stimulus, so the result is inherited, not native. `evidence-backed` for the channel.
 
-## What it is measurably good at
+## What is measured
 
-Nothing measured belongs to the bubble form. Its offer is structural: three variables on one mark, without faceting or a second panel.
+Nothing measured shows the form doing something well.
 
-## What it is measurably bad at
-
-**Value extraction on the size variable.** Area is the least accurate channel [Heer & Bostock](../studies/heer-bostock-2010.md) tested, below angle and well below position. So the size variable is context, not content.
-
-**Exaggerated area.** [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) ran a bubble-chart condition, area-as-quantity, in a between-subjects Mechanical Turk experiment. Mean response on a five-point "how much bigger" scale went from 1.71 in the control to 2.71 when distorted, a 58.5% increase (Mann-Whitney U = 1121, Z = 3.08, p = 0.0007, r = 0.34).
+Exaggerated area is `evidence-backed`. [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) ran a bubble-chart condition, area-as-quantity, in a between-subjects Mechanical Turk experiment. Mean response on a five-point "how much bigger" scale went from 1.71 in the control to 2.71 when distorted, a 58.5% increase (Mann-Whitney U = 1121, Z = 3.08, p = 0.0007, r = 0.34).
 
 - The true values were printed on every chart, so the effect is not a failure to read numbers, and it counts *against* labeling as the remedy.
 - Bubble/area produced the smallest of the three exaggeration effects, but chart type and distortion are confounded one-to-one, never varied independently. "Bubbles distort less than truncated bars" is not in this result.
 - One scenario, one trial per participant, 40 control and 40 deceptive after exclusions, measuring a shift on a rating scale.
 
-## What is contested
-
-No study here disagrees with another about bubble charts, which is `absence of evidence`, not agreement.
-
-Open, and it decides the design: whether readers judge these marks by area or partly by diameter. [Heer & Bostock](../studies/heer-bostock-2010.md) offer a side-length proxy as a hypothesis for their rectangle result and say "additional experimentation is needed to form an accurate perceptual model." Nobody has decomposed bubbles that way. Area scaling is the default because it makes the encoding proportional, not because readers are shown to use area.
+No study here disagrees with another about bubble charts. Whether readers judge these marks by area or partly by diameter is open, and it decides the design. [Heer & Bostock](../studies/heer-bostock-2010.md) offer a side-length proxy as a hypothesis for their rectangle result and say "additional experimentation is needed to form an accurate perceptual model." Nobody has decomposed bubbles that way. `absence of evidence`. Area scaling is the default because it makes the encoding proportional, not because readers are shown to use area.
 
 ## The failure mode it invites
 

@@ -8,7 +8,7 @@ aliases: [Grid plot, Square pie, Unit chart, Waffle chart]
 
 A grid of identical cells, one per unit of the total, with each part given a whole number of cells, so the reading is a count rather than a judgment of size.
 
-It is also called a unit chart, a grid plot or a square pie. The isotype and pictogram, with a labeled icon for the square, are treated as neighbors without pages of their own: the icon carries a pictorial reference, and the one nearby measured result is about pictographs, not counting. The FT splits the family the same way, Gridplot under Part-to-whole and Isotype (pictogram) under Magnitude ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). [Schwabish](../sources/schwabish.md) files all three as one entry, "Unit/Isotype/Waffle", under Comparing Categories, verified from the contents pages with the prose unopened. This index uses part-to-whole because a fixed grid of 100 cells asserts a whole. The reader's question decides the reading ([README.md](README.md)).
+It is also called a unit chart, a grid plot or a square pie. The isotype and pictogram, with a labeled icon for the square, are treated as neighbors without pages of their own: the icon carries a pictorial reference, and the one nearby measured result is about pictographs, not counting. The FT splits the family the same way, Gridplot under Part-to-whole and Isotype (pictogram) under Magnitude ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). [Schwabish](../sources/schwabish.md) files all three as one entry, "Unit/Isotype/Waffle", under Comparing Categories, verified from the contents pages with the prose unopened. This wiki indexes the form under part-to-whole because a fixed grid of 100 cells asserts a whole. The reader's question decides the reading ([README.md](README.md)).
 
 ## When to reach for it, and when not
 
@@ -33,7 +33,7 @@ The form is defined for a total that is a real count, a grid small enough to tal
 | Coordinates | Cartesian grid, filled in a stated order from one corner |
 | Guides | What one cell is worth, plus a legend or direct labels. No axis exists |
 
-The transform quantizes, unlike any other form in the group, and most failures start there. The fill order decides whether a part's cells form one block or scatter.
+The transform quantizes, unlike any other form in the group, and most failures start there. A 100-cell grid cannot express anything finer than one percent. The fill order decides whether a part's cells form one block or scatter.
 
 ## Channels
 
@@ -45,19 +45,11 @@ No study in this corpus measures a tally, so "a waffle is read more accurately t
 
 Hue carries identity, which neither Cleveland & McGill table scores ([channels.md](../concepts/channels.md)). A part's contiguous block also has an area, and whether readers count cells or estimate the block is `absence of evidence`.
 
-## What it is measurably good at
+## What is measured
 
-No study in this corpus tests the form.
+No study in this corpus tests the form. The nearest result is Haroz, Kosara & Franconeri (2015) on ISOTYPE visualization, `primary-read` here with no page of its own ([robert-kosara.md](../people/robert-kosara.md)): "superfluous images can distract. But we find no user costs, and some intriguing benefits, when pictographs are used to represent the data." It is about embellishment on the icon neighbor, not about counting, so it does not transfer.
 
-The nearest result is Haroz, Kosara & Franconeri (2015) on ISOTYPE visualization, `primary-read` here with no page of its own ([robert-kosara.md](../people/robert-kosara.md)): "superfluous images can distract. But we find no user costs, and some intriguing benefits, when pictographs are used to represent the data." That is about embellishment on the icon neighbor, not counting.
-
-## What it is measurably bad at
-
-Nothing measured. A 100-cell grid cannot express anything finer than one percent, which is arithmetic.
-
-## What is contested
-
-Nothing contested in this corpus. Stephen Few's "Unit Charts Are For Kids", the one reachable case against the form, is among his unread newsletter articles ([stephen-few.md](../people/stephen-few.md)).
+Nothing is contested in this corpus. Stephen Few's "Unit Charts Are For Kids", the one reachable case against the form, is among his unread newsletter articles ([stephen-few.md](../people/stephen-few.md)).
 
 ## The failure mode it invites
 
@@ -80,12 +72,12 @@ A partial glyph is not a countable unit, so the chart becomes an area estimate. 
 **Defensible, with the label said out loud:**
 
 - "A waffle because the reader should be able to count the units rather than judge a size. That is what the form is for, and no study here measures whether they do."
-- "One square is one percentage point and every part is a whole number of squares, so nothing is rounded into the picture."
-- "Five parts is about the limit before the grid reads as texture. Convention, with no measured threshold behind it."
+- "One square is one percentage point, and these shares are already whole percentages, so every part is a whole number of squares and nothing was rounded to draw it." Definitional, and true only for shares that need no rounding. Otherwise the transform rounds them and the sentence is false.
+- "Five parts is about the limit before the grid reads as texture. Convention, with no measured threshold behind it." `authority-asserted`.
 
 **Commonly repeated, and the evidence does not support it:**
 
-- ~~"A waffle is more accurate than a pie, because counting beats estimating an area."~~ Counting is unmeasured. Bars beating pies for value extraction is measured ([pie-and-donut.md](pie-and-donut.md)); nothing analogous exists here.
+- ~~"A waffle is more accurate than a pie, because counting beats estimating an area."~~ Counting is unmeasured. Bars beating pies for value extraction is measured ([pie-and-donut.md](pie-and-donut.md)), and nothing analogous exists here.
 - ~~"Icons are worse than plain squares, because the pictures are chartjunk."~~ The one nearby study found no user cost for pictographs used as data marks.
 
 ## See also

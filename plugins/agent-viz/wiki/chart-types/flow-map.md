@@ -8,6 +8,8 @@ aliases: [Flow map, Origin-destination map]
 
 Movement drawn on a map: a line, arc or tapering band from origin to destination, with width encoding the volume that moved and both endpoints pinned to real geography.
 
+The FT files Flow map under Spatial and [Schwabish](../sources/schwabish.md) under Geospatial. The two catalogs agree. Only this wiki's [flow.md](flow.md) also treats it as a flow form, since the message is a volume moving between places, so the page carries both relationships. That is a filing disagreement, not a claim about the chart.
+
 ## When to reach for it, and when not
 
 The form applies where a quantity moves between places and where those places sit is part of the message. The FT's test ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)) is "For showing unambiguous movement across a map": the data records a direction and a volume, not a co-occurrence.
@@ -40,19 +42,13 @@ Every other form in [flow.md](flow.md) carries an ordering the designer sets and
 
 ## Channels
 
-Volume is width, a floating length with no baseline or axis. Endpoints are position on a projected plane, not position along a common scale as [channels.md](../concepts/channels.md) measures it. Path length and ink area come uninvited. The mark-to-channel step is conjecture in the source literature, and nobody has decomposed the form as [Skau & Kosara](../studies/skau-kosara-2016.md) did a pie. The projection distorts area and the apparent length of every flow ([spatial.md](spatial.md)).
+Volume is width, a floating length with no baseline or axis. A flow line under a couple of pixels is present and unreadable, so a hundred origin-destination pairs read as the three or four widest arcs plus texture. Aggregating the tail is the "other" move in [part-to-whole.md](part-to-whole.md), with no measured threshold.
 
-## What it is measurably good at
+Endpoints are position on a projected plane, not position along a common scale as [channels.md](../concepts/channels.md) measures it. Path length and ink area come uninvited. The mark-to-channel step is conjecture in the source literature, and nobody has decomposed the form as [Skau & Kosara](../studies/skau-kosara-2016.md) did a pie. The projection distorts area and the apparent length of every flow ([spatial.md](spatial.md)).
 
-No study in this corpus tests the form. [Gutwin, Mairena & Bandi (2023)](../studies/gutwin-2023-chord-vs-sankey.md) found a linear flow layout faster, marginally more accurate and strongly preferred over a radial one, for a familiar left-to-right frame. That manipulated layout, which a flow map does not have. [Ghoniem et al. (2004)](../studies/ghoniem-2004.md) and [Okoe et al. (2018)](../studies/okoe-2018.md) tested node-link diagrams with the free layout this form removes.
+## What is measured
 
-## What it is measurably bad at
-
-Nothing measured. Beyond the two structural costs, a flow line under a couple of pixels is present and unreadable, so a hundred origin-destination pairs read as the three or four widest arcs plus texture. Aggregating the tail is the "other" move in [part-to-whole.md](part-to-whole.md), with no measured threshold.
-
-## What is contested
-
-Nothing empirical. The filing is contested: the FT files Flow map under Spatial and [Schwabish](../sources/schwabish.md) under Geospatial. Only this wiki's [flow.md](flow.md) treats it as a flow form, since the message is a volume moving between places. The page carries both relationships. That is a retrieval disagreement, not a claim about the chart.
+No study in this corpus tests the form, and nothing empirical is contested. [Gutwin, Mairena & Bandi (2023)](../studies/gutwin-2023-chord-vs-sankey.md) found a linear flow layout faster, marginally more accurate and strongly preferred over a radial one, for a familiar left-to-right frame. The study manipulated layout, which a flow map does not have. [Ghoniem et al. (2004)](../studies/ghoniem-2004.md) and [Okoe et al. (2018)](../studies/okoe-2018.md) tested node-link diagrams with the free layout this form removes.
 
 ## The failure mode it invites
 
@@ -73,7 +69,7 @@ Nothing native. Two sentences inherit:
 
 - "A map rather than a Sankey, because where these places are is part of the message, and fixing the endpoints to geography is what buys me an arrangement I did not choose." Structural, and untested.
 - "For showing unambiguous movement across a map." The FT's gloss, `authority-asserted` as published.
-- "Flows under a hundred units are aggregated into one band, because below about two pixels a line is there and unreadable." Practitioner convention, no measured threshold.
+- "Flows under a hundred units are aggregated into one band, because below about two pixels a line is there and unreadable." Practitioner convention with no measured threshold. `authority-asserted`.
 
 **Commonly repeated, and the evidence does not support it:**
 

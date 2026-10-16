@@ -8,7 +8,7 @@ aliases: [Joyplot, Ridgeline plot]
 
 One kernel density estimate per group, each a filled curve on its own baseline, with the baselines stacked closer together than the curves are tall, so the fills overlap while every group shares one value axis.
 
-"Joyplot", the older name, traces to the Joy Division album cover and is vouched by no source here. [Wilke](../sources/wilke-fundamentals.md) files "ridgeline plot" under distributions and adds a time reading, "Ridgeline plots tend to work particularly well if want to show trends in distributions over time." Schwabish's *Better Data Visualizations* lists Ridgeline in its Distribution chapter, p. 179ff ([schwabish.md](../sources/schwabish.md); contents pages only, his argument unread). The definition above is this page's own.
+"Joyplot", the older name, traces to the Joy Division album cover and is vouched by no source here. [Wilke](../sources/wilke-fundamentals.md) files "ridgeline plot" under distributions and adds a time reading, "Ridgeline plots tend to work particularly well if want to show trends in distributions over time." [Claus Wilke](../people/claus-wilke.md) wrote `ggridges` and reaches for the form more readily than the business-communication authors here, a fact about his habits rather than readers. `authority-asserted`. Schwabish's *Better Data Visualizations* lists Ridgeline in its Distribution chapter, p. 179ff ([schwabish.md](../sources/schwabish.md); contents pages only, his argument unread). The definition above is this page's own.
 
 ## When to reach for it, and when not
 
@@ -22,7 +22,7 @@ The form is defined for many groups in a known order (months, cohorts, an ordina
 | Five observations per group | The observations, as a [beeswarm](beeswarm-plot.md) or strip plot. A density over five points pictures the bandwidth |
 | How many observations are in each group? | The ridgeline does not say, and per-group normalization hides it |
 | Are these groups different beyond chance? | Not this. The curve is the sample's spread, not an interval ([distribution.md](distribution.md)) |
-| The groups must be compared precisely, not surveyed | Small multiples of the same densities on one shared scale, without overlap. No page here, and no study |
+| The groups must be compared precisely, not surveyed | [Small multiples](small-multiples.md) of the same densities on one shared scale, without overlap. No study |
 | The groups have no order | A [box plot](boxplot.md) or [violin](violin-plot.md) strip. Stacking implies a sequence |
 
 ## Structural decomposition
@@ -38,33 +38,23 @@ The form is defined for many groups in a known order (months, cohorts, an ordina
 
 It is a [violin](violin-plot.md) cut in half, un-mirrored and shingled. Dropping the mirror halves the ink. Overlapping the slots buys the group count. By definition:
 
-- The overlap is a chosen parameter (baseline spacing against curve height) that appears nowhere in the output.
+- The overlap is a chosen parameter (baseline spacing against curve height) that appears nowhere in the output. With the bandwidth, that makes two invisible parameters where the [histogram](histogram.md) and violin have one.
 - Occlusion is directional. A curve hides the tail of the one behind it, so what shows depends on draw order.
-- Every kernel-estimate hazard on the violin applies. Mass lands where no observation lies, even past a bound such as zero. Bandwidth decides modality. Under equal area per group, a group of eight is as tall as a group of eight hundred.
+- Every kernel-estimate hazard on the violin applies. Mass lands where no observation lies, even past a bound such as zero. Bandwidth decides modality. Under equal area per group, a group of eight is as tall as a group of eight hundred, so peaks compare across groups only under stated count scaling.
 
 ## Channels
 
 Value is position along a common scale shared by every group, the one strong channel here. Density is height above each group's own baseline, so comparing peaks is position along nonaligned scales. Both ranks come from [channels.md](../concepts/channels.md), and the mark-to-channel step is conjecture in the source literature. No study has decomposed a ridgeline into its cues, as [Skau & Kosara (2016)](../studies/skau-kosara-2016.md) did for the pie, or measured reading a partly covered shape. What the occlusion costs is `absence of evidence`.
 
-## What it is measurably good at
+## What is measured
 
-No study in this corpus tests the form. Two nearby results do not transfer. [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) found symmetric, continuous encodings beat bars with error bars on inferential tasks, but a ridgeline is not symmetric and their stimuli encoded a mean and its error. [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md) argue for drawing observations at small n, and a ridgeline draws none.
-
-[Claus Wilke](../people/claus-wilke.md) wrote `ggridges` and reaches for the form more readily than the business-communication authors here, a fact about his habits rather than readers. `authority-asserted`.
-
-## What it is measurably bad at
-
-Nothing measured. The structural exposures: peaks compare across groups only under stated count scaling, every curve is partly hidden, tails included, and bandwidth and overlap are two invisible parameters where the [histogram](histogram.md) and violin have one.
-
-## What is contested
-
-Nothing contested in this corpus. The record is one chapter membership and one author's habit.
+No study in this corpus tests the form, and nothing is contested. Two nearby results do not transfer. [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) found symmetric, continuous encodings beat bars with error bars on inferential tasks, but a ridgeline is not symmetric and their stimuli encoded a mean and its error. [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md) argue for drawing observations at small n, and a ridgeline draws none.
 
 ## The failure mode it invites
 
 **Ordering by a statistic, then reading a trend off the order.** Groups sorted by their own medians march smoothly for any data. Whether readers take that for a finding is untested.
 
-**Tuning the overlap until it looks right.** It is a styling control that decides how much of each distribution shows. [inventory.md](../inventory.md) topic 52 asks for bin width and bandwidth to be an explicit choice, checked against another. `authority-asserted`, and here it applies twice.
+**Tuning the overlap until it looks right.** It is a styling control that decides how much of each distribution shows. [inventory.md](../inventory.md) topic 52 records bin width and bandwidth as analysis choices to be set explicitly rather than left to a default, because a conclusion drawn under one setting may not survive another. `authority-asserted`, and here it applies twice.
 
 **Twenty groups arriving as texture.** Past some unmeasured group count the ridge stops carrying shape. [inventory.md](../inventory.md) topic 60, from Wilke, says the idiom changes at that point. `authority-asserted`.
 

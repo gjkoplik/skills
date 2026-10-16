@@ -10,9 +10,9 @@ Every quote was **re-extracted locally**, not taken from a fetch summary. See [R
 |---|---|---|
 | ["Bank to 45 degrees"](#bank-to-45-degrees) | Scope-limited | 45° is not error-minimizing in general; Cleveland's result holds inside the moderate regime he tested |
 | [Axis-break glyphs fix truncation](#axis-break-glyphs-as-the-truncation-remedy) | Tested, no measurable help | Two static designs failed to reduce the exaggeration. "Placebo" overstates a knife-edge result |
-| [A flat ban on dual axes](#a-flat-ban-on-dual-axes) | Absence of evidence | No experiment tests the twin-axis chart. The paper usually cited studied something else, and the authorities have softened |
+| [A flat ban on dual axes](#a-flat-ban-on-dual-axes) | `absence of evidence` | No experiment tests the twin-axis chart. The paper usually cited studied something else, and the authorities have softened |
 | ["Log scales are fine for experts"](#log-scales-are-fine-for-expert-audiences) | Does not hold | Domain experts read log-log at 56% against 93% for linear |
-| [Chartjunk and data-ink are settled](#chartjunk-and-the-data-ink-ratio-as-settled) | Contested, but not in the usual shape | Decoration *around* the mark is contested; deformation *of* the mark is not |
+| [Chartjunk and data-ink are settled](#chartjunk-and-the-data-ink-ratio-as-settled) | `contested`, but not in the usual shape | Decoration *around* the mark is contested; deformation *of* the mark is not |
 | ["Gray plus one accent" is evidence-backed](#gray-plus-one-accent-as-an-evidence-backed-rule) | No study exists | Asserted by every major practitioner and tested by none. Fine as house style, not as an anchor |
 | [Broad vision-model critique fails, decomposed works](#the-broad-vision-model-critique-fails-decomposed-succeeds-comparison) | Refuted as a comparison | Both numbers are right and non-comparable. The 0.428 *was* decomposed rubric-scoring |
 | [Liu, Wang & Willard on prompt length](#a-source-that-should-not-be-cited-at-all) | Do not cite | Arithmetically impossible rows, and the system under test is never named |
@@ -57,7 +57,7 @@ Detail: [studies/correll-2020-truncating-the-y-axis.md](studies/correll-2020-tru
 
 ## A flat ban on dual axes
 
-**Status: absence of evidence, not evidence of harm.**
+**Status: `absence of evidence`, not evidence of harm.**
 
 The paper usually cited, Isenberg et al. (2011), tested **dual-scale focus-plus-context** charts (two magnifications of one series, not two variables on two scales) and says:
 
@@ -79,7 +79,7 @@ Detail: [studies/menge-2018-log-scales.md](studies/menge-2018-log-scales.md), [s
 
 ## Chartjunk and the data-ink ratio as settled
 
-**Status: contested, but not in the shape it is usually described.**
+**Status: `contested`, but not in the shape it is usually described.**
 
 Bateman et al. (2010) put imagery around a correctly drawn bar and found accuracy "no worse than for plain charts". Skau et al. (2015) deformed the bars and found error rises. Skau's mechanism reconciles the two. Gillan & Richman's Experiment 1 supports Tufte in aggregate ("the higher the data-ink ratio, the faster the response time and the greater the accuracy"), and their element-level experiments do not. Bateman's long-term recall result does not replicate cleanly: Syeda et al. (2023) found no significant differences on any of the four long-term questions in the asynchronous study. Stock and Behrens (1991) found Tufte's box-less *midgap* plot "substantially less accurate than the original."
 

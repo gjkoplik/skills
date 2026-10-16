@@ -31,44 +31,37 @@ The form is defined for two quantities tracked together over time, where the joi
 | Coordinates | Cartesian |
 | Guides | Two axes, plus arrows or labeled time points for direction |
 
-Only the guides differ from a [scatterplot](scatterplot.md). Without a direction mark, time is unreadable, which is `definitional`.
+Only the guides differ from a [scatterplot](scatterplot.md). Without a direction mark, time is unreadable.
 
 ## Channels
 
 Both axes are position along a common scale ([channels.md](../concepts/channels.md)). Segments carry direction, which [Cleveland & McGill](../studies/cleveland-mcgill-1984.md) tie with length and angle: "there is not enough information to separate the ties." Time is on path order, which no ranking includes.
 
-## What it is measurably good at
+## What is measured
 
-Nothing measured here. Haroz, Kosara & Franconeri (2016), "The Connected Scatterplot for Presenting Paired Time Series," tests the form but is only recorded as `primary-read` on [Robert Kosara's page](../people/robert-kosara.md).
-
-## What it is measurably bad at
-
-Nothing measured.
-
-## What is contested
-
-Nothing contested. The record is `absence of evidence` ([evidence-class.md](../concepts/evidence-class.md)).
+Haroz, Kosara & Franconeri (2016), "The Connected Scatterplot for Presenting Paired Time Series," tests the form directly. It has no study page, and [Robert Kosara's page](../people/robert-kosara.md) records it as `primary-read` without its results. Those reach this corpus only through [Wilke's summary](../sources/wilke-fundamentals.md), not the paper. Wilke reports that readers confused order and direction more often on a connected scatterplot than on line graphs, and reported correlation less often, while the form drew higher engagement. `evidence-backed` at secondhand ([evidence-class.md](../concepts/evidence-class.md)). Effect sizes, stimuli and sample are not recorded here, and whether the comparison line graphs were dual-axis is not stated.
 
 ## The failure mode it invites
 
 **No direction marks.** A closed scribble with no beginning. `authority-asserted`.
 
-**Loops read as structure.** A path that returns near an earlier point could be a cycle, a reversal or a coincidence.
+**Loops read as structure.** A path that returns near an earlier point could be a cycle, a reversal or a coincidence. `authority-asserted`.
 
 ## Justifying the choice
 
 **Defensible, evidence-backed:**
 
-- Nothing. No study here bears on this form.
+- Nothing read at primary. The one test of the form is known here through Wilke.
 
 **Defensible, with the label said out loud:**
 
 - "I used a connected scatterplot instead of a dual-axis line chart. That substitution is a stated editorial preference at the Urban Institute, not a measured result, and the case against dual axes has no experiment under it either."
 - "Both variables are on positional axes rather than one being on a second y-scale, so the apparent relationship is not a free parameter of how I scaled the second axis. That follows from the construction; that readers *do better* with it is untested."
+- "Two line charts rather than a connected scatterplot, because the reader needs the order of events. A study summarized secondhand reports more confusion of order and direction on this form than on line graphs."
 
 **Not defensible:**
 
-- ~~"Connected scatterplots are easier to read than dual-axis charts."~~ Untested, so neither contested nor refuted.
+- ~~"Connected scatterplots are easier to read than dual-axis charts."~~ No test against dual axes is recorded here, and the one summary on file reports more confusion of order and direction than line graphs, not less.
 - ~~"The path shows that x drove y."~~ Time order is in the data. Causation is not.
 
 ## See also
@@ -76,3 +69,4 @@ Nothing contested. The record is `absence of evidence` ([evidence-class.md](../c
 - [scatterplot.md](scatterplot.md)
 - [correlation.md](correlation.md)
 - [../people/robert-kosara.md](../people/robert-kosara.md)
+- [../sources/wilke-fundamentals.md](../sources/wilke-fundamentals.md): the secondhand summary of Haroz et al.

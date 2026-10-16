@@ -102,7 +102,7 @@ That is the by-mark form of [../inventory.md](../inventory.md) topic 9, with Obs
 
 > Research reports that readers are more likely to confuse order and direction in a connected scatter plot than in line graphs and less likely to report correlation (Haroz, Kosara, and Franconeri 2016). On the flip side, connected scatter plots seem to result in higher engagement, and thus such plots may be a effective tools to draw readers into a story (Haroz, Kosara, and Franconeri 2016).
 
-The typo is in the free manuscript. Haroz et al. 2016 decomposes a chart type directly and has no study page here.
+The typo is in the free manuscript. Haroz et al. 2016 decomposes a chart type directly and has no study page here, so its findings reach this wiki only through this summary.
 
 **Choropleths.** [../chart-types/choropleth-map.md](../chart-types/choropleth-map.md) names classification as an open gap. Wilke gives no method, but a bin count and a condition on the quantity:
 

@@ -93,6 +93,7 @@ Using composition to answer a comparison question. These forms make every part l
 - [sunburst-chart.md](sunburst-chart.md)
 - [waffle-chart.md](waffle-chart.md), also magnitude when the question is how many
 - [stacked-area-chart.md](stacked-area-chart.md), indexed primarily under [change-over-time.md](change-over-time.md)
+- [small-multiples.md](small-multiples.md): composition compared across groups, one panel each
 
 Venn and Euler diagrams and Voronoi treemaps have no page and no study here. The FT files Venn under this relationship and glosses it "Generally only used for schematic representation" ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)).
 

@@ -4,7 +4,7 @@ type: concept
 
 # Evidence class
 
-**What it is.** Labeling each rule in a quality bar by its warrant: **evidence-backed** (a study, an experiment, a published standard) or **authority-asserted** (a design book or style guide asserts it). Both are usable. Conflating them is the characteristic failure of visualization advice.
+**What it is.** Labeling each rule in a quality bar by its warrant: `evidence-backed` (a study, an experiment, a published standard) or `authority-asserted` (a design book or style guide asserts it). Both are usable. Conflating them is the characteristic failure of visualization advice.
 
 **Status.** Synthesis of a practice ordinary in other fields, applied here rule by rule to a visualization bar.
 
@@ -26,10 +26,10 @@ Roughly a third of the received wisdom this project checked did not survive cont
 
 ## The labels
 
-- **Evidence-backed.** A study, experiment or published standard, with the source and number cited. WCAG's contrast ratios are the cleanest case. Stated flatly: "Truncation inflates perceived effect size."
-- **Authority-asserted.** A practitioner or design book asserts it without an experiment. A usable default, with the status visible: "Default to gray plus one accent. This is convention, not a measured result."
-- **Contested.** The record disagrees with itself, as the chartjunk literature does, and a bar that picks a side misrepresents the field. Stated as the rule, the contest, and what survives: "Strip decoration, keep orientation" survives the data-ink argument once removing axis lines is known to hurt.
-- **Absence of evidence.** Nobody has tested it, which is neither refutation nor contest. The dual-axis ban sits here. Stated as the caution and its reason: "The correlation a reader sees is a free parameter of your scaling choice" can be acted on, and "never use dual axes" cannot.
+- `evidence-backed`. A study, experiment or published standard, with the source and number cited. WCAG's contrast ratios are the cleanest case. Stated flatly: "Truncation inflates perceived effect size."
+- `authority-asserted`. A practitioner or design book asserts it without an experiment. A usable default, with the status visible: "Default to gray plus one accent. This is convention, not a measured result."
+- `contested`. The record disagrees with itself, as the chartjunk literature does, and a bar that picks a side misrepresents the field. Stated as the rule, the contest, and what survives: "Strip decoration, keep orientation" survives the data-ink argument once removing axis lines is known to hurt.
+- `absence of evidence`. Nobody has tested it, which is neither refutation nor contest. The dual-axis ban sits here. Stated as the caution and its reason: "The correlation a reader sees is a free parameter of your scaling choice" can be acted on, and "never use dual axes" cannot.
 
 ## What is exempt, and why the exemption matters
 

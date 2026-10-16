@@ -1,6 +1,6 @@
 ---
 type: chart-type
-relationships: [distribution]
+relationships: [distribution, uncertainty]
 aliases: [Violin plot]
 ---
 
@@ -36,28 +36,24 @@ Three consequences are definitional. The estimate puts density where no observat
 
 ## Channels
 
-Value is position along a common scale and density is width, an area reading once filled, both inherited from [channels.md](../concepts/channels.md). No study has decomposed a violin into cues, and [Skau & Kosara (2016)](../studies/skau-kosara-2016.md) found the received account wrong for the pie. Mirroring doubles the ink but creates the symmetry Correll & Gleicher's result turns on. Whether readers use both halves is untested.
+Value is position along a common scale and density is width, an area reading once filled, both inherited from [channels.md](../concepts/channels.md). No study has decomposed a violin into cues, and [Skau & Kosara (2016)](../studies/skau-kosara-2016.md) found the received account wrong for the pie. Mirroring doubles the ink but creates the symmetry Correll & Gleicher's result turns on. Whether readers use both halves is untested. `absence of evidence`.
 
-## What it is measurably good at
+## What is measured
 
-Inferential judgments about a mean and its error, against a bar with error bars. Correll & Gleicher, 240 participants, three crowdsourced experiments:
+Inferential judgments about a mean and its error, against a bar with error bars, are measured. Correll & Gleicher ran 240 participants through three crowdsourced experiments. `evidence-backed`.
 
 - The bar's "false metaphor of containment" made outcomes inside the bar look likelier than outcomes the same distance above the mean, a significant interaction at F(2,2) = 21.3, p < 0.0001. Not significant for the violin.
 - Adherence to the expected strategy was highest with the violin, 89.2% of trials, against 83.2% for bars.
-- Confidence was higher with the two encodings carrying distribution detail (violin M = 5.06, gradient M = 5.12) than with bars and box plots (both M = 4.86).
-- Mechanical Turk workers did better with the unfamiliar mark than with the standard one.
+- Mean confidence was 5.06 with the violin and 5.12 with the gradient, against 4.86 for both bars and box plots. No pairwise test of the violin against the box plot or the bar is reported.
+- Mechanical Turk workers showed no within-the-bar bias with the unfamiliar mark, and the authors report that unfamiliarity cost a general audience nothing.
 
 The violins encoded a mean and error, not a raw sample, on low-stakes tasks. The authors: "One area not well-covered by our experimental tasks was decision-making." And: "the practical effect of these differences is difficult to determine."
 
-## What it is measurably bad at
-
 No study in this corpus tests a violin against a box plot, a histogram or the plotted observations, on any task.
 
-## What is contested
+Which symmetric encoding to use is `contested`. Correll & Gleicher decline to rank their two: "Our data do not support the use of one over the other for decisions tasks, however paper authors, reviewers, and colleagues have stated differing preferences between the two on aesthetic and theoretical grounds."
 
-Which symmetric encoding to use. Correll & Gleicher decline to rank their two: "Our data do not support the use of one over the other for decisions tasks, however paper authors, reviewers, and colleagues have stated differing preferences between the two on aesthetic and theoretical grounds."
-
-The rest is `absence of evidence` ([evidence-class.md](../concepts/evidence-class.md)): bimodality detection against a histogram, the value of the mirrored half, and how bandwidth moves a conclusion. Bandwidth as an undetermined analysis choice comes from [wilke-fundamentals.md](../sources/wilke-fundamentals.md) chapter 14 and [inventory.md](../inventory.md) topic 52, both `authority-asserted`.
+Bimodality detection against a histogram, the value of the mirrored half, and how bandwidth moves a conclusion are all untested. `absence of evidence` ([evidence-class.md](../concepts/evidence-class.md)). Bandwidth as an undetermined analysis choice comes from [wilke-fundamentals.md](../sources/wilke-fundamentals.md) chapter 14 and [inventory.md](../inventory.md) topic 52, both `authority-asserted`.
 
 ## The failure mode it invites
 
@@ -73,20 +69,20 @@ The rest is `absence of evidence` ([evidence-class.md](../concepts/evidence-clas
 
 **Defensible, evidence-backed:**
 
-- "I encoded the mean and its error as a violin rather than a bar with error bars. The bar made outcomes inside it look likelier than equidistant outcomes above it, measured, and the violin did not show that bias; adherence to the expected strategy was also higher."
-- "The audience is not technical, and unfamiliarity is not a reason to keep the bar. A general crowdsourced audience did better with the unfamiliar symmetric encoding than with the familiar one."
+- "I encoded the mean and its error as a violin rather than a bar with error bars. The bar made outcomes inside it look likelier than equidistant outcomes above it, and the violin did not show that bias; adherence to the expected strategy was also higher." `evidence-backed`.
+- "The audience is not technical, and unfamiliarity is not a reason to keep the bar. A general crowdsourced audience showed no containment bias with the unfamiliar symmetric encoding, and the authors report that unfamiliarity cost them nothing."
 
 **Defensible, with the label said out loud:**
 
 - "Violin rather than gradient plot. The study that recommends both explicitly declines to rank them, so this is preference, not evidence."
-- "Bandwidth is stated and the second mode survives a wider and a narrower choice. There is no measured rule for bandwidth."
-- "Violin rather than box plot because the second mode is the finding. Nobody has measured whether readers actually pick modality off a violin more reliably; the box plot's inability to express it, on the other hand, is definitional."
+- "Bandwidth is stated and the second mode survives a wider and a narrower choice. There is no measured rule for bandwidth." `authority-asserted`.
+- "Violin rather than box plot because the second mode is the finding. Nobody has measured whether readers actually pick modality off a violin more reliably; the box plot's inability to express it, on the other hand, is definitional." `absence of evidence`.
 - "Widths are comparable across groups because the areas are scaled by count rather than normalized per group."
 
-**Commonly repeated, and not supported:**
+**Commonly repeated, and the evidence does not support it:**
 
 - ~~"A violin shows the data."~~ It shows a smoothed estimate, and at small n it shows the bandwidth.
-- ~~"Violin plots are more accurate than box plots."~~ The one study with both compared each against bars, using a modified uncertainty box plot, not Tukey's. They differed on confidence. Nobody has ranked them on accuracy.
+- ~~"Violin plots are more accurate than box plots."~~ The one study with both compared each against bars, using a modified uncertainty box plot, not Tukey's. Their mean confidence ratings were 5.06 and 4.86, with no pairwise test reported. Nobody has ranked them on accuracy.
 - ~~"The violin is the modern replacement for the box plot."~~ Never compared. The evidence covers a symmetric continuous encoding against a bar with error bars.
 - ~~"Symmetry is decoration."~~ The paper states it as the design requirement its result turns on.
 

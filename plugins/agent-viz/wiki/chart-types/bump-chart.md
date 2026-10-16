@@ -40,23 +40,15 @@ Rank sits on position along a common scale ([channels.md](../concepts/channels.m
 
 Movement is on direction and slope. Cleveland & McGill could not separate slope from angle, in an ordering they called a tentative working hypothesis ([channels.md](../concepts/channels.md)). Slope here is places per period, not units per period as on a [line chart](line-chart.md).
 
-## What it is measurably good at
+## What is measured
 
-No study in this corpus tests the form, and unlike a [line chart](line-chart.md) it cannot borrow the position result, since its axis holds ranks.
-
-## What it is measurably bad at
-
-Nothing measured. Whether readers take a crossing for a large change is untested. `absence of evidence`.
-
-Lines tangle at many items, with no measured threshold. Schwabish's guideline is "Avoid the Spaghetti Chart" ([schwabish.md](../sources/schwabish.md)). `authority-asserted`.
-
-## What is contested
-
-Nothing contested in this corpus.
+No study in this corpus tests the form. Unlike a [line chart](line-chart.md), it cannot borrow the position result, since its axis holds ranks. Whether readers take a crossing for a large change is untested. `absence of evidence`.
 
 ## The failure mode it invites
 
 **Presenting a reordering as a change.** The recorded remedy puts the amount back within reach: end labels, a companion panel of values, or a caption saying how close the ranks were. `authority-asserted`.
+
+**Too many items.** Lines tangle, with no measured threshold. Schwabish's guideline is "Avoid the Spaghetti Chart" ([schwabish.md](../sources/schwabish.md)). `authority-asserted`.
 
 **Letting the item set do the work.** Adding or dropping one item moves every rank below it, so charts built from different sets are not comparable ([ranking.md](ranking.md)).
 

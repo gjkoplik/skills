@@ -29,39 +29,29 @@ The form is defined for dense graphs, static displays, and questions about group
 | Coordinates | Cartesian, discrete on both axes |
 | Guides | Two node axes, a legend if weighted |
 
-The ordering plays the role of a [node-link](node-link.md) layout. A structural ordering (community, clustering, seriation) shows blocks. Alphabetical or insertion order looks like static.
+The ordering plays the role of a [node-link](node-link.md) layout. A structural ordering (community, clustering, seriation) shows blocks. Alphabetical or insertion order looks like static. The matrix is quadratic in node count regardless of edge count, so its space cost on a sparse graph follows from the form and is unmeasured.
 
 ## Channels
 
 Position on two discrete scales identifies nodes. Lightness for weight ranks near the bottom ([channels.md](../concepts/channels.md)), and presence is not a magnitude.
 
-## What it is measurably good at
+## What is measured
 
-**Dense and large graphs.** [Ghoniem et al. (2004)](../studies/ghoniem-2004.md): "when graphs are bigger than twenty vertices, the matrix-based visualization outperforms node-link diagrams on most tasks," at densities 0.2 to 0.6.
+Matrices are measured as better on dense and large graphs, `evidence-backed`. [Ghoniem et al. (2004)](../studies/ghoniem-2004.md): "when graphs are bigger than twenty vertices, the matrix-based visualization outperforms node-link diagrams on most tasks," at densities 0.2 to 0.6. Edges land in distinct cells, so a matrix at density 0.6 stays legible where node-link does not.
 
-**Groups and clusters, even on sparse real networks.** [Okoe et al. (2018)](../studies/okoe-2018.md): "AM outperforms NL for group tasks," in 2 of 4 tested.
+Node and link finding at scale is better on a matrix, tied to orderability, `evidence-backed`. Ghoniem et al.'s hypothesis "was related to the significant impact of orderability of matrices on node and link finding tasks. 'findNode' and 'findLink' tasks validate this hypothesis for large graphs and for dense graphs."
 
-**Node and link finding at scale**, tied to orderability: the hypothesis "was related to the significant impact of orderability of matrices on node and link finding tasks. 'findNode' and 'findLink' tasks validate this hypothesis for large graphs and for dense graphs."
+Groups and clusters favor the matrix even on sparse real networks, `evidence-backed`. [Okoe et al. (2018)](../studies/okoe-2018.md): "AM outperforms NL for group tasks," in 2 of 4 tested.
 
-**Density.** Edges land in distinct cells, so a matrix at density 0.6 stays legible where node-link does not.
+Matrices are measured as worse at path finding, `evidence-backed`. They lost in every 2004 condition, since a path means jumping cell to row to cell. The authors call paths hard on both forms, but this result held everywhere. They also lost on topology and connectivity on sparse networks with interaction (Okoe et al. 2018).
 
-## What it is measurably bad at
-
-**Path finding.** It lost in every 2004 condition, since a path means jumping cell to row to cell. The authors call paths hard on both forms, but this result held everywhere.
-
-**Topology and connectivity** on sparse networks with interaction (Okoe et al. 2018).
-
-**Space.** The matrix is quadratic in node count regardless of edge count. Unmeasured.
-
-## What is contested
-
-The [crossover](network-topology.md#choosing-between-node-link-and-matrix). "Matrices win above twenty nodes" holds for static displays of random graphs at density 0.2 and above, and gets quoted as general.
+The [crossover](network-topology.md#choosing-between-node-link-and-matrix) is `contested`. "Matrices win above twenty nodes" holds for static displays of random graphs at density 0.2 and above, and gets quoted as general. Okoe et al.'s sparse interactive result, above, is the other side.
 
 ## The failure mode it invites
 
-**Shipping the default ordering.** Group tasks depend on the ordering. `authority-asserted`; the measured orderability result covers node and link finding, not group tasks.
+**Shipping the default ordering.** Group tasks depend on the ordering. `authority-asserted`. The measured orderability result covers node and link finding, not group tasks.
 
-**Adjacency read as similarity.** Row neighbors are an artifact of the ordering.
+**Adjacency read as similarity.** Row neighbors are an artifact of the ordering. `authority-asserted`.
 
 ## Justifying the choice
 

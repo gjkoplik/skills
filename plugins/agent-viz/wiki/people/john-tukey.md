@@ -17,7 +17,7 @@ retrieved: 2026-08-23
 
 **What they are good for.** *Am I plotting this to find something out, or to show somebody something?* He is the canon's clearest statement that those are different jobs with different standards, and that an exploratory figure may be ugly, ad hoc and thrown away.
 
-**What they do not settle.** Whether any of his displays are read accurately. He ran no perceptual experiments. The box plot is the most-used statistical graphic invented in the twentieth century, and it entered the world entirely [authority-asserted](../concepts/evidence-class.md).
+**What they do not settle.** Whether any of his displays are read accurately. He ran no perceptual experiments. The box plot is among the most-used statistical graphics of the twentieth century, a claim no source here measures, and it entered the world entirely [authority-asserted](../concepts/evidence-class.md).
 
 ---
 

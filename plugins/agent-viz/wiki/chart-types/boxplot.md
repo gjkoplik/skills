@@ -10,7 +10,7 @@ One variable reduced to five numbers per group: a box spanning the upper and low
 
 ## When to reach for it, and when not
 
-The form is defined for several groups on one axis, each large enough to summarize, where the question is location and spread rather than shape. Unlike a [violin](violin-plot.md), it has no tuning parameter to adjust until the picture agrees with the analyst ([john-tukey.md](../people/john-tukey.md)).
+The form is defined for several groups on one axis, each large enough to summarize, where the question is location and spread rather than shape. Unlike a [violin](violin-plot.md) or a [histogram](histogram.md), it has no bandwidth or bin width to adjust until the picture agrees with the analyst ([john-tukey.md](../people/john-tukey.md)). The whisker rule and the quantile definition are implementation choices, fixed by the tool rather than tuned per dataset.
 
 | The question | Alternative |
 |---|---|
@@ -38,36 +38,25 @@ Unlike a mean and SD, every statistic drawn is an observation or a robust summar
 
 Every statistic is position along a common scale ([channels.md](../concepts/channels.md)), with the step from chart to channel conjecture. The ranking covers value extraction, not comparing medians and spreads ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)).
 
-## What it is measurably good at
+## What is measured
 
-**No containment bias.** [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) found a significant interaction between an outcome's position and the encoding, F(2,2) = 21.3, p < 0.0001: on a bar chart, outcomes below the mean, inside the bar, were rated significantly likelier than outcomes equally far above. Not so for the box plot or the other symmetric encodings. Adherence to the expected strategy was 87.4% of trials with the box plot against 83.2% with bars. Their box plot was an uncertainty encoding, not Tukey's: whiskers at the 95% t-confidence interval, box at 50%, center line at the mean. On confidence it tied bars (M = 4.86), below the two distribution-detail encodings.
+The box plot is measured as free of the containment bias, `evidence-backed`. [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) found a significant interaction between an outcome's position and the encoding, F(2,2) = 21.3, p < 0.0001: on a bar chart, outcomes below the mean, inside the bar, were rated significantly likelier than outcomes equally far above. Not so for the box plot or the other symmetric encodings. Adherence to the expected strategy was 87.4% of trials with the box plot against 83.2% with bars. Their box plot was an uncertainty encoding, not Tukey's: whiskers at the 95% t-confidence interval, box at 50%, center line at the mean. On confidence it tied bars (M = 4.86), below the two distribution-detail encodings.
 
-**The box helps.** Stock & Behrens (1991) found Tufte's box-less *midgap* variant "substantially less accurate than the original." The result is reported through Wickham & Stryjewski's history; Stock & Behrens was not reached ([refutations.md](../refutations.md)).
+The box itself helps, by a reported result. Stock & Behrens (1991) found Tufte's box-less *midgap* variant "substantially less accurate than the original." The result is reported through Wickham & Stryjewski's history; Stock & Behrens was not reached ([refutations.md](../refutations.md)).
 
-## What it is measurably bad at
+Multimodality is invisible to the form by construction. Matejka & Fitzmaurice built six visibly different distributions with the same quartiles, median and 1.5-IQR whiskers, hence one box plot ([matejka-2017-datasaurus.md](../studies/matejka-2017-datasaurus.md)). That is a construction, silent on what readers conclude.
 
-**Multimodality.** Matejka & Fitzmaurice built six visibly different distributions with the same quartiles, median and 1.5-IQR whiskers, hence one box plot ([matejka-2017-datasaurus.md](../studies/matejka-2017-datasaurus.md)). That is a construction, silent on what readers conclude.
+Small samples are where the form is set aside. [Weissgerber et al.](../studies/weissgerber-2015-beyond-bar-line.md) class box plots with bar and line graphs as "only meaningful when there are enough data to summarize," and at their measured sample sizes (median minimum group size 4) recommend univariate scatterplots. Box plots appeared in 5.3% of 703 articles, the rarest of the five figure types counted.
 
-**Small samples.** [Weissgerber et al.](../studies/weissgerber-2015-beyond-bar-line.md) class box plots with bar and line graphs as "only meaningful when there are enough data to summarize," and at their measured sample sizes (median minimum group size 4) recommend univariate scatterplots. Box plots appeared in 5.3% of 703 articles, the rarest of the five figure types counted.
-
-**Group size.** Eight observations and eight hundred draw alike. McGill, Tukey & Larsen's variable-width and notched variants from 1978 patch this and are rarely used. `authority-asserted`.
-
-## What is contested
-
-Whether the box plot fixes the bar chart with error bars:
-
-- **For:** Correll & Gleicher measured the containment bias away.
-- **Against:** Weissgerber et al. decline, since at their sample sizes no summary form is defensible.
-
-Both turn on sample size. At four observations per group, the option left is drawing the four.
+Whether the box plot fixes the bar chart with error bars is `contested`. Correll & Gleicher measured the containment bias away. Weissgerber et al. decline, since at their sample sizes no summary form is defensible. Both turn on sample size. At four observations per group, the option left is drawing the four.
 
 ## The failure mode it invites
 
-**A box over too few points, with n unstated.** The mark looks the same at n = 4 and n = 4,000, and only the caption can say which.
+**A box over too few points, with n unstated.** The mark looks the same at n = 4 and n = 4,000, and only the caption can say which. McGill, Tukey & Larsen's variable-width and notched variants from 1978 patch this and are rarely used. `authority-asserted`.
 
 **Reading the box as inferential.** Non-overlapping boxes are not a significance test. [Belia et al. (2005)](../studies/belia-2005-ci-misconceptions.md) found 31.5% of the 314 published authors who answered the CI and SE tasks applying the just-touching heuristic to error bars, wrong for both bar types, a transfer to boxes rather than a measurement.
 
-**Treating the drawing as settled.** The most-used statistical graphic invented in the twentieth century is `authority-asserted`. Its author ran no perceptual experiments, and the form predates him ([john-tukey.md](../people/john-tukey.md)).
+**Treating the drawing as settled.** The form is `authority-asserted`. Its author ran no perceptual experiments, and the form predates him ([john-tukey.md](../people/john-tukey.md)).
 
 ## Justifying the choice
 

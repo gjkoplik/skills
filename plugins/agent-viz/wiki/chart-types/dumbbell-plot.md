@@ -45,19 +45,11 @@ Whether readers misjudge the gaps on this form is unmeasured. The floating-lengt
 
 Rows picked out by color use hue for identity, a job hue does well and no accuracy ordering scores.
 
-## What it is measurably good at
+The zero baseline is `authority-asserted` on both sides. Datawrapper releases it for dot and range plots and lists plotting the differences as one of three replacements for a truncated axis, a row [slope-chart.md](slope-chart.md) also carries. The FT scopes the rule by mark. The Urban Institute releases marks that "do not use length or height as the primary encoding" ([urban-institute.md](../sources/urban-institute.md)). [Vega-Lite](../sources/vega-lite.md) forces zero on every quantitative positional scale regardless of mark. With no stem back to the axis, the lollipop's bar-like exposure is absent. The segment's ink is still proportional to the gap, so proportional ink applies from a nonzero origin.
 
-No study in this corpus tests the form. Two nearby results do not transfer. [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) note in an aside that "comparing ratios can be done quickly and more accurately with bar charts as compared to dot plots", a different task on a different form. [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) measured axis truncation on filled bars, not on a pair of dots.
+## What is measured
 
-## What it is measurably bad at
-
-Nothing measured. Besides the floating gaps, row count sets the height. Datawrapper documents that dot plots, range plots and arrow plots cannot have their height set ([datawrapper-academy.md](../sources/datawrapper-academy.md)), so, as with a bar chart, forty categories do not fit on a phone by resizing ([magnitude.md](magnitude.md)).
-
-## What is contested
-
-Nothing contested in this corpus. The inherited contest is the zero baseline, `authority-asserted` on both sides. Datawrapper releases it for dot and range plots and lists plotting the differences as one of three replacements for a truncated axis, a row [slope-chart.md](slope-chart.md) also carries. The FT scopes the rule by mark. The Urban Institute releases marks that "do not use length or height as the primary encoding" ([urban-institute.md](../sources/urban-institute.md)). [Vega-Lite](../sources/vega-lite.md) forces zero on every quantitative positional scale regardless of mark.
-
-With no stem back to the axis, the lollipop's bar-like exposure is absent. The segment's ink is still proportional to the gap, so proportional ink applies from a nonzero origin.
+No study in this corpus tests the form. Two nearby results do not transfer. [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) note in an aside that "comparing ratios can be done quickly and more accurately with bar charts as compared to dot plots", a different task on a different form. [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) measured axis truncation on filled bars, not on a pair of dots. Nothing measured is contested. The zero-baseline dispute, under Channels, is between authorities.
 
 ## The failure mode it invites
 
@@ -66,6 +58,8 @@ With no stem back to the axis, the lollipop's bar-like exposure is absent. The s
 **No key to which dot is which.** Dots at 40 and 60 do not say which year, 2010 or 2024, each marks. Without a legend, direct labels on the top row, or an arrowhead, the chart is unreadable.
 
 **An unstated sort.** First value, second value and gap give three different charts of the same data. That is one more sort key than most of [its group](ranking.md), so the caption says more.
+
+**Too many rows.** Row count sets the height. Datawrapper documents that dot plots, range plots and arrow plots cannot have their height set ([datawrapper-academy.md](../sources/datawrapper-academy.md)), so, as with a bar chart, forty categories do not fit on a phone by resizing ([magnitude.md](magnitude.md)).
 
 ## Justifying the choice
 
@@ -77,7 +71,7 @@ With no stem back to the axis, the lollipop's bar-like exposure is absent. The s
 
 - "Both the levels and the change matter, so both are on the chart. The levels are on position and the gap is on an unanchored length, and that is the trade this form makes."
 - "Thirty categories over two periods, so one row each rather than a slope chart. A legibility judgment about label collisions, with no study here on either form."
-- "The axis does not start at zero, because nothing on the chart is a filled bar. A newsroom taxonomy, a chart tool and a style guide scope the rule that way, none of them tested it, and one plotting library disagrees outright."
+- "The axis does not start at zero, because nothing on the chart is a filled bar. A newsroom taxonomy, a chart tool and a style guide scope the rule that way, none of them tested it, and one plotting library disagrees."
 - "Sorted by gap rather than by the later value, and the caption says so."
 
 **Commonly repeated, and the evidence does not support it:**

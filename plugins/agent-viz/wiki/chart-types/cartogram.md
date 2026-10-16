@@ -8,7 +8,7 @@ aliases: [Cartogram, Dorling cartogram, Hex grid map, Tile grid map]
 
 A map whose regions are resized, or replaced by simpler shapes, so that each region's area encodes a value and the geography distorts to fit.
 
-In a value-by-area cartogram (contiguous, non-contiguous, Dorling circles) area is the encoding. A tile or hex grid map gives every region an identical cell, removing area as both distortion and encoding, so the value goes back to fill color. **A tile grid map is a [choropleth](choropleth-map.md) on a schematic base geography.** This page covers the value-by-area kind.
+In a value-by-area cartogram (contiguous, non-contiguous, Dorling circles) area is the encoding. A tile or hex grid map gives every region an identical cell, removing area as both distortion and encoding, so the value goes back to fill color. A tile grid map is a [choropleth](choropleth-map.md) on a schematic base geography. This page covers the value-by-area kind.
 
 ## When to reach for it, and when not
 
@@ -38,23 +38,15 @@ The layout algorithm sits in the transform slot, as on a [treemap](treemap.md), 
 
 ## Channels
 
-Area, plus geographic position degraded on purpose. Area is read less accurately than angle and much less accurately than position ([channels.md](../concepts/channels.md); [Heer & Bostock 2010](../studies/heer-bostock-2010.md)), and circular and rectangular area are comparably accurate. Contiguous cartogram shapes are neither.
+Area, plus geographic position degraded on purpose. The form fixes the [choropleth](choropleth-map.md)'s land-area weighting by distorting the geography, and pays in recognizability, since the shapes and adjacencies a reader navigates by are what the algorithm moved. That cost is definitional.
 
-Heer & Bostock's Experiment 1B "extended circular area judgment to rectangles, motivated by treemaps and cartograms." It was a 3x2x6 factorial, 108 trials, on pairs of marked rectangles shown bare and inside a full treemap, at 380x380 pixels, with aspect ratios from a squarified treemap layout. Rectangular area was about as accurate as circular, and aspect ratio 1 was the worst case. No map, distorted polygon or recognizability task was tested, so only the channel-level claim transfers.
+Area is read less accurately than angle and much less accurately than position ([channels.md](../concepts/channels.md); [Heer & Bostock 2010](../studies/heer-bostock-2010.md)). Circular and rectangular area are comparably accurate. Contiguous cartogram shapes are neither.
 
-## What it is measurably good at
+Heer & Bostock's Experiment 1B "extended circular area judgment to rectangles, motivated by treemaps and cartograms." It was a 3x2x6 factorial, 108 trials, on pairs of marked rectangles shown bare and inside a full treemap, at 380x380 pixels, with aspect ratios from a squarified treemap layout. Rectangular area was about as accurate as circular, and aspect ratio 1 was the worst case.
 
-No study in this corpus tests the form.
+## What is measured
 
-## What it is measurably bad at
-
-Nothing measured beyond the inherited area channel. The native cost is definitional. A cartogram fixes the [choropleth](choropleth-map.md)'s land-area weighting by distorting the geography, and pays in recognizability, since the shapes and adjacencies a reader navigates by are what the algorithm moved.
-
-Whether readers lose more from the distortion than they gain from the weighting is untested. `absence of evidence`.
-
-## What is contested
-
-Nothing contested in this corpus.
+No study in this corpus tests the form. Experiment 1B, above, named cartograms as a motivation but tested no map, distorted polygon or recognizability task, so only its channel-level result transfers. Whether readers lose more from the distortion than they gain from the corrected weighting is untested. `absence of evidence`. Nothing is contested in this corpus.
 
 ## The failure mode it invites
 
@@ -77,8 +69,8 @@ Nothing contested in this corpus.
 **Defensible, with the label said out loud:**
 
 - "A cartogram because the choropleth of this total was a map of land area with a color layer on it. That reasoning is structural rather than measured, and no study here tests whether readers do better on the cartogram."
-- "Region areas are proportional to the count and anchored at zero, so the visual weight in this figure comes from the variable." Definitional, and the entire claim the form supports.
-- "An inset shows the true geography, and every region is labeled." Practitioner convention, no measured value.
+- "Region areas are proportional to the count and anchored at zero, so the visual weight in this figure comes from the variable." Definitional, and the whole of what the form supports.
+- "An inset shows the true geography, and every region is labeled." Practitioner convention with no measured value. `authority-asserted`.
 - "The layout algorithm is named in the caption, because a different one gives a different picture."
 
 **Commonly repeated, and the evidence does not support it:**

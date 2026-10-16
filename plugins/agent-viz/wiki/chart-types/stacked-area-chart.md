@@ -43,29 +43,22 @@ Series added to an [area chart](area-chart.md)'s transform give this form. Categ
 
 The total and the bottom band are position along a common scale. Every band above floats. [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md) measured that structure on divided bars, and [stacked-bar.md](stacked-bar.md) carries the quote and the 40% to 250% figure. The transfer from bars to bands is reasoning, and the mark-to-channel step is conjecture, as everywhere in [channels.md](../concepts/channels.md).
 
-One difference is definitional. A bar segment sits between straight parallel edges. A band sits between two curves, so no two thickness readings share a straight reference edge. Whether that costs the reader anything is unmeasured.
+One difference is definitional. A bar segment sits between straight parallel edges. A band sits between two curves, so no two thickness readings share a straight reference edge. Whether that costs the reader anything is unmeasured. `absence of evidence`.
 
 Hue carries series identity, which is not scored as a magnitude channel ([what "color is the worst channel" actually means](../concepts/channels.md#what-color-is-the-worst-channel-actually-means)).
 
-## What it is measurably good at
+## What is measured
 
-No study in this corpus tests a stacked area chart against anything, on any task.
+No study in this corpus tests a stacked area chart against anything, on any task. Two nearby results reach it only by inheritance, alongside the divided-bar result in Channels.
 
-## What it is measurably bad at
+- A band boundary is a line, so the line chart's measured exposures apply to it: aspect ratio, truncation, silently repaired gaps, log axes ([line-chart.md](line-chart.md#what-is-measured)). None was measured on a stack.
+- Axis inversion ([area-chart.md](area-chart.md#what-is-measured)). The [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) reversal used a single-series line-area chart, not a stack. It is the one distortion in that paper that reversed the reading rather than exaggerating it: 39 of 40 correct in the control against 7 of 38 in the deceptive condition, in one chart and one scenario.
 
-Nothing measured on this form. Three exposures are inherited.
-
-- A band boundary is a line, so the line chart's list applies: aspect ratio, truncation, silently repaired gaps, log axes ([what it is measurably bad at](line-chart.md#what-it-is-measurably-bad-at)).
-- Axis inversion ([area-chart.md](area-chart.md#what-it-is-measurably-bad-at)). The [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) reversal used a single-series line-area chart, not a stack. It is the one distortion in that paper that reversed the reading rather than exaggerating it: 39 of 40 correct in the control against 7 of 38 in the deceptive condition, in one chart and one scenario.
-- Tracking a band off the baseline, two steps of reasoning from the divided-bar result.
-
-## What is contested
-
-The zero baseline is not contested here, since a stack starts at zero by construction. [area-chart.md](area-chart.md#what-is-contested) carries the record, including that its four agreeing sources are fewer independent voices than they look. The FT's claim that the fill serves the total and hurts the components is untested, as is any ordering of the components. `absence of evidence`.
+Nothing is contested. A stack starts at zero by construction, so the zero-baseline dispute does not arise; [area-chart.md](area-chart.md#what-is-measured) carries that record, including that its four agreeing sources are fewer independent voices than they look. The FT's claim that the fill serves the total and hurts the components is `authority-asserted` and untested, as is any ordering of the components. `absence of evidence`.
 
 ## The failure mode it invites
 
-**Tracking a middle band.** Every band looks equally readable, but following one off the baseline is a run of unanchored thickness judgments (see Channels). The fix on [stacked-bar.md](stacked-bar.md) applies: that series goes on the baseline or comes out as its own line.
+**Tracking a middle band.** Every band looks equally readable, but following one off the baseline is a run of unanchored thickness judgments, two steps of reasoning from the divided-bar result. The fix on [stacked-bar.md](stacked-bar.md) applies: that series goes on the baseline or comes out as its own line.
 
 **The total standing in for the parts.** A smoothly rising total can hide one component collapsing while another grows.
 
@@ -81,9 +74,9 @@ All three follow from the structure, `authority-asserted` where the FT and pract
 
 **Defensible, with the label said out loud:**
 
-- "The series the reader most needs to follow is on the baseline, so it is read as position rather than as a floating thickness." Transferred from divided bars, untested on bands.
-- "Three components, because more than a handful stops being readable." Convention, no measured threshold.
-- "The components are also drawn as small multiples, because seeing change in a component inside a stack is the thing this form is worst at." Asserted, including by the FT, never tested.
+- "The series the reader most needs to follow is on the baseline, so it is read as position rather than as a floating thickness." Transferred from divided bars, untested on bands. `absence of evidence`.
+- "Three components, because more than a handful stops being readable." Convention, with no measured threshold. `absence of evidence`.
+- "The components are also drawn as small multiples, because seeing change in a component inside a stack is the thing this form is worst at." `authority-asserted`, including by the FT, and never tested.
 - "Counts rather than shares, and the axis says so, because the total is part of the point."
 
 **Commonly repeated, and the evidence does not support it:**

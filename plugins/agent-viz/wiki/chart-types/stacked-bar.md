@@ -38,19 +38,17 @@ Segment length. The first segment starts at the axis and is read as position alo
 
 > "For each of the three, the totals of A and B can be compared by perceiving position along the scale. ... All other values must be compared by the elementary task of perceiving different bar lengths"
 
-## What it is measurably good at
+In a 100% stacked bar every bar ends at the same line, so the top segment also has a shared end line, and only the middle segments float. Normalizing removes the position reading of the total and keeps the bottom segment's.
 
-Totals and the bottom segment. Both are position along a common scale, the most accurately read channel measured. Evidence-backed.
+## What is measured
 
-## What it is measurably bad at
+Totals and the bottom segment are read well. Both are position along a common scale, the most accurately read channel measured, `evidence-backed`.
 
-Every segment not on the baseline. [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md) measured this substitution:
+Every segment not on the baseline is read badly. [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md) measured this substitution, `evidence-backed`:
 
 > "the average errors for length judgments are 40%-250% larger than those for position judgments"
 
 The experiment's five judgment types, built from grouped and divided bars, isolate it: types 1-3 are position readings and types 4-5 floating-segment lengths. [Heer & Bostock (2010)](../studies/heer-bostock-2010.md) replicated it, finding types 4 and 5 somewhat more accurate than the original but position still significantly ahead. The claim is measured on this form directly, not inherited.
-
-## What is contested
 
 Nothing contested in this corpus. No study here tests whether a stacked bar beats a grouped bar or small multiples for a given question.
 
@@ -58,7 +56,7 @@ Nothing contested in this corpus. No study here tests whether a stacked bar beat
 
 **Tracking a middle series across categories.** Comparing the orange segment across five bars is a set of floating length judgments. `authority-asserted`, following from the measured channel split. The remedy is ordering, with the series in question on the baseline, which follows from the evidence and is not separately tested.
 
-**100% stacking hides the totals.** Normalizing removes the position reading of the total and keeps only composition. Definitional.
+**100% stacking hides the totals.** Only composition is left.
 
 ## Justifying the choice
 
@@ -66,7 +64,7 @@ Nothing contested in this corpus. No study here tests whether a stacked bar beat
 
 - "I put the series in question on the baseline. Floating segments are read as length, which carries 40% to 250% more error than position, measured on exactly this chart form."
 - "The total is read as position along a common scale here, which is why this is a stacked bar rather than a pie: the reader needs the total and its composition."
-- "I did not normalize to 100%, because that removes the only accurately-read quantity on the chart."
+- "I did not normalize to 100%, because that removes the position reading of the totals, and the totals are part of the message."
 
 **Defensible, with the label said out loud:**
 

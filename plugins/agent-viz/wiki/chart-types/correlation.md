@@ -92,3 +92,4 @@ The empirical claim rests on [Weissgerber et al. (2015)](../studies/weissgerber-
 - [connected-scatterplot.md](connected-scatterplot.md): also change over time, and indexed there too, since filing is [by index rather than by directory](README.md#taxonomy-is-an-index-not-a-home)
 - [correlation-matrix.md](correlation-matrix.md)
 - [heatmap.md](heatmap.md): the same grid with any quantity in the cells, indexed primarily under [magnitude.md](magnitude.md)
+- [parallel-coordinates.md](parallel-coordinates.md): many variables as parallel axes, one polyline per row

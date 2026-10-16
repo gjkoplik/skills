@@ -20,7 +20,7 @@ retrieved: 2026-08-29
 
 ### Two experiments
 
-**Error bars, 2014, with Michael Gleicher.** Gradient and violin encodings beat bar-and-whisker for judging whether a difference is real. [studies/correll-gleicher-2014-error-bars-harmful.md](../studies/correll-gleicher-2014-error-bars-harmful.md)
+**Error bars, 2014, with Michael Gleicher.** Gradient and violin encodings showed none of the within-the-bar bias that bar-and-whisker did, on low-stakes predictions. [studies/correll-gleicher-2014-error-bars-harmful.md](../studies/correll-gleicher-2014-error-bars-harmful.md)
 
 **Truncation, 2020, with Enrico Bertini and Steven Franconeri.** The exaggeration effect persists across chart types, and the two axis-break designs tested did not measurably reduce it. The authors refuse the strong reading in both directions: "We reject the unequivocal dichotomy of 'honest' and 'dishonest' charts." [studies/correll-2020-truncating-the-y-axis.md](../studies/correll-2020-truncating-the-y-axis.md)
 

@@ -6,11 +6,11 @@ aliases: [Dot plot, Dot strip plot, Strip plot, Univariate scatterplot]
 
 # Dot strip plots
 
-One dot per item on a quantitative axis shared by every row, with each group's items along a single strip.
+One dot per item on a quantitative axis shared by every row, with each group's items along a single strip. This page covers the strip plot and the univariate scatterplot ([Weissgerber et al.](../studies/weissgerber-2015-beyond-bar-line.md)'s term) as well as the dot strip plot: one drawing, read either for the shape of a distribution or for each item's place in an ordering.
 
 ## When to reach for it, and when not
 
-The form is defined for more items than a bar chart could carry, in a few groups, where the question is each item's place in the shared ordering and how the groups compare. It costs one row per group, not per item. Datawrapper documents that bar charts and dot plots are sized by row count and cannot be shrunk ([datawrapper-academy.md](../sources/datawrapper-academy.md)).
+Read as a ranking, the form is defined for more items than a bar chart could carry, in a few groups, where the question is each item's place in the shared ordering and how the groups compare. It costs one row per group, not per item. Datawrapper documents that bar charts and dot plots are sized by row count and cannot be shrunk ([datawrapper-academy.md](../sources/datawrapper-academy.md)). Read as a distribution, it is the form [distribution.md](distribution.md) recommends at small n, where every observation is drawn instead of a summary.
 
 | The question | Alternative |
 |---|---|
@@ -19,7 +19,8 @@ The form is defined for more items than a bar chart could carry, in a few groups
 | There are twelve items in one group | A sorted [bar chart](bar-chart.md) or [lollipop chart](lollipop-chart.md), which are easier to label |
 | How did the order move over six periods? | [Bump chart](bump-chart.md) |
 | Two values per item, and the gap is the point | [Dumbbell plot](dumbbell-plot.md) |
-| What shape does this variable have? | [Distribution](distribution.md). Same drawing, different question |
+| Ties and near-ties pile onto one spot | [Beeswarm](beeswarm-plot.md), which displaces them deterministically |
+| What shape does this variable have, with too many observations to draw one by one? | A summary form from [distribution](distribution.md) |
 
 ## Structural decomposition
 
@@ -32,23 +33,19 @@ The form is defined for more items than a bar chart could carry, in a few groups
 | Coordinates | Cartesian, the categorical axis carrying one position per group |
 | Guides | The quantitative axis, group labels, and direct labels or highlighting on the items the reader is meant to find |
 
-It is a [lollipop chart](lollipop-chart.md) with the stem, a guide rather than an encoding, removed and more than one dot per row. The shared axis is load-bearing, as on a [slope chart](slope-chart.md): per-strip scales would make the strips silently uncomparable. It is also the strip plot [distribution.md](distribution.md) recommends at small n. Only the question differs. A ranking reading needs the items identified, a distribution reading needs the count legible, and only the title tells them apart.
+It is a [lollipop chart](lollipop-chart.md) with the stem, a guide rather than an encoding, removed and more than one dot per row. The shared axis is load-bearing, as on a [slope chart](slope-chart.md): per-strip scales would make the strips silently uncomparable. A ranking reading needs the items identified, a distribution reading needs the count legible, and only the title tells them apart.
 
 ## Channels
 
-Position along a common scale, inherited from [channels.md](../concepts/channels.md), with the mark-to-channel mapping conjecture in the source literature. That accuracy claim is about extracting a value, which is not the message here, so it buys less than on a [bar chart](bar-chart.md) ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)). Dots picked out by color use hue for identity, a job hue does well and the accuracy ordering does not score.
+Position along a common scale, inherited from [channels.md](../concepts/channels.md), with the mark-to-channel mapping conjecture in the source literature. That accuracy claim is about extracting a value, which is the message of neither reading, so it buys less than on a [bar chart](bar-chart.md) ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)). Dots picked out by color use hue for identity, a job hue does well and the accuracy ordering does not score.
 
-## What it is measurably good at
+With no stem to read as a bar, the zero-baseline contest binds less here than on a [lollipop chart](lollipop-chart.md). The style guides release unfilled marks and [Vega-Lite](../sources/vega-lite.md) does not, `authority-asserted` on both sides.
 
-No study in this corpus tests the form. Two nearby results do not transfer. [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) note in an aside that "comparing ratios can be done quickly and more accurately with bar charts as compared to dot plots," a different task that points away from this form. [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md) recommend univariate scatterplots at small n, which is this drawing, but as the authors' argument from a prevalence review, and about showing a distribution rather than an order ([distribution.md](distribution.md)).
+## What is measured
 
-## What it is measurably bad at
+No study in this corpus tests the form. Two nearby results do not transfer. [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) note in an aside that "comparing ratios can be done quickly and more accurately with bar charts as compared to dot plots," a different task that points away from this form. [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md) recommend univariate scatterplots at small n, which is this drawing, but as the authors' argument from a prevalence review with no reader tested, and about showing a distribution rather than an order ([distribution.md](distribution.md)).
 
-Nothing measured. Ties land on the same pixel and the set looks smaller, at an unmeasured cost, as on [scatterplot.md](scatterplot.md).
-
-## What is contested
-
-Nothing contested in this corpus. The inherited contest, whether an unfilled mark releases the zero baseline, sets the style guides against [Vega-Lite](../sources/vega-lite.md), `authority-asserted` on both sides ([lollipop-chart.md](lollipop-chart.md)). With no stem to read as a bar, it binds less here.
+Ties land on the same pixel and the set looks smaller, at an unmeasured cost, as on [scatterplot.md](scatterplot.md). `absence of evidence`.
 
 ## The failure mode it invites
 

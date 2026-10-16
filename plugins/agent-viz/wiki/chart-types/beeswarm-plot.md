@@ -41,35 +41,27 @@ It differs from a [dot strip plot](dot-strip-plot.md) in the transform. A strip 
 
 The value is position along a common scale ([channels.md](../concepts/channels.md)), with the usual caveat that the mark-to-channel mapping is conjecture in the source literature.
 
-The swarm's width grows with how many observations sit near a value, so the outline reads as a density with no axis, no legend and no stated bandwidth. Its smoothing parameter is the dot radius, and it changes with figure or dot size. That is definitional. What readers take from it is unmeasured. A [box plot](boxplot.md) has no tuning parameter and a [violin](violin-plot.md) has one and shows it; a beeswarm has one and hides it. No study here has decomposed the form into its cues, as [Skau & Kosara (2016)](../studies/skau-kosara-2016.md) did for the pie.
+The swarm's width grows with how many observations sit near a value, so the outline reads as a density with no axis, no legend and no stated bandwidth. Its smoothing parameter is the dot radius, and it changes with figure or dot size. That is definitional. A [box plot](boxplot.md) has no tuning parameter and a [violin](violin-plot.md) has one and shows it; a beeswarm has one and hides it. No study here has decomposed the form into its cues, as [Skau & Kosara (2016)](../studies/skau-kosara-2016.md) did for the pie.
 
-## What it is measurably good at
+## What is measured
 
-No study in this corpus tests the form.
+No study in this corpus tests the form. Two nearby results do not transfer.
 
-The nearest warrant is [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md). Of 703 physiology articles, 85.6% included a bar graph, 13.4% a univariate scatterplot and 5.3% a box plot. The minimum group size shown had a median of 4, interquartile range 3 to 6. They recommend drawing the observations: "Univariate scatterplots are the best choice for showing the distribution of the data in these small samples, as boxplots and histograms would be difficult to interpret." The counts are measured; the recommendation is the authors' argument, with no reader tested. It names a strip plot, not this layout, and at n = 4 almost nothing collides.
+[Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md) is the nearest warrant. Of 703 physiology articles, 85.6% included a bar graph, 13.4% a univariate scatterplot and 5.3% a box plot. The minimum group size shown had a median of 4, interquartile range 3 to 6. They recommend drawing the observations: "Univariate scatterplots are the best choice for showing the distribution of the data in these small samples, as boxplots and histograms would be difficult to interpret." The counts are measured; the recommendation is the authors' argument, with no reader tested. It names a strip plot, not this layout, and at n = 4 almost nothing collides.
 
 [Matejka & Fitzmaurice (2017)](../studies/matejka-2017-datasaurus.md) is a construction with no participants or task. It supports *these summary statistics are compatible with radically different data* and *so plot the data*, not *readers are misled by summaries* or *drawing the points produces better conclusions*.
 
-## What it is measurably bad at
-
-Nothing measured. Three exposures follow from the construction.
-
-- **Large n.** The dots stop being resolvable, and [inventory.md](../inventory.md) topic 60 says the idiom changes there, from Wilke, `authority-asserted`, with no measured threshold.
-- **Redraws.** A figure regenerated at another size is a different arrangement, and nothing says so. This is [inventory.md](../inventory.md) topic 77, repeatability: deterministic in the seed sense, still not stable.
-- **No statistic.** No median, interval or n appears unless overlaid, and readers counting a dense swarm undercount.
-
-## What is contested
-
-Nothing contested in this corpus. The inherited argument, whether a summary is defensible at the sample sizes published science uses, is on [boxplot.md](boxplot.md).
+The inherited argument, whether a summary is defensible at the sample sizes published science uses, is on [boxplot.md](boxplot.md).
 
 ## The failure mode it invites
 
 **Reading the width as a measured density.** What readers conclude from it is `absence of evidence`. The mitigations named here are a caption calling the width a layout artifact, or an overlay with a declared parameter.
 
-**Letting n grow until the swarm is a slab**, where the chart still appears to show every observation.
+**Letting n grow until the swarm is a slab**, where the chart still appears to show every observation. The dots stop being resolvable, and [inventory.md](../inventory.md) topic 60 says the idiom changes there, from Wilke, `authority-asserted`, with no measured threshold.
 
-**Treating "shows every point" as the whole argument.** That is definitional; better reader conclusions are untested.
+**Redrawing at another size.** A figure regenerated at another size is a different arrangement, and nothing says so. This is [inventory.md](../inventory.md) topic 77, repeatability: deterministic in the seed sense, still not stable.
+
+**No statistic.** No median, interval or n appears unless overlaid. Readers counting a dense swarm undercount, a claim no study here measures. `absence of evidence`.
 
 **An overlaid box plot with unstated rules.** Its quantile definition and whisker rule still need stating ([boxplot.md](boxplot.md)).
 
@@ -84,7 +76,7 @@ Nothing contested in this corpus. The inherited argument, whether a summary is d
 - "Every observation is drawn and none is hidden by another. That is definitional. Whether readers conclude better things from it is untested."
 - "Deterministic displacement rather than random jitter, so there is no seed to record and the figure redraws identically from the same data at the same size."
 - "Six observations per group, so the points rather than a summary. That recommendation comes from a review of measured sample sizes plus its authors' argument, not from a reader experiment."
-- "The caption states n per group, because a reader counting dots in a dense swarm will undercount."
+- "The caption states n per group, because a reader counting dots in a dense swarm may undercount. Nobody here has measured that."
 - "The caption says the swarm's width is a layout artifact, because the chart otherwise shows a density it never declared."
 
 **Commonly repeated, and the evidence does not support it:**
