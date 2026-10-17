@@ -45,7 +45,7 @@ Enclosed area is the salient secondary reading, and area is read less accurately
 
 ## What is measured
 
-No study in this corpus tests the form. This source set has neither a proportional-judgment task against a bar chart of the same measures, which would settle value reading, nor a profile-matching task, which would test what the form claims. With no record, nothing can be contested ([evidence-class.md](../concepts/evidence-class.md)). The familiar criticisms, that the form breaks down past a few axes, that overlaid polygons are unreadable and that the area misleads, are plausible and unsupported here. `absence of evidence`.
+One study drew the form for a job it is rarely chosen for. [Harrison et al. (2014)](../studies/harrison-2014-ranking-correlation.md) rendered 100 paired values as a radar, "essentially radial transforms of" line charts, and asked which of two was more correlated. With positive data the radar beat the plain line chart (p = 0.0017) and lost to the ordered line chart; with negative data more than a fifth of judgments were at chance and the condition was excluded, and Kay & Heer's reanalysis places it as indistinguishable from chance. `evidence-backed`, for correlation discrimination only. This source set has neither a proportional-judgment task against a bar chart of the same measures, which would settle value reading, nor a profile-matching task, which would test what the form claims. The familiar criticisms, that the form breaks down past a few axes, that overlaid polygons are unreadable and that the area misleads, are plausible and unsupported here. `absence of evidence`.
 
 ## The failure mode it invites
 

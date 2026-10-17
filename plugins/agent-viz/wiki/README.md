@@ -6,7 +6,7 @@ Pages carry their facts in frontmatter and their argument in the body. The schem
 
 **Status is not decoration.** `primary-read` means someone opened the source and the quotes come from a local extraction. `secondary-only` means abstracts or summaries, and its quotes are unvouched. `not-reached` means the page says where it looked. `status_partial` means the page covers several artifacts and did not reach them all equally, with `status` recording the principal subject. Several claims here changed when someone opened the primary, so a `secondary-only` page has not earned the trust of a `primary-read` one.
 
-**Current state: 54 `primary-read`, 6 `secondary-only`, 0 `not-reached`, of which 25 are `status_partial`.** Parsed from frontmatter across `sources/`, `studies/` and `people/` by `validate.py`, which fails if this line drifts. `concepts/` and `chart-types/` are synthesis and structure, and are not counted. This is the only count in the wiki, because it is the only one a machine enforces.
+**Current state: 56 `primary-read`, 6 `secondary-only`, 0 `not-reached`, of which 26 are `status_partial`.** Parsed from frontmatter across `sources/`, `studies/` and `people/` by `validate.py`, which fails if this line drifts. `concepts/` and `chart-types/` are synthesis and structure, and are not counted. This is the only count in the wiki, because it is the only one a machine enforces.
 
 ## Start here
 
@@ -74,6 +74,7 @@ No controlled study has tested a chart type; they test channels. Every claim abo
 | [nollenburg-2023-computing-hive-plots.md](studies/nollenburg-2023-computing-hive-plots.md) | `primary-read` | Hive plot construction is three known-hard problems. Also no user study. |
 | [gutwin-2023-chord-vs-sankey.md](studies/gutwin-2023-chord-vs-sankey.md) | `primary-read` | Sankey beat chord on time, errors, effort and preference. The performance effects are tiny and mostly gone by the fourth look. |
 | [siqueira-rodrigues-2026-vr-graphical-perception.md](studies/siqueira-rodrigues-2026-vr-graphical-perception.md) | `primary-read` | Position beats length beats area, replicated in a headset. The horizontal-bar penalty is large at oblique angles and absent face-on. |
+| [harrison-2014-ranking-correlation.md](studies/harrison-2014-ranking-correlation.md) | `primary-read` | Telling two correlations apart, nine forms, 1,687 participants. Scatterplots lead in both directions. The reanalysis turns the total ranking into four groups and drops Weber's law. |
 
 ## People
 

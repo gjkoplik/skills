@@ -51,9 +51,10 @@ Both axes are position along a common scale, the most accurately read channel ([
 | [Connected scatterplot](connected-scatterplot.md) | Position in a two-variable plane, with time only in the path order | Two quantities whose joint trajectory is the message. Time leaves the axis |
 | [Bump chart](bump-chart.md) | Position on a rank axis, with the value discarded | Several periods, few items, who overtook whom rather than by how much |
 | [Sparkline](sparkline.md) | Shape alone, with the axes removed by design | Inside a sentence or a table row, with no value to read off |
+| [Fan chart](fan-chart.md) | A projected path with nested probability bands | A forecast beyond the last observation, where the width of the plausible range at each horizon is the message |
 | Column over time *(no page yet)* | Length from zero | Few discrete periods of counted quantities, the value mattering more than the trend |
 
-Fan charts have no page. No study here tests them, or the bump chart, stacked area chart, streamgraph or sparkline.
+No study here tests the fan chart, the bump chart, the stacked area chart, the streamgraph or the sparkline.
 
 - **Aspect ratio** is a free choice that no rule in this corpus settles, and a library default is an unmade choice. Banking to 45 degrees is scope-limited ([line-chart.md](line-chart.md#what-is-measured)).
 - **Missing values** are drawn as missing. Highlighting beat downplaying beat removal on perceived data quality, and zero-filling was the worst imputation tested (Song & Szafir).
@@ -97,6 +98,7 @@ Fan charts have no page. No study here tests them, or the bump chart, stacked ar
 - [stacked-bar.md](stacked-bar.md): primarily part-to-whole, here for repeated composition
 - [connected-scatterplot.md](connected-scatterplot.md): primarily correlation
 - [horizon-graph.md](horizon-graph.md)
+- [fan-chart.md](fan-chart.md): primarily uncertainty, here because the FT files it under this group
 - [small-multiples.md](small-multiples.md): one panel per series at shared scales
 
 ## See also

@@ -25,6 +25,26 @@ what the rule now is and links the entry here for why.
 
 ---
 
+## v2026.10.17
+
+The weekly research sweep: one paper, one chart type, one person, and a reconciliation the staleness check turned up.
+
+### Added
+
+- [studies/harrison-2014-ranking-correlation.md](studies/harrison-2014-ranking-correlation.md): Harrison, Yang, Franconeri & Chang (2014) with Kay & Heer's (2016) reanalysis, both at primary. The first measurement in the corpus of a shape judgment rather than value extraction.
+- [chart-types/fan-chart.md](chart-types/fan-chart.md), indexed under uncertainty and change over time. Both indexes had named it as absent. Nothing measured.
+- [people/steven-franconeri.md](people/steven-franconeri.md), from five co-authored papers read at primary; the 2021 review is `not-reached`.
+- A [refutations.md](refutations.md) entry: parallel coordinates beating scatterplots for negative correlations did not survive the reanalysis of the data it came from.
+
+### Changed
+
+- [chart-types/scatterplot.md](chart-types/scatterplot.md), [chart-types/parallel-coordinates.md](chart-types/parallel-coordinates.md), [chart-types/radar-chart.md](chart-types/radar-chart.md), [chart-types/correlation.md](chart-types/correlation.md), [chart-types/choose.md](chart-types/choose.md) and the coverage table carry the correlation-discrimination result and its scope.
+- [people/jeffrey-heer.md](people/jeffrey-heer.md): Kay & Heer (2016) read, with its own section.
+
+### Corrected
+
+- [chart-types/connected-scatterplot.md](chart-types/connected-scatterplot.md) cited its one study through Wilke's summary while [people/robert-kosara.md](people/robert-kosara.md) recorded the same paper as read at primary. The PDF was opened and the page now carries the paper's own numbers: understanding high on both forms, all qualitative errors on the connected scatterplot, time reversed on 13% of translations, correlational language 28 against 3.
+
 ## v2026.10.16
 
 A content pass over the chart-type tier: a one-page chooser, an uncertainty group, seven new type pages, and a shorter type-page template.

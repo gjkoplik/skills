@@ -24,6 +24,7 @@ Every quote was **re-extracted locally**, not taken from a fetch summary. See [R
 | [Anand & Chattaraj on instruction stacking](#a-preprint-to-use-directionally-only) | Directional only | Verbatim correct, unreviewed, and its own Table 7 breaks the remediation story |
 | ["Chord is harder to read than Sankey"](#chord-diagrams-are-harder-to-read-than-sankey-diagrams) | Supported, and tiny | Effect sizes 0.02 and 0.001, gone by the fourth exposure. The large effect is preference |
 | ["Horizontal bars are read less accurately than vertical"](#horizontal-bar-charts-are-read-less-accurately-than-vertical-ones) | Measured in VR, absent face-on | Large at oblique viewing angles in a headset, no difference at the one face-on position, and untested on a flat screen |
+| ["Parallel coordinates beat scatterplots for negative correlations"](#parallel-coordinates-beat-scatterplots-for-negative-correlations) | Overstated by the original analysis | The asymmetry is real; the lead over the scatterplot is not. A reanalysis of the same data puts the two in one group and drops Weber's law |
 
 ---
 
@@ -202,3 +203,19 @@ Face-on, the orientations did not differ (p = .713). The gap appears only at lat
 **Accurate phrasing:** in a head-mounted display, a bar chart viewed at an oblique angle is read less accurately when its bars extend along the foreshortened axis. Nothing here has been tested on a display the reader faces squarely, where the same experiment found no difference, and this corpus contains no study of bar orientation on a flat screen. The style-guide practice of turning bars horizontal to fit long category labels is untouched.
 
 Detail: [studies/siqueira-rodrigues-2026-vr-graphical-perception.md](studies/siqueira-rodrigues-2026-vr-graphical-perception.md), [chart-types/bar-chart.md](chart-types/bar-chart.md).
+
+## "Parallel coordinates beat scatterplots for negative correlations"
+
+**Status: the asymmetry is measured, the lead is not. A reanalysis of the same data removed it.**
+
+[Harrison et al. (2014)](studies/harrison-2014-ranking-correlation.md) had 1,687 crowdsourced participants tell two correlations apart on nine forms. Parallel coordinates with negative data performed as well as scatterplots, and with positive data far worse (p < 0.001). Their total ranking placed parallel coordinates with negative data above the scatterplot with negative data at r = 0.1, 0.3 and 0.5, and the paper proposed layout algorithms that flip axes "to maximize the number of negative correlations depicted." The ranking carried no uncertainty and was fit to condition means.
+
+Kay & Heer (2016) refit the released data on individual observations with a log transform, censored regression and a participant effect:
+
+> "We believe that these design recommendations overstate the strength of evidence. By contrast, our model finds that the performance of scatterplots and parallel coordinates are virtually indistinguishable at those values of r for negatively-correlated data, and that when considering variance between individuals, scatterplots may even be better."
+
+The twelve-pair total ranking became four groups, and the best-fitting model "deviates from Weber's Law," which the original paper had reported as holding for every form.
+
+**Accurate phrasing:** with two axes, parallel coordinates showing a negative correlation are read as precisely as a scatterplot, and showing a positive one about two precision groups worse. Nothing licenses a lead over the scatterplot, and the scatterplot is the only form in the top group for both directions.
+
+Detail: [studies/harrison-2014-ranking-correlation.md](studies/harrison-2014-ranking-correlation.md), [chart-types/parallel-coordinates.md](chart-types/parallel-coordinates.md).
