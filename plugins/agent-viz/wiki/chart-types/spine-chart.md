@@ -35,7 +35,7 @@ The form is defined for rows that are each one total split in two, where the spl
 | Coordinates | Cartesian, usually with the category axis vertical |
 | Guides | The center line, labels or a legend naming the components, and one axis with unsigned values on both sides |
 
-It is a two-segment [stacked bar](stacked-bar.md) hinged at the segment boundary. Both components now sit on a shared line, so neither floats. The row total stops being a position reading and becomes two opposite lengths added across the center by eye. The second component's baseline is bought with the total, which is definitional. Normalizing to shares makes ratios comparable across rows and removes the totals, as on a stacked bar.
+It is a two-segment [stacked bar](stacked-bar.md) hinged at the segment boundary. Both components now sit on a shared line, so neither floats. The row total stops being a position reading and becomes two opposite lengths added across the center by eye. The second component's baseline is bought with the total. Normalizing to shares makes ratios comparable across rows and removes the totals, as on a stacked bar.
 
 ## Channels
 
@@ -45,17 +45,9 @@ The comparison the chart is built for, A against B in one row, crosses the line.
 
 Side, doubled in hue, marks which component is which. The accuracy ordering scores neither ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)).
 
-## What it is measurably good at
+## What is measured
 
 No study in this corpus tests the form.
-
-## What it is measurably bad at
-
-Nothing measured. The structural cost to the total is definitional.
-
-## What is contested
-
-Nothing contested in this corpus.
 
 ## The failure mode it invites
 
@@ -63,7 +55,7 @@ Nothing contested in this corpus.
 
 **Normalizing silently.** Shares and counts produce similar pictures and answer different questions, and only a labeled axis says which.
 
-Both follow from the structure, untested on readers.
+Both follow from the structure and are untested on readers. `absence of evidence`.
 
 ## Justifying the choice
 

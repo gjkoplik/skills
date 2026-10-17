@@ -38,7 +38,7 @@ and, from the part-to-whole entry: "If the reader's interest is solely in the si
 
 ## What this group costs
 
-The canonical chart puts the value on position along a common scale, the most accurately read channel, measured and replicated ([channels.md](../concepts/channels.md)). This group is the baseline the others are measured against. Its costs sit elsewhere.
+The canonical chart puts the value on position along a common scale, the most accurately read channel, `evidence-backed` and replicated ([channels.md](../concepts/channels.md)). This group is the baseline the others are measured against. Its costs sit elsewhere.
 
 **Item count.** Datawrapper documents that bar charts, dot plots, range plots and arrow plots cannot have their height set, because the row count determines it ([datawrapper-academy.md](../sources/datawrapper-academy.md)). A forty-item bar chart does not fit on a phone by resizing, which is not true of a treemap.
 
@@ -61,8 +61,8 @@ The canonical chart puts the value on position along a common scale, the most ac
 Isotype and pictogram charts, proportional symbols and grouped bars have no page, for want of any study to hang one on.
 
 - **Sorting** is by value, or by a stated logic. The BBC cookbook treats alphabetical order as a bug: it is "what R will display by default," fixed by wrapping `reorder()` ([bbc-cookbook.md](../sources/bbc-cookbook.md)). Urban treats ordering as an editorial act, noticed or not. `authority-asserted`.
-- **The zero baseline** is scoped by mark, not by axis. A filled bar encodes the value as length from the baseline, so moving the baseline rescales the encoding. A dot or a line does not. Urban states both halves: bar axes "should always start at zero," and "other charts types that do not use length or height as the primary encoding -- including, for example, scatterplots and line charts -- do not necessarily need to start at zero." The FT also rules per mark, "Must always start at 0" for the column against "does not HAVE to start at zero (but preferable)" for the lollipop. Observable Plot forces zero only where area encodes the value. [Vega-Lite](../sources/vega-lite.md) is the outlier, defaulting `zero: true` on every quantitative positional scale regardless of mark, the by-axis reading and the weaker one. `authority-asserted`, with the harm from getting it wrong evidence-backed.
-- **Area and color** read magnitude less accurately than position, measured ([channels.md](../concepts/channels.md)). A [treemap](treemap.md) buys something with the area trade and a [heatmap](heatmap.md) buys a cross-tabulation with color. A bubble chart of eight values, or a single-key heatmap, buys nothing.
+- **The zero baseline** is scoped by mark, not by axis. A filled bar encodes the value as length from the baseline, so moving the baseline rescales the encoding. A dot or a line does not. Urban states both halves: bar axes "should always start at zero," and "other charts types that do not use length or height as the primary encoding -- including, for example, scatterplots and line charts -- do not necessarily need to start at zero." The FT also rules per mark, "Must always start at 0" for the column against "does not HAVE to start at zero (but preferable)" for the lollipop. Observable Plot forces zero only where area encodes the value. [Vega-Lite](../sources/vega-lite.md) is the outlier, defaulting `zero: true` on every quantitative positional scale regardless of mark, the by-axis reading and the weaker one. `authority-asserted`, with the harm from getting it wrong `evidence-backed`.
+- **Area and color** read magnitude less accurately than position, `evidence-backed` ([channels.md](../concepts/channels.md)). A [treemap](treemap.md) buys something with the area trade and a [heatmap](heatmap.md) buys a cross-tabulation with color. A bubble chart of eight values, or a single-key heatmap, buys nothing.
 
 ## Justifying the choice
 
@@ -84,7 +84,7 @@ Isotype and pictogram charts, proportional symbols and grouped bars have no page
 
 ## The failure mode this group invites
 
-**Being the default.** The bar chart is what gets drawn when nobody decided anything, so this group absorbs questions that belong to distribution, uncertainty and change over time. [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md) measured it in one field, bar graphs of the mean over continuous data. Of 703 physiology articles, 85.6% included a bar graph, the median minimum group size in a figure was 4, and "many different data distributions can lead to the same bar or line graph." Evidence-backed as a prevalence finding and as an argument. No one was tested on what they concluded.
+**Being the default.** The bar chart is what gets drawn when nobody decided anything, so this group absorbs questions that belong to distribution, uncertainty and change over time. [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md) measured it in one field, bar graphs of the mean over continuous data. Of 703 physiology articles, 85.6% included a bar graph, the median minimum group size in a figure was 4, and "many different data distributions can lead to the same bar or line graph." `evidence-backed` as a prevalence finding and as an argument. No one was tested on what they concluded.
 
 **A bar height that is a statistic rather than a count.** A bar of a mean, a median, a rate or a model coefficient is a summary standing in for a distribution, and the form gives the reader no way to tell which one they are looking at.
 

@@ -14,7 +14,7 @@ The term comes from *Beautiful Evidence* (2006), which nobody here has opened. [
 
 ## When to reach for it, and when not
 
-The form is defined for a reading of "rising, falling, spiky, flat, above the band, below the band", inside a sentence or scanned down a table. Tufte shows a clinical glucose series in running text and a financial table stacking hundreds of series. Without axes, every reading is relative and no value can be extracted from the mark. That is definitional.
+The form is defined for a reading of "rising, falling, spiky, flat, above the band, below the band", inside a sentence or scanned down a table. Tufte shows a clinical glucose series in running text and a financial table stacking hundreds of series. Without axes, every reading is relative and no value can be extracted from the mark.
 
 | The question | Alternative |
 |---|---|
@@ -30,7 +30,7 @@ The form is defined for a reading of "rising, falling, spiky, flat, above the ba
 | Slot | |
 |---|---|
 | Data | One row per (time, value), for one series |
-| Transform | None. The y range is per graphic unless deliberately shared, and the drawing does not record which |
+| Transform | None. The y range is per graphic unless shared on purpose, and the drawing does not record which |
 | Geometry | Path, optionally with the endpoint or the min and max marked. Bar and win/loss variants swap the mark |
 | Scale | Time to x, value to y, over a range that is **not shown** |
 | Coordinates | Cartesian, sized to the type. Tufte gives 14 letterspaces as a working width |
@@ -40,27 +40,21 @@ The form is defined for a reading of "rising, falling, spiky, flat, above the ba
 
 ## Channels
 
-Position along a common scale, on a scale the reader cannot see. That is inherited from [channels.md](../concepts/channels.md), where the chart-to-channel mapping is conjecture. The reading holds within one sparkline. Between two it holds only if the scale was deliberately shared, which neither graphic records. Definitional.
+Position along a common scale, on a scale the reader cannot see. That is inherited from [channels.md](../concepts/channels.md), where the chart-to-channel mapping is conjecture. The reading holds within one sparkline. Between two it holds only if the scale was shared on purpose, which neither graphic records.
 
 A gray normal-range band turns the task into a categorical above, inside or below judgment, the one question the form can answer without an axis, and the point of Tufte's clinical example.
 
 Shape, spikes and turning points are not value extraction, which the ranking's authors scope out ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)).
 
-## What it is measurably good at
+## What is measured
 
-No study in this corpus tests a sparkline.
+No study in this corpus tests a sparkline. Two nearby results do not settle it.
 
-## What it is measurably bad at
+[Gillan & Richman (1994)](../studies/gillan-richman-1994-data-ink.md), the one measurement of removing axis furniture, found that removing the y-axis line and the x axis generally *increased* response time, while removing tick marks helped. Each effect depended on graph type, task and the other elements present. The study page is `secondary-only`, the graphs were ordinary size, and trading guides for a place in a sentence was never tested.
 
-Nothing measured on this form.
+[Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) moved reader judgments by 129.5% on a line chart by changing the aspect ratio alone, with true values printed on the chart. On a sparkline the typography sets the height ([change-over-time.md](change-over-time.md)), and no study measured that case.
 
-[Gillan & Richman (1994)](../studies/gillan-richman-1994-data-ink.md), the one measurement of removing axis furniture, found that removing the y-axis line and the x axis generally *increased* response time, while removing tick marks helped. Each effect depended on graph type, task and the other elements present. The study page is `secondary-only`, the graphs were ordinary size, and trading guides for a place in a sentence was never tested. It does not settle this form.
-
-[Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) moved reader judgments by 129.5% on a line chart by changing the aspect ratio alone, with true values printed on the chart. On a sparkline the typography sets the height ([change-over-time.md](change-over-time.md)).
-
-## What is contested
-
-Nothing about this form. The data-ink argument it takes to its limit is contested ([refutations.md](../refutations.md)), and Tufte's midgap box plot, the one minimization of his anybody has measured, came out worse than the original ([edward-tufte.md](../people/edward-tufte.md)). Neither is evidence about sparklines.
+Nothing about this form is contested. The data-ink argument it takes to its limit is `contested` ([refutations.md](../refutations.md)), and Tufte's midgap box plot, the one minimization of his anybody has measured, came out worse than the original ([edward-tufte.md](../people/edward-tufte.md)). Neither is evidence about sparklines.
 
 ## The failure mode it invites
 
@@ -70,7 +64,7 @@ Nothing about this form. The data-ink argument it takes to its limit is conteste
 
 **Using one where a number would do.** A four-point series has no shape to show.
 
-All three follow from the structure and are untested on readers.
+All three follow from the structure and are untested on readers. `absence of evidence`.
 
 ## Justifying the choice
 
@@ -80,11 +74,11 @@ All three follow from the structure and are untested on readers.
 
 **Defensible, with the label said out loud:**
 
-- "The most recent value is printed beside the line, tied to it by one accent color." Tufte's construction, asserted rather than tested.
-- "The normal range is a gray band behind the line, so the reading is above, inside or below rather than a number." Same source and status.
-- "All forty sparklines in this table share one vertical scale, and the caption says so." Follows from the structure, untested.
+- "The most recent value is printed beside the line, tied to it by one accent color." Tufte's construction, `authority-asserted`.
+- "The normal range is a gray band behind the line, so the reading is above, inside or below rather than a number." Same source, `authority-asserted`.
+- "All forty sparklines in this table share one vertical scale, and the caption says so." Follows from the structure, untested on readers. `absence of evidence`.
 - "About fourteen letterspaces wide, so it sits in the line of text rather than interrupting it." Tufte's working width, `authority-asserted`.
-- "Its purpose is to be approximately right at a glance rather than exactly wrong at length." His defense of the resolution trade, under his stated target: "General idea = max[data], min[design]."
+- "Its purpose is to be approximately right at a glance rather than exactly wrong at length." His defense of the resolution trade, under his stated target: "General idea = max[data], min[design]." `authority-asserted`.
 
 **Commonly repeated, and the evidence does not support it:**
 

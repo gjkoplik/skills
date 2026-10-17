@@ -25,6 +25,35 @@ what the rule now is and links the entry here for why.
 
 ---
 
+## v2026.10.16
+
+A content pass over the chart-type tier: a one-page chooser, an uncertainty group, seven new type pages, and a shorter type-page template.
+
+### Added
+
+- [chart-types/choose.md](chart-types/choose.md). The whole chooser on one page: a data-shape test that rules groups out before the question is asked, the routing table, every group's forms table with its evidence state, and the refuted reason per group. The skill routes through it first.
+- [chart-types/uncertainty.md](chart-types/uncertainty.md), an index of this wiki's own for an estimate and its interval, which the FT has no family for and which the distribution index had housed for want of a better home. Indexes [interval-plot.md](chart-types/interval-plot.md), [gradient-plot.md](chart-types/gradient-plot.md) and the violin.
+- Type pages for the [interval plot](chart-types/interval-plot.md), [gradient plot](chart-types/gradient-plot.md), [small multiples](chart-types/small-multiples.md), [density plot](chart-types/density-plot.md), [parallel coordinates](chart-types/parallel-coordinates.md) and [horizon graph](chart-types/horizon-graph.md), each from the corpus only, each saying what is and is not measured.
+- [studies/heer-2009-horizon-graphs.md](studies/heer-2009-horizon-graphs.md), Heer, Kong & Agrawala's *Sizing the Horizon*, read at primary. The horizon graph page now cites it.
+
+### Changed
+
+- Type pages carry six sections instead of eight. `What is measured` replaces the three evidence sections, which on most pages held one line each. `validate.py` enforces the new set.
+- Evidence labels are written one way across the tier: inline, in backticks, from the four-term vocabulary. Inventory topic 88 is no longer "Mixed" and topic 67 is labeled contested.
+- [chart-types/dot-strip-plot.md](chart-types/dot-strip-plot.md) covers the strip plot and univariate scatterplot by name; two indexes no longer call the strip plot pageless.
+
+### Corrected
+- Six statistics checked against the source PDFs. The wiki misread three: [studies/skau-2015-embellished-bars.md](studies/skau-2015-embellished-bars.md) Table 2 p-values, [studies/isenberg-2011-dual-scale-charts.md](studies/isenberg-2011-dual-scale-charts.md) reports log error, not absolute error, and [studies/romano-2020-log-scales-covid.md](studies/romano-2020-log-scales-covid.md) Table 7 holds standard errors, so worry and business closure are significant. Three are the papers' own misprints, now said so on the page: Correll & Gleicher's F(2,2), Pandey's 0.02% cell, and Skau's identical SD columns.
+- The Datasaurus Dozen is Cairo's dinosaur plus twelve generated sets, thirteen in all ([studies/matejka-2017-datasaurus.md](studies/matejka-2017-datasaurus.md), [chart-types/correlation-matrix.md](chart-types/correlation-matrix.md)).
+
+- Stacked bar: normalizing to 100% keeps the bottom segment's position reading and gives the top segment a shared end line.
+- Treemap: aspect ratio 1 was the worst case measured, not the end of a trend.
+- Violin: the confidence means against the box plot are reported with no pairwise test.
+- Bubble chart: "least accurate of the measured channels" is scoped to Heer & Bostock's tested set.
+- Waffle: the whole-number-of-squares sentence holds only for shares that need no rounding.
+- Horizon graph: four bands, not four or more, is what was measured to cost time and error, and the two-band advantage below 24 pixels is against line and one-band charts of the same height.
+- Box plot: it has no bandwidth or bin width; the whisker rule and quantile definition are implementation choices.
+
 ## v2026.10.15
 
 A corpus-wide prose pass: every page rewritten for voice, length and audience, with every fact, quotation, number, link and evidence label kept.

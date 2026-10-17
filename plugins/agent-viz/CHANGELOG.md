@@ -14,6 +14,8 @@ rather than restating it.
 
 ### Changed
 
+- **A one-page chooser.** `SKILL.md` routes a chart decision through [wiki/chart-types/choose.md](wiki/chart-types/choose.md) first: data shape, then the reader's question, then the forms table per group. Indexes and type pages are the depth behind it, opened only as far as the doubt goes.
+- **An uncertainty group** in the routing table, for "how sure is this estimate" and "is the difference real", with its own index and two new type pages. Research entry under v2026.10.16 in [wiki/CHANGELOG.md](wiki/CHANGELOG.md).
 - **The whole wiki is rewritten for the agent reading it at decision time.** Shorter pages, record voice, no process narration; every fact, quotation and evidence label kept. The research entry is [wiki/CHANGELOG.md](wiki/CHANGELOG.md) under v2026.10.15.
 - `SKILL.md` drops its stale alias count and tightens without changing any rule. The chart-chooser routine is unchanged.
 - The README and CONTRIBUTING drop the account of the research run's internal process and keep what a user needs: install, what is here, what the research found, known gaps, and the retrieval hazards.

@@ -44,16 +44,16 @@ The reader's task here is usually a shape judgment (modality, skew, gaps, outlie
 
 | Form | What is drawn | Where it applies |
 |---|---|---|
-| Strip plot / univariate scatterplot *(no page yet)* | Every observation | n is small. The recommended form at the sample sizes Weissgerber et al. measured |
+| [Strip plot](dot-strip-plot.md) (univariate scatterplot) | Every observation | n is small. The recommended form at the sample sizes Weissgerber et al. measured |
 | [Beeswarm](beeswarm-plot.md) | Every observation, displaced sideways so none is hidden | Same intent as the strip plot, with collisions resolved deterministically rather than by jitter or overlap. Untested |
 | [Histogram](histogram.md) | Counts per bin | One variable, enough data, and modality or gaps matter |
 | [ECDF](ecdf-plot.md) | Every observation at its value against its rank, as a step function | The question is cumulative: what fraction is below a threshold, or where a quantile sits. No bin width and no bandwidth. Untested |
 | [Box plot](boxplot.md) | Five numbers per group | Many groups compared at once, and within-group shape is not the question |
 | [Violin plot](violin-plot.md) | A mirrored density estimate | Shape matters across groups, or a mean and its error are encoded on a symmetric continuous mark |
 | [Ridgeline](ridgeline-plot.md) | One density estimate per group, stacked and overlapping | Many groups in a known order share one value axis in one figure, with occlusion accepted to get them there. Untested |
-| Gradient plot *(no page yet)* | Continuous uncertainty around an estimate | The other alternative [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) tested, and they decline to rank it against the violin |
+| [Gradient plot](gradient-plot.md) | Continuous uncertainty around an estimate | The other alternative [Correll & Gleicher (2014)](../studies/correll-gleicher-2014-error-bars-harmful.md) tested, and they decline to rank it against the violin |
 
-Histogram-of-histograms and the small-multiple family have no page. A page is not a warrant, and a missing page is not a verdict. [beeswarm-plot.md](beeswarm-plot.md), [ridgeline-plot.md](ridgeline-plot.md) and [ecdf-plot.md](ecdf-plot.md) carry a decomposition and cautions, and no experiment in this source set tests any of the three against anything.
+Histogram-of-histograms has no page; [small-multiples.md](small-multiples.md) covers the device. A page is not a warrant, and a missing page is not a verdict. [beeswarm-plot.md](beeswarm-plot.md), [ridgeline-plot.md](ridgeline-plot.md) and [ecdf-plot.md](ecdf-plot.md) carry a decomposition and cautions, and no experiment in this source set tests any of the three against anything.
 
 Four constraints follow from the evidence rather than from taste:
 
@@ -102,7 +102,9 @@ If a reader could not reconstruct roughly how many observations sit behind each 
 - [beeswarm-plot.md](beeswarm-plot.md): the strip plot with collisions displaced deterministically
 - [ridgeline-plot.md](ridgeline-plot.md)
 - [ecdf-plot.md](ecdf-plot.md)
-- [dot-strip-plot.md](dot-strip-plot.md): the strip plot drawn for a ranking question, indexed primarily under [ranking.md](ranking.md)
+- [density-plot.md](density-plot.md)
+- [small-multiples.md](small-multiples.md): one panel per group at shared scales, for any of the forms above
+- [dot-strip-plot.md](dot-strip-plot.md): the strip plot, also indexed under [ranking.md](ranking.md)
 
 ## See also
 

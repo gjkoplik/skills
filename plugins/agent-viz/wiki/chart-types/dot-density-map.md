@@ -34,7 +34,7 @@ The form is defined for counts of discrete things with known locations, where th
 
 The dot value and placement rule decide what the map says, and neither is visible. Too high a dot value erases small concentrations, and too low saturates everything. Dots scattered at random inside a polygon fabricate a distribution at every finer scale.
 
-Total ink is proportional to the count, so weight follows the variable, not land area, and the form can carry totals where a [choropleth](choropleth-map.md) must not. Both points are definitional.
+Total ink is proportional to the count, so weight follows the variable, not land area, and the form can carry totals where a [choropleth](choropleth-map.md) must not. Past some density the dots fill solid and stop responding, exactly where the data concentrates. The threshold depends on dot size, dot value and resolution, and no source gives it. All three points are definitional.
 
 ## Channels
 
@@ -42,19 +42,9 @@ The count sits on density of marks over area. Cleveland & McGill's 1985 *Science
 
 [Bertin](../people/jacques-bertin.md) treats dot density as `grain`, ordered but not quantitative, though he allows ratios between coarse grains. `authority-asserted`, since Bertin ran no experiments. The form supports "more here than there", not "twice as much here as there."
 
-## What it is measurably good at
+## What is measured
 
-No study in this corpus tests the form or isolates its channel.
-
-## What it is measurably bad at
-
-Nothing measured. "Readers can compare these two densities" is unsupported rather than refuted.
-
-**Saturation.** Past some density the dots fill solid and stop responding, exactly where the data concentrates. Definitional. The threshold depends on dot size, dot value and resolution, and no source gives it.
-
-## What is contested
-
-Nothing contested in this corpus.
+No study in this corpus tests the form or isolates its channel, and nothing about it is contested. "Readers can compare these two densities" is `absence of evidence`, unsupported rather than refuted.
 
 ## The failure mode it invites
 

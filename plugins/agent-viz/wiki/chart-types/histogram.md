@@ -38,23 +38,15 @@ Bin width is a free parameter. Count and density axes draw the same shape at dif
 
 Bin membership and count are both position along a common scale, the count with length as a second reading ([channels.md](../concepts/channels.md), a conjectured mapping). That inheritance mostly does not apply. A histogram is drawn for shape, and the ranking is scoped to reading a value off a mark ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)). No study here measures perceiving bimodality or decomposes a histogram, as [Skau & Kosara](../studies/skau-kosara-2016.md) did the pie.
 
-## What it is measurably good at
+## What is measured
 
-No controlled study here tests histogram reading. Weissgerber et al.'s review of 703 physiology articles measured only prevalence: 85.6% included a bar graph and 8.0% a histogram.
+No controlled study here tests histogram reading. Weissgerber et al.'s review of 703 physiology articles measured only prevalence: 85.6% included a bar graph and 8.0% a histogram. The same review found a median minimum group size of 4, interquartile range 3 to 6. Calling histograms unreadable at those sizes is the authors' untested recommendation, made in favor of a univariate scatterplot.
 
-By construction, a reasonable bin width keeps the multimodality, gaps and asymmetry a mean and interval discard ([distribution.md](distribution.md)). Nobody has shown readers conclude better from it.
-
-## What it is measurably bad at
-
-**Small samples.** The review found a median minimum group size of 4, interquartile range 3 to 6. Calling histograms unreadable there is the authors' untested recommendation, in favor of a univariate scatterplot.
-
-Many-group comparison, reading values off bars, and overlay are reputed weaknesses, all untested.
-
-## What is contested
-
-Nothing contested. The record is mostly silent, which [evidence-class.md](../concepts/evidence-class.md) distinguishes from contested.
+By construction, a reasonable bin width keeps the multimodality, gaps and asymmetry a mean and interval discard ([distribution.md](distribution.md)). Nobody has shown readers conclude better from it. Many-group comparison, reading values off bars, and overlay are reputed weaknesses, all untested. `absence of evidence`.
 
 No evidence-backed bin-width rule exists here. Wilke treats bin width and bandwidth as analysis choices ([wilke-fundamentals.md](../sources/wilke-fundamentals.md), chapters 7 and 14). Sturges, Freedman-Diaconis, Scott and the square-root rule are distributional derivations, not reader results. `absence of evidence`.
+
+The record is silent rather than `contested` ([evidence-class.md](../concepts/evidence-class.md)).
 
 ## The failure mode it invites
 
@@ -79,7 +71,7 @@ No evidence-backed bin-width rule exists here. Wilke treats bin width and bandwi
 - "No padding between bars, so it reads as a continuous variable rather than as categories. Practitioner convention, not a measured result."
 - "This is a density, not a count, so the bars integrate to 1 and the heights depend on the bin width."
 
-**Commonly repeated, and not supported:**
+**Commonly repeated, and the evidence does not support it:**
 
 - ~~"The histogram is the default way to show a distribution."~~ The review that measured published sample sizes recommends plotting the observations, and nothing here measures how anyone reads one.
 - ~~"Use N bins, by rule."~~ Each named rule is a distributional derivation, untested on readers. `absence of evidence`.

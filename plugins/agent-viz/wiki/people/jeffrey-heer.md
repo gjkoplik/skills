@@ -39,10 +39,10 @@ The crossover against the length-encoded alternative, which [chart-types/treemap
 
 ### Horizon graphs: Heer, Kong & Agrawala (2009)
 
-*Sizing the Horizon* compared line charts with mirrored and layered variants across heights, scoring value-comparison error against a within-5-values target.
+[*Sizing the Horizon*](../studies/heer-2009-horizon-graphs.md) compared line charts with mirrored and layered variants across heights, scoring value-comparison error against a within-5-values target.
 
 - **Mirroring is free.** Flipping negatives above the axis in a different color "neither slowed estimation time nor hurt estimation accuracy," at half the height.
-- **Layering costs until the chart gets small.** Bands increased time and error at constant height, but two-band mirrored charts were more accurate below 24 pixels. Four or more bands were worse on both measures, and subjects called them tiring.
+- **Layering costs until the chart gets small.** Bands increased time and error at constant height, but two-band mirrored charts were more accurate below 24 pixels than line charts and one-band mirrored charts of the same height. Four bands, the most tested, were worse on both measures, and subjects called them tiring.
 - **The optimal size is small.** For line charts and one-band mirror charts, 24 pixels minimized estimation time without costing accuracy.
 
 Only value comparison was measured, and the authors note that "graphical perception of time series typically involves observing rates of change in addition to comparing values."
@@ -85,7 +85,7 @@ The task, since his 2018 paper found it changes the encoding ranking. The size, 
 |---|---|---|
 | Heer & Bostock (2010), "Crowdsourcing Graphical Perception," CHI | `primary-read` | [studies/heer-bostock-2010.md](../studies/heer-bostock-2010.md), [concepts/channels.md](../concepts/channels.md) |
 | Kong, Heer & Agrawala (2010), "Perceptual Guidelines for Creating Rectangular Treemaps," *TVCG* | `primary-read`, [PDF](https://idl.cs.washington.edu/files/2010-Treemaps-InfoVis.pdf) | No page. Has the crossover [chart-types/treemap.md](../chart-types/treemap.md) lacks. |
-| Heer, Kong & Agrawala (2009), "Sizing the Horizon," CHI | `primary-read`, [PDF](https://idl.cs.washington.edu/files/2009-TimeSeries-CHI.pdf) | No page. The evidence for the horizon graph, a missing type in [../README.md](../README.md). |
+| Heer, Kong & Agrawala (2009), "Sizing the Horizon," CHI | `primary-read`, [PDF](https://idl.cs.washington.edu/files/2009-TimeSeries-CHI.pdf) | [studies/heer-2009-horizon-graphs.md](../studies/heer-2009-horizon-graphs.md), the evidence for [chart-types/horizon-graph.md](../chart-types/horizon-graph.md). |
 | Kim & Heer (2018), "Assessing Effects of Task and Data Distribution on the Effectiveness of Visual Encodings," EuroVis | `primary-read`, [PDF](https://idl.cs.washington.edu/files/2018-TaskDataEffectiveness-EuroVis.pdf) | No page. The empirical counterpart to the scope critique [concepts/channels.md](../concepts/channels.md) states from a position paper. |
 | Satyanarayan, Moritz, Wongsuphasawat & Heer (2017), "Vega-Lite: A Grammar of Interactive Graphics," *TVCG* | `primary-read`, [PDF](https://idl.cs.washington.edu/files/2017-VegaLite-InfoVis.pdf) | Behind [sources/vega-lite.md](../sources/vega-lite.md), which covers the documentation, not the paper. |
 | Bostock, Ogievetsky & Heer (2011), "D3: Data-Driven Documents," and Bostock & Heer (2009), "Protovis" | `not-reached` | No page. Listed for the lineage, below. |

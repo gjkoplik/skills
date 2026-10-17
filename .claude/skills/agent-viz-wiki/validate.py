@@ -85,17 +85,20 @@ for p, (fm, body) in pages.items():
             fail.append(f"{p.name} claims '{r}' but {r}.md does not list it")
 
 # 4b. chart-type pages carry the required sections, in the required shape.
-# The shape is non-negotiable and was previously enforced only by prose in the brief,
-# which let one page merge two required sections into "measurably good at, and bad at".
+# "What is measured" replaced three sections (measurably good at, measurably bad at,
+# contested) on 2026-10-15; most pages had nothing to put in them but one line each.
 REQUIRED_TYPE_SECTIONS = [
     "When to reach for it, and when not",
     "Structural decomposition",
     "Channels",
+    "What is measured",
+    "The failure mode it invites",
+    "Justifying the choice",
+]
+RETIRED_TYPE_SECTIONS = [
     "What it is measurably good at",
     "What it is measurably bad at",
     "What is contested",
-    "The failure mode it invites",
-    "Justifying the choice",
 ]
 for p, (fm, body) in pages.items():
     if not fm or fm.get("type") != "chart-type":
@@ -104,6 +107,9 @@ for p, (fm, body) in pages.items():
     for want in REQUIRED_TYPE_SECTIONS:
         if want not in heads:
             fail.append(f"missing required section '{want}': {p.relative_to(W)}")
+    for gone in RETIRED_TYPE_SECTIONS:
+        if gone in heads:
+            fail.append(f"retired section '{gone}' still present: {p.relative_to(W)}")
     # a header block belongs to research pages, never to a chart-type or index page
     if re.search(r"^\*\*(Status|What it is good for|What it does not settle)\.", body, re.M):
         fail.append(f"chart-type page carries a research header block: {p.relative_to(W)}")

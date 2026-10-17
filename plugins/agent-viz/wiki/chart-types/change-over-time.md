@@ -53,9 +53,9 @@ Both axes are position along a common scale, the most accurately read channel ([
 | [Sparkline](sparkline.md) | Shape alone, with the axes removed by design | Inside a sentence or a table row, with no value to read off |
 | Column over time *(no page yet)* | Length from zero | Few discrete periods of counted quantities, the value mattering more than the trend |
 
-Fan charts and horizon graphs have no page. No study here tests them, or the bump chart, stacked area chart, streamgraph or sparkline.
+Fan charts have no page. No study here tests them, or the bump chart, stacked area chart, streamgraph or sparkline.
 
-- **Aspect ratio** is a free choice that no rule in this corpus settles, and a library default is an unmade choice. Banking to 45 degrees is scope-limited ([line-chart.md](line-chart.md#what-is-contested)).
+- **Aspect ratio** is a free choice that no rule in this corpus settles, and a library default is an unmade choice. Banking to 45 degrees is scope-limited ([line-chart.md](line-chart.md#what-is-measured)).
 - **Missing values** are drawn as missing. Highlighting beat downplaying beat removal on perceived data quality, and zero-filling was the worst imputation tested (Song & Szafir).
 
 ## Justifying the choice
@@ -96,6 +96,8 @@ Fan charts and horizon graphs have no page. No study here tests them, or the bum
 - [dumbbell-plot.md](dumbbell-plot.md): primarily ranking, here when the two values are two dates
 - [stacked-bar.md](stacked-bar.md): primarily part-to-whole, here for repeated composition
 - [connected-scatterplot.md](connected-scatterplot.md): primarily correlation
+- [horizon-graph.md](horizon-graph.md)
+- [small-multiples.md](small-multiples.md): one panel per series at shared scales
 
 ## See also
 

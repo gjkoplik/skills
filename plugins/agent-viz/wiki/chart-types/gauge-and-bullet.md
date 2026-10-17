@@ -38,25 +38,21 @@ That is `authority-asserted`, with no experiment in this corpus comparing a big 
 | Coordinates | Polar, restricted to a sector | Cartesian, one quantitative axis |
 | Guides | The arc's tick labels, and the zone boundaries | A label, one linear quantitative scale, and the band breaks |
 
-The difference is the channel, and it is definitional: angular position for the gauge, position and length along a common scale for the bullet. The bullet's five components (a label, one linear quantitative scale, a featured measure, one or two comparative measures, two to five qualitative ranges) come from its design specification, `primary-read` through [people/stephen-few.md](../people/stephen-few.md).
+The difference is the channel, and it is definitional: angular position for the gauge, position and length along a common scale for the bullet. The bullet's five components (a label, one linear quantitative scale, a featured measure, one or two comparative measures, two to five qualitative ranges) come from its design specification, `primary-read` through [people/stephen-few.md](../people/stephen-few.md). A gauge spends a figure on one number, so eight measures take eight dials. The bullet's small footprint is its design case.
 
 ## Channels
 
-The bullet graph reads like a [bar chart](bar-chart.md), position along a common scale, with the comparative marker on the same scale. The step from mark to channel is conjecture ([channels.md](../concepts/channels.md)). The gauge's angle-in-an-arc has no entry in the Cleveland & McGill list. Its nearest tasks in the 1984 table are position along nonaligned scales and angle, and which applies is a guess. Both rank below position along a common scale in proportional-judgment tasks, measured and replicated. Nobody has decomposed a gauge the way [Skau & Kosara](../studies/skau-kosara-2016.md) decomposed the pie.
+The bullet graph reads like a [bar chart](bar-chart.md), position along a common scale, with the comparative marker on the same scale. The step from mark to channel is conjecture ([channels.md](../concepts/channels.md)). The specification says "Its linear design not only gives it a small footprint, but also supports more efficient reading than radial meters" ([people/stephen-few.md](../people/stephen-few.md)), and cites no test. `authority-asserted`.
+
+The gauge's angle-in-an-arc has no entry in the Cleveland & McGill list. Its nearest tasks in the 1984 table are position along nonaligned scales and angle, and which applies is a guess. Both rank below position along a common scale in proportional-judgment tasks, `evidence-backed` and replicated. Nobody has decomposed a gauge the way [Skau & Kosara](../studies/skau-kosara-2016.md) decomposed the pie.
+
+[Stephen Few](../people/stephen-few.md) spent years attacking dashboard gauges, then designed the replacement, and nobody here argues back. No experiment in this source set supports the familiar criticisms (an imprecise needle, arbitrary zones, a wasteful footprint). `absence of evidence`.
 
 Zones and bands use color for which qualitative range a value falls in, identity work that hue and lightness steps do well and no accuracy table scores.
 
-## What it is measurably good at
+## What is measured
 
-No study in this corpus uses either form as a stimulus, tests one against the other, or tests either against a bar chart or a printed number. `absence of evidence`.
-
-## What it is measurably bad at
-
-Nothing measured. The gauge's angle penalty is inherited, not observed on gauges. A gauge spends a figure on one number, so eight measures take eight dials. The bullet's small footprint is its design case. The specification says "Its linear design not only gives it a small footprint, but also supports more efficient reading than radial meters" ([people/stephen-few.md](../people/stephen-few.md)), and cites no test.
-
-## What is contested
-
-Nothing contested in this corpus. [Stephen Few](../people/stephen-few.md) spent years attacking dashboard gauges, then designed the replacement, and nobody here argues back. No experiment in this source set supports the familiar criticisms (an imprecise needle, arbitrary zones, a wasteful footprint). `absence of evidence`.
+No study in this corpus tests the form. None uses either geometry as a stimulus, tests one against the other, or tests either against a bar chart or a printed number. `absence of evidence`. The gauge's angle penalty is inherited from channel studies, not observed on gauges.
 
 ## The failure mode it invites
 

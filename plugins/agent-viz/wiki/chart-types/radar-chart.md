@@ -41,19 +41,11 @@ Permuting the axes leaves every value unchanged and changes the polygon's area a
 
 Radial position on each axis, with a shared origin but no shared direction. The nearest task on Cleveland & McGill's list is position along nonaligned scales, a step down from a common scale. That mapping is conjecture, and nobody has decomposed this form the way [Skau & Kosara](../studies/skau-kosara-2016.md) decomposed the pie ([channels.md](../concepts/channels.md)).
 
-Enclosed area is the salient secondary reading, and area is read less accurately than position, measured. Whether readers use it here is untested.
+Enclosed area is the salient secondary reading, and area is read less accurately than position, `evidence-backed`. Whether readers use it here is untested.
 
-## What it is measurably good at
+## What is measured
 
-No study in this corpus tests the form.
-
-## What it is measurably bad at
-
-Nothing measured. This source set has neither a proportional-judgment task against a bar chart of the same measures, which would settle value reading, nor a profile-matching task, which would test what the form claims.
-
-## What is contested
-
-Nothing, since there is no record to disagree with itself ([evidence-class.md](../concepts/evidence-class.md)). The familiar criticisms, that the form breaks down past a few axes, that overlaid polygons are unreadable and that the area misleads, are plausible and unsupported here. `absence of evidence`.
+No study in this corpus tests the form. This source set has neither a proportional-judgment task against a bar chart of the same measures, which would settle value reading, nor a profile-matching task, which would test what the form claims. With no record, nothing can be contested ([evidence-class.md](../concepts/evidence-class.md)). The familiar criticisms, that the form breaks down past a few axes, that overlaid polygons are unreadable and that the area misleads, are plausible and unsupported here. `absence of evidence`.
 
 ## The failure mode it invites
 

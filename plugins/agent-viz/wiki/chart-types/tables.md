@@ -63,7 +63,7 @@ Four constraints, all `authority-asserted`:
 
 **Defensible, evidence-backed:**
 
-- "The long description is printed as headings, text and a table, which is one of the three patterns the W3C's own tutorial gives." Evidence-backed as a standard, not as an experiment ([w3c-wai-complex-images.md](../sources/w3c-wai-complex-images.md)).
+- "The long description is printed as headings, text and a table, which is one of the three patterns the W3C's own tutorial gives." `evidence-backed` as a standard, not as an experiment ([w3c-wai-complex-images.md](../sources/w3c-wai-complex-images.md)).
 
 No study in this corpus compares a table against a chart on any task.
 

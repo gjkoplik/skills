@@ -37,23 +37,17 @@ It is a [line chart](line-chart.md) with two x positions and direct labels, and 
 
 Endpoints are position along a common scale ([channels.md](../concepts/channels.md)). As for every form, the step from mark to channel is conjecture. The change is on slope, which Cleveland & McGill could not rank: the authors "have been unable to distinguish the relative accuracy of some tasks, such as judging slope and judging angle," and call their ordering "a tentative working hypothesis."
 
-## What it is measurably good at
+## What is measured
 
-No study in this corpus tests the form. The nearest stimulus, [Talbot et al. (2012)](../studies/talbot-2012-slope-ratio.md), put segment pairs in opposite quadrants so their y-extents could not be compared, unlike a slope chart. Three findings transfer: slope-ratio judgment is error-prone, people spontaneously use different strategies without noticing, and a visible baseline nearly eliminated the error below 45 degrees and did not eliminate it above.
+No study in this corpus tests the form. The nearest stimulus, [Talbot et al. (2012)](../studies/talbot-2012-slope-ratio.md), put segment pairs in opposite quadrants so their y-extents could not be compared, unlike a slope chart. Three of its findings transfer, `evidence-backed` on isolated segments. Slope-ratio judgment is error-prone. People spontaneously use different strategies without noticing. A visible baseline nearly eliminated the error below 45 degrees and did not eliminate it above.
 
-## What it is measurably bad at
-
-Nothing measured. The vertical scale sets every slope at once, a manipulation measured on the [line chart](line-chart.md#what-it-is-measurably-bad-at) to move judgments substantially.
-
-## What is contested
-
-Nothing contested in this corpus.
+The vertical scale sets every slope at once. On the [line chart](line-chart.md#what-is-measured) that manipulation was measured to move judgments substantially, `evidence-backed` for line charts and untested here. Nothing is contested in this corpus.
 
 ## The failure mode it invites
 
 **Cherry-picked endpoints.** Two points hide the choice of periods and leave no shape to contradict the story. `authority-asserted`.
 
-**Too many categories.** Segments converge, labels collide and crossings tangle. The threshold is unmeasured convention. Schwabish and Knaflic recommend the form routinely ([jonathan-schwabish.md](../people/jonathan-schwabish.md), [cole-nussbaumer-knaflic.md](../people/cole-nussbaumer-knaflic.md)) without experiments.
+**Too many categories.** Segments converge, labels collide and crossings tangle. The threshold is unmeasured convention, `authority-asserted`. Schwabish and Knaflic recommend the form routinely ([jonathan-schwabish.md](../people/jonathan-schwabish.md), [cole-nussbaumer-knaflic.md](../people/cole-nussbaumer-knaflic.md)) without experiments.
 
 ## Justifying the choice
 

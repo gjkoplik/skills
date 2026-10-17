@@ -10,7 +10,7 @@ A base geography drawn as filled polygons, each region's fill color encoding one
 
 ## When to reach for it, and when not
 
-The form is defined for regions the reader already thinks in, a rate or other intensive quantity that holds at every point inside a region, and a geographic rather than ordinal pattern. The FT's gloss carries two rules: a basic choropleth "should always be rates rather than totals and use a sensible base geography" ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). The base geography sets the units of analysis, and administrative boundaries were not drawn for the variable.
+The form is defined for regions the reader already thinks in, a rate or other intensive quantity that holds at every point inside a region, and a geographic rather than ordinal pattern. The FT's gloss carries two rules: a basic choropleth "should always be rates rather than totals and use a sensible base geography" ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). The base geography sets the units of analysis, and administrative boundaries were not drawn for the variable. Because each value sits where its region is, a reader who does not know the region names can still see a regional pattern, `absence of evidence`.
 
 | The question | Alternative |
 |---|---|
@@ -33,7 +33,9 @@ The form is defined for regions the reader already thinks in, a rate or other in
 | Coordinates | A named map projection |
 | Guides | A color legend or colorbar with units, and the projection named. No axis exists |
 
-The geometry takes no input from the data. Every mark's shape, position and size are fixed before any value arrives, where in every other filled-area chart the extent is the encoding. The transform holds the two decisions that change the picture most, the denominator and the binning, and the drawing shows neither.
+The geometry takes no input from the data. Every mark's shape, position and size are fixed before any value arrives, where in every other filled-area chart the extent is the encoding. So land area sets a region's visual weight, and large sparse regions dominate while small dense ones vanish. The transform holds the two decisions that change the picture most, the denominator and the binning, and the drawing shows neither.
+
+The rates rule follows from the geometry. The mark asserts one value across a whole territory, which a rate, a property of points inside the region, can bear. A total painted across a polygon claims the count is spread evenly and matters in proportion to land area. A proportional symbol map instead sets the mark's area by the value and uses geography only to place it.
 
 ## Channels
 
@@ -41,19 +43,9 @@ The value sits on color lightness, usually with saturation, and position on the 
 
 For [Bertin](../people/jacques-bertin.md), `valeur` (lightness) is ordered but not quantitative, since white cannot serve as a unit for measuring gray. A choropleth supports "more here than there" and not "twice as much there as here". `authority-asserted`; Bertin ran no experiments.
 
-## What it is measurably good at
+## What is measured
 
-No study in this corpus tests a choropleth, or any map ([spatial.md](spatial.md)). The form puts each value where its thing is, so a reader who does not know the region names can still see a regional pattern. Undisputed, and unmeasured.
-
-## What it is measurably bad at
-
-Nothing measured on this form. By definition, land area sets a region's visual weight, so large sparse regions dominate and small dense ones vanish. Whether that biases readers' conclusions is not tested in this corpus.
-
-The rates rule follows. The mark asserts one value across a whole territory, which a rate, a property of points inside the region, can bear. A total painted across a polygon claims the count is spread evenly and matters in proportion to land area. A proportional symbol map instead sets the mark's area by the value and uses geography only to place it.
-
-## What is contested
-
-Nothing contested in this corpus. Classification is the biggest open decision: how many bins, where the breaks fall, or none. A different break set can create or erase a pattern without any number changing. Cairo's *The Truthful Art* covers it by its contents and is [`secondary-only`](../sources/cairo-truthful-art.md), so nothing it recommends is vouched here. [Wilke](../sources/wilke-fundamentals.md), read at primary, gives four to six bins as a working range, `authority-asserted`. No reader experiment here. `absence of evidence`.
+No study in this corpus tests the form, or any map ([spatial.md](spatial.md)). Whether land-area weighting biases readers' conclusions is untested, `absence of evidence`.
 
 ## The failure mode it invites
 
@@ -63,7 +55,7 @@ Nothing contested in this corpus. Classification is the biggest open decision: h
 
 **Two choropleths on two color scales.** The comparison fails while every cue invites it. One fixed scale across panels, or the difference mapped, avoids it.
 
-**The default binning**, chosen for no particular distribution. `authority-asserted`, and cheap to check with another break set.
+**The default binning**, chosen for no particular distribution. How many bins, where the breaks fall, or none, is the biggest open decision on the form, and a different break set can create or erase a pattern without any number changing. Cairo's *The Truthful Art* covers it by its contents and is [`secondary-only`](../sources/cairo-truthful-art.md), so nothing it recommends is vouched here. [Wilke](../sources/wilke-fundamentals.md), read at primary, gives four to six bins as a working range, `authority-asserted`. No reader experiment here tests classification, `absence of evidence`.
 
 ## Justifying the choice
 

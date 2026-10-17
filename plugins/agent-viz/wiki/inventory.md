@@ -32,15 +32,15 @@ The inventory has not been verified topic by topic, and sources reached only in 
 
   The stronger form is scoped by mark, not by axis. Observable Plot forces zero only on radius and opacity, where area encodes the value. The FT Visual Vocabulary scopes it per chart type ("Column... Must always start at 0" against "Lollipop... does not HAVE to start at zero"), and both its zero statements sit in its Magnitude category, so its rule is by mark *within* the size-comparison task ([sources/ft-visual-vocabulary.md](sources/ft-visual-vocabulary.md)). Schwabish scopes it to bars and columns. The independence of these sources is unaudited: Schwabish is behind the Urban Institute guide ([sources/urban-institute.md](sources/urban-institute.md)), so he and Urban are one source.
 
-**10. Axis truncation as a deception vector.** A truncated axis is disclosed on the figure. *Mechanizable*: data range against axis range. Pandey et al., CHI 2015: distorted charts produced responses "between 58.5% and 129.5% bigger than the control condition" (n=330). **Evidence-backed.**
+**10. Axis truncation as a deception vector.** A truncated axis is disclosed on the figure. *Mechanizable*: data range against axis range. Pandey et al., CHI 2015: distorted charts produced responses "between 58.5% and 129.5% bigger than the control condition" (n=330). Evidence-backed.
 
-**11. Inverted or unconventional axis direction.** Inversion reverses the conclusion, not just the effort, and carries a loud label. *Mechanizable*: `ax.yaxis_inverted()`. Pandey et al. 2015 names it among the most common distortions. **Evidence-backed.**
+**11. Inverted or unconventional axis direction.** Inversion reverses the conclusion, not just the effort, and carries a loud label. *Mechanizable*: `ax.yaxis_inverted()`. Pandey et al. 2015 names it among the most common distortions. Evidence-backed.
 
 **12. Log and other nonlinear scales.** A log axis is labeled as log; bars on a log scale start at 1, not 0. *Mechanizable*. Wilke ch. 17. Authority-asserted.
 
 **13. Dual axes.** Two y-axes invite a false correlation. *Mechanizable*: detection of `twinx()` / `twiny()`. Urban: "Charts that have two axes should be avoided", but its current text names two exceptions (unit translations like Fahrenheit/Celsius, and Pareto charts), and Datawrapper now ships a dual-axis chart type. Authority-asserted, and the authorities have softened. No experiment supports a flat ban ([refutations](refutations.md)).
 
-**14. Aspect ratio.** The ratio decides which slope differences are readable, and a library default is not set for the slope comparison at hand. *Mechanizable in principle, contested in practice*. Talbot, Gerth & Hanrahan. Two of their papers are often conflated: arc-length banking (InfoVis 2011) and the slope-ratio model (InfoVis 2012). **Evidence-backed**, with Cleveland's own caveat that banking "needs to be tempered with judgment". **Secondary source for the Cleveland quote.** See [studies/talbot-2012-slope-ratio.md](studies/talbot-2012-slope-ratio.md).
+**14. Aspect ratio.** The ratio decides which slope differences are readable, and a library default is not set for the slope comparison at hand. *Mechanizable in principle, contested in practice*. Talbot, Gerth & Hanrahan. Two of their papers are often conflated: arc-length banking (InfoVis 2011) and the slope-ratio model (InfoVis 2012). Evidence-backed, with Cleveland's own caveat that banking "needs to be tempered with judgment". **Secondary source for the Cleveland quote.** See [studies/talbot-2012-slope-ratio.md](studies/talbot-2012-slope-ratio.md).
 
 **15. Axis tick density and formatting.** Few enough ticks to read, formatted in the reader's units. *Mechanizable*. BBC cookbook sections on thousands separators and percent symbols. Authority-asserted.
 
@@ -62,9 +62,9 @@ The inventory has not been verified topic by topic, and sources reached only in 
 
 **23. Colormap class matched to data type.** Sequential for ordered, diverging for a meaningful midpoint, cyclic for wraparound, qualitative for unordered. Never crossed. *Mechanizable*: the named colormap's registered category against the column's inferred type. matplotlib, *Choosing Colormaps*. Authority-asserted.
 
-**24. Perceptual uniformity.** A perceptually uniform ramp makes equal data steps look equal. *Mechanizable*: allowlist. matplotlib: "the human brain perceives changes in the lightness parameter as changes in the data much better than, for example, changes in hue." **Evidence-backed** (the CIELAB claim is a measured perceptual result).
+**24. Perceptual uniformity.** A perceptually uniform ramp makes equal data steps look equal. *Mechanizable*: allowlist. matplotlib: "the human brain perceives changes in the lightness parameter as changes in the data much better than, for example, changes in hue." Evidence-backed (the CIELAB claim is a measured perceptual result).
 
-**25. Rainbow / jet / turbo.** On quantitative data they band, they reverse, and they fail in grayscale. *Mechanizable*: denylist. matplotlib on the grayscale failure. Authority-asserted with an evidence-backed lightness argument. **Contested at the edges**: Observable Plot ships turbo as its default continuous scheme "chosen primarily to ensure high-contrast visibility". See refutations.
+**25. Rainbow / jet / turbo.** On quantitative data they band, they reverse, and they fail in grayscale. *Mechanizable*: denylist. matplotlib on the grayscale failure. Authority-asserted with an evidence-backed lightness argument. Contested at the edges: Observable Plot ships turbo as its default continuous scheme "chosen primarily to ensure high-contrast visibility". See refutations.
 
 **26. Color-vision deficiency.** The assumed reader is red-green colorblind, and the palette is checked rather than eyeballed. *Mechanizable*: a CVD simulation with pairwise separation checked. matplotlib: "avoiding colormaps with both red and green will avoid many problems in general." Wilke ch. 19. Authority-asserted.
 
@@ -80,7 +80,7 @@ The inventory has not been verified topic by topic, and sources reached only in 
 
 **32. Diverging-scale midpoint.** Set to a meaningful value and labeled. *Mechanizable*: `TwoSlopeNorm` / `vcenter` is explicit. Urban, Map Colors. Authority-asserted.
 
-**33. Text and background contrast.** *Mechanizable*: WCAG relative-luminance ratio, ~30 minutes to implement, seconds to run. Urban cites WCAG 2.0 AA at 4.5:1 for normal text. **Evidence-backed** (a published standard). WCAG AA is 3:1 for graphical objects and 4.5:1 for text, and Chartability adopts those figures. Datawrapper's house floor is softer: 2.5 for big text, 4 for small.
+**33. Text and background contrast.** *Mechanizable*: WCAG relative-luminance ratio, ~30 minutes to implement, seconds to run. Urban cites WCAG 2.0 AA at 4.5:1 for normal text. Evidence-backed (a published standard). WCAG AA is 3:1 for graphical objects and 4.5:1 for text, and Chartability adopts those figures. Datawrapper's house floor is softer: 2.5 for big text, 4 for small.
 
   The 4.5:1 text floor is SC 1.4.3, from WCAG 2.0. The 3:1 graphical-object floor is SC 1.4.11 Non-text Contrast, absent from WCAG 2.0 (which stops at 1.4.9). It entered in 2.1 and is unchanged in WCAG 2.2, the current Recommendation of 12 December 2024. So the mark floor is not part of the WCAG 2.0 AA that Urban's guide names.
 
@@ -116,9 +116,9 @@ The inventory has not been verified topic by topic, and sources reached only in 
 
 **48. Uncertainty is displayed, not omitted.** A bare point estimate asserts precision the data may not support. *Judgment* on representation. *Mechanizable floor*: an estimator plotted with no interval artist is flagged. Wilke ch. 16. Authority-asserted.
 
-**49. Error-bar semantics must be stated.** SD, SE, 95% CI or bootstrap percentile, on the figure. *Mechanizable*: the kind appears in legend or caption. seaborn on spread versus uncertainty; Correll & Gleicher, IEEE TVCG 2014: "the encoding of mean and error significantly changes how viewers make decisions about uncertain data." **Evidence-backed.**
+**49. Error-bar semantics must be stated.** SD, SE, 95% CI or bootstrap percentile, on the figure. *Mechanizable*: the kind appears in legend or caption. seaborn on spread versus uncertainty; Correll & Gleicher, IEEE TVCG 2014: "the encoding of mean and error significantly changes how viewers make decisions about uncertain data." Authority-asserted for the labeling rule itself (Cumming et al. 2007, rule 1); evidence-backed that readers misread intervals, with or without labels (Belia et al. 2005).
 
-**50. Show the distribution, not only the summary.** *Partly mechanizable*: bar-of-mean plus errorbar is flagged. seaborn: "You should always ask yourself whether it's best to use a plot that displays only a summary statistic and error bar. In many cases, it isn't." Matejka & Fitzmaurice's Datasaurus is the illustration. **Evidence-backed for the seaborn claim; the Datasaurus is a construction, not an experiment.**
+**50. Show the distribution, not only the summary.** *Partly mechanizable*: bar-of-mean plus errorbar is flagged. seaborn: "You should always ask yourself whether it's best to use a plot that displays only a summary statistic and error bar. In many cases, it isn't." Matejka & Fitzmaurice's Datasaurus is the illustration. Authority-asserted for the seaborn claim, which is library documentation; the Datasaurus is a construction, not an experiment; the four-datasets-one-bar demonstration in Weissgerber et al. 2015 is evidence-backed.
 
 **51. Asymmetric / impossible intervals.** Symmetric bars on skewed data extend past physically possible values. *Mechanizable*: bounds stay inside the variable's domain. seaborn. Authority-asserted.
 
@@ -156,7 +156,7 @@ The inventory has not been verified topic by topic, and sources reached only in 
 
 **66. Gridline discipline.** Gridlines run perpendicular to the variable of interest, light and minimal, or absent. *Mechanizable*. Wilke ch. 23; BBC's theme blanks the x grid and lightens the y. Authority-asserted.
 
-**67. Data-ink discipline, and its contested status.** Ink that is not carrying data is cut, *within reason*. Maximal minimalism is not settled. *Partly mechanizable*: a count of decorative artists. Tufte, quoted and italicized by Wilke in ch. 23: "Maximize the data-ink ratio, *within reason*." Against it, Bateman et al., CHI 2010: embellished-chart accuracy "no worse than for plain charts", recall after two to three weeks "significantly better". The authority claim and the experiment sit on opposite sides of this topic.
+**67. Data-ink discipline, and its contested status.** Ink that is not carrying data is cut, *within reason*. Maximal minimalism is not settled. *Partly mechanizable*: a count of decorative artists. Tufte, quoted and italicized by Wilke in ch. 23: "Maximize the data-ink ratio, *within reason*." Against it, Bateman et al., CHI 2010: embellished-chart accuracy "no worse than for plain charts", recall after two to three weeks "significantly better". The authority claim and the experiment sit on opposite sides of this topic. Contested.
 
 **68. 3D avoidance.** No 3D unless the data is three-dimensional. *Mechanizable*: a grep for `projection='3d'`. Wilke ch. 26; Munzner's "No Unjustified 3D"; Urban. Authority-asserted.
 
@@ -166,7 +166,7 @@ The inventory has not been verified topic by topic, and sources reached only in 
 
 ## H. Accessibility
 
-**71. Alt text and long description.** A short alt text to identify, a longer description of what the data shows. *Mechanizable* as a presence check; content is judgment. W3C WAI, *Complex Images*: the two-part pattern. **Evidence-backed** (a published standard). Urban: "Alternative text should present the content and function, not necessarily a description, of an image."
+**71. Alt text and long description.** A short alt text to identify, a longer description of what the data shows. *Mechanizable* as a presence check; content is judgment. W3C WAI, *Complex Images*: the two-part pattern. Evidence-backed (a published standard). Urban: "Alternative text should present the content and function, not necessarily a description, of an image."
 
 **72. Underlying data reachable.** The reader has a path to the numbers. *Mechanizable*. Datawrapper: "a reader with a visual impairment has the possibility to download the data." Authority-asserted.
 
@@ -206,7 +206,7 @@ The inventory has not been verified topic by topic, and sources reached only in 
 
 **87. Consistent but not repetitive across a set.** Visual language holds constant; the idiom varies when the analysis changes. *Judgment*. Wilke ch. 29. Authority-asserted.
 
-**88. Memorability.** Distinctiveness aids recall, but not at the cost of clarity. *Judgment*. Wilke ch. 29; empirically supported on recall by Bateman et al. 2010. Mixed.
+**88. Memorability.** Distinctiveness aids recall, but not at the cost of clarity. *Judgment*. Wilke ch. 29; empirically supported on recall by Bateman et al. 2010. Evidence-backed on recall. Authority-asserted on clarity.
 
 **89. Emotive quality.** A figure nobody looks at communicates nothing. *Judgment*. Few's profile splits criteria into informative and emotive, with Aesthetics and Engagement in the latter. Authority-asserted. **Secondary source only.**
 

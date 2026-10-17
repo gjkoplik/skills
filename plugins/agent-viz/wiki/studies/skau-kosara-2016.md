@@ -18,7 +18,7 @@ Drew Skau and Robert Kosara, "Arcs, Angles, or Areas: Individual Data Encodings 
 
 ## Three encodings in one slice
 
-A pie slice encodes one number three times: as a center angle, an arc length and a wedge area. Cleveland & McGill conjectured angle was primary and said so in those words, and the paper cites Bertin, Robbins and Munzner as treating angle as the mechanism. Nobody had isolated the three. The one prior attempt, Eells (1926), asked people what they had done: 51% arc length, 25% area, 23% angle, 1% chord length. That is self-report, not measurement, and it points the same way as the results below.
+A pie slice encodes one number three times: as a center angle, an arc length and a wedge area. Cleveland & McGill conjectured angle was primary and said so in those words, and the paper cites Bertin, Robbins and Munzner as treating angle as the mechanism. Nobody had isolated the three. The one prior attempt, Eells (1926), asked people what they had done. The paper reports the methods his participants named as used "exclusively or predominantly": 51% arc length, 25% area, 23% angle, 1% chord length. That is self-report, not measurement, and it points the same way as the results below. Figure 8 sets these beside this study's own self-reports, which had "far more answers for area".
 
 ## Method
 

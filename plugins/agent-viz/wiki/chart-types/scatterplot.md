@@ -33,7 +33,7 @@ The form is defined for units carrying both values, a question about the joint d
 | Coordinates | Cartesian |
 | Guides | Two axes with labels and units. A legend only once a third variable is encoded |
 
-Unlike a bar chart of means, a box plot or a histogram, it puts no computed statistic between the reader and the rows. That is `definitional`, not a finding about readers.
+Unlike a bar chart of means, a box plot or a histogram, it puts no computed statistic between the reader and the rows. That is definitional, not a finding about readers.
 
 ## Channels
 
@@ -41,17 +41,11 @@ Both axes are position along a common scale, the most accurately read channel in
 
 The nearest elementary task is direction, the slope between two points. The paper ranks it level with length and angle: "at the moment there is not enough information to separate the ties." Any ordering of the three comes from a later table that [calls itself](../people/william-cleveland.md) "a tentative working hypothesis."
 
-## What it is measurably good at
+## What is measured
 
-Value lookup on either axis, inherited. No study in this corpus tests the form itself.
+No study in this corpus tests the form itself. Under overplotting, apparent density depends on marker size, alpha and draw order, and the cost to readers is `absence of evidence`. Finding one named point is visual search, which the ranking does not score.
 
-## What it is measurably bad at
-
-Nothing measured. Under overplotting, apparent density depends on marker size, alpha and draw order, and the cost to readers is `absence of evidence`. Finding one named point is visual search, which the ranking does not score.
-
-## What is contested
-
-**Aspect ratio**, which decides which slope differences are visible. "Bank to 45 degrees" is scope-limited, not refuted ([Talbot, Gerth & Hanrahan 2012](../studies/talbot-2012-slope-ratio.md); [refutations.md](../refutations.md#bank-to-45-degrees)): "In general, slope ratio errors are not minimized around 45°". Cleveland's model replicates inside his sampled range, and the shift below 30 degrees belongs to one of two strategies subjects used. The replacement is flatter and wider than banking algorithms produce. A visible baseline nearly eliminated error below 45 degrees and did nothing above. The stimulus was two isolated line segments, and the authors name transfer to real plots as the major limitation.
+Aspect ratio, which decides which slope differences are visible, is `contested`. "Bank to 45 degrees" is scope-limited, not refuted ([Talbot, Gerth & Hanrahan 2012](../studies/talbot-2012-slope-ratio.md); [refutations.md](../refutations.md#bank-to-45-degrees)): "In general, slope ratio errors are not minimized around 45°". Cleveland's model replicates inside his sampled range, and the shift below 30 degrees belongs to one of two strategies subjects used. The replacement is flatter and wider than banking algorithms produce. A visible baseline nearly eliminated error below 45 degrees and did nothing above. The stimulus was two isolated line segments, and the authors name transfer to real plots as the major limitation.
 
 ## The failure mode it invites
 

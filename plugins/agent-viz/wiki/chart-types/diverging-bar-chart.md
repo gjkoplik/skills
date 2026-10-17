@@ -12,7 +12,7 @@ The **diverging stacked bar** shares the name: each row's ordered categories acc
 
 ## When to reach for it, and when not
 
-The signed form is defined for items with a signed distance from a reference the reader accepts, where the side of the line is part of the message. The FT: "Typically the reference point is zero but it can also be a target or a long-term average" ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). The stacked form is defined for rows of ordered response categories, where the split between two opposed halves is compared across rows.
+The signed form is defined for items with a signed distance from a reference the reader accepts, where the side of the line is part of the message. The FT: "Typically the reference point is zero but it can also be a target or a long-term average" ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). The stacked form is defined for rows of ordered response categories, where the split between two opposed halves is compared across rows. The FT calls it a Deviation chart. Schwabish, who has no Deviation category, files Diverging Bar under Comparing Categories ([schwabish.md](../sources/schwabish.md), from the contents pages).
 
 | The question | Alternative |
 |---|---|
@@ -36,25 +36,21 @@ The signed form is defined for items with a signed distance from a reference the
 
 The signed form is a [bar chart](bar-chart.md) with a subtraction, and inherits its zero baseline, because the zero of a difference *is* the reference line. A diverging bar starting anywhere else is truncated, the defect [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) measured at a 91.0% inflation of size judgments.
 
-The stacked form is a [stacked bar](stacked-bar.md) accumulating two ways, so only the segments touching the center share a line. On divided bars, [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md) found "the average errors for length judgments are 40%-250% larger than those for position judgments." The step to this variant is structural.
+The stacked form is a [stacked bar](stacked-bar.md) accumulating two ways, so only the segments touching the center share a line.
 
 The neutral category has no side. Splitting it, pushing it to one side, breaking it out, and dropping it are four charts of one dataset, and no source here rules between them.
 
 ## Channels
 
-Same-side bars read as position along a common scale ([channels.md](../concepts/channels.md)), with the step from chart to channel conjecture. Bars pointing opposite ways share no baseline, and no study in this corpus measures that cross-line comparison, the one the chart usually invites. `absence of evidence`. The sign rides on direction, usually doubled in hue, which the accuracy ordering does not score ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)). Hue there does identity work, its strength.
+Same-side bars read as position along a common scale ([channels.md](../concepts/channels.md)), with the step from chart to channel conjecture. Bars pointing opposite ways share no baseline, and no study in this corpus measures that cross-line comparison, the one the chart usually invites. `absence of evidence`.
 
-## What it is measurably good at
+The stacked form's off-center segments are floating lengths. On divided bars, [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md) found "the average errors for length judgments are 40%-250% larger than those for position judgments." The step to this variant is structural.
 
-No study in this corpus tests the form, in either variant. The case rests on same-side bar ends inheriting position from [bar-chart.md](bar-chart.md).
+The sign rides on direction, usually doubled in hue, which the accuracy ordering does not score ([the scope limit](../concepts/channels.md#what-the-ranking-is-not-about)). Hue there does identity work, its strength.
 
-## What it is measurably bad at
+## What is measured
 
-Nothing measured on this form. The stacked form's off-center segments are floating lengths, 40% to 250% worse on divided bars. Truncation is measured and harmful ([Pandey et al. 2015](../studies/pandey-2015-deceptive-visualizations.md); [Correll et al. 2020](../studies/correll-2020-truncating-the-y-axis.md)). The signed form does not truncate. It redefines the quantity as a difference with proportional ink, the transform recommended as truncation's remedy ([urban-institute.md](../sources/urban-institute.md)). Its exposure is the untested choice of reference ([deviation.md](deviation.md)).
-
-## What is contested
-
-Nothing contested in this corpus. Filing differs: the FT calls it a Deviation chart, and Schwabish, who has no Deviation category, files Diverging Bar under Comparing Categories ([schwabish.md](../sources/schwabish.md), from the contents pages).
+No study in this corpus tests the form, in either variant. Truncation is measured and harmful on plain bars ([Pandey et al. 2015](../studies/pandey-2015-deceptive-visualizations.md); [Correll et al. 2020](../studies/correll-2020-truncating-the-y-axis.md)). That bears on the signed form only as the defect it avoids: it redefines the quantity as a difference with proportional ink, the transform recommended as truncation's remedy ([urban-institute.md](../sources/urban-institute.md)). Its exposure is the untested choice of reference ([deviation.md](deviation.md)). Nothing is contested in this corpus.
 
 ## The failure mode it invites
 

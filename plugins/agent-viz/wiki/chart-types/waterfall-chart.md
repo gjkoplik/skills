@@ -10,7 +10,7 @@ A running total drawn as a sequence of floating bars, each bar's length encoding
 
 ## When to reach for it, and when not
 
-The form is defined for one total moving to another through an ordered sequence of increases and decreases, where both the steps and the end point are the message.
+The form is defined for one total moving to another through an ordered sequence of increases and decreases, where both the steps and the end point are the message. The FT files it under both Part-to-whole and Flow, and [Schwabish](../sources/schwabish.md) under Comparing Categories. [Datawrapper](../sources/datawrapper-academy.md) gives "Dual-axis & Waterfall Charts" a top-level slot in its Academy with a walkthrough article, which shows a major vendor ships the type, not how it reads.
 
 | The question | Alternative |
 |---|---|
@@ -38,19 +38,11 @@ It is a [stacked bar](stacked-bar.md) taken apart along an axis of steps, each s
 
 The running total at each bar's ends is position along a common scale, and each step is a length with no common baseline. Hue marks the sign, which is identity, not magnitude ([channels.md](../concepts/channels.md)). Only the opening total and any drawn subtotals or closing total touch the axis, so almost every bar floats. [stacked-bar.md](stacked-bar.md) makes the same split, with the trajectory on position and the increments on floating length.
 
-Whether readers misjudge the steps is unmeasured. The floating-segment penalty, "the average errors for length judgments are 40%-250% larger than those for position judgments," was measured on divided bars ([Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md)), not on segments pulled into their own columns.
+Whether readers misjudge the steps is unmeasured. The floating-segment penalty, "the average errors for length judgments are 40%-250% larger than those for position judgments," was measured on divided bars ([Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md)), not on segments pulled into their own columns. `absence of evidence`.
 
-## What it is measurably good at
+## What is measured
 
-No study in this corpus tests a waterfall chart, or compares it with the divided bar it is built from.
-
-## What it is measurably bad at
-
-Nothing measured. The floating bars are an inherited exposure.
-
-## What is contested
-
-Nothing empirical. Only the filing differs. The FT puts it under both Part-to-whole and Flow, [Schwabish](../sources/schwabish.md) under Comparing Categories, and [Datawrapper](../sources/datawrapper-academy.md) gives "Dual-axis & Waterfall Charts" a top-level slot in its Academy with a walkthrough article. That shows a major vendor ships the type, not how it reads.
+No study in this corpus tests a waterfall chart, or compares it with the divided bar it is built from. The floating bars are an inherited exposure, not a measured result, and nothing here is contested.
 
 ## The failure mode it invites
 

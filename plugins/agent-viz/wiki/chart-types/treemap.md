@@ -10,7 +10,7 @@ A rectangle recursively subdivided so that each sub-rectangle's area is proporti
 
 ## When to reach for it, and when not
 
-The form is defined for part-to-whole on a fixed canvas, with too many parts for another form or a hierarchy that is itself the point. It trades value-reading accuracy for showing hundreds of parts at once.
+The form is defined for part-to-whole on a fixed canvas, with too many parts for another form or a hierarchy that is itself the point. It trades value-reading accuracy for showing hundreds of parts at once. That density is why the form exists. No study here measures it, and it is `authority-asserted`.
 
 | The question | Alternative |
 |---|---|
@@ -38,25 +38,19 @@ Rectangular area, read less accurately than position or length ([channels.md](..
 
 With no common baseline and no axis, position carries no magnitude, aligned or not.
 
-## What it is measurably good at
+## What is measured
 
-**Not interfering with itself.** Judging bare center-aligned rectangles and the same rectangles inside a full treemap showed no significant difference, "suggesting that other elements in a treemap display do not interfere with judgment accuracy." They did not vary color intensity, so interference in a colored treemap is unmeasured.
+Value extraction is weak. Area reads worse than position and angle, `evidence-backed` via Heer & Bostock.
 
-**Density.** Hundreds of parts in a fixed area, all visible, is why the form exists. No study here measures it. `authority-asserted`.
+The rest of the treemap does not interfere with the judgment, `evidence-backed`. Judging bare center-aligned rectangles and the same rectangles inside a full treemap showed no significant difference, "suggesting that other elements in a treemap display do not interfere with judgment accuracy." They did not vary color intensity, so interference in a colored treemap is unmeasured.
 
-## What it is measurably bad at
-
-**Value extraction.** Area reads worse than position and angle, evidence-backed via Heer & Bostock.
-
-**Squares.**
+Rectangles with aspect ratio 1 were the worst case for area comparison, in both the bare-rectangle and the treemap condition, `evidence-backed`:
 
 > "Somewhat surprisingly, comparisons of rectangles with aspect ratio 1 exhibited the worst performance, a result robust across both the rectangle and treemap display conditions. This finding suggests that viewers actually benefit from the inability of a squarified treemap algorithm to perfectly optimize the rectangles to 1:1 aspect ratios."
 
-Squarified algorithms exist to drive aspect ratios toward 1, so on this evidence the closer they get, the worse the comparisons. The authors' mechanism, side lengths as a proxy for area, is a hypothesis: "Additional experimentation is needed to form an accurate perceptual model." Since aspect-ratio extremes went unprobed, the result does not reach "avoid squarified layouts".
+Squarified algorithms exist to drive aspect ratios toward 1, so the worst case is the one they aim for. The authors' mechanism, side lengths as a proxy for area, is a hypothesis: "Additional experimentation is needed to form an accurate perceptual model." Aspect-ratio extremes went unprobed, so the result does not reach "avoid squarified layouts".
 
-## What is contested
-
-Nothing directly. The square result conflicts with the layout algorithms' design rationale, which was never tested this way. That is `absence of evidence`, not a contest.
+Nothing is contested. The algorithms' design rationale was never tested this way, which is `absence of evidence`, not a contest.
 
 ## The failure mode it invites
 

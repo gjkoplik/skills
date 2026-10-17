@@ -46,17 +46,9 @@ Readers used arc length and area, and angle least, on single-ring, two-segment p
 
 Treemap results do not transfer either. Heer & Bostock measured Cartesian rectangles, finding that the surrounding treemap does not interfere with the judgment, and tested no annular sectors ([heer-bostock-2010.md](../studies/heer-bostock-2010.md)).
 
-## What it is measurably good at
+## What is measured
 
-No study in this corpus tests a sunburst chart.
-
-## What it is measurably bad at
-
-Nothing measured on this form. It inherits the result that a bar chart beats a pie on proportional judgment, measured and replicated ([cleveland-mcgill-1984.md](../studies/cleveland-mcgill-1984.md), [heer-bostock-2010.md](../studies/heer-bostock-2010.md)). Nothing measures a pie with depth added doing better.
-
-## What is contested
-
-Nothing about this form. From [pie-and-donut.md](pie-and-donut.md) it inherits two results against the usual argument. That circular forms fail *because* they encode angle is refuted, and that length beats angle is unsupported by the one head-to-head test ([channels.md](../concepts/channels.md)). Bars still beat pies for value extraction.
+No study in this corpus tests a sunburst chart. From [pie-and-donut.md](pie-and-donut.md) it inherits three results about single rings. A bar chart beats a pie on proportional judgment, `evidence-backed` and replicated ([cleveland-mcgill-1984.md](../studies/cleveland-mcgill-1984.md), [heer-bostock-2010.md](../studies/heer-bostock-2010.md)), and nothing measures a pie with depth added doing better. That circular forms fail *because* they encode angle is refuted. That length beats angle is unsupported by the one head-to-head test ([channels.md](../concepts/channels.md)).
 
 ## The failure mode it invites
 

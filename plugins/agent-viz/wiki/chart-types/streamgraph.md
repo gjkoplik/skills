@@ -12,7 +12,7 @@ ThemeRiver is the older research name; stream chart and river plot are also in c
 
 ## When to reach for it, and when not
 
-The form is defined for many components over many time points, read qualitatively: the silhouette of the total, and which bands are large and roughly when. Dropping the fixed baseline costs the stacked area's two accurate readings, the total and the bottom band. It buys freedom from one series absorbing every wiggle beneath it.
+The form is defined for many components over many time points, read qualitatively: the silhouette of the total, and which bands are large and roughly when. Dropping the fixed baseline costs the stacked area's two accurate readings, the total and the bottom band. It buys freedom from one series absorbing every wiggle beneath it. The FT's gloss on area charts extends here by its own reason: "Use with care -- these are good at showing changes to total, but seeing change in components can be very difficult" ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). `authority-asserted`.
 
 | The question | Alternative |
 |---|---|
@@ -43,17 +43,9 @@ Every series is band thickness, with no common baseline anywhere. [Cleveland & M
 
 Hue carries series identity, which is not a magnitude channel and is not scored as one ([what "color is the worst channel" actually means](../concepts/channels.md#what-color-is-the-worst-channel-actually-means)).
 
-## What it is measurably good at
+## What is measured
 
-No study in this corpus tests the form.
-
-## What it is measurably bad at
-
-Nothing measured on this form. Vertical scaling changes every thickness at once. [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) moved judgments by 129.5% through aspect ratio alone, on a line chart with values printed, an inherited exposure ([change-over-time.md](change-over-time.md)). [Correll et al. (2020)](../studies/correll-2020-truncating-the-y-axis.md) measured cropping an axis this form usually lacks. That is no exemption: the reader has nothing to check vertical extent against, which is unmeasured.
-
-## What is contested
-
-Nothing contested in this corpus. The nearest position is the FT's gloss on area charts: "Use with care -- these are good at showing changes to total, but seeing change in components can be very difficult" ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). It is `authority-asserted`, about area charts, and extends here by the FT's own reason.
+No study in this corpus tests the form, and nothing is contested. Two nearby results do not transfer directly. [Pandey et al. (2015)](../studies/pandey-2015-deceptive-visualizations.md) moved judgments by 129.5% through aspect ratio alone, on a line chart with values printed. Vertical scaling here changes every thickness at once, so that exposure is inherited, not measured ([change-over-time.md](change-over-time.md)). [Correll et al. (2020)](../studies/correll-2020-truncating-the-y-axis.md) measured cropping an axis this form usually lacks. That is no exemption, since the reader has nothing to check vertical extent against, and what that costs is unmeasured.
 
 ## The failure mode it invites
 
@@ -70,8 +62,8 @@ Nothing contested in this corpus. The nearest position is the FT's gloss on area
 **Defensible, with the label said out loud:**
 
 - "Many series, and what the reader is meant to take away is the shape of the whole and which bands are large. No value is claimed to be readable off it." What readers take away is untested.
-- "The caption names the series order and how the baseline was set." Structural, untested, one sentence.
-- "The components that matter are also drawn separately." Widely asserted, including by the FT's gloss on the parent form, and never tested.
+- "The caption names the series order and how the baseline was set." Structural and untested.
+- "The components that matter are also drawn separately." Widely asserted, including by the FT's gloss on the parent form, and never tested. `authority-asserted`.
 
 **Commonly repeated, and the evidence does not support it:**
 

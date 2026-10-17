@@ -45,14 +45,14 @@ Its separation of length from angle has no new experimental support.
 
 | Comparison | Status | Source |
 |---|---|---|
-| Position beats length | Evidence-backed, errors 40% to 250% larger | CM84, HB10, SR26 |
-| Position beats angle | Evidence-backed, factor ~2 | CM84, HB10 |
-| Position beats area | Evidence-backed | HB10, SR26 |
-| Angle beats area | Evidence-backed | HB10 |
-| Length beats area | Evidence-backed | SR26 |
-| **Length beats angle** | **Contested. Predicted by theory, not found in the one head-to-head test** | HB10 |
-| Rectangular area ≈ circular area | Evidence-backed | HB10 |
-| Everything at ranks 5 and 6 | Authority-asserted, from psychophysics and reasoning | CM84 |
+| Position beats length | `evidence-backed`, errors 40% to 250% larger | CM84, HB10, SR26 |
+| Position beats angle | `evidence-backed`, factor ~2 | CM84, HB10 |
+| Position beats area | `evidence-backed` | HB10, SR26 |
+| Angle beats area | `evidence-backed` | HB10 |
+| Length beats area | `evidence-backed` | SR26 |
+| **Length beats angle** | **`contested`. Predicted by theory, not found in the one head-to-head test** | HB10 |
+| Rectangular area ≈ circular area | `evidence-backed` | HB10 |
+| Everything at ranks 5 and 6 | `authority-asserted`, from psychophysics and reasoning | CM84 |
 
 CM84 is [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md), HB10 is [Heer & Bostock (2010)](../studies/heer-bostock-2010.md), SR26 is [Siqueira Rodrigues, Israel & Kosch (2026)](../studies/siqueira-rodrigues-2026-vr-graphical-perception.md).
 

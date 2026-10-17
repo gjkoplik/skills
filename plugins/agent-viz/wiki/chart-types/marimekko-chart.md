@@ -8,9 +8,9 @@ aliases: [Marimekko chart, Mekko, Mosaic plot]
 
 A stacked bar chart whose bars also vary in width, each bar's width proportional to its share of the grand total and each segment's height proportional to its share of that bar, so every segment's area is its share of the whole and the full rectangle is the whole.
 
-Also called a mekko. [Schwabish](../sources/schwabish.md) catalogs "Marimekko and Mosaic" as one entry under Comparing Categories (contents pages only), the only vouched statement here that the names cover one form. The FT's **Proportional stacked bar** is the same construction, filed under both Part-to-whole and Magnitude, with Chart Doctor's "How to apply Marimekko to data" as further reading ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). This index files it under [part-to-whole](part-to-whole.md) for the rectangle and [magnitude](magnitude.md) for the widths ([README.md](README.md) on divergent filings).
+Also called a mekko. [Schwabish](../sources/schwabish.md) catalogs "Marimekko and Mosaic" as one entry under Comparing Categories (contents pages only), the only vouched statement here that the names cover one form. The FT's **Proportional stacked bar** is the same construction, filed under both Part-to-whole and Magnitude, with Chart Doctor's "How to apply Marimekko to data" as further reading ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)). This wiki files it under [part-to-whole](part-to-whole.md) for the rectangle and [magnitude](magnitude.md) for the widths ([README.md](README.md) on divergent filings).
 
-In statistical graphics "mosaic plot" also names a contingency-table display that no source here defines, so this page does not claim it is the same chart. Stephen Few's "Are Mosaic Plots Worthwhile", unread ([stephen-few.md](../people/stephen-few.md)), would settle it.
+In statistical graphics "mosaic plot" also names a contingency-table display that no source here defines, so this page does not claim it is the same chart. Stephen Few's "Are Mosaic Plots Worthwhile", unread ([stephen-few.md](../people/stephen-few.md)), would settle it. "Marimekko" avoids the collision.
 
 ## When to reach for it, and when not
 
@@ -36,25 +36,17 @@ The form is defined for two categorical dimensions and one count, where the spli
 | Coordinates | Cartesian, both axes percent scales: one of the grand total, one of the group |
 | Guides | Two percent axes, a legend or in-place labels, and group labels along the width axis |
 
-Drop the width normalization and it is a 100% [stacked bar](stacked-bar.md). The widths turn within-group compositions into a partition of one total, and put the reader on area.
+Drop the width normalization and it is a 100% [stacked bar](stacked-bar.md). The widths turn within-group compositions into a partition of one total: the areas sum to the whole and nothing sits outside the frame.
 
 ## Channels
 
-Vertically it is a stacked bar: each column's bottom segment is position along a common scale and the rest float as length ([stacked-bar.md](stacked-bar.md), [channels.md](../concepts/channels.md)). On divided bars Cleveland & McGill found "the average errors for length judgments are 40%-250% larger than those for position judgments", a figure inherited here. Horizontally the leftmost column sits on the axis and the rest float, so only the bottom-left mark is anchored both ways. The mark-to-channel step is conjecture in the source literature.
+Vertically it is a stacked bar. Each column's bottom segment is position along a common scale and the rest float as length ([stacked-bar.md](stacked-bar.md), [channels.md](../concepts/channels.md)). On divided bars Cleveland & McGill found "the average errors for length judgments are 40%-250% larger than those for position judgments", a figure inherited here. Horizontally the leftmost column sits on the axis and the rest float, so only the bottom-left mark is anchored both ways. The mark-to-channel step is conjecture in the source literature.
 
-Share of the whole is rectangular area, the reading this form adds. [Heer & Bostock (2010)](../studies/heer-bostock-2010.md) found rectangular area as accurate as circular area, with aspect ratio 1 the worst case, "a result robust across both the rectangle and treemap display conditions". That was one proportional judgment between two rectangles shaped by a squarified treemap layout. A marimekko's shapes come from the data, and the form is untested.
+Share of the whole is rectangular area, the reading this form adds, and area is read less accurately than position or angle ([channels.md](../concepts/channels.md), via Heer & Bostock). [Heer & Bostock (2010)](../studies/heer-bostock-2010.md) found rectangular area as accurate as circular area, with aspect ratio 1 the worst case, "a result robust across both the rectangle and treemap display conditions". That was one proportional judgment between two rectangles shaped by a squarified treemap layout. A marimekko's shapes come from the data.
 
-## What it is measurably good at
+## What is measured
 
-No study in this corpus tests the form. By definition the drawing is a partition: the areas sum to the whole and nothing hides outside the frame.
-
-## What it is measurably bad at
-
-Nothing measured on this form. Two results are inherited: floating segments carry 40% to 250% more error than position on divided bars ([stacked-bar.md](stacked-bar.md)), and here they float both ways. Area, the reading the form exists for, is read less accurately than position or angle ([channels.md](../concepts/channels.md), via Heer & Bostock). Doing both at once is unmeasured. `absence of evidence`.
-
-## What is contested
-
-Nothing about how it is read. The name is unsettled, as above; "marimekko" avoids the collision.
+No study in this corpus tests the form. The rectangle result above does not transfer, because its shapes came from a treemap layout rather than from data. Segments here float in two directions at once, and that combination is unmeasured. `absence of evidence`. Nothing about how the form is read is contested.
 
 ## The failure mode it invites
 
@@ -62,7 +54,7 @@ Nothing about how it is read. The name is unsettled, as above; "marimekko" avoid
 
 **Tracking one part across the groups.** The stacked bar's worst case plus varying widths. The nearly free remedy is the compared series on the baseline ([stacked-bar.md](stacked-bar.md)).
 
-**Too many cells.** Rectangles shrink while labels do not. No threshold is measured.
+**Too many cells.** Rectangles shrink while labels do not. No threshold is measured. `absence of evidence`.
 
 ## Justifying the choice
 
@@ -72,9 +64,9 @@ Nothing about how it is read. The name is unsettled, as above; "marimekko" avoid
 
 **Defensible, with the label said out loud:**
 
-- "A marimekko because the group sizes and the split inside each group are both part of the claim, and the rectangle shows they exhaust the total. No study here measures how well readers do that."
+- "A marimekko because the group sizes and the split inside each group are both part of the claim, and the rectangle shows they exhaust the total. No study here measures how well readers do that." `absence of evidence`.
 - "The widths carry the group totals, so the columns are deliberately unequal. That is the form's second dimension, not a rendering artifact."
-- "Five groups and three parts. Convention, with no measured limit behind it."
+- "Five groups and three parts. Convention, with no measured limit behind it." `absence of evidence`.
 
 **Commonly repeated, and the evidence does not support it:**
 

@@ -2,7 +2,7 @@
 
 One page per chart type, stored flat, with index pages that group them by data relationship. The evidence lives one tier up in [../concepts/channels.md](../concepts/channels.md), and these pages inherit it.
 
-A reader with a question ("this is composition") starts at an index. A reader with a chart name starts at its page or at [aliases.md](aliases.md). The answer depends on the reader's question, not the data's shape, so the pages narrow the candidates, name what each costs, and record which justifications hold up.
+A reader with data and a question starts at [choose.md](choose.md), the whole chooser on one page: what shape the data is, what the reader needs to answer, the forms within each group with their evidence state, and the defense. A reader with a group in doubt opens its index. A reader with a chart name starts at its page or at [aliases.md](aliases.md). The answer depends on the reader's question, not only the data's shape, so the pages narrow the candidates, name what each costs, and record which justifications hold up.
 
 ## Taxonomy is an index, not a home
 
@@ -24,7 +24,7 @@ Other axes fit the same flat store. An index by channel would fall out of each p
 
 ## Where the evidence runs out
 
-The graphical-perception literature concentrates almost entirely on proportional judgment: read a value off a mark, report it as a number. Groups with another job inherit little from it. Pie, donut, treemap and bar are well studied. Most other forms, including violin plots, slope charts, connected scatterplots, bump charts, the flow family and every map, have no study. A page with nothing to inherit says so and stops. [hive-plot.md](hive-plot.md) has two descriptive papers and no user study, so it separates what follows from the construction from what would need an experiment.
+The graphical-perception literature concentrates almost entirely on proportional judgment: read a value off a mark, report it as a number. Groups with another job inherit little from it. Pie, donut, treemap and bar are well studied. Most other forms, including slope charts, connected scatterplots, bump charts, the flow family and every map, have no study; the violin is measured only for inference about a mean and its error. A page with nothing to inherit says so and stops. [hive-plot.md](hive-plot.md) has two descriptive papers and no user study, so it separates what follows from the construction from what would need an experiment.
 
 ## Coverage
 
@@ -46,26 +46,32 @@ The graphical-perception literature concentrates almost entirely on proportional
 | [choropleth-map.md](choropleth-map.md) | Spatial | **None** |
 | [connected-scatterplot.md](connected-scatterplot.md) | Correlation, Change over time | **None** |
 | [correlation-matrix.md](correlation-matrix.md) | Correlation | **None**; the Datasaurus bears on what the coefficient hides |
+| [density-plot.md](density-plot.md) | Distribution | **None**; the bandwidth caution is Wilke's |
 | [diverging-bar-chart.md](diverging-bar-chart.md) | Deviation | **None**; inherits the floating-segment result from stacked bar |
 | [dot-density-map.md](dot-density-map.md) | Spatial | **None** |
 | [dot-strip-plot.md](dot-strip-plot.md) | Ranking, Distribution | **None** |
-| [flow-map.md](flow-map.md) | Spatial, Flow | **None**, and the one flow study does not reach it |
 | [dumbbell-plot.md](dumbbell-plot.md) | Ranking, Change over time | **None** |
 | [ecdf-plot.md](ecdf-plot.md) | Distribution | **None** on the form. Two primary sources agree it has no free parameter and that shape is harder to see on it, neither tested a reader |
+| [flow-map.md](flow-map.md) | Spatial, Flow | **None**, and the one flow study does not reach it |
 | [gauge-and-bullet.md](gauge-and-bullet.md) | Magnitude | **None.** Few's design spec reports no test |
+| [gradient-plot.md](gradient-plot.md) | Uncertainty | Measured against bar-plus-error-bar and the violin; unranked against the violin |
 | [heatmap.md](heatmap.md) | Magnitude, Correlation | **None** on value extraction from a colored cell |
 | [histogram.md](histogram.md) | Distribution | **None**, and the bin width is a free parameter |
 | [hive-plot.md](hive-plot.md) | Network and topology | Two `primary-read` sources, **neither containing a user study** |
+| [horizon-graph.md](horizon-graph.md) | Change over time | One study read at primary, recorded on a person page; no study page yet |
+| [interval-plot.md](interval-plot.md) | Uncertainty | The best-measured group: expert misreading, the bar's containment bias |
 | [line-chart.md](line-chart.md) | Change over time | None against an alternative; the manipulations are measured |
 | [lollipop-chart.md](lollipop-chart.md) | Magnitude, Ranking | **None** |
 | [marimekko-chart.md](marimekko-chart.md) | Part-to-whole, Magnitude | **None**; inherits rectangular area |
 | [node-link.md](node-link.md) | Network and topology | Two studies that disagree |
+| [parallel-coordinates.md](parallel-coordinates.md) | Correlation | **None** |
 | [pie-and-donut.md](pie-and-donut.md) | Part-to-whole | Two studies, one a direct channel decomposition |
 | [radar-chart.md](radar-chart.md) | Magnitude | **None** |
-| [ridgeline-plot.md](ridgeline-plot.md) | Distribution, Change over time | **None**, and the name is unvouched by any source here |
+| [ridgeline-plot.md](ridgeline-plot.md) | Distribution, Change over time | **None** |
 | [sankey-diagram.md](sankey-diagram.md) | Flow, Network and topology | One study, against a chord diagram; the large effect is preference |
 | [scatterplot.md](scatterplot.md) | Correlation | Position is measured; trend and cluster reading is not |
 | [slope-chart.md](slope-chart.md) | Change over time, Ranking | **None** |
+| [small-multiples.md](small-multiples.md) | Change over time, Part-to-whole, Distribution | **None** on the device |
 | [sparkline.md](sparkline.md) | Change over time | **None** on the form; Gillan & Richman on axis removal is the nearest |
 | [spine-chart.md](spine-chart.md) | Deviation | **None**, and the name itself is unvouched by any source here |
 | [stacked-area-chart.md](stacked-area-chart.md) | Change over time, Part-to-whole | **None** |
@@ -73,7 +79,7 @@ The graphical-perception literature concentrates almost entirely on proportional
 | [streamgraph.md](streamgraph.md) | Change over time | **None**, and the name is unvouched by any source here |
 | [sunburst-chart.md](sunburst-chart.md) | Part-to-whole | **None** |
 | [treemap.md](treemap.md) | Part-to-whole, Magnitude | One study, incl. the aspect-ratio result |
-| [violin-plot.md](violin-plot.md) | Distribution | Measured for inference about a mean and its error |
+| [violin-plot.md](violin-plot.md) | Distribution, Uncertainty | Measured for inference about a mean and its error |
 | [waffle-chart.md](waffle-chart.md) | Part-to-whole, Magnitude | **None** |
 | [waterfall-chart.md](waterfall-chart.md) | Flow | **None** |
 
@@ -93,6 +99,7 @@ The graphical-perception literature concentrates almost entirely on proportional
 | [network-topology.md](network-topology.md) | Ours |
 | [tables.md](tables.md) | Ours, after Schwabish |
 | [qualitative.md](qualitative.md) | Ours, after Schwabish |
+| [uncertainty.md](uncertainty.md) | Ours. The FT has no uncertainty family, and half the evidence in the corpus is about estimates and their intervals |
 
 `tables.md` and `qualitative.md` index nothing. [tables.md](tables.md) argues that is right, since every form it names leaves the chart tier, and it gives [../inventory.md](../inventory.md) topic 4, "should this be a chart at all", a place to land.
 
