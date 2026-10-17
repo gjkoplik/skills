@@ -31,6 +31,8 @@ Three tests. The first fails most often.
 
 Looking up one observation is two readings of position along a common scale, the most accurately read channel ([channels.md](../concepts/channels.md)). That is well supported and rarely the task. The task is the shape across points: trend, tightness, outliers, a cloud that splits. The graphical-perception literature does not cover that. [Cleveland & McGill (1984)](../studies/cleveland-mcgill-1984.md), p. 531: "We do not argue that this accuracy of quantitative extraction is the only aspect of a graph for which one might want to develop a theory, but it is an important one." The [scope limit](../concepts/channels.md#what-the-ranking-is-not-about) is the authors' own.
 
+One study measures a shape judgment. [Harrison et al. (2014)](../studies/harrison-2014-ranking-correlation.md), reanalyzed by Kay & Heer (2016), had 1,687 crowdsourced participants pick the more correlated of two charts on nine forms. The scatterplot was in the highest-precision group for positive and negative data alike. Parallel coordinates matched it on negative data only. Stacked, line, radar and donut forms sat a group or two down, and six form-direction pairs were indistinguishable from chance. `evidence-backed` for telling apart Pearson's r from 0.3 to 0.8 on 100 bivariate normal points, and silent on trend shape, outliers, clusters and accuracy.
+
 **Direction**, the slope between two points, is the nearest elementary task the paper names. It ties with length and angle, and the authors add that "there is not enough information to separate the ties." So direction is not among the accurately read channels, and its place among the middle ones was never established.
 
 **Aspect ratio** decides which slope differences are visible, so it gets chosen whether or not anyone notices. "Bank to 45 degrees" is scope-limited, not refuted ([talbot-2012-slope-ratio.md](../studies/talbot-2012-slope-ratio.md), [refutations.md](../refutations.md#bank-to-45-degrees)):
@@ -65,6 +67,7 @@ A categorical third variable rides on color, shape or faceting rather than on si
 - "I did not force a zero baseline. Proportional ink applies to marks that encode with length or height, and a point does not."
 - "The categorical third variable is on color rather than size. Hue is the channel for identity, and area is measured as less accurate than angle and both as much less accurate than position."
 - "I set the aspect ratio deliberately rather than accepting the default. Banking to 45 degrees is a local result that does not extrapolate, and what replaced it is a preference for flatter and wider."
+- "A scatterplot for the correlation. On nine forms, readers told two correlations apart most precisely on it in both directions, and it is the only form of which that is true."
 
 **Defensible, with the label said out loud:**
 
@@ -73,7 +76,7 @@ A categorical third variable rides on color, shape or faceting rather than on si
 
 **Commonly repeated, and the evidence does not support it:**
 
-- ~~"Scatterplots are read accurately because they use position."~~ One point's value is a position reading. Trend, tightness and outliers are not value extraction, and the ranking's authors place them outside its scope.
+- ~~"Scatterplots are read accurately because they use position."~~ One point's value is a position reading. Trend, tightness and outliers are not value extraction, and the ranking's authors place them outside its scope. The scatterplot's measured lead on correlation is a separate result, and its authors attribute it to the width of the point cloud rather than to position.
 - ~~"Bank the chart to 45 degrees."~~ A local fit to the moderate regime Cleveland sampled, reported as a global rule.
 - ~~"The line goes up, so x drives y."~~ An inference claim, not a reading of the chart.
 

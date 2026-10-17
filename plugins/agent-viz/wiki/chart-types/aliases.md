@@ -73,6 +73,8 @@ A recorded name is not a definition. Most recorded names come from [Schwabish's]
 | Error bar chart | [interval-plot.md](interval-plot.md) | In circulation. [Wilke](../sources/wilke-fundamentals.md) chapter 16 catalogs "error bars" without defining a chart by that name; the bar itself is defined at primary by [Cumming et al. (2007)](../studies/cumming-2007-error-bars.md) |
 | Faceted chart | [small-multiples.md](small-multiples.md) | In circulation, no source here defines it |
 | Facets | [small-multiples.md](small-multiples.md) | Recorded: the [BBC cookbook](../sources/bbc-cookbook.md)'s faceting section, and Munzner's chapter 12 title, Facet into Multiple Views |
+| Fan chart | [fan-chart.md](fan-chart.md) | Stipulation: the FT entry name without its parenthetical, on that page's own say-so |
+| Fan chart (projection) | [fan-chart.md](fan-chart.md) | Recorded: the FT's entry under Change over Time, with a quoted gloss ([ft-visual-vocabulary.md](../sources/ft-visual-vocabulary.md)) |
 | Flow map | [flow-map.md](flow-map.md) | Recorded: the FT files **Flow map** under Spatial with a quoted gloss, and Schwabish files **Flow Map** under Geospatial. Neither files it under Flow; [flow.md](flow.md) indexing it there is this wiki's own reading |
 | Gap chart | [dumbbell-plot.md](dumbbell-plot.md) | In circulation, no source here defines it |
 | Gauge | [gauge-and-bullet.md](gauge-and-bullet.md) | Recorded: Schwabish files **Gauge and Bullet** as one entry under Comparing Categories |

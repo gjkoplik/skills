@@ -9,7 +9,7 @@ retrieved: 2026-09-05
 
 **What they are known for.** Replicating the field's foundational result, then building much of the tooling charts are drawn with. Protovis, D3, Vega and Vega-Lite came out of labs he ran or co-ran. Both come from one habit: turn a design question into something a paid crowd can answer, or into a grammar whose defaults have to be written down.
 
-**How this was read.** Four papers from `idl.cs.washington.edu`, extracted locally with `pdftotext`, plus this wiki's existing primary reading of Heer & Bostock (2010). Affiliations are as printed (Stanford, then University of Washington), with no claim about his current one. `status_partial`: the publication list is long, the four papers were chosen for what they bear on, and Vega-Lite and D3 are read only through their papers and shipped documentation.
+**How this was read.** Five papers from `idl.cs.washington.edu`, extracted locally with `pdftotext`, plus this wiki's existing primary reading of Heer & Bostock (2010). Affiliations are as printed (Stanford, then University of Washington), with no claim about his current one. `status_partial`: the publication list is long, the four papers were chosen for what they bear on, and Vega-Lite and D3 are read only through their papers and shipped documentation.
 
 **What they are good for.** *Has anyone re-run this?* He is the corpus's most reliable source of replications and of the crowdsourcing method that made them affordable. *What does a chart library decide when the spec is silent?* A declarative grammar must write its defaults down, and he co-authored several, so house style becomes checkable.
 
@@ -46,6 +46,10 @@ The crossover against the length-encoded alternative, which [chart-types/treemap
 - **The optimal size is small.** For line charts and one-band mirror charts, 24 pixels minimized estimation time without costing accuracy.
 
 Only value comparison was measured, and the authors note that "graphical perception of time series typically involves observing rates of change in addition to comparing values."
+
+### Correlation, reanalyzed: Kay & Heer (2016)
+
+[*Beyond Weber's Law*](../studies/harrison-2014-ranking-correlation.md) refit Harrison et al.'s released data on telling two correlations apart. Modeling individual observations instead of condition means, a log transform, censored regression for observations at chance, and a participant effect replaced a total ranking of twelve form-direction pairs with four groups, and the fit "deviates from Weber's Law." The recommendation that survives: "scatterplots are unique in combining low variance between individuals and high precision on both positively- and negatively- correlated data." It is the corpus's one example of a reanalysis moving a published ranking without new data.
 
 ### Task and data: Kim & Heer (2018)
 
@@ -89,7 +93,8 @@ The task, since his 2018 paper found it changes the encoding ranking. The size, 
 | Kim & Heer (2018), "Assessing Effects of Task and Data Distribution on the Effectiveness of Visual Encodings," EuroVis | `primary-read`, [PDF](https://idl.cs.washington.edu/files/2018-TaskDataEffectiveness-EuroVis.pdf) | No page. The empirical counterpart to the scope critique [concepts/channels.md](../concepts/channels.md) states from a position paper. |
 | Satyanarayan, Moritz, Wongsuphasawat & Heer (2017), "Vega-Lite: A Grammar of Interactive Graphics," *TVCG* | `primary-read`, [PDF](https://idl.cs.washington.edu/files/2017-VegaLite-InfoVis.pdf) | Behind [sources/vega-lite.md](../sources/vega-lite.md), which covers the documentation, not the paper. |
 | Bostock, Ogievetsky & Heer (2011), "D3: Data-Driven Documents," and Bostock & Heer (2009), "Protovis" | `not-reached` | No page. Listed for the lineage, below. |
-| Kay & Heer (2016), "Beyond Weber's Law," and the rest | Unread. [idl.uw.edu/papers](https://idl.uw.edu/papers/) | Re-analyzes correlation-perception rankings, bearing on [chart-types/scatterplot.md](../chart-types/scatterplot.md). |
+| Kay & Heer (2016), "Beyond Weber's Law," *TVCG* | `primary-read`, [PDF](https://idl.cs.washington.edu/files/2015-BeyondWebersLaw-InfoVis.pdf) | [studies/harrison-2014-ranking-correlation.md](../studies/harrison-2014-ranking-correlation.md), as the reanalysis of the experiment that page covers. |
+| The rest of the publication list | Unread. [idl.uw.edu/papers](https://idl.uw.edu/papers/) | |
 
 ## Independence of the sources he touches
 

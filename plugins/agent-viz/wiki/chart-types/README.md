@@ -44,7 +44,7 @@ The graphical-perception literature concentrates almost entirely on proportional
 | [cartogram.md](cartogram.md) | Spatial, Magnitude | **None.** Heer & Bostock on rectangular area is adjacent, not transferable |
 | [chord-diagram.md](chord-diagram.md) | Flow, Network and topology | One study, against a Sankey; small effects, mostly first-exposure |
 | [choropleth-map.md](choropleth-map.md) | Spatial | **None** |
-| [connected-scatterplot.md](connected-scatterplot.md) | Correlation, Change over time | **None** |
+| [connected-scatterplot.md](connected-scatterplot.md) | Correlation, Change over time | One study against the dual-axis line chart: understood with little explanation, time reversed on 13% of translations, correlational language rare |
 | [correlation-matrix.md](correlation-matrix.md) | Correlation | **None**; the Datasaurus bears on what the coefficient hides |
 | [density-plot.md](density-plot.md) | Distribution | **None**; the bandwidth caution is Wilke's |
 | [diverging-bar-chart.md](diverging-bar-chart.md) | Deviation | **None**; inherits the floating-segment result from stacked bar |
@@ -52,6 +52,7 @@ The graphical-perception literature concentrates almost entirely on proportional
 | [dot-strip-plot.md](dot-strip-plot.md) | Ranking, Distribution | **None** |
 | [dumbbell-plot.md](dumbbell-plot.md) | Ranking, Change over time | **None** |
 | [ecdf-plot.md](ecdf-plot.md) | Distribution | **None** on the form. Two primary sources agree it has no free parameter and that shape is harder to see on it, neither tested a reader |
+| [fan-chart.md](fan-chart.md) | Uncertainty, Change over time | **None**; the gradient-plot result does not transfer |
 | [flow-map.md](flow-map.md) | Spatial, Flow | **None**, and the one flow study does not reach it |
 | [gauge-and-bullet.md](gauge-and-bullet.md) | Magnitude | **None.** Few's design spec reports no test |
 | [gradient-plot.md](gradient-plot.md) | Uncertainty | Measured against bar-plus-error-bar and the violin; unranked against the violin |
@@ -64,12 +65,12 @@ The graphical-perception literature concentrates almost entirely on proportional
 | [lollipop-chart.md](lollipop-chart.md) | Magnitude, Ranking | **None** |
 | [marimekko-chart.md](marimekko-chart.md) | Part-to-whole, Magnitude | **None**; inherits rectangular area |
 | [node-link.md](node-link.md) | Network and topology | Two studies that disagree |
-| [parallel-coordinates.md](parallel-coordinates.md) | Correlation | **None** |
+| [parallel-coordinates.md](parallel-coordinates.md) | Correlation | Measured with two axes: matches the scatterplot on negative correlations, low precision on positive |
 | [pie-and-donut.md](pie-and-donut.md) | Part-to-whole | Two studies, one a direct channel decomposition |
-| [radar-chart.md](radar-chart.md) | Magnitude | **None** |
+| [radar-chart.md](radar-chart.md) | Magnitude | **None** on profiling; low or chance precision when drawn to show a correlation |
 | [ridgeline-plot.md](ridgeline-plot.md) | Distribution, Change over time | **None** |
 | [sankey-diagram.md](sankey-diagram.md) | Flow, Network and topology | One study, against a chord diagram; the large effect is preference |
-| [scatterplot.md](scatterplot.md) | Correlation | Position is measured; trend and cluster reading is not |
+| [scatterplot.md](scatterplot.md) | Correlation | Telling correlations apart is measured on the form: top precision group in both directions. Trend and cluster reading are not |
 | [slope-chart.md](slope-chart.md) | Change over time, Ranking | **None** |
 | [small-multiples.md](small-multiples.md) | Change over time, Part-to-whole, Distribution | **None** on the device |
 | [sparkline.md](sparkline.md) | Change over time | **None** on the form; Gillan & Richman on axis removal is the nearest |

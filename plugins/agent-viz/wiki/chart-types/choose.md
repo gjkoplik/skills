@@ -78,7 +78,7 @@ The value sits on position along a common scale, so the costs are row count fixi
 | [Lollipop chart](lollipop-chart.md) | A point at the value, a stem | Many categories, where bars become a block of ink | None |
 | [Stacked bar](stacked-bar.md) | Segment length; total as position | The total is the magnitude and its composition matters | Measured: the 1984 stimulus |
 | [Treemap](treemap.md) | Rectangular area | Hundreds of items, approximate sizes enough | Measured: one study |
-| [Radar chart](radar-chart.md) | Radial distance per axis | Several measures profiling one entity | None |
+| [Radar chart](radar-chart.md) | Radial distance per axis | Several measures profiling one entity | None on profiling; low or chance precision when drawn to show a correlation |
 | [Heatmap](heatmap.md) | Cell color on a two-key grid | One value per key pair, the pattern over any cell | None |
 | [Gauge and bullet](gauge-and-bullet.md) | Arc position, or bar length against a marker | One value against a target and context band | None |
 | [Waffle](waffle-chart.md) | A count of cells | A small count, tallied | None |
@@ -139,18 +139,19 @@ An interval drawn without its meaning is ambiguous between four things, and expe
 | [Gradient plot](gradient-plot.md) | Opacity fading with distance from the estimate | An inferential comparison, with no hard edge wanted | Measured: beat bar-plus-error-bar, unranked against the violin |
 | [Violin plot](violin-plot.md) | Mirrored density | A mean and its error on a symmetric continuous mark | Measured: beat bar-plus-error-bar for inference |
 | [Strip plot](dot-strip-plot.md) | Every observation | n is small enough to show | Recommended from measured sample sizes |
+| [Fan chart](fan-chart.md) | Nested probability bands around a projected path | A forecast, where the range at each horizon is the message | None |
 
 ### Correlation
 
-One point reads as position, but trend, tightness and outliers sit outside the measured literature, and the aspect ratio decides which slopes show.
+One point reads as position. Telling two correlations apart is measured on nine forms and the scatterplot led in both directions; trend, tightness and outliers remain unmeasured, and the aspect ratio decides which slopes show.
 
 | Form | What is drawn | Applies when | Evidence state |
 |---|---|---|---|
-| [Scatterplot](scatterplot.md) | Two positions | The default; enough paired observations for a shape | Channel-inherited: position, not trend |
+| [Scatterplot](scatterplot.md) | Two positions | The default; enough paired observations for a shape | Measured: top precision group for telling correlations apart, both directions |
 | [Bubble chart](bubble-chart.md) | A third quantity on circle area | The third quantity matters only roughly | Channel-inherited: area, not the form |
-| [Connected scatterplot](connected-scatterplot.md) | A path through the plane | Two time series, the joint trajectory the point | None at primary; one study summarized secondhand |
+| [Connected scatterplot](connected-scatterplot.md) | A path through the plane | Two time series, the joint trajectory the point | Measured: one study. Understood with little explanation, time reversed on 13% of translations, correlational language rare |
 | [Correlation matrix](correlation-matrix.md) | Coefficient as cell color | Too many variables for every pair | None |
-| [Parallel coordinates](parallel-coordinates.md) | One polyline per row across parallel axes | Many variables, the rows' profiles the point | None |
+| [Parallel coordinates](parallel-coordinates.md) | One polyline per row across parallel axes | Many variables, the rows' profiles the point | Measured with two axes: matches the scatterplot on negative correlations, two groups down on positive |
 | [Heatmap](heatmap.md) | Cell color on a two-key grid | A value per key pair where the pattern is the point | None |
 | [Small multiples](small-multiples.md) of scatterplots | One panel per group, shared axes | The relationship compared across a categorical variable | None |
 
@@ -167,9 +168,10 @@ Slope and shape reading falls outside the accuracy ordering, and aspect ratio an
 | [Slope chart](slope-chart.md) | Two endpoints | Exactly two periods, many categories | None |
 | [Dumbbell plot](dumbbell-plot.md) | Two positions per row | Two dates per category, levels and gap both matter | None |
 | [Stacked bar](stacked-bar.md) | Segment length | Few discrete periods, composition and total | Measured: the 1984 stimulus |
-| [Connected scatterplot](connected-scatterplot.md) | Two-variable plane, time as path | A joint trajectory is the message | None at primary |
+| [Connected scatterplot](connected-scatterplot.md) | Two-variable plane, time as path | A joint trajectory is the message | Measured: one study, small samples |
 | [Bump chart](bump-chart.md) | Rank axis, value discarded | Several periods, few items | None |
 | [Sparkline](sparkline.md) | Shape, axes removed | Inside a sentence or table row | None |
+| [Fan chart](fan-chart.md) | Nested bands around a projection | A forecast past the last observation | None |
 | [Horizon graph](horizon-graph.md) | Mirrored, layered bands | Many series in little vertical space | Measured, recorded on a person page |
 | [Ridgeline](ridgeline-plot.md) | Stacked densities | A distribution per period, in order | None |
 | [Small multiples](small-multiples.md) of line charts | One panel per series, shared scales | Several series where overlaid lines tangle | None |

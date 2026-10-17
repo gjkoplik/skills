@@ -43,7 +43,9 @@ The nearest elementary task is direction, the slope between two points. The pape
 
 ## What is measured
 
-No study in this corpus tests the form itself. Under overplotting, apparent density depends on marker size, alpha and draw order, and the cost to readers is `absence of evidence`. Finding one named point is visual search, which the ranking does not score.
+One study tests the form for the job it is chosen for. [Harrison et al. (2014)](../studies/harrison-2014-ranking-correlation.md) had 1,687 crowdsourced participants pick the more correlated of two charts, on nine forms, and in Kay & Heer's reanalysis of the same data the scatterplot sits in the highest-precision group for positive and negative correlations alike, the only form that does, with no more variance between individuals than its nearest rival: "scatterplots are unique in combining low variance between individuals and high precision on both positively- and negatively- correlated data." `evidence-backed`, for telling apart Pearson's r between 0.3 and 0.8 on 100 bivariate normal points. Accuracy, trend shape, clusters and outliers were not measured, and the authors attribute the lead to the width of the point cloud rather than to position.
+
+Under overplotting, apparent density depends on marker size, alpha and draw order, and the cost to readers is `absence of evidence`. Finding one named point is visual search, which the ranking does not score.
 
 Aspect ratio, which decides which slope differences are visible, is `contested`. "Bank to 45 degrees" is scope-limited, not refuted ([Talbot, Gerth & Hanrahan 2012](../studies/talbot-2012-slope-ratio.md); [refutations.md](../refutations.md#bank-to-45-degrees)): "In general, slope ratio errors are not minimized around 45°". Cleveland's model replicates inside his sampled range, and the shift below 30 degrees belongs to one of two strategies subjects used. The replacement is flatter and wider than banking algorithms produce. A visible baseline nearly eliminated error below 45 degrees and did nothing above. The stimulus was two isolated line segments, and the authors name transfer to real plots as the major limitation.
 
@@ -61,6 +63,7 @@ Aspect ratio, which decides which slope differences are visible, is `contested`.
 
 - "Both variables are on position along a common scale, which is the most accurately read channel measured. That covers reading a point's values; the trend judgment is a different task the ranking does not cover."
 - "I set the aspect ratio rather than taking the default. The 45-degree rule is a local result that does not extrapolate, and the replacement guidance is flatter and wider."
+- "A scatterplot for the correlation itself. Readers told two correlations apart more precisely on it than on parallel coordinates, stacked, line, radar or donut forms, for positive and negative data alike, measured on 1,687 participants."
 
 **Defensible, with the label said out loud:**
 
@@ -70,7 +73,7 @@ Aspect ratio, which decides which slope differences are visible, is `contested`.
 
 **Commonly repeated, and the evidence does not support it:**
 
-- ~~"Scatterplots are the most accurate chart type because they use position twice."~~ The ranking scores reading a value off a mark, not seeing a relationship.
+- ~~"Scatterplots are the most accurate chart type because they use position twice."~~ The channel ranking scores reading a value off a mark. The scatterplot's measured lead is on telling correlations apart, and its authors attribute it to the width of the point cloud, not to position.
 - ~~"The Datasaurus proves people are fooled by summary statistics."~~ It has no participants. It proves the statistics do not determine the picture.
 - ~~"The correlation is strong, so the effect is real."~~ An inference claim, not a property of the chart.
 
@@ -78,4 +81,5 @@ Aspect ratio, which decides which slope differences are visible, is `contested`.
 
 - [correlation.md](correlation.md): the group, with the aspect-ratio and zero-baseline positions in full
 - [bubble-chart.md](bubble-chart.md): a third variable on area
+- [../studies/harrison-2014-ranking-correlation.md](../studies/harrison-2014-ranking-correlation.md): the one measurement of the form on its own task
 - [../concepts/channels.md](../concepts/channels.md): the inherited evidence and its scope limit

@@ -31,7 +31,7 @@ Three tests decide whether a figure belongs here.
 | How spread out is the sample, and what shape is it? | [Distribution](distribution.md) |
 | Three or four observations per group | The observations themselves: a [dot strip plot](dot-strip-plot.md) or [beeswarm](beeswarm-plot.md) |
 | How big is it? | [Magnitude](magnitude.md). A bare point estimate still asserts a precision, and [inventory.md](../inventory.md) topic 48 asks for the interval, `authority-asserted` |
-| How uncertain is a projection, and how fast does that grow? | A fan chart, which the FT files under Change over Time. No page |
+| How uncertain is a projection, and how fast does that grow? | A [fan chart](fan-chart.md), which the FT files under Change over Time. Untested here |
 
 ## What this group costs
 
@@ -57,6 +57,7 @@ No symmetric encoding they tested (a modified box plot, a gradient plot, a violi
 | Bar with error bar, on [interval-plot.md](interval-plot.md) | A bar to the estimate and a whisker | The form Correll & Gleicher measured against. Shows the within-the-bar bias |
 | [Gradient plot](gradient-plot.md) | A band of continuous opacity around a mean | Symmetric and continuous. Tested, no within-the-bar bias |
 | [Violin plot](violin-plot.md) | A mean and its error on a symmetric continuous mark | The other tested symmetric continuous form. The authors decline to rank it against the gradient |
+| [Fan chart](fan-chart.md) | A projected path with nested probability bands that widen over time | A forecast rather than an estimate per category. Not tested |
 | [Dot strip plot](dot-strip-plot.md), [beeswarm](beeswarm-plot.md) | Every observation | n is small. [Weissgerber et al. (2015)](../studies/weissgerber-2015-beyond-bar-line.md) measured a median smallest group of 4 across 703 physiology articles and recommend the points. Cumming et al.'s rule 4 says the same at n = 3 |
 
 Wilke's chapter 16 catalogs further forms: quantile dotplots, hypothetical outcome plots, graded error bars, confidence strips and eye plots ([wilke-fundamentals.md](../sources/wilke-fundamentals.md)). None has a page here, and the studies he cites for two of them have no study page.
@@ -92,6 +93,7 @@ The second failure is the bar under the estimate. Its containment metaphor makes
 
 - [interval-plot.md](interval-plot.md): also covers the bar with error bars
 - [gradient-plot.md](gradient-plot.md)
+- [fan-chart.md](fan-chart.md): also change over time, where the FT files it
 - [violin-plot.md](violin-plot.md): as a mean-and-error encoding, indexed primarily under [distribution.md](distribution.md)
 
 ## See also

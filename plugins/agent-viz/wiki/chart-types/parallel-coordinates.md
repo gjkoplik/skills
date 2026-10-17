@@ -44,7 +44,9 @@ Highlighted rows use hue for identity, a job hue does well.
 
 ## What is measured
 
-No study in this corpus tests the form. [Talbot et al. (2012)](../studies/talbot-2012-slope-ratio.md) measured slope judgment on segment pairs, and it does not transfer: those slopes were rates on one shared scale, while a slope here joins two variables on independent scales.
+[Harrison et al. (2014)](../studies/harrison-2014-ranking-correlation.md) tested it for telling two correlations apart, with 100 rows on two axes. Negative correlations, which draw as crossing segments, were read as precisely as on a scatterplot; positive ones, which draw as near-parallel segments, were not: "We find clear evidence of asymmetry in parallel coordinates plots, with those depicting negatively correlated data significantly outperforming those depicting positively correlated data." In Kay & Heer's reanalysis, parallel coordinates with negative data sit in the high-precision group beside the scatterplot and with positive data two groups down, each group at least 1.5 times less precise than the one above. `evidence-backed`, for two axes; nothing here measures the form with the many axes it is chosen for, and the original paper's claim that it beat the scatterplot on negative data did not survive the reanalysis.
+
+[Talbot et al. (2012)](../studies/talbot-2012-slope-ratio.md) measured slope judgment on segment pairs, and it does not transfer: those slopes were rates on one shared scale, while a slope here joins two variables on independent scales.
 
 ## The failure mode it invites
 
@@ -58,7 +60,7 @@ No study in this corpus tests the form. [Talbot et al. (2012)](../studies/talbot
 
 **Defensible, evidence-backed:**
 
-- Nothing qualifies. Position along a common scale covers comparisons within one axis, not the relationships between axes.
+- "The axis is flipped so the relationship in question draws as crossings. With two axes, negative correlations were told apart as precisely as on a scatterplot and positive ones two precision groups worse." The flip is the design change Harrison et al. propose from that asymmetry.
 
 **Defensible, with the label said out loud:**
 
@@ -70,10 +72,11 @@ No study in this corpus tests the form. [Talbot et al. (2012)](../studies/talbot
 
 - ~~"Parallel coordinates show every relationship among the variables."~~ Only adjacent pairs.
 - ~~"Crossing lines mean a negative correlation."~~ Only when both axes run the same way.
-- ~~"It reads better than a radar chart."~~ Neither form has been tested.
+- ~~"It reads better than a radar chart."~~ For telling correlations apart, parallel coordinates with negative data were in the top group and the radar in the low group or at chance. Nothing compares them on a profile task.
 
 ## See also
 
 - [correlation.md](correlation.md): the group
-- [radar-chart.md](radar-chart.md): the polar version, also untested
+- [radar-chart.md](radar-chart.md): the polar version
+- [../studies/harrison-2014-ranking-correlation.md](../studies/harrison-2014-ranking-correlation.md): the two-axis correlation result and its asymmetry
 - [../concepts/channels.md](../concepts/channels.md): the inherited channel evidence
