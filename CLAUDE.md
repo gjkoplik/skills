@@ -113,3 +113,25 @@ this one.
 
 Its own conventions live in its `SKILL.md`, which is the spec rather than documentation of one. The two that get
 broken most often: it never implements and never produces a plan.
+
+---
+
+# plugins/harness
+
+Spec-driven development as four skills (`spec`, `plan`, `build`, `close`) and the eight agents they dispatch. It
+works on whatever repo it is pointed at and writes specs there, never here.
+
+- `hub.md` is the one place the dispatching session's rules live. All four skills point at it; do not restate its
+  rules in a skill.
+- Skills, agents and `hub.md` reference each other through `${CLAUDE_PLUGIN_ROOT}`. Agent types are `harness:<name>`.
+- Every agent carries `disallowedTools: Agent`. That is what makes hub-and-spoke a fact and not a request, since
+  subagents can otherwise dispatch their own.
+- Reviewers (`adversary`, `api-critic`, `ui-evaluator`) cannot edit. Keep it that way: a reviewer that fixes what it
+  finds stops being independent of the result.
+- **The check on every edit is whether it grew the file.** The harness this came from failed by accretion: each real
+  incident added a rule, and the rules became the thing agents spent their attention on. Prefer explaining the reason
+  once to adding a case. If an agent got something wrong, first ask whether a shorter definition would have gotten
+  it right.
+- Nothing project-specific goes in an agent: no language, test runner, or directory layout. The plan's `Checks`
+  section is where a project's commands are recorded, at planning time.
+

@@ -6,6 +6,7 @@ own: it records which plugin versions were current at a point in time.
 Per-plugin history, which is the one that matters to a user, lives with the plugin:
 
 - [plugins/agent-viz/CHANGELOG.md](plugins/agent-viz/CHANGELOG.md)
+- [plugins/harness/CHANGELOG.md](plugins/harness/CHANGELOG.md)
 - [plugins/what-if/CHANGELOG.md](plugins/what-if/CHANGELOG.md)
 
 See [RELEASING.md](RELEASING.md).
@@ -19,6 +20,8 @@ See [RELEASING.md](RELEASING.md).
 
 ### Added
 
+- `harness`, spec-driven development with a hub-and-spoke team of agents. On `main` as a first draft at 0.0.1, not
+  yet tagged or listed in the marketplace.
 - `what-if`, a cheap sunk-cost circuit breaker for half-formed ideas. New in this repo.
 - The marketplace is named `gjkoplik` rather than `skills`. A user can hold only one marketplace per name, and
   `skills` is the name most likely to collide with someone else's. Installs read `agent-viz@gjkoplik`.
