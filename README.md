@@ -11,6 +11,7 @@ Gary Koplik's Claude Code plugins, and the marketplace that lists them.
 | Plugin | What it does | |
 | --- | --- | --- |
 | **agent-viz** | A researched quality bar for any figure a person will look at, plus the research wiki it came from. | [`plugins/agent-viz`](plugins/agent-viz) |
+| **harness** | Spec-driven development with a hub-and-spoke team of agents. Not yet released. | [`plugins/harness`](plugins/harness) |
 | **what-if** | A cheap look at a half-formed idea before committing to a conversation about it. | [`plugins/what-if`](plugins/what-if) |
 
 ```
