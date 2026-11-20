@@ -47,6 +47,10 @@ and the failure modes. Judge the work against that contract before you hear anyo
 - Walk each failure mode against what was actually built.
 - Look for the substitution: the brief asked for X, the diff does Y, and a comment or a test name explains it away.
 - Tests that cannot fail, or that would still pass if the feature were deleted.
+- A lowered bar: a new lint or type suppression, a skipped or deleted test, a stub left unimplemented, an empty
+  catch, a loosened threshold in the check configuration.
+- If the diff touches untrusted input, authentication or permissions, secrets, dependencies, or CI and publishing,
+  attack it there specifically. Otherwise do not invent a security review.
 - Surface nobody asked for.
 
 You may then get a follow-up with the spec and plan paths. Answer what it asks: whether what was built still matches

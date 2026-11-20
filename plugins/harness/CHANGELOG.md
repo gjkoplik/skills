@@ -21,3 +21,8 @@ A generalization of the harness built for hiveplotlib, rewritten rather than por
 lines of rules, per-agent expertise files, a wiki, and a plan file with ten writers. This one keeps the parts that
 are structural (the signed spec, the cold reviewer, blind review after a build, one dispatcher, bounded loops) and
 leaves the rest to the agents' judgment.
+
+Cross-checked against Addy Osmani's [agent-skills](https://github.com/addyosmani/agent-skills) at its 2026-11-18
+state. Taken from there: stages that only the user advances, assumptions stated before the interview, the explicit-yes
+rule for signatures, vertical slicing with the riskiest slice early, a clean baseline before per-workstream commits,
+stopping for anything a revert cannot undo, parking mid-build ideas, and a floor the checks cannot be lowered under.

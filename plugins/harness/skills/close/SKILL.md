@@ -1,6 +1,7 @@
 ---
 name: close
-description: 'Close out a finished harness build. Verifies the whole project and checks the result against the signed spec, asks the user everything it needs in one message, then archives the spec and plan. Use when every workstream of a plan under specs/ has passed and the user says they are ready to merge or wrap up, or runs /harness:close.'
+description: 'Close out a finished harness build. Verifies the whole project and checks the result against the signed spec, asks the user everything it needs in one message, then archives the spec and plan. The last of four stages; needs a finished build.'
+disable-model-invocation: true
 argument-hint: '[spec slug]'
 ---
 
@@ -31,7 +32,8 @@ outcome is not yet true does not close, however many workstreams passed.
 
 One message with everything still open:
 
-- the notes that were never acted on, each with your recommendation: fix now, leave, or write down as follow-up;
+- the notes and parked follow-up ideas that were never acted on, each with your recommendation: fix now, leave, or
+  write down as follow-up;
 - any open question left in the spec;
 - whether they want anything done with the branch (push, open a pull request). The default is nothing: merging is
   theirs.

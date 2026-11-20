@@ -1,6 +1,7 @@
 ---
 name: plan
-description: 'Turn a signed spec into an accepted plan. The orchestrator agent writes the plan, the adversary attacks it without having written it, the user answers the findings that need a decision, and the user accepts the plan at a high level. Use when a spec under specs/ has been signed and the user asks to plan it, or runs /harness:plan.'
+description: 'Turn a signed spec into an accepted plan. The orchestrator agent writes the plan, the adversary attacks it without having written it, the user answers the findings that need a decision, and the user accepts the plan at a high level. The second of four stages; needs a signed spec under specs/.'
+disable-model-invocation: true
 argument-hint: '[spec slug]'
 ---
 
@@ -47,7 +48,8 @@ offer a second adversary pass.
   The alternatives are leaving changes uncommitted in the working tree, and pausing after each workstream. If the
   project's own instructions say agents do not commit, default to the working tree. Ask only if the default looks
   wrong for this project;
+- any workstream the orchestrator flagged as hard to undo, since the build will stop for you before each of those;
 - any decision still open.
 
-When the user accepts, append `Plan accepted <date>` to the plan's log, with the delivery choices if they differ from
-what the plan says. Then say the next step is `/harness:build` and stop.
+Acceptance is an explicit yes, the same as a signature. When the user accepts, append `Plan accepted <date>` to the
+plan's log, with the delivery choices if they differ from what the plan says. Then say the next step is `/harness:build` and stop.

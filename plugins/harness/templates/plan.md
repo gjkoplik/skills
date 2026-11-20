@@ -28,6 +28,7 @@ In the order they run.
 - **Interface change:** <yes | no>
 - **UI:** <yes | no>
 - **After:** <workstream numbers this depends on, or "none">
+- **Hard to undo:** <no | yes: what, and why a revert would not restore it>
 
 ## Delivery
 

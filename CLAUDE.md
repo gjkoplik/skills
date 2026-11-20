@@ -124,8 +124,10 @@ works on whatever repo it is pointed at and writes specs there, never here.
 - `hub.md` is the one place the dispatching session's rules live. All four skills point at it; do not restate its
   rules in a skill.
 - Skills, agents and `hub.md` reference each other through `${CLAUDE_PLUGIN_ROOT}`. Agent types are `harness:<name>`.
-- Every agent carries `disallowedTools: Agent`. That is what makes hub-and-spoke a fact and not a request, since
-  subagents can otherwise dispatch their own.
+- Every agent carries `disallowedTools: Agent`. That makes hub-and-spoke a fact and not a request, whatever the
+  platform's default for nested subagents is at the time.
+- All four skills are `disable-model-invocation: true`. The stages are the user's gates; a session that can load
+  the next stage on its own will eventually advance past a signature.
 - Reviewers (`adversary`, `api-critic`, `ui-evaluator`) cannot edit. Keep it that way: a reviewer that fixes what it
   finds stops being independent of the result.
 - **The check on every edit is whether it grew the file.** The harness this came from failed by accretion: each real

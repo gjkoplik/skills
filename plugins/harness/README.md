@@ -103,4 +103,4 @@ not about how capable the model is:
 - It has no branching strategy beyond one working branch with a commit per workstream, and it never pushes or merges
   unless you ask at close.
 - It does not sync an issue tracker.
-- It does not load itself. Nothing happens until you run a command.
+- It does not load itself or advance itself. Each stage runs when you type its command.

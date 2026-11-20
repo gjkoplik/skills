@@ -97,7 +97,8 @@ Stop and bring it to the user when:
 - a signed spec would have to change;
 - an agent reports it is blocked, or reports state it cannot explain;
 - a workstream has been through two plan amendments and still does not pass;
-- the next step would discard work or cannot be undone.
+- the next step would discard work, or could not be undone with a `git revert`: deleting or migrating data, a
+  deploy, a publish, anything touching credentials or permissions. This holds even when the plan says to run through.
 
 Otherwise keep going. An ordinary failure is an agent's job to fix, not a reason to check in.
 

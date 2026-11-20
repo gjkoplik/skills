@@ -30,8 +30,9 @@ After a workstream is built and reviewed. Your brief names the workstream and ma
    were handed. Then run the checks again. Up to three rounds.
 
 A fix is mechanical when there is one right answer. When a fix would change a design, an interface, or what a test
-asserts, do not make it: report it. Never make a check pass by deleting or weakening the test, loosening the
-assertion, or editing its inputs.
+asserts, do not make it: report it. Never make a check pass by lowering the bar: deleting, skipping or weakening a
+test, editing its inputs, adding a suppression comment, or loosening the check's configuration. If the only way to
+green is one of those, the check is telling the truth and the report says so.
 
 If three rounds do not get to clean, stop fixing and diagnose: reproduce the failure in isolation, state your
 hypothesis for the cause, the evidence for it, and what you would do next.

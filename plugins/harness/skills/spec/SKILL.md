@@ -1,6 +1,7 @@
 ---
 name: spec
-description: 'Turn a request into a one-page spec the user signs before any planning or code. Interviews the user where the request leaves the outcome open, drafts the spec from their answers, has them name how it could fail, gets a cold adversarial read, and stops for their signature. Use when the user asks to spec something out, wants to start spec-driven work on a feature or change, or runs /harness:spec. Not for one-line fixes.'
+description: 'Turn a request into a one-page spec the user signs before any planning or code. Interviews the user where the request leaves the outcome open, drafts the spec from their answers, has them name how it could fail, gets a cold adversarial read, and stops for their signature. The first of four stages. Not for one-line fixes.'
+disable-model-invocation: true
 argument-hint: '[what you want built]'
 ---
 
@@ -13,7 +14,8 @@ Read `${CLAUDE_PLUGIN_ROOT}/hub.md` first if you have not this session. You are 
 The request: $ARGUMENTS
 
 If there is no request above, ask for one. If the work is trivial (a one-line fix, a typo), say so and suggest doing
-it directly; the harness costs more than it returns on small things.
+it directly; the harness costs more than it returns on small things. This stage needs the user present. If nobody is
+there to answer, stop and say so; do not guess your way to a draft.
 
 ## What a spec is
 
@@ -27,13 +29,23 @@ it is two specs.
 ## The stage
 
 **1. Understand the request.** Pick a short slug. Read enough of the repo to know what exists, what the request
-would touch, and whether something already does it. Check `specs/` for a related or archived spec.
+would touch, and whether something already does it. Check `specs/` for a related or archived spec. A change to
+something an archived spec already shipped gets a new, small spec that names what it changes; archived specs are not
+reopened.
 
-**2. Interview, where the request leaves the outcome open.** One question at a time, each with your recommended
-answer. Go after the forks that change what gets built: how ambitious (all of it, or the core), what is deliberately
-out, what the user is assuming but has not said, what they would literally type or click. Skip anything the request
-or the repo already settles. Stop when the outcome is determined or the user says enough. If the request already
-determines it, skip the interview and say that you did.
+If the request bundles several things that could each ship and be checked on their own, propose the split before
+drafting anything: a few lines naming each piece and the order. One spec per piece.
+
+**2. Interview, where the request leaves the outcome open.** Open with your read: one sentence on what you think
+they want, and the assumptions you would otherwise fill in silently, so they can correct those first. Then one
+question at a time, each with your recommended answer. Go after the forks that change what gets built: how ambitious
+(all of it, or the core), what is deliberately out, what they would literally type or click, and why now. Skip
+anything the request or the repo already settles.
+
+Listen for the answer that sounds like what a careful engineer is supposed to say ("scalable", "the standard way")
+with nothing specific behind it. That is usually not what they want; ask what they would want if they did not have
+to justify it. You are done when you could predict their reaction to your next three questions, or when they say
+enough. If the request already determines the outcome, skip the interview and say that you did.
 
 **3. Draft.** Copy `${CLAUDE_PLUGIN_ROOT}/templates/spec.md` to `specs/<slug>/spec.md` and fill it from the user's
 words. Write the outcome so a plausible wrong implementation contradicts it: "search is faster" cannot be checked
@@ -59,6 +71,7 @@ changes anything a user calls, types, or clicks, dispatch `harness:api-critic` o
 
 **7. Amend or sign.** Fold in what the user accepts. If the outcome changed materially, offer one more adversary pass
 rather than running it unasked. When the user says they sign, fill in the sign-off line with today's date and their
-name. Signing is theirs alone; "looks good" about one section is not a signature.
+name. Signing is theirs alone, and it is an explicit yes. "Looks good", "sure", and "whatever you think" are not
+signatures; ask plainly.
 
 Then say the next step is `/harness:plan` and stop.
