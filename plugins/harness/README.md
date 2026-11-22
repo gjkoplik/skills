@@ -24,7 +24,9 @@ in words ("run the harness spec stage on ..."), which is easier if you dictate.
 | `/harness:build` | an accepted plan | every workstream has passed |
 | `/harness:close` | "I'm ready to merge" | the spec and plan are archived |
 
-The spec and plan live in your project at `specs/<slug>/`, and move to `specs/archive/<slug>/` at close.
+The spec and plan live in your project at `specs/<slug>/`, and move to `specs/archive/<slug>/` at close. Ideas that
+come up along the way and are not part of the spec are written to `specs/ideas/` as they come up, so they outlive the
+conversation; one that is later picked up or dropped is archived with its outcome, not deleted.
 
 ## How it is put together
 
@@ -122,7 +124,7 @@ not about how capable the model is:
 
 ## What it does not do
 
-- It keeps no knowledge base and no per-agent memory. The archived spec is the decision record.
+- It keeps no knowledge base and no per-agent memory. The archived specs and ideas are the record.
 - It has no branching strategy beyond one working branch with a commit per workstream, and it never pushes or merges
   unless you ask at close.
 - It does not sync an issue tracker.

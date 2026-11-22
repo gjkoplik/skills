@@ -50,22 +50,49 @@ while it runs.
 
 ## Files
 
-A spec and its plan live together in the project being worked on:
+Everything lives under one spec home in the project being worked on. A spec and its plan sit together:
 
 ```
-specs/<slug>/spec.md
-specs/<slug>/plan.md
-specs/archive/<slug>/     once closed
+<spec home>/
+  <slug>/spec.md, plan.md      active specs
+  archive/<slug>/              closed specs
+  ideas/<slug>.md              open ideas
+  ideas/archive/<slug>.md      ideas picked up or dropped
 ```
 
-If the project's own instructions name a different home for specs, use that. Templates are in the `templates/`
-directory next to this file.
+The spec home is `specs/` unless the project's own instructions name another place; every path in these skills is
+relative to it. Templates are in the `templates/` directory next to this file.
 
 One writer per file, so nothing gets clobbered:
 
 - **The spec**: you, transcribing the user. Nobody else.
 - **The plan**: the orchestrator, except the `## Log` section at the bottom, which is yours and append-only.
+- **Ideas**: you.
 - Reviewers write nothing. They report to you, and you log what they found and what was done about it.
+
+Documents in the spec home refer to each other with ordinary relative links. Closed specs and settled ideas move to
+an archive, so whenever you move one, search the spec home for links to its old path and fix them. That is the one
+kind of edit an archived document takes: links are live, decisions are locked. What a spec promised and the lines
+under its sign-off are never touched. For anything outside the spec home, prefer a link that cannot go stale, such
+as a permalink to a commit.
+
+## Ideas do not die in the conversation
+
+At any stage, a good idea will come up that is not part of the spec in hand: from the user, from you, from an
+agent's report. Write it down when it comes up, not at the end, because the conversation may not reach the end.
+
+Copy `templates/idea.md` to `ideas/<slug>.md` in the spec home and fill it with enough of the exchange to pick
+the idea up cold: what was said for it, what was worked out, what would have to be decided. Mark what the
+user wants or prefers as theirs. Tell the user in one line that it is parked and where, and go back to the work. Do
+not turn the tangent into a discussion; the file is what lets you not have it now.
+
+An idea stops being open in one of two ways, and either way its `Status:` line says so and the file moves to
+`ideas/archive/`:
+
+- **Picked up.** A spec that takes the idea on links to it under Problem. When that spec is signed, set
+  `Status: picked up by` with a link to the spec.
+- **Dropped.** The user decides against it. Set `Status: dropped` with the reason in a sentence. A dropped idea is
+  kept on purpose: the next time someone proposes it, the answer is already written down.
 
 ## The stages belong to the user
 

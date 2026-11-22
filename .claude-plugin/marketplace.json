@@ -27,7 +27,7 @@
         "source": "git-subdir",
         "url": "https://github.com/gjkoplik/skills.git",
         "path": "plugins/harness",
-        "ref": "harness--v0.0.4"
+        "ref": "harness--v0.0.5"
       },
       "homepage": "https://github.com/gjkoplik/skills/tree/main/plugins/harness"
     },

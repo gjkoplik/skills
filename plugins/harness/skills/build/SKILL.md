@@ -1,6 +1,6 @@
 ---
 name: build
-description: 'Build an accepted plan, one workstream at a time. Each workstream is checked against the signed spec, implemented by specialist agents, reviewed blind by the adversary, verified by QA, and tested in a browser when it has a UI, with failures routed back through the plan. The third of four stages; needs an accepted plan under specs/. Run it again to resume a build that stopped. Run it when the user asks for this stage, by typing /harness:build or by saying so ("run the harness build", "build the plan", "resume the build"). Never run it on your own initiative, and never to carry on from the previous stage without being asked.'
+description: 'Build an accepted plan, one workstream at a time. Each workstream is checked against the signed spec, implemented by specialist agents, reviewed blind by the adversary, verified by QA, and tested in a browser when it has a UI, with failures routed back through the plan. The third of four stages; needs an accepted plan. Run it again to resume a build that stopped. Run it when the user asks for this stage, by typing /harness:build or by saying so ("run the harness build", "build the plan", "resume the build"). Never run it on your own initiative, and never to carry on from the previous stage without being asked.'
 argument-hint: '[spec slug]'
 ---
 
@@ -16,7 +16,7 @@ the session that did the planning, do not lean on what you remember of it over w
 
 Which plan: $ARGUMENTS
 
-If that is empty, use the one accepted, unfinished plan under `specs/`, and ask if there is more than one. If the
+If that is empty, use the one accepted, unfinished plan in the spec home, and ask if there is more than one. If the
 plan's log has no acceptance line, stop and say so. If the log shows the build already started, pick up where it
 left off.
 
@@ -92,8 +92,8 @@ Two things stop the loop instead:
 
 ## When a new idea arrives mid-build
 
-From the user or from an agent, a good idea that the spec does not cover goes in the log as follow-up and the build
-carries on. Scope changes between specs, not during one. If the user wants it in now, that is a re-sign.
+From the user or from an agent, a good idea that the spec does not cover is parked as an idea file, per the hub
+rules, and the build carries on. Scope changes between specs, not during one. If the user wants it in now, that is a re-sign.
 
 ## When the last workstream passes
 
