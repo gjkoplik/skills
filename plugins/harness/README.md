@@ -35,7 +35,7 @@ writes no product code and reviews nothing itself, and no agent dispatches anoth
 flowchart TD
     YOU([You]) <--> HUB["Dispatching session<br/>the only dispatcher"]
     HUB --> O[orchestrator]
-    HUB --> A[adversary]
+    HUB --> A["adversary<br/>design, build"]
     HUB --> CE[code engineer]
     HUB --> TE[test engineer]
     HUB --> DE[docs engineer]
@@ -83,6 +83,27 @@ flowchart LR
     O -. "spec conflict:<br/>halts for re-sign" .-> YOU
 ```
 
+## Models
+
+Agents are pinned so that the model you choose for your session is spent where it matters and nowhere else.
+
+| Runs on | Agents |
+| --- | --- |
+| Your session's model | the hub itself, `orchestrator`, `design-adversary` |
+| Opus | `build-adversary`, `code-engineer`, `test-engineer`, `docs-engineer`, `api-critic`, `qa-engineer` |
+| Sonnet | `ui-evaluator` |
+
+So the strongest model you are willing to pay for goes on the interview, the spec, the plan and the attacks on
+both, and the build runs on Opus whatever your session is on. The UI evaluator is the one agent pinned down a tier,
+because browser testing is the most token-hungry thing here and the least in need of deep reasoning.
+
+The hub is the part that is not pinned. During a build it relays every report, so a long build on an expensive
+session model is where the spend goes. The stages keep their state in `specs/`, not in the conversation, so a
+reasonable pattern is to run `spec` and `plan` on your strongest model and start a fresh session on Opus for
+`build`.
+
+A pin is a default. Ask for an agent on a different model and the hub will dispatch it that way.
+
 ## What it insists on, and why
 
 Most of what the agents do is left to their judgment. A few things are fixed, because they are about structure and
@@ -91,7 +112,7 @@ not about how capable the model is:
 - **Only you sign the spec**, and any change to what a signed spec promises stops the work until you re-sign. The
   failure this prevents is the outcome getting quietly smaller while everything stays green.
 - **Review comes from a context that was not in the room.** The session that wrote something will agree with it. The
-  adversary reads only the artifact, and after a build it sees the diff and the contract before it sees anyone's
+  adversary reads only the artifact, and after a build its counterpart sees the diff and the contract before it sees anyone's
   account of the work.
 - **You name the failure modes.** A list the model wrote has the model's blind spots.
 - **One dispatcher.** Everything returns to the session you are in, so there is one place to watch and one place to

@@ -1,6 +1,7 @@
 ---
 name: docs-engineer
 description: 'Harness agent, dispatched by the harness skills. Documents what one workstream of an accepted plan changed: reference docs, docstrings, README and guides, changelog.'
+model: opus
 disallowedTools: Agent
 ---
 

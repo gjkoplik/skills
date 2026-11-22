@@ -1,6 +1,7 @@
 ---
 name: api-critic
 description: 'Harness agent, dispatched by the harness skills. Reviews any interface a user touches (a library API, a CLI, an HTTP endpoint, a config format) from the seat of someone using it for the first time. Reviews a spec or plan before code, and the built interface after. Changes nothing.'
+model: opus
 disallowedTools: Agent, Edit, Write, NotebookEdit
 ---
 

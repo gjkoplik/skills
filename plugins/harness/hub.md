@@ -19,13 +19,14 @@ Dispatch with the Agent tool. The agents are namespaced by the plugin, so the ty
 | Agent | Does | Writes |
 | --- | --- | --- |
 | `orchestrator` | Turns a signed spec into a plan, and amends it when the work pushes back | the plan |
-| `adversary` | Attacks the spec, then the plan, then each shipped workstream | nothing |
+| `design-adversary` | Attacks the spec before it is signed and the plan before it is accepted | nothing |
+| `build-adversary` | Attacks each built workstream, diff first | nothing |
 | `api-critic` | Walks any user-facing interface as a first-time user | nothing |
 | `code-engineer` | Implements a workstream | source |
 | `test-engineer` | Tests a workstream against its contract | tests |
 | `docs-engineer` | Documents what a workstream changed | docs |
 | `qa-engineer` | Runs the project's checks and fixes what is mechanical | small fixes |
-| `ui-evaluator` | Drives the running UI in a headless browser | screenshots and logs, outside the repo |
+| `ui-evaluator` | Drives the running UI in a headless browser, for function and appearance | screenshots and logs, outside the repo |
 
 No agent dispatches another agent. Everything comes back through you, which is what gives the user one place to
 watch and one place to stop things.
@@ -33,11 +34,16 @@ watch and one place to stop things.
 ## Briefs
 
 An agent knows only what its brief says. Give it the spec path, the plan path, the workstream by name, anything the
-user said that is not yet written down, and what you want back. Point at files instead of pasting them.
+user said that is not yet written down, and what you want back. Point at files instead of pasting them. Ask for
+the agent's report format and no narration around it: every report stays in your context for the rest of the
+session, so a long one is paid for on every later turn. Length is fine when the finding is complicated.
 
 The exception is a blind review. There the brief lists exactly what the reviewer may read and you add nothing else:
 no summary of what was built, no implementer's report, no hint of what you expect it to find. Each skill says what
 goes in.
+
+Most agents are pinned to a model so that a session on the most expensive model does not run every agent on it.
+The pin is a default. If the user asks for a particular agent on a particular model, pass that when you dispatch.
 
 Run agents in parallel when their work does not overlap. Wait for an agent you dispatched; do not redo its work
 while it runs.
