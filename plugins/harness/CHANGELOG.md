@@ -9,9 +9,9 @@ moving.
 ### Added
 
 - **Ideas are kept.** Something worth doing that is not part of the spec in hand is written to its own file in
-  `ideas/` the moment it comes up, at any stage, with the substance of the discussion and not only the one-liner.
-  An idea that a later spec picks up, or that is dropped, is archived with its outcome, so "we considered that" has
-  an answer.
+  `ideas/` the moment it comes up, at any stage, with enough of the discussion to pick it up later. Until now the
+  most such an idea got was a one-line bullet under another spec's Out of scope, and often not that. An idea that a
+  later spec picks up, or that is dropped, is archived with its outcome, so "we considered that" has an answer.
 - The spec stage reads that history first: open and archived ideas, and archived specs.
 
 ### Changed

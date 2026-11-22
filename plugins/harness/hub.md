@@ -81,8 +81,8 @@ as a permalink to a commit.
 At any stage, a good idea will come up that is not part of the spec in hand: from the user, from you, from an
 agent's report. Write it down when it comes up, not at the end, because the conversation may not reach the end.
 
-Copy `templates/idea.md` to `ideas/<slug>.md` in the spec home and fill it with the substance of the exchange, not
-only the one-line idea: what was said for it, what was worked out, what would have to be decided. Mark what the
+Copy `templates/idea.md` to `ideas/<slug>.md` in the spec home and fill it with enough of the exchange to pick
+the idea up cold: what was said for it, what was worked out, what would have to be decided. Mark what the
 user wants or prefers as theirs. Tell the user in one line that it is parked and where, and go back to the work. Do
 not turn the tangent into a discussion; the file is what lets you not have it now.
 
