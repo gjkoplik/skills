@@ -140,7 +140,7 @@ works on whatever repo it is pointed at and writes specs there, never here.
   must not find out from their bill. Pin below Opus only where the token savings are large, not merely because the
   work looks easy; a weaker agent that needs a second pass costs more than it saved.
 - `design-adversary` and `build-adversary` are one role in two files so the frequent one can carry a pin. Keep their shared
-  opening in step.
+  opening and their unprompted-first section in step.
 - Nothing project-specific goes in an agent: no language, test runner, or directory layout. The plan's `Checks`
   section is where a project's commands are recorded, at planning time.
 

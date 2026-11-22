@@ -10,6 +10,9 @@ Semantic versioning, most recent release first. A release is a `harness--v<versi
 - **Specs cite their sources.** Claims about the current code carry `path:line`, external claims carry a link the
   drafter actually opened, and anything unchecked is marked (unverified). The design adversary opens the citations.
   Plans cite the code they reason from.
+- **Both adversaries read unprompted first.** Before working their fixed angles they write down what strikes them
+  as wrong in their own terms, and report that first. The angles are a floor; what is odd about one particular
+  spec or diff may not be on a list written for all of them.
 - **The spec template opens with a Problem section**: what exists today and what is wrong with it. The adversary was
   already attacking the premise; now the premise is written down where it can be attacked.
 
