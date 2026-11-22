@@ -21,7 +21,7 @@ rather than restating it.
 - The README and CONTRIBUTING drop the account of the research run's internal process and keep what a user needs: install, what is here, what the research found, known gaps, and the retrieval hazards.
 - `plugin.json` points at this monorepo rather than the retired standalone repo.
 
-## 0.0.1
+## 0.0.1 (released Aug 27, 2026)
 
 First public cut, deliberately early. The sourcing is real and the structure is not settled, which is what the version
 number is for.

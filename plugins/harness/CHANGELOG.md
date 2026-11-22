@@ -1,9 +1,10 @@
 # Changelog: harness
 
-Semantic versioning, most recent release first. A release is a `harness--v<version>` tag; see
-[RELEASING.md](../../RELEASING.md). While the version is `0.0.x` the shape is still moving.
+Semantic versioning, most recent release first, each with the day it shipped. A release is a
+`harness--v<version>` tag; see [RELEASING.md](../../RELEASING.md). While the version is `0.0.x` the shape is still
+moving.
 
-## 0.0.4
+## 0.0.4 (released Nov 22, 2026)
 
 ### Added
 
@@ -23,7 +24,7 @@ Semantic versioning, most recent release first. A release is a `harness--v<versi
 - The design adversary opens the spec's citations, and does it last, after forming its own view of the code.
   Its fixed angles are now described as a floor.
 
-## 0.0.3
+## 0.0.3 (released Nov 22, 2026)
 
 ### Added
 
@@ -45,7 +46,7 @@ Semantic versioning, most recent release first. A release is a `harness--v<versi
 - Agents are asked for their report and no narration, since the hub carries every report for the rest of the
   session.
 
-## 0.0.2
+## 0.0.2 (released Nov 22, 2026)
 
 ### Changed
 
@@ -53,7 +54,7 @@ Semantic versioning, most recent release first. A release is a `harness--v<versi
   model from loading them at all, which made them unusable by voice. The rule that only the user advances a stage
   is now held by the skill descriptions and `hub.md` instead of by a hard block.
 
-## 0.0.1
+## 0.0.1 (released Nov 22, 2026)
 
 First release. Loads and validates; not yet run end to end on real work, so expect the shape to move.
 
