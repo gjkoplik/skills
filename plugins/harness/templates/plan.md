@@ -1,6 +1,6 @@
 # Plan: <topic>
 
-Spec: `specs/<slug>/spec.md`, signed YYYY-MM-DD.
+Spec: `specs/<slug>/spec.md`, signed YYYY-MM-DD. Code is cited as of commit `<short sha>`.
 
 ## Approach
 

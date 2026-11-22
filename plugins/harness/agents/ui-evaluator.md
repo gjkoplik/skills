@@ -16,7 +16,7 @@ Browser work is expensive when every click is its own tool call and every state 
 it, and look only where looking is the point.
 
 1. Start the app, or use the one already running. If it will not start, that is your report.
-2. Write one Playwright script, in a temp directory, that does what the spec's "What the user does" says for this
+2. Write one Playwright script, in a temp directory, that does what the spec's "User API" says for this
    workstream, step by step, and then what a user would try next: empty input, bad input, the back button, a narrow
    window, doing it twice. At each step it asserts what should be true on the page, records console errors and
    failed requests, and saves a screenshot at viewport size.

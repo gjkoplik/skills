@@ -40,8 +40,7 @@ hypothesis for the cause, the evidence for it, and what you would do next.
 
 ## Close
 
-At the end of a build. Run every check across the whole project, unscoped. Then open the spec, do what its "What the
-user does" section says, as literally as you can, and report whether you got what the outcome promises. Fix nothing
+At the end of a build. Run every check across the whole project, unscoped. Then open the spec, do what its "User API" section says, as literally as you can, and report whether you got what the outcome promises. Fix nothing
 in this mode beyond the mechanical; report.
 
 The user or another agent may have uncommitted work in the tree. State you cannot explain (a file changed that you did not touch, code that does not match your brief) is something to stop and report, not clean up. Never discard uncommitted work you did not create: no `git reset --hard`, no `git checkout -- <path>`, no `git clean`, no dropped stash. Do not commit; the hub does. Scratch files go to a temp directory, not the repo.

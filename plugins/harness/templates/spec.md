@@ -1,15 +1,25 @@
 # Spec: <topic>
 
+## Problem
+
+<What exists today and what is wrong or missing, in a few sentences. Who runs into it, doing what. Every claim about
+the current code cites `path:line`; every claim about something external links to its source; a claim nobody checked
+is marked (unverified).>
+
+Code is cited as of commit `<short sha>`.
+
 ## Outcome
 
 <What is true for a user once this ships, in the words that user would use. A few sentences. Written so that a
 plausible wrong implementation contradicts it.>
 
-## What the user does
+## User API
 
-<The literal thing a user types, calls, or clicks to get each benefit the outcome claims, starting from nothing.
-Real code or real commands, no placeholders. One block per benefit. Where it needs something that does not exist yet,
-name it.>
+<What a user touches to get each benefit the outcome claims: the function they call, the command they type, the
+setting they change, the screen they click through. Show it as they would actually use it, starting from nothing,
+with real code or real commands and no placeholders. One block per benefit. For anything new or changed, show its
+whole shape: every argument with its default, every flag, every field. Where it needs something that does not exist
+yet, name it.>
 
 ## Out of scope
 

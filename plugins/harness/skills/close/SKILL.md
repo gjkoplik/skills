@@ -19,7 +19,7 @@ one.
 ## Checks first
 
 Before asking the user anything, dispatch `harness:qa-engineer` in close mode with the spec and plan paths. It runs
-every check in the plan across the whole project, and then does what the spec's "What the user does" section says and
+every check in the plan across the whole project, and then does what the spec's "User API" section says and
 reports whether that gets what the outcome promises.
 
 Also read the plan's log yourself: every workstream has a passing entry, and no `must-fix` is open.
