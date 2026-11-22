@@ -62,15 +62,24 @@ follow-up with the spec and plan paths and ask two things: does what was built s
 findings in the log that were marked resolved actually stay resolved. If you cannot continue the same agent, do that
 second check with a fresh `harness:build-adversary` and say in the log that it was not the same one.
 
-If the workstream changes an interface, dispatch `harness:api-critic` on the diff alongside the adversary.
+Alongside the adversary, dispatch `harness:code-critic` with how to see the diff, the plan path, the spec path and
+the workstream by name. It judges the work against what was agreed, so it is not blind. If the workstream changes an
+interface, dispatch `harness:api-critic` on the diff as well.
 
-**4. QA.** Dispatch `harness:qa-engineer` with the plan path, the workstream, and the `must-fix` findings from step
-3 that are mechanical to fix. It runs the checks and fixes what it can, up to three rounds.
+**4. Rework.** If the code critic returned any `must-fix`, send those findings, and only those, to
+`harness:code-engineer`. It applies them one at a time with the tests run after each, and reports any it could not
+apply. This happens once per workstream; the critic does not review the rework. Its notes go in the log. If it
+reported that the plan should change, pass that to `harness:orchestrator` as an amendment after the workstream
+settles, not before.
 
-**5. UI, when the workstream has one.** Dispatch `harness:ui-evaluator` with the workstream and the spec. A `must-fix`
+**5. QA.** Dispatch `harness:qa-engineer` with the plan path, the workstream, and the `must-fix` findings from the
+adversary and the API critic that are mechanical to fix. It runs the checks and fixes what it can, up to three
+rounds.
+
+**6. UI, when the workstream has one.** Dispatch `harness:ui-evaluator` with the workstream and the spec. A `must-fix`
 inside the workstream's scope, in behavior or in appearance, goes to `harness:qa-engineer` to fix, then back to the evaluator, up to three rounds.
 
-**6. Settle.** The workstream passes when the checks are clean, the UI passes or there is none, and no `must-fix` is
+**7. Settle.** The workstream passes when the checks are clean, the UI passes or there is none, and no `must-fix` is
 open. Then:
 
 - commit it, if the plan delivers by commit: stage only the files this workstream touched, never everything, with a

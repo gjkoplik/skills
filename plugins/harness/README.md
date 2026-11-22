@@ -42,6 +42,7 @@ flowchart TD
     HUB --> TE[test engineer]
     HUB --> DE[docs engineer]
     HUB --> AC[api critic]
+    HUB --> CC[code critic]
     HUB --> QA[qa engineer]
     HUB --> UI[ui evaluator]
     O --> SP[("spec + plan<br/>where the agents coordinate")]
@@ -50,6 +51,7 @@ flowchart TD
     TE --> SP
     DE --> SP
     AC --> SP
+    CC --> SP
     QA --> SP
     UI --> SS[("screenshots + logs")]
 ```
@@ -75,6 +77,8 @@ flowchart LR
     P -. "fails: you choose<br/>fix now, carry on, stop" .-> YOU([You])
     G --> S["Specialists<br/>code, test, docs"]
     S --> A["Adversary<br/>reviews the<br/>diff blind"]
+    S --> C["Code critic<br/>reuses what exists?<br/>simpler?"]
+    C -. "must-fix: code engineer<br/>reworks, once" .-> Q
     A --> Q["QA<br/>runs the checks,<br/>auto-fixes up to 3x"]
     Q --> U["UI evaluator<br/>tests the UI in a<br/>headless browser"]
     U -. "fail in scope: QA fixes,<br/>UI re-checks, up to 3x" .-> Q
@@ -92,7 +96,7 @@ Agents are pinned so that the model you choose for your session is spent where i
 | Runs on | Agents |
 | --- | --- |
 | Your session's model | the hub itself, `orchestrator`, `design-adversary` |
-| Opus | `build-adversary`, `code-engineer`, `test-engineer`, `docs-engineer`, `api-critic`, `qa-engineer` |
+| Opus | `build-adversary`, `code-critic`, `code-engineer`, `test-engineer`, `docs-engineer`, `api-critic`, `qa-engineer` |
 | Sonnet | `ui-evaluator` |
 
 So the strongest model you are willing to pay for goes on the interview, the spec, the plan and the attacks on
@@ -116,6 +120,9 @@ not about how capable the model is:
 - **Review comes from a context that was not in the room.** The session that wrote something will agree with it. The
   adversary reads only the artifact, and after a build its counterpart sees the diff and the contract before it sees anyone's
   account of the work.
+- **Working is not the same as worth keeping.** A second reviewer reads each build as its future maintainer: did it
+  reuse what was already there, follow the structure the plan agreed, keep the user-facing surface to what the spec
+  shows, and stay as small as the job. It can only block on something it can point at.
 - **You name the failure modes.** A list the model wrote has the model's blind spots.
 - **One dispatcher.** Everything returns to the session you are in, so there is one place to watch and one place to
   stop it.

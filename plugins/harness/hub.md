@@ -22,6 +22,7 @@ Dispatch with the Agent tool. The agents are namespaced by the plugin, so the ty
 | `design-adversary` | Attacks the spec before it is signed and the plan before it is accepted | nothing |
 | `build-adversary` | Attacks each built workstream, diff first | nothing |
 | `api-critic` | Walks any user-facing interface as a first-time user | nothing |
+| `code-critic` | Reads each built workstream as its future maintainer: reuse, agreed structure, needless code | nothing |
 | `code-engineer` | Implements a workstream | source |
 | `test-engineer` | Tests a workstream against its contract | tests |
 | `docs-engineer` | Documents what a workstream changed | docs |
