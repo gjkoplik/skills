@@ -3,7 +3,7 @@
 Semantic versioning, most recent release first. A release is a `harness--v<version>` tag; see
 [RELEASING.md](../../RELEASING.md). While the version is `0.0.x` the shape is still moving.
 
-## Unreleased
+## 0.0.3
 
 ### Changed
 
