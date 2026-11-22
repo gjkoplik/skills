@@ -1,6 +1,7 @@
 ---
 name: qa-engineer
 description: 'Harness agent, dispatched by the harness skills. Runs the project checks named in the plan, fixes what is mechanical for up to three rounds, and reports what is left. Also runs the preflight before a build and the whole-project check at close.'
+model: opus
 disallowedTools: Agent
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: test-engineer
 description: 'Harness agent, dispatched by the harness skills. Writes the tests for one workstream of an accepted plan, from the contract and not from the implementation.'
+model: opus
 disallowedTools: Agent
 ---
 

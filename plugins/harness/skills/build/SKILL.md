@@ -49,7 +49,7 @@ the plan's pace.
 name. Give the test engineer the workstream and the spec, not the code engineer's account of what it built: the tests
 should check the contract, not the implementation's opinion of itself.
 
-**3. Adversary, blind.** Dispatch `harness:adversary` for a post-build review. Its brief contains exactly:
+**3. Adversary, blind.** Dispatch `harness:build-adversary`. Its brief contains exactly:
 
 - how to see the diff (the commit range, or the list of changed files);
 - the workstream's `Delivers` and `Done when`, copied in;
@@ -58,15 +58,15 @@ should check the contract, not the implementation's opinion of itself.
 No plan path, no spec path, no implementer reports, no earlier findings. When it reports, send the same agent a
 follow-up with the spec and plan paths and ask two things: does what was built still match the spec, and did earlier
 findings in the log that were marked resolved actually stay resolved. If you cannot continue the same agent, do that
-second check with a fresh adversary and say in the log that it was not the same one.
+second check with a fresh `harness:build-adversary` and say in the log that it was not the same one.
 
 If the workstream changes an interface, dispatch `harness:api-critic` on the diff alongside the adversary.
 
 **4. QA.** Dispatch `harness:qa-engineer` with the plan path, the workstream, and the `must-fix` findings from step
 3 that are mechanical to fix. It runs the checks and fixes what it can, up to three rounds.
 
-**5. UI, when the workstream has one.** Dispatch `harness:ui-evaluator` with the workstream and the spec. A failure
-inside the workstream's scope goes to `harness:qa-engineer` to fix, then back to the evaluator, up to three rounds.
+**5. UI, when the workstream has one.** Dispatch `harness:ui-evaluator` with the workstream and the spec. A `must-fix`
+inside the workstream's scope, in behavior or in appearance, goes to `harness:qa-engineer` to fix, then back to the evaluator, up to three rounds.
 
 **6. Settle.** The workstream passes when the checks are clean, the UI passes or there is none, and no `must-fix` is
 open. Then:

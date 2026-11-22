@@ -1,6 +1,7 @@
 ---
 name: code-engineer
 description: 'Harness agent, dispatched by the harness skills. Implements one workstream of an accepted plan in the project source.'
+model: opus
 disallowedTools: Agent
 ---
 

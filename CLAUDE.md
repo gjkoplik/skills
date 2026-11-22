@@ -118,7 +118,7 @@ broken most often: it never implements and never produces a plan.
 
 # plugins/harness
 
-Spec-driven development as four skills (`spec`, `plan`, `build`, `close`) and the eight agents they dispatch. It
+Spec-driven development as four skills (`spec`, `plan`, `build`, `close`) and the nine agents they dispatch. It
 works on whatever repo it is pointed at and writes specs there, never here.
 
 - `hub.md` is the one place the dispatching session's rules live. All four skills point at it; do not restate its
@@ -129,12 +129,18 @@ works on whatever repo it is pointed at and writes specs there, never here.
 - The stages are the user's gates. The skills are model-invocable so they can be started by voice, which means the
   only thing stopping a session from advancing itself past a signature is the wording: each description says to run
   only when asked, and `hub.md` says a stage never starts the next. Keep both when editing.
-- Reviewers (`adversary`, `api-critic`, `ui-evaluator`) cannot edit. Keep it that way: a reviewer that fixes what it
+- Reviewers (`adversary`, `build-adversary`, `api-critic`, `ui-evaluator`) cannot edit. Keep it that way: a reviewer that fixes what it
   finds stops being independent of the result.
 - **The check on every edit is whether it grew the file.** The harness this came from failed by accretion: each real
   incident added a rule, and the rules became the thing agents spent their attention on. Prefer explaining the reason
   once to adding a case. If an agent got something wrong, first ask whether a shorter definition would have gotten
   it right.
+- **Model pins go down, never up.** `orchestrator` and `adversary` have no `model` line and follow the session.
+  Everything else is pinned to Opus, except `ui-evaluator` on Sonnet. Never pin anything to the top tier: a user
+  must not find out from their bill. Pin below Opus only where the token savings are large, not merely because the
+  work looks easy; a weaker agent that needs a second pass costs more than it saved.
+- `adversary` and `build-adversary` are one role in two files so the frequent one can carry a pin. Keep their shared
+  opening in step.
 - Nothing project-specific goes in an agent: no language, test runner, or directory layout. The plan's `Checks`
   section is where a project's commands are recorded, at planning time.
 
