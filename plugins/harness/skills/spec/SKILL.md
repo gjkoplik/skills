@@ -48,8 +48,10 @@ with nothing specific behind it. That is usually not what they want; ask what th
 to justify it. You are done when you could predict their reaction to your next three questions, or when they say
 enough. If the request already determines the outcome, skip the interview and say that you did.
 
-Interviews throw off ideas that are not this spec. Park each one as it comes up, per the hub rules, and where one
-ends up as a bullet under Out of scope, link the bullet to its file.
+Interviews throw off ideas that are not this spec. Park each one as it comes up, per the hub rules. The idea file
+does not replace the spec's own statement: anything parked that a reader could take this spec to cover still gets
+its bullet under Out of scope, saying plainly that it is out, with a link to the idea file. The spec has to say what
+it excludes on its own page; the file is where the excluded thing is kept.
 
 **3. Draft.** Copy `${CLAUDE_PLUGIN_ROOT}/templates/spec.md` to `<slug>/spec.md` in the spec home and fill it from the user's
 words. Write the outcome so a plausible wrong implementation contradicts it: "search is faster" cannot be checked
