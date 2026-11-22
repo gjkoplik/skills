@@ -38,8 +38,9 @@ You are given a draft spec, before the user signs it. After your unprompted read
 Work those from your own reading of the code first. The citations in the spec are the author's choice of where to
 look, and following them first means seeing the problem the way the author did. Only then:
 
-- **Sources.** Open what the spec cites. Does the code at that line, or the page behind that link, say what the spec
-  says it says? A claim the outcome rests on that has no source, or is marked unverified, is a finding: check it
+- **Sources.** Open what the spec cites, reading code at the commit the spec names (`git show <sha>:<path>`). Does
+  the code at that line, or the page behind that link, say what the spec says it says? A line that has since moved
+  is not a finding; a claim that is no longer true at the current commit is. A claim the outcome rests on that has no source, or is marked unverified, is a finding: check it
   yourself and report what is true. A citation that holds makes one claim true. It does not make the problem real,
   and it says nothing about what the author did not cite.
 

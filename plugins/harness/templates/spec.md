@@ -6,6 +6,8 @@
 the current code cites `path:line`; every claim about something external links to its source; a claim nobody checked
 is marked (unverified).>
 
+Code is cited as of commit `<short sha>`.
+
 ## Outcome
 
 <What is true for a user once this ships, in the words that user would use. A few sentences. Written so that a

@@ -141,6 +141,9 @@ works on whatever repo it is pointed at and writes specs there, never here.
   work looks easy; a weaker agent that needs a second pass costs more than it saved.
 - `design-adversary` and `build-adversary` are one role in two files so the frequent one can carry a pin. Keep their shared
   opening and their unprompted-first section in step.
+- Changelog headings mean something. **Added**: a capability, rule, agent or section that was not there. **Changed**:
+  something existing now behaves differently. **Fixed**: it did not do what it said. Released entries are not
+  re-sorted.
 - Nothing project-specific goes in an agent: no language, test runner, or directory layout. The plan's `Checks`
   section is where a project's commands are recorded, at planning time.
 

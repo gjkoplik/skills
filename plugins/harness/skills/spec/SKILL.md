@@ -54,7 +54,9 @@ against a diff, "a search over 100k documents returns in under a second from the
 so you know which parts do not exist yet. Leave Failure modes empty for now.
 
 **Cite what you assert.** The user signs this page without re-deriving it, so every factual claim on it has to be
-checkable from the page. A claim about the current code carries `path:line`. A claim about a library, a standard, or
+checkable from the page. A claim about the current code carries `path:line`, and the spec names the
+commit those lines were read at, once, under Problem. Lines move as other people push; the commit is what keeps a
+citation checkable next month. A claim about a library, a standard, or
 an earlier decision carries a link to where it says so, and you open that source yourself before citing it; do not
 cite from memory. A claim you could not check stays in only if it is marked (unverified), which tells the user and
 the adversary exactly where the spec is resting on a guess. What the user told you needs no citation; it is theirs.

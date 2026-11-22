@@ -5,16 +5,21 @@ Semantic versioning, most recent release first. A release is a `harness--v<versi
 
 ## Unreleased
 
+### Added
+
+- **Specs cite their sources.** Claims about the current code carry `path:line` as of a commit the spec names, so
+  the citation survives later pushes. External claims carry a link the drafter actually opened, and anything
+  unchecked is marked (unverified). Plans cite the code they reason from the same way.
+- **A Problem section at the top of the spec template**: what exists today and what is wrong with it. The adversary
+  was already attacking the premise; now the premise is written down where it can be attacked.
+- **An unprompted first read for both adversaries.** Before working their fixed angles they write down what strikes
+  them as wrong in their own terms, and report that first. What is odd about one particular spec or diff may not be
+  on a list written for all of them.
+
 ### Changed
 
-- **Specs cite their sources.** Claims about the current code carry `path:line`, external claims carry a link the
-  drafter actually opened, and anything unchecked is marked (unverified). The design adversary opens the citations.
-  Plans cite the code they reason from.
-- **Both adversaries read unprompted first.** Before working their fixed angles they write down what strikes them
-  as wrong in their own terms, and report that first. The angles are a floor; what is odd about one particular
-  spec or diff may not be on a list written for all of them.
-- **The spec template opens with a Problem section**: what exists today and what is wrong with it. The adversary was
-  already attacking the premise; now the premise is written down where it can be attacked.
+- The design adversary opens the spec's citations, and does it last, after forming its own view of the code.
+  Its fixed angles are now described as a floor.
 
 ## 0.0.3
 
