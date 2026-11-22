@@ -4,7 +4,7 @@ Semantic versioning, most recent release first, each with the day it shipped. A 
 `harness--v<version>` tag; see [RELEASING.md](../../RELEASING.md). While the version is `0.0.x` the shape is still
 moving.
 
-## Unreleased
+## 0.0.5 (released Nov 22, 2026)
 
 ### Added
 
