@@ -23,7 +23,8 @@ yet, name it.>
 
 ## Out of scope
 
-- <What this deliberately does not do, especially the adjacent thing a reader would assume it covers. "None." is fine.>
+- <What this deliberately does not do, especially the adjacent thing a reader would assume it covers. If it was
+  parked as an idea, link the idea. "None." is fine.>
 
 ## Failure modes
 

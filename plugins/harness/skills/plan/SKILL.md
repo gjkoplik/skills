@@ -1,6 +1,6 @@
 ---
 name: plan
-description: 'Turn a signed spec into an accepted plan. The orchestrator agent writes the plan, the adversary attacks it without having written it, the user answers the findings that need a decision, and the user accepts the plan at a high level. The second of four stages; needs a signed spec under specs/. Run it when the user asks for this stage, by typing /harness:plan or by saying so ("run the harness plan", "plan that spec"). Never run it on your own initiative, and never to carry on from the previous stage without being asked.'
+description: 'Turn a signed spec into an accepted plan. The orchestrator agent writes the plan, the adversary attacks it without having written it, the user answers the findings that need a decision, and the user accepts the plan at a high level. The second of four stages; needs a signed spec. Run it when the user asks for this stage, by typing /harness:plan or by saying so ("run the harness plan", "plan that spec"). Never run it on your own initiative, and never to carry on from the previous stage without being asked.'
 argument-hint: '[spec slug]'
 ---
 
@@ -12,13 +12,13 @@ Read `${CLAUDE_PLUGIN_ROOT}/hub.md` first if you have not this session. You are 
 
 Which spec: $ARGUMENTS
 
-If that is empty, use the one signed spec under `specs/` that has no accepted plan, and ask if there is more than
+If that is empty, use the one signed spec in the spec home that has no accepted plan, and ask if there is more than
 one. If the spec is not signed, stop and say so; planning around a missing signature makes the signature decorative.
 
 ## The stage
 
 **1. The orchestrator writes the plan.** Dispatch `harness:orchestrator` with the spec path, asking for a new plan at
-`specs/<slug>/plan.md`.
+`<slug>/plan.md` in the spec home, beside the spec.
 
 **2. The adversary attacks it.** Dispatch `harness:design-adversary` with the plan path and the spec path, and the
 instruction that this is the plan stage. Do not pass along the orchestrator's report or your own view of the plan.

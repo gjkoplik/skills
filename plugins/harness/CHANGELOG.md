@@ -4,6 +4,23 @@ Semantic versioning, most recent release first, each with the day it shipped. A 
 `harness--v<version>` tag; see [RELEASING.md](../../RELEASING.md). While the version is `0.0.x` the shape is still
 moving.
 
+## Unreleased
+
+### Added
+
+- **Ideas are kept.** Something worth doing that is not part of the spec in hand is written to its own file in
+  `ideas/` the moment it comes up, at any stage, with the substance of the discussion and not only the one-liner.
+  An idea that a later spec picks up, or that is dropped, is archived with its outcome, so "we considered that" has
+  an answer.
+- The spec stage reads that history first: open and archived ideas, and archived specs.
+
+### Changed
+
+- Paths are relative to one spec home, `specs/` by default, with `archive/` and `ideas/` inside it.
+- Moving a spec or an idea into an archive fixes the links that pointed at it. Archived documents take link fixes
+  and nothing else.
+- Mid-build ideas become idea files. They used to be a line in the plan's log.
+
 ## 0.0.4 (released Nov 22, 2026)
 
 ### Added

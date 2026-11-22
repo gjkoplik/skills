@@ -29,9 +29,10 @@ it is two specs.
 ## The stage
 
 **1. Understand the request.** Pick a short slug. Read enough of the repo to know what exists, what the request
-would touch, and whether something already does it. Check `specs/` for a related or archived spec. A change to
-something an archived spec already shipped gets a new, small spec that names what it changes; archived specs are not
-reopened.
+would touch, and whether something already does it. Then look through the spec home for history: active and
+archived specs, and ideas both open and archived. If this was considered before and dropped, say so and why before
+going further. If an open idea covers it, start from that file and link it under Problem. A change to something an
+archived spec already shipped gets a new, small spec that names what it changes; archived specs are not reopened.
 
 If the request bundles several things that could each ship and be checked on their own, propose the split before
 drafting anything: a few lines naming each piece and the order. One spec per piece.
@@ -47,7 +48,10 @@ with nothing specific behind it. That is usually not what they want; ask what th
 to justify it. You are done when you could predict their reaction to your next three questions, or when they say
 enough. If the request already determines the outcome, skip the interview and say that you did.
 
-**3. Draft.** Copy `${CLAUDE_PLUGIN_ROOT}/templates/spec.md` to `specs/<slug>/spec.md` and fill it from the user's
+Interviews throw off ideas that are not this spec. Park each one as it comes up, per the hub rules, and where one
+ends up as a bullet under Out of scope, link the bullet to its file.
+
+**3. Draft.** Copy `${CLAUDE_PLUGIN_ROOT}/templates/spec.md` to `<slug>/spec.md` in the spec home and fill it from the user's
 words. Write the outcome so a plausible wrong implementation contradicts it: "search is faster" cannot be checked
 against a diff, "a search over 100k documents returns in under a second from the existing search box" can. Write
 "User API" from the entry point a user would actually reach for, and try it against the code as it stands
@@ -80,6 +84,6 @@ changes anything a user calls, types, or clicks, dispatch `harness:api-critic` o
 **7. Amend or sign.** Fold in what the user accepts. If the outcome changed materially, offer one more adversary pass
 rather than running it unasked. When the user says they sign, fill in the sign-off line with today's date and their
 name. Signing is theirs alone, and it is an explicit yes. "Looks good", "sure", and "whatever you think" are not
-signatures; ask plainly.
+signatures; ask plainly. If this spec picked up an idea, mark the idea picked up and archive it now.
 
 Then say the next step is `/harness:plan` and stop.
