@@ -16,12 +16,12 @@ See [RELEASING.md](RELEASING.md).
 | Plugin | Version |
 | --- | --- |
 | agent-viz | 0.0.1 |
+| harness | 0.0.1 |
 | what-if | 0.0.2 |
 
 ### Added
 
-- `harness`, spec-driven development with a hub-and-spoke team of agents. On `main` as a first draft at 0.0.1, not
-  yet tagged or listed in the marketplace.
+- `harness`, spec-driven development with a hub-and-spoke team of agents. New in this repo, released at 0.0.1.
 - `what-if`, a cheap sunk-cost circuit breaker for half-formed ideas. New in this repo.
 - The marketplace is named `gjkoplik` rather than `skills`. A user can hold only one marketplace per name, and
   `skills` is the name most likely to collide with someone else's. Installs read `agent-viz@gjkoplik`.

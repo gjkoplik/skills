@@ -62,6 +62,7 @@ Verified against this repo, not assumed.
 ```
 /plugin marketplace add gjkoplik/skills
 /plugin install agent-viz@gjkoplik
+/plugin install harness@gjkoplik
 /plugin install what-if@gjkoplik
 ```
 

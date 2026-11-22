@@ -9,7 +9,8 @@ one starts.
 /plugin install harness@gjkoplik
 ```
 
-Not yet released; until it is, try it from a checkout with `claude --plugin-dir ./plugins/harness`.
+Claude Code only: it depends on subagents. To try unreleased changes from a checkout, run
+`claude --plugin-dir ./plugins/harness`.
 
 ## Using it
 

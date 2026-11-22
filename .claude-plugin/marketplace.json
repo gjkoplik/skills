@@ -20,6 +20,18 @@
       "homepage": "https://github.com/gjkoplik/skills/tree/main/plugins/agent-viz"
     },
     {
+      "name": "harness",
+      "description": "Spec-driven development with a hub-and-spoke team of agents. You sign a one-page spec; agents plan it, build it, and review it cold, one workstream at a time.",
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gjkoplik/skills.git",
+        "path": "plugins/harness",
+        "ref": "harness--v0.0.1"
+      },
+      "homepage": "https://github.com/gjkoplik/skills/tree/main/plugins/harness"
+    },
+    {
       "name": "what-if",
       "description": "A cheap look at a half-formed idea before committing to a conversation about it. Short, calibrated to what you already know, and willing to come back with \"not worth it\".",
       "category": "productivity",

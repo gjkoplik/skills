@@ -5,7 +5,7 @@ Semantic versioning, most recent release first. A release is a `harness--v<versi
 
 ## 0.0.1
 
-First draft. Not yet released, and not yet listed in the marketplace.
+First release. Loads and validates; not yet run end to end on real work, so expect the shape to move.
 
 ### Added
 
