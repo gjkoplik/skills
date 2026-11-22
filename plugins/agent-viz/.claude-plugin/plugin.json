@@ -1,7 +1,7 @@
 {
   "name": "agent-viz",
   "description": "A researched quality bar for any figure a person will look at, written for coding agents. Splits an honesty-and-accessibility floor that always binds from narrative polish that scales with the figure's job, and ships runnable checks alongside the principles.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Gary Koplik",
     "url": "https://github.com/gjkoplik"

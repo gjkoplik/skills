@@ -15,7 +15,7 @@ See [RELEASING.md](RELEASING.md).
 
 | Plugin | Version |
 | --- | --- |
-| agent-viz | 0.0.1 |
+| agent-viz | 0.0.2 |
 | harness | 0.0.4 |
 | what-if | 0.0.2 |
 
