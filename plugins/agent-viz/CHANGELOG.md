@@ -12,14 +12,37 @@ rather than restating it.
 
 ## Unreleased
 
+The biggest change is the language. The wiki and the skill were written the way a model reports to the person who
+asked for the research: narrating what it did, explaining itself, addressing a reader who was watching. That is the
+wrong voice for a skill another agent loads in the middle of drawing a chart. Everything was rewritten to be used:
+state the finding, its evidence, and what to do. No rule in the bar changed.
+
+### Added
+
+- **A one-page chooser.** `SKILL.md` routes a chart decision through [wiki/chart-types/choose.md](wiki/chart-types/choose.md)
+  first: data shape, then the reader's question, then the forms table per group. Indexes and type pages are the depth
+  behind it, opened only as far as the doubt goes.
+- **An uncertainty group** in the routing table, for "how sure is this estimate" and "is the difference real", with
+  its own index. Research entry under v2026.10.16 in [wiki/CHANGELOG.md](wiki/CHANGELOG.md).
+- **More research behind the chooser**, from four weekly sweeps and a content pass. New type pages include the flow
+  map, ECDF plot, interval plot, gradient plot, small multiples, density plot and fan chart. New studies read at
+  primary cover chord against Sankey diagrams, horizon graphs, graphical perception in a headset, and judging
+  correlation from a scatterplot. Several claims the wiki had repeated did not survive their sources and are now
+  listed in [wiki/refutations.md](wiki/refutations.md). Each sweep has its own entry in
+  [wiki/CHANGELOG.md](wiki/CHANGELOG.md), v2026.08.29 through v2026.10.17.
+
 ### Changed
 
-- **A one-page chooser.** `SKILL.md` routes a chart decision through [wiki/chart-types/choose.md](wiki/chart-types/choose.md) first: data shape, then the reader's question, then the forms table per group. Indexes and type pages are the depth behind it, opened only as far as the doubt goes.
-- **An uncertainty group** in the routing table, for "how sure is this estimate" and "is the difference real", with its own index and two new type pages. Research entry under v2026.10.16 in [wiki/CHANGELOG.md](wiki/CHANGELOG.md).
-- **The whole wiki is rewritten for the agent reading it at decision time.** Shorter pages, record voice, no process narration; every fact, quotation and evidence label kept. The research entry is [wiki/CHANGELOG.md](wiki/CHANGELOG.md) under v2026.10.15.
-- `SKILL.md` drops its stale alias count and tightens without changing any rule. The chart-chooser routine is unchanged.
-- The README and CONTRIBUTING drop the account of the research run's internal process and keep what a user needs: install, what is here, what the research found, known gaps, and the retrieval hazards.
-- `plugin.json` points at this monorepo rather than the retired standalone repo.
+- **The whole wiki is rewritten for the agent reading it at decision time.** Record voice in place of advice and
+  narration, shorter pages, and no account of how the research run went. Every fact, quotation and evidence label
+  was kept. The research entries are [wiki/CHANGELOG.md](wiki/CHANGELOG.md) under v2026.08.29, where the conversion
+  began, and v2026.10.15, the full pass.
+- **`SKILL.md` is reworded the same way.** Plainer sentences, less bold and less repetition, at about the same
+  length. It drops its stale count of chart-name aliases.
+- **Type pages carry six sections instead of eight**, and evidence labels are written one way across the wiki.
+- The README and CONTRIBUTING drop the account of the research run's internal process and keep what a user needs:
+  install, what is here, what the research found, known gaps, and the retrieval hazards.
+- `plugin.json` points at this monorepo and no longer at the retired standalone repo.
 
 ## 0.0.1 (released Aug 27, 2026)
 
