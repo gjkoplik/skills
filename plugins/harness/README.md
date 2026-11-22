@@ -14,7 +14,8 @@ Claude Code only: it depends on subagents. To try unreleased changes from a chec
 
 ## Using it
 
-Four stages, each a command, each ending at a point where you decide something.
+Four stages, each ending at a point where you decide something. Start one by typing its command or by asking for it
+in words ("run the harness spec stage on ..."), which is easier if you dictate.
 
 | Command | You give it | It ends when |
 | --- | --- | --- |
@@ -104,4 +105,4 @@ not about how capable the model is:
 - It has no branching strategy beyond one working branch with a commit per workstream, and it never pushes or merges
   unless you ask at close.
 - It does not sync an issue tracker.
-- It does not load itself or advance itself. Each stage runs when you type its command.
+- It does not load itself or advance itself. Each stage runs when you ask for it.

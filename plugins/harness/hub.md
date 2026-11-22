@@ -61,6 +61,12 @@ One writer per file, so nothing gets clobbered:
 - **The plan**: the orchestrator, except the `## Log` section at the bottom, which is yours and append-only.
 - Reviewers write nothing. They report to you, and you log what they found and what was done about it.
 
+## The stages belong to the user
+
+There are four stages and the user starts each one, by command or by saying so. Finishing a stage means telling the
+user what the next one is and stopping. Do not load the next stage yourself, even when the user sounds eager; "great,
+signed" is a signature, not a request to plan.
+
 ## The spec belongs to the user
 
 Only the user signs a spec, and only by saying so. Do not infer a signature from enthusiasm.

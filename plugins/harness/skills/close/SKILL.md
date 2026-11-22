@@ -1,7 +1,6 @@
 ---
 name: close
-description: 'Close out a finished harness build. Verifies the whole project and checks the result against the signed spec, asks the user everything it needs in one message, then archives the spec and plan. The last of four stages; needs a finished build.'
-disable-model-invocation: true
+description: 'Close out a finished harness build. Verifies the whole project and checks the result against the signed spec, asks the user everything it needs in one message, then archives the spec and plan. The last of four stages; needs a finished build. Run it when the user asks for this stage, by typing /harness:close or by saying so ("run the harness close", "close out the spec"). Never run it on your own initiative, and never to carry on from the previous stage without being asked.'
 argument-hint: '[spec slug]'
 ---
 

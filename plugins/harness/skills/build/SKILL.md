@@ -1,7 +1,6 @@
 ---
 name: build
-description: 'Build an accepted plan, one workstream at a time. Each workstream is checked against the signed spec, implemented by specialist agents, reviewed blind by the adversary, verified by QA, and tested in a browser when it has a UI, with failures routed back through the plan. The third of four stages; needs an accepted plan under specs/. Run it again to resume a build that stopped.'
-disable-model-invocation: true
+description: 'Build an accepted plan, one workstream at a time. Each workstream is checked against the signed spec, implemented by specialist agents, reviewed blind by the adversary, verified by QA, and tested in a browser when it has a UI, with failures routed back through the plan. The third of four stages; needs an accepted plan under specs/. Run it again to resume a build that stopped. Run it when the user asks for this stage, by typing /harness:build or by saying so ("run the harness build", "build the plan", "resume the build"). Never run it on your own initiative, and never to carry on from the previous stage without being asked.'
 argument-hint: '[spec slug]'
 ---
 
