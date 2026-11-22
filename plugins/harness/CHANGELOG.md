@@ -23,20 +23,25 @@ Semantic versioning, most recent release first. A release is a `harness--v<versi
 
 ## 0.0.3
 
+### Added
+
+- **Model pins.** A session on the most expensive model no longer runs every agent on it. The orchestrator and the
+  design adversary follow the session, everything in the build runs on Opus, and the UI evaluator runs on Sonnet.
+  Pins are defaults; ask for an agent on a different model and you get it.
+- **Appearance checks in the UI evaluator.** It measures contrast, overlap, clipping and movement, and something a
+  user cannot read or would take for broken now fails the workstream. Taste is still a note.
+- **A hand-off check at the end of planning.** Anything the build would need that exists only in the conversation
+  goes into the plan, so the build can start in a fresh session with the spec and the plan alone.
+
 ### Changed
 
-- **Agents are pinned to models.** A session on the most expensive model no longer runs every agent on it. The
-  orchestrator and the design adversary follow the session; everything in the build runs on Opus; the
-  UI evaluator runs on Sonnet. Pins are defaults and can be overridden by asking.
 - **The adversary is two agents.** `design-adversary` attacks the spec and the plan; `build-adversary` attacks each
-  built workstream. The bare `adversary` agent is gone. Same role, split so the per-workstream reviews, which are the frequent ones, can be pinned.
-- **The UI evaluator checks appearance, and costs less doing it.** It writes one script that walks the steps and
-  measures contrast, overlap, clipping and movement, then looks only at the screenshots that matter. Something a
-  user cannot read or would take for broken now fails the workstream; taste is still a note.
-
-- **Planning and building are separable sessions.** The plan stage now checks that nothing the build needs is left
-  only in the conversation, and the build stage works from the spec and plan alone. Agents are asked for their
-  report and no narration, since the hub carries every report for the rest of the session.
+  built workstream. The bare `adversary` agent is gone. It is the same role, split so the per-workstream reviews,
+  which are the frequent ones, can be pinned to a model.
+- **The UI evaluator scripts its walk.** One script does the steps and saves the screenshots, and the evaluator
+  opens only the ones that matter. It used to drive the browser a click at a time, which costs far more.
+- Agents are asked for their report and no narration, since the hub carries every report for the rest of the
+  session.
 
 ## 0.0.2
 
