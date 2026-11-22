@@ -1,7 +1,7 @@
 {
   "name": "harness",
   "description": "Spec-driven development with a hub-and-spoke team of agents. You sign a one-page spec, a planner turns it into workstreams, and each workstream is built, attacked by a reviewer that never saw the reasoning, and verified before the next one starts. The session you talk to dispatches every agent and writes no product code itself.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Gary Koplik",
     "url": "https://github.com/gjkoplik"

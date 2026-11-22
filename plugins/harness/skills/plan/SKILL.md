@@ -1,7 +1,6 @@
 ---
 name: plan
-description: 'Turn a signed spec into an accepted plan. The orchestrator agent writes the plan, the adversary attacks it without having written it, the user answers the findings that need a decision, and the user accepts the plan at a high level. The second of four stages; needs a signed spec under specs/.'
-disable-model-invocation: true
+description: 'Turn a signed spec into an accepted plan. The orchestrator agent writes the plan, the adversary attacks it without having written it, the user answers the findings that need a decision, and the user accepts the plan at a high level. The second of four stages; needs a signed spec under specs/. Run it when the user asks for this stage, by typing /harness:plan or by saying so ("run the harness plan", "plan that spec"). Never run it on your own initiative, and never to carry on from the previous stage without being asked.'
 argument-hint: '[spec slug]'
 ---
 

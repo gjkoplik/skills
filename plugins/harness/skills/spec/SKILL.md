@@ -1,7 +1,6 @@
 ---
 name: spec
-description: 'Turn a request into a one-page spec the user signs before any planning or code. Interviews the user where the request leaves the outcome open, drafts the spec from their answers, has them name how it could fail, gets a cold adversarial read, and stops for their signature. The first of four stages. Not for one-line fixes.'
-disable-model-invocation: true
+description: 'Turn a request into a one-page spec the user signs before any planning or code. Interviews the user where the request leaves the outcome open, drafts the spec from their answers, has them name how it could fail, gets a cold adversarial read, and stops for their signature. The first of four stages. Not for one-line fixes. Run it when the user asks for this stage, by typing /harness:spec or by saying so ("run the harness spec", "spec this out with the harness"). Never run it on your own initiative, and never to carry on from the previous stage without being asked.'
 argument-hint: '[what you want built]'
 ---
 

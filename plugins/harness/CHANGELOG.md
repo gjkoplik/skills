@@ -3,6 +3,14 @@
 Semantic versioning, most recent release first. A release is a `harness--v<version>` tag; see
 [RELEASING.md](../../RELEASING.md). While the version is `0.0.x` the shape is still moving.
 
+## 0.0.2
+
+### Changed
+
+- The four stages can be started by asking for them in words, not only by typing the command. 0.0.1 blocked the
+  model from loading them at all, which made them unusable by voice. The rule that only the user advances a stage
+  is now held by the skill descriptions and `hub.md` instead of by a hard block.
+
 ## 0.0.1
 
 First release. Loads and validates; not yet run end to end on real work, so expect the shape to move.
