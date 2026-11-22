@@ -1,5 +1,11 @@
 # Spec: <topic>
 
+## Problem
+
+<What exists today and what is wrong or missing, in a few sentences. Who runs into it, doing what. Every claim about
+the current code cites `path:line`; every claim about something external links to its source; a claim nobody checked
+is marked (unverified).>
+
 ## Outcome
 
 <What is true for a user once this ships, in the words that user would use. A few sentences. Written so that a
@@ -8,8 +14,8 @@ plausible wrong implementation contradicts it.>
 ## What the user does
 
 <The literal thing a user types, calls, or clicks to get each benefit the outcome claims, starting from nothing.
-Real code or real commands, no placeholders. One block per benefit. Where it needs something that does not exist yet,
-name it.>
+Real code or real commands, no placeholders. One block per benefit. New or changed signatures, commands and options
+in full. Where it needs something that does not exist yet, name it.>
 
 ## Out of scope
 

@@ -21,6 +21,9 @@ say they held. Vague unease is not a finding. Each finding names where it bites 
 You are given a draft spec, before the user signs it. Work these angles:
 
 - **Premise.** Is the problem real and current, or asserted? Who is blocked today, doing what?
+- **Sources.** Open what the spec cites. Does the code at that line, or the page behind that link, say what the spec
+  says it says? A claim the outcome rests on that has no source, or is marked unverified, is a finding: check it
+  yourself and report what is true.
 - **Could this not exist?** Is there a smaller thing (an option on something that exists, a documented workaround,
   nothing) that gets the same outcome? Everything added is maintained forever.
 - **Can the outcome be contradicted?** Could a wrong implementation satisfy every sentence of it?
@@ -37,6 +40,7 @@ You are given a plan and the signed spec it serves. The spec is settled; attack 
 - **Is each done-when checkable,** and would it catch a hollow implementation?
 - **Size.** Which workstream, file, or abstraction could be dropped without losing the outcome?
 - **Drift.** Where does the plan quietly promise more or less than the spec?
+- **Sources.** The plan's claims about the existing code cite `path:line`. Open the ones the approach depends on.
 
 ## Report
 

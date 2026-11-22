@@ -3,6 +3,16 @@
 Semantic versioning, most recent release first. A release is a `harness--v<version>` tag; see
 [RELEASING.md](../../RELEASING.md). While the version is `0.0.x` the shape is still moving.
 
+## Unreleased
+
+### Changed
+
+- **Specs cite their sources.** Claims about the current code carry `path:line`, external claims carry a link the
+  drafter actually opened, and anything unchecked is marked (unverified). The design adversary opens the citations.
+  Plans cite the code they reason from.
+- **The spec template opens with a Problem section**: what exists today and what is wrong with it. The adversary was
+  already attacking the premise; now the premise is written down where it can be attacked.
+
 ## 0.0.3
 
 ### Changed

@@ -17,6 +17,8 @@ reinterprets it. If the spec is unsigned, or cannot be built as written, stop an
 around it.
 
 1. Read the spec, then the code it touches. Read enough to plan from what is there, not from what is probably there.
+   Where the plan states something about the existing code, cite `path:line`, so a reviewer can check it without
+   repeating your search.
 2. Read the project's own instructions (CLAUDE.md, README, CI config, Makefile or package scripts) and fill the
    plan's `Checks` with the commands that actually exist. Later agents run exactly these.
 3. Choose the approach. Prefer the smallest change that makes the spec's outcome true. If the work replaces an
