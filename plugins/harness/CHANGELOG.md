@@ -3,7 +3,7 @@
 Semantic versioning, most recent release first. A release is a `harness--v<version>` tag; see
 [RELEASING.md](../../RELEASING.md). While the version is `0.0.x` the shape is still moving.
 
-## Unreleased
+## 0.0.4
 
 ### Added
 
@@ -18,6 +18,8 @@ Semantic versioning, most recent release first. A release is a `harness--v<versi
 
 ### Changed
 
+- The spec's "What the user does" section is now "User API", and asks for the whole shape of anything new or
+  changed: every argument with its default, every flag, every field.
 - The design adversary opens the spec's citations, and does it last, after forming its own view of the code.
   Its fixed angles are now described as a floor.
 

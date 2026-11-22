@@ -31,7 +31,7 @@ You are given a draft spec, before the user signs it. After your unprompted read
 - **Could this not exist?** Is there a smaller thing (an option on something that exists, a documented workaround,
   nothing) that gets the same outcome? Everything added is maintained forever.
 - **Can the outcome be contradicted?** Could a wrong implementation satisfy every sentence of it?
-- **Does "What the user does" deliver the outcome?** Try it against the code as it stands. Is each claimed benefit
+- **Does "User API" deliver the outcome?** Try it against the code as it stands. Is each claimed benefit
   reachable from the entry point a user would actually use, or only from somewhere they would never go?
 - **The user's failure modes.** For each one they named, does the spec as written rule it out or leave it open?
 

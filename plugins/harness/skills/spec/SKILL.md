@@ -18,8 +18,8 @@ there to answer, stop and say so; do not guess your way to a draft.
 
 ## What a spec is
 
-One page stating the problem, what will be true for a user when the work ships, and the literal thing they do to get
-it. It is the
+One page stating the problem, what will be true for a user when the work ships, and the user API: the literal thing
+they call, type, or click to get it. It is the
 intent, written down so that the user can sign it and every later agent can be held to it.
 
 It is not a plan. No approach, no file lists, no sequencing, no done-when criteria. A spec that reads like a plan is
@@ -50,7 +50,7 @@ enough. If the request already determines the outcome, skip the interview and sa
 **3. Draft.** Copy `${CLAUDE_PLUGIN_ROOT}/templates/spec.md` to `specs/<slug>/spec.md` and fill it from the user's
 words. Write the outcome so a plausible wrong implementation contradicts it: "search is faster" cannot be checked
 against a diff, "a search over 100k documents returns in under a second from the existing search box" can. Write
-"What the user does" from the entry point a user would actually reach for, and try it against the code as it stands
+"User API" from the entry point a user would actually reach for, and try it against the code as it stands
 so you know which parts do not exist yet. Leave Failure modes empty for now.
 
 **Cite what you assert.** The user signs this page without re-deriving it, so every factual claim on it has to be

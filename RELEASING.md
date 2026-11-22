@@ -42,6 +42,16 @@ to tag a dirty tree, so step 3 landing as one commit is what makes step 4 work.
 
 Users never see the tag. They type `/plugin install <name>@gjkoplik` and see `Version: 0.0.1`.
 
+### Through a pull request
+
+Put steps 2 and 3 on the branch, run `claude plugin tag ./plugins/<name> --push` from the branch tip, and then merge.
+The tag has to exist before the pull request's CI can pass, because the `pins` job looks for it. Nothing ships until
+the merge, since `marketplace.json` on `main` still names the old tag.
+
+Pull requests here are squash-merged, so the tag ends up on the branch's last commit and not on the squash commit on
+`main`. The plugin directory is identical in both, and an install fetches the tag directly, so it makes no
+difference to a user.
+
 The `pins` CI job fails if a ref does not exist, if a ref and a version disagree, or if any plugin has drifted back to
 a relative path. It also prints a notice for each plugin whose files have changed on `main` since its pin, so unshipped
 work is visible rather than assumed.

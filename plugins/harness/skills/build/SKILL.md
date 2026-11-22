@@ -42,8 +42,7 @@ Take workstreams in plan order. Ones that do not depend on each other and do not
 by side.
 
 **1. Spec gate.** Before dispatching anything, open the spec and state in chat, in a sentence or two, what a user
-will do to get what this workstream delivers, and whether that still matches the spec's outcome and "What the user
-does". Quote the spec, not the plan's paraphrase of it. A match proceeds without waiting for a reply. A mismatch is a
+will do to get what this workstream delivers, and whether that still matches the spec's outcome and "User API". Quote the spec, not the plan's paraphrase of it. A match proceeds without waiting for a reply. A mismatch is a
 re-sign: stop. If the plan flags this workstream as hard to undo, stop here too and get an explicit go-ahead, whatever
 the plan's pace.
 
