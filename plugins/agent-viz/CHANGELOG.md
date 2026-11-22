@@ -12,10 +12,9 @@ rather than restating it.
 
 ## Unreleased
 
-The biggest change is the language. The wiki and the skill were written the way a model reports to the person who
-asked for the research: narrating what it did, explaining itself, addressing a reader who was watching. That is the
-wrong voice for a skill another agent loads in the middle of drawing a chart. Everything was rewritten to be used:
-state the finding, its evidence, and what to do. No rule in the bar changed.
+The skill and its wiki are rewritten to be read by an agent partway through making a chart: the finding, its
+evidence and what to do, without the narration. Choosing a chart now starts from a one-page chooser, there is a new
+group for showing uncertainty, and more research sits behind both. No rule in the bar changed.
 
 ### Added
 
