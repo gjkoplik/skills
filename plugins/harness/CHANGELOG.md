@@ -8,10 +8,10 @@ Semantic versioning, most recent release first. A release is a `harness--v<versi
 ### Changed
 
 - **Agents are pinned to models.** A session on the most expensive model no longer runs every agent on it. The
-  orchestrator and the spec- and plan-stage adversary follow the session; everything in the build runs on Opus; the
+  orchestrator and the design adversary follow the session; everything in the build runs on Opus; the
   UI evaluator runs on Sonnet. Pins are defaults and can be overridden by asking.
-- **The adversary is two agents.** `adversary` attacks the spec and the plan; `build-adversary` attacks each built
-  workstream. Same role, split so the per-workstream reviews, which are the frequent ones, can be pinned.
+- **The adversary is two agents.** `design-adversary` attacks the spec and the plan; `build-adversary` attacks each
+  built workstream. The bare `adversary` agent is gone. Same role, split so the per-workstream reviews, which are the frequent ones, can be pinned.
 - **The UI evaluator checks appearance, and costs less doing it.** It writes one script that walks the steps and
   measures contrast, overlap, clipping and movement, then looks only at the screenshots that matter. Something a
   user cannot read or would take for broken now fails the workstream; taste is still a note.

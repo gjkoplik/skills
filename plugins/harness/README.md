@@ -35,7 +35,7 @@ writes no product code and reviews nothing itself, and no agent dispatches anoth
 flowchart TD
     YOU([You]) <--> HUB["Dispatching session<br/>the only dispatcher"]
     HUB --> O[orchestrator]
-    HUB --> A["adversary<br/>spec, plan, build"]
+    HUB --> A["adversary<br/>design, build"]
     HUB --> CE[code engineer]
     HUB --> TE[test engineer]
     HUB --> DE[docs engineer]
@@ -89,7 +89,7 @@ Agents are pinned so that the model you choose for your session is spent where i
 
 | Runs on | Agents |
 | --- | --- |
-| Your session's model | the hub itself, `orchestrator`, `adversary` (spec and plan) |
+| Your session's model | the hub itself, `orchestrator`, `design-adversary` |
 | Opus | `build-adversary`, `code-engineer`, `test-engineer`, `docs-engineer`, `api-critic`, `qa-engineer` |
 | Sonnet | `ui-evaluator` |
 

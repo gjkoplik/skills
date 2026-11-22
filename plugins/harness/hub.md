@@ -19,7 +19,7 @@ Dispatch with the Agent tool. The agents are namespaced by the plugin, so the ty
 | Agent | Does | Writes |
 | --- | --- | --- |
 | `orchestrator` | Turns a signed spec into a plan, and amends it when the work pushes back | the plan |
-| `adversary` | Attacks the spec before it is signed and the plan before it is accepted | nothing |
+| `design-adversary` | Attacks the spec before it is signed and the plan before it is accepted | nothing |
 | `build-adversary` | Attacks each built workstream, diff first | nothing |
 | `api-critic` | Walks any user-facing interface as a first-time user | nothing |
 | `code-engineer` | Implements a workstream | source |

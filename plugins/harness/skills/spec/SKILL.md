@@ -58,7 +58,7 @@ Ask first and write down what they say in their words. Do not lead with your own
 blind spots, and the user will nod along to it. If they would rather skip this, record that in the section and move
 on.
 
-**5. Get the cold read.** Dispatch `harness:adversary` with the spec path and the instruction that this is the spec
+**5. Get the cold read.** Dispatch `harness:design-adversary` with the spec path and the instruction that this is the spec
 stage. Nothing else: no summary of the interview, no account of why the spec says what it says. If the spec adds or
 changes anything a user calls, types, or clicks, dispatch `harness:api-critic` on the spec at the same time.
 
