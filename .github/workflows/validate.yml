@@ -88,7 +88,7 @@ jobs:
       - name: Every plugin must be pinned to a tag that exists
         run: |
           python - <<'PY'
-          import json, pathlib, subprocess, sys
+          import json, os, pathlib, subprocess, sys, time
 
           # Plugins are pinned to their own tags rather than sourced by relative
           # path. A relative path resolves against whatever the marketplace repo's
@@ -130,13 +130,30 @@ jobs:
                       f"Bump one or the other so they agree ({expected}).")
                   continue
 
-              tags = subprocess.run(["git", "tag", "--list", ref],
-                                    capture_output=True, text=True).stdout.split()
-              if ref not in tags:
-                  problems.append(
-                      f"{name}: tag {ref} does not exist, so installing it would fail for everyone. "
-                      f"Cut it with: claude plugin tag ./{path} --push")
-                  continue
+              # A release is tagged after its pull request merges, so the tag
+              # sits on the squashed commit on main. That means a pull request
+              # that moves a pin names a tag that does not exist yet, which is
+              # expected, and a push to main may arrive a few seconds before
+              # its tag does, so wait for it before calling it missing.
+              def tag_exists():
+                  out = subprocess.run(["git", "tag", "--list", ref],
+                                       capture_output=True, text=True).stdout.split()
+                  return ref in out
+
+              if not tag_exists():
+                  if os.environ.get("GITHUB_EVENT_NAME") == "pull_request":
+                      notices.append(f"{name}: tag {ref} does not exist yet; cut it from main after this merges")
+                      continue
+                  for _ in range(18):
+                      time.sleep(10)
+                      subprocess.run(["git", "fetch", "--tags", "--quiet", "origin"])
+                      if tag_exists():
+                          break
+                  else:
+                      problems.append(
+                          f"{name}: tag {ref} does not exist, so installing it would fail for everyone. "
+                          f"Cut it with: claude plugin tag ./{path} --push")
+                      continue
 
               # Not a failure. Main being ahead of a pin is the normal state; this
               # just makes it visible which plugins are sitting on unshipped work.

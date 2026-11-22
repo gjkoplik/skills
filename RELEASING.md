@@ -27,32 +27,31 @@ sees it until a ref moves.
 
 ## Releasing a plugin
 
-1. Land the change on `main`. CI has to be green.
-2. Add the entry to `plugins/<name>/CHANGELOG.md`.
-3. In one commit: bump `version` in `plugins/<name>/.claude-plugin/plugin.json`, **and** set that plugin's `ref` in
-   `.claude-plugin/marketplace.json` to the matching `<name>--v<version>`.
-4. Tag and push:
+The branch carries the whole release, so the squashed commit on `main` is exactly what ships.
+
+1. On the branch, when the change is agreed:
+   - head the entry in `plugins/<name>/CHANGELOG.md` with the new version and the day it ships, as
+     `## 0.0.5 (released Nov 22, 2026)`;
+   - bump `version` in `plugins/<name>/.claude-plugin/plugin.json`;
+   - set that plugin's `ref` in `.claude-plugin/marketplace.json` to the matching `<name>--v<version>`.
+2. Squash-merge the pull request once CI is green.
+3. From `main` at the merge commit, tag and push:
 
    ```
    claude plugin tag ./plugins/<name> --push
    ```
 
 `claude plugin tag` validates that `plugin.json` and the marketplace entry agree before writing anything, and refuses
-to tag a dirty tree, so step 3 landing as one commit is what makes step 4 work.
+to tag a dirty tree.
+
+The tag does not exist while the pull request is open, so the `pins` job lets a missing tag through on a pull
+request with a notice. On `main` it waits up to three minutes for the tag before failing. Between the merge and the
+tag push, `marketplace.json` names a tag that is not there yet and a fresh install would fail; that window is a few
+seconds, and step 3 should follow step 2 immediately.
 
 Users never see the tag. They type `/plugin install <name>@gjkoplik` and see `Version: 0.0.1`.
 
-### Through a pull request
-
-Put steps 2 and 3 on the branch, run `claude plugin tag ./plugins/<name> --push` from the branch tip, and then merge.
-The tag has to exist before the pull request's CI can pass, because the `pins` job looks for it. Nothing ships until
-the merge, since `marketplace.json` on `main` still names the old tag.
-
-Pull requests here are squash-merged, so the tag ends up on the branch's last commit and not on the squash commit on
-`main`. The plugin directory is identical in both, and an install fetches the tag directly, so it makes no
-difference to a user.
-
-The `pins` CI job fails if a ref does not exist, if a ref and a version disagree, or if any plugin has drifted back to
+The `pins` CI job fails if a ref does not exist on `main`, if a ref and a version disagree, or if any plugin has drifted back to
 a relative path. It also prints a notice for each plugin whose files have changed on `main` since its pin, so unshipped
 work is visible rather than assumed.
 
