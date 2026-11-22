@@ -15,7 +15,7 @@
         "source": "git-subdir",
         "url": "https://github.com/gjkoplik/skills.git",
         "path": "plugins/agent-viz",
-        "ref": "agent-viz--v0.0.1"
+        "ref": "agent-viz--v0.0.2"
       },
       "homepage": "https://github.com/gjkoplik/skills/tree/main/plugins/agent-viz"
     },

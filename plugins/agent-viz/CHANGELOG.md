@@ -10,7 +10,7 @@ ceremony.
 a different event on a different clock, is in [wiki/CHANGELOG.md](wiki/CHANGELOG.md). Entries here link there
 rather than restating it.
 
-## Unreleased
+## 0.0.2 (released Nov 22, 2026)
 
 The skill and its wiki are rewritten to be read by an agent partway through making a chart: the finding, its
 evidence and what to do, without the narration. Choosing a chart now starts from a one-page chooser, there is a new
