@@ -13,13 +13,13 @@ moving.
   most such an idea got was a one-line bullet under another spec's Out of scope, and often not that. An idea that a
   later spec picks up, or that is dropped, is archived with its outcome, so "we considered that" has an answer.
 - The spec stage reads that history first: open and archived ideas, and archived specs.
+- The build stage parks ideas that come up mid-build as idea files too.
 
 ### Changed
 
 - Paths are relative to one spec home, `specs/` by default, with `archive/` and `ideas/` inside it.
 - Moving a spec or an idea into an archive fixes the links that pointed at it. Archived documents take link fixes
   and nothing else.
-- Mid-build ideas become idea files. They used to be a line in the plan's log.
 
 ## 0.0.4 (released Nov 22, 2026)
 
