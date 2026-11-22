@@ -37,7 +37,13 @@ the plan did nothing.
 **4. Amend.** Dispatch the orchestrator once with everything accepted. If the amendment reshapes the workstreams,
 offer a second adversary pass.
 
-**5. High-level acceptance.** The user accepts the plan from what you put in chat, without opening the file:
+**5. Leave nothing in the conversation.** The build is meant to start in a fresh session that has only the spec and
+the plan. Before asking for acceptance, go back over this conversation for anything the build would need that is in neither
+file: a preference the user stated, a constraint mentioned in passing, a decision made while answering a finding.
+Send it to the orchestrator to put in the plan. If you would brief a build agent differently for having been in
+this conversation, something is still missing from the files.
+
+**6. High-level acceptance.** The user accepts the plan from what you put in chat, without opening the file:
 
 - the approach, in two or three sentences;
 - the workstreams in order, one line each with what "done" means;
@@ -51,4 +57,6 @@ offer a second adversary pass.
 - any decision still open.
 
 Acceptance is an explicit yes, the same as a signature. When the user accepts, append `Plan accepted <date>` to the
-plan's log, with the delivery choices if they differ from what the plan says. Then say the next step is `/harness:build` and stop.
+plan's log, with the delivery choices if they differ from what the plan says.
+
+Then say the next step is `/harness:build`, best started in a fresh session, and stop.

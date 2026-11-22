@@ -11,6 +11,9 @@ built and verified.
 
 Read `${CLAUDE_PLUGIN_ROOT}/hub.md` first if you have not this session. You are the hub.
 
+Everything you need is in the spec and the plan. This stage is designed to start in a fresh session; if you are in
+the session that did the planning, do not lean on what you remember of it over what the files say.
+
 Which plan: $ARGUMENTS
 
 If that is empty, use the one accepted, unfinished plan under `specs/`, and ask if there is more than one. If the

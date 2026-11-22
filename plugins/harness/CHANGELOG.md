@@ -16,6 +16,10 @@ Semantic versioning, most recent release first. A release is a `harness--v<versi
   measures contrast, overlap, clipping and movement, then looks only at the screenshots that matter. Something a
   user cannot read or would take for broken now fails the workstream; taste is still a note.
 
+- **Planning and building are separable sessions.** The plan stage now checks that nothing the build needs is left
+  only in the conversation, and the build stage works from the spec and plan alone. Agents are asked for their
+  report and no narration, since the hub carries every report for the rest of the session.
+
 ## 0.0.2
 
 ### Changed

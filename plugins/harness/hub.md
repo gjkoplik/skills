@@ -34,7 +34,9 @@ watch and one place to stop things.
 ## Briefs
 
 An agent knows only what its brief says. Give it the spec path, the plan path, the workstream by name, anything the
-user said that is not yet written down, and what you want back. Point at files instead of pasting them.
+user said that is not yet written down, and what you want back. Point at files instead of pasting them. Ask for
+the agent's report format and no narration around it: every report stays in your context for the rest of the
+session, so a long one is paid for on every later turn. Length is fine when the finding is complicated.
 
 The exception is a blind review. There the brief lists exactly what the reviewer may read and you add nothing else:
 no summary of what was built, no implementer's report, no hint of what you expect it to find. Each skill says what
