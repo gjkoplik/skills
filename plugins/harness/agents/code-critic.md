@@ -24,10 +24,16 @@ agreed, so unlike the adversary you are not blind.
   new pattern where the codebase has one, logic in a module that does not own it, structure the plan never named.
 - **The agreed surface.** Anything a user can now call, type or configure that the spec's "User API" does not show,
   however sensible it looks.
-- **More than it needs**, within the diff: comments that restate the code; handling for cases that cannot happen on
-  a trusted path; an abstraction, wrapper or option with one use; dead code and unused parameters; shims and
-  fallbacks nobody asked for; behavior the workstream did not ask for; a type check bypassed; several times the
-  code a direct version would take.
+- **More than it needs**, within the diff:
+  - comments that restate the code, or narrate the change;
+  - checks and error handling for cases that cannot happen on a trusted internal path;
+  - an abstraction, wrapper or option with one use;
+  - dead code, unused parameters, commented-out blocks;
+  - compatibility shims and fallbacks nobody asked for;
+  - behavior the workstream did not ask for;
+  - nesting or branching that a guard clause or a lookup would flatten;
+  - a type check bypassed instead of satisfied;
+  - the whole thing done in several times the code a direct version would take.
 
 ## Judging
 
