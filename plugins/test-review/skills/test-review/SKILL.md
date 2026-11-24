@@ -93,6 +93,7 @@ option was removed, the branch it exercises cannot be reached because the thing 
 
 - Not a finding: anything the runner can pick up without being named. Check each mechanism from your inventory.
 - Not a finding: a fixture used only by another fixture that is used.
+- Unused means the whole thing. A helper that is used but builds something its callers throw away is a question.
 
 **3. Reinvented.** Either of:
 
@@ -141,18 +142,21 @@ On top of that, by kind:
   inputs, asserts everything the removed test asserts, and is there to test the same behavior. A survivor that
   covers it only in passing, on the way to testing something else, makes it a question: the named test is what
   tells someone which behavior broke. Different inputs make it a question. So does a single parametrized case.
-- A surviving test is never itself the target of another finding in the report. Several findings may name the
-  same survivor.
+- A surviving test is never itself the target of another safe finding. If it would be, the redundant finding
+  becomes a question that says so. Several findings may name the same survivor.
 
 Whatever the kind, a test that names an issue, a bug, or a regression, in its name or its docstring, is never safe
 to remove. Neither is a test the default run does not select, unless you can name the command that runs it.
 
 **Needs a decision** is everything else that survived step 3. Write it as a question the user can answer in a
-word, with the options.
+word, with the options. Someone has to answer every one, so group them: redundant pairs in one class or file that
+turn on the same question are one finding that lists each pair, named for the first.
 
 Safe findings carry an instruction to whoever acts on them, because you ran nothing and the tree may have moved:
-check the evidence still holds, then run the named command, with coverage where the project measures it, before
-and after, and revert if a test fails or coverage drops.
+check the evidence still holds, then run the tests before and after, and revert if a test fails or coverage drops.
+Name the command. It is the project's own default run when that run selects the test, and the whole of it when
+the project gates on total coverage, since one file run alone shows a drop that means nothing. Otherwise it is the
+command that selects the test.
 
 ## 5. Write the report
 
@@ -166,8 +170,9 @@ is a hint that goes stale as soon as the file above it changes, so every finding
 ```
 # Test review: YYYY-MM-DD
 
-Reviewed: <scope> (<n> test files, <n> support files, counted with `<command>`) at <short sha>, against <source dirs> and git history.
-Runner: <runner, or "not recognized">.
+Reviewed: <scope> (<n> test files, <n> support files) at <short sha>, against <source dirs> and git history.
+Counted with: `<command>`
+Runner: <name only, or "not recognized">.
 Skipped: <path> (<reason>), ... | none
 Found: <n> safe to act on, <n> needs a decision. <Complete. | Incomplete: what was not read.>
 
@@ -177,7 +182,7 @@ Found: <n> safe to act on, <n> needs a decision. <Complete. | Incomplete: what w
 Kind: <subject gone | unused | redundant>
 Evidence: <what shows it, with the command and what it returned, the commit, or the path>
 Cost of leaving it: <one line, concrete>
-Move: <the one specific move>. Check the evidence still holds. Run `<command that selects this test>` with coverage before and after; revert if a test fails or coverage drops.
+Move: <the one specific move>. Check the evidence still holds. Run `<command>` before and after; revert if a test fails or coverage drops.
 
 ## Needs a decision
 
