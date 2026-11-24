@@ -12,7 +12,8 @@ moving.
   searches the repo for an existing equivalent of everything the diff adds, checks the work against the structure
   the plan agreed and the user API the spec shows, and looks for code that is more than the job needs. It reports
   and never edits. It can block only on something it can point at: a line of the spec or plan, the path of the
-  thing that was duplicated, or dead code. The rest are notes.
+  thing that was duplicated, or dead code. The rest are notes. What it looks for, and how its findings are applied,
+  follow Addy Osmani's [agent-skills](https://github.com/addyosmani/agent-skills).
 - **Rework, once.** The code engineer applies the critic's blocking findings one at a time, running the tests after
   each and undoing any that break them. Tests are never edited to make a simplification pass.
 - **Plans say what each workstream builds on**: the existing modules, classes and functions it extends, by path,
@@ -20,12 +21,6 @@ moving.
   holding the build to an agreement and not to its own taste.
 - The plan's checks have a slot for structure checks the project already has (import rules, a public API diff, a
   duplication check), and QA runs them with the rest.
-
-### Where it came from
-
-The critic's two halves follow Addy Osmani's [agent-skills](https://github.com/addyosmani/agent-skills): what to look
-for is the simplicity and architecture axes of his code-review skill, and how rework is applied is the discipline of
-his code-simplification skill. The difference is that the reviewer and the editor are separate agents here.
 
 ## 0.0.5 (released Nov 22, 2026)
 
