@@ -14,6 +14,7 @@ The commands that decide whether this project is healthy. Found by reading the p
 - Lint and format: `<command, or "none">`
 - Types: `<command, or "none">`
 - Build or docs: `<command, or "none">`
+- Structure: `<import rules, public API diff, duplication check, if the project already has any; or "none">`
 - Run the app: `<command and URL, or "no UI">`
 
 ## Workstreams
@@ -24,6 +25,8 @@ In the order they run.
 
 - **Delivers:** <what exists when this is done, in one or two sentences>
 - **Done when:** <checkable criteria>
+- **Builds on:** <the existing modules, classes or functions this extends or reuses, with paths. If it adds new
+  structure, name it and say why nothing existing fits>
 - **Needs:** <code | code, tests | code, tests, docs | docs>
 - **Interface change:** <yes | no>
 - **UI:** <yes | no>

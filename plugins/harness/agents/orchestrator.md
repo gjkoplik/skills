@@ -29,9 +29,13 @@ around it.
    workstreams beat many thin ones: every workstream pays for a full review loop, so do not split what one agent can
    build and one reviewer can read in a sitting. Order them so each builds on finished work, and put the riskiest or
    least certain one as early as its dependencies allow, so a wrong approach fails while it is cheap.
-5. Write done-when criteria someone else can check without asking you: a command that passes, a behavior that can be
+5. Say what each workstream builds on. Find the existing modules, classes and functions it should extend or reuse
+   and name them with paths; where it has to add new structure, name that too and say why nothing existing fits.
+   The user accepts this with the plan, and a reviewer later holds the build to it, so an empty answer here is how
+   a codebase ends up with two of everything.
+6. Write done-when criteria someone else can check without asking you: a command that passes, a behavior that can be
    observed, a pattern that no longer appears.
-6. Copy `${CLAUDE_PLUGIN_ROOT}/templates/plan.md` to the plan path given and fill it in. Keep it short enough to
+7. Copy `${CLAUDE_PLUGIN_ROOT}/templates/plan.md` to the plan path given and fill it in. Keep it short enough to
    read straight through. Say each thing once.
 
 Report back: the plan path, the approach in two sentences, the workstreams in one line each, anything you had to

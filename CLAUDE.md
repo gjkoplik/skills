@@ -118,7 +118,7 @@ broken most often: it never implements and never produces a plan.
 
 # plugins/harness
 
-Spec-driven development as four skills (`spec`, `plan`, `build`, `close`) and the nine agents they dispatch. It
+Spec-driven development as four skills (`spec`, `plan`, `build`, `close`) and the ten agents they dispatch. It
 works on whatever repo it is pointed at and writes specs there, never here.
 
 - `hub.md` is the one place the dispatching session's rules live. All four skills point at it; do not restate its
@@ -129,7 +129,7 @@ works on whatever repo it is pointed at and writes specs there, never here.
 - The stages are the user's gates. The skills are model-invocable so they can be started by voice, which means the
   only thing stopping a session from advancing itself past a signature is the wording: each description says to run
   only when asked, and `hub.md` says a stage never starts the next. Keep both when editing.
-- Reviewers (`design-adversary`, `build-adversary`, `api-critic`, `ui-evaluator`) cannot edit. Keep it that way: a reviewer that fixes what it
+- Reviewers (`design-adversary`, `build-adversary`, `api-critic`, `code-critic`, `ui-evaluator`) cannot edit. Keep it that way: a reviewer that fixes what it
   finds stops being independent of the result.
 - **The check on every edit is whether it grew the file.** The harness this came from failed by accretion: each real
   incident added a rule, and the rules became the thing agents spent their attention on. Prefer explaining the reason
