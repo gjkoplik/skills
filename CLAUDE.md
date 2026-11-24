@@ -119,8 +119,7 @@ broken most often: it never implements and never produces a plan.
 # plugins/harness
 
 Spec-driven development as four skills (`spec`, `plan`, `build`, `close`) and the ten agents they dispatch. It
-works on whatever repo it is pointed at and writes specs there. Ideas about the harness itself are kept here, in
-`specs/ideas/`, in the harness's own idea format.
+works on whatever repo it is pointed at and writes specs there, never here.
 
 - `hub.md` is the one place the dispatching session's rules live. All four skills point at it; do not restate its
   rules in a skill.
