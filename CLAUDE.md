@@ -116,6 +116,21 @@ broken most often: it never implements and never produces a plan.
 
 ---
 
+# plugins/test-review
+
+One skill that reviews a whole test suite for cruft and writes a report into whatever repo it is pointed at, never
+into this one.
+
+- It reports and stops. It never edits a test and never acts on its own report.
+- Four kinds of finding and no others. A new kind is a decision for the maintainer, not an edit.
+- A wrong finding costs more than a missed one. When an edit would let more findings count as safe, it is going
+  the wrong way.
+- It has no tie to the harness on purpose: no harness stage runs or mentions it, and its list of problems is free
+  to drift from the code critic's.
+- It stays `disable-model-invocation: true`. A whole-suite review is expensive and the user starts it.
+
+---
+
 # plugins/harness
 
 Spec-driven development as four skills (`spec`, `plan`, `build`, `close`) and the ten agents they dispatch. It
