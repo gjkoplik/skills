@@ -12,11 +12,13 @@ Gary Koplik's Claude Code plugins, and the marketplace that lists them.
 | --- | --- | --- |
 | **agent-viz** | A researched quality bar for any figure a person will look at, plus the research wiki it came from. | [`plugins/agent-viz`](plugins/agent-viz) |
 | **harness** | Spec-driven development: you sign a one-page spec, and a hub-and-spoke team of agents plans, builds and reviews it. | [`plugins/harness`](plugins/harness) |
+| **test-review** | A whole-suite review of test code for cruft: one report, sorted into what is safe to act on and what needs a decision. | [`plugins/test-review`](plugins/test-review) |
 | **what-if** | A cheap look at a half-formed idea before committing to a conversation about it. | [`plugins/what-if`](plugins/what-if) |
 
 ```
 /plugin install agent-viz@gjkoplik
 /plugin install harness@gjkoplik
+/plugin install test-review@gjkoplik
 /plugin install what-if@gjkoplik
 ```
 

@@ -32,6 +32,18 @@
       "homepage": "https://github.com/gjkoplik/skills/tree/main/plugins/harness"
     },
     {
+      "name": "test-review",
+      "description": "A whole-suite review of test code for cruft. One report, sorted into what is safe to act on and what needs a decision; it changes nothing.",
+      "category": "development",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gjkoplik/skills.git",
+        "path": "plugins/test-review",
+        "ref": "test-review--v0.0.1"
+      },
+      "homepage": "https://github.com/gjkoplik/skills/tree/main/plugins/test-review"
+    },
+    {
       "name": "what-if",
       "description": "A cheap look at a half-formed idea before committing to a conversation about it. Short, calibrated to what you already know, and willing to come back with \"not worth it\".",
       "category": "productivity",

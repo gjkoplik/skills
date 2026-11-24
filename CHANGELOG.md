@@ -7,6 +7,7 @@ Per-plugin history, which is the one that matters to a user, lives with the plug
 
 - [plugins/agent-viz/CHANGELOG.md](plugins/agent-viz/CHANGELOG.md)
 - [plugins/harness/CHANGELOG.md](plugins/harness/CHANGELOG.md)
+- [plugins/test-review/CHANGELOG.md](plugins/test-review/CHANGELOG.md)
 - [plugins/what-if/CHANGELOG.md](plugins/what-if/CHANGELOG.md)
 
 See [RELEASING.md](RELEASING.md).
@@ -17,12 +18,15 @@ See [RELEASING.md](RELEASING.md).
 | --- | --- |
 | agent-viz | 0.0.2 |
 | harness | 0.0.6 |
+| test-review | 0.0.1 |
 | what-if | 0.0.2 |
 
 ### Added
 
 - `harness`, spec-driven development with a hub-and-spoke team of agents. New in this repo, released at 0.0.1.
 - `what-if`, a cheap sunk-cost circuit breaker for half-formed ideas. New in this repo.
+- `test-review`, a whole-suite review of test code for cruft that reports and changes nothing. New in this repo,
+  released at 0.0.1.
 - The marketplace is named `gjkoplik` rather than `skills`. A user can hold only one marketplace per name, and
   `skills` is the name most likely to collide with someone else's. Installs read `agent-viz@gjkoplik`.
 

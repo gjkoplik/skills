@@ -1,0 +1,19 @@
+{
+  "name": "test-review",
+  "description": "A whole-suite review of test code for cruft. One command reads every test against the codebase and git history and writes one report: tests whose subject is gone, fixtures nothing uses, test code that remakes what the suite already has, and tests that repeat another test. It reports and changes nothing, and sorts findings into those safe to act on and those that need a decision.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Gary Koplik",
+    "url": "https://github.com/gjkoplik"
+  },
+  "homepage": "https://github.com/gjkoplik/skills/tree/main/plugins/test-review",
+  "repository": "https://github.com/gjkoplik/skills",
+  "license": "MIT",
+  "keywords": [
+    "testing",
+    "test-maintenance",
+    "code-review",
+    "audit",
+    "cleanup"
+  ]
+}
